@@ -22,8 +22,6 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 
 ## 📰 Latest arXiv Papers (Auto-Updated)
 <!-- ARXIV_PAPERS_START -->
-<!-- ARXIV_PAPERS_END -->
-<!-- ARXIV_PAPERS_HISTORY -->
 
 ---
 
