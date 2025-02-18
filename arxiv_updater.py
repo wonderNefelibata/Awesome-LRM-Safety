@@ -15,6 +15,7 @@ query_terms = {
     'exclude': []
 }
 
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(5))  # 最多重试3次，每次间隔5秒
 def fetch_papers():
     # 构建查询条件
     query_parts = []
@@ -48,23 +49,32 @@ def fetch_papers():
     return papers
 
 def update_article_json(papers):
+    print("papers: ", len(papers))
     # 保存所有论文到 article.json
     try:
-        with open('article.json', 'r') as f:
+        with open('./article.json', 'r') as f:
+            print("article.json exists, updating...")
             existing_papers = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
+        print("article.json not found, creating new one.")
         existing_papers = []  # 文件不存在或为空时，初始化为空列表
 
+    print("existing_papers的长度: ", len(existing_papers))
     # 去重并更新
     unique_papers = []
     paper_urls = [p['url'] for p in existing_papers]
     for paper in papers:
         if paper['url'] not in paper_urls:
             unique_papers.append(paper)
+
+    print("unique_papers的长度: ", len(unique_papers))
     
     updated_papers = existing_papers + unique_papers
+    print("updated_papers的长度: ", len(updated_papers))
     with open('article.json', 'w') as f:
+        print("article.json存在，准备更新")
         json.dump(updated_papers, f, indent=2)
+        print(f"成功更新 {len(unique_papers)} 篇新论文")
 
 def update_markdown():
     # 读取 JSON 数据
@@ -90,7 +100,7 @@ def update_markdown():
         return table
     
     # 更新 README.md
-    with open('README.md', 'r') as f:
+    with open('README.md', 'r', encoding='utf-8') as f:
         content = f.read()
     
     # 插入最新论文（未折叠）
@@ -100,7 +110,7 @@ def update_markdown():
     history_table = '\n\n'.join([f"<details><summary>View Older Papers</summary>{generate_table(older_papers, 'Historical arXiv Papers')}</details>" if older_papers else ""])
     new_content = new_content.replace('<!-- ARXIV_PAPERS_HISTORY -->', history_table)
     
-    with open('README.md', 'w') as f:
+    with open('README.md', 'w', encoding='utf-8') as f:
         f.write(new_content)
 
 if __name__ == "__main__":
