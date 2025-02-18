@@ -2,6 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Auto Update](https://github.com/yourusername/Awesome-LRM-Safety/actions/workflows/arxiv-update.yml/badge.svg)
 
 A curated list of **security and safety research** for Large Reasoning Models (LRMs) like DeepSeek-R1, OpenAI o1, and other cutting-edge models. Focused on identifying risks, mitigation strategies, and ethical implications.
 
@@ -9,6 +10,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 
 ## 📜 Table of Contents
 - [Motivation](#-motivation)
+- [Latest arXiv Papers](#-latest-arxiv-papers-auto-updated)
 - [Key Safety Domains](#-key-safety-domains)
 - [Research Papers](#-research-papers)
 - [Projects & Tools](#-projects--tools)
@@ -18,14 +20,12 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 
 ---
 
-## 🚀 Motivation
-Large Reasoning Models (LRMs) are revolutionizing AI capabilities in complex decision-making scenarios. However, their deployment raises critical safety concerns:
-- **Adversarial attacks** on reasoning pipelines
-- **Privacy leakage** through multi-step reasoning
-- **Ethical risks** in high-stakes domains (e.g., healthcare, finance)
-- **Systemic failures** in autonomous systems
-
-This repository aims to catalog research addressing these challenges and promote safer LRM development.
+## 📰 Latest arXiv Papers (Auto-Updated)
+<!-- ARXIV_PAPERS_START -->
+| Date       | Title                                      | Authors           | Abstract                                      |
+|------------|--------------------------------------------|-------------------|-----------------------------------------------|
+| *Auto-generated content will appear here* | | |
+<!-- ARXIV_PAPERS_END -->
 
 ---
 
