@@ -33,7 +33,7 @@ def fetch_papers():
     )
     
     # 使用 Client.results 获取结果
-    client = arxiv.Client delay_seconds=3)  # 设置请求间隔
+    client = arxiv.Client(delay_seconds=1)  # 设置请求间隔
     results = client.results(search)
     
     papers = []
