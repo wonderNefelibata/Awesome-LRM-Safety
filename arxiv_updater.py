@@ -7,16 +7,19 @@ from tenacity import retry, stop_after_attempt, wait_fixed
 # 查询关键词配置
 query_terms = {
     'include': [
-        "large reasoning model safety",
-        "AI safety",
-        "language model security",
+        "large reasoning model",
+        "large language model",
+        "Long Chain-of-Thought Reasoning",
+        "LRM",
+        "safety",
         "adversarial attacks",
         "jailbreak",
         "privacy",
         "backdoor",
         "poison",
         "deepseek-r1",
-        "openai-o1"
+        "openai-o1",
+        "openai-o3",
     ],
     'exclude': []
 }
@@ -26,9 +29,9 @@ def fetch_papers():
     # 构建查询条件
     query_parts = []
     for term in query_terms['include']:
-        query_parts.append(f'all:"{term}"')
+        query_parts.append(f'ti Abs:"{term}"')  # 匹配标题或摘要中的关键词
     for term in query_terms['exclude']:
-        query_parts.append(f'-all:"{term}"')
+        query_parts.append(f'-ti Abs:"{term}"')
     query = ' OR '.join(query_parts)
     
     # 查询 arXiv
@@ -50,7 +53,7 @@ def fetch_papers():
             "url": result.entry_id,
             "authors": [a.name for a in result.authors],
             "published": result.published.isoformat(),
-            "summary": result.summary.replace('\n', ' ')[:150] + '...'
+            "summary": result.summary.replace('\n', ' ')[:] 
         })
     return papers
 
