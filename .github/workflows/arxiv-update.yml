@@ -17,7 +17,9 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install arxiv
+        run: |
+          pip install arxiv
+          pip install tenacity
 
       - name: Run arXiv Updater
         run: python arxiv_updater.py
@@ -27,4 +29,4 @@ jobs:
         with:
           commit_message: 'chore: Auto-update arXiv papers'
           branch: main
-          file_pattern: README.md,article.json  # 添加 article.json
+          file_pattern: README.md,article.json, arxiv_updater.py  # 确保相关文件被提交
