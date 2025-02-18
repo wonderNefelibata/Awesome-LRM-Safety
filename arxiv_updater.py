@@ -7,19 +7,15 @@ from tenacity import retry, stop_after_attempt, wait_fixed
 # 查询关键词配置
 query_terms = {
     'include': [
-        "large reasoning model",
-        "large language model",
-        "Chain-of-Thought",
-        "LRM",
+        "DeepSeek-R1",
+        "DeepSeek R1",
+        "o1",
+        "o3",
+        "o3-mini",
         "safety",
-        "adversarial attacks",
         "jailbreak",
-        "privacy",
-        "backdoor",
-        "poison",
-        "deepseek-r1",
-        "openai-o1",
-        "openai-o3",
+        "Long Chain-of-Thought Reasoning",
+        "CoT-enabled models",
     ],
     'exclude': []
 }
@@ -29,9 +25,9 @@ def fetch_papers():
     # 构建查询条件
     query_parts = []
     for term in query_terms['include']:
-        query_parts.append(f'ti Abs:"{term}"')  # 匹配标题或摘要中的关键词
+        query_parts.append(f'all:"{term}"')
     for term in query_terms['exclude']:
-        query_parts.append(f'-ti Abs:"{term}"')
+        query_parts.append(f'-all:"{term}"')
     query = ' OR '.join(query_parts)
     
     # 查询 arXiv
@@ -95,7 +91,7 @@ def update_markdown():
     
     # 按时间降序排序
     all_papers_sorted = sorted(all_papers, key=lambda x: x['published'], reverse=True)
-    latest_papers = all_papers_sorted[:50]  # 显示最新30篇
+    latest_papers = all_papers_sorted[:50]  # 显示最新50篇
     older_papers = all_papers_sorted[50:]    # 历史论文
     
     # 生成 Markdown 表格
