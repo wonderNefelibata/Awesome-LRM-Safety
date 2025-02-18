@@ -9,7 +9,7 @@ query_terms = {
     'include': [
         "large reasoning model",
         "large language model",
-        "Long Chain-of-Thought Reasoning",
+        "Chain-of-Thought",
         "LRM",
         "safety",
         "adversarial attacks",
@@ -37,7 +37,7 @@ def fetch_papers():
     # 查询 arXiv
     search = arxiv.Search(
         query=query,
-        max_results=50,
+        max_results=100,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -53,7 +53,7 @@ def fetch_papers():
             "url": result.entry_id,
             "authors": [a.name for a in result.authors],
             "published": result.published.isoformat(),
-            "summary": result.summary.replace('\n', ' ')[:] 
+            "summary": result.summary.replace('\n', ' ')[:150] + '...'
         })
     return papers
 
@@ -95,8 +95,8 @@ def update_markdown():
     
     # 按时间降序排序
     all_papers_sorted = sorted(all_papers, key=lambda x: x['published'], reverse=True)
-    latest_papers = all_papers_sorted[:30]  # 显示最新30篇
-    older_papers = all_papers_sorted[30:]    # 历史论文
+    latest_papers = all_papers_sorted[:50]  # 显示最新30篇
+    older_papers = all_papers_sorted[50:]    # 历史论文
     
     # 生成 Markdown 表格
     def generate_table(papers):
