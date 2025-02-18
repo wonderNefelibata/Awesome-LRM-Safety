@@ -31,8 +31,12 @@ def fetch_papers():
         sort_order=arxiv.SortOrder.Descending
     )
     
+    # 使用 Client.results 获取结果
+    client = arxiv.Client delay_seconds=3)  # 设置请求间隔
+    results = client.results(search)
+    
     papers = []
-    for result in search.results():
+    for result in results:
         papers.append({
             "title": result.title,
             "url": result.entry_id,
@@ -47,10 +51,10 @@ def update_article_json(papers):
     try:
         with open('article.json', 'r') as f:
             existing_papers = json.load(f)
-    except FileNotFoundError:
-        existing_papers = []
-    
-    # 去重：避免重复保存
+    except (FileNotFoundError, json.JSONDecodeError):
+        existing_papers = []  # 文件不存在或为空时，初始化为空列表
+
+    # 去重并更新
     unique_papers = []
     paper_urls = [p['url'] for p in existing_papers]
     for paper in papers:
