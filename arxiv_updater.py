@@ -1,11 +1,11 @@
 import arxiv
 import datetime
 import json
+import re
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-
-# 查询关键词配置
-query_terms = {
+# 配置参数
+QUERY_TERMS = {
     'include': [
         "DeepSeek-R1",
         "DeepSeek R1",
@@ -19,119 +19,125 @@ query_terms = {
     ],
     'exclude': []
 }
+MAX_NEW_PAPERS = 100
+LATEST_PAPERS_COUNT = 30
 
-@retry(stop=stop_after_attempt(3), wait=wait_fixed(5))  # 最多重试3次，每次间隔5秒
+def extract_arxiv_id(url):
+    """从arXiv URL中提取基础ID（不含版本号）"""
+    match = re.search(r'/(?:abs|pdf)/(.*?)(?:v\d+)?(?:\.pdf)?$', url)
+    return match.group(1) if match else None
+
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(5))
 def fetch_papers():
-    # 构建查询条件
-    query_parts = []
-    for term in query_terms['include']:
-        query_parts.append(f'all:"{term}"')
-    for term in query_terms['exclude']:
-        query_parts.append(f'-all:"{term}"')
-    query = ' OR '.join(query_parts)
-    
-    # 查询 arXiv
+    """从arXiv获取最新论文"""
+    query = " OR ".join([f'all:"{term}"' for term in QUERY_TERMS['include']])
     search = arxiv.Search(
         query=query,
-        max_results=100,
+        max_results=MAX_NEW_PAPERS,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
     
-    # 使用 Client.results 获取结果
-    client = arxiv.Client(delay_seconds=1)  # 设置请求间隔
-    results = client.results(search)
-    
-    papers = []
-    for result in results:
-        papers.append({
-            "title": result.title,
-            "url": result.entry_id,
-            "authors": [a.name for a in result.authors],
-            "published": result.published.isoformat(),
-            "summary": result.summary.replace('\n', ' ')[:150] + '...'
-        })
-    return papers
+    client = arxiv.Client(delay_seconds=1)
+    return [{
+        "title": result.title,
+        "url": result.entry_id,
+        "arxiv_id": result.get_short_id(),
+        "authors": [a.name for a in result.authors],
+        "published": result.published.isoformat(),
+        "summary": result.summary.replace('\n', ' ')[:150] + '...'
+    } for result in client.results(search)]
 
-def update_article_json(papers):
-    print("papers: ", len(papers))
-    # 保存所有论文到 article.json
+def update_article_json(new_papers):
+    """更新论文数据库"""
     try:
         with open('article.json', 'r') as f:
-            print("article.json exists, updating...")
             existing_papers = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
-        print("article.json not found, creating new one.")
-        existing_papers = []  # 文件不存在或为空时，初始化为空列表
+        existing_papers = []
 
-    print("existing_papers的长度: ", len(existing_papers))
-    # 去重并更新
-    unique_papers = []
-    paper_urls = [p['url'] for p in existing_papers]
-    for paper in papers:
-        if paper['url'] not in paper_urls:
-            unique_papers.append(paper)
+    # 合并新旧论文并去重
+    papers_dict = {}
+    for paper in existing_papers + new_papers:
+        # 处理旧数据缺少arxiv_id的情况
+        if 'arxiv_id' not in paper:
+            paper['arxiv_id'] = extract_arxiv_id(paper['url'])
+        
+        # 保留最新版本
+        pid = paper['arxiv_id']
+        existing = papers_dict.get(pid)
+        if not existing or datetime.datetime.fromisoformat(paper['published']) > datetime.datetime.fromisoformat(existing['published']):
+            papers_dict[pid] = paper
 
-    print("unique_papers的长度: ", len(unique_papers))
+    updated_papers = sorted(papers_dict.values(), 
+                          key=lambda x: x['published'], 
+                          reverse=True)
     
-    updated_papers = existing_papers + unique_papers
-    print("updated_papers的长度: ", len(updated_papers))
     with open('article.json', 'w') as f:
-        print("article.json存在，准备更新")
         json.dump(updated_papers, f, indent=2)
-        print(f"成功更新 {len(unique_papers)} 篇新论文")
+    print(f"论文数据库已更新，当前总数：{len(updated_papers)}篇")
 
-def update_markdown():
-    # 读取 JSON 数据
+def generate_markdown_table(papers, title=""):
+    """生成Markdown表格"""
+    if not papers:
+        return ""
+    
+    table = ""
+    if title:
+        table += f"\n\n## {title}\n\n"
+    table += "| Date       | Title                                      | Authors           | Abstract Summary          |\n"
+    table += "|------------|--------------------------------------------|-------------------|---------------------------|\n"
+    
+    for p in papers:
+        authors = ', '.join(p['authors'][:2]) + (' et al.' if len(p['authors']) > 2 else '')
+        table += f"| {p['published'][:10]} | [{p['title']}]({p['url']}) | {authors} | {p['summary']} |\n"
+    return table
+
+def update_readme():
+    """更新README文件"""
+    # 读取论文数据
     try:
         with open('article.json', 'r') as f:
-            all_papers = json.load(f)
+            all_papers = sorted(json.load(f), 
+                              key=lambda x: x['published'], 
+                              reverse=True)
     except FileNotFoundError:
         all_papers = []
     
-    # 按时间降序排序
-    all_papers_sorted = sorted(all_papers, key=lambda x: x['published'], reverse=True)
-    latest_papers = all_papers_sorted[:50]  # 显示最新50篇
-    older_papers = all_papers_sorted[50:]    # 历史论文
+    # 分割最新和历史论文
+    latest = all_papers[:LATEST_PAPERS_COUNT]
+    historical = all_papers[LATEST_PAPERS_COUNT:]
     
-    # 生成 Markdown 表格
-    def generate_table(papers):
-        if not papers:
-            return ""
-        table = f"\n\n| Date       | Title                                      | Authors           | Abstract                                      |\n|------------|--------------------------------------------|-------------------|-----------------------------------------------|\n"
-        for p in papers:
-            table += f"| {p['published'][:10]} | [{p['title']}]({p['url']}) | {', '.join(p['authors'][:2])} et al. | {p['summary']} |\n"
-        table += "\n"
-        return table
+    # 生成最新表格
+    latest_table = generate_markdown_table(latest, "Latest arXiv Papers (Auto-Updated)")
     
-    # 更新 README.md
-    with open('README.md', 'r', encoding='utf-8') as f:
+    # 生成历史表格（可折叠）
+    history_section = ""
+    if historical:
+        history_table = generate_markdown_table(historical, "Historical Papers")
+        history_section = f"""
+<details>
+<summary>📚 View Historical Papers ({len(historical)} entries)</summary>
+
+{history_table}
+</details>
+"""
+    # 更新README内容
+    with open('README.md', 'r+', encoding='utf-8') as f:
         content = f.read()
-    
-    # 查找占位符位置
-    placeholder = '<!-- ARXIV_PAPERS_START -->'
-    placeholder_pos = content.find(placeholder)
-    if placeholder_pos == -1:
-        print("Warning: 占位符 '" + placeholder + "' 未找到，无法更新论文内容！")
-        return
-    
-    # 提取占位符前面的内容和后面的内容
-    prefix = content[:placeholder_pos + len(placeholder)]
-    suffix = content[placeholder_pos + len(placeholder):]
-    
-    # 生成最新论文表格
-    latest_table = generate_table(latest_papers)
-    # 生成历史论文表格
-    history_table = '\n\n'.join([f"<details><summary>View Older Papers</summary>{generate_table(older_papers)}</details>" if older_papers else ""])
-    
-    # 组装新的内容
-    new_content = prefix + latest_table + history_table + suffix
-    
-    # 写入新内容
-    with open('README.md', 'w', encoding='utf-8') as f:
-        f.write(new_content)
+        placeholder = '<!-- ARXIV_PAPERS -->'
+        start = content.find(placeholder)
+        
+        if start != -1:
+            new_content = content[:start + len(placeholder)] + latest_table + history_section
+            f.seek(0)
+            f.truncate()
+            f.write(new_content)
+            print("README更新成功！")
+        else:
+            print("⚠️ 未找到占位符，请确认README中包含<!-- ARXIV_PAPERS -->")
 
 if __name__ == "__main__":
-    papers = fetch_papers()
-    update_article_json(papers)
-    update_markdown()
+    new_papers = fetch_papers()
+    update_article_json(new_papers)
+    update_readme()
