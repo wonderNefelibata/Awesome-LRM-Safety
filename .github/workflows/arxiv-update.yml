@@ -1,32 +1,52 @@
-name: arXiv Paper Updater
+name: Run Arxiv Papers Daily
 
 on:
   schedule:
-    - cron: '42 10 * * *'  # 每天 UTC 时间 16:30 运行（北京时间次日00:30）
+    - cron: '0 1 * * *'  # 每天 UTC 时间 4 点和 16 点运行
   workflow_dispatch:
+
+env:
+  GITHUB_USER_NAME: wonderNefelibata      # 请替换为你的 GitHub 用户名
+  GITHUB_USER_EMAIL: 909785560@qq.com    # 请替换为你的电子邮件地址
 
 jobs:
   update:
+    name: Update Arxiv Papers
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python Environment
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
-          pip install arxiv
-          pip install tenacity
+          python -m pip install --upgrade pip
+          pip install arxiv tenacity
 
-      - name: Run arXiv Updater
-        run: python arxiv_updater.py
+      - name: Run arXiv Updater Script
+        run: |
+          python arxiv_updater.py
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'chore: Auto-update arXiv papers'
-          branch: main
-          file_pattern: README.md,article.json, arxiv_updater.py  # 确保相关文件被提交
+      - name: Debug File Paths
+        run: |
+          echo "Current working directory: $(pwd)"
+          ls -la  # 列出工作目录中的文件
+
+      - name: Check File Contents
+        run: |
+          echo "article.json content:"
+          cat article.json | head -n 5
+          echo "README.md content change:"
+          git diff README.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "${{ env.GITHUB_USER_NAME }}"
+          git config user.email "${{ env.GITHUB_USER_EMAIL }}"
+          git add article.json README.md arxiv_updater.py
+          git commit -m "Automatic update from GitHub Actions" || echo "No changes to commit"
+          git push origin main
