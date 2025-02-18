@@ -20,6 +20,16 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 
 ---
 
+## 🚀 Motivation
+Large Reasoning Models (LRMs) are revolutionizing AI capabilities in complex decision-making scenarios. However, their deployment raises critical safety concerns:
+- **Adversarial attacks** on reasoning pipelines
+- **Privacy leakage** through multi-step reasoning
+- **Ethical risks** in high-stakes domains (e.g., healthcare, finance)
+- **Systemic failures** in autonomous systems
+This repository aims to catalog research addressing these challenges and promote safer LRM development.
+
+---
+
 ## 📰 Latest arXiv Papers (Auto-Updated)
 <!-- ARXIV_PAPERS_START -->
 
@@ -85,7 +95,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 
 ---
 
-## 🔑 Key Safety Domains
+## 🔑 Key Safety Domains(coming soon)
 | Category               | Key Challenges                          | Related Topics                          |
 |------------------------|-----------------------------------------|------------------------------------------|
 | **Adversarial Robustness** | Prompt injection, Reasoning path poisoning | Red teaming, Formal verification        |
@@ -96,7 +106,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 
 ---
 
-## 📚 Research Papers
+## 📚 Research Papers(coming soon)
 ### Foundational Works
 - [2023] [Towards Safer Large Reasoning Models: A Survey of Risks in Multistep Reasoning Systems](https://arxiv.org/abs/example)  
   *Comprehensive taxonomy of LRM safety risks*
@@ -113,7 +123,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 
 ---
 
-## 🛠️ Projects & Tools
+## 🛠️ Projects & Tools(coming soon)
 ### Model-Specific Resources
 - **DeepSeek-R1 Safety Kit**  
   Official safety evaluation toolkit for DeepSeek-R1 reasoning modules
@@ -121,7 +131,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
 - **OpenAI o1 Red Teaming Framework**  
   Adversarial testing framework for multi-turn reasoning tasks
 
-### General Tools
+### General Tools(coming soon)
 - [ReasonGuard](https://github.com/example/reasonguard)  
   Real-time monitoring for reasoning chain anomalies
 
