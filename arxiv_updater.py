@@ -1,6 +1,7 @@
 import arxiv
 import datetime
 import json
+from tenacity import retry, stop_after_attempt, wait_fixed
 
 # 查询关键词配置
 query_terms = {
@@ -14,6 +15,7 @@ query_terms = {
     'exclude': []
 }
 
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(5))  # 最多重试3次，每次间隔5秒
 def fetch_papers():
     # 构建查询条件
     query_parts = []
