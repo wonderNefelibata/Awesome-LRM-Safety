@@ -11,7 +11,12 @@ query_terms = {
         "AI safety",
         "language model security",
         "adversarial attacks",
-        "machine learning security"
+        "jailbreak",
+        "privacy",
+        "backdoor",
+        "poison",
+        "deepseek-r1",
+        "openai-o1"
     ],
     'exclude': []
 }
