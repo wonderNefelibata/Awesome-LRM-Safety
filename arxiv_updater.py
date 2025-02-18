@@ -53,7 +53,7 @@ def update_article_json(papers):
     print("papers: ", len(papers))
     # 保存所有论文到 article.json
     try:
-        with open('./article.json', 'r') as f:
+        with open('article.json', 'r') as f:
             print("article.json exists, updating...")
             existing_papers = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
