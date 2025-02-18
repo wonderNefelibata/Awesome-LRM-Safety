@@ -3,6 +3,7 @@ import datetime
 import json
 from tenacity import retry, stop_after_attempt, wait_fixed
 
+
 # 查询关键词配置
 query_terms = {
     'include': [
@@ -90,10 +91,10 @@ def update_markdown():
     older_papers = all_papers_sorted[30:]    # 历史论文
     
     # 生成 Markdown 表格
-    def generate_table(papers, title):
+    def generate_table(papers):
         if not papers:
             return ""
-        table = f"\n\n--- \n\n## {title}\n\n| Date       | Title                                      | Authors           | Abstract                                      |\n|------------|--------------------------------------------|-------------------|-----------------------------------------------|\n"
+        table = f"\n\n| Date       | Title                                      | Authors           | Abstract                                      |\n|------------|--------------------------------------------|-------------------|-----------------------------------------------|\n"
         for p in papers:
             table += f"| {p['published'][:10]} | [{p['title']}]({p['url']}) | {', '.join(p['authors'][:2])} et al. | {p['summary']} |\n"
         table += "\n"
@@ -103,13 +104,26 @@ def update_markdown():
     with open('README.md', 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # 插入最新论文（未折叠）
-    new_content = content.replace('<!-- ARXIV_PAPERS_START -->', generate_table(latest_papers, "Latest arXiv Papers (Auto-Updated)"))
+    # 查找占位符位置
+    placeholder = '<!-- ARXIV_PAPERS_START -->'
+    placeholder_pos = content.find(placeholder)
+    if placeholder_pos == -1:
+        print("Warning: 占位符 '" + placeholder + "' 未找到，无法更新论文内容！")
+        return
     
-    # 插入历史论文（折叠样式）
-    history_table = '\n\n'.join([f"<details><summary>View Older Papers</summary>{generate_table(older_papers, 'Historical arXiv Papers')}</details>" if older_papers else ""])
-    new_content = new_content.replace('<!-- ARXIV_PAPERS_HISTORY -->', history_table)
+    # 提取占位符前面的内容和后面的内容
+    prefix = content[:placeholder_pos + len(placeholder)]
+    suffix = content[placeholder_pos + len(placeholder):]
     
+    # 生成最新论文表格
+    latest_table = generate_table(latest_papers)
+    # 生成历史论文表格
+    history_table = '\n\n'.join([f"<details><summary>View Older Papers</summary>{generate_table(older_papers)}</details>" if older_papers else ""])
+    
+    # 组装新的内容
+    new_content = prefix + latest_table + history_table + suffix
+    
+    # 写入新内容
     with open('README.md', 'w', encoding='utf-8') as f:
         f.write(new_content)
 
