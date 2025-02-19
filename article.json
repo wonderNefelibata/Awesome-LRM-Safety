@@ -1,1 +1,777 @@
-
+[
+  {
+    "title": "Can LLMs Simulate Social Media Engagement? A Study on Action-Guided Response Generation",
+    "url": "http://arxiv.org/abs/2502.12073v1",
+    "arxiv_id": "2502.12073v1",
+    "authors": [
+      "Zhongyi Qiu",
+      "Hanjia Lyu",
+      "Wei Xiong",
+      "Jiebo Luo"
+    ],
+    "published": "2025-02-17T17:43:08+00:00",
+    "summary": "Social media enables dynamic user engagement with trending topics, and recent research has explored the potential of large language models (LLMs) for response generation. While some studies investigate LLMs as agents for simulating user behavior on social media, their focus remains on practical viability and scalability rather than a deeper understanding of how well LLM aligns with human behavior. This paper analyzes LLMs' ability to simulate social media engagement through action guided response generation, where a model first predicts a user's most likely engagement action-retweet, quote, or rewrite-towards a trending post before generating a personalized response conditioned on the predicted action. We benchmark GPT-4o-mini, O1-mini, and DeepSeek-R1 in social media engagement simulation regarding a major societal event discussed on X. Our findings reveal that zero-shot LLMs underperform BERT in action prediction, while few-shot prompting initially degrades the prediction accuracy of LLMs with limited examples. However, in response generation, few-shot LLMs achieve stronger semantic alignment with ground truth posts."
+  },
+  {
+    "title": "TokenSkip: Controllable Chain-of-Thought Compression in LLMs",
+    "url": "http://arxiv.org/abs/2502.12067v1",
+    "arxiv_id": "2502.12067v1",
+    "authors": [
+      "Heming Xia",
+      "Yongqi Li",
+      "Chak Tou Leong",
+      "Wenjie Wang",
+      "Wenjie Li"
+    ],
+    "published": "2025-02-17T17:37:26+00:00",
+    "summary": "Chain-of-Thought (CoT) has been proven effective in enhancing the reasoning capabilities of large language models (LLMs). Recent advancements, such as OpenAI's o1 and DeepSeek-R1, suggest that scaling up the length of CoT sequences during inference could further boost LLM reasoning performance. However, due to the autoregressive nature of LLM decoding, longer CoT outputs lead to a linear increase in inference latency, adversely affecting user experience, particularly when the CoT exceeds 10,000 tokens. To address this limitation, we analyze the semantic importance of tokens within CoT outputs and reveal that their contributions to reasoning vary. Building on this insight, we propose TokenSkip, a simple yet effective approach that enables LLMs to selectively skip less important tokens, allowing for controllable CoT compression. Extensive experiments across various models and tasks demonstrate the effectiveness of TokenSkip in reducing CoT token usage while preserving strong reasoning performance. Notably, when applied to Qwen2.5-14B-Instruct, TokenSkip reduces reasoning tokens by 40% (from 313 to 181) on GSM8K, with less than a 0.4% performance drop."
+  },
+  {
+    "title": "PhysReason: A Comprehensive Benchmark towards Physics-Based Reasoning",
+    "url": "http://arxiv.org/abs/2502.12054v1",
+    "arxiv_id": "2502.12054v1",
+    "authors": [
+      "Xinyu Zhang",
+      "Yuxuan Dong",
+      "Yanrui Wu",
+      "Jiaxing Huang",
+      "Chengyou Jia",
+      "Basura Fernando",
+      "Mike Zheng Shou",
+      "Lingling Zhang",
+      "Jun Liu"
+    ],
+    "published": "2025-02-17T17:24:14+00:00",
+    "summary": "Large language models demonstrate remarkable capabilities across various domains, especially mathematics and logic reasoning. However, current evaluations overlook physics-based reasoning - a complex task requiring physics theorems and constraints. We present PhysReason, a 1,200-problem benchmark comprising knowledge-based (25%) and reasoning-based (75%) problems, where the latter are divided into three difficulty levels (easy, medium, hard). Notably, problems require an average of 8.1 solution steps, with hard requiring 15.6, reflecting the complexity of physics-based reasoning. We propose the Physics Solution Auto Scoring Framework, incorporating efficient answer-level and comprehensive step-level evaluations. Top-performing models like Deepseek-R1, Gemini-2.0-Flash-Thinking, and o3-mini-high achieve less than 60% on answer-level evaluation, with performance dropping from knowledge questions (75.11%) to hard problems (31.95%). Through step-level evaluation, we identified four key bottlenecks: Physics Theorem Application, Physics Process Understanding, Calculation, and Physics Condition Analysis. These findings position PhysReason as a novel and comprehensive benchmark for evaluating physics-based reasoning capabilities in large language models. Our code and data will be published at https:/dxzxy12138.github.io/PhysReason."
+  },
+  {
+    "title": "SafeChain: Safety of Language Models with Long Chain-of-Thought Reasoning Capabilities",
+    "url": "http://arxiv.org/abs/2502.12025v1",
+    "arxiv_id": "2502.12025v1",
+    "authors": [
+      "Fengqing Jiang",
+      "Zhangchen Xu",
+      "Yuetai Li",
+      "Luyao Niu",
+      "Zhen Xiang",
+      "Bo Li",
+      "Bill Yuchen Lin",
+      "Radha Poovendran"
+    ],
+    "published": "2025-02-17T16:57:56+00:00",
+    "summary": "Emerging large reasoning models (LRMs), such as DeepSeek-R1 models, leverage long chain-of-thought (CoT) reasoning to generate structured intermediate steps, enhancing their reasoning capabilities. However, long CoT does not inherently guarantee safe outputs, potentially leading to harmful consequences such as the introduction of security vulnerabilities in code or the spread of misinformation. Current research on large language model (LLM) safety usually focuses on short-answer responses, overlooking the long CoT style outputs of LRMs. To bridge this gap, we conduct a systematic study of LRM safety. First, we investigate safety evaluators calibrated against human annotations. Using our newly developed metrics, we thoroughly assess the safety of 12 state-of-the-art LRMs on StrongReject and WildJailbreak datasets. Our results show that LRMs are not safe compared to their reasoning advance. Further, we perform a fine-grained analysis of the reasoning trace and final answer. We find that three decoding strategies-ZeroThink, LessThink, and MoreThink-can improve model safety without additional training. However, these strategies either use constrained reasoning traces or incur high inference costs. To better strengthen LRM safety, we introduce SafeChain, the first-of-its-kind safety training dataset in CoT style. We fine-tune two LRMs with SafeChain, showing that it not only enhances model safety but also preserves performance across 6 reasoning benchmarks."
+  },
+  {
+    "title": "Atom of Thoughts for Markov LLM Test-Time Scaling",
+    "url": "http://arxiv.org/abs/2502.12018v1",
+    "arxiv_id": "2502.12018v1",
+    "authors": [
+      "Fengwei Teng",
+      "Zhaoyang Yu",
+      "Quan Shi",
+      "Jiayi Zhang",
+      "Chenglin Wu",
+      "Yuyu Luo"
+    ],
+    "published": "2025-02-17T16:52:42+00:00",
+    "summary": "Large Language Models (LLMs) achieve superior performance through training-time scaling, and test-time scaling further enhances their capabilities by conducting effective reasoning during inference. However, as the scale of reasoning increases, existing test-time scaling methods suffer from accumulated historical information, which not only wastes computational resources but also interferes with effective reasoning. To address this issue, we observe that complex reasoning progress is often achieved by solving a sequence of independent subquestions, each being self-contained and verifiable. These subquestions are essentially atomic questions, relying primarily on their current state rather than accumulated history, similar to the memoryless transitions in a Markov process. Based on this observation, we propose Atom of Thoughts (AoT), where each state transition in the reasoning process consists of decomposing the current question into a dependency-based directed acyclic graph and contracting its subquestions, forming a new atomic question state. This iterative decomposition-contraction process continues until reaching directly solvable atomic questions, naturally realizing Markov transitions between question states. Furthermore, these atomic questions can be seamlessly integrated into existing test-time scaling methods, enabling AoT to serve as a plug-in enhancement for improving reasoning capabilities. Experiments across six benchmarks demonstrate the effectiveness of AoT both as a standalone framework and a plug-in enhancement. Notably, on HotpotQA, when applied to gpt-4o-mini, AoT achieves an 80.6% F1 score, surpassing o3-mini by 3.4% and DeepSeek-R1 by 10.6%. The code will be available at https://github.com/qixucen/atom."
+  },
+  {
+    "title": "LIMR: Less is More for RL Scaling",
+    "url": "http://arxiv.org/abs/2502.11886v1",
+    "arxiv_id": "2502.11886v1",
+    "authors": [
+      "Xuefeng Li",
+      "Haoyang Zou",
+      "Pengfei Liu"
+    ],
+    "published": "2025-02-17T15:13:29+00:00",
+    "summary": "In this paper, we ask: what truly determines the effectiveness of RL training data for enhancing language models' reasoning capabilities? While recent advances like o1, Deepseek R1, and Kimi1.5 demonstrate RL's potential, the lack of transparency about training data requirements has hindered systematic progress. Starting directly from base models without distillation, we challenge the assumption that scaling up RL training data inherently improves performance. we demonstrate that a strategically selected subset of just 1,389 samples can outperform the full 8,523-sample dataset. We introduce Learning Impact Measurement (LIM), an automated method to evaluate and prioritize training samples based on their alignment with model learning trajectories, enabling efficient resource utilization and scalable implementation. Our method achieves comparable or even superior performance using only 1,389 samples versus the full 8,523 samples dataset. Notably, while recent data-efficient approaches (e.g., LIMO and s1) show promise with 32B-scale models, we find it significantly underperforms at 7B-scale through supervised fine-tuning (SFT). In contrast, our RL-based LIMR achieves 16.7% higher accuracy on AIME24 and outperforms LIMO and s1 by 13.0% and 22.2% on MATH500. These results fundamentally reshape our understanding of RL scaling in LLMs, demonstrating that precise sample selection, rather than data scale, may be the key to unlocking enhanced reasoning capabilities. For reproducible research and future innovation, we are open-sourcing LIMR, including implementation of LIM, training and evaluation code, curated datasets, and trained models at https://github.com/GAIR-NLP/LIMR."
+  },
+  {
+    "title": "Hypothesis-Driven Theory-of-Mind Reasoning for Large Language Models",
+    "url": "http://arxiv.org/abs/2502.11881v1",
+    "arxiv_id": "2502.11881v1",
+    "authors": [
+      "Hyunwoo Kim",
+      "Melanie Sclar",
+      "Tan Zhi-Xuan",
+      "Lance Ying",
+      "Sydney Levine",
+      "Yang Liu",
+      "Joshua B. Tenenbaum",
+      "Yejin Choi"
+    ],
+    "published": "2025-02-17T15:08:50+00:00",
+    "summary": "Existing LLM reasoning methods have shown impressive capabilities across various tasks, such as solving math and coding problems. However, applying these methods to scenarios without ground-truth answers or rule-based verification methods - such as tracking the mental states of an agent - remains challenging. Inspired by the sequential Monte Carlo algorithm, we introduce thought-tracing, an inference-time reasoning algorithm designed to trace the mental states of specific agents by generating hypotheses and weighting them based on observations without relying on ground-truth solutions to questions in datasets. Our algorithm is modeled after the Bayesian theory-of-mind framework, using LLMs to approximate probabilistic inference over agents' evolving mental states based on their perceptions and actions. We evaluate thought-tracing on diverse theory-of-mind benchmarks, demonstrating significant performance improvements compared to baseline LLMs. Our experiments also reveal interesting behaviors of the recent reasoning models - e.g., o1 and R1 - on theory-of-mind, highlighting the difference of social reasoning compared to other domains."
+  },
+  {
+    "title": "StructTransform: A Scalable Attack Surface for Safety-Aligned Large Language Models",
+    "url": "http://arxiv.org/abs/2502.11853v1",
+    "arxiv_id": "2502.11853v1",
+    "authors": [
+      "Shehel Yoosuf",
+      "Temoor Ali",
+      "Ahmed Lekssays",
+      "Mashael AlSabah",
+      "Issa Khalil"
+    ],
+    "published": "2025-02-17T14:46:38+00:00",
+    "summary": "In this work, we present a series of structure transformation attacks on LLM alignment, where we encode natural language intent using diverse syntax spaces, ranging from simple structure formats and basic query languages (e.g. SQL) to new novel spaces and syntaxes created entirely by LLMs. Our extensive evaluation shows that our simplest attacks can achieve close to 90% success rate, even on strict LLMs (such as Claude 3.5 Sonnet) using SOTA alignment mechanisms. We improve the attack performance further by using an adaptive scheme that combines structure transformations along with existing \\textit{content transformations}, resulting in over 96% ASR with 0% refusals.   To generalize our attacks, we explore numerous structure formats, including syntaxes purely generated by LLMs. Our results indicate that such novel syntaxes are easy to generate and result in a high ASR, suggesting that defending against our attacks is not a straightforward process. Finally, we develop a benchmark and evaluate existing safety-alignment defenses against it, showing that most of them fail with 100% ASR. Our results show that existing safety alignment mostly relies on token-level patterns without recognizing harmful concepts, highlighting and motivating the need for serious research efforts in this direction. As a case study, we demonstrate how attackers can use our attack to easily generate a sample malware, and a corpus of fraudulent SMS messages, which perform well in bypassing detection."
+  },
+  {
+    "title": "BaxBench: Can LLMs Generate Correct and Secure Backends?",
+    "url": "http://arxiv.org/abs/2502.11844v1",
+    "arxiv_id": "2502.11844v1",
+    "authors": [
+      "Mark Vero",
+      "Niels M\u00fcndler",
+      "Victor Chibotaru",
+      "Veselin Raychev",
+      "Maximilian Baader",
+      "Nikola Jovanovi\u0107",
+      "Jingxuan He",
+      "Martin Vechev"
+    ],
+    "published": "2025-02-17T14:37:47+00:00",
+    "summary": "The automatic generation of programs has long been a fundamental challenge in computer science. Recent benchmarks have shown that large language models (LLMs) can effectively generate code at the function level, make code edits, and solve algorithmic coding tasks. However, to achieve full automation, LLMs should be able to generate production-quality, self-contained application modules. To evaluate the capabilities of LLMs in solving this challenge, we introduce BaxBench, a novel evaluation benchmark consisting of 392 tasks for the generation of backend applications. We focus on backends for three critical reasons: (i) they are practically relevant, building the core components of most modern web and cloud software, (ii) they are difficult to get right, requiring multiple functions and files to achieve the desired functionality, and (iii) they are security-critical, as they are exposed to untrusted third-parties, making secure solutions that prevent deployment-time attacks an imperative. BaxBench validates the functionality of the generated applications with comprehensive test cases, and assesses their security exposure by executing end-to-end exploits. Our experiments reveal key limitations of current LLMs in both functionality and security: (i) even the best model, OpenAI o1, achieves a mere 60% on code correctness; (ii) on average, we could successfully execute security exploits on more than half of the correct programs generated by each LLM; and (iii) in less popular backend frameworks, models further struggle to generate correct and secure applications. Progress on BaxBench signifies important steps towards autonomous and secure software development with LLMs."
+  },
+  {
+    "title": "video-SALMONN-o1: Reasoning-enhanced Audio-visual Large Language Model",
+    "url": "http://arxiv.org/abs/2502.11775v1",
+    "arxiv_id": "2502.11775v1",
+    "authors": [
+      "Guangzhi Sun",
+      "Yudong Yang",
+      "Jimin Zhuang",
+      "Changli Tang",
+      "Yixuan Li",
+      "Wei Li",
+      "Zejun MA",
+      "Chao Zhang"
+    ],
+    "published": "2025-02-17T13:07:40+00:00",
+    "summary": "While recent advancements in reasoning optimization have significantly enhanced the capabilities of large language models (LLMs), existing efforts to improve reasoning have been limited to solving mathematical problems and focusing on visual graphical inputs, neglecting broader applications in general video understanding.This paper proposes video-SALMONN-o1, the first open-source reasoning-enhanced audio-visual LLM designed for general video understanding tasks. To enhance its reasoning abilities, we develop a reasoning-intensive dataset featuring challenging audio-visual questions with step-by-step solutions. We also propose process direct preference optimization (pDPO), which leverages contrastive step selection to achieve efficient step-level reward modelling tailored for multimodal inputs. Additionally, we introduce RivaBench, the first reasoning-intensive video understanding benchmark, featuring over 4,000 high-quality, expert-curated question-answer pairs across scenarios such as standup comedy, academic presentations, and synthetic video detection. video-SALMONN-o1 achieves 3-8% accuracy improvements over the LLaVA-OneVision baseline across different video reasoning benchmarks. Besides, pDPO achieves 6-8% improvements compared to the supervised fine-tuning model on RivaBench. Enhanced reasoning enables video-SALMONN-o1 zero-shot synthetic video detection capabilities."
+  },
+  {
+    "title": "SQL-o1: A Self-Reward Heuristic Dynamic Search Method for Text-to-SQL",
+    "url": "http://arxiv.org/abs/2502.11741v1",
+    "arxiv_id": "2502.11741v1",
+    "authors": [
+      "Shuai Lyu",
+      "Haoran Luo",
+      "Zhonghong Ou",
+      "Yifan Zhu",
+      "Xiaoran Shang",
+      "Yang Qin",
+      "Meina Song"
+    ],
+    "published": "2025-02-17T12:28:11+00:00",
+    "summary": "The Text-to-SQL(Text2SQL) task aims to convert natural language queries into executable SQL queries. Thanks to the application of large language models (LLMs), significant progress has been made in this field. However, challenges such as model scalability, limited generation space, and coherence issues in SQL generation still persist. To address these issues, we propose SQL-o1, a Self-Reward-based heuristic search method designed to enhance the reasoning ability of LLMs in SQL query generation. SQL-o1 combines Monte Carlo Tree Search (MCTS) for heuristic process-level search and constructs a Schema-Aware dataset to help the model better understand database schemas. Extensive experiments on the Bird and Spider datasets demonstrate that SQL-o1 improves execution accuracy by 10.8\\% on the complex Bird dataset compared to the latest baseline methods, even outperforming GPT-4-based approaches. Additionally, SQL-o1 excels in few-shot learning scenarios and shows strong cross-model transferability. Our code is publicly available at:https://github.com/ShuaiLyu0110/SQL-o1."
+  },
+  {
+    "title": "Connecting Earth and Moon via the L1 Lagrangian point",
+    "url": "http://arxiv.org/abs/2502.11694v1",
+    "arxiv_id": "2502.11694v1",
+    "authors": [
+      "A. K. de Almeida Jr",
+      "V. M. de Oliveira",
+      "T. Vaillant",
+      "D. Maia",
+      "A. C. M. Correia",
+      "D. Barbosa",
+      "L. T. B. Santos"
+    ],
+    "published": "2025-02-17T11:32:02+00:00",
+    "summary": "The renewed global interest in lunar exploration requires new orbital strategies to ensure flight safety which can benefit extended lunar missions and service a plethora of planned instruments in the lunar orbit and surface. We investigate here the equivalent fuel consumption cost to transfer from (to) a given orbit and enter (leave) at any point of an invariant manifold associated with a Lyapunov orbit around the Earth-Moon $L_1$ Lagrangian point using bi-impulsive maneuvers. Whereas solving this type of transfer is generally computationally expensive, we simulate here tens of millions of transfers orbits, for different times of flight, Jacobi constants and spatial location on the manifold. We are able to reduce computational cost by taking advantage of the efficient procedure given by the Theory of Functional Connections for solving boundary value problems, represented with special constraints created to the purposes of this work. We develop here the methodology for constructing these transfers, and apply it to find a low-cost transfer from an orbit around the Earth to a stable manifold and another low-cost transfer from an unstable manifold to an orbit around the Moon. In the end, we obtain an innovative Earth-to-Moon transfer that involves a gravity assist maneuver with the Moon and allows a long stationed stage at the Lyapunov orbit around $L_1$ which can be used for designing multi-purpose missions for extended periods of time with low fuel costs. This is paramount to optimize new exploration concepts."
+  },
+  {
+    "title": "RIDE: Enhancing Large Language Model Alignment through Restyled In-Context Learning Demonstration Exemplars",
+    "url": "http://arxiv.org/abs/2502.11681v1",
+    "arxiv_id": "2502.11681v1",
+    "authors": [
+      "Yuncheng Hua",
+      "Lizhen Qu",
+      "Zhuang Li",
+      "Hao Xue",
+      "Flora D. Salim",
+      "Gholamreza Haffari"
+    ],
+    "published": "2025-02-17T11:16:19+00:00",
+    "summary": "Alignment tuning is crucial for ensuring large language models (LLMs) behave ethically and helpfully. Current alignment approaches require high-quality annotations and significant training resources. This paper proposes a low-cost, tuning-free method using in-context learning (ICL) to enhance LLM alignment. Through an analysis of high-quality ICL demos, we identified style as a key factor influencing LLM alignment capabilities and explicitly restyled ICL exemplars based on this stylistic framework. Additionally, we combined the restyled demos to achieve a balance between the two conflicting aspects of LLM alignment--factuality and safety. We packaged the restyled examples as prompts to trigger few-shot learning, improving LLM alignment. Compared to the best baseline approach, with an average score of 5.00 as the maximum, our method achieves a maximum 0.10 increase on the Alpaca task (from 4.50 to 4.60), a 0.22 enhancement on the Just-eval benchmark (from 4.34 to 4.56), and a maximum improvement of 0.32 (from 3.53 to 3.85) on the MT-Bench dataset. We release the code and data at https://github.com/AnonymousCode-ComputerScience/RIDE."
+  },
+  {
+    "title": "DELMAN: Dynamic Defense Against Large Language Model Jailbreaking with Model Editing",
+    "url": "http://arxiv.org/abs/2502.11647v1",
+    "arxiv_id": "2502.11647v1",
+    "authors": [
+      "Yi Wang",
+      "Fenghua Weng",
+      "Sibei Yang",
+      "Zhan Qin",
+      "Minlie Huang",
+      "Wenjie Wang"
+    ],
+    "published": "2025-02-17T10:39:21+00:00",
+    "summary": "Large Language Models (LLMs) are widely applied in decision making, but their deployment is threatened by jailbreak attacks, where adversarial users manipulate model behavior to bypass safety measures. Existing defense mechanisms, such as safety fine-tuning and model editing, either require extensive parameter modifications or lack precision, leading to performance degradation on general tasks, which is unsuitable to post-deployment safety alignment. To address these challenges, we propose DELMAN (Dynamic Editing for LLMs JAilbreak DefeNse), a novel approach leveraging direct model editing for precise, dynamic protection against jailbreak attacks. DELMAN directly updates a minimal set of relevant parameters to neutralize harmful behaviors while preserving the model's utility. To avoid triggering a safe response in benign context, we incorporate KL-divergence regularization to ensure the updated model remains consistent with the original model when processing benign queries. Experimental results demonstrate that DELMAN outperforms baseline methods in mitigating jailbreak attacks while preserving the model's utility, and adapts seamlessly to new attack instances, providing a practical and efficient solution for post-deployment model protection."
+  },
+  {
+    "title": "Enhancing Out-of-Distribution Detection in Medical Imaging with Normalizing Flows",
+    "url": "http://arxiv.org/abs/2502.11638v1",
+    "arxiv_id": "2502.11638v1",
+    "authors": [
+      "Dariush Lotfi",
+      "Mohammad-Ali Nikouei Mahani",
+      "Mohamad Koohi-Moghadam",
+      "Kyongtae Ty Bae"
+    ],
+    "published": "2025-02-17T10:31:24+00:00",
+    "summary": "Out-of-distribution (OOD) detection is crucial in AI-driven medical imaging to ensure reliability and safety by identifying inputs outside a model's training distribution. Existing methods often require retraining or modifications to pre-trained models, which is impractical for clinical applications. This study introduces a post-hoc normalizing flow-based approach that seamlessly integrates with pre-trained models. By leveraging normalizing flows, it estimates the likelihood of feature vectors extracted from pre-trained models, capturing semantically meaningful representations without relying on pixel-level statistics. The method was evaluated using the MedMNIST benchmark and a newly curated MedOOD dataset simulating clinically relevant distributional shifts. Performance was measured using standard OOD detection metrics (e.g., AUROC, FPR@95, AUPR_IN, AUPR_OUT), with statistical analyses comparing it against ten baseline methods. On MedMNIST, the proposed model achieved an AUROC of 93.80%, outperforming state-of-the-art methods. On MedOOD, it achieved an AUROC of 84.61%, demonstrating superior performance against other methods. Its post-hoc nature ensures compatibility with existing clinical workflows, addressing the limitations of previous approaches. The model and code to build OOD datasets are available at https://github.com/dlotfi/MedOODFlow."
+  },
+  {
+    "title": "GraphThought: Graph Combinatorial Optimization with Thought Generation",
+    "url": "http://arxiv.org/abs/2502.11607v1",
+    "arxiv_id": "2502.11607v1",
+    "authors": [
+      "Zixiao Huang",
+      "Lifeng Guo",
+      "Junjie Sheng",
+      "Haosheng Chen",
+      "Wenhao Li",
+      "Bo Jin",
+      "Changhong Lu",
+      "Xiangfeng Wang"
+    ],
+    "published": "2025-02-17T09:50:41+00:00",
+    "summary": "Large language models (LLMs) have demonstrated remarkable capabilities across various domains, especially in text processing and generative tasks. Recent advancements in the reasoning capabilities of state-of-the-art LLMs, such as OpenAI-o1, have significantly broadened their applicability, particularly in complex problem-solving and logical inference. However, most existing LLMs struggle with notable limitations in handling graph combinatorial optimization (GCO) problems. To bridge this gap, we formally define the Optimal Thoughts Design (OTD) problem, including its state and action thought space. We then introduce a novel framework, GraphThought, designed to generate high-quality thought datasets for GCO problems. Leveraging these datasets, we fine-tune the Llama-3-8B-Instruct model to develop Llama-GT. Notably, despite its compact 8B-parameter architecture, Llama-GT matches the performance of state-of-the-art LLMs on the GraphArena benchmark. Experimental results show that our approach outperforms both proprietary and open-source models, even rivaling specialized models like o1-mini. This work sets a new state-of-the-art benchmark while challenging the prevailing notion that model scale is the primary driver of reasoning capability."
+  },
+  {
+    "title": "Runtime Enforcement of CPS against Signal Temporal Logic",
+    "url": "http://arxiv.org/abs/2502.11584v1",
+    "arxiv_id": "2502.11584v1",
+    "authors": [
+      "Han Su",
+      "Saumya Shankar",
+      "Srinivas Pinisetty",
+      "Partha S. Roop",
+      "Naijun Zhan"
+    ],
+    "published": "2025-02-17T09:16:58+00:00",
+    "summary": "Cyber-Physical Systems (CPSs), especially those involving autonomy, need guarantees of their safety. Runtime Enforcement (RE) is a lightweight method to formally ensure that some specified properties are satisfied over the executions of the system. Hence, there is recent interest in the RE of CPS. However, existing methods are not designed to tackle specifications suitable for the hybrid dynamics of CPS. With this in mind, we develop runtime enforcement of CPS using properties defined in Signal Temporal Logic (STL).   In this work, we aim to construct a runtime enforcer for a given STL formula to minimally modify a signal to satisfy the formula. To achieve this, the STL formula to be enforced is first translated into a timed transducer, while the signal to be corrected is encoded as timed words. We provide timed transducers for the temporal operators \\emph{until} and \\emph{release} noting that other temporal operators can be expressed using these two. Our approach enables effective enforcement of STL properties for CPS. A case study is provided to illustrate the approach and generate empirical evidence of its suitability for CPS."
+  },
+  {
+    "title": "Language Complexity Measurement as a Noisy Zero-Shot Proxy for Evaluating LLM Performance",
+    "url": "http://arxiv.org/abs/2502.11578v1",
+    "arxiv_id": "2502.11578v1",
+    "authors": [
+      "Birger Moell",
+      "Johan Boye"
+    ],
+    "published": "2025-02-17T09:09:58+00:00",
+    "summary": "Large Language Models (LLMs) have made significant strides in natural language generation but often face challenges in tasks requiring precise calculations and structural analysis. This paper investigates the performance of state-of-the-art LLMs on language complexity measurement tasks, through the computation of the LIX readability metric and Average Dependency Distance (ADD). Using Swedish high school and university-level essays, we evaluate the models' abilities to compute LIX scores and perform dependency parsing, comparing their results to established ground truths. Our findings reveal that while all models demonstrate some capacity for these tasks, ChatGPT-o1-mini performs most consistently, achieving the highest accuracy in both LIX computation and dependency parsing. Additionally, we observe a strong significant correlation -0.875 p 0.026 (N=6) between the models' accuracy in computing LIX and their overall performance on the Massive Multitask Language Understanding (MMLU) benchmark. These results suggest that language complexity measurement abilities can serve as a noisy zero-shot proxies for assessing the general capabilities of LLMs, providing a practical method for model evaluation without the need for extensive benchmarking datasets."
+  },
+  {
+    "title": "Large Language Models and Mathematical Reasoning Failures",
+    "url": "http://arxiv.org/abs/2502.11574v1",
+    "arxiv_id": "2502.11574v1",
+    "authors": [
+      "Johan Boye",
+      "Birger Moell"
+    ],
+    "published": "2025-02-17T09:07:32+00:00",
+    "summary": "This paper investigates the mathematical reasoning capabilities of large language models (LLMs) using 50 newly constructed high-school-level word problems. Unlike prior studies that focus solely on answer correctness, we rigorously analyze both final answers and solution steps to identify reasoning failures. Evaluating eight state-of-the-art models - including Mixtral, Llama, Gemini, GPT-4o, and OpenAI's o1 variants - we find that while newer models (e.g., o3-mini, deepseek-r1) achieve higher accuracy, all models exhibit errors in spatial reasoning, strategic planning, and arithmetic, sometimes producing correct answers through flawed logic. Common failure modes include unwarranted assumptions, over-reliance on numerical patterns, and difficulty translating physical intuition into mathematical steps. Manual analysis reveals that models struggle with problems requiring multi-step deduction or real-world knowledge, despite possessing broad mathematical knowledge. Our results underscore the importance of evaluating reasoning processes, not just answers, and caution against overestimating LLMs' problem-solving proficiency. The study highlights persistent gaps in LLMs' generalization abilities, emphasizing the need for targeted improvements in structured reasoning and constraint handling."
+  },
+  {
+    "title": "Equilibrate RLHF: Towards Balancing Helpfulness-Safety Trade-off in Large Language Models",
+    "url": "http://arxiv.org/abs/2502.11555v1",
+    "arxiv_id": "2502.11555v1",
+    "authors": [
+      "Yingshui Tan",
+      "Yilei Jiang",
+      "Yanshi Li",
+      "Jiaheng Liu",
+      "Xingyuan Bu",
+      "Wenbo Su",
+      "Xiangyu Yue",
+      "Xiaoyong Zhu",
+      "Bo Zheng"
+    ],
+    "published": "2025-02-17T08:40:30+00:00",
+    "summary": "Fine-tuning large language models (LLMs) based on human preferences, commonly achieved through reinforcement learning from human feedback (RLHF), has been effective in improving their performance. However, maintaining LLM safety throughout the fine-tuning process remains a significant challenge, as resolving conflicts between safety and helpfulness can be non-trivial. Typically, the safety alignment of LLM is trained on data with safety-related categories. However, our experiments find that naively increasing the scale of safety training data usually leads the LLMs to an ``overly safe'' state rather than a ``truly safe'' state, boosting the refusal rate through extensive safety-aligned data without genuinely understanding the requirements for safe responses. Such an approach can inadvertently diminish the models' helpfulness. To understand the phenomenon, we first investigate the role of safety data by categorizing them into three different groups, and observe that each group behaves differently as training data scales up. To boost the balance between safety and helpfulness, we propose an Equilibrate RLHF framework including a Fine-grained Data-centric (FDC) approach that achieves better safety alignment even with fewer training data, and an Adaptive Message-wise Alignment (AMA) approach, which selectively highlight the key segments through a gradient masking strategy. Extensive experimental results demonstrate that our approach significantly enhances the safety alignment of LLMs while balancing safety and helpfulness."
+  },
+  {
+    "title": "Evaluating o1-Like LLMs: Unlocking Reasoning for Translation through Comprehensive Analysis",
+    "url": "http://arxiv.org/abs/2502.11544v1",
+    "arxiv_id": "2502.11544v1",
+    "authors": [
+      "Andong Chen",
+      "Yuchen Song",
+      "Wenxin Zhu",
+      "Kehai Chen",
+      "Muyun Yang",
+      "Tiejun Zhao",
+      "Min zhang"
+    ],
+    "published": "2025-02-17T08:23:46+00:00",
+    "summary": "The o1-Like LLMs are transforming AI by simulating human cognitive processes, but their performance in multilingual machine translation (MMT) remains underexplored. This study examines: (1) how o1-Like LLMs perform in MMT tasks and (2) what factors influence their translation quality. We evaluate multiple o1-Like LLMs and compare them with traditional models like ChatGPT and GPT-4o. Results show that o1-Like LLMs establish new multilingual translation benchmarks, with DeepSeek-R1 surpassing GPT-4o in contextless tasks. They demonstrate strengths in historical and cultural translation but exhibit a tendency for rambling issues in Chinese-centric outputs. Further analysis reveals three key insights: (1) High inference costs and slower processing speeds make complex translation tasks more resource-intensive. (2) Translation quality improves with model size, enhancing commonsense reasoning and cultural translation. (3) The temperature parameter significantly impacts output quality-lower temperatures yield more stable and accurate translations, while higher temperatures reduce coherence and precision."
+  },
+  {
+    "title": "AURORA:Automated Training Framework of Universal Process Reward Models via Ensemble Prompting and Reverse Verification",
+    "url": "http://arxiv.org/abs/2502.11520v1",
+    "arxiv_id": "2502.11520v1",
+    "authors": [
+      "Xiaoyu Tan",
+      "Tianchu Yao",
+      "Chao Qu",
+      "Bin Li",
+      "Minghao Yang",
+      "Dakuan Lu",
+      "Haozhe Wang",
+      "Xihe Qiu",
+      "Wei Chu",
+      "Yinghui Xu",
+      "Yuan Qi"
+    ],
+    "published": "2025-02-17T07:41:27+00:00",
+    "summary": "The reasoning capabilities of advanced large language models (LLMs) like o1 have revolutionized artificial intelligence applications. Nevertheless, evaluating and optimizing complex reasoning processes remain significant challenges due to diverse policy distributions and the inherent limitations of human effort and accuracy. In this paper, we present AURORA, a novel automated framework for training universal process reward models (PRMs) using ensemble prompting and reverse verification. The framework employs a two-phase approach: First, it uses diverse prompting strategies and ensemble methods to perform automated annotation and evaluation of processes, ensuring robust assessments for reward learning. Second, it leverages practical reference answers for reverse verification, enhancing the model's ability to validate outputs and improving training accuracy. To assess the framework's performance, we extend beyond the existing ProcessBench benchmark by introducing UniversalBench, which evaluates reward predictions across full trajectories under diverse policy distribtion with long Chain-of-Thought (CoT) outputs. Experimental results demonstrate that AURORA enhances process evaluation accuracy, improves PRMs' accuracy for diverse policy distributions and long-CoT responses. The project will be open-sourced at https://auroraprm.github.io/. The Universal-PRM-7B is available at https://huggingface.co/infly/Universal-PRM-7B."
+  },
+  {
+    "title": "Adversary-Aware DPO: Enhancing Safety Alignment in Vision Language Models via Adversarial Training",
+    "url": "http://arxiv.org/abs/2502.11455v1",
+    "arxiv_id": "2502.11455v1",
+    "authors": [
+      "Fenghua Weng",
+      "Jian Lou",
+      "Jun Feng",
+      "Minlie Huang",
+      "Wenjie Wang"
+    ],
+    "published": "2025-02-17T05:28:47+00:00",
+    "summary": "Safety alignment is critical in pre-training large language models (LLMs) to generate responses aligned with human values and refuse harmful queries. Unlike LLM, the current safety alignment of VLMs is often achieved with post-hoc safety fine-tuning. However, these methods are less effective to white-box attacks. To address this, we propose $\\textit{Adversary-aware DPO (ADPO)}$, a novel training framework that explicitly considers adversarial. $\\textit{Adversary-aware DPO (ADPO)}$ integrates adversarial training into DPO to enhance the safety alignment of VLMs under worst-case adversarial perturbations. $\\textit{ADPO}$ introduces two key components: (1) an adversarial-trained reference model that generates human-preferred responses under worst-case perturbations, and (2) an adversarial-aware DPO loss that generates winner-loser pairs accounting for adversarial distortions. By combining these innovations, $\\textit{ADPO}$ ensures that VLMs remain robust and reliable even in the presence of sophisticated jailbreak attacks. Extensive experiments demonstrate that $\\textit{ADPO}$ outperforms baselines in the safety alignment and general utility of VLMs."
+  },
+  {
+    "title": "AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection",
+    "url": "http://arxiv.org/abs/2502.11448v2",
+    "arxiv_id": "2502.11448v2",
+    "authors": [
+      "Weidi Luo",
+      "Shenghong Dai",
+      "Xiaogeng Liu",
+      "Suman Banerjee",
+      "Huan Sun",
+      "Muhao Chen",
+      "Chaowei Xiao"
+    ],
+    "published": "2025-02-17T05:12:33+00:00",
+    "summary": "The rapid advancements in Large Language Models (LLMs) have enabled their deployment as autonomous agents for handling complex tasks in dynamic environments. These LLMs demonstrate strong problem-solving capabilities and adaptability to multifaceted scenarios. However, their use as agents also introduces significant risks, including task-specific risks, which are identified by the agent administrator based on the specific task requirements and constraints, and systemic risks, which stem from vulnerabilities in their design or interactions, potentially compromising confidentiality, integrity, or availability (CIA) of information and triggering security risks. Existing defense agencies fail to adaptively and effectively mitigate these risks. In this paper, we propose AGrail, a lifelong agent guardrail to enhance LLM agent safety, which features adaptive safety check generation, effective safety check optimization, and tool compatibility and flexibility. Extensive experiments demonstrate that AGrail not only achieves strong performance against task-specific and system risks but also exhibits transferability across different LLM agents' tasks."
+  },
+  {
+    "title": "What's in a Query: Polarity-Aware Distribution-Based Fair Ranking",
+    "url": "http://arxiv.org/abs/2502.11429v1",
+    "arxiv_id": "2502.11429v1",
+    "authors": [
+      "Aparna Balagopalan",
+      "Kai Wang",
+      "Olawale Salaudeen",
+      "Asia Biega",
+      "Marzyeh Ghassemi"
+    ],
+    "published": "2025-02-17T04:38:36+00:00",
+    "summary": "Machine learning-driven rankings, where individuals (or items) are ranked in response to a query, mediate search exposure or attention in a variety of safety-critical settings. Thus, it is important to ensure that such rankings are fair. Under the goal of equal opportunity, attention allocated to an individual on a ranking interface should be proportional to their relevance across search queries. In this work, we examine amortized fair ranking -- where relevance and attention are cumulated over a sequence of user queries to make fair ranking more feasible in practice. Unlike prior methods that operate on expected amortized attention for each individual, we define new divergence-based measures for attention distribution-based fairness in ranking (DistFaiR), characterizing unfairness as the divergence between the distribution of attention and relevance corresponding to an individual over time. This allows us to propose new definitions of unfairness, which are more reliable at test time. Second, we prove that group fairness is upper-bounded by individual fairness under this definition for a useful class of divergence measures, and experimentally show that maximizing individual fairness through an integer linear programming-based optimization is often beneficial to group fairness. Lastly, we find that prior research in amortized fair ranking ignores critical information about queries, potentially leading to a fairwashing risk in practice by making rankings appear more fair than they actually are."
+  },
+  {
+    "title": "Detecting and Filtering Unsafe Training Data via Data Attribution",
+    "url": "http://arxiv.org/abs/2502.11411v1",
+    "arxiv_id": "2502.11411v1",
+    "authors": [
+      "Yijun Pan",
+      "Taiwei Shi",
+      "Jieyu Zhao",
+      "Jiaqi W. Ma"
+    ],
+    "published": "2025-02-17T03:50:58+00:00",
+    "summary": "Large language models (LLMs) are vulnerable to unsafe training data that even small amounts of unsafe data can lead to harmful model behaviors. Detecting and filtering such unsafe training data is essential for trustworthy model development. Current state-of-the-art (SOTA) approaches typically rely on training moderation classifiers which requires significant computational overhead and are limited to predefined taxonomies, making them less adaptable to evolving safety concerns. Moreover, these classifiers lack insight into the training process, limiting their effectiveness in filtering unsafe data. To address these limitations, we propose DABUF, leveraging data attribution to detect and filter unsafe training data by attributing harmful model outputs to influential training data points. DABUF enables flexible identification of various unsafe data types without predefined taxonomies. However, in practice, model outputs can be complex with combined safe linguistic features and unsafe content, leading to reduced attribution accuracy. In such cases, DABUF will integrate moderation classifiers to identify a minimal subset of unsafe training data for targeted attribution (such as jailbreak). When model outputs are relatively straightforward, DABUF uses model outputs directly as the attribution targets. We evaluate the performance on two different tasks: in filtering jailbreaking training data and in identifying and mitigating gender bias. DABUF outperforms SOTA approaches by up to 7.5\\% in detection AUPRC in jailbreaking scenarios, and 44.1\\% in detecting gender bias. Moreover, retraining on DABUF-filtered data leads to higher model safety across experiments, underscoring its versatility in addressing a broad spectrum of unsafe data issues."
+  },
+  {
+    "title": "CCJA: Context-Coherent Jailbreak Attack for Aligned Large Language Models",
+    "url": "http://arxiv.org/abs/2502.11379v1",
+    "arxiv_id": "2502.11379v1",
+    "authors": [
+      "Guanghao Zhou",
+      "Panjia Qiu",
+      "Mingyuan Fan",
+      "Cen Chen",
+      "Mingyuan Chu",
+      "Xin Zhang",
+      "Jun Zhou"
+    ],
+    "published": "2025-02-17T02:49:26+00:00",
+    "summary": "Despite explicit alignment efforts for large language models (LLMs), they can still be exploited to trigger unintended behaviors, a phenomenon known as \"jailbreaking.\" Current jailbreak attack methods mainly focus on discrete prompt manipulations targeting closed-source LLMs, relying on manually crafted prompt templates and persuasion rules. However, as the capabilities of open-source LLMs improve, ensuring their safety becomes increasingly crucial. In such an environment, the accessibility of model parameters and gradient information by potential attackers exacerbates the severity of jailbreak threats. To address this research gap, we propose a novel \\underline{C}ontext-\\underline{C}oherent \\underline{J}ailbreak \\underline{A}ttack (CCJA). We define jailbreak attacks as an optimization problem within the embedding space of masked language models. Through combinatorial optimization, we effectively balance the jailbreak attack success rate with semantic coherence. Extensive evaluations show that our method not only maintains semantic consistency but also surpasses state-of-the-art baselines in attack effectiveness. Additionally, by integrating semantically coherent jailbreak prompts generated by our method into widely used black-box methodologies, we observe a notable enhancement in their success rates when targeting closed-source commercial LLMs. This highlights the security threat posed by open-source LLMs to commercial counterparts. We will open-source our code if the paper is accepted."
+  },
+  {
+    "title": "HI-GVF: Shared Control based on Human-Influenced Guiding Vector Fields for Human-multi-robot Cooperation",
+    "url": "http://arxiv.org/abs/2502.11370v1",
+    "arxiv_id": "2502.11370v1",
+    "authors": [
+      "Pengming Zhu",
+      "Zongtan Zhou",
+      "Weijia Yao",
+      "Wei Dai",
+      "Zhiwen Zeng",
+      "Huimin Lu"
+    ],
+    "published": "2025-02-17T02:33:09+00:00",
+    "summary": "Human-multi-robot shared control leverages human decision-making and robotic autonomy to enhance human-robot collaboration. While widely studied, existing systems often adopt a leader-follower model, limiting robot autonomy to some extent. Besides, a human is required to directly participate in the motion control of robots through teleoperation, which significantly burdens the operator. To alleviate these two issues, we propose a layered shared control computing framework using human-influenced guiding vector fields (HI-GVF) for human-robot collaboration. HI-GVF guides the multi-robot system along a desired path specified by the human. Then, an intention field is designed to merge the human and robot intentions, accelerating the propagation of the human intention within the multi-robot system. Moreover, we give the stability analysis of the proposed model and use collision avoidance based on safety barrier certificates to fine-tune the velocity. Eventually, considering the firefighting task as an example scenario, we conduct simulations and experiments using multiple human-robot interfaces (brain-computer interface, myoelectric wristband, eye-tracking), and the results demonstrate that our proposed approach boosts the effectiveness and performance of the task."
+  },
+  {
+    "title": "Sparse Autoencoder Features for Classifications and Transferability",
+    "url": "http://arxiv.org/abs/2502.11367v1",
+    "arxiv_id": "2502.11367v1",
+    "authors": [
+      "Jack Gallifant",
+      "Shan Chen",
+      "Kuleen Sasse",
+      "Hugo Aerts",
+      "Thomas Hartvigsen",
+      "Danielle S. Bitterman"
+    ],
+    "published": "2025-02-17T02:30:45+00:00",
+    "summary": "Sparse Autoencoders (SAEs) provide potentials for uncovering structured, human-interpretable representations in Large Language Models (LLMs), making them a crucial tool for transparent and controllable AI systems. We systematically analyze SAE for interpretable feature extraction from LLMs in safety-critical classification tasks. Our framework evaluates (1) model-layer selection and scaling properties, (2) SAE architectural configurations, including width and pooling strategies, and (3) the effect of binarizing continuous SAE activations. SAE-derived features achieve macro F1 > 0.8, outperforming hidden-state and BoW baselines while demonstrating cross-model transfer from Gemma 2 2B to 9B-IT models. These features generalize in a zero-shot manner to cross-lingual toxicity detection and visual classification tasks. Our analysis highlights the significant impact of pooling strategies and binarization thresholds, showing that binarization offers an efficient alternative to traditional feature selection while maintaining or improving performance. These findings establish new best practices for SAE-based interpretability and enable scalable, transparent deployment of LLMs in real-world applications. Full repo: https://github.com/shan23chen/MOSAIC."
+  },
+  {
+    "title": "VLDBench: Vision Language Models Disinformation Detection Benchmark",
+    "url": "http://arxiv.org/abs/2502.11361v1",
+    "arxiv_id": "2502.11361v1",
+    "authors": [
+      "Shaina Raza",
+      "Ashmal Vayani",
+      "Aditya Jain",
+      "Aravind Narayanan",
+      "Vahid Reza Khazaie",
+      "Syed Raza Bashir",
+      "Elham Dolatabadi",
+      "Gias Uddin",
+      "Christos Emmanouilidis",
+      "Rizwan Qureshi",
+      "Mubarak Shah"
+    ],
+    "published": "2025-02-17T02:18:47+00:00",
+    "summary": "The rapid rise of AI-generated content has made detecting disinformation increasingly challenging. In particular, multimodal disinformation, i.e., online posts-articles that contain images and texts with fabricated information are specially designed to deceive. While existing AI safety benchmarks primarily address bias and toxicity, multimodal disinformation detection remains largely underexplored. To address this challenge, we present the Vision-Language Disinformation Detection Benchmark VLDBench, the first comprehensive benchmark for detecting disinformation across both unimodal (text-only) and multimodal (text and image) content, comprising 31,000} news article-image pairs, spanning 13 distinct categories, for robust evaluation. VLDBench features a rigorous semi-automated data curation pipeline, with 22 domain experts dedicating 300 plus hours} to annotation, achieving a strong inter-annotator agreement (Cohen kappa = 0.78). We extensively evaluate state-of-the-art Large Language Models (LLMs) and Vision-Language Models (VLMs), demonstrating that integrating textual and visual cues in multimodal news posts improves disinformation detection accuracy by 5 - 35 % compared to unimodal models. Developed in alignment with AI governance frameworks such as the EU AI Act, NIST guidelines, and the MIT AI Risk Repository 2024, VLDBench is expected to become a benchmark for detecting disinformation in online multi-modal contents. Our code and data will be publicly available."
+  },
+  {
+    "title": "A Framework for Learning Scoring Rules in Autonomous Driving Planning Systems",
+    "url": "http://arxiv.org/abs/2502.11352v1",
+    "arxiv_id": "2502.11352v1",
+    "authors": [
+      "Zikang Xiong",
+      "Joe Kurian Eappen",
+      "Suresh Jagannathan"
+    ],
+    "published": "2025-02-17T02:06:57+00:00",
+    "summary": "In autonomous driving systems, motion planning is commonly implemented as a two-stage process: first, a trajectory proposer generates multiple candidate trajectories, then a scoring mechanism selects the most suitable trajectory for execution. For this critical selection stage, rule-based scoring mechanisms are particularly appealing as they can explicitly encode driving preferences, safety constraints, and traffic regulations in a formalized, human-understandable format. However, manually crafting these scoring rules presents significant challenges: the rules often contain complex interdependencies, require careful parameter tuning, and may not fully capture the nuances present in real-world driving data. This work introduces FLoRA, a novel framework that bridges this gap by learning interpretable scoring rules represented in temporal logic. Our method features a learnable logic structure that captures nuanced relationships across diverse driving scenarios, optimizing both rules and parameters directly from real-world driving demonstrations collected in NuPlan. Our approach effectively learns to evaluate driving behavior even though the training data only contains positive examples (successful driving demonstrations). Evaluations in closed-loop planning simulations demonstrate that our learned scoring rules outperform existing techniques, including expert-designed rules and neural network scoring models, while maintaining interpretability. This work introduces a data-driven approach to enhance the scoring mechanism in autonomous driving systems, designed as a plug-in module to seamlessly integrate with various trajectory proposers. Our video and code are available on xiong.zikang.me/FLoRA."
+  },
+  {
+    "title": "Leveraging Multimodal-LLMs Assisted by Instance Segmentation for Intelligent Traffic Monitoring",
+    "url": "http://arxiv.org/abs/2502.11304v1",
+    "arxiv_id": "2502.11304v1",
+    "authors": [
+      "Murat Arda Onsu",
+      "Poonam Lohan",
+      "Burak Kantarci",
+      "Aisha Syed",
+      "Matthew Andrews",
+      "Sean Kennedy"
+    ],
+    "published": "2025-02-16T23:03:26+00:00",
+    "summary": "A robust and efficient traffic monitoring system is essential for smart cities and Intelligent Transportation Systems (ITS), using sensors and cameras to track vehicle movements, optimize traffic flow, reduce congestion, enhance road safety, and enable real-time adaptive traffic control. Traffic monitoring models must comprehensively understand dynamic urban conditions and provide an intuitive user interface for effective management. This research leverages the LLaVA visual grounding multimodal large language model (LLM) for traffic monitoring tasks on the real-time Quanser Interactive Lab simulation platform, covering scenarios like intersections, congestion, and collisions. Cameras placed at multiple urban locations collect real-time images from the simulation, which are fed into the LLaVA model with queries for analysis. An instance segmentation model integrated into the cameras highlights key elements such as vehicles and pedestrians, enhancing training and throughput. The system achieves 84.3% accuracy in recognizing vehicle locations and 76.4% in determining steering direction, outperforming traditional models."
+  },
+  {
+    "title": "MC-BEVRO: Multi-Camera Bird Eye View Road Occupancy Detection for Traffic Monitoring",
+    "url": "http://arxiv.org/abs/2502.11287v1",
+    "arxiv_id": "2502.11287v1",
+    "authors": [
+      "Arpitsinh Vaghela",
+      "Duo Lu",
+      "Aayush Atul Verma",
+      "Bharatesh Chakravarthi",
+      "Hua Wei",
+      "Yezhou Yang"
+    ],
+    "published": "2025-02-16T22:03:03+00:00",
+    "summary": "Single camera 3D perception for traffic monitoring faces significant challenges due to occlusion and limited field of view. Moreover, fusing information from multiple cameras at the image feature level is difficult because of different view angles. Further, the necessity for practical implementation and compatibility with existing traffic infrastructure compounds these challenges. To address these issues, this paper introduces a novel Bird's-Eye-View road occupancy detection framework that leverages multiple roadside cameras to overcome the aforementioned limitations. To facilitate the framework's development and evaluation, a synthetic dataset featuring diverse scenes and varying camera configurations is generated using the CARLA simulator. A late fusion and three early fusion methods were implemented within the proposed framework, with performance further enhanced by integrating backgrounds. Extensive evaluations were conducted to analyze the impact of multi-camera inputs and varying BEV occupancy map sizes on model performance. Additionally, a real-world data collection pipeline was developed to assess the model's ability to generalize to real-world environments. The sim-to-real capabilities of the model were evaluated using zero-shot and few-shot fine-tuning, demonstrating its potential for practical application. This research aims to advance perception systems in traffic monitoring, contributing to improved traffic management, operational efficiency, and road safety."
+  },
+  {
+    "title": "Soteria: Language-Specific Functional Parameter Steering for Multilingual Safety Alignment",
+    "url": "http://arxiv.org/abs/2502.11244v1",
+    "arxiv_id": "2502.11244v1",
+    "authors": [
+      "Somnath Banerjee",
+      "Sayan Layek",
+      "Pratyush Chatterjee",
+      "Animesh Mukherjee",
+      "Rima Hazra"
+    ],
+    "published": "2025-02-16T19:44:01+00:00",
+    "summary": "Ensuring consistent safety across multiple languages remains a significant challenge for large language models (LLMs). We introduce Soteria, a lightweight yet powerful strategy that locates and minimally adjusts the \"functional heads\" most responsible for harmful content generation in each language. By altering only a fraction of parameters, Soteria drastically reduces policy violations without sacrificing overall model performance, even in low-resource settings. To rigorously evaluate our approach, we also present XThreatBench, a specialized multilingual dataset capturing fine-grained harmful behaviors drawn from real policy guidelines. Experiments with leading open-source LLMs (e.g., Llama, Qwen, Mistral) show that Soteria consistently improves safety metrics across high-, mid-, and low-resource languages. These findings highlight a promising path toward scalable, linguistically attuned, and ethically aligned LLMs worldwide."
+  },
+  {
+    "title": "LLMs and Childhood Safety: Identifying Risks and Proposing a Protection Framework for Safe Child-LLM Interaction",
+    "url": "http://arxiv.org/abs/2502.11242v1",
+    "arxiv_id": "2502.11242v1",
+    "authors": [
+      "Junfeng Jiao",
+      "Saleh Afroogh",
+      "Kevin Chen",
+      "Abhejay Murali",
+      "David Atkinson",
+      "Amit Dhurandhar"
+    ],
+    "published": "2025-02-16T19:39:48+00:00",
+    "summary": "This study examines the growing use of Large Language Models (LLMs) in child-centered applications, highlighting safety and ethical concerns such as bias, harmful content, and cultural insensitivity. Despite their potential to enhance learning, there is a lack of standardized frameworks to mitigate these risks. Through a systematic literature review, we identify key parental and empirical concerns, including toxicity and ethical breaches in AI outputs. Moreover, to address these issues, this paper proposes a protection framework for safe Child-LLM interaction, incorporating metrics for content safety, behavioral ethics, and cultural sensitivity. The framework provides practical tools for evaluating LLM safety, offering guidance for developers, policymakers, and educators to ensure responsible AI deployment for children."
+  },
+  {
+    "title": "Can't See the Forest for the Trees: Benchmarking Multimodal Safety Awareness for Multimodal LLMs",
+    "url": "http://arxiv.org/abs/2502.11184v1",
+    "arxiv_id": "2502.11184v1",
+    "authors": [
+      "Wenxuan Wang",
+      "Xiaoyuan Liu",
+      "Kuiyi Gao",
+      "Jen-tse Huang",
+      "Youliang Yuan",
+      "Pinjia He",
+      "Shuai Wang",
+      "Zhaopeng Tu"
+    ],
+    "published": "2025-02-16T16:12:40+00:00",
+    "summary": "Multimodal Large Language Models (MLLMs) have expanded the capabilities of traditional language models by enabling interaction through both text and images. However, ensuring the safety of these models remains a significant challenge, particularly in accurately identifying whether multimodal content is safe or unsafe-a capability we term safety awareness. In this paper, we introduce MMSafeAware, the first comprehensive multimodal safety awareness benchmark designed to evaluate MLLMs across 29 safety scenarios with 1500 carefully curated image-prompt pairs. MMSafeAware includes both unsafe and over-safety subsets to assess models abilities to correctly identify unsafe content and avoid over-sensitivity that can hinder helpfulness. Evaluating nine widely used MLLMs using MMSafeAware reveals that current models are not sufficiently safe and often overly sensitive; for example, GPT-4V misclassifies 36.1% of unsafe inputs as safe and 59.9% of benign inputs as unsafe. We further explore three methods to improve safety awareness-prompting-based approaches, visual contrastive decoding, and vision-centric reasoning fine-tuning-but find that none achieve satisfactory performance. Our findings highlight the profound challenges in developing MLLMs with robust safety awareness, underscoring the need for further research in this area. All the code and data will be publicly available to facilitate future research."
+  },
+  {
+    "title": "Quantifying the Capability Boundary of DeepSeek Models: An Application-Driven Performance Analysis",
+    "url": "http://arxiv.org/abs/2502.11164v1",
+    "arxiv_id": "2502.11164v1",
+    "authors": [
+      "Shiguo Lian",
+      "Kaikai Zhao",
+      "Xuejiao Lei",
+      "Ning Wang",
+      "Zhenhong Long",
+      "Peijun Yang",
+      "Minjie Hua",
+      "Chaoyang Ma",
+      "Wen Liu",
+      "Kai Wang",
+      "Zhaoxiang Liu"
+    ],
+    "published": "2025-02-16T15:29:58+00:00",
+    "summary": "DeepSeek-R1, known for its low training cost and exceptional reasoning capabilities, has achieved state-of-the-art performance on various benchmarks. However, detailed evaluations from the perspective of real-world applications are lacking, making it challenging for users to select the most suitable DeepSeek models for their specific needs. To address this gap, we evaluate the DeepSeek-V3, DeepSeek-R1, DeepSeek-R1-Distill-Qwen series, and DeepSeek-R1-Distill-Llama series on A-Eval, an application-driven benchmark. By comparing original instruction-tuned models with their distilled counterparts, we analyze how reasoning enhancements impact performance across diverse practical tasks. Our results show that reasoning-enhanced models, while generally powerful, do not universally outperform across all tasks, with performance gains varying significantly across tasks and models. To further assist users in model selection, we quantify the capability boundary of DeepSeek models through performance tier classifications and intuitive line charts. Specific examples provide actionable insights to help users select and deploy the most cost-effective DeepSeek models, ensuring optimal performance and resource efficiency in real-world applications."
+  },
+  {
+    "title": "Safety Evaluation of DeepSeek Models in Chinese Contexts",
+    "url": "http://arxiv.org/abs/2502.11137v1",
+    "arxiv_id": "2502.11137v1",
+    "authors": [
+      "Wenjing Zhang",
+      "Xuejiao Lei",
+      "Zhaoxiang Liu",
+      "Ning Wang",
+      "Zhenhong Long",
+      "Peijun Yang",
+      "Jiaojiao Zhao",
+      "Minjie Hua",
+      "Chaoyang Ma",
+      "Kai Wang",
+      "Shiguo Lian"
+    ],
+    "published": "2025-02-16T14:05:54+00:00",
+    "summary": "Recently, the DeepSeek series of models, leveraging their exceptional reasoning capabilities and open-source strategy, is reshaping the global AI landscape. Despite these advantages, they exhibit significant safety deficiencies. Research conducted by Robust Intelligence, a subsidiary of Cisco, in collaboration with the University of Pennsylvania, revealed that DeepSeek-R1 has a 100\\% attack success rate when processing harmful prompts. Additionally, multiple safety companies and research institutions have confirmed critical safety vulnerabilities in this model. As models demonstrating robust performance in Chinese and English, DeepSeek models require equally crucial safety assessments in both language contexts. However, current research has predominantly focused on safety evaluations in English environments, leaving a gap in comprehensive assessments of their safety performance in Chinese contexts. In response to this gap, this study introduces CHiSafetyBench, a Chinese-specific safety evaluation benchmark. This benchmark systematically evaluates the safety of DeepSeek-R1 and DeepSeek-V3 in Chinese contexts, revealing their performance across safety categories. The experimental results quantify the deficiencies of these two models in Chinese contexts, providing key insights for subsequent improvements."
+  },
+  {
+    "title": "Ramp Up NTT in Record Time using GPU-Accelerated Algorithms and LLM-based Code Generation",
+    "url": "http://arxiv.org/abs/2502.11110v1",
+    "arxiv_id": "2502.11110v1",
+    "authors": [
+      "Yu Cui",
+      "Hang Fu",
+      "Licheng Wang",
+      "Haibin Zhang"
+    ],
+    "published": "2025-02-16T12:53:23+00:00",
+    "summary": "Homomorphic encryption (HE) is a core building block in privacy-preserving machine learning (PPML), but HE is also widely known as its efficiency bottleneck. Therefore, many GPU-accelerated cryptographic schemes have been proposed to improve the performance of HE. However, these methods often require complex modifications tailored to specific algorithms and are tightly coupled with specific GPU and operating systems. It is interesting to ask how to generally offer more practical GPU-accelerated cryptographic algorithm implementations. Given the powerful code generation capabilities of large language models (LLMs), we aim to explore their potential to automatically generate practical GPU-friendly algorithm code using CPU-friendly code. In this paper, we focus on number theoretic transform (NTT) -- the core mechanism of HE. We first develop and optimize a GPU-friendly NTT (GNTT) family that exploits PyTorch's fast matrix computation and precomputation, achieving an approximately 62x speedup -- a significant boost over existing ones. Then we explore GPU-friendly code generation using various LLMs, including DeepSeek-R1, OpenAI o1 and o3-mini. We discover many interesting findings throughout the process. For instance, somewhat surprisingly, our experiments demonstrate that DeepSeek-R1 significantly outperforms OpenAI o3-mini and o1, but still cannot beat our optimized protocol. The findings provide valuable insights for turbocharging PPML and enhancing code generation capabilities of LLMs. Codes are available at: https://github.com/LMPC-Lab/GenGPUCrypto."
+  },
+  {
+    "title": "Knowledge Graph-Driven Retrieval-Augmented Generation: Integrating Deepseek-R1 with Weaviate for Advanced Chatbot Applications",
+    "url": "http://arxiv.org/abs/2502.11108v1",
+    "arxiv_id": "2502.11108v1",
+    "authors": [
+      "Alexandru Lecu",
+      "Adrian Groza",
+      "Lezan Hawizy"
+    ],
+    "published": "2025-02-16T12:52:28+00:00",
+    "summary": "Large language models (LLMs) have significantly advanced the field of natural language generation. However, they frequently generate unverified outputs, which compromises their reliability in critical applications. In this study, we propose an innovative framework that combines structured biomedical knowledge with LLMs through a retrieval-augmented generation technique. Our system develops a thorough knowledge graph by identifying and refining causal relationships and named entities from medical abstracts related to age-related macular degeneration (AMD). Using a vector-based retrieval process and a locally deployed language model, our framework produces responses that are both contextually relevant and verifiable, with direct references to clinical evidence. Experimental results show that this method notably decreases hallucinations, enhances factual precision, and improves the clarity of generated responses, providing a robust solution for advanced biomedical chatbot applications."
+  },
+  {
+    "title": "Talk Structurally, Act Hierarchically: A Collaborative Framework for LLM Multi-Agent Systems",
+    "url": "http://arxiv.org/abs/2502.11098v1",
+    "arxiv_id": "2502.11098v1",
+    "authors": [
+      "Zhao Wang",
+      "Sota Moriyama",
+      "Wei-Yao Wang",
+      "Briti Gangopadhyay",
+      "Shingo Takamatsu"
+    ],
+    "published": "2025-02-16T12:26:58+00:00",
+    "summary": "Recent advancements in LLM-based multi-agent (LLM-MA) systems have shown promise, yet significant challenges remain in managing communication and refinement when agents collaborate on complex tasks. In this paper, we propose \\textit{Talk Structurally, Act Hierarchically (TalkHier)}, a novel framework that introduces a structured communication protocol for context-rich exchanges and a hierarchical refinement system to address issues such as incorrect outputs, falsehoods, and biases. \\textit{TalkHier} surpasses various types of SoTA, including inference scaling model (OpenAI-o1), open-source multi-agent models (e.g., AgentVerse), and majority voting strategies on current LLM and single-agent baselines (e.g., ReAct, GPT4o), across diverse tasks, including open-domain question answering, domain-specific selective questioning, and practical advertisement text generation. These results highlight its potential to set a new standard for LLM-MA systems, paving the way for more effective, adaptable, and collaborative multi-agent frameworks. The code is available https://github.com/sony/talkhier."
+  },
+  {
+    "title": "Mixture of Tunable Experts - Behavior Modification of DeepSeek-R1 at Inference Time",
+    "url": "http://arxiv.org/abs/2502.11096v1",
+    "arxiv_id": "2502.11096v1",
+    "authors": [
+      "Robert Dahlke",
+      "Henrik Klagges",
+      "Dan Zecha",
+      "Benjamin Merkel",
+      "Sven Rohr",
+      "Fabian Klemm"
+    ],
+    "published": "2025-02-16T12:24:39+00:00",
+    "summary": "We present the Mixture-of-Tunable-Experts (MoTE), a method that extends the Mixture-of-Experts architecture of Large Language Models (LLMs). Without additional training, MoTE enables meaningful and focused behavior changes in LLMs on-the-fly during inference time.   By analyzing the digital LLM brain of DeepSeek-R1 using a technique we dub 'functional Token Resonance Imaging' (fTRI) - inspired by fMRI and using prompts designed to elicit specific behavior (e.g., 'What happened {time}{place}?') - we empirically identify distinctive experts associated with behaviors like refusal responses.   Using MoTE we are able to intervene and control such specific behavior. We switched off the top 10 most refusal-relevant experts (0.07% of R1's 14,848 routed experts), achieving a 52% refusal reduction on sensitive reference prompts without performance degradation on MT-Bench. Random expert deactivation resulted in smaller behavioral shifts with increased noise, whereas forced expert activation led to significantly higher refusal rates.   Our approach shares similarities with sparse autoencoders (SAEs) in terms of explainability and steerability. Unlike SAEs, MoTE does not require large training efforts, as within MoEs with a vast number of experts, specialization already emerged naturally during pretraining.   Our findings suggest that significant functional mechanisms in Mixture-of-Experts architectures can at least partially be localized in a small number of specific experts, rather than being distributed throughout the model's weights. Expert subgroups can be tuned to trigger significant behavior variations, providing insights into the inner workings of LLMs."
+  },
+  {
+    "title": "SafeDialBench: A Fine-Grained Safety Benchmark for Large Language Models in Multi-Turn Dialogues with Diverse Jailbreak Attacks",
+    "url": "http://arxiv.org/abs/2502.11090v2",
+    "arxiv_id": "2502.11090v2",
+    "authors": [
+      "Hongye Cao",
+      "Yanming Wang",
+      "Sijia Jing",
+      "Ziyue Peng",
+      "Zhixin Bai",
+      "Zhe Cao",
+      "Meng Fang",
+      "Fan Feng",
+      "Boyan Wang",
+      "Jiaheng Liu",
+      "Tianpei Yang",
+      "Jing Huo",
+      "Yang Gao",
+      "Fanyu Meng",
+      "Xi Yang",
+      "Chao Deng",
+      "Junlan Feng"
+    ],
+    "published": "2025-02-16T12:08:08+00:00",
+    "summary": "With the rapid advancement of Large Language Models (LLMs), the safety of LLMs has been a critical concern requiring precise assessment. Current benchmarks primarily concentrate on single-turn dialogues or a single jailbreak attack method to assess the safety. Additionally, these benchmarks have not taken into account the LLM's capability of identifying and handling unsafe information in detail. To address these issues, we propose a fine-grained benchmark SafeDialBench for evaluating the safety of LLMs across various jailbreak attacks in multi-turn dialogues. Specifically, we design a two-tier hierarchical safety taxonomy that considers 6 safety dimensions and generates more than 4000 multi-turn dialogues in both Chinese and English under 22 dialogue scenarios. We employ 7 jailbreak attack strategies, such as reference attack and purpose reverse, to enhance the dataset quality for dialogue generation. Notably, we construct an innovative assessment framework of LLMs, measuring capabilities in detecting, and handling unsafe information and maintaining consistency when facing jailbreak attacks. Experimental results across 17 LLMs reveal that Yi-34B-Chat and GLM4-9B-Chat demonstrate superior safety performance, while Llama3.1-8B-Instruct and o3-mini exhibit safety vulnerabilities."
+  },
+  {
+    "title": "Rewrite to Jailbreak: Discover Learnable and Transferable Implicit Harmfulness Instruction",
+    "url": "http://arxiv.org/abs/2502.11084v1",
+    "arxiv_id": "2502.11084v1",
+    "authors": [
+      "Yuting Huang",
+      "Chengyuan Liu",
+      "Yifeng Feng",
+      "Chao Wu",
+      "Fei Wu",
+      "Kun Kuang"
+    ],
+    "published": "2025-02-16T11:43:39+00:00",
+    "summary": "As Large Language Models (LLMs) are widely applied in various domains, the safety of LLMs is increasingly attracting attention to avoid their powerful capabilities being misused. Existing jailbreak methods create a forced instruction-following scenario, or search adversarial prompts with prefix or suffix tokens to achieve a specific representation manually or automatically. However, they suffer from low efficiency and explicit jailbreak patterns, far from the real deployment of mass attacks to LLMs. In this paper, we point out that simply rewriting the original instruction can achieve a jailbreak, and we find that this rewriting approach is learnable and transferable. We propose the Rewrite to Jailbreak (R2J) approach, a transferable black-box jailbreak method to attack LLMs by iteratively exploring the weakness of the LLMs and automatically improving the attacking strategy. The jailbreak is more efficient and hard to identify since no additional features are introduced. Extensive experiments and analysis demonstrate the effectiveness of R2J, and we find that the jailbreak is also transferable to multiple datasets and various types of models with only a few queries. We hope our work motivates further investigation of LLM safety."
+  },
+  {
+    "title": "ClimateLLM: Efficient Weather Forecasting via Frequency-Aware Large Language Models",
+    "url": "http://arxiv.org/abs/2502.11059v1",
+    "arxiv_id": "2502.11059v1",
+    "authors": [
+      "Shixuan Li",
+      "Wei Yang",
+      "Peiyu Zhang",
+      "Xiongye Xiao",
+      "Defu Cao",
+      "Yuehan Qin",
+      "Xiaole Zhang",
+      "Yue Zhao",
+      "Paul Bogdan"
+    ],
+    "published": "2025-02-16T09:57:50+00:00",
+    "summary": "Weather forecasting is crucial for public safety, disaster prevention and mitigation, agricultural production, and energy management, with global relevance. Although deep learning has significantly advanced weather prediction, current methods face critical limitations: (i) they often struggle to capture both dynamic temporal dependencies and short-term abrupt changes, making extreme weather modeling difficult; (ii) they incur high computational costs due to extensive training and resource requirements; (iii) they have limited adaptability to multi-scale frequencies, leading to challenges when separating global trends from local fluctuations. To address these issues, we propose ClimateLLM, a foundation model for weather forecasting. It captures spatiotemporal dependencies via a cross-temporal and cross-spatial collaborative modeling framework that integrates Fourier-based frequency decomposition with Large Language Models (LLMs) to strengthen spatial and temporal modeling. Our framework uses a Mixture-of-Experts (MoE) mechanism that adaptively processes different frequency components, enabling efficient handling of both global signals and localized extreme events. In addition, we introduce a cross-temporal and cross-spatial dynamic prompting mechanism, allowing LLMs to incorporate meteorological patterns across multiple scales effectively. Extensive experiments on real-world datasets show that ClimateLLM outperforms state-of-the-art approaches in accuracy and efficiency, as a scalable solution for global weather forecasting."
+  },
+  {
+    "title": "A Physics-Informed Machine Learning Framework for Safe and Optimal Control of Autonomous Systems",
+    "url": "http://arxiv.org/abs/2502.11057v1",
+    "arxiv_id": "2502.11057v1",
+    "authors": [
+      "Manan Tayal",
+      "Aditya Singh",
+      "Shishir Kolathaya",
+      "Somil Bansal"
+    ],
+    "published": "2025-02-16T09:46:17+00:00",
+    "summary": "As autonomous systems become more ubiquitous in daily life, ensuring high performance with guaranteed safety is crucial. However, safety and performance could be competing objectives, which makes their co-optimization difficult. Learning-based methods, such as Constrained Reinforcement Learning (CRL), achieve strong performance but lack formal safety guarantees due to safety being enforced as soft constraints, limiting their use in safety-critical settings. Conversely, formal methods such as Hamilton-Jacobi (HJ) Reachability Analysis and Control Barrier Functions (CBFs) provide rigorous safety assurances but often neglect performance, resulting in overly conservative controllers. To bridge this gap, we formulate the co-optimization of safety and performance as a state-constrained optimal control problem, where performance objectives are encoded via a cost function and safety requirements are imposed as state constraints. We demonstrate that the resultant value function satisfies a Hamilton-Jacobi-Bellman (HJB) equation, which we approximate efficiently using a novel physics-informed machine learning framework. In addition, we introduce a conformal prediction-based verification strategy to quantify the learning errors, recovering a high-confidence safety value function, along with a probabilistic error bound on performance degradation. Through several case studies, we demonstrate the efficacy of the proposed framework in enabling scalable learning of safe and performant controllers for complex, high-dimensional autonomous systems."
+  },
+  {
+    "title": "Reasoning-Augmented Conversation for Multi-Turn Jailbreak Attacks on Large Language Models",
+    "url": "http://arxiv.org/abs/2502.11054v2",
+    "arxiv_id": "2502.11054v2",
+    "authors": [
+      "Zonghao Ying",
+      "Deyue Zhang",
+      "Zonglei Jing",
+      "Yisong Xiao",
+      "Quanchen Zou",
+      "Aishan Liu",
+      "Siyuan Liang",
+      "Xiangzheng Zhang",
+      "Xianglong Liu",
+      "Dacheng Tao"
+    ],
+    "published": "2025-02-16T09:27:44+00:00",
+    "summary": "Multi-turn jailbreak attacks simulate real-world human interactions by engaging large language models (LLMs) in iterative dialogues, exposing critical safety vulnerabilities. However, existing methods often struggle to balance semantic coherence with attack effectiveness, resulting in either benign semantic drift or ineffective detection evasion. To address this challenge, we propose Reasoning-Augmented Conversation, a novel multi-turn jailbreak framework that reformulates harmful queries into benign reasoning tasks and leverages LLMs' strong reasoning capabilities to compromise safety alignment. Specifically, we introduce an attack state machine framework to systematically model problem translation and iterative reasoning, ensuring coherent query generation across multiple turns. Building on this framework, we design gain-guided exploration, self-play, and rejection feedback modules to preserve attack semantics, enhance effectiveness, and sustain reasoning-driven attack progression. Extensive experiments on multiple LLMs demonstrate that RACE achieves state-of-the-art attack effectiveness in complex conversational scenarios, with attack success rates (ASRs) increasing by up to 96%. Notably, our approach achieves ASRs of 82% and 92% against leading commercial models, OpenAI o1 and DeepSeek R1, underscoring its potency. We release our code at https://github.com/NY1024/RACE to facilitate further research in this critical domain."
+  },
+  {
+    "title": "Prompt Inject Detection with Generative Explanation as an Investigative Tool",
+    "url": "http://arxiv.org/abs/2502.11006v1",
+    "arxiv_id": "2502.11006v1",
+    "authors": [
+      "Jonathan Pan",
+      "Swee Liang Wong",
+      "Yidi Yuan",
+      "Xin Wei Chia"
+    ],
+    "published": "2025-02-16T06:16:00+00:00",
+    "summary": "Large Language Models (LLMs) are vulnerable to adversarial prompt based injects. These injects could jailbreak or exploit vulnerabilities within these models with explicit prompt requests leading to undesired responses. In the context of investigating prompt injects, the challenge is the sheer volume of input prompts involved that are likely to be largely benign. This investigative challenge is further complicated by the semantics and subjectivity of the input prompts involved in the LLM conversation with its user and the context of the environment to which the conversation is being carried out. Hence, the challenge for AI security investigators would be two-fold. The first is to identify adversarial prompt injects and then to assess whether the input prompt is contextually benign or adversarial. For the first step, this could be done using existing AI security solutions like guardrails to detect and protect the LLMs. Guardrails have been developed using a variety of approaches. A popular approach is to use signature based. Another popular approach to develop AI models to classify such prompts include the use of NLP based models like a language model. However, in the context of conducting an AI security investigation of prompt injects, these guardrails lack the ability to aid investigators in triaging or assessing the identified input prompts. In this applied research exploration, we explore the use of a text generation capabilities of LLM to detect prompt injects and generate explanation for its detections to aid AI security investigators in assessing and triaging of such prompt inject detections. The practical benefit of such a tool is to ease the task of conducting investigation into prompt injects."
+  },
+  {
+    "title": "Fine-Tuning Hard-to-Simulate Objectives for Quadruped Locomotion: A Case Study on Total Power Saving",
+    "url": "http://arxiv.org/abs/2502.10956v1",
+    "arxiv_id": "2502.10956v1",
+    "authors": [
+      "Ruiqian Nai",
+      "Jiacheng You",
+      "Liu Cao",
+      "Hanchen Cui",
+      "Shiyuan Zhang",
+      "Huazhe Xu",
+      "Yang Gao"
+    ],
+    "published": "2025-02-16T02:22:50+00:00",
+    "summary": "Legged locomotion is not just about mobility; it also encompasses crucial objectives such as energy efficiency, safety, and user experience, which are vital for real-world applications. However, key factors such as battery power consumption and stepping noise are often inaccurately modeled or missing in common simulators, leaving these aspects poorly optimized or unaddressed by current sim-to-real methods. Hand-designed proxies, such as mechanical power and foot contact forces, have been used to address these challenges but are often problem-specific and inaccurate.   In this paper, we propose a data-driven framework for fine-tuning locomotion policies, targeting these hard-to-simulate objectives. Our framework leverages real-world data to model these objectives and incorporates the learned model into simulation for policy improvement. We demonstrate the effectiveness of our framework on power saving for quadruped locomotion, achieving a significant 24-28\\% net reduction in total power consumption from the battery pack at various speeds. In essence, our approach offers a versatile solution for optimizing hard-to-simulate objectives in quadruped locomotion, providing an easy-to-adapt paradigm for continual improving with real-world knowledge. Project page https://hard-to-sim.github.io/."
+  },
+  {
+    "title": "Fundamental Principles of Linguistic Structure are Not Represented by o3",
+    "url": "http://arxiv.org/abs/2502.10934v1",
+    "arxiv_id": "2502.10934v1",
+    "authors": [
+      "Elliot Murphy",
+      "Evelina Leivada",
+      "Vittoria Dentella",
+      "Fritz Gunther",
+      "Gary Marcus"
+    ],
+    "published": "2025-02-15T23:53:31+00:00",
+    "summary": "A core component of a successful artificial general intelligence would be the rapid creation and manipulation of grounded compositional abstractions and the demonstration of expertise in the family of recursive hierarchical syntactic objects necessary for the creative use of human language. We evaluated the recently released o3 model (OpenAI; o3-mini-high) and discovered that while it succeeds on some basic linguistic tests relying on linear, surface statistics (e.g., the Strawberry Test), it fails to generalize basic phrase structure rules; it fails with comparative sentences involving semantically illegal cardinality comparisons ('Escher sentences'); its fails to correctly rate and explain acceptability dynamics; and it fails to distinguish between instructions to generate unacceptable semantic vs. unacceptable syntactic outputs. When tasked with generating simple violations of grammatical rules, it is seemingly incapable of representing multiple parses to evaluate against various possible semantic interpretations. In stark contrast to many recent claims that artificial language models are on the verge of replacing the field of linguistics, our results suggest not only that deep learning is hitting a wall with respect to compositionality (Marcus 2022), but that it is hitting [a [stubbornly [resilient wall]]] that cannot readily be surmounted to reach human-like compositional reasoning simply through more compute."
+  }
+]
