@@ -7,6 +7,7 @@ from tenacity import retry, stop_after_attempt, wait_fixed
 # 配置参数
 QUERY_TERMS = {
     'include': [
+        "cat:cs",  # computer science
         "DeepSeek-R1",
         "DeepSeek R1",
         "o1",
@@ -45,7 +46,8 @@ def fetch_papers():
         "arxiv_id": result.get_short_id(),
         "authors": [a.name for a in result.authors],
         "published": result.published.isoformat(),
-        "summary": result.summary.replace('\n', ' ')[:150] + '...'
+        "summary": result.summary.replace('\n', ' ')  # 完整摘要
+        # "summary": result.summary.replace('\n', ' ')[:150] + '...'
     } for result in client.results(search)]
 
 def update_article_json(new_papers):
