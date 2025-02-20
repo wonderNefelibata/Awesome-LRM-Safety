@@ -158,6 +158,10 @@ This repository aims to catalog research addressing these challenges and promote
 ---
 
 ## 🔑 Key Safety Domains(coming soon)
+![LLM Safety Category](/assets/img/image1.png "LLM Safety Category")
+
+*图1：上述分类源自 Ma 等人（2025）关于大模型安全性的研究 (https://arxiv.org/abs/2502.05206)*
+
 | Category               | Key Challenges                          | Related Topics                          |
 |------------------------|-----------------------------------------|------------------------------------------|
 | **Adversarial Robustness** | Prompt injection, Reasoning path poisoning | Red teaming, Formal verification        |
@@ -235,3 +239,6 @@ A: All submissions undergo community review for relevance and quality.
 ---
 
 > *"With great reasoning power comes great responsibility."* - Adapted from [AI Ethics Manifesto]
+
+
+
