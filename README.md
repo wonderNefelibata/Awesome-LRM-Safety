@@ -208,7 +208,7 @@ This repository aims to catalog research addressing these challenges and promote
 ## 🔑 Key Safety Domains(coming soon)
 ![LLM Safety Category](/assets/img/image1.png "LLM Safety Category")
 
-*图1：上述分类源自 Ma 等人（2025）关于大模型安全性的研究 (https://arxiv.org/abs/2502.05206)*
+**Fig.1**: LLM Safety [[Ma et al., 2025]([arXiv:2502.05206](https://arxiv.org/abs/2502.05206))]
 
 | Category               | Key Challenges                          | Related Topics                          |
 |------------------------|-----------------------------------------|------------------------------------------|
@@ -283,6 +283,11 @@ A: Yes! Industry reports and blog posts are welcome if they provide novel insigh
 
 **Q: How are entries verified?**  
 A: All submissions undergo community review for relevance and quality.
+
+---
+## 🔗 References
+
+Ma, X., Gao, Y., Wang, Y., Wang, R., Wang, X., Sun, Y., Ding, Y., Xu, H., Chen, Y., Zhao, Y., Huang, H., Li, Y., Zhang, J., Zheng, X., Bai, Y., Wu, Z., Qiu, X., Zhang, J., Li, Y., Sun, J., Wang, C., Gu, J., Wu, B., Chen, S., Zhang, T., Liu, Y., Gong, M., Liu, T., Pan, S., Xie, C., Pang, T., Dong, Y., Jia, R., Zhang, Y., Ma, S., Zhang, X., Gong, N., Xiao, C., Erfani, S., Li, B., Sugiyama, M., Tao, D., Bailey, J., Jiang, Y.-G. (2025). *Safety at Scale: A Comprehensive Survey of Large Model Safety*. arXiv:2502.05206.
 
 ---
 
