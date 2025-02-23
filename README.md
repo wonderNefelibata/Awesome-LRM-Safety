@@ -231,7 +231,7 @@ This repository aims to catalog research addressing these challenges and promote
   *Demonstrates adversarial manipulation of reasoning steps*
 
 ### Defense Mechanisms
-- [2025] [GuardReasoner: Towards Reasoning-based LLM Safeguards](https://arxiv.org/abs/2501.18492) 
+- [2025] [GuardReasoner: Towards Reasoning-based LLM Safeguards](https://arxiv.org/abs/2501.18492 ) 
   *A Novel Guardrail Model for LLMs by Learning to Reason*
 - [2024] [Reasoning with Guardrails: Constrained Decoding for LRM Safety](https://arxiv.org/abs/example )  
   *Novel approach to step-wise constraint enforcement*
