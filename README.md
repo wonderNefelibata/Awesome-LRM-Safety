@@ -236,7 +236,9 @@ This repository aims to catalog research addressing these challenges and promote
   *A Novel Guardrail Model for LLMs by Learning to Reason*
 - [2024] [Reasoning with Guardrails: Constrained Decoding for LRM Safety](https://arxiv.org/abs/example )  
   *Novel approach to step-wise constraint enforcement*
-
+- [2024] [Reasoning with Guardrails: Constrained Decoding for LRM Safety](https://arxiv.org/abs/example )  
+  *Novel approach to step-wise constraint enforcement*
+  
 *(Add your collected papers here with proper categorization)*
 
 ---
