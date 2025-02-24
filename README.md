@@ -14,6 +14,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
   - [🚀 Motivation](#-motivation)
   - [📰 Latest arXiv Papers (Auto-Updated)](#-latest-arxiv-papers-auto-updated)
   - [🔑 Key Safety Domains(coming soon)](#-key-safety-domainscoming-soon)
+  - [🔖 Dataset \& Benchmark](#-dataset--benchmark)
   - [📚 Research Papers(coming soon)](#-research-paperscoming-soon)
     - [Foundational Works](#foundational-works)
     - [Attack Vectors](#attack-vectors)
@@ -24,6 +25,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
   - [🤝 Contributing](#-contributing)
   - [📄 License](#-license)
   - [❓ FAQ](#-faq)
+  - [🔗 References](#-references)
 
 ---
 
@@ -246,6 +248,36 @@ This repository aims to catalog research addressing these challenges and promote
 | **Ethical Alignment**     | Value locking, Contextual moral reasoning | Constitutional AI, Value learning       |
 | **System Safety**         | Cascading failures, Reward hacking       | Safe interruptibility, System monitoring|
 | **Regulatory Compliance** | Audit trails, Explainability requirements | Model cards, Governance frameworks      |
+
+---
+
+## 🔖 Dataset & Benchmark
+
+| Name                                                          | Paper                                                                                                                                                                      | Description      | Size |
+| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---- |
+| Malicious-Educator(未开源)                                       | H-CoT: Hijacking the Chain-of-Thought Safety Reasoning  Mechanism to Jailbreak Large Reasoning Models, Including  OpenAI o1/o3, DeepSeek-R1, and Gemini 2.0 Flash Thinking |                  |      |
+| AIR-bench                                                     | https://arxiv.org/pdf/2502.12659#page=12.07                                                                                                                                | Safety Policies  | 5694 |
+| MITRE                                                         | https://arxiv.org/pdf/2502.12659#page=12.07                                                                                                                                | Cyber Attack     | 377  |
+| Interpreter                                                   |                                                                                                                                                                            | Code Exc         | 500  |
+| Phishing                                                      |                                                                                                                                                                            | Spear Phishing   | 200  |
+| XSTest                                                        |                                                                                                                                                                            | Over-refusal     | 250  |
+| WildGuard                                                     |                                                                                                                                                                            | Jailbreak        | 810  |
+| Injection                                                     |                                                                                                                                                                            | Prompt injection | 251  |
+| [AdvBench](https://huggingface.co/datasets/walledai/AdvBench) |                                                                                                                                                                            |                  |      |
+| MaliciousInstruct                                             |                                                                                                                                                                            |                  |      |
+| Chinese safety assessment benchmark                           |                                                                                                                                                                            |                  |      |
+| ShadowAlignment                                               |                                                                                                                                                                            |                  |      |
+| In-The-Wild Jailbreak Prompts                                 |                                                                                                                                                                            |                  |      |
+| JailbreakBench                                                |                                                                                                                                                                            |                  |      |
+| JBB-Behaviors                                                 |                                                                                                                                                                            |                  |      |
+| IMDb                                                          |                                                                                                                                                                            |                  |      |
+| MultiJail                                                     |                                                                                                                                                                            |                  |      |
+| XSafety                                                       |                                                                                                                                                                            |                  |      |
+| JailbreakHub                                                  |                                                                                                                                                                            |                  |      |
+| PARDEN                                                        |                                                                                                                                                                            |                  |      |
+| EasyJailbreak                                                 |                                                                                                                                                                            |                  |      |
+
+
 
 ---
 
