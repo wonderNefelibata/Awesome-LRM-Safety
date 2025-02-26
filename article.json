@@ -1,5 +1,333 @@
 [
   {
+    "title": "Evaluating the Effectiveness of Small Language Models in Detecting Refactoring Bugs",
+    "url": "http://arxiv.org/abs/2502.18454v1",
+    "arxiv_id": "2502.18454v1",
+    "authors": [
+      "Rohit Gheyi",
+      "Marcio Ribeiro",
+      "Jonhnanthan Oliveira"
+    ],
+    "published": "2025-02-25T18:52:28+00:00",
+    "summary": "Popular IDEs frequently contain bugs in their refactoring implementations. Ensuring that a transformation preserves a program's behavior is a complex task. Traditional detection methods rely on predefined preconditions for each refactoring type, limiting their scalability and adaptability to new transformations. These methods often require extensive static and dynamic analyses, which are computationally expensive, time-consuming, and may still fail to detect certain refactoring bugs. This study evaluates the effectiveness of Small Language Models (SLMs) in detecting two types of refactoring bugs in Java and Python: (i) transformations that introduce errors or behavioral changes (Type I) and (ii) transformations unnecessarily blocked by IDEs despite being valid (Type II). We assess whether Llama 3.2 3B, Mistral 7B, Gemma 2 9B, DeepSeek-R1 14B, Phi-4 14B, o1-mini, and o3-mini-high can accurately detect 100 refactoring bugs reported in widely used Java and Python IDEs, such as Eclipse and NetBeans. The study covers 16 refactoring types and employs zero-shot prompting on consumer-grade hardware to evaluate the models' ability to reason about refactoring correctness without explicit prior training. The proprietary o3-mini-high model achieved the highest detection rate, identifying 84.3% of Type I bugs. The open-source Phi-4 14B performed comparably well, demonstrating strong effectiveness across both bug types. However, o3-mini-high struggled with Type II bugs, correctly identifying and applying valid but blocked transformations in only 40% of cases. The findings highlight the potential of SLMs for efficiently detecting refactoring bugs, particularly in verifying behavioral changes. Additionally, SLMs offer a more adaptable solution capable of generalizing across different refactoring types and programming languages, addressing key limitations of traditional approaches."
+  },
+  {
+    "title": "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution",
+    "url": "http://arxiv.org/abs/2502.18449v1",
+    "arxiv_id": "2502.18449v1",
+    "authors": [
+      "Yuxiang Wei",
+      "Olivier Duchenne",
+      "Jade Copet",
+      "Quentin Carbonneaux",
+      "Lingming Zhang",
+      "Daniel Fried",
+      "Gabriel Synnaeve",
+      "Rishabh Singh",
+      "Sida I. Wang"
+    ],
+    "published": "2025-02-25T18:45:04+00:00",
+    "summary": "The recent DeepSeek-R1 release has demonstrated the immense potential of reinforcement learning (RL) in enhancing the general reasoning capabilities of large language models (LLMs). While DeepSeek-R1 and other follow-up work primarily focus on applying RL to competitive coding and math problems, this paper introduces SWE-RL, the first approach to scale RL-based LLM reasoning for real-world software engineering. Leveraging a lightweight rule-based reward (e.g., the similarity score between ground-truth and LLM-generated solutions), SWE-RL enables LLMs to autonomously recover a developer's reasoning processes and solutions by learning from extensive open-source software evolution data -- the record of a software's entire lifecycle, including its code snapshots, code changes, and events such as issues and pull requests. Trained on top of Llama 3, our resulting reasoning model, Llama3-SWE-RL-70B, achieves a 41.0% solve rate on SWE-bench Verified -- a human-verified collection of real-world GitHub issues. To our knowledge, this is the best performance reported for medium-sized (<100B) LLMs to date, even comparable to leading proprietary LLMs like GPT-4o. Surprisingly, despite performing RL solely on software evolution data, Llama3-SWE-RL has even emerged with generalized reasoning skills. For example, it shows improved results on five out-of-domain tasks, namely, function coding, library use, code reasoning, mathematics, and general language understanding, whereas a supervised-finetuning baseline even leads to performance degradation on average. Overall, SWE-RL opens up a new direction to improve the reasoning capabilities of LLMs through reinforcement learning on massive software engineering data."
+  },
+  {
+    "title": "Rank1: Test-Time Compute for Reranking in Information Retrieval",
+    "url": "http://arxiv.org/abs/2502.18418v1",
+    "arxiv_id": "2502.18418v1",
+    "authors": [
+      "Orion Weller",
+      "Kathryn Ricci",
+      "Eugene Yang",
+      "Andrew Yates",
+      "Dawn Lawrie",
+      "Benjamin Van Durme"
+    ],
+    "published": "2025-02-25T18:14:06+00:00",
+    "summary": "We introduce Rank1, the first reranking model trained to take advantage of test-time compute. Rank1 demonstrates the applicability within retrieval of using a reasoning language model (i.e. OpenAI's o1, Deepseek's R1, etc.) for distillation in order to rapidly improve the performance of a smaller model. We gather and open-source a dataset of more than 600,000 examples of R1 reasoning traces from queries and passages in MS MARCO. Models trained on this dataset show: (1) state-of-the-art performance on advanced reasoning and instruction following datasets; (2) work remarkably well out of distribution due to the ability to respond to user-input prompts; and (3) have explainable reasoning chains that can be given to users or RAG-based systems. Further, we demonstrate that quantized versions of these models retain strong performance while using less compute/memory. Overall, Rank1 shows that test-time compute allows for a fundamentally new type of explainable and performant reranker model for search."
+  },
+  {
+    "title": "You Shall Not Pass: Warning Drivers of Unsafe Overtaking Maneuvers on Country Roads by Predicting Safe Sight Distance",
+    "url": "http://arxiv.org/abs/2502.18163v1",
+    "arxiv_id": "2502.18163v1",
+    "authors": [
+      "Adrian Bauske",
+      "Arthur Fleig"
+    ],
+    "published": "2025-02-25T12:49:05+00:00",
+    "summary": "Overtaking on country roads with possible opposing traffic is a dangerous maneuver and many proposed assistant systems assume car-to-car communication and sensors currently unavailable in cars. To overcome this limitation, we develop an assistant that uses simple in-car sensors to predict the required sight distance for safe overtaking. Our models predict this from vehicle speeds, accelerations, and 3D map data. In a user study with a Virtual Reality driving simulator (N=25), we compare two UI variants (monitoring-focused vs scheduling-focused). The results reveal that both UIs enable more patient driving and thus increase overall driving safety. While the monitoring-focused UI achieves higher System Usability Score and distracts drivers less, the preferred UI depends on personal preference. Driving data shows predictions were off at times. We investigate and discuss this in a comparison of our models to actual driving behavior and identify crucial model parameters and assumptions that significantly improve model predictions."
+  },
+  {
+    "title": "Towards Thinking-Optimal Scaling of Test-Time Compute for LLM Reasoning",
+    "url": "http://arxiv.org/abs/2502.18080v1",
+    "arxiv_id": "2502.18080v1",
+    "authors": [
+      "Wenkai Yang",
+      "Shuming Ma",
+      "Yankai Lin",
+      "Furu Wei"
+    ],
+    "published": "2025-02-25T10:48:05+00:00",
+    "summary": "Recent studies have shown that making a model spend more time thinking through longer Chain of Thoughts (CoTs) enables it to gain significant improvements in complex reasoning tasks. While current researches continue to explore the benefits of increasing test-time compute by extending the CoT lengths of Large Language Models (LLMs), we are concerned about a potential issue hidden behind the current pursuit of test-time scaling: Would excessively scaling the CoT length actually bring adverse effects to a model's reasoning performance? Our explorations on mathematical reasoning tasks reveal an unexpected finding that scaling with longer CoTs can indeed impair the reasoning performance of LLMs in certain domains. Moreover, we discover that there exists an optimal scaled length distribution that differs across different domains. Based on these insights, we propose a Thinking-Optimal Scaling strategy. Our method first uses a small set of seed data with varying response length distributions to teach the model to adopt different reasoning efforts for deep thinking. Then, the model selects its shortest correct response under different reasoning efforts on additional problems for self-improvement. Our self-improved models built upon Qwen2.5-32B-Instruct outperform other distillation-based 32B o1-like models across various math benchmarks, and achieve performance on par with QwQ-32B-Preview."
+  },
+  {
+    "title": "Exploring the Effects of Traditional Chinese Medicine Scents on Mitigating Driving Fatigue",
+    "url": "http://arxiv.org/abs/2502.18013v1",
+    "arxiv_id": "2502.18013v1",
+    "authors": [
+      "Nengyue Su",
+      "Liang Luo",
+      "Yu Gu",
+      "Fuji Ren"
+    ],
+    "published": "2025-02-25T09:20:45+00:00",
+    "summary": "The rise of autonomous driving technology has led to concerns about inactivity-induced fatigue. This paper explores Traditional Chinese Medicine (TCM) scents for mitigating. Two human-involved studies have been conducted in a high-fidelity driving simulator. Study 1 maps six prevalent TCM scents onto the arousal/valence circumplex to select proper candidates, i.e., argy wormwood (with the highest arousal) and tangerine peel (with the highest valence). Study 2 tests both scents in an auto-driving course. Statistics show both scents can improve driver alertness and reaction-time, but should be used in different ways: argy wormwood is suitable for short-term use due to its higher intensity but poor acceptance, while tangerine peel is ideal for long-term use due to its higher likeness. These findings provide insights for in-car fatigue mitigation to enhance driver safety and well-being. However, issues such as scent longevity as for aromatherapy and automatic fatigue prediction remain unresolved."
+  },
+  {
+    "title": "InVDriver: Intra-Instance Aware Vectorized Query-Based Autonomous Driving Transformer",
+    "url": "http://arxiv.org/abs/2502.17949v1",
+    "arxiv_id": "2502.17949v1",
+    "authors": [
+      "Bo Zhang",
+      "Heye Huang",
+      "Chunyang Liu",
+      "Yaqin Zhang",
+      "Zhenhua Xu"
+    ],
+    "published": "2025-02-25T08:20:16+00:00",
+    "summary": "End-to-end autonomous driving with its holistic optimization capabilities, has gained increasing traction in academia and industry. Vectorized representations, which preserve instance-level topological information while reducing computational overhead, have emerged as a promising paradigm. While existing vectorized query-based frameworks often overlook the inherent spatial correlations among intra-instance points, resulting in geometrically inconsistent outputs (e.g., fragmented HD map elements or oscillatory trajectories). To address these limitations, we propose InVDriver, a novel vectorized query-based system that systematically models intra-instance spatial dependencies through masked self-attention layers, thereby enhancing planning accuracy and trajectory smoothness. Across all core modules, i.e., perception, prediction, and planning, InVDriver incorporates masked self-attention mechanisms that restrict attention to intra-instance point interactions, enabling coordinated refinement of structural elements while suppressing irrelevant inter-instance noise. Experimental results on the nuScenes benchmark demonstrate that InVDriver achieves state-of-the-art performance, surpassing prior methods in both accuracy and safety, while maintaining high computational efficiency. Our work validates that explicit modeling of intra-instance geometric coherence is critical for advancing vectorized autonomous driving systems, bridging the gap between theoretical advantages of end-to-end frameworks and practical deployment requirements."
+  },
+  {
+    "title": "DeepSeek-R1 Outperforms Gemini 2.0 Pro, OpenAI o1, and o3-mini in Bilingual Complex Ophthalmology Reasoning",
+    "url": "http://arxiv.org/abs/2502.17947v1",
+    "arxiv_id": "2502.17947v1",
+    "authors": [
+      "Pusheng Xu",
+      "Yue Wu",
+      "Kai Jin",
+      "Xiaolan Chen",
+      "Mingguang He",
+      "Danli Shi"
+    ],
+    "published": "2025-02-25T08:08:53+00:00",
+    "summary": "Purpose: To evaluate the accuracy and reasoning ability of DeepSeek-R1 and three other recently released large language models (LLMs) in bilingual complex ophthalmology cases. Methods: A total of 130 multiple-choice questions (MCQs) related to diagnosis (n = 39) and management (n = 91) were collected from the Chinese ophthalmology senior professional title examination and categorized into six topics. These MCQs were translated into English using DeepSeek-R1. The responses of DeepSeek-R1, Gemini 2.0 Pro, OpenAI o1 and o3-mini were generated under default configurations between February 15 and February 20, 2025. Accuracy was calculated as the proportion of correctly answered questions, with omissions and extra answers considered incorrect. Reasoning ability was evaluated through analyzing reasoning logic and the causes of reasoning error. Results: DeepSeek-R1 demonstrated the highest overall accuracy, achieving 0.862 in Chinese MCQs and 0.808 in English MCQs. Gemini 2.0 Pro, OpenAI o1, and OpenAI o3-mini attained accuracies of 0.715, 0.685, and 0.692 in Chinese MCQs (all P<0.001 compared with DeepSeek-R1), and 0.746 (P=0.115), 0.723 (P=0.027), and 0.577 (P<0.001) in English MCQs, respectively. DeepSeek-R1 achieved the highest accuracy across five topics in both Chinese and English MCQs. It also excelled in management questions conducted in Chinese (all P<0.05). Reasoning ability analysis showed that the four LLMs shared similar reasoning logic. Ignoring key positive history, ignoring key positive signs, misinterpretation medical data, and too aggressive were the most common causes of reasoning errors. Conclusion: DeepSeek-R1 demonstrated superior performance in bilingual complex ophthalmology reasoning tasks than three other state-of-the-art LLMs. While its clinical applicability remains challenging, it shows promise for supporting diagnosis and clinical decision-making."
+  },
+  {
+    "title": "FetchBot: Object Fetching in Cluttered Shelves via Zero-Shot Sim2Real",
+    "url": "http://arxiv.org/abs/2502.17894v1",
+    "arxiv_id": "2502.17894v1",
+    "authors": [
+      "Weiheng Liu",
+      "Yuxuan Wan",
+      "Jilong Wang",
+      "Yuxuan Kuang",
+      "Xuesong Shi",
+      "Haoran Li",
+      "Dongbin Zhao",
+      "Zhizheng Zhang",
+      "He Wang"
+    ],
+    "published": "2025-02-25T06:32:42+00:00",
+    "summary": "Object fetching from cluttered shelves is an important capability for robots to assist humans in real-world scenarios. Achieving this task demands robotic behaviors that prioritize safety by minimizing disturbances to surrounding objects, an essential but highly challenging requirement due to restricted motion space, limited fields of view, and complex object dynamics. In this paper, we introduce FetchBot, a sim-to-real framework designed to enable zero-shot generalizable and safety-aware object fetching from cluttered shelves in real-world settings. To address data scarcity, we propose an efficient voxel-based method for generating diverse simulated cluttered shelf scenes at scale and train a dynamics-aware reinforcement learning (RL) policy to generate object fetching trajectories within these scenes. This RL policy, which leverages oracle information, is subsequently distilled into a vision-based policy for real-world deployment. Considering that sim-to-real discrepancies stem from texture variations mostly while from geometric dimensions rarely, we propose to adopt depth information estimated by full-fledged depth foundation models as the input for the vision-based policy to mitigate sim-to-real gap. To tackle the challenge of limited views, we design a novel architecture for learning multi-view representations, allowing for comprehensive encoding of cluttered shelf scenes. This enables FetchBot to effectively minimize collisions while fetching objects from varying positions and depths, ensuring robust and safety-aware operation. Both simulation and real-robot experiments demonstrate FetchBot's superior generalization ability, particularly in handling a broad range of real-world scenarios, includ"
+  },
+  {
+    "title": "LR${}^{2}$Bench: Evaluating Long-chain Reflective Reasoning Capabilities of Large Language Models via Constraint Satisfaction Problems",
+    "url": "http://arxiv.org/abs/2502.17848v1",
+    "arxiv_id": "2502.17848v1",
+    "authors": [
+      "Jianghao Chen",
+      "Zhenlin Wei",
+      "Zhenjiang Ren",
+      "Ziyong Li",
+      "Jiajun Zhang"
+    ],
+    "published": "2025-02-25T04:51:17+00:00",
+    "summary": "Recent progress in o1-like models has significantly enhanced the reasoning abilities of Large Language Models (LLMs), empowering them to tackle increasingly complex tasks through reflection capabilities, such as making assumptions, backtracking, and self-refinement. However, effectively evaluating such reflection capabilities remains challenging due to the lack of appropriate benchmarks. To bridge this gap, we introduce LR${}^{2}$Bench, a novel benchmark designed to evaluate the Long-chain Reflective Reasoning capabilities of LLMs. LR${}^{2}$Bench comprises 850 samples across six Constraint Satisfaction Problems (CSPs) where reflective reasoning is crucial for deriving solutions that meet all given constraints. Each type of task focuses on distinct constraint patterns, such as knowledge-based, logical, and spatial constraints, providing a comprehensive evaluation of diverse problem-solving scenarios. We conduct extensive evaluation on both conventional models and o1-like models. Our experimental results reveal that even the most advanced reasoning-specific models, such as DeepSeek-R1 and OpenAI o1-preview, struggle with tasks in LR${}^{2}$Bench, achieving an average Exact Match score of only 20.0% and 23.6%, respectively. These findings underscore the significant room for improvement in the reflective reasoning capabilities of current LLMs. The leaderboard of our benchmark is available at https://huggingface.co/spaces/UltraRonin/LR2Bench"
+  },
+  {
+    "title": "Impact of Object Weight in Handovers: Inspiring Robotic Grip Release and Motion from Human Handovers",
+    "url": "http://arxiv.org/abs/2502.17834v1",
+    "arxiv_id": "2502.17834v1",
+    "authors": [
+      "Parag Khanna",
+      "M\u00e5rten Bj\u00f6rkman",
+      "Christian Smith"
+    ],
+    "published": "2025-02-25T04:29:11+00:00",
+    "summary": "This work explores the effect of object weight on human motion and grip release during handovers to enhance the naturalness, safety, and efficiency of robot-human interactions. We introduce adaptive robotic strategies based on the analysis of human handover behavior with varying object weights. The key contributions of this work includes the development of an adaptive grip-release strategy for robots, a detailed analysis of how object weight influences human motion to guide robotic motion adaptations, and the creation of handover-datasets incorporating various object weights, including the YCB handover dataset. By aligning robotic grip release and motion with human behavior, this work aims to improve robot-human handovers for different weighted objects. We also evaluate these human-inspired adaptive robotic strategies in robot-to-human handovers to assess their effectiveness and performance and demonstrate that they outperform the baseline approaches in terms of naturalness, efficiency, and user perception."
+  },
+  {
+    "title": "MM-PoisonRAG: Disrupting Multimodal RAG with Local and Global Poisoning Attacks",
+    "url": "http://arxiv.org/abs/2502.17832v1",
+    "arxiv_id": "2502.17832v1",
+    "authors": [
+      "Hyeonjeong Ha",
+      "Qiusi Zhan",
+      "Jeonghwan Kim",
+      "Dimitrios Bralios",
+      "Saikrishna Sanniboina",
+      "Nanyun Peng",
+      "Kai-wei Chang",
+      "Daniel Kang",
+      "Heng Ji"
+    ],
+    "published": "2025-02-25T04:23:59+00:00",
+    "summary": "Multimodal large language models (MLLMs) equipped with Retrieval Augmented Generation (RAG) leverage both their rich parametric knowledge and the dynamic, external knowledge to excel in tasks such as Question Answering. While RAG enhances MLLMs by grounding responses in query-relevant external knowledge, this reliance poses a critical yet underexplored safety risk: knowledge poisoning attacks, where misinformation or irrelevant knowledge is intentionally injected into external knowledge bases to manipulate model outputs to be incorrect and even harmful. To expose such vulnerabilities in multimodal RAG, we propose MM-PoisonRAG, a novel knowledge poisoning attack framework with two attack strategies: Localized Poisoning Attack (LPA), which injects query-specific misinformation in both text and images for targeted manipulation, and Globalized Poisoning Attack (GPA) to provide false guidance during MLLM generation to elicit nonsensical responses across all queries. We evaluate our attacks across multiple tasks, models, and access settings, demonstrating that LPA successfully manipulates the MLLM to generate attacker-controlled answers, with a success rate of up to 56% on MultiModalQA. Moreover, GPA completely disrupts model generation to 0% accuracy with just a single irrelevant knowledge injection. Our results highlight the urgent need for robust defenses against knowledge poisoning to safeguard multimodal RAG frameworks."
+  },
+  {
+    "title": "Safe Multi-Agent Navigation guided by Goal-Conditioned Safe Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2502.17813v1",
+    "arxiv_id": "2502.17813v1",
+    "authors": [
+      "Meng Feng",
+      "Viraj Parimi",
+      "Brian Williams"
+    ],
+    "published": "2025-02-25T03:38:52+00:00",
+    "summary": "Safe navigation is essential for autonomous systems operating in hazardous environments. Traditional planning methods excel at long-horizon tasks but rely on a predefined graph with fixed distance metrics. In contrast, safe Reinforcement Learning (RL) can learn complex behaviors without relying on manual heuristics but fails to solve long-horizon tasks, particularly in goal-conditioned and multi-agent scenarios.   In this paper, we introduce a novel method that integrates the strengths of both planning and safe RL. Our method leverages goal-conditioned RL and safe RL to learn a goal-conditioned policy for navigation while concurrently estimating cumulative distance and safety levels using learned value functions via an automated self-training algorithm. By constructing a graph with states from the replay buffer, our method prunes unsafe edges and generates a waypoint-based plan that the agent follows until reaching its goal, effectively balancing faster and safer routes over extended distances.   Utilizing this unified high-level graph and a shared low-level goal-conditioned safe RL policy, we extend this approach to address the multi-agent safe navigation problem. In particular, we leverage Conflict-Based Search (CBS) to create waypoint-based plans for multiple agents allowing for their safe navigation over extended horizons. This integration enhances the scalability of goal-conditioned safe RL in multi-agent scenarios, enabling efficient coordination among agents.   Extensive benchmarking against state-of-the-art baselines demonstrates the effectiveness of our method in achieving distance goals safely for multiple agents in complex and hazardous environments. Our code will be released to support future research."
+  },
+  {
+    "title": "DocPuzzle: A Process-Aware Benchmark for Evaluating Realistic Long-Context Reasoning Capabilities",
+    "url": "http://arxiv.org/abs/2502.17807v1",
+    "arxiv_id": "2502.17807v1",
+    "authors": [
+      "Tianyi Zhuang",
+      "Chuqiao Kuang",
+      "Xiaoguang Li",
+      "Yihua Teng",
+      "Jihao Wu",
+      "Yasheng Wang",
+      "Lifeng Shang"
+    ],
+    "published": "2025-02-25T03:29:53+00:00",
+    "summary": "We present DocPuzzle, a rigorously constructed benchmark for evaluating long-context reasoning capabilities in large language models (LLMs). This benchmark comprises 100 expert-level QA problems requiring multi-step reasoning over long real-world documents. To ensure the task quality and complexity, we implement a human-AI collaborative annotation-validation pipeline. DocPuzzle introduces an innovative evaluation framework that mitigates guessing bias through checklist-guided process analysis, establishing new standards for assessing reasoning capacities in LLMs. Our evaluation results show that: 1)Advanced slow-thinking reasoning models like o1-preview(69.7%) and DeepSeek-R1(66.3%) significantly outperform best general instruct models like Claude 3.5 Sonnet(57.7%); 2)Distilled reasoning models like DeepSeek-R1-Distill-Qwen-32B(41.3%) falls far behind the teacher model, suggesting challenges to maintain the generalization of reasoning capabilities relying solely on distillation."
+  },
+  {
+    "title": "Exploring the Potential of Large Language Models for Estimating the Reading Comprehension Question Difficulty",
+    "url": "http://arxiv.org/abs/2502.17785v1",
+    "arxiv_id": "2502.17785v1",
+    "authors": [
+      "Yoshee Jain",
+      "John Hollander",
+      "Amber He",
+      "Sunny Tang",
+      "Liang Zhang",
+      "John Sabatini"
+    ],
+    "published": "2025-02-25T02:28:48+00:00",
+    "summary": "Reading comprehension is a key for individual success, yet the assessment of question difficulty remains challenging due to the extensive human annotation and large-scale testing required by traditional methods such as linguistic analysis and Item Response Theory (IRT). While these robust approaches provide valuable insights, their scalability is limited. There is potential for Large Language Models (LLMs) to automate question difficulty estimation; however, this area remains underexplored. Our study investigates the effectiveness of LLMs, specifically OpenAI's GPT-4o and o1, in estimating the difficulty of reading comprehension questions using the Study Aid and Reading Assessment (SARA) dataset. We evaluated both the accuracy of the models in answering comprehension questions and their ability to classify difficulty levels as defined by IRT. The results indicate that, while the models yield difficulty estimates that align meaningfully with derived IRT parameters, there are notable differences in their sensitivity to extreme item characteristics. These findings suggest that LLMs can serve as the scalable method for automated difficulty assessment, particularly in dynamic interactions between learners and Adaptive Instructional Systems (AIS), bridging the gap between traditional psychometric techniques and modern AIS for reading comprehension and paving the way for more adaptive and personalized educational assessments."
+  },
+  {
+    "title": "GPUArmor: A Hardware-Software Co-design for Efficient and Scalable Memory Safety on GPUs",
+    "url": "http://arxiv.org/abs/2502.17780v1",
+    "arxiv_id": "2502.17780v1",
+    "authors": [
+      "Mohamed Tarek Ibn Ziad",
+      "Sana Damani",
+      "Mark Stephenson",
+      "Stephen W. Keckler",
+      "Aamer Jaleel"
+    ],
+    "published": "2025-02-25T02:15:06+00:00",
+    "summary": "Memory safety errors continue to pose a significant threat to current computing systems, and graphics processing units (GPUs) are no exception. A prominent class of memory safety algorithms is allocation-based solutions. The key idea is to maintain each allocation's metadata (base address and size) in a disjoint table and retrieve it at runtime to verify memory accesses. While several previous solutions have adopted allocation-based algorithms (e.g., cuCatch and GPUShield), they typically suffer from high memory overheads or scalability problems. In this work, we examine the key characteristics of real-world GPU workloads and observe several differences between GPU and CPU applications regarding memory access patterns, memory footprint, number of live allocations, and active allocation working set. Our observations motivate GPUArmor, a hardware-software co-design framework for memory safety on GPUs. We show that a simple compiler analysis combined with lightweight hardware support using a small Memory Lookaside Buffer (MLB) can help prevent spatial and temporal memory violations on modern GPU workloads with 2.3% average run time overheads. More importantly, GPUArmor achieves speed-of-light performance with negligible storage requirements. This result benefits both base and bounds solutions and memory tagging techniques, which we showcase with GPUArmor-HWOnly, a variation of GPUArmor that does not require recompilation, and achieves 2.2% slowdowns while significantly reducing storage overheads beyond traditional memory tagging approaches."
+  },
+  {
+    "title": "Design of a Breakaway Utensil Attachment for Enhanced Safety in Robot-Assisted Feeding",
+    "url": "http://arxiv.org/abs/2502.17774v1",
+    "arxiv_id": "2502.17774v1",
+    "authors": [
+      "Hau Wen Chang",
+      "J-Anne Yow",
+      "Lek Syn Lim",
+      "Wei Tech Ang"
+    ],
+    "published": "2025-02-25T02:09:32+00:00",
+    "summary": "Robot-assisted feeding systems enhance the independence of individuals with motor impairments and alleviate caregiver burden. While existing systems predominantly rely on software-based safety features to mitigate risks during unforeseen collisions, this study explores the use of a mechanical fail-safe to improve safety. We designed a breakaway utensil attachment that decouples forces exerted by the robot on the user when excessive forces occur. Finite element analysis (FEA) simulations were performed to predict failure points under various loading conditions, followed by experimental validation using 3D-printed attachments with variations in slot depth and wall loops. To facilitate testing, a drop test rig was developed and validated. Our results demonstrated a consistent failure point at the slot of the attachment, with a slot depth of 1 mm and three wall loops achieving failure at the target force of 65 N. Additionally, the parameters can be tailored to customize the breakaway force based on user-specific factors, such as comfort and pain tolerance. CAD files and utensil assembly instructions can be found here: https://tinyurl.com/rfa-utensil-attachment"
+  },
+  {
+    "title": "DeepSeek vs. ChatGPT: A Comparative Study for Scientific Computing and Scientific Machine Learning Tasks",
+    "url": "http://arxiv.org/abs/2502.17764v1",
+    "arxiv_id": "2502.17764v1",
+    "authors": [
+      "Qile Jiang",
+      "Zhiwei Gao",
+      "George Em Karniadakis"
+    ],
+    "published": "2025-02-25T01:49:50+00:00",
+    "summary": "Large Language Models (LLMs) have emerged as powerful tools for tackling a wide range of problems, including those in scientific computing, particularly in solving partial differential equations (PDEs). However, different models exhibit distinct strengths and preferences, resulting in varying levels of performance. In this paper, we compare the capabilities of the most advanced LLMs--ChatGPT and DeepSeek--along with their reasoning-optimized versions in addressing computational challenges. Specifically, we evaluate their proficiency in solving traditional numerical problems in scientific computing as well as leveraging scientific machine learning techniques for PDE-based problems. We designed all our experiments so that a non-trivial decision is required, e.g. defining the proper space of input functions for neural operator learning. Our findings reveal that the latest model, ChatGPT o3-mini-high, usually delivers the most accurate results while also responding significantly faster than its reasoning counterpart, DeepSeek R1. This enhanced speed and accuracy make ChatGPT o3-mini-high a more practical and efficient choice for diverse computational tasks at this juncture."
+  },
+  {
+    "title": "Mind the Gesture: Evaluating AI Sensitivity to Culturally Offensive Non-Verbal Gestures",
+    "url": "http://arxiv.org/abs/2502.17710v1",
+    "arxiv_id": "2502.17710v1",
+    "authors": [
+      "Akhila Yerukola",
+      "Saadia Gabriel",
+      "Nanyun Peng",
+      "Maarten Sap"
+    ],
+    "published": "2025-02-24T23:10:08+00:00",
+    "summary": "Gestures are an integral part of non-verbal communication, with meanings that vary across cultures, and misinterpretations that can have serious social and diplomatic consequences. As AI systems become more integrated into global applications, ensuring they do not inadvertently perpetuate cultural offenses is critical. To this end, we introduce Multi-Cultural Set of Inappropriate Gestures and Nonverbal Signs (MC-SIGNS), a dataset of 288 gesture-country pairs annotated for offensiveness, cultural significance, and contextual factors across 25 gestures and 85 countries. Through systematic evaluation using MC-SIGNS, we uncover critical limitations: text-to-image (T2I) systems exhibit strong US-centric biases, performing better at detecting offensive gestures in US contexts than in non-US ones; large language models (LLMs) tend to over-flag gestures as offensive; and vision-language models (VLMs) default to US-based interpretations when responding to universal concepts like wishing someone luck, frequently suggesting culturally inappropriate gestures. These findings highlight the urgent need for culturally-aware AI safety mechanisms to ensure equitable global deployment of AI technologies."
+  },
+  {
+    "title": "Data-Driven Input-Output Control Barrier Functions",
+    "url": "http://arxiv.org/abs/2502.17688v1",
+    "arxiv_id": "2502.17688v1",
+    "authors": [
+      "MMohammad Bajelani",
+      "Klaske van Heusden"
+    ],
+    "published": "2025-02-24T22:16:27+00:00",
+    "summary": "Control Barrier Functions (CBFs) offer a framework for ensuring set invariance and designing constrained control laws. However, crafting a valid CBF relies on system-specific assumptions and the availability of an accurate system model, underscoring the need for systematic data-driven synthesis methods. This paper introduces a data-driven approach to synthesizing a CBF for discrete-time LTI systems using only input-output measurements. The method begins by computing the maximal control invariant set using an input-output data-driven representation, eliminating the need for precise knowledge of the system's order and explicit state estimation. The proposed CBF is then systematically derived from this set, which can accommodate multiple input-output constraints. Furthermore, the proposed CBF is leveraged to develop a minimally invasive safety filter that ensures recursive feasibility with an adaptive decay rate. To improve clarity, we assume a noise-free dataset, though data-driven control techniques can be used to robustify the approach. Finally, the effectiveness of the proposed method is demonstrated on an unknown time-delay system."
+  },
+  {
+    "title": "Architecting Digital Twins for Intelligent Transportation Systems",
+    "url": "http://arxiv.org/abs/2502.17646v1",
+    "arxiv_id": "2502.17646v1",
+    "authors": [
+      "Hiya Bhatt",
+      "Sahil",
+      "Karthik Vaidhyanathan",
+      "Rahul Biju",
+      "Deepak Gangadharan",
+      "Ramona Trestian",
+      "Purav Shah"
+    ],
+    "published": "2025-02-24T20:51:09+00:00",
+    "summary": "Modern transportation systems face growing challenges in managing traffic flow, ensuring safety, and maintaining operational efficiency amid dynamic traffic patterns. Addressing these challenges requires intelligent solutions capable of real-time monitoring, predictive analytics, and adaptive control. This paper proposes an architecture for DigIT, a Digital Twin (DT) platform for Intelligent Transportation Systems (ITS), designed to overcome the limitations of existing frameworks by offering a modular and scalable solution for traffic management. Built on a Domain Concept Model (DCM), the architecture systematically models key ITS components enabling seamless integration of predictive modeling and simulations. The architecture leverages machine learning models to forecast traffic patterns based on historical and real-time data. To adapt to evolving traffic patterns, the architecture incorporates adaptive Machine Learning Operations (MLOps), automating the deployment and lifecycle management of predictive models. Evaluation results highlight the effectiveness of the architecture in delivering accurate predictions and computational efficiency."
+  },
+  {
+    "title": "Hallucination Detection in LLMs Using Spectral Features of Attention Maps",
+    "url": "http://arxiv.org/abs/2502.17598v1",
+    "arxiv_id": "2502.17598v1",
+    "authors": [
+      "Jakub Binkowski",
+      "Denis Janiak",
+      "Albert Sawczyn",
+      "Bogdan Gabrys",
+      "Tomasz Kajdanowicz"
+    ],
+    "published": "2025-02-24T19:30:24+00:00",
+    "summary": "Large Language Models (LLMs) have demonstrated remarkable performance across various tasks but remain prone to hallucinations. Detecting hallucinations is essential for safety-critical applications, and recent methods leverage attention map properties to this end, though their effectiveness remains limited. In this work, we investigate the spectral features of attention maps by interpreting them as adjacency matrices of graph structures. We propose the $\\text{LapEigvals}$ method, which utilises the top-$k$ eigenvalues of the Laplacian matrix derived from the attention maps as an input to hallucination detection probes. Empirical evaluations demonstrate that our approach achieves state-of-the-art hallucination detection performance among attention-based methods. Extensive ablation studies further highlight the robustness and generalisation of $\\text{LapEigvals}$, paving the way for future advancements in the hallucination detection domain."
+  },
+  {
+    "title": "How Do Large Language Monkeys Get Their Power (Laws)?",
+    "url": "http://arxiv.org/abs/2502.17578v1",
+    "arxiv_id": "2502.17578v1",
+    "authors": [
+      "Rylan Schaeffer",
+      "Joshua Kazdan",
+      "John Hughes",
+      "Jordan Juravsky",
+      "Sara Price",
+      "Aengus Lynch",
+      "Erik Jones",
+      "Robert Kirk",
+      "Azalia Mirhoseini",
+      "Sanmi Koyejo"
+    ],
+    "published": "2025-02-24T19:01:47+00:00",
+    "summary": "Recent research across mathematical problem solving, proof assistant programming and multimodal jailbreaking documents a striking finding: when (multimodal) language model tackle a suite of tasks with multiple attempts per task -- succeeding if any attempt is correct -- then the negative log of the average success rate scales a power law in the number of attempts. In this work, we identify an apparent puzzle: a simple mathematical calculation predicts that on each problem, the failure rate should fall exponentially with the number of attempts. We confirm this prediction empirically, raising a question: from where does aggregate polynomial scaling emerge? We then answer this question by demonstrating per-problem exponential scaling can be made consistent with aggregate polynomial scaling if the distribution of single-attempt success probabilities is heavy tailed such that a small fraction of tasks with extremely low success probabilities collectively warp the aggregate success trend into a power law - even as each problem scales exponentially on its own. We further demonstrate that this distributional perspective explains previously observed deviations from power law scaling, and provides a simple method for forecasting the power law exponent with an order of magnitude lower relative error, or equivalently, ${\\sim}2-4$ orders of magnitude less inference compute. Overall, our work contributes to a better understanding of how neural language model performance improves with scaling inference compute and the development of scaling-predictable evaluations of (multimodal) language models."
+  },
+  {
     "title": "LongSpec: Long-Context Speculative Decoding with Efficient Drafting and Verification",
     "url": "http://arxiv.org/abs/2502.17421v1",
     "arxiv_id": "2502.17421v1",
@@ -79,6 +407,19 @@
     ],
     "published": "2025-02-24T18:50:52+00:00",
     "summary": "Achieving human-level intelligence requires refining the transition from the fast, intuitive System 1 to the slower, more deliberate System 2 reasoning. While System 1 excels in quick, heuristic decisions, System 2 relies on logical reasoning for more accurate judgments and reduced biases. Foundational Large Language Models (LLMs) excel at fast decision-making but lack the depth for complex reasoning, as they have not yet fully embraced the step-by-step analysis characteristic of true System 2 thinking. Recently, reasoning LLMs like OpenAI's o1/o3 and DeepSeek's R1 have demonstrated expert-level performance in fields such as mathematics and coding, closely mimicking the deliberate reasoning of System 2 and showcasing human-like cognitive abilities. This survey begins with a brief overview of the progress in foundational LLMs and the early development of System 2 technologies, exploring how their combination has paved the way for reasoning LLMs. Next, we discuss how to construct reasoning LLMs, analyzing their features, the core methods enabling advanced reasoning, and the evolution of various reasoning LLMs. Additionally, we provide an overview of reasoning benchmarks, offering an in-depth comparison of the performance of representative reasoning LLMs. Finally, we explore promising directions for advancing reasoning LLMs and maintain a real-time \\href{https://github.com/zzli2022/Awesome-Slow-Reason-System}{GitHub Repository} to track the latest developments. We hope this survey will serve as a valuable resource to inspire innovation and drive progress in this rapidly evolving field."
+  },
+  {
+    "title": "Dataset Featurization: Uncovering Natural Language Features through Unsupervised Data Reconstruction",
+    "url": "http://arxiv.org/abs/2502.17541v1",
+    "arxiv_id": "2502.17541v1",
+    "authors": [
+      "Michal Bravansky",
+      "Vaclav Kubon",
+      "Suhas Hariharan",
+      "Robert Kirk"
+    ],
+    "published": "2025-02-24T18:42:33+00:00",
+    "summary": "Interpreting data is central to modern research. Large language models (LLMs) show promise in providing such natural language interpretations of data, yet simple feature extraction methods such as prompting often fail to produce accurate and versatile descriptions for diverse datasets and lack control over granularity and scale. To address these limitations, we propose a domain-agnostic method for dataset featurization that provides precise control over the number of features extracted while maintaining compact and descriptive representations comparable to human expert labeling. Our method optimizes the selection of informative binary features by evaluating the ability of an LLM to reconstruct the original data using those features. We demonstrate its effectiveness in dataset modeling tasks and through two case studies: (1) Constructing a feature representation of jailbreak tactics that compactly captures both the effectiveness and diversity of a larger set of human-crafted attacks; and (2) automating the discovery of features that align with human preferences, achieving accuracy and robustness comparable to expert-crafted features. Moreover, we show that the pipeline scales effectively, improving as additional features are sampled, making it suitable for large and diverse datasets."
   },
   {
     "title": "Experimental validation of UAV search and detection system in real wilderness environment",
@@ -286,6 +627,29 @@
     ],
     "published": "2025-02-24T01:08:15+00:00",
     "summary": "Traditional text embedding benchmarks primarily evaluate embedding models' capabilities to capture semantic similarity. However, more advanced NLP tasks require a deeper understanding of text, such as safety and factuality. These tasks demand an ability to comprehend and process complex information, often involving the handling of sensitive content, or the verification of factual statements against reliable sources. We introduce a new benchmark designed to assess and highlight the limitations of embedding models trained on existing information retrieval data mixtures on advanced capabilities, which include factuality, safety, instruction following, reasoning and document-level understanding. This benchmark includes a diverse set of tasks that simulate real-world scenarios where these capabilities are critical and leads to identification of the gaps of the currently advanced embedding models. Furthermore, we propose a novel method that reformulates these various tasks as retrieval tasks. By framing tasks like safety or factuality classification as retrieval problems, we leverage the strengths of retrieval models in capturing semantic relationships while also pushing them to develop a deeper understanding of context and content. Using this approach with single-task fine-tuning, we achieved performance gains of 8\\% on factuality classification and 13\\% on safety classification. Our code and data will be publicly available."
+  },
+  {
+    "title": "Correlating and Predicting Human Evaluations of Language Models from Natural Language Processing Benchmarks",
+    "url": "http://arxiv.org/abs/2502.18339v1",
+    "arxiv_id": "2502.18339v1",
+    "authors": [
+      "Rylan Schaeffer",
+      "Punit Singh Koura",
+      "Binh Tang",
+      "Ranjan Subramanian",
+      "Aaditya K Singh",
+      "Todor Mihaylov",
+      "Prajjwal Bhargava",
+      "Lovish Madaan",
+      "Niladri S. Chatterji",
+      "Vedanuj Goswami",
+      "Sergey Edunov",
+      "Dieuwke Hupkes",
+      "Sanmi Koyejo",
+      "Sharan Narang"
+    ],
+    "published": "2025-02-24T01:01:02+00:00",
+    "summary": "The explosion of high-performing conversational language models (LMs) has spurred a shift from classic natural language processing (NLP) benchmarks to expensive, time-consuming and noisy human evaluations - yet the relationship between these two evaluation strategies remains hazy. In this paper, we conduct a large-scale study of four Chat Llama 2 models, comparing their performance on 160 standard NLP benchmarks (e.g., MMLU, ARC, BIG-Bench Hard) against extensive human preferences on more than 11k single-turn and 2k multi-turn dialogues from over 2k human annotators. Our findings are striking: most NLP benchmarks strongly correlate with human evaluations, suggesting that cheaper, automated metrics can serve as surprisingly reliable predictors of human preferences. Three human evaluations, such as adversarial dishonesty and safety, are anticorrelated with NLP benchmarks, while two are uncorrelated. Moreover, through overparameterized linear regressions, we show that NLP scores can accurately predict human evaluations across different model scales, offering a path to reduce costly human annotation without sacrificing rigor. Overall, our results affirm the continued value of classic benchmarks and illuminate how to harness them to anticipate real-world user satisfaction - pointing to how NLP benchmarks can be leveraged to meet evaluation needs of our new era of conversational AI."
   },
   {
     "title": "Watch Out E-scooter Coming Through: Multimodal Sensing of Mixed Traffic Use and Conflicts Through Riders Ego-centric Views",
