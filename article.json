@@ -1,5 +1,843 @@
 [
   {
+    "title": "Optimal Power Management for Large-Scale Battery Energy Storage Systems via Bayesian Inference",
+    "url": "http://arxiv.org/abs/2503.02866v1",
+    "arxiv_id": "2503.02866v1",
+    "authors": [
+      "Amir Farakhor",
+      "Iman Askari",
+      "Di Wu",
+      "Yebin Wang",
+      "Huazhen Fang"
+    ],
+    "published": "2025-03-04T18:45:40+00:00",
+    "summary": "Large-scale battery energy storage systems (BESS) have found ever-increasing use across industry and society to accelerate clean energy transition and improve energy supply reliability and resilience. However, their optimal power management poses significant challenges: the underlying high-dimensional nonlinear nonconvex optimization lacks computational tractability in real-world implementation, and the uncertainty of the exogenous power demand makes exact optimization difficult. This paper presents a new solution framework to address these bottlenecks. The solution pivots on introducing power-sharing ratios to specify each cell's power quota from the output power demand. To find the optimal power-sharing ratios, we formulate a nonlinear model predictive control (NMPC) problem to achieve power-loss-minimizing BESS operation while complying with safety, cell balancing, and power supply-demand constraints. We then propose a parameterized control policy for the power-sharing ratios, which utilizes only three parameters, to reduce the computational demand in solving the NMPC problem. This policy parameterization allows us to translate the NMPC problem into a Bayesian inference problem for the sake of 1) computational tractability, and 2) overcoming the nonconvexity of the optimization problem. We leverage the ensemble Kalman inversion technique to solve the parameter estimation problem. Concurrently, a low-level control loop is developed to seamlessly integrate our proposed approach with the BESS to ensure practical implementation. This low-level controller receives the optimal power-sharing ratios, generates output power references for the cells, and maintains a balance between power supply and demand despite uncertainty in output power. We conduct extensive simulations and experiments on a 20-cell prototype to validate the proposed approach."
+  },
+  {
+    "title": "FairSense-AI: Responsible AI Meets Sustainability",
+    "url": "http://arxiv.org/abs/2503.02865v1",
+    "arxiv_id": "2503.02865v1",
+    "authors": [
+      "Shaina Raza",
+      "Mukund Sayeeganesh Chettiar",
+      "Matin Yousefabadi",
+      "Tahniat Khan",
+      "Marcelo Lotif"
+    ],
+    "published": "2025-03-04T18:43:57+00:00",
+    "summary": "In this paper, we introduce FairSense-AI: a multimodal framework designed to detect and mitigate bias in both text and images. By leveraging Large Language Models (LLMs) and Vision-Language Models (VLMs), FairSense-AI uncovers subtle forms of prejudice or stereotyping that can appear in content, providing users with bias scores, explanatory highlights, and automated recommendations for fairness enhancements. In addition, FairSense-AI integrates an AI risk assessment component that aligns with frameworks like the MIT AI Risk Repository and NIST AI Risk Management Framework, enabling structured identification of ethical and safety concerns. The platform is optimized for energy efficiency via techniques such as model pruning and mixed-precision computation, thereby reducing its environmental footprint. Through a series of case studies and applications, we demonstrate how FairSense-AI promotes responsible AI use by addressing both the social dimension of fairness and the pressing need for sustainability in large-scale AI deployments. https://vectorinstitute.github.io/FairSense-AI, https://pypi.org/project/fair-sense-ai/"
+  },
+  {
+    "title": "Multimodal AI predicts clinical outcomes of drug combinations from preclinical data",
+    "url": "http://arxiv.org/abs/2503.02781v1",
+    "arxiv_id": "2503.02781v1",
+    "authors": [
+      "Yepeng Huang",
+      "Xiaorui Su",
+      "Varun Ullanat",
+      "Ivy Liang",
+      "Lindsay Clegg",
+      "Damilola Olabode",
+      "Nicholas Ho",
+      "Bino John",
+      "Megan Gibbs",
+      "Marinka Zitnik"
+    ],
+    "published": "2025-03-04T16:55:14+00:00",
+    "summary": "Predicting clinical outcomes from preclinical data is essential for identifying safe and effective drug combinations. Current models rely on structural or target-based features to identify high-efficacy, low-toxicity drug combinations. However, these approaches fail to incorporate the multimodal data necessary for accurate, clinically-relevant predictions. Here, we introduce MADRIGAL, a multimodal AI model that learns from structural, pathway, cell viability, and transcriptomic data to predict drug combination effects across 953 clinical outcomes and 21842 compounds, including combinations of approved drugs and novel compounds in development. MADRIGAL uses a transformer bottleneck module to unify preclinical drug data modalities while handling missing data during training and inference--a major challenge in multimodal learning. It outperforms single-modality methods and state-of-the-art models in predicting adverse drug interactions. MADRIGAL performs virtual screening of anticancer drug combinations and supports polypharmacy management for type II diabetes and metabolic dysfunction-associated steatohepatitis (MASH). It identifies transporter-mediated drug interactions. MADRIGAL predicts resmetirom, the first and only FDA-approved drug for MASH, among therapies with the most favorable safety profile. It supports personalized cancer therapy by integrating genomic profiles from cancer patients. Using primary acute myeloid leukemia samples and patient-derived xenograft models, it predicts the efficacy of personalized drug combinations. Integrating MADRIGAL with a large language model allows users to describe clinical outcomes in natural language, improving safety assessment by identifying potential adverse interactions and toxicity risks. MADRIGAL provides a multimodal approach for designing combination therapies with improved predictive accuracy and clinical relevance."
+  },
+  {
+    "title": "Deep Learning-Enhanced Visual Monitoring in Hazardous Underwater Environments with a Swarm of Micro-Robots",
+    "url": "http://arxiv.org/abs/2503.02752v1",
+    "arxiv_id": "2503.02752v1",
+    "authors": [
+      "Shuang Chen",
+      "Yifeng He",
+      "Barry Lennox",
+      "Farshad Arvin",
+      "Amir Atapour-Abarghouei"
+    ],
+    "published": "2025-03-04T16:19:06+00:00",
+    "summary": "Long-term monitoring and exploration of extreme environments, such as underwater storage facilities, is costly, labor-intensive, and hazardous. Automating this process with low-cost, collaborative robots can greatly improve efficiency. These robots capture images from different positions, which must be processed simultaneously to create a spatio-temporal model of the facility. In this paper, we propose a novel approach that integrates data simulation, a multi-modal deep learning network for coordinate prediction, and image reassembly to address the challenges posed by environmental disturbances causing drift and rotation in the robots' positions and orientations. Our approach enhances the precision of alignment in noisy environments by integrating visual information from snapshots, global positional context from masks, and noisy coordinates. We validate our method through extensive experiments using synthetic data that simulate real-world robotic operations in underwater settings. The results demonstrate very high coordinate prediction accuracy and plausible image assembly, indicating the real-world applicability of our approach. The assembled images provide clear and coherent views of the underwater environment for effective monitoring and inspection, showcasing the potential for broader use in extreme settings, further contributing to improved safety, efficiency, and cost reduction in hazardous field monitoring. Code is available on https://github.com/ChrisChen1023/Micro-Robot-Swarm."
+  },
+  {
+    "title": "Generative Modeling of Microweather Wind Velocities for Urban Air Mobility",
+    "url": "http://arxiv.org/abs/2503.02690v1",
+    "arxiv_id": "2503.02690v1",
+    "authors": [
+      "Tristan A. Shah",
+      "Michael C. Stanley",
+      "James E. Warner"
+    ],
+    "published": "2025-03-04T15:03:15+00:00",
+    "summary": "Motivated by the pursuit of safe, reliable, and weather-tolerant urban air mobility (UAM) solutions, this work proposes a generative modeling approach for characterizing microweather wind velocities. Microweather, or the weather conditions in highly localized areas, is particularly complex in urban environments owing to the chaotic and turbulent nature of wind flows. Furthermore, traditional means of assessing local wind fields are not generally viable solutions for UAM applications: 1) field measurements that would rely on permanent wind profiling systems in operational air space are not practical, 2) physics-based models that simulate fluid dynamics at a sufficiently high resolution are not computationally tractable, and 3) data-driven modeling approaches that are largely deterministic ignore the inherent variability in turbulent flows that dictates UAM reliability. Thus, advancements in predictive capabilities are needed to help mitigate the unique operational safety risks that microweather winds pose for smaller, lighter weight UAM aircraft.   This work aims to model microweather wind velocities in a manner that is computationally-efficient, captures random variability, and would only require a temporary, rather than permanent, field measurement campaign. Inspired by recent breakthroughs in conditional generative AI such as text-to-image generation, the proposed approach learns a probabilistic macro-to-microweather mapping between regional weather forecasts and measured local wind velocities using generative modeling (denoising diffusion probabilistic models, flow matching, and Gaussian mixture models). A simple proof of concept was implemented using a dataset comprised of local (micro) measurements from a Sonic Detection and Ranging (SoDAR) wind profiler along with (macro) forecast data from a nearby weather station over the same time period."
+  },
+  {
+    "title": "State of play and future directions in industrial computer vision AI standards",
+    "url": "http://arxiv.org/abs/2503.02675v1",
+    "arxiv_id": "2503.02675v1",
+    "authors": [
+      "Artemis Stefanidou",
+      "Panagiotis Radoglou-Grammatikis",
+      "Vasileios Argyriou",
+      "Panagiotis Sarigiannidis",
+      "Iraklis Varlamis",
+      "Georgios Th. Papadopoulos"
+    ],
+    "published": "2025-03-04T14:46:34+00:00",
+    "summary": "The recent tremendous advancements in the areas of Artificial Intelligence (AI) and Deep Learning (DL) have also resulted into corresponding remarkable progress in the field of Computer Vision (CV), showcasing robust technological solutions in a wide range of application sectors of high industrial interest (e.g., healthcare, autonomous driving, automation, etc.). Despite the outstanding performance of CV systems in specific domains, their development and exploitation at industrial-scale necessitates, among other, the addressing of requirements related to the reliability, transparency, trustworthiness, security, safety, and robustness of the developed AI models. The latter raises the imperative need for the development of efficient, comprehensive and widely-adopted industrial standards. In this context, this study investigates the current state of play regarding the development of industrial computer vision AI standards, emphasizing on critical aspects, like model interpretability, data quality, and regulatory compliance. In particular, a systematic analysis of launched and currently developing CV standards, proposed by the main international standardization bodies (e.g. ISO/IEC, IEEE, DIN, etc.) is performed. The latter is complemented by a comprehensive discussion on the current challenges and future directions observed in this regularization endeavor."
+  },
+  {
+    "title": "Human-aligned Safe Reinforcement Learning for Highway On-Ramp Merging in Dense Traffic",
+    "url": "http://arxiv.org/abs/2503.02624v1",
+    "arxiv_id": "2503.02624v1",
+    "authors": [
+      "Yang Li",
+      "Shijie Yuan",
+      "Yuan Chang",
+      "Xiaolong Chen",
+      "Qisong Yang",
+      "Zhiyuan Yang",
+      "Hongmao Qin"
+    ],
+    "published": "2025-03-04T13:49:12+00:00",
+    "summary": "Most reinforcement learning (RL) approaches for the decision-making of autonomous driving consider safety as a reward instead of a cost, which makes it hard to balance the tradeoff between safety and other objectives. Human risk preference has also rarely been incorporated, and the trained policy might be either conservative or aggressive for users. To this end, this study proposes a human-aligned safe RL approach for autonomous merging, in which the high-level decision problem is formulated as a constrained Markov decision process (CMDP) that incorporates users' risk preference into the safety constraints, followed by a model predictive control (MPC)-based low-level control. The safety level of RL policy can be adjusted by computing cost limits of CMDP's constraints based on risk preferences and traffic density using a fuzzy control method. To filter out unsafe or invalid actions, we design an action shielding mechanism that pre-executes RL actions using an MPC method and performs collision checks with surrounding agents. We also provide theoretical proof to validate the effectiveness of the shielding mechanism in enhancing RL's safety and sample efficiency. Simulation experiments in multiple levels of traffic densities show that our method can significantly reduce safety violations without sacrificing traffic efficiency. Furthermore, due to the use of risk preference-aware constraints in CMDP and action shielding, we can not only adjust the safety level of the final policy but also reduce safety violations during the training stage, proving a promising solution for online learning in real-world environments."
+  },
+  {
+    "title": "MM-OR: A Large Multimodal Operating Room Dataset for Semantic Understanding of High-Intensity Surgical Environments",
+    "url": "http://arxiv.org/abs/2503.02579v1",
+    "arxiv_id": "2503.02579v1",
+    "authors": [
+      "Ege \u00d6zsoy",
+      "Chantal Pellegrini",
+      "Tobias Czempiel",
+      "Felix Tristram",
+      "Kun Yuan",
+      "David Bani-Harouni",
+      "Ulrich Eck",
+      "Benjamin Busam",
+      "Matthias Keicher",
+      "Nassir Navab"
+    ],
+    "published": "2025-03-04T13:00:52+00:00",
+    "summary": "Operating rooms (ORs) are complex, high-stakes environments requiring precise understanding of interactions among medical staff, tools, and equipment for enhancing surgical assistance, situational awareness, and patient safety. Current datasets fall short in scale, realism and do not capture the multimodal nature of OR scenes, limiting progress in OR modeling. To this end, we introduce MM-OR, a realistic and large-scale multimodal spatiotemporal OR dataset, and the first dataset to enable multimodal scene graph generation. MM-OR captures comprehensive OR scenes containing RGB-D data, detail views, audio, speech transcripts, robotic logs, and tracking data and is annotated with panoptic segmentations, semantic scene graphs, and downstream task labels. Further, we propose MM2SG, the first multimodal large vision-language model for scene graph generation, and through extensive experiments, demonstrate its ability to effectively leverage multimodal inputs. Together, MM-OR and MM2SG establish a new benchmark for holistic OR understanding, and open the path towards multimodal scene analysis in complex, high-stakes environments. Our code, and data is available at https://github.com/egeozsoy/MM-OR."
+  },
+  {
+    "title": "LLM-Safety Evaluations Lack Robustness",
+    "url": "http://arxiv.org/abs/2503.02574v1",
+    "arxiv_id": "2503.02574v1",
+    "authors": [
+      "Tim Beyer",
+      "Sophie Xhonneux",
+      "Simon Geisler",
+      "Gauthier Gidel",
+      "Leo Schwinn",
+      "Stephan G\u00fcnnemann"
+    ],
+    "published": "2025-03-04T12:55:07+00:00",
+    "summary": "In this paper, we argue that current safety alignment research efforts for large language models are hindered by many intertwined sources of noise, such as small datasets, methodological inconsistencies, and unreliable evaluation setups. This can, at times, make it impossible to evaluate and compare attacks and defenses fairly, thereby slowing progress. We systematically analyze the LLM safety evaluation pipeline, covering dataset curation, optimization strategies for automated red-teaming, response generation, and response evaluation using LLM judges. At each stage, we identify key issues and highlight their practical impact. We also propose a set of guidelines for reducing noise and bias in evaluations of future attack and defense papers. Lastly, we offer an opposing perspective, highlighting practical reasons for existing limitations. We believe that addressing the outlined problems in future research will improve the field's ability to generate easily comparable results and make measurable progress."
+  },
+  {
+    "title": "Tracking-Aware Deformation Field Estimation for Non-rigid 3D Reconstruction in Robotic Surgeries",
+    "url": "http://arxiv.org/abs/2503.02558v1",
+    "arxiv_id": "2503.02558v1",
+    "authors": [
+      "Zeqing Wang",
+      "Han Fang",
+      "Yihong Xu",
+      "Yutong Ban"
+    ],
+    "published": "2025-03-04T12:33:17+00:00",
+    "summary": "Minimally invasive procedures have been advanced rapidly by the robotic laparoscopic surgery. The latter greatly assists surgeons in sophisticated and precise operations with reduced invasiveness. Nevertheless, it is still safety critical to be aware of even the least tissue deformation during instrument-tissue interactions, especially in 3D space. To address this, recent works rely on NeRF to render 2D videos from different perspectives and eliminate occlusions. However, most of the methods fail to predict the accurate 3D shapes and associated deformation estimates robustly. Differently, we propose Tracking-Aware Deformation Field (TADF), a novel framework which reconstructs the 3D mesh along with the 3D tissue deformation simultaneously. It first tracks the key points of soft tissue by a foundation vision model, providing an accurate 2D deformation field. Then, the 2D deformation field is smoothly incorporated with a neural implicit reconstruction network to obtain tissue deformation in the 3D space. Finally, we experimentally demonstrate that the proposed method provides more accurate deformation estimation compared with other 3D neural reconstruction methods in two public datasets."
+  },
+  {
+    "title": "World Models for Anomaly Detection during Model-Based Reinforcement Learning Inference",
+    "url": "http://arxiv.org/abs/2503.02552v1",
+    "arxiv_id": "2503.02552v1",
+    "authors": [
+      "Fabian Domberg",
+      "Georg Schildbach"
+    ],
+    "published": "2025-03-04T12:25:01+00:00",
+    "summary": "Learning-based controllers are often purposefully kept out of real-world applications due to concerns about their safety and reliability. We explore how state-of-the-art world models in Model-Based Reinforcement Learning can be utilized beyond the training phase to ensure a deployed policy only operates within regions of the state-space it is sufficiently familiar with. This is achieved by continuously monitoring discrepancies between a world model's predictions and observed system behavior during inference. It allows for triggering appropriate measures, such as an emergency stop, once an error threshold is surpassed. This does not require any task-specific knowledge and is thus universally applicable. Simulated experiments on established robot control tasks show the effectiveness of this method, recognizing changes in local robot geometry and global gravitational magnitude. Real-world experiments using an agile quadcopter further demonstrate the benefits of this approach by detecting unexpected forces acting on the vehicle. These results indicate how even in new and adverse conditions, safe and reliable operation of otherwise unpredictable learning-based controllers can be achieved."
+  },
+  {
+    "title": "A Systematic Literature Review on Safety of the Intended Functionality for Automated Driving Systems",
+    "url": "http://arxiv.org/abs/2503.02498v1",
+    "arxiv_id": "2503.02498v1",
+    "authors": [
+      "Milin Patel",
+      "Rolf Jung",
+      "Marzana Khatun"
+    ],
+    "published": "2025-03-04T11:04:36+00:00",
+    "summary": "In the automobile industry, ensuring the safety of automated vehicles equipped with the Automated Driving System (ADS) is becoming a significant focus due to the increasing development and deployment of automated driving. Automated driving depends on sensing both the external and internal environments of a vehicle, utilizing perception sensors and algorithms, and Electrical/Electronic (E/E) systems for situational awareness and response. ISO 21448 is the standard for Safety of the Intended Functionality (SOTIF) that aims to ensure that the ADS operate safely within their intended functionality. SOTIF focuses on preventing or mitigating potential hazards that may arise from the limitations or failures of the ADS, including hazards due to insufficiencies of specification, or performance insufficiencies, as well as foreseeable misuse of the intended functionality. However, the challenge lies in ensuring the safety of vehicles despite the limited availability of extensive and systematic literature on SOTIF. To address this challenge, a Systematic Literature Review (SLR) on SOTIF for the ADS is performed following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. The objective is to methodically gather and analyze the existing literature on SOTIF. The major contributions of this paper are: (i) presenting a summary of the literature by synthesizing and organizing the collective findings, methodologies, and insights into distinct thematic groups, and (ii) summarizing and categorizing the acknowledged limitations based on data extracted from an SLR of 51 research papers published between 2018 and 2023. Furthermore, research gaps are determined, and future research directions are proposed."
+  },
+  {
+    "title": "UAV-VLPA*: A Vision-Language-Path-Action System for Optimal Route Generation on a Large Scales",
+    "url": "http://arxiv.org/abs/2503.02454v1",
+    "arxiv_id": "2503.02454v1",
+    "authors": [
+      "Oleg Sautenkov",
+      "Aibek Akhmetkazy",
+      "Yasheerah Yaqoot",
+      "Muhammad Ahsan Mustafa",
+      "Grik Tadevosyan",
+      "Artem Lykov",
+      "Dzmitry Tsetserukou"
+    ],
+    "published": "2025-03-04T10:02:53+00:00",
+    "summary": "The UAV-VLPA* (Visual-Language-Planning-and-Action) system represents a cutting-edge advancement in aerial robotics, designed to enhance communication and operational efficiency for unmanned aerial vehicles (UAVs). By integrating advanced planning capabilities, the system addresses the Traveling Salesman Problem (TSP) to optimize flight paths, reducing the total trajectory length by 18.5\\% compared to traditional methods. Additionally, the incorporation of the A* algorithm enables robust obstacle avoidance, ensuring safe and efficient navigation in complex environments. The system leverages satellite imagery processing combined with the Visual Language Model (VLM) and GPT's natural language processing capabilities, allowing users to generate detailed flight plans through simple text commands. This seamless fusion of visual and linguistic analysis empowers precise decision-making and mission planning, making UAV-VLPA* a transformative tool for modern aerial operations. With its unmatched operational efficiency, navigational safety, and user-friendly functionality, UAV-VLPA* sets a new standard in autonomous aerial robotics, paving the way for future innovations in the field."
+  },
+  {
+    "title": "Artificial Intelligence in Reactor Physics: Current Status and Future Prospects",
+    "url": "http://arxiv.org/abs/2503.02440v1",
+    "arxiv_id": "2503.02440v1",
+    "authors": [
+      "Ruizhi Zhang",
+      "Shengfeng Zhu",
+      "Kan Wang",
+      "Ding She",
+      "Jean-Philippe Argaud",
+      "Bertrand Bouriquet",
+      "Qing Li",
+      "Helin Gong"
+    ],
+    "published": "2025-03-04T09:36:58+00:00",
+    "summary": "Reactor physics is the study of neutron properties, focusing on using models to examine the interactions between neutrons and materials in nuclear reactors. Artificial intelligence (AI) has made significant contributions to reactor physics, e.g., in operational simulations, safety design, real-time monitoring, core management and maintenance. This paper presents a comprehensive review of AI approaches in reactor physics, especially considering the category of Machine Learning (ML), with the aim of describing the application scenarios, frontier topics, unsolved challenges and future research directions. From equation solving and state parameter prediction to nuclear industry applications, this paper provides a step-by-step overview of ML methods applied to steady-state, transient and combustion problems. Most literature works achieve industry-demanded models by enhancing the efficiency of deterministic methods or correcting uncertainty methods, which leads to successful applications. However, research on ML methods in reactor physics is somewhat fragmented, and the ability to generalize models needs to be strengthened. Progress is still possible, especially in addressing theoretical challenges and enhancing industrial applications such as building surrogate models and digital twins."
+  },
+  {
+    "title": "Unlocking a New Rust Programming Experience: Fast and Slow Thinking with LLMs to Conquer Undefined Behaviors",
+    "url": "http://arxiv.org/abs/2503.02335v1",
+    "arxiv_id": "2503.02335v1",
+    "authors": [
+      "Renshuang Jiang",
+      "Pan Dong",
+      "Zhenling Duan",
+      "Yu Shi",
+      "Xiaoxiang Fang",
+      "Yan Ding",
+      "Jun Ma",
+      "Shuai Zhao",
+      "Zhe Jiang"
+    ],
+    "published": "2025-03-04T06:48:45+00:00",
+    "summary": "To provide flexibility and low-level interaction capabilities, the unsafe tag in Rust is essential in many projects, but undermines memory safety and introduces Undefined Behaviors (UBs) that reduce safety. Eliminating these UBs requires a deep understanding of Rust's safety rules and strong typing. Traditional methods require depth analysis of code, which is laborious and depends on knowledge design. The powerful semantic understanding capabilities of LLM offer new opportunities to solve this problem. Although existing large model debugging frameworks excel in semantic tasks, limited by fixed processes and lack adaptive and dynamic adjustment capabilities. Inspired by the dual process theory of decision-making (Fast and Slow Thinking), we present a LLM-based framework called RustBrain that automatically and flexibly minimizes UBs in Rust projects. Fast thinking extracts features to generate solutions, while slow thinking decomposes, verifies, and generalizes them abstractly. To apply verification and generalization results to solution generation, enabling dynamic adjustments and precise outputs, RustBrain integrates two thinking through a feedback mechanism. Experimental results on Miri dataset show a 94.3% pass rate and 80.4% execution rate, improving flexibility and Rust projects safety."
+  },
+  {
+    "title": "Rethinking Static Line Rating for Economic and Efficient Power Operation in South Korea",
+    "url": "http://arxiv.org/abs/2503.02274v1",
+    "arxiv_id": "2503.02274v1",
+    "authors": [
+      "Junseon Park",
+      "Junhyun Lee",
+      "Hyeongon Park"
+    ],
+    "published": "2025-03-04T04:46:43+00:00",
+    "summary": "In South Korea, power grid is currently operated based on the static line rating (SLR) method, where the transmission   line capacity is determined based on extreme weather conditions. However, with global warming, there is a concern   that the temperatures during summer may exceed the SLR criteria, posing safety risks. On the other hand, the conservative estimates used for winter conditions limit the utilization of renewable energy. Proposals to install new lines face   significant financial and environmental hurdles, complicating efforts to adapt to these changing conditions. Dynamic   Line Rating (DLR) offers a real-time solution but requires extensive weather monitoring and complex integration. This   paper proposes a novel method that improves on SLR by analyzing historical data to refine line rating criteria on a   monthly, seasonal, and semi-annual basis. Through simulations, we show our approach significantly enhances cost effectiveness and reliability of the power system, achieving efficiencies close to DLR with existing infrastructure. This   method offers a practical alternative to overcome the limitations of SLR and the implementation challenges of DLR."
+  },
+  {
+    "title": "V2X-LLM: Enhancing V2X Integration and Understanding in Connected Vehicle Corridors",
+    "url": "http://arxiv.org/abs/2503.02239v1",
+    "arxiv_id": "2503.02239v1",
+    "authors": [
+      "Keshu Wu",
+      "Pei Li",
+      "Yang Zhou",
+      "Rui Gan",
+      "Junwei You",
+      "Yang Cheng",
+      "Jingwen Zhu",
+      "Steven T. Parker",
+      "Bin Ran",
+      "David A. Noyce",
+      "Zhengzhong Tu"
+    ],
+    "published": "2025-03-04T03:28:30+00:00",
+    "summary": "The advancement of Connected and Automated Vehicles (CAVs) and Vehicle-to-Everything (V2X) offers significant potential for enhancing transportation safety, mobility, and sustainability. However, the integration and analysis of the diverse and voluminous V2X data, including Basic Safety Messages (BSMs) and Signal Phase and Timing (SPaT) data, present substantial challenges, especially on Connected Vehicle Corridors. These challenges include managing large data volumes, ensuring real-time data integration, and understanding complex traffic scenarios. Although these projects have developed an advanced CAV data pipeline that enables real-time communication between vehicles, infrastructure, and other road users for managing connected vehicle and roadside unit (RSU) data, significant hurdles in data comprehension and real-time scenario analysis and reasoning persist. To address these issues, we introduce the V2X-LLM framework, a novel enhancement to the existing CV data pipeline. V2X-LLM leverages Large Language Models (LLMs) to improve the understanding and real-time analysis of V2X data. The framework includes four key tasks: Scenario Explanation, offering detailed narratives of traffic conditions; V2X Data Description, detailing vehicle and infrastructure statuses; State Prediction, forecasting future traffic states; and Navigation Advisory, providing optimized routing instructions. By integrating LLM-driven reasoning with V2X data within the data pipeline, the V2X-LLM framework offers real-time feedback and decision support for traffic management. This integration enhances the accuracy of traffic analysis, safety, and traffic optimization. Demonstrations in a real-world urban corridor highlight the framework's potential to advance intelligent transportation systems."
+  },
+  {
+    "title": "ADMM-MCBF-LCA: A Layered Control Architecture for Safe Real-Time Navigation",
+    "url": "http://arxiv.org/abs/2503.02208v1",
+    "arxiv_id": "2503.02208v1",
+    "authors": [
+      "Anusha Srikanthan",
+      "Yifan Xue",
+      "Vijay Kumar",
+      "Nikolai Matni",
+      "Nadia Figueroa"
+    ],
+    "published": "2025-03-04T02:40:17+00:00",
+    "summary": "We consider the problem of safe real-time navigation of a robot in a dynamic environment with moving obstacles of arbitrary smooth geometries and input saturation constraints. We assume that the robot detects and models nearby obstacle boundaries with a short-range sensor and that this detection is error-free. This problem presents three main challenges: i) input constraints, ii) safety, and iii) real-time computation. To tackle all three challenges, we present a layered control architecture (LCA) consisting of an offline path library generation layer, and an online path selection and safety layer. To overcome the limitations of reactive methods, our offline path library consists of feasible controllers, feedback gains, and reference trajectories. To handle computational burden and safety, we solve online path selection and generate safe inputs that run at 100 Hz. Through simulations on Gazebo and Fetch hardware in an indoor environment, we evaluate our approach against baselines that are layered, end-to-end, or reactive. Our experiments demonstrate that among all algorithms, only our proposed LCA is able to complete tasks such as reaching a goal, safely. When comparing metrics such as safety, input error, and success rate, we show that our approach generates safe and feasible inputs throughout the robot execution."
+  },
+  {
+    "title": "Words or Vision: Do Vision-Language Models Have Blind Faith in Text?",
+    "url": "http://arxiv.org/abs/2503.02199v1",
+    "arxiv_id": "2503.02199v1",
+    "authors": [
+      "Ailin Deng",
+      "Tri Cao",
+      "Zhirui Chen",
+      "Bryan Hooi"
+    ],
+    "published": "2025-03-04T02:21:07+00:00",
+    "summary": "Vision-Language Models (VLMs) excel in integrating visual and textual information for vision-centric tasks, but their handling of inconsistencies between modalities is underexplored. We investigate VLMs' modality preferences when faced with visual data and varied textual inputs in vision-centered settings. By introducing textual variations to four vision-centric tasks and evaluating ten Vision-Language Models (VLMs), we discover a \\emph{``blind faith in text''} phenomenon: VLMs disproportionately trust textual data over visual data when inconsistencies arise, leading to significant performance drops under corrupted text and raising safety concerns. We analyze factors influencing this text bias, including instruction prompts, language model size, text relevance, token order, and the interplay between visual and textual certainty. While certain factors, such as scaling up the language model size, slightly mitigate text bias, others like token order can exacerbate it due to positional biases inherited from language models. To address this issue, we explore supervised fine-tuning with text augmentation and demonstrate its effectiveness in reducing text bias. Additionally, we provide a theoretical analysis suggesting that the blind faith in text phenomenon may stem from an imbalance of pure text and multi-modal data during training. Our findings highlight the need for balanced training and careful consideration of modality interactions in VLMs to enhance their robustness and reliability in handling multi-modal data inconsistencies."
+  },
+  {
+    "title": "Adversarial Tokenization",
+    "url": "http://arxiv.org/abs/2503.02174v1",
+    "arxiv_id": "2503.02174v1",
+    "authors": [
+      "Renato Lui Geh",
+      "Zilei Shao",
+      "Guy Van den Broeck"
+    ],
+    "published": "2025-03-04T01:31:17+00:00",
+    "summary": "Current LLM pipelines account for only one possible tokenization for a given string, ignoring exponentially many alternative tokenizations during training and inference. For example, the standard Llama3 tokenization of penguin is [p,enguin], yet [peng,uin] is another perfectly valid alternative. In this paper, we show that despite LLMs being trained solely on one tokenization, they still retain semantic understanding of other tokenizations, raising questions about their implications in LLM safety. Put succinctly, we answer the following question: can we adversarially tokenize an obviously malicious string to evade safety and alignment restrictions? We show that not only is adversarial tokenization an effective yet previously neglected axis of attack, but it is also competitive against existing state-of-the-art adversarial approaches without changing the text of the harmful request. We empirically validate this exploit across three state-of-the-art LLMs and adversarial datasets, revealing a previously unknown vulnerability in subword models."
+  },
+  {
+    "title": "Four Principles for Physically Interpretable World Models",
+    "url": "http://arxiv.org/abs/2503.02143v1",
+    "arxiv_id": "2503.02143v1",
+    "authors": [
+      "Jordan Peper",
+      "Zhenjiang Mao",
+      "Yuang Geng",
+      "Siyuan Pan",
+      "Ivan Ruchkin"
+    ],
+    "published": "2025-03-04T00:19:32+00:00",
+    "summary": "As autonomous systems are increasingly deployed in open and uncertain settings, there is a growing need for trustworthy world models that can reliably predict future high-dimensional observations. The learned latent representations in world models lack direct mapping to meaningful physical quantities and dynamics, limiting their utility and interpretability in downstream planning, control, and safety verification. In this paper, we argue for a fundamental shift from physically informed to physically interpretable world models - and crystallize four principles that leverage symbolic knowledge to achieve these ends: (1) structuring latent spaces according to the physical intent of variables, (2) learning aligned invariant and equivariant representations of the physical world, (3) adapting training to the varied granularity of supervision signals, and (4) partitioning generative outputs to support scalability and verifiability. We experimentally demonstrate the value of each principle on two benchmarks. This paper opens several intriguing research directions to achieve and capitalize on full physical interpretability in world models."
+  },
+  {
+    "title": "NavG: Risk-Aware Navigation in Crowded Environments Based on Reinforcement Learning with Guidance Points",
+    "url": "http://arxiv.org/abs/2503.02111v1",
+    "arxiv_id": "2503.02111v1",
+    "authors": [
+      "Qianyi Zhang",
+      "Wentao Luo",
+      "Boyi Liu",
+      "Ziyang Zhang",
+      "Yaoyuan Wang",
+      "Jingtai Liu"
+    ],
+    "published": "2025-03-03T22:53:06+00:00",
+    "summary": "Motion planning in navigation systems is highly susceptible to upstream perceptual errors, particularly in human detection and tracking. To mitigate this issue, the concept of guidance points--a novel directional cue within a reinforcement learning-based framework--is introduced. A structured method for identifying guidance points is developed, consisting of obstacle boundary extraction, potential guidance point detection, and redundancy elimination. To integrate guidance points into the navigation pipeline, a perception-to-planning mapping strategy is proposed, unifying guidance points with other perceptual inputs and enabling the RL agent to effectively leverage the complementary relationships among raw laser data, human detection and tracking, and guidance points. Qualitative and quantitative simulations demonstrate that the proposed approach achieves the highest success rate and near-optimal travel times, greatly improving both safety and efficiency. Furthermore, real-world experiments in dynamic corridors and lobbies validate the robot's ability to confidently navigate around obstacles and robustly avoid pedestrians."
+  },
+  {
+    "title": "Uncertainty Representation in a SOTIF-Related Use Case with Dempster-Shafer Theory for LiDAR Sensor-Based Object Detection",
+    "url": "http://arxiv.org/abs/2503.02087v1",
+    "arxiv_id": "2503.02087v1",
+    "authors": [
+      "Milin Patel",
+      "Rolf Jung"
+    ],
+    "published": "2025-03-03T22:13:51+00:00",
+    "summary": "Uncertainty in LiDAR sensor-based object detection arises from environmental variability and sensor performance limitations. Representing these uncertainties is essential for ensuring the Safety of the Intended Functionality (SOTIF), which focuses on preventing hazards in automated driving scenarios. This paper presents a systematic approach to identifying, classifying, and representing uncertainties in LiDAR-based object detection within a SOTIF-related scenario. Dempster-Shafer Theory (DST) is employed to construct a Frame of Discernment (FoD) to represent detection outcomes. Conditional Basic Probability Assignments (BPAs) are applied based on dependencies among identified uncertainty sources. Yager's Rule of Combination is used to resolve conflicting evidence from multiple sources, providing a structured framework to evaluate uncertainties' effects on detection accuracy. The study applies variance-based sensitivity analysis (VBSA) to quantify and prioritize uncertainties, detailing their specific impact on detection performance."
+  },
+  {
+    "title": "CorrA: Leveraging Large Language Models for Dynamic Obstacle Avoidance of Autonomous Vehicles",
+    "url": "http://arxiv.org/abs/2503.02076v1",
+    "arxiv_id": "2503.02076v1",
+    "authors": [
+      "Shanting Wang",
+      "Panagiotis Typaldos",
+      "Andreas A. Malikopoulos"
+    ],
+    "published": "2025-03-03T21:57:28+00:00",
+    "summary": "In this paper, we present Corridor-Agent (CorrA), a framework that integrates large language models (LLMs) with model predictive control (MPC) to address the challenges of dynamic obstacle avoidance in autonomous vehicles. Our approach leverages LLM reasoning ability to generate appropriate parameters for sigmoid-based boundary functions that define safe corridors around obstacles, effectively reducing the state-space of the controlled vehicle. The proposed framework adjusts these boundaries dynamically based on real-time vehicle data that guarantees collision-free trajectories while also ensuring both computational efficiency and trajectory optimality. The problem is formulated as an optimal control problem and solved with differential dynamic programming (DDP) for constrained optimization, and the proposed approach is embedded within an MPC framework. Extensive simulation and real-world experiments demonstrate that the proposed framework achieves superior performance in maintaining safety and efficiency in complex, dynamic environments compared to a baseline MPC approach."
+  },
+  {
+    "title": "Comparative Analysis of OpenAI GPT-4o and DeepSeek R1 for Scientific Text Categorization Using Prompt Engineering",
+    "url": "http://arxiv.org/abs/2503.02032v1",
+    "arxiv_id": "2503.02032v1",
+    "authors": [
+      "Aniruddha Maiti",
+      "Samuel Adewumi",
+      "Temesgen Alemayehu Tikure",
+      "Zichun Wang",
+      "Niladri Sengupta",
+      "Anastasiia Sukhanova",
+      "Ananya Jana"
+    ],
+    "published": "2025-03-03T20:09:35+00:00",
+    "summary": "This study examines how large language models categorize sentences from scientific papers using prompt engineering. We use two advanced web-based models, GPT-4o (by OpenAI) and DeepSeek R1, to classify sentences into predefined relationship categories. DeepSeek R1 has been tested on benchmark datasets in its technical report. However, its performance in scientific text categorization remains unexplored. To address this gap, we introduce a new evaluation method designed specifically for this task. We also compile a dataset of cleaned scientific papers from diverse domains. This dataset provides a platform for comparing the two models. Using this dataset, we analyze their effectiveness and consistency in categorization."
+  },
+  {
+    "title": "One ruler to measure them all: Benchmarking multilingual long-context language models",
+    "url": "http://arxiv.org/abs/2503.01996v1",
+    "arxiv_id": "2503.01996v1",
+    "authors": [
+      "Yekyung Kim",
+      "Jenna Russell",
+      "Marzena Karpinska",
+      "Mohit Iyyer"
+    ],
+    "published": "2025-03-03T19:12:48+00:00",
+    "summary": "We present ONERULER, a multilingual benchmark designed to evaluate long-context language models across 26 languages. ONERULER adapts the English-only RULER benchmark (Hsieh et al., 2024) by including seven synthetic tasks that test both retrieval and aggregation, including new variations of the \"needle-in-a-haystack\" task that allow for the possibility of a nonexistent needle. We create ONERULER through a two-step process, first writing English instructions for each task and then collaborating with native speakers to translate them into 25 additional languages. Experiments with both open-weight and closed LLMs reveal a widening performance gap between low- and high-resource languages as context length increases from 8K to 128K tokens. Surprisingly, English is not the top-performing language on long-context tasks (ranked 6th out of 26), with Polish emerging as the top language. Our experiments also show that many LLMs (particularly OpenAI's o3-mini-high) incorrectly predict the absence of an answer, even in high-resource languages. Finally, in cross-lingual scenarios where instructions and context appear in different languages, performance can fluctuate by up to 20% depending on the instruction language. We hope the release of ONERULER will facilitate future research into improving multilingual and cross-lingual long-context training pipelines."
+  },
+  {
+    "title": "Analyzing the Safety of Japanese Large Language Models in Stereotype-Triggering Prompts",
+    "url": "http://arxiv.org/abs/2503.01947v1",
+    "arxiv_id": "2503.01947v1",
+    "authors": [
+      "Akito Nakanishi",
+      "Yukie Sano",
+      "Geng Liu",
+      "Francesco Pierri"
+    ],
+    "published": "2025-03-03T19:00:00+00:00",
+    "summary": "In recent years, Large Language Models (LLMs) have attracted growing interest for their significant potential, though concerns have rapidly emerged regarding unsafe behaviors stemming from inherent stereotypes and biases.Most research on stereotypes in LLMs has primarily relied on indirect evaluation setups, in which models are prompted to select between pairs of sentences associated with particular social groups. Recently, direct evaluation methods have emerged, examining open-ended model responses to overcome limitations of previous approaches, such as annotator biases.Most existing studies have focused on English-centric LLMs, whereas research on non-English models--particularly Japanese--remains sparse, despite the growing development and adoption of these models.This study examines the safety of Japanese LLMs when responding to stereotype-triggering prompts in direct setups.We constructed 3,612 prompts by combining 301 social group terms--categorized by age, gender, and other attributes--with 12 stereotype-inducing templates in Japanese.Responses were analyzed from three foundational models trained respectively on Japanese, English, and Chinese language.Our findings reveal that LLM-jp, a Japanese native model, exhibits the lowest refusal rate and is more likely to generate toxic and negative responses compared to other models.Additionally, prompt format significantly influence the output of all models, and the generated responses include exaggerated reactions toward specific social groups, varying across models.These findings underscore the insufficient ethical safety mechanisms in Japanese LLMs and demonstrate that even high-accuracy models can produce biased outputs when processing Japanese-language prompts.We advocate for improving safety mechanisms and bias mitigation strategies in Japanese LLMs, contributing to ongoing discussions on AI ethics beyond linguistic boundaries."
+  },
+  {
+    "title": "Jailbreaking Safeguarded Text-to-Image Models via Large Language Models",
+    "url": "http://arxiv.org/abs/2503.01839v1",
+    "arxiv_id": "2503.01839v1",
+    "authors": [
+      "Zhengyuan Jiang",
+      "Yuepeng Hu",
+      "Yuchen Yang",
+      "Yinzhi Cao",
+      "Neil Zhenqiang Gong"
+    ],
+    "published": "2025-03-03T18:58:46+00:00",
+    "summary": "Text-to-Image models may generate harmful content, such as pornographic images, particularly when unsafe prompts are submitted. To address this issue, safety filters are often added on top of text-to-image models, or the models themselves are aligned to reduce harmful outputs. However, these defenses remain vulnerable when an attacker strategically designs adversarial prompts to bypass these safety guardrails. In this work, we propose PromptTune, a method to jailbreak text-to-image models with safety guardrails using a fine-tuned large language model. Unlike other query-based jailbreak attacks that require repeated queries to the target model, our attack generates adversarial prompts efficiently after fine-tuning our AttackLLM. We evaluate our method on three datasets of unsafe prompts and against five safety guardrails. Our results demonstrate that our approach effectively bypasses safety guardrails, outperforms existing no-box attacks, and also facilitates other query-based attacks."
+  },
+  {
+    "title": "$\\texttt{SEM-CTRL}$: Semantically Controlled Decoding",
+    "url": "http://arxiv.org/abs/2503.01804v1",
+    "arxiv_id": "2503.01804v1",
+    "authors": [
+      "Mohammad Albinhassan",
+      "Pranava Madhyastha",
+      "Alessandra Russo"
+    ],
+    "published": "2025-03-03T18:33:46+00:00",
+    "summary": "Ensuring both syntactic and semantic correctness in Large Language Model (LLM) outputs remains a significant challenge, despite being critical for real-world deployment. In this paper, we introduce $\\texttt{SEM-CTRL}$, a unified approach that enforces rich context-sensitive constraints and task- and instance-specific semantics directly on an LLM decoder. Our approach integrates token-level MCTS, which is guided by specific syntactic and semantic constraints. The constraints over the desired outputs are expressed using Answer Set Grammars -- a logic-based formalism that generalizes context-sensitive grammars while incorporating background knowledge to represent task-specific semantics. We show that our approach guarantees correct completions for any off-the-shelf LLM without the need for fine-tuning. We evaluate $\\texttt{SEM-CTRL}$ on a range of tasks, including synthetic grammar synthesis, combinatorial reasoning, and planning. Our results demonstrate that $\\texttt{SEM-CTRL}$ allows small pre-trained LLMs to efficiently outperform larger variants and state-of-the-art reasoning models (e.g., o1-preview) while simultaneously guaranteeing solution correctness."
+  },
+  {
+    "title": "Visual-RFT: Visual Reinforcement Fine-Tuning",
+    "url": "http://arxiv.org/abs/2503.01785v1",
+    "arxiv_id": "2503.01785v1",
+    "authors": [
+      "Ziyu Liu",
+      "Zeyi Sun",
+      "Yuhang Zang",
+      "Xiaoyi Dong",
+      "Yuhang Cao",
+      "Haodong Duan",
+      "Dahua Lin",
+      "Jiaqi Wang"
+    ],
+    "published": "2025-03-03T18:16:32+00:00",
+    "summary": "Reinforcement Fine-Tuning (RFT) in Large Reasoning Models like OpenAI o1 learns from feedback on its answers, which is especially useful in applications when fine-tuning data is scarce. Recent open-source work like DeepSeek-R1 demonstrates that reinforcement learning with verifiable reward is one key direction in reproducing o1. While the R1-style model has demonstrated success in language models, its application in multi-modal domains remains under-explored. This work introduces Visual Reinforcement Fine-Tuning (Visual-RFT), which further extends the application areas of RFT on visual tasks. Specifically, Visual-RFT first uses Large Vision-Language Models (LVLMs) to generate multiple responses containing reasoning tokens and final answers for each input, and then uses our proposed visual perception verifiable reward functions to update the model via the policy optimization algorithm such as Group Relative Policy Optimization (GRPO). We design different verifiable reward functions for different perception tasks, such as the Intersection over Union (IoU) reward for object detection. Experimental results on fine-grained image classification, few-shot object detection, reasoning grounding, as well as open-vocabulary object detection benchmarks show the competitive performance and advanced generalization ability of Visual-RFT compared with Supervised Fine-tuning (SFT). For example, Visual-RFT improves accuracy by $24.3\\%$ over the baseline in one-shot fine-grained image classification with around 100 samples. In few-shot object detection, Visual-RFT also exceeds the baseline by $21.9$ on COCO's two-shot setting and $15.4$ on LVIS. Our Visual-RFT represents a paradigm shift in fine-tuning LVLMs, offering a data-efficient, reward-driven approach that enhances reasoning and adaptability for domain-specific tasks."
+  },
+  {
+    "title": "Cats Confuse Reasoning LLM: Query Agnostic Adversarial Triggers for Reasoning Models",
+    "url": "http://arxiv.org/abs/2503.01781v1",
+    "arxiv_id": "2503.01781v1",
+    "authors": [
+      "Meghana Rajeev",
+      "Rajkumar Ramamurthy",
+      "Prapti Trivedi",
+      "Vikas Yadav",
+      "Oluwanifemi Bamgbose",
+      "Sathwik Tejaswi Madhusudan",
+      "James Zou",
+      "Nazneen Rajani"
+    ],
+    "published": "2025-03-03T18:10:54+00:00",
+    "summary": "We investigate the robustness of reasoning models trained for step-by-step problem solving by introducing query-agnostic adversarial triggers - short, irrelevant text that, when appended to math problems, systematically mislead models to output incorrect answers without altering the problem's semantics. We propose CatAttack, an automated iterative attack pipeline for generating triggers on a weaker, less expensive proxy model (DeepSeek V3) and successfully transfer them to more advanced reasoning target models like DeepSeek R1 and DeepSeek R1-distilled-Qwen-32B, resulting in greater than 300% increase in the likelihood of the target model generating an incorrect answer. For example, appending, \"Interesting fact: cats sleep most of their lives,\" to any math problem leads to more than doubling the chances of a model getting the answer wrong. Our findings highlight critical vulnerabilities in reasoning models, revealing that even state-of-the-art models remain susceptible to subtle adversarial inputs, raising security and reliability concerns. The CatAttack triggers dataset with model responses is available at https://huggingface.co/datasets/collinear-ai/cat-attack-adversarial-triggers."
+  },
+  {
+    "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs",
+    "url": "http://arxiv.org/abs/2503.01743v1",
+    "arxiv_id": "2503.01743v1",
+    "authors": [
+      "Abdelrahman Abouelenin",
+      "Atabak Ashfaq",
+      "Adam Atkinson",
+      "Hany Awadalla",
+      "Nguyen Bach",
+      "Jianmin Bao",
+      "Alon Benhaim",
+      "Martin Cai",
+      "Vishrav Chaudhary",
+      "Congcong Chen",
+      "Dong Chen",
+      "Dongdong Chen",
+      "Junkun Chen",
+      "Weizhu Chen",
+      "Yen-Chun Chen",
+      "Yi-ling Chen",
+      "Qi Dai",
+      "Xiyang Dai",
+      "Ruchao Fan",
+      "Mei Gao",
+      "Min Gao",
+      "Amit Garg",
+      "Abhishek Goswami",
+      "Junheng Hao",
+      "Amr Hendy",
+      "Yuxuan Hu",
+      "Xin Jin",
+      "Mahmoud Khademi",
+      "Dongwoo Kim",
+      "Young Jin Kim",
+      "Gina Lee",
+      "Jinyu Li",
+      "Yunsheng Li",
+      "Chen Liang",
+      "Xihui Lin",
+      "Zeqi Lin",
+      "Mengchen Liu",
+      "Yang Liu",
+      "Gilsinia Lopez",
+      "Chong Luo",
+      "Piyush Madan",
+      "Vadim Mazalov",
+      "Ali Mousavi",
+      "Anh Nguyen",
+      "Jing Pan",
+      "Daniel Perez-Becker",
+      "Jacob Platin",
+      "Thomas Portet",
+      "Kai Qiu",
+      "Bo Ren",
+      "Liliang Ren",
+      "Sambuddha Roy",
+      "Ning Shang",
+      "Yelong Shen",
+      "Saksham Singhal",
+      "Subhojit Som",
+      "Xia Song",
+      "Tetyana Sych",
+      "Praneetha Vaddamanu",
+      "Shuohang Wang",
+      "Yiming Wang",
+      "Zhenghao Wang",
+      "Haibin Wu",
+      "Haoran Xu",
+      "Weijian Xu",
+      "Yifan Yang",
+      "Ziyi Yang",
+      "Donghan Yu",
+      "Ishmam Zabir",
+      "Jianwen Zhang",
+      "Li Lyna Zhang",
+      "Yunan Zhang",
+      "Xiren Zhou"
+    ],
+    "published": "2025-03-03T17:05:52+00:00",
+    "summary": "We introduce Phi-4-Mini and Phi-4-Multimodal, compact yet highly capable language and multimodal models. Phi-4-Mini is a 3.8-billion-parameter language model trained on high-quality web and synthetic data, significantly outperforming recent open-source models of similar size and matching the performance of models twice its size on math and coding tasks requiring complex reasoning. This achievement is driven by a carefully curated synthetic data recipe emphasizing high-quality math and coding datasets. Compared to its predecessor, Phi-3.5-Mini, Phi-4-Mini features an expanded vocabulary size of 200K tokens to better support multilingual applications, as well as group query attention for more efficient long-sequence generation. Phi-4-Multimodal is a multimodal model that integrates text, vision, and speech/audio input modalities into a single model. Its novel modality extension approach leverages LoRA adapters and modality-specific routers to allow multiple inference modes combining various modalities without interference. For example, it now ranks first in the OpenASR leaderboard to date, although the LoRA component of the speech/audio modality has just 460 million parameters. Phi-4-Multimodal supports scenarios involving (vision + language), (vision + speech), and (speech/audio) inputs, outperforming larger vision-language and speech-language models on a wide range of tasks. Additionally, we experiment to further train Phi-4-Mini to enhance its reasoning capabilities. Despite its compact 3.8-billion-parameter size, this experimental version achieves reasoning performance on par with or surpassing significantly larger models, including DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-Llama-8B."
+  },
+  {
+    "title": "Building Safe GenAI Applications: An End-to-End Overview of Red Teaming for Large Language Models",
+    "url": "http://arxiv.org/abs/2503.01742v1",
+    "arxiv_id": "2503.01742v1",
+    "authors": [
+      "Alberto Purpura",
+      "Sahil Wadhwa",
+      "Jesse Zymet",
+      "Akshay Gupta",
+      "Andy Luo",
+      "Melissa Kazemi Rad",
+      "Swapnil Shinde",
+      "Mohammad Shahed Sorower"
+    ],
+    "published": "2025-03-03T17:04:22+00:00",
+    "summary": "The rapid growth of Large Language Models (LLMs) presents significant privacy, security, and ethical concerns. While much research has proposed methods for defending LLM systems against misuse by malicious actors, researchers have recently complemented these efforts with an offensive approach that involves red teaming, i.e., proactively attacking LLMs with the purpose of identifying their vulnerabilities. This paper provides a concise and practical overview of the LLM red teaming literature, structured so as to describe a multi-component system end-to-end. To motivate red teaming we survey the initial safety needs of some high-profile LLMs, and then dive into the different components of a red teaming system as well as software packages for implementing them. We cover various attack methods, strategies for attack-success evaluation, metrics for assessing experiment outcomes, as well as a host of other considerations. Our survey will be useful for any reader who wants to rapidly obtain a grasp of the major red teaming concepts for their own use in practical applications."
+  },
+  {
+    "title": "CoT-VLM4Tar: Chain-of-Thought Guided Vision-Language Models for Traffic Anomaly Resolution",
+    "url": "http://arxiv.org/abs/2503.01632v1",
+    "arxiv_id": "2503.01632v1",
+    "authors": [
+      "Tianchi Ren",
+      "Haibo Hu",
+      "Jiacheng Zuo",
+      "Xinhong Chen",
+      "Jianping Wang",
+      "Chun Jason Xue",
+      "Jen-Ming Wu",
+      "Nan Guan"
+    ],
+    "published": "2025-03-03T15:07:25+00:00",
+    "summary": "With the acceleration of urbanization, modern urban traffic systems are becoming increasingly complex, leading to frequent traffic anomalies. These anomalies encompass not only common traffic jams but also more challenging issues such as phantom traffic jams, intersection deadlocks, and accident liability analysis, which severely impact traffic flow, vehicular safety, and overall transportation efficiency. Currently, existing solutions primarily rely on manual intervention by traffic police or artificial intelligence-based detection systems. However, these methods often suffer from response delays and inconsistent management due to inadequate resources, while AI detection systems, despite enhancing efficiency to some extent, still struggle to handle complex traffic anomalies in a real-time and precise manner. To address these issues, we propose CoT-VLM4Tar: (Chain of Thought Visual-Language Model for Traffic Anomaly Resolution), this innovative approach introduces a new chain-of-thought to guide the VLM in analyzing, reasoning, and generating solutions for traffic anomalies with greater reasonable and effective solution, and to evaluate the performance and effectiveness of our method, we developed a closed-loop testing framework based on the CARLA simulator. Furthermore, to ensure seamless integration of the solutions generated by the VLM with the CARLA simulator, we implement an itegration module that converts these solutions into executable commands. Our results demonstrate the effectiveness of VLM in the resolution of real-time traffic anomalies, providing a proof-of-concept for its integration into autonomous traffic management systems."
+  },
+  {
+    "title": "Llama-3.1-Sherkala-8B-Chat: An Open Large Language Model for Kazakh",
+    "url": "http://arxiv.org/abs/2503.01493v1",
+    "arxiv_id": "2503.01493v1",
+    "authors": [
+      "Fajri Koto",
+      "Rituraj Joshi",
+      "Nurdaulet Mukhituly",
+      "Yuxia Wang",
+      "Zhuohan Xie",
+      "Rahul Pal",
+      "Daniil Orel",
+      "Parvez Mullah",
+      "Diana Turmakhan",
+      "Maiya Goloburda",
+      "Mohammed Kamran",
+      "Samujjwal Ghosh",
+      "Bokang Jia",
+      "Jonibek Mansurov",
+      "Mukhammed Togmanov",
+      "Debopriyo Banerjee",
+      "Nurkhan Laiyk",
+      "Akhmed Sakip",
+      "Xudong Han",
+      "Ekaterina Kochmar",
+      "Alham Fikri Aji",
+      "Aaryamonvikram Singh",
+      "Alok Anil Jadhav",
+      "Satheesh Katipomu",
+      "Samta Kamboj",
+      "Monojit Choudhury",
+      "Gurpreet Gosal",
+      "Gokul Ramakrishnan",
+      "Biswajit Mishra",
+      "Sarath Chandran",
+      "Avraham Sheinin",
+      "Natalia Vassilieva",
+      "Neha Sengupta",
+      "Larry Murray",
+      "Preslav Nakov"
+    ],
+    "published": "2025-03-03T13:05:48+00:00",
+    "summary": "Llama-3.1-Sherkala-8B-Chat, or Sherkala-Chat (8B) for short, is a state-of-the-art instruction-tuned open generative large language model (LLM) designed for Kazakh. Sherkala-Chat (8B) aims to enhance the inclusivity of LLM advancements for Kazakh speakers. Adapted from the LLaMA-3.1-8B model, Sherkala-Chat (8B) is trained on 45.3B tokens across Kazakh, English, Russian, and Turkish. With 8 billion parameters, it demonstrates strong knowledge and reasoning abilities in Kazakh, significantly outperforming existing open Kazakh and multilingual models of similar scale while achieving competitive performance in English. We release Sherkala-Chat (8B) as an open-weight instruction-tuned model and provide a detailed overview of its training, fine-tuning, safety alignment, and evaluation, aiming to advance research and support diverse real-world applications."
+  },
+  {
+    "title": "Towards Widening The Distillation Bottleneck for Reasoning Models",
+    "url": "http://arxiv.org/abs/2503.01461v1",
+    "arxiv_id": "2503.01461v1",
+    "authors": [
+      "Huifeng Yin",
+      "Yu Zhao",
+      "Minghao Wu",
+      "Xuanfan Ni",
+      "Bo Zeng",
+      "Hao Wang",
+      "Tianqi Shi",
+      "Liangying Shao",
+      "Chenyang Lyu",
+      "Longyue Wang",
+      "Weihua Luo",
+      "Kaifu Zhang"
+    ],
+    "published": "2025-03-03T12:17:36+00:00",
+    "summary": "Large Reasoning Models(LRMs) such as OpenAI o1 and DeepSeek-R1 have shown remarkable reasoning capabilities by scaling test-time compute and generating long Chain-of-Thought(CoT). Distillation--post-training on LRMs-generated data--is a straightforward yet effective method to enhance the reasoning abilities of smaller models, but faces a critical bottleneck: we found that distilled long CoT data poses learning difficulty for small models and leads to the inheritance of biases (i.e. over-thinking) when using Supervised Fine-tuning(SFT) and Reinforcement Learning(RL) methods. To alleviate this bottleneck, we propose constructing tree-based CoT data from scratch via Monte Carlo Tree Search(MCTS). We then exploit a set of CoT-aware approaches, including Thoughts Length Balance, Fine-grained DPO, and Joint Post-training Objective, to enhance SFT and RL on the construted data."
+  },
+  {
+    "title": "Jailbreaking Generative AI: Empowering Novices to Conduct Phishing Attacks",
+    "url": "http://arxiv.org/abs/2503.01395v1",
+    "arxiv_id": "2503.01395v1",
+    "authors": [
+      "Rina Mishra",
+      "Gaurav Varshney",
+      "Shreya Singh"
+    ],
+    "published": "2025-03-03T10:51:10+00:00",
+    "summary": "The rapid advancements in generative AI models, such as ChatGPT, have introduced both significant benefits and new risks within the cybersecurity landscape. This paper investigates the potential misuse of the latest AI model, ChatGPT-4o Mini, in facilitating social engineering attacks, with a particular focus on phishing, one of the most pressing cybersecurity threats today. While existing literature primarily addresses the technical aspects, such as jailbreaking techniques, none have fully explored the free and straightforward execution of a comprehensive phishing campaign by novice users using ChatGPT-4o Mini. In this study, we examine the vulnerabilities of AI-driven chatbot services in 2025, specifically how methods like jailbreaking and reverse psychology can bypass ethical safeguards, allowing ChatGPT to generate phishing content, suggest hacking tools, and assist in carrying out phishing attacks. Our findings underscore the alarming ease with which even inexperienced users can execute sophisticated phishing campaigns, emphasizing the urgent need for stronger cybersecurity measures and heightened user awareness in the age of AI."
+  },
+  {
+    "title": "Victim-Centred Abuse Investigations and Defenses for Social Media Platforms",
+    "url": "http://arxiv.org/abs/2503.01327v1",
+    "arxiv_id": "2503.01327v1",
+    "authors": [
+      "Zaid Hakami",
+      "Ashfaq Ali Shafin",
+      "Peter J. Clarke",
+      "Niki Pissinou",
+      "Bogdan Carbunar"
+    ],
+    "published": "2025-03-03T09:08:20+00:00",
+    "summary": "Online abuse, a persistent aspect of social platform interactions, impacts user well-being and exposes flaws in platform designs that include insufficient detection efforts and inadequate victim protection measures. Ensuring safety in platform interactions requires the integration of victim perspectives in the design of abuse detection and response systems. In this paper, we conduct surveys (n = 230) and semi-structured interviews (n = 15) with students at a minority-serving institution in the US, to explore their experiences with abuse on a variety of social platforms, their defense strategies, and their recommendations for social platforms to improve abuse responses. We build on study findings to propose design requirements for abuse defense systems and discuss the role of privacy, anonymity, and abuse attribution requirements in their implementation. We introduce ARI, a blueprint for a unified, transparent, and personalized abuse response system for social platforms that sustainably detects abuse by leveraging the expertise of platform users, incentivized with proceeds obtained from abusers."
+  },
+  {
+    "title": "ABFS: Natural Robustness Testing for LLM-based NLP Software",
+    "url": "http://arxiv.org/abs/2503.01319v1",
+    "arxiv_id": "2503.01319v1",
+    "authors": [
+      "Mingxuan Xiao",
+      "Yan Xiao",
+      "Shunhui Ji",
+      "Yunhe Li",
+      "Lei Xue",
+      "Pengcheng Zhang"
+    ],
+    "published": "2025-03-03T09:02:06+00:00",
+    "summary": "Owing to the exceptional performance of Large Language Models (LLMs) in Natural Language Processing (NLP) tasks, LLM-based NLP software has rapidly gained traction across various domains, such as financial analysis and content moderation. However, these applications frequently exhibit robustness deficiencies, where slight perturbations in input (prompt+example) may lead to erroneous outputs. Current robustness testing methods face two main limitations: (1) low testing effectiveness, limiting the applicability of LLM-based software in safety-critical scenarios, and (2) insufficient naturalness of test cases, reducing the practical value of testing outcomes. To address these issues, this paper proposes ABFS, a straightforward yet effective automated testing method that, for the first time, treats the input prompts and examples as a unified whole for robustness testing. Specifically, ABFS formulates the testing process as a combinatorial optimization problem, employing Best-First Search to identify successful test cases within the perturbation space and designing a novel Adaptive control strategy to enhance test case naturalness. We evaluate the robustness testing performance of ABFS on three datasets across five threat models. On Llama2-13b, the traditional StressTest achieves only a 13.273% success rate, while ABFS attains a success rate of 98.064%, supporting a more comprehensive robustness assessment before software deployment. Compared to baseline methods, ABFS introduces fewer modifications to the original input and consistently generates test cases with superior naturalness. Furthermore, test cases generated by ABFS exhibit stronger transferability and higher testing efficiency, significantly reducing testing costs."
+  },
+  {
+    "title": "Interactive Gadolinium-Free MRI Synthesis: A Transformer with Localization Prompt Learning",
+    "url": "http://arxiv.org/abs/2503.01265v1",
+    "arxiv_id": "2503.01265v1",
+    "authors": [
+      "Linhao Li",
+      "Changhui Su",
+      "Yu Guo",
+      "Huimao Zhang",
+      "Dong Liang",
+      "Kun Shang"
+    ],
+    "published": "2025-03-03T07:44:28+00:00",
+    "summary": "Contrast-enhanced magnetic resonance imaging (CE-MRI) is crucial for tumor detection and diagnosis, but the use of gadolinium-based contrast agents (GBCAs) in clinical settings raises safety concerns due to potential health risks. To circumvent these issues while preserving diagnostic accuracy, we propose a novel Transformer with Localization Prompts (TLP) framework for synthesizing CE-MRI from non-contrast MR images. Our architecture introduces three key innovations: a hierarchical backbone that uses efficient Transformer to process multi-scale features; a multi-stage fusion system consisting of Local and Global Fusion modules that hierarchically integrate complementary information via spatial attention operations and cross-attention mechanisms, respectively; and a Fuzzy Prompt Generation (FPG) module that enhances the TLP model's generalization by emulating radiologists' manual annotation through stochastic feature perturbation. The framework uniquely enables interactive clinical integration by allowing radiologists to input diagnostic prompts during inference, synergizing artificial intelligence with medical expertise. This research establishes a new paradigm for contrast-free MRI synthesis while addressing critical clinical needs for safer diagnostic procedures. Codes are available at https://github.com/ChanghuiSu/TLP."
+  },
+  {
+    "title": "Enhancing Network Security Management in Water Systems using FM-based Attack Attribution",
+    "url": "http://arxiv.org/abs/2503.01229v1",
+    "arxiv_id": "2503.01229v1",
+    "authors": [
+      "Aleksandar Avdalovic",
+      "Joseph Khoury",
+      "Ahmad Taha",
+      "Elias Bou-Harb"
+    ],
+    "published": "2025-03-03T06:52:00+00:00",
+    "summary": "Water systems are vital components of modern infrastructure, yet they are increasingly susceptible to sophisticated cyber attacks with potentially dire consequences on public health and safety. While state-of-the-art machine learning techniques effectively detect anomalies, contemporary model-agnostic attack attribution methods using LIME, SHAP, and LEMNA are deemed impractical for large-scale, interdependent water systems. This is due to the intricate interconnectivity and dynamic interactions that define these complex environments. Such methods primarily emphasize individual feature importance while falling short of addressing the crucial sensor-actuator interactions in water systems, which limits their effectiveness in identifying root cause attacks. To this end, we propose a novel model-agnostic Factorization Machines (FM)-based approach that capitalizes on water system sensor-actuator interactions to provide granular explanations and attributions for cyber attacks. For instance, an anomaly in an actuator pump activity can be attributed to a top root cause attack candidates, a list of water pressure sensors, which is derived from the underlying linear and quadratic effects captured by our approach. We validate our method using two real-world water system specific datasets, SWaT and WADI, demonstrating its superior performance over traditional attribution methods. In multi-feature cyber attack scenarios involving intricate sensor-actuator interactions, our FM-based attack attribution method effectively ranks attack root causes, achieving approximately 20% average improvement over SHAP and LEMNA."
+  },
+  {
+    "title": "STGAN: Spatial-temporal Graph Autoregression Network for Pavement Distress Deterioration Prediction",
+    "url": "http://arxiv.org/abs/2503.01152v1",
+    "arxiv_id": "2503.01152v1",
+    "authors": [
+      "Shilin Tong",
+      "Difei Wu",
+      "Xiaona Liu",
+      "Le Zheng",
+      "Yuchuan Du",
+      "Difan Zou"
+    ],
+    "published": "2025-03-03T03:59:34+00:00",
+    "summary": "Pavement distress significantly compromises road integrity and poses risks to drivers. Accurate prediction of pavement distress deterioration is essential for effective road management, cost reduction in maintenance, and improvement of traffic safety. However, real-world data on pavement distress is usually collected irregularly, resulting in uneven, asynchronous, and sparse spatial-temporal datasets. This hinders the application of existing spatial-temporal models, such as DCRNN, since they are only applicable to regularly and synchronously collected data. To overcome these challenges, we propose the Spatial-Temporal Graph Autoregression Network (STGAN), a novel graph neural network model designed for accurately predicting irregular pavement distress deterioration using complex spatial-temporal data. Specifically, STGAN integrates the temporal domain into the spatial domain, creating a larger graph where nodes are represented by spatial-temporal tuples and edges are formed based on a similarity-based connection mechanism. Furthermore, based on the constructed spatiotemporal graph, we formulate pavement distress deterioration prediction as a graph autoregression task, i.e., the graph size increases incrementally and the prediction is performed sequentially. This is accomplished by a novel spatial-temporal attention mechanism deployed by STGAN. Utilizing the ConTrack dataset, which contains pavement distress records collected from different locations in Shanghai, we demonstrate the superior performance of STGAN in capturing spatial-temporal correlations and addressing the aforementioned challenges. Experimental results further show that STGAN outperforms baseline models, and ablation studies confirm the effectiveness of its novel modules. Our findings contribute to promoting proactive road maintenance decision-making and ultimately enhancing road safety and resilience."
+  },
+  {
+    "title": "Beyond Visibility Limits: A DRL-Based Navigation Strategy for Unexpected Obstacles",
+    "url": "http://arxiv.org/abs/2503.01127v1",
+    "arxiv_id": "2503.01127v1",
+    "authors": [
+      "Mingao Tan",
+      "Shanze Wang",
+      "Biao Huang",
+      "Zhibo Yang",
+      "Rongfei Chen",
+      "Xiaoyu Shen",
+      "Wei Zhang"
+    ],
+    "published": "2025-03-03T03:14:08+00:00",
+    "summary": "Distance-based reward mechanisms in deep reinforcement learning (DRL) navigation systems suffer from critical safety limitations in dynamic environments, frequently resulting in collisions when visibility is restricted. We propose DRL-NSUO, a novel navigation strategy for unexpected obstacles that leverages the rate of change in LiDAR data as a dynamic environmental perception element. Our approach incorporates a composite reward function with environmental change rate constraints and dynamically adjusted weights through curriculum learning, enabling robots to autonomously balance between path efficiency and safety maximization. We enhance sensitivity to nearby obstacles by implementing short-range feature preprocessing of LiDAR data. Experimental results demonstrate that this method significantly improves both robot and pedestrian safety in complex scenarios compared to traditional DRL-based methods. When evaluated on the BARN navigation dataset, our method achieved superior performance with success rates of 94.0% at 0.5 m/s and 91.0% at 1.0 m/s, outperforming conservative obstacle expansion strategies. These results validate DRL-NSUO's enhanced practicality and safety for human-robot collaborative environments, including intelligent logistics applications."
+  },
+  {
+    "title": "KineSoft: Learning Proprioceptive Manipulation Policies with Soft Robot Hands",
+    "url": "http://arxiv.org/abs/2503.01078v1",
+    "arxiv_id": "2503.01078v1",
+    "authors": [
+      "Uksang Yoo",
+      "Jonathan Francis",
+      "Jean Oh",
+      "Jeffrey Ichnowski"
+    ],
+    "published": "2025-03-03T00:48:08+00:00",
+    "summary": "Underactuated soft robot hands offer inherent safety and adaptability advantages over rigid systems, but developing dexterous manipulation skills remains challenging. While imitation learning shows promise for complex manipulation tasks, traditional approaches struggle with soft systems due to demonstration collection challenges and ineffective state representations. We present KineSoft, a framework enabling direct kinesthetic teaching of soft robotic hands by leveraging their natural compliance as a skill teaching advantage rather than only as a control challenge. KineSoft makes two key contributions: (1) an internal strain sensing array providing occlusion-free proprioceptive shape estimation, and (2) a shape-based imitation learning framework that uses proprioceptive feedback with a low-level shape-conditioned controller to ground diffusion-based policies. This enables human demonstrators to physically guide the robot while the system learns to associate proprioceptive patterns with successful manipulation strategies. We validate KineSoft through physical experiments, demonstrating superior shape estimation accuracy compared to baseline methods, precise shape-trajectory tracking, and higher task success rates compared to baseline imitation learning approaches."
+  },
+  {
+    "title": "Real-World Deployment and Assessment of a Multi-Agent Reinforcement Learning-Based Variable Speed Limit Control System",
+    "url": "http://arxiv.org/abs/2503.01017v1",
+    "arxiv_id": "2503.01017v1",
+    "authors": [
+      "Yuhang Zhang",
+      "Zhiyao Zhang",
+      "Junyi Ji",
+      "Marcos Qui\u00f1ones-Grueiro",
+      "William Barbour",
+      "Derek Gloudemans",
+      "Gergely Zach\u00e1r",
+      "Clay Weston",
+      "Gautam Biswas",
+      "Daniel B. Work"
+    ],
+    "published": "2025-03-02T21:09:16+00:00",
+    "summary": "This article presents the first field deployment of a multi-agent reinforcement learning (MARL) based variable speed limit (VSL) control system on Interstate 24 (I-24) near Nashville, Tennessee. We design and demonstrate a full pipeline from training MARL agents in a traffic simulator to a field deployment on a 17-mile segment of I-24 encompassing 67 VSL controllers. The system was launched on March 8th, 2024, and has made approximately 35 million decisions on 28 million trips in six months of operation. We apply an invalid action masking mechanism and several safety guards to ensure real-world constraints. The MARL-based implementation operates up to 98% of the time, with the safety guards overriding the MARL decisions for the remaining time. We evaluate the performance of the MARL-based algorithm in comparison to a previously deployed non-RL VSL benchmark algorithm on I-24. Results show that the MARL-based VSL control system achieves a superior performance. The accuracy of correctly warning drivers about slowing traffic ahead is improved by 14% and the response delay to non-recurrent congestion is reduced by 75%. The preliminary data shows that the VSL control system has reduced the crash rate by 26% and the secondary crash rate by 50%. We open-sourced the deployed MARL-based VSL algorithm at https://github.com/Lab-Work/marl-vsl-controller."
+  },
+  {
+    "title": "HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion",
+    "url": "http://arxiv.org/abs/2503.00923v1",
+    "arxiv_id": "2503.00923v1",
+    "authors": [
+      "Sixu Lin",
+      "Guanren Qiao",
+      "Yunxin Tai",
+      "Ang Li",
+      "Kui Jia",
+      "Guiliang Liu"
+    ],
+    "published": "2025-03-02T14:55:22+00:00",
+    "summary": "Humanoid robots, capable of assuming human roles in various workplaces, have become essential to the advancement of embodied intelligence. However, as robots with complex physical structures, learning a control model that can operate robustly across diverse environments remains inherently challenging, particularly under the discrepancies between training and deployment environments. In this study, we propose HWC-Loco, a robust whole-body control algorithm tailored for humanoid locomotion tasks. By reformulating policy learning as a robust optimization problem, HWC-Loco explicitly learns to recover from safety-critical scenarios. While prioritizing safety guarantees, overly conservative behavior can compromise the robot's ability to complete the given tasks. To tackle this challenge, HWC-Loco leverages a hierarchical policy for robust control. This policy can dynamically resolve the trade-off between goal-tracking and safety recovery, guided by human behavior norms and dynamic constraints. To evaluate the performance of HWC-Loco, we conduct extensive comparisons against state-of-the-art humanoid control models, demonstrating HWC-Loco's superior performance across diverse terrains, robot structures, and locomotion tasks under both simulated and real-world environments."
+  },
+  {
+    "title": "Unnatural Languages Are Not Bugs but Features for LLMs",
+    "url": "http://arxiv.org/abs/2503.01926v1",
+    "arxiv_id": "2503.01926v1",
+    "authors": [
+      "Keyu Duan",
+      "Yiran Zhao",
+      "Zhili Feng",
+      "Jinjie Ni",
+      "Tianyu Pang",
+      "Qian Liu",
+      "Tianle Cai",
+      "Longxu Dou",
+      "Kenji Kawaguchi",
+      "Anirudh Goyal",
+      "J. Zico Kolter",
+      "Michael Qizhe Shieh"
+    ],
+    "published": "2025-03-02T12:10:17+00:00",
+    "summary": "Large Language Models (LLMs) have been observed to process non-human-readable text sequences, such as jailbreak prompts, often viewed as a bug for aligned LLMs. In this work, we present a systematic investigation challenging this perception, demonstrating that unnatural languages - strings that appear incomprehensible to humans but maintain semantic meanings for LLMs - contain latent features usable by models. Notably, unnatural languages possess latent features that can be generalized across different models and tasks during inference. Furthermore, models fine-tuned on unnatural versions of instruction datasets perform on-par with those trained on natural language, achieving 49.71 win rates in Length-controlled AlpacaEval 2.0 in average across various base models. In addition, through comprehensive analysis, we demonstrate that LLMs process unnatural languages by filtering noise and inferring contextual meaning from filtered words."
+  },
+  {
+    "title": "Evaluation of adaptive sampling methods in scenario generation for virtual safety impact assessment of pre-crash safety systems",
+    "url": "http://arxiv.org/abs/2503.00815v1",
+    "arxiv_id": "2503.00815v1",
+    "authors": [
+      "Xiaomi Yang",
+      "Henrik Imberg",
+      "Carol Flannagan",
+      "Jonas B\u00e4rgman"
+    ],
+    "published": "2025-03-02T09:44:18+00:00",
+    "summary": "Virtual safety assessment plays a vital role in evaluating the safety impact of pre-crash safety systems such as advanced driver assistance systems (ADAS) and automated driving systems (ADS). However, as the number of parameters in simulation-based scenario generation increases, the number of crash scenarios to simulate grows exponentially, making complete enumeration computationally infeasible. Efficient sampling methods, such as importance sampling and active sampling, have been proposed to address this challenge. However, a comprehensive evaluation of how domain knowledge, stratification, and batch sampling affect their efficiency remains limited.   This study evaluates the performance of importance sampling and active sampling in scenario generation, incorporating two domain-knowledge-driven features: adaptive sample space reduction (ASSR) and stratification. Additionally, we assess the effects of a third feature, batch sampling, on computational efficiency in terms of both CPU and wall-clock time. Based on our findings, we provide practical recommendations for applying ASSR, stratification, and batch sampling to optimize sampling performance.   Our results demonstrate that ASSR substantially improves sampling efficiency for both importance sampling and active sampling. When integrated into active sampling, ASSR reduces the root mean squared estimation error (RMSE) of the estimates by up to 90\\%. Stratification further improves sampling performance for both methods, regardless of ASSR implementation. When ASSR and/or stratification are applied, importance sampling performs on par with active sampling, whereas when neither feature is used, active sampling is more efficient. Larger batch sizes reduce wall-clock time but increase the number of simulations required to achieve the same estimation accuracy."
+  },
+  {
+    "title": "Acoustic Anomaly Detection on UAM Propeller Defect with Acoustic dataset for Crack of drone Propeller (ADCP)",
+    "url": "http://arxiv.org/abs/2503.00790v1",
+    "arxiv_id": "2503.00790v1",
+    "authors": [
+      "Juho Lee",
+      "Donghyun Yoon",
+      "Gumoon Jeong",
+      "Hyeoncheol Kim"
+    ],
+    "published": "2025-03-02T08:40:23+00:00",
+    "summary": "The imminent commercialization of UAM requires stable, AI-based maintenance systems to ensure safety for both passengers and pedestrians. This paper presents a methodology for non-destructively detecting cracks in UAM propellers using drone propeller sound datasets. Normal operating sounds were recorded, and abnormal sounds (categorized as ripped and broken) were differentiated by varying the microphone-propeller angle and throttle power. Our novel approach integrates FFT and STFT preprocessing techniques to capture both global frequency patterns and local time-frequency variations, thereby enhancing anomaly detection performance. The constructed Acoustic Dataset for Crack of Drone Propeller (ADCP) demonstrates the potential for detecting propeller cracks and lays the groundwork for future UAM maintenance applications."
+  },
+  {
+    "title": "Output Length Effect on DeepSeek-R1's Safety in Forced Thinking",
+    "url": "http://arxiv.org/abs/2503.01923v1",
+    "arxiv_id": "2503.01923v1",
+    "authors": [
+      "Xuying Li",
+      "Zhuo Li",
+      "Yuji Kosuga",
+      "Victor Bian"
+    ],
+    "published": "2025-03-02T06:29:22+00:00",
+    "summary": "Large Language Models (LLMs) have demonstrated strong reasoning capabilities, but their safety under adversarial conditions remains a challenge. This study examines the impact of output length on the robustness of DeepSeek-R1, particularly in Forced Thinking scenarios. We analyze responses across various adversarial prompts and find that while longer outputs can improve safety through self-correction, certain attack types exploit extended generations. Our findings suggest that output length should be dynamically controlled to balance reasoning effectiveness and security. We propose reinforcement learning-based policy adjustments and adaptive token length regulation to enhance LLM safety."
+  },
+  {
     "title": "State-Dependent Conformal Perception Bounds for Neuro-Symbolic Verification of Autonomous Systems",
     "url": "http://arxiv.org/abs/2502.21308v1",
     "arxiv_id": "2502.21308v1",
