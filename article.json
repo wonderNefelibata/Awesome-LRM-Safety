@@ -1,5 +1,331 @@
 [
   {
+    "title": "Improving LLM Safety Alignment with Dual-Objective Optimization",
+    "url": "http://arxiv.org/abs/2503.03710v1",
+    "arxiv_id": "2503.03710v1",
+    "authors": [
+      "Xuandong Zhao",
+      "Will Cai",
+      "Tianneng Shi",
+      "David Huang",
+      "Licong Lin",
+      "Song Mei",
+      "Dawn Song"
+    ],
+    "published": "2025-03-05T18:01:05+00:00",
+    "summary": "Existing training-time safety alignment techniques for large language models (LLMs) remain vulnerable to jailbreak attacks. Direct preference optimization (DPO), a widely deployed alignment method, exhibits limitations in both experimental and theoretical contexts as its loss function proves suboptimal for refusal learning. Through gradient-based analysis, we identify these shortcomings and propose an improved safety alignment that disentangles DPO objectives into two components: (1) robust refusal training, which encourages refusal even when partial unsafe generations are produced, and (2) targeted unlearning of harmful knowledge. This approach significantly increases LLM robustness against a wide range of jailbreak attacks, including prefilling, suffix, and multi-turn attacks across both in-distribution and out-of-distribution scenarios. Furthermore, we introduce a method to emphasize critical refusal tokens by incorporating a reward-based token-level weighting mechanism for refusal learning, which further improves the robustness against adversarial exploits. Our research also suggests that robustness to jailbreak attacks is correlated with token distribution shifts in the training process and internal representations of refusal and harmful tokens, offering valuable directions for future research in LLM safety alignment. The code is available at https://github.com/wicai24/DOOR-Alignment"
+  },
+  {
+    "title": "AEGIS: Towards Formalized and Practical Memory-Safe Execution of C programs via MSWASM",
+    "url": "http://arxiv.org/abs/2503.03698v1",
+    "arxiv_id": "2503.03698v1",
+    "authors": [
+      "Shahram Esmaeilsabzali",
+      "Arayi Khalatyan",
+      "Zhijun Mo",
+      "Sruthi Venkatanarayanan",
+      "Shengjie Xu"
+    ],
+    "published": "2025-03-05T17:50:43+00:00",
+    "summary": "Programs written in unsafe languages such as C are prone to memory safety errors, which can lead to program compromises and serious real-world security consequences. Recently, Memory-Safe WebAssembly (MSWASM) is introduced as a general-purpose intermediate bytecode with built-in memory safety semantics. Programs written in C can be compiled into MSWASM to get complete memory safety protection. In this paper, we present our extensions on MSWASM, which improve its semantics and practicality. First, we formalize MSWASM semantics in Coq/Iris, extending it with inter-module interaction, showing that MSWASM provides fine-grained isolation guarantees analogous to WASM's coarse-grained isolation via linear memory. Second, we present Aegis, a system to adopt the memory safety of MSWASM for C programs in an interoperable way. Aegis pipeline generates Checked C source code from MSWASM modules to enforce spatial memory safety. Checked C is a recent binary-compatible extension of C which can provide guaranteed spatial safety. Our design allows Aegis to protect C programs that depend on legacy C libraries with no extra dependency and with low overhead. Aegis pipeline incurs 67% runtime overhead and near-zero memory overhead on PolyBenchC programs compared to native."
+  },
+  {
+    "title": "TeraSim: Uncovering Unknown Unsafe Events for Autonomous Vehicles through Generative Simulation",
+    "url": "http://arxiv.org/abs/2503.03629v1",
+    "arxiv_id": "2503.03629v1",
+    "authors": [
+      "Haowei Sun",
+      "Xintao Yan",
+      "Zhijie Qiao",
+      "Haojie Zhu",
+      "Yihao Sun",
+      "Jiawei Wang",
+      "Shengyin Shen",
+      "Darian Hogue",
+      "Rajanikant Ananta",
+      "Derek Johnson",
+      "Greg Stevens",
+      "Greg McGuire",
+      "Yifan Wei",
+      "Wei Zheng",
+      "Yong Sun",
+      "Yasuo Fukai",
+      "Henry X. Liu"
+    ],
+    "published": "2025-03-05T16:09:30+00:00",
+    "summary": "Traffic simulation is essential for autonomous vehicle (AV) development, enabling comprehensive safety evaluation across diverse driving conditions. However, traditional rule-based simulators struggle to capture complex human interactions, while data-driven approaches often fail to maintain long-term behavioral realism or generate diverse safety-critical events. To address these challenges, we propose TeraSim, an open-source, high-fidelity traffic simulation platform designed to uncover unknown unsafe events and efficiently estimate AV statistical performance metrics, such as crash rates. TeraSim is designed for seamless integration with third-party physics simulators and standalone AV stacks, to construct a complete AV simulation system. Experimental results demonstrate its effectiveness in generating diverse safety-critical events involving both static and dynamic agents, identifying hidden deficiencies in AV systems, and enabling statistical performance evaluation. These findings highlight TeraSim's potential as a practical tool for AV safety assessment, benefiting researchers, developers, and policymakers. The code is available at https://github.com/mcity/TeraSim."
+  },
+  {
+    "title": "Simulation-Based Performance Evaluation of 3D Object Detection Methods with Deep Learning for a LiDAR Point Cloud Dataset in a SOTIF-related Use Case",
+    "url": "http://arxiv.org/abs/2503.03548v1",
+    "arxiv_id": "2503.03548v1",
+    "authors": [
+      "Milin Patel",
+      "Rolf Jung"
+    ],
+    "published": "2025-03-05T14:32:32+00:00",
+    "summary": "Safety of the Intended Functionality (SOTIF) addresses sensor performance limitations and deep learning-based object detection insufficiencies to ensure the intended functionality of Automated Driving Systems (ADS). This paper presents a methodology examining the adaptability and performance evaluation of the 3D object detection methods on a LiDAR point cloud dataset generated by simulating a SOTIF-related Use Case. The major contributions of this paper include defining and modelling a SOTIF-related Use Case with 21 diverse weather conditions and generating a LiDAR point cloud dataset suitable for application of 3D object detection methods. The dataset consists of 547 frames, encompassing clear, cloudy, rainy weather conditions, corresponding to different times of the day, including noon, sunset, and night. Employing MMDetection3D and OpenPCDET toolkits, the performance of State-of-the-Art (SOTA) 3D object detection methods is evaluated and compared by testing the pre-trained Deep Learning (DL) models on the generated dataset using Average Precision (AP) and Recall metrics."
+  },
+  {
+    "title": "Simulation-Based Application of Safety of The Intended Functionality to Mitigate Foreseeable Misuse in Automated Driving Systems",
+    "url": "http://arxiv.org/abs/2503.03534v1",
+    "arxiv_id": "2503.03534v1",
+    "authors": [
+      "Milin Patel",
+      "Rolf Jung"
+    ],
+    "published": "2025-03-05T14:16:49+00:00",
+    "summary": "The development of Automated Driving Systems (ADS) has the potential to revolutionise the transportation industry, but it also presents significant safety challenges. One of the key challenges is ensuring that the ADS is safe in the event of Foreseeable Misuse (FM) by the human driver. To address this challenge, a case study on simulation-based testing to mitigate FM by the driver using the driving simulator is presented. FM by the human driver refers to potential driving scenarios where the driver misinterprets the intended functionality of ADS, leading to hazardous behaviour. Safety of the Intended Functionality (SOTIF) focuses on ensuring the absence of unreasonable risk resulting from hazardous behaviours related to functional insufficiencies caused by FM and performance limitations of sensors and machine learning-based algorithms for ADS. The simulation-based application of SOTIF to mitigate FM in ADS entails determining potential misuse scenarios, conducting simulation-based testing, and evaluating the effectiveness of measures dedicated to preventing or mitigating FM. The major contribution includes defining (i) test requirements for performing simulation-based testing of a potential misuse scenario, (ii) evaluation criteria in accordance with SOTIF requirements for implementing measures dedicated to preventing or mitigating FM, and (iii) approach to evaluate the effectiveness of the measures dedicated to preventing or mitigating FM. In conclusion, an exemplary case study incorporating driver-vehicle interface and driver interactions with ADS forming the basis for understanding the factors and causes contributing to FM is investigated. Furthermore, the test procedure for evaluating the effectiveness of the measures dedicated to preventing or mitigating FM by the driver is developed in this work."
+  },
+  {
+    "title": "DO-IQS: Dynamics-Aware Offline Inverse Q-Learning for Optimal Stopping with Unknown Gain Functions",
+    "url": "http://arxiv.org/abs/2503.03515v1",
+    "arxiv_id": "2503.03515v1",
+    "authors": [
+      "Anna Kuchko"
+    ],
+    "published": "2025-03-05T14:01:17+00:00",
+    "summary": "We consider Inverse Optimal Stopping (IOS) problem where, based on stopped expert trajectories, one aims to recover the optimal stopping region through continuation and stopping gain functions approximation. The uniqueness of the stopping region allows the use of IOS in real-world applications with safety concerns. While current state-of-the-art inverse reinforcement learning methods recover both a Q-function and the corresponding optimal policy, they fail to account for specific challenges posed by optimal stopping problems. These include data sparsity near the stopping region, non-Markovian nature of the continuation gain, a proper treatment of boundary conditions, the need for a stable offline approach for risk-sensitive applications, and a lack of a quality evaluation metric. These challenges are addressed with the proposed Dynamics-Aware Offline Inverse Q-Learning for Optimal Stopping (DO-IQS), which incorporates temporal information by approximating the cumulative continuation gain together with the world dynamics and the Q-function without querying to the environment. Moreover, a confidence-based oversampling approach is proposed to treat the data sparsity problem. We demonstrate the performance of our models on real and artificial data including an optimal intervention for critical events problem."
+  },
+  {
+    "title": "CURVALID: Geometrically-guided Adversarial Prompt Detection",
+    "url": "http://arxiv.org/abs/2503.03502v1",
+    "arxiv_id": "2503.03502v1",
+    "authors": [
+      "Canaan Yung",
+      "Hanxun Huang",
+      "Sarah Monazam Erfani",
+      "Christopher Leckie"
+    ],
+    "published": "2025-03-05T13:47:53+00:00",
+    "summary": "Adversarial prompts capable of jailbreaking large language models (LLMs) and inducing undesirable behaviours pose a significant obstacle to their safe deployment. Current mitigation strategies rely on activating built-in defence mechanisms or fine-tuning the LLMs, but the fundamental distinctions between adversarial and benign prompts are yet to be understood. In this work, we introduce CurvaLID, a novel defense framework that efficiently detects adversarial prompts by leveraging their geometric properties. It is agnostic to the type of LLM, offering a unified detection framework across diverse adversarial prompts and LLM architectures. CurvaLID builds on the geometric analysis of text prompts to uncover their underlying differences. We theoretically extend the concept of curvature via the Whewell equation into an $n$-dimensional word embedding space, enabling us to quantify local geometric properties, including semantic shifts and curvature in the underlying manifolds. Additionally, we employ Local Intrinsic Dimensionality (LID) to capture geometric features of text prompts within adversarial subspaces. Our findings reveal that adversarial prompts differ fundamentally from benign prompts in terms of their geometric characteristics. Our results demonstrate that CurvaLID delivers superior detection and rejection of adversarial queries, paving the way for safer LLM deployment. The source code can be found at https://github.com/Cancanxxx/CurvaLID"
+  },
+  {
+    "title": "Differentially Private Learners for Heterogeneous Treatment Effects",
+    "url": "http://arxiv.org/abs/2503.03486v1",
+    "arxiv_id": "2503.03486v1",
+    "authors": [
+      "Maresa Schr\u00f6der",
+      "Valentyn Melnychuk",
+      "Stefan Feuerriegel"
+    ],
+    "published": "2025-03-05T13:24:58+00:00",
+    "summary": "Patient data is widely used to estimate heterogeneous treatment effects and thus understand the effectiveness and safety of drugs. Yet, patient data includes highly sensitive information that must be kept private. In this work, we aim to estimate the conditional average treatment effect (CATE) from observational data under differential privacy. Specifically, we present DP-CATE, a novel framework for CATE estimation that is Neyman-orthogonal and further ensures differential privacy of the estimates. Our framework is highly general: it applies to any two-stage CATE meta-learner with a Neyman-orthogonal loss function, and any machine learning model can be used for nuisance estimation. We further provide an extension of our DP-CATE, where we employ RKHS regression to release the complete CATE function while ensuring differential privacy. We demonstrate our DP-CATE across various experiments using synthetic and real-world datasets. To the best of our knowledge, we are the first to provide a framework for CATE estimation that is Neyman-orthogonal and differentially private."
+  },
+  {
+    "title": "SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Safe Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2503.03480v1",
+    "arxiv_id": "2503.03480v1",
+    "authors": [
+      "Borong Zhang",
+      "Yuhao Zhang",
+      "Jiaming Ji",
+      "Yingshan Lei",
+      "Josef Dai",
+      "Yuanpei Chen",
+      "Yaodong Yang"
+    ],
+    "published": "2025-03-05T13:16:55+00:00",
+    "summary": "Vision-language-action models (VLAs) have shown great potential as generalist robot policies. However, these models pose urgent safety challenges during deployment, including the risk of physical harm to the environment, the robot itself, and humans. How can safety be explicitly incorporated into VLAs? In this work, we propose SafeVLA, a novel algorithm designed to integrate safety into VLAs, ensuring the protection of the environment, robot hardware and humans in real-world settings. SafeVLA effectively balances safety and task performance by employing large-scale constrained learning within simulated environments. We demonstrate that SafeVLA outperforms the current state-of-the-art method in both safety and task performance, achieving average improvements of 83.58% and 3.85%, respectively, in simulation. By prioritizing safety, our approach eliminates high-risk behaviors and reduces the upper bound of unsafe behaviors to 1/35 of that in the current state-of-the-art, thereby significantly mitigating long-tail risks. Furthermore, the learned safety constraints generalize to diverse, unseen scenarios, including multiple out-of-distribution perturbations and tasks. Our data, models and newly proposed benchmark environment are available at https://sites.google.com/view/pku-safevla."
+  },
+  {
+    "title": "SEAL: Safety Enhanced Trajectory Planning and Control Framework for Quadrotor Flight in Complex Environments",
+    "url": "http://arxiv.org/abs/2503.03346v1",
+    "arxiv_id": "2503.03346v1",
+    "authors": [
+      "Yiming Wang",
+      "Jianbin Ma",
+      "Junda Wu",
+      "Huizhe Li",
+      "Zhexuan Zhou",
+      "Youmin Gong",
+      "Jie Mei",
+      "Guangfu Ma"
+    ],
+    "published": "2025-03-05T10:15:56+00:00",
+    "summary": "For quadrotors, achieving safe and autonomous flight in complex environments with wind disturbances and dynamic obstacles still faces significant challenges. Most existing methods address wind disturbances in either trajectory planning or control, which may lead to hazardous situations during flight. The emergence of dynamic obstacles would further worsen the situation. Therefore, we propose an efficient and reliable framework for quadrotors that incorporates wind disturbance estimations during both the planning and control phases via a generalized proportional integral observer. First, we develop a real-time adaptive spatial-temporal trajectory planner that utilizes Hamilton-Jacobi (HJ) reachability analysis for error dynamics resulting from wind disturbances. By considering the forward reachability sets propagation on an Euclidean Signed Distance Field (ESDF) map, safety is guaranteed. Additionally, a Nonlinear Model Predictive Control (NMPC) controller considering wind disturbance compensation is implemented for robust trajectory tracking. Simulation and real-world experiments verify the effectiveness of our framework. The video and supplementary material will be available at https://github.com/Ma29-HIT/SEAL/."
+  },
+  {
+    "title": "Quantitative Magnetohydrodynamic Modelling of Flux Pumping in ASDEX Upgrade",
+    "url": "http://arxiv.org/abs/2503.03344v1",
+    "arxiv_id": "2503.03344v1",
+    "authors": [
+      "Haowei Zhang",
+      "Matthias H\u00f6lzl",
+      "Isabel Krebs",
+      "Andreas Burckhart",
+      "Alexander Bock",
+      "Sibylle G\u00fcnter",
+      "Valentin Igochine",
+      "Karl Lackner",
+      "Rohan Ramasamy",
+      "Hartmut Zohm",
+      "the JOREK team",
+      "the ASDEX Upgrade team"
+    ],
+    "published": "2025-03-05T10:14:54+00:00",
+    "summary": "The sawtooth-free hybrid scenario has been achieved recently in ASDEX Upgrade (AUG) with applied non-inductive current sources and auxiliary heating [A. Burckhart et al 2023 Nucl. Fusion 63 126056]. Control experiments in AUG suggest that the self-regulating magnetic flux pumping mechanism, characterized by anomalous current redistribution, is responsible for clamping the central safety factor (q_0) close to unity, thereby preventing the sawtooth onset. This work presents a numerical and theoretical investigation of flux pumping in the AUG hybrid scenario based on the two-temperature, visco-resistive, full magnetohydrodynamic (MHD) model with the JOREK code. To quantitatively model the flux pumping, we choose realistic parameters, plasma configurations, and source terms based on AUG experiments. During the initial saturation stage of the unstable 1/1 quasi-interchange mode (on millisecond timescales), q_0 exhibits fast under-damped oscillation and reaches a value closer to unity, which is attributed to the self-regulation of core plasma and the fast dynamo effect on the order of V/m. On the longer resistive diffusion timescale of seconds, the slow negative dynamo effect on the order of mV/m induced by the 1/1 MHD instability plays an effective role in flux pumping, which provides quantitative agreement with experimental observations for the first time. The final saturated 1/1 MHD instability exhibits features of the quasi-interchange mode and tearing mode, and the associated convective plasma flow velocity is a few m/s. The toroidal negative electric field from the slow dynamo dominantly offsets the positive current drive and continuously redistributes the current density and pressure. As a result, q_0 is maintained close to unity due to the low-shear profiles of current density and pressure in the plasma core, and the system enters a sawtooth-free and quasi-stationary helical state."
+  },
+  {
+    "title": "Safety Verification of Nonlinear Stochastic Systems via Probabilistic Tube",
+    "url": "http://arxiv.org/abs/2503.03328v1",
+    "arxiv_id": "2503.03328v1",
+    "authors": [
+      "Zishun Liu",
+      "Saber Jafarpour",
+      "Yongxin Chen"
+    ],
+    "published": "2025-03-05T10:02:25+00:00",
+    "summary": "We address the problem of safety verification for nonlinear stochastic systems, specifically the task of certifying that system trajectories remain within a safe set with high probability. To tackle this challenge, we adopt a set-erosion strategy, which decouples the effects of stochastic disturbances from deterministic dynamics. This approach converts the stochastic safety verification problem on a safe set into a deterministic safety verification problem on an eroded subset of the safe set. The success of this strategy hinges on the depth of erosion, which is determined by a probabilistic tube that bounds the deviation of stochastic trajectories from their corresponding deterministic trajectories. Our main contribution is the establishment of a tight bound for the probabilistic tube of nonlinear stochastic systems. To obtain a probabilistic bound for stochastic trajectories, we adopt a martingale-based approach. The core innovation lies in the design of a novel energy function associated with the averaged moment generating function, which forms an affine martingale, a generalization of the traditional c-martingale. Using this energy function, we derive a precise bound for the probabilistic tube. Furthermore, we enhance this bound by incorporating the union-bound inequality for strictly contractive dynamics. By integrating the derived probabilistic tubes into the set-erosion strategy, we demonstrate that the safety verification problem for nonlinear stochastic systems can be reduced to a deterministic safety verification problem. Our theoretical results are validated through applications in reachability-based safety verification and safe controller synthesis, accompanied by several numerical examples that illustrate their effectiveness."
+  },
+  {
+    "title": "Supervised Visual Docking Network for Unmanned Surface Vehicles Using Auto-labeling in Real-world Water Environments",
+    "url": "http://arxiv.org/abs/2503.03282v1",
+    "arxiv_id": "2503.03282v1",
+    "authors": [
+      "Yijie Chu",
+      "Ziniu Wu",
+      "Yong Yue",
+      "Eng Gee Lim",
+      "Paolo Paoletti",
+      "Xiaohui Zhu"
+    ],
+    "published": "2025-03-05T09:07:13+00:00",
+    "summary": "Unmanned Surface Vehicles (USVs) are increasingly applied to water operations such as environmental monitoring and river-map modeling. It faces a significant challenge in achieving precise autonomous docking at ports or stations, still relying on remote human control or external positioning systems for accuracy and safety which limits the full potential of human-out-of-loop deployment for USVs.This paper introduces a novel supervised learning pipeline with the auto-labeling technique for USVs autonomous visual docking. Firstly, we designed an auto-labeling data collection pipeline that appends relative pose and image pair to the dataset. This step does not require conventional manual labeling for supervised learning. Secondly, the Neural Dock Pose Estimator (NDPE) is proposed to achieve relative dock pose prediction without the need for hand-crafted feature engineering, camera calibration, and peripheral markers. Moreover, The NDPE can accurately predict the relative dock pose in real-world water environments, facilitating the implementation of Position-Based Visual Servo (PBVS) and low-level motion controllers for efficient and autonomous docking.Experiments show that the NDPE is robust to the disturbance of the distance and the USV velocity. The effectiveness of our proposed solution is tested and validated in real-world water environments, reflecting its capability to handle real-world autonomous docking tasks."
+  },
+  {
+    "title": "Reduced Spatial Dependency for More General Video-level Deepfake Detection",
+    "url": "http://arxiv.org/abs/2503.03270v1",
+    "arxiv_id": "2503.03270v1",
+    "authors": [
+      "Beilin Chu",
+      "Xuan Xu",
+      "Yufei Zhang",
+      "Weike You",
+      "Linna Zhou"
+    ],
+    "published": "2025-03-05T08:51:55+00:00",
+    "summary": "As one of the prominent AI-generated content, Deepfake has raised significant safety concerns. Although it has been demonstrated that temporal consistency cues offer better generalization capability, existing methods based on CNNs inevitably introduce spatial bias, which hinders the extraction of intrinsic temporal features. To address this issue, we propose a novel method called Spatial Dependency Reduction (SDR), which integrates common temporal consistency features from multiple spatially-perturbed clusters, to reduce the dependency of the model on spatial information. Specifically, we design multiple Spatial Perturbation Branch (SPB) to construct spatially-perturbed feature clusters. Subsequently, we utilize the theory of mutual information and propose a Task-Relevant Feature Integration (TRFI) module to capture temporal features residing in similar latent space from these clusters. Finally, the integrated feature is fed into a temporal transformer to capture long-range dependencies. Extensive benchmarks and ablation studies demonstrate the effectiveness and rationale of our approach."
+  },
+  {
+    "title": "Trajectory Prediction for Autonomous Driving: Progress, Limitations, and Future Directions",
+    "url": "http://arxiv.org/abs/2503.03262v1",
+    "arxiv_id": "2503.03262v1",
+    "authors": [
+      "Nadya Abdel Madjid",
+      "Abdulrahman Ahmad",
+      "Murad Mebrahtu",
+      "Yousef Babaa",
+      "Abdelmoamen Nasser",
+      "Sumbal Malik",
+      "Bilal Hassan",
+      "Naoufel Werghi",
+      "Jorge Dias",
+      "Majid Khonji"
+    ],
+    "published": "2025-03-05T08:38:51+00:00",
+    "summary": "As the potential for autonomous vehicles to be integrated on a large scale into modern traffic systems continues to grow, ensuring safe navigation in dynamic environments is crucial for smooth integration. To guarantee safety and prevent collisions, autonomous vehicles must be capable of accurately predicting the trajectories of surrounding traffic agents. Over the past decade, significant efforts from both academia and industry have been dedicated to designing solutions for precise trajectory forecasting. These efforts have produced a diverse range of approaches, raising questions about the differences between these methods and whether trajectory prediction challenges have been fully addressed. This paper reviews a substantial portion of recent trajectory prediction methods and devises a taxonomy to classify existing solutions. A general overview of the prediction pipeline is also provided, covering input and output modalities, modeling features, and prediction paradigms discussed in the literature. In addition, the paper discusses active research areas within trajectory prediction, addresses the posed research questions, and highlights the remaining research gaps and challenges."
+  },
+  {
+    "title": "STORM: Spatial-Temporal Iterative Optimization for Reliable Multicopter Trajectory Generation",
+    "url": "http://arxiv.org/abs/2503.03252v1",
+    "arxiv_id": "2503.03252v1",
+    "authors": [
+      "Jinhao Zhang",
+      "Zhexuan Zhou",
+      "Wenlong Xia",
+      "Youmin Gong",
+      "Jie Mei"
+    ],
+    "published": "2025-03-05T08:11:59+00:00",
+    "summary": "Efficient and safe trajectory planning plays a critical role in the application of quadrotor unmanned aerial vehicles. Currently, the inherent trade-off between constraint compliance and computational efficiency enhancement in UAV trajectory optimization problems has not been sufficiently addressed. To enhance the performance of UAV trajectory optimization, we propose a spatial-temporal iterative optimization framework. Firstly, B-splines are utilized to represent UAV trajectories, with rigorous safety assurance achieved through strict enforcement of constraints on control points. Subsequently, a set of QP-LP subproblems via spatial-temporal decoupling and constraint linearization is derived. Finally, an iterative optimization strategy incorporating guidance gradients is employed to obtain high-performance UAV trajectories in different scenarios. Both simulation and real-world experimental results validate the efficiency and high-performance of the proposed optimization framework in generating safe and fast trajectories. Our source codes will be released for community reference at https://hitsz-mas.github.io/STORM"
+  },
+  {
+    "title": "Distributed Certifiably Correct Range-Aided SLAM",
+    "url": "http://arxiv.org/abs/2503.03192v1",
+    "arxiv_id": "2503.03192v1",
+    "authors": [
+      "Alexander Thoms",
+      "Alan Papalia",
+      "Jared Velasquez",
+      "David M. Rosen",
+      "Sriram Narasimhan"
+    ],
+    "published": "2025-03-05T05:17:15+00:00",
+    "summary": "Reliable simultaneous localization and mapping (SLAM) algorithms are necessary for safety-critical autonomous navigation. In the communication-constrained multi-agent setting, navigation systems increasingly use point-to-point range sensors as they afford measurements with low bandwidth requirements and known data association. The state estimation problem for these systems takes the form of range-aided (RA) SLAM. However, distributed algorithms for solving the RA-SLAM problem lack formal guarantees on the quality of the returned estimate. To this end, we present the first distributed algorithm for RA-SLAM that can efficiently recover certifiably globally optimal solutions. Our algorithm, distributed certifiably correct RA-SLAM (DCORA), achieves this via the Riemannian Staircase method, where computational procedures developed for distributed certifiably correct pose graph optimization are generalized to the RA-SLAM problem. We demonstrate DCORA's efficacy on real-world multi-agent datasets by achieving absolute trajectory errors comparable to those of a state-of-the-art centralized certifiably correct RA-SLAM algorithm. Additionally, we perform a parametric study on the structure of the RA-SLAM problem using synthetic data, revealing how common parameters affect DCORA's performance."
+  },
+  {
+    "title": "Physically-Feasible Reactive Synthesis for Terrain-Adaptive Locomotion via Trajectory Optimization and Symbolic Repair",
+    "url": "http://arxiv.org/abs/2503.03071v1",
+    "arxiv_id": "2503.03071v1",
+    "authors": [
+      "Ziyi Zhou",
+      "Qian Meng",
+      "Hadas Kress-Gazit",
+      "Ye Zhao"
+    ],
+    "published": "2025-03-05T00:21:23+00:00",
+    "summary": "We propose an integrated planning framework for quadrupedal locomotion over dynamically changing, unforeseen terrains. Existing approaches either rely on heuristics for instantaneous foothold selection--compromising safety and versatility--or solve expensive trajectory optimization problems with complex terrain features and long time horizons. In contrast, our framework leverages reactive synthesis to generate correct-by-construction controllers at the symbolic level, and mixed-integer convex programming (MICP) for dynamic and physically feasible footstep planning for each symbolic transition. We use a high-level manager to reduce the large state space in synthesis by incorporating local environment information, improving synthesis scalability. To handle specifications that cannot be met due to dynamic infeasibility, and to minimize costly MICP solves, we leverage a symbolic repair process to generate only necessary symbolic transitions. During online execution, re-running the MICP with real-world terrain data, along with runtime symbolic repair, bridges the gap between offline synthesis and online execution. We demonstrate, in simulation, our framework's capabilities to discover missing locomotion skills and react promptly in safety-critical environments, such as scattered stepping stones and rebars."
+  },
+  {
+    "title": "LINGOLY-TOO: Disentangling Memorisation from Reasoning with Linguistic Templatisation and Orthographic Obfuscation",
+    "url": "http://arxiv.org/abs/2503.02972v1",
+    "arxiv_id": "2503.02972v1",
+    "authors": [
+      "Jude Khouja",
+      "Karolina Korgul",
+      "Simi Hellsten",
+      "Lingyi Yang",
+      "Vlad Neacs",
+      "Harry Mayne",
+      "Ryan Kearns",
+      "Andrew Bean",
+      "Adam Mahdi"
+    ],
+    "published": "2025-03-04T19:57:47+00:00",
+    "summary": "Effective evaluation of the reasoning capabilities of large language models (LLMs) are susceptible to overestimation due to data exposure of evaluation benchmarks. We introduce a framework for producing linguistic reasoning problems that reduces the effect of memorisation in model performance estimates and apply this framework to develop LINGOLY-TOO, a challenging evaluation benchmark for linguistic reasoning. By developing orthographic templates, we dynamically obfuscate the writing systems of real languages to generate numerous question variations. These variations preserve the reasoning steps required for each solution while reducing the likelihood of specific problem instances appearing in model training data. Our experiments demonstrate that frontier models, including OpenAI o1-preview and DeepSeem R1, struggle with advanced reasoning. Our analysis also shows that LLMs exhibit noticeable variance in accuracy across permutations of the same problem, and on average perform better on questions appearing in their original orthography. Our findings highlight the opaque nature of response generation in LLMs and provide evidence that prior data exposure contributes to overestimating the reasoning capabilities of frontier models."
+  },
+  {
+    "title": "Revolutionizing Traffic Management with AI-Powered Machine Vision: A Step Toward Smart Cities",
+    "url": "http://arxiv.org/abs/2503.02967v1",
+    "arxiv_id": "2503.02967v1",
+    "authors": [
+      "Seyed Hossein Hosseini DolatAbadi",
+      "Sayyed Mohammad Hossein Hashemi",
+      "Mohammad Hosseini",
+      "Moein-Aldin AliHosseini"
+    ],
+    "published": "2025-03-04T19:50:42+00:00",
+    "summary": "The rapid urbanization of cities and increasing vehicular congestion have posed significant challenges to traffic management and safety. This study explores the transformative potential of artificial intelligence (AI) and machine vision technologies in revolutionizing traffic systems. By leveraging advanced surveillance cameras and deep learning algorithms, this research proposes a system for real-time detection of vehicles, traffic anomalies, and driver behaviors. The system integrates geospatial and weather data to adapt dynamically to environmental conditions, ensuring robust performance in diverse scenarios. Using YOLOv8 and YOLOv11 models, the study achieves high accuracy in vehicle detection and anomaly recognition, optimizing traffic flow and enhancing road safety. These findings contribute to the development of intelligent traffic management solutions and align with the vision of creating smart cities with sustainable and efficient urban infrastructure."
+  },
+  {
+    "title": "A Theoretical Model for Grit in Pursuing Ambitious Ends",
+    "url": "http://arxiv.org/abs/2503.02952v1",
+    "arxiv_id": "2503.02952v1",
+    "authors": [
+      "Avrim Blum",
+      "Emily Diana",
+      "Kavya Ravichandran",
+      "Alexander Williams Tolbert"
+    ],
+    "published": "2025-03-04T19:17:42+00:00",
+    "summary": "Ambition and risk-taking have been heralded as important ways for marginalized communities to get out of cycles of poverty. As a result, educational messaging often encourages individuals to strengthen their personal resolve and develop characteristics such as discipline and grit to succeed in ambitious ends. However, recent work in philosophy and sociology highlights that this messaging often does more harm than good for students in these situations. We study similar questions using a different epistemic approach and in simple theoretical models -- we provide a quantitative model of decision-making between stable and risky choices in the improving multi-armed bandits framework. We use this model to first study how individuals' \"strategies\" are affected by their level of grittiness and how this affects their accrued rewards. Then, we study the impact of various interventions, such as increasing grit or providing a financial safety net. Our investigation of rational decision making involves two different formal models of rationality, the competitive ratio between the accrued reward and the optimal reward and Bayesian quantification of uncertainty."
+  },
+  {
+    "title": "KodCode: A Diverse, Challenging, and Verifiable Synthetic Dataset for Coding",
+    "url": "http://arxiv.org/abs/2503.02951v1",
+    "arxiv_id": "2503.02951v1",
+    "authors": [
+      "Zhangchen Xu",
+      "Yang Liu",
+      "Yueqin Yin",
+      "Mingyuan Zhou",
+      "Radha Poovendran"
+    ],
+    "published": "2025-03-04T19:17:36+00:00",
+    "summary": "We introduce KodCode, a synthetic dataset that addresses the persistent challenge of acquiring high-quality, verifiable training data across diverse difficulties and domains for training Large Language Models for coding. Existing code-focused resources typically fail to ensure either the breadth of coverage (e.g., spanning simple coding tasks to advanced algorithmic problems) or verifiable correctness (e.g., unit tests). In contrast, KodCode comprises question-solution-test triplets that are systematically validated via a self-verification procedure. Our pipeline begins by synthesizing a broad range of coding questions, then generates solutions and test cases with additional attempts allocated to challenging problems. Finally, post-training data synthesis is done by rewriting questions into diverse formats and generating responses under a test-based reject sampling procedure from a reasoning model (DeepSeek R1). This pipeline yields a large-scale, robust and diverse coding dataset. KodCode is suitable for supervised fine-tuning and the paired unit tests also provide great potential for RL tuning. Fine-tuning experiments on coding benchmarks (HumanEval(+), MBPP(+), BigCodeBench, and LiveCodeBench) demonstrate that KodCode-tuned models achieve state-of-the-art performance, surpassing models like Qwen2.5-Coder-32B-Instruct and DeepSeek-R1-Distill-Llama-70B."
+  },
+  {
     "title": "Optimal Power Management for Large-Scale Battery Energy Storage Systems via Bayesian Inference",
     "url": "http://arxiv.org/abs/2503.02866v1",
     "arxiv_id": "2503.02866v1",
