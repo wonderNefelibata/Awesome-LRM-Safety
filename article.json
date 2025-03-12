@@ -1,5 +1,468 @@
 [
   {
+    "title": "CoLMDriver: LLM-based Negotiation Benefits Cooperative Autonomous Driving",
+    "url": "http://arxiv.org/abs/2503.08683v1",
+    "arxiv_id": "2503.08683v1",
+    "authors": [
+      "Changxing Liu",
+      "Genjia Liu",
+      "Zijun Wang",
+      "Jinchang Yang",
+      "Siheng Chen"
+    ],
+    "published": "2025-03-11T17:58:42+00:00",
+    "summary": "Vehicle-to-vehicle (V2V) cooperative autonomous driving holds great promise for improving safety by addressing the perception and prediction uncertainties inherent in single-agent systems. However, traditional cooperative methods are constrained by rigid collaboration protocols and limited generalization to unseen interactive scenarios. While LLM-based approaches offer generalized reasoning capabilities, their challenges in spatial planning and unstable inference latency hinder their direct application in cooperative driving. To address these limitations, we propose CoLMDriver, the first full-pipeline LLM-based cooperative driving system, enabling effective language-based negotiation and real-time driving control. CoLMDriver features a parallel driving pipeline with two key components: (i) an LLM-based negotiation module under an actor-critic paradigm, which continuously refines cooperation policies through feedback from previous decisions of all vehicles; and (ii) an intention-guided waypoint generator, which translates negotiation outcomes into executable waypoints. Additionally, we introduce InterDrive, a CARLA-based simulation benchmark comprising 10 challenging interactive driving scenarios for evaluating V2V cooperation. Experimental results demonstrate that CoLMDriver significantly outperforms existing approaches, achieving an 11% higher success rate across diverse highly interactive V2V driving scenarios. Code will be released on https://github.com/cxliu0314/CoLMDriver."
+  },
+  {
+    "title": "Chain-of-Thought Reasoning In The Wild Is Not Always Faithful",
+    "url": "http://arxiv.org/abs/2503.08679v1",
+    "arxiv_id": "2503.08679v1",
+    "authors": [
+      "Iv\u00e1n Arcuschin",
+      "Jett Janiak",
+      "Robert Krzyzanowski",
+      "Senthooran Rajamanoharan",
+      "Neel Nanda",
+      "Arthur Conmy"
+    ],
+    "published": "2025-03-11T17:56:30+00:00",
+    "summary": "Chain-of-Thought (CoT) reasoning has significantly advanced state-of-the-art AI capabilities. However, recent studies have shown that CoT reasoning is not always faithful, i.e. CoT reasoning does not always reflect how models arrive at conclusions. So far, most of these studies have focused on unfaithfulness in unnatural contexts where an explicit bias has been introduced. In contrast, we show that unfaithful CoT can occur on realistic prompts with no artificial bias. Our results reveal concerning rates of several forms of unfaithful reasoning in frontier models: Sonnet 3.7 (30.6%), DeepSeek R1 (15.8%) and ChatGPT-4o (12.6%) all answer a high proportion of question pairs unfaithfully. Specifically, we find that models rationalize their implicit biases in answers to binary questions (\"implicit post-hoc rationalization\"). For example, when separately presented with the questions \"Is X bigger than Y?\" and \"Is Y bigger than X?\", models sometimes produce superficially coherent arguments to justify answering Yes to both questions or No to both questions, despite such responses being logically contradictory. We also investigate restoration errors (Dziri et al., 2023), where models make and then silently correct errors in their reasoning, and unfaithful shortcuts, where models use clearly illogical reasoning to simplify solving problems in Putnam questions (a hard benchmark). Our findings raise challenges for AI safety work that relies on monitoring CoT to detect undesired behavior."
+  },
+  {
+    "title": "AgentOrca: A Dual-System Framework to Evaluate Language Agents on Operational Routine and Constraint Adherence",
+    "url": "http://arxiv.org/abs/2503.08669v1",
+    "arxiv_id": "2503.08669v1",
+    "authors": [
+      "Zekun Li",
+      "Shinda Huang",
+      "Jiangtian Wang",
+      "Nathan Zhang",
+      "Antonis Antoniades",
+      "Wenyue Hua",
+      "Kaijie Zhu",
+      "Sirui Zeng",
+      "William Yang Wang",
+      "Xifeng Yan"
+    ],
+    "published": "2025-03-11T17:53:02+00:00",
+    "summary": "As language agents progressively automate critical tasks across domains, their ability to operate within operational constraints and safety protocols becomes essential. While extensive research has demonstrated these agents' effectiveness in downstream task completion, their reliability in following operational procedures and constraints remains largely unexplored. To this end, we present AgentOrca, a dual-system framework for evaluating language agents' compliance with operational constraints and routines. Our framework encodes action constraints and routines through both natural language prompts for agents and corresponding executable code serving as ground truth for automated verification. Through an automated pipeline of test case generation and evaluation across five real-world domains, we quantitatively assess current language agents' adherence to operational constraints. Our findings reveal notable performance gaps among state-of-the-art models, with large reasoning models like o1 demonstrating superior compliance while others show significantly lower performance, particularly when encountering complex constraints or user persuasion attempts."
+  },
+  {
+    "title": "Generating Robot Constitutions & Benchmarks for Semantic Safety",
+    "url": "http://arxiv.org/abs/2503.08663v1",
+    "arxiv_id": "2503.08663v1",
+    "authors": [
+      "Pierre Sermanet",
+      "Anirudha Majumdar",
+      "Alex Irpan",
+      "Dmitry Kalashnikov",
+      "Vikas Sindhwani"
+    ],
+    "published": "2025-03-11T17:50:47+00:00",
+    "summary": "Until recently, robotics safety research was predominantly about collision avoidance and hazard reduction in the immediate vicinity of a robot. Since the advent of large vision and language models (VLMs), robots are now also capable of higher-level semantic scene understanding and natural language interactions with humans. Despite their known vulnerabilities (e.g. hallucinations or jail-breaking), VLMs are being handed control of robots capable of physical contact with the real world. This can lead to dangerous behaviors, making semantic safety for robots a matter of immediate concern. Our contributions in this paper are two fold: first, to address these emerging risks, we release the ASIMOV Benchmark, a large-scale and comprehensive collection of datasets for evaluating and improving semantic safety of foundation models serving as robot brains. Our data generation recipe is highly scalable: by leveraging text and image generation techniques, we generate undesirable situations from real-world visual scenes and human injury reports from hospitals. Secondly, we develop a framework to automatically generate robot constitutions from real-world data to steer a robot's behavior using Constitutional AI mechanisms. We propose a novel auto-amending process that is able to introduce nuances in written rules of behavior; this can lead to increased alignment with human preferences on behavior desirability and safety. We explore trade-offs between generality and specificity across a diverse set of constitutions of different lengths, and demonstrate that a robot is able to effectively reject unconstitutional actions. We measure a top alignment rate of 84.3% on the ASIMOV Benchmark using generated constitutions, outperforming no-constitution baselines and human-written constitutions. Data is available at asimov-benchmark.github.io"
+  },
+  {
+    "title": "Exploiting Instruction-Following Retrievers for Malicious Information Retrieval",
+    "url": "http://arxiv.org/abs/2503.08644v1",
+    "arxiv_id": "2503.08644v1",
+    "authors": [
+      "Parishad BehnamGhader",
+      "Nicholas Meade",
+      "Siva Reddy"
+    ],
+    "published": "2025-03-11T17:36:53+00:00",
+    "summary": "Instruction-following retrievers have been widely adopted alongside LLMs in real-world applications, but little work has investigated the safety risks surrounding their increasing search capabilities. We empirically study the ability of retrievers to satisfy malicious queries, both when used directly and when used in a retrieval augmented generation-based setup. Concretely, we investigate six leading retrievers, including NV-Embed and LLM2Vec, and find that given malicious requests, most retrievers can (for >50% of queries) select relevant harmful passages. For example, LLM2Vec correctly selects passages for 61.35% of our malicious queries. We further uncover an emerging risk with instruction-following retrievers, where highly relevant harmful information can be surfaced by exploiting their instruction-following capabilities. Finally, we show that even safety-aligned LLMs, such as Llama3, can satisfy malicious requests when provided with harmful retrieved passages in-context. In summary, our findings underscore the malicious misuse risks associated with increasing retriever capability."
+  },
+  {
+    "title": "DeepReview: Improving LLM-based Paper Review with Human-like Deep Thinking Process",
+    "url": "http://arxiv.org/abs/2503.08569v1",
+    "arxiv_id": "2503.08569v1",
+    "authors": [
+      "Minjun Zhu",
+      "Yixuan Weng",
+      "Linyi Yang",
+      "Yue Zhang"
+    ],
+    "published": "2025-03-11T15:59:43+00:00",
+    "summary": "Large Language Models (LLMs) are increasingly utilized in scientific research assessment, particularly in automated paper review. However, existing LLM-based review systems face significant challenges, including limited domain expertise, hallucinated reasoning, and a lack of structured evaluation. To address these limitations, we introduce DeepReview, a multi-stage framework designed to emulate expert reviewers by incorporating structured analysis, literature retrieval, and evidence-based argumentation. Using DeepReview-13K, a curated dataset with structured annotations, we train DeepReviewer-14B, which outperforms CycleReviewer-70B with fewer tokens. In its best mode, DeepReviewer-14B achieves win rates of 88.21\\% and 80.20\\% against GPT-o1 and DeepSeek-R1 in evaluations. Our work sets a new benchmark for LLM-based paper review, with all resources publicly available. The code, model, dataset and demo have be released in http://ai-researcher.net."
+  },
+  {
+    "title": "Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies",
+    "url": "http://arxiv.org/abs/2503.08558v1",
+    "arxiv_id": "2503.08558v1",
+    "authors": [
+      "Chen Xu",
+      "Tony Khuong Nguyen",
+      "Emma Dixon",
+      "Christopher Rodriguez",
+      "Patrick Miller",
+      "Robert Lee",
+      "Paarth Shah",
+      "Rares Ambrus",
+      "Haruki Nishimura",
+      "Masha Itkina"
+    ],
+    "published": "2025-03-11T15:47:12+00:00",
+    "summary": "Recent years have witnessed impressive robotic manipulation systems driven by advances in imitation learning and generative modeling, such as diffusion- and flow-based approaches. As robot policy performance increases, so does the complexity and time horizon of achievable tasks, inducing unexpected and diverse failure modes that are difficult to predict a priori. To enable trustworthy policy deployment in safety-critical human environments, reliable runtime failure detection becomes important during policy inference. However, most existing failure detection approaches rely on prior knowledge of failure modes and require failure data during training, which imposes a significant challenge in practicality and scalability. In response to these limitations, we present FAIL-Detect, a modular two-stage approach for failure detection in imitation learning-based robotic manipulation. To accurately identify failures from successful training data alone, we frame the problem as sequential out-of-distribution (OOD) detection. We first distill policy inputs and outputs into scalar signals that correlate with policy failures and capture epistemic uncertainty. FAIL-Detect then employs conformal prediction (CP) as a versatile framework for uncertainty quantification with statistical guarantees. Empirically, we thoroughly investigate both learned and post-hoc scalar signal candidates on diverse robotic manipulation tasks. Our experiments show learned signals to be mostly consistently effective, particularly when using our novel flow-based density estimator. Furthermore, our method detects failures more accurately and faster than state-of-the-art (SOTA) failure detection baselines. These results highlight the potential of FAIL-Detect to enhance the safety and reliability of imitation learning-based robotic systems as they progress toward real-world deployment."
+  },
+  {
+    "title": "An Analysis of Safety Guarantees in Multi-Task Bayesian Optimization",
+    "url": "http://arxiv.org/abs/2503.08555v1",
+    "arxiv_id": "2503.08555v1",
+    "authors": [
+      "Jannis O. Luebsen",
+      "Annika Eichler"
+    ],
+    "published": "2025-03-11T15:45:37+00:00",
+    "summary": "In many practical scenarios of black box optimization, the objective function is subject to constraints that must be satisfied to avoid undesirable outcomes. Such constraints are typically unknown and must be learned during optimization. Safe Bayesian optimization aims to find the global optimum while ensuring that the constraints are satisfied with high probability. However, it is often sample-inefficient due to the small initial feasible set, which requires expansion by evaluating the objective or constraint functions, limiting its applicability to low-dimensional or inexpensive problems. To enhance sample efficiency, additional information from cheap simulations can be leveraged, albeit at the cost of safeness guarantees. This paper introduces a novel safe multi-task Bayesian optimization algorithm that integrates multiple tasks while maintaining high-probability safety. We derive robust uniform error bounds for the multi-task case and demonstrate the effectiveness of the approach on benchmark functions and a control problem. Our results show a significant improvement in sample efficiency, making the proposed method well-suited for expensive-to-evaluate functions."
+  },
+  {
+    "title": "Soft Actor-Critic-based Control Barrier Adaptation for Robust Autonomous Navigation in Unknown Environments",
+    "url": "http://arxiv.org/abs/2503.08479v1",
+    "arxiv_id": "2503.08479v1",
+    "authors": [
+      "Nicholas Mohammad",
+      "Nicola Bezzo"
+    ],
+    "published": "2025-03-11T14:33:55+00:00",
+    "summary": "Motion planning failures during autonomous navigation often occur when safety constraints are either too conservative, leading to deadlocks, or too liberal, resulting in collisions. To improve robustness, a robot must dynamically adapt its safety constraints to ensure it reaches its goal while balancing safety and performance measures. To this end, we propose a Soft Actor-Critic (SAC)-based policy for adapting Control Barrier Function (CBF) constraint parameters at runtime, ensuring safe yet non-conservative motion. The proposed approach is designed for a general high-level motion planner, low-level controller, and target system model, and is trained in simulation only. Through extensive simulations and physical experiments, we demonstrate that our framework effectively adapts CBF constraints, enabling the robot to reach its final goal without compromising safety."
+  },
+  {
+    "title": "Status and Future Prospects of the Standardization Framework Industry 4.0: A European Perspective",
+    "url": "http://arxiv.org/abs/2503.08460v1",
+    "arxiv_id": "2503.08460v1",
+    "authors": [
+      "Olga Meyer",
+      "Marvin Boell",
+      "Christoph Legat"
+    ],
+    "published": "2025-03-11T14:08:57+00:00",
+    "summary": "The rapid development of Industry 4.0 technologies requires robust and comprehensive standardization to ensure interoperability, safety and efficiency in the Industry of the Future. This paper examines the fundamental role and functionality of standardization, with a particular focus on its importance in Europe's regulatory framework. Based on this, selected topics in context of standardization activities in context intelligent manufacturing and digital twins are highlighted and, by that, an overview of the Industry 4.0 standards framework is provided. This paper serves both as an informative guide to the existing standards in Industry 4.0 with respect to Artificial Intelligence and Digital Twins, and as a call to action for increased cooperation between standardization bodies and the research community. By fostering such collaboration, we aim to facilitate the continued development and implementation of standards that will drive innovation and progress in the manufacturing sector."
+  },
+  {
+    "title": "ICPR 2024 Competition on Rider Intention Prediction",
+    "url": "http://arxiv.org/abs/2503.08437v1",
+    "arxiv_id": "2503.08437v1",
+    "authors": [
+      "Shankar Gangisetty",
+      "Abdul Wasi",
+      "Shyam Nandan Rai",
+      "C. V. Jawahar",
+      "Sajay Raj",
+      "Manish Prajapati",
+      "Ayesha Choudhary",
+      "Aaryadev Chandra",
+      "Dev Chandan",
+      "Shireen Chand",
+      "Suvaditya Mukherjee"
+    ],
+    "published": "2025-03-11T13:50:37+00:00",
+    "summary": "The recent surge in the vehicle market has led to an alarming increase in road accidents. This underscores the critical importance of enhancing road safety measures, particularly for vulnerable road users like motorcyclists. Hence, we introduce the rider intention prediction (RIP) competition that aims to address challenges in rider safety by proactively predicting maneuvers before they occur, thereby strengthening rider safety. This capability enables the riders to react to the potential incorrect maneuvers flagged by advanced driver assistance systems (ADAS). We collect a new dataset, namely, rider action anticipation dataset (RAAD) for the competition consisting of two tasks: single-view RIP and multi-view RIP. The dataset incorporates a spectrum of traffic conditions and challenging navigational maneuvers on roads with varying lighting conditions. For the competition, we received seventy-five registrations and five team submissions for inference of which we compared the methods of the top three performing teams on both the RIP tasks: one state-space model (Mamba2) and two learning-based approaches (SVM and CNN-LSTM). The results indicate that the state-space model outperformed the other methods across the entire dataset, providing a balanced performance across maneuver classes. The SVM-based RIP method showed the second-best performance when using random sampling and SMOTE. However, the CNN-LSTM method underperformed, primarily due to class imbalance issues, particularly struggling with minority classes. This paper details the proposed RAAD dataset and provides a summary of the submissions for the RIP 2024 competition."
+  },
+  {
+    "title": "Uni-Gaussians: Unifying Camera and Lidar Simulation with Gaussians for Dynamic Driving Scenarios",
+    "url": "http://arxiv.org/abs/2503.08317v1",
+    "arxiv_id": "2503.08317v1",
+    "authors": [
+      "Zikang Yuan",
+      "Yuechuan Pu",
+      "Hongcheng Luo",
+      "Fengtian Lang",
+      "Cheng Chi",
+      "Teng Li",
+      "Yingying Shen",
+      "Haiyang Sun",
+      "Bing Wang",
+      "Xin Yang"
+    ],
+    "published": "2025-03-11T11:25:57+00:00",
+    "summary": "Ensuring the safety of autonomous vehicles necessitates comprehensive simulation of multi-sensor data, encompassing inputs from both cameras and LiDAR sensors, across various dynamic driving scenarios. Neural rendering techniques, which utilize collected raw sensor data to simulate these dynamic environments, have emerged as a leading methodology. While NeRF-based approaches can uniformly represent scenes for rendering data from both camera and LiDAR, they are hindered by slow rendering speeds due to dense sampling. Conversely, Gaussian Splatting-based methods employ Gaussian primitives for scene representation and achieve rapid rendering through rasterization. However, these rasterization-based techniques struggle to accurately model non-linear optical sensors. This limitation restricts their applicability to sensors beyond pinhole cameras. To address these challenges and enable unified representation of dynamic driving scenarios using Gaussian primitives, this study proposes a novel hybrid approach. Our method utilizes rasterization for rendering image data while employing Gaussian ray-tracing for LiDAR data rendering. Experimental results on public datasets demonstrate that our approach outperforms current state-of-the-art methods. This work presents a unified and efficient solution for realistic simulation of camera and LiDAR data in autonomous driving scenarios using Gaussian primitives, offering significant advancements in both rendering quality and computational efficiency."
+  },
+  {
+    "title": "Dynamic Risk Assessment for Human-Robot Collaboration Using a Heuristics-based Approach",
+    "url": "http://arxiv.org/abs/2503.08316v1",
+    "arxiv_id": "2503.08316v1",
+    "authors": [
+      "Georgios Katranis",
+      "Frederik Plahl",
+      "Joachim Grimstadt",
+      "Ilshat Mamaev",
+      "Silvia Vock",
+      "Andrey Morozov"
+    ],
+    "published": "2025-03-11T11:25:47+00:00",
+    "summary": "Human-robot collaboration (HRC) introduces significant safety challenges, particularly in protecting human operators working alongside collaborative robots (cobots). While current ISO standards emphasize risk assessment and hazard identification, these procedures are often insufficient for addressing the complexity of HRC environments, which involve numerous design factors and dynamic interactions. This publication presents a method for objective hazard analysis to support Dynamic Risk Assessment, extending beyond reliance on expert knowledge. The approach monitors scene parameters, such as the distance between human body parts and the cobot, as well as the cobot`s Cartesian velocity. Additionally, an anthropocentric parameter focusing on the orientation of the human head within the collaborative workspace is introduced. These parameters are transformed into hazard indicators using non-linear heuristic functions. The hazard indicators are then aggregated to estimate the total hazard level of a given scenario. The proposed method is evaluated using an industrial dataset that depicts various interactions between a human operator and a cobot."
+  },
+  {
+    "title": "Safety-Ensured Control Framework for Robotic Endoscopic Task Automation",
+    "url": "http://arxiv.org/abs/2503.08214v1",
+    "arxiv_id": "2503.08214v1",
+    "authors": [
+      "Yitaek Kim",
+      "I\u00f1igo Iturrate",
+      "Christoffer Sloth",
+      "Hansoul Kim"
+    ],
+    "published": "2025-03-11T09:28:35+00:00",
+    "summary": "There is growing interest in automating surgical tasks using robotic systems, such as endoscopy for treating gastrointestinal (GI) cancer. However, previous studies have primarily focused on detecting and analyzing objects or robots, with limited attention to ensuring safety, which is critical for clinical applications, where accidents can be caused by unsafe robot motions. In this study, we propose a new control framework that can formally ensure the safety of automating certain processes involved in endoscopic submucosal dissection (ESD), a representative endoscopic surgical method for the treatment of early GI cancer, by using an endoscopic robot. The proposed framework utilizes Control Barrier Functions (CBFs) to accurately identify the boundaries of individual tumors, even in close proximity within the GI tract, ensuring precise treatment and removal while preserving the surrounding normal tissue. Additionally, by adopting a model-free control scheme, safety assurance is made possible even in endoscopic robotic systems where dynamic modeling is challenging. We demonstrate the proposed framework in cases where the tumors to be removed are close to each other, showing that the safety constraints are enforced. We show that the model-free CBF-based controlled robot eliminates one tumor completely without damaging it, while not invading another nearby tumor."
+  },
+  {
+    "title": "Dialogue Injection Attack: Jailbreaking LLMs through Context Manipulation",
+    "url": "http://arxiv.org/abs/2503.08195v1",
+    "arxiv_id": "2503.08195v1",
+    "authors": [
+      "Wenlong Meng",
+      "Fan Zhang",
+      "Wendao Yao",
+      "Zhenyuan Guo",
+      "Yuwei Li",
+      "Chengkun Wei",
+      "Wenzhi Chen"
+    ],
+    "published": "2025-03-11T09:00:45+00:00",
+    "summary": "Large language models (LLMs) have demonstrated significant utility in a wide range of applications; however, their deployment is plagued by security vulnerabilities, notably jailbreak attacks. These attacks manipulate LLMs to generate harmful or unethical content by crafting adversarial prompts. While much of the current research on jailbreak attacks has focused on single-turn interactions, it has largely overlooked the impact of historical dialogues on model behavior. In this paper, we introduce a novel jailbreak paradigm, Dialogue Injection Attack (DIA), which leverages the dialogue history to enhance the success rates of such attacks. DIA operates in a black-box setting, requiring only access to the chat API or knowledge of the LLM's chat template. We propose two methods for constructing adversarial historical dialogues: one adapts gray-box prefilling attacks, and the other exploits deferred responses. Our experiments show that DIA achieves state-of-the-art attack success rates on recent LLMs, including Llama-3.1 and GPT-4o. Additionally, we demonstrate that DIA can bypass 5 different defense mechanisms, highlighting its robustness and effectiveness."
+  },
+  {
+    "title": "FASIONAD++ : Integrating High-Level Instruction and Information Bottleneck in FAt-Slow fusION Systems for Enhanced Safety in Autonomous Driving with Adaptive Feedback",
+    "url": "http://arxiv.org/abs/2503.08162v1",
+    "arxiv_id": "2503.08162v1",
+    "authors": [
+      "Kangan Qian",
+      "Ziang Luo",
+      "Sicong Jiang",
+      "Zilin Huang",
+      "Jinyu Miao",
+      "Zhikun Ma",
+      "Tianze Zhu",
+      "Jiayin Li",
+      "Yangfan He",
+      "Zheng Fu",
+      "Yining Shi",
+      "Boyue Wang",
+      "Hezhe Lin",
+      "Ziyu Chen",
+      "Jiangbo Yu",
+      "Xinyu Jiao",
+      "Mengmeng Yang",
+      "Kun Jiang",
+      "Diange Yang"
+    ],
+    "published": "2025-03-11T08:27:01+00:00",
+    "summary": "Ensuring safe, comfortable, and efficient planning is crucial for autonomous driving systems. While end-to-end models trained on large datasets perform well in standard driving scenarios, they struggle with complex low-frequency events. Recent Large Language Models (LLMs) and Vision Language Models (VLMs) advancements offer enhanced reasoning but suffer from computational inefficiency. Inspired by the dual-process cognitive model \"Thinking, Fast and Slow\", we propose $\\textbf{FASIONAD}$ -- a novel dual-system framework that synergizes a fast end-to-end planner with a VLM-based reasoning module. The fast system leverages end-to-end learning to achieve real-time trajectory generation in common scenarios, while the slow system activates through uncertainty estimation to perform contextual analysis and complex scenario resolution. Our architecture introduces three key innovations: (1) A dynamic switching mechanism enabling slow system intervention based on real-time uncertainty assessment; (2) An information bottleneck with high-level plan feedback that optimizes the slow system's guidance capability; (3) A bidirectional knowledge exchange where visual prompts enhance the slow system's reasoning while its feedback refines the fast planner's decision-making. To strengthen VLM reasoning, we develop a question-answering mechanism coupled with reward-instruct training strategy. In open-loop experiments, FASIONAD achieves a $6.7\\%$ reduction in average $L2$ trajectory error and $28.1\\%$ lower collision rate."
+  },
+  {
+    "title": "Toward Stable World Models: Measuring and Addressing World Instability in Generative Environments",
+    "url": "http://arxiv.org/abs/2503.08122v1",
+    "arxiv_id": "2503.08122v1",
+    "authors": [
+      "Soonwoo Kwon",
+      "Jin-Young Kim",
+      "Hyojun Go",
+      "Kyungjune Baek"
+    ],
+    "published": "2025-03-11T07:38:11+00:00",
+    "summary": "We present a novel study on enhancing the capability of preserving the content in world models, focusing on a property we term World Stability. Recent diffusion-based generative models have advanced the synthesis of immersive and realistic environments that are pivotal for applications such as reinforcement learning and interactive game engines. However, while these models excel in quality and diversity, they often neglect the preservation of previously generated scenes over time--a shortfall that can introduce noise into agent learning and compromise performance in safety-critical settings. In this work, we introduce an evaluation framework that measures world stability by having world models perform a sequence of actions followed by their inverses to return to their initial viewpoint, thereby quantifying the consistency between the starting and ending observations. Our comprehensive assessment of state-of-the-art diffusion-based world models reveals significant challenges in achieving high world stability. Moreover, we investigate several improvement strategies to enhance world stability. Our results underscore the importance of world stability in world modeling and provide actionable insights for future research in this domain."
+  },
+  {
+    "title": "Control Barrier Functions for Prescribed-time Reach-Avoid-Stay Tasks using Spatiotemporal Tubes",
+    "url": "http://arxiv.org/abs/2503.08106v1",
+    "arxiv_id": "2503.08106v1",
+    "authors": [
+      "Ratnangshu Das",
+      "Pranav Bakshi",
+      "Pushpak Jagtap"
+    ],
+    "published": "2025-03-11T07:15:49+00:00",
+    "summary": "Prescribed-time reach-avoid-stay (PT-RAS) specifications are crucial in applications requiring precise timing, state constraints, and safety guarantees. While control carrier functions (CBFs) have emerged as a promising approach, providing formal guarantees of safety, constructing CBFs that satisfy PT-RAS specifications remains challenging. In this paper, we present a novel approach using a spatiotemporal tubes (STTs) framework to construct CBFs for PT-RAS tasks. The STT framework allows for the systematic design of CBFs that dynamically manage both spatial and temporal constraints, ensuring the system remains within a safe operational envelope while achieving the desired temporal objectives. The proposed method is validated with two case studies: temporal motion planning of an omnidirectional robot and temporal waypoint navigation of a drone with obstacles, using higher-order CBFs."
+  },
+  {
+    "title": "Enhancing Vehicle Platooning Safety via Control Node Placement and Sizing under State and Input Bounds",
+    "url": "http://arxiv.org/abs/2503.08089v1",
+    "arxiv_id": "2503.08089v1",
+    "authors": [
+      "Yifei She",
+      "Shen Wang",
+      "Ahmad Taha",
+      "Xiaofeng Tao"
+    ],
+    "published": "2025-03-11T06:45:29+00:00",
+    "summary": "Vehicle platooning with Cooperative Adaptive Cruise Control improves traffic efficiency, reduces energy consumption, and enhances safety but remains vulnerable to cyber-attacks that disrupt communication and cause unsafe actions. To address these risks, this paper investigates control node placement and input bound optimization to balance safety and defense efficiency under various conditions. We propose a two-stage actuator placement and actuator saturation approach, which focuses on identifying key actuators that maximize the system's controllability while operating under state and input constraints. By strategically placing and limiting the input bounds of critical actuators, we ensure that vehicles maintain safe distances even under attack. Simulation results show that our method effectively mitigates the impact of attacks while preserving defense efficiency, offering a robust solution to vehicle platooning safety challenges."
+  },
+  {
+    "title": "TRUST: Stability and Safety Controller Synthesis for Unknown Dynamical Models Using a Single Trajectory",
+    "url": "http://arxiv.org/abs/2503.08081v1",
+    "arxiv_id": "2503.08081v1",
+    "authors": [
+      "Jamie Gardner",
+      "Ben Wooding",
+      "Amy Nejati",
+      "Abolfazl Lavaei"
+    ],
+    "published": "2025-03-11T06:27:40+00:00",
+    "summary": "TRUST is an open-source software tool developed for data-driven controller synthesis of dynamical systems with unknown mathematical models, ensuring either stability or safety properties. By collecting only a single input-state trajectory from the unknown system and satisfying a rank condition that ensures the system is persistently excited according to the Willems et al.'s fundamental lemma, TRUST aims to design either control Lyapunov functions (CLF) or control barrier certificates (CBC), along with their corresponding stability or safety controllers. The tool implements sum-of-squares (SOS) optimization programs solely based on data to enforce stability or safety properties across four system classes: (i) continuous-time nonlinear polynomial systems, (ii) continuous-time linear systems, (iii) discrete-time nonlinear polynomial systems, and (iv) discrete-time linear systems. TRUST is a Python-based web application featuring an intuitive, reactive graphic user interface (GUI) built with web technologies. It can be accessed at https://trust.tgo.dev or installed locally, and supports both manual data entry and data file uploads. Leveraging the power of the Python backend and a JavaScript frontend, TRUST is designed to be highly user-friendly and accessible across desktop, laptop, tablet, and mobile devices. We apply TRUST to a set of physical benchmarks with unknown dynamics, ensuring either stability or safety properties across the four supported classes of models."
+  },
+  {
+    "title": "STGDPM:Vessel Trajectory Prediction with Spatio-Temporal Graph Diffusion Probabilistic Model",
+    "url": "http://arxiv.org/abs/2503.08065v1",
+    "arxiv_id": "2503.08065v1",
+    "authors": [
+      "Jin Wenzhe",
+      "Tang Haina",
+      "Zhang Xudong"
+    ],
+    "published": "2025-03-11T05:50:27+00:00",
+    "summary": "Vessel trajectory prediction is a critical component for ensuring maritime traffic safety and avoiding collisions. Due to the inherent uncertainty in vessel behavior, trajectory prediction systems must adopt a multimodal approach to accurately model potential future motion states. However, existing vessel trajectory prediction methods lack the ability to comprehensively model behavioral multi-modality. To better capture multimodal behavior in interactive scenarios, we propose modeling interactions as dynamic graphs, replacing traditional aggregation-based techniques that rely on vessel states. By leveraging the natural multimodal capabilities of diffusion models, we frame the trajectory prediction task as an inverse process of motion uncertainty diffusion, wherein uncertainties across potential navigational areas are progressively eliminated until the desired trajectories is produced. In summary, we pioneer the integration of Spatio-Temporal Graph (STG) with diffusion models in ship trajectory prediction. Extensive experiments on real Automatic Identification System (AIS) data validate the superiority of our approach."
+  },
+  {
+    "title": "Data-Driven Dynamic Controller Synthesis for Discrete-Time General Nonlinear Systems",
+    "url": "http://arxiv.org/abs/2503.08060v1",
+    "arxiv_id": "2503.08060v1",
+    "authors": [
+      "Behrad Samari",
+      "Abolfazl Lavaei"
+    ],
+    "published": "2025-03-11T05:38:47+00:00",
+    "summary": "Synthesizing safety controllers for general nonlinear systems is a highly challenging task, particularly when the system models are unknown, and input constraints are present. While some recent efforts have explored data-driven safety controller design for nonlinear systems, these approaches are primarily limited to specific classes of nonlinear dynamics (e.g., polynomials) and are not applicable to general nonlinear systems. This paper develops a direct data-driven approach for discrete-time general nonlinear systems, facilitating the simultaneous learning of control barrier certificates (CBCs) and dynamic controllers to ensure safety properties under input constraints. Specifically, by leveraging the adding-one-integrator approach, we incorporate the controller's dynamics into the system dynamics to synthesize a virtual static-feedback controller for the augmented system, resulting in a dynamic safety controller for the actual dynamics. We collect input-state data from the augmented system during a finite-time experiment, referred to as a single trajectory. Using this data, we learn augmented CBCs and the corresponding virtual safety controllers, ensuring the safety of the actual system and adherence to input constraints over a finite time horizon. We demonstrate that our proposed conditions boil down to some data-dependent linear matrix inequalities (LMIs), which are easy to satisfy. We showcase the effectiveness of our data-driven approach through two case studies: one exhibiting significant nonlinearity and the other featuring high dimensionality."
+  },
+  {
+    "title": "SGNetPose+: Stepwise Goal-Driven Networks with Pose Information for Trajectory Prediction in Autonomous Driving",
+    "url": "http://arxiv.org/abs/2503.08016v1",
+    "arxiv_id": "2503.08016v1",
+    "authors": [
+      "Akshat Ghiya",
+      "Ali K. AlShami",
+      "Jugal Kalita"
+    ],
+    "published": "2025-03-11T03:45:51+00:00",
+    "summary": "Predicting pedestrian trajectories is essential for autonomous driving systems, as it significantly enhances safety and supports informed decision-making. Accurate predictions enable the prevention of collisions, anticipation of crossing intent, and improved overall system efficiency. In this study, we present SGNetPose+, an enhancement of the SGNet architecture designed to integrate skeleton information or body segment angles with bounding boxes to predict pedestrian trajectories from video data to avoid hazards in autonomous driving. Skeleton information was extracted using a pose estimation model, and joint angles were computed based on the extracted joint data. We also apply temporal data augmentation by horizontally flipping video frames to increase the dataset size and improve performance. Our approach achieves state-of-the-art results on the JAAD and PIE datasets using pose data with the bounding boxes, outperforming the SGNet model. Code is available on Github: SGNetPose+."
+  },
+  {
+    "title": "STEAD: Spatio-Temporal Efficient Anomaly Detection for Time and Compute Sensitive Applications",
+    "url": "http://arxiv.org/abs/2503.07942v1",
+    "arxiv_id": "2503.07942v1",
+    "authors": [
+      "Andrew Gao",
+      "Jun Liu"
+    ],
+    "published": "2025-03-11T00:48:32+00:00",
+    "summary": "This paper presents a new method for anomaly detection in automated systems with time and compute sensitive requirements, such as autonomous driving, with unparalleled efficiency. As systems like autonomous driving become increasingly popular, ensuring their safety has become more important than ever. Therefore, this paper focuses on how to quickly and effectively detect various anomalies in the aforementioned systems, with the goal of making them safer and more effective. Many detection systems have been developed with great success under spatial contexts; however, there is still significant room for improvement when it comes to temporal context. While there is substantial work regarding this task, there is minimal work done regarding the efficiency of models and their ability to be applied to scenarios that require real-time inference, i.e., autonomous driving where anomalies need to be detected the moment they are within view. To address this gap, we propose STEAD (Spatio-Temporal Efficient Anomaly Detection), whose backbone is developed using (2+1)D Convolutions and Performer Linear Attention, which ensures computational efficiency without sacrificing performance. When tested on the UCF-Crime benchmark, our base model achieves an AUC of 91.34%, outperforming the previous state-of-the-art, and our fast version achieves an AUC of 88.87%, while having 99.70% less parameters and outperforming the previous state-of-the-art as well. The code and pretrained models are made publicly available at https://github.com/agao8/STEAD"
+  },
+  {
+    "title": "Intelligent Framework for Human-Robot Collaboration: Safety, Dynamic Ergonomics, and Adaptive Decision-Making",
+    "url": "http://arxiv.org/abs/2503.07901v1",
+    "arxiv_id": "2503.07901v1",
+    "authors": [
+      "Francesco Iodice",
+      "Elena De Momi",
+      "Arash Ajoudani"
+    ],
+    "published": "2025-03-10T22:43:07+00:00",
+    "summary": "The integration of collaborative robots into industrial environments has improved productivity, but has also highlighted significant challenges related to operator safety and ergonomics. This paper proposes an innovative framework that integrates advanced visual perception technologies, real-time ergonomic monitoring, and Behaviour Tree (BT)-based adaptive decision-making. Unlike traditional methods, which often operate in isolation or statically, our approach combines deep learning models (YOLO11 and SlowOnly), advanced tracking (Unscented Kalman Filter) and dynamic ergonomic assessments (OWAS), offering a modular, scalable and adaptive system. Experimental results show that the framework outperforms previous methods in several aspects: accuracy in detecting postures and actions, adaptivity in managing human-robot interactions, and ability to reduce ergonomic risk through timely robotic interventions. In particular, the visual perception module showed superiority over YOLOv9 and YOLOv8, while real-time ergonomic monitoring eliminated the limitations of static analysis. Adaptive role management, made possible by the Behaviour Tree, provided greater responsiveness than rule-based systems, making the framework suitable for complex industrial scenarios. Our system demonstrated a 92.5\\% accuracy in grasping intention recognition and successfully classified ergonomic risks with real-time responsiveness (average latency of 0.57 seconds), enabling timely robotic"
+  },
+  {
+    "title": "Safety Guardrails for LLM-Enabled Robots",
+    "url": "http://arxiv.org/abs/2503.07885v1",
+    "arxiv_id": "2503.07885v1",
+    "authors": [
+      "Zachary Ravichandran",
+      "Alexander Robey",
+      "Vijay Kumar",
+      "George J. Pappas",
+      "Hamed Hassani"
+    ],
+    "published": "2025-03-10T22:01:56+00:00",
+    "summary": "Although the integration of large language models (LLMs) into robotics has unlocked transformative capabilities, it has also introduced significant safety concerns, ranging from average-case LLM errors (e.g., hallucinations) to adversarial jailbreaking attacks, which can produce harmful robot behavior in real-world settings. Traditional robot safety approaches do not address the novel vulnerabilities of LLMs, and current LLM safety guardrails overlook the physical risks posed by robots operating in dynamic real-world environments. In this paper, we propose RoboGuard, a two-stage guardrail architecture to ensure the safety of LLM-enabled robots. RoboGuard first contextualizes pre-defined safety rules by grounding them in the robot's environment using a root-of-trust LLM, which employs chain-of-thought (CoT) reasoning to generate rigorous safety specifications, such as temporal logic constraints. RoboGuard then resolves potential conflicts between these contextual safety specifications and a possibly unsafe plan using temporal logic control synthesis, which ensures safety compliance while minimally violating user preferences. Through extensive simulation and real-world experiments that consider worst-case jailbreaking attacks, we demonstrate that RoboGuard reduces the execution of unsafe plans from 92% to below 2.5% without compromising performance on safe plans. We also demonstrate that RoboGuard is resource-efficient, robust against adaptive attacks, and significantly enhanced by enabling its root-of-trust LLM to perform CoT reasoning. These results underscore the potential of RoboGuard to mitigate the safety risks and enhance the reliability of LLM-enabled robots."
+  },
+  {
+    "title": "Health Prognostics in Multi-sensor Systems Based on Multivariate Functional Data Analysis",
+    "url": "http://arxiv.org/abs/2503.07854v1",
+    "arxiv_id": "2503.07854v1",
+    "authors": [
+      "Cevahir Yildirim",
+      "Alba M. Franco-Pereira",
+      "Rosa E. Lillo"
+    ],
+    "published": "2025-03-10T21:00:48+00:00",
+    "summary": "Recent developments in big data analysis, machine learning, Industry 4.0, and IoT applications have enabled the monitoring and processing of multi-sensor data collected from systems, allowing for the prediction of the \"Remaining Useful Life\" (RUL) of system components. Particularly in the aviation industry, Prognostic Health Management (PHM) has become one of the most important practices for ensuring reliability and safety. Not only is the accuracy of RUL prediction important, but the implementability of techniques, domain adaptability, and interpretability of system degradation behaviors have also become essential. In this paper, the data collected from the multi-sensor environment of complex systems are processed using a Functional Data Analysis (FDA) approach to predict when the systems will fail and to understand and interpret the systems' life cycles. The approach is applied to the C-MAPSS datasets shared by National Aeronautics and Space Administration, and the behaviors of the sensors in aircraft engine failures are adaptively modeled with Multivariate Functional Principal Component Analysis (MFPCA). While the results indicate that the proposed method predicts the RUL competitively compared to other methods in the literature, it also demonstrates how multivariate Functional Data Analysis is useful for interpretability in prognostic studies within multi-sensor environments."
+  },
+  {
+    "title": "Safe Explicable Policy Search",
+    "url": "http://arxiv.org/abs/2503.07848v1",
+    "arxiv_id": "2503.07848v1",
+    "authors": [
+      "Akkamahadevi Hanni",
+      "Jonathan Monta\u00f1o",
+      "Yu Zhang"
+    ],
+    "published": "2025-03-10T20:52:41+00:00",
+    "summary": "When users work with AI agents, they form conscious or subconscious expectations of them. Meeting user expectations is crucial for such agents to engage in successful interactions and teaming. However, users may form expectations of an agent that differ from the agent's planned behaviors. These differences lead to the consideration of two separate decision models in the planning process to generate explicable behaviors. However, little has been done to incorporate safety considerations, especially in a learning setting. We present Safe Explicable Policy Search (SEPS), which aims to provide a learning approach to explicable behavior generation while minimizing the safety risk, both during and after learning. We formulate SEPS as a constrained optimization problem where the agent aims to maximize an explicability score subject to constraints on safety and a suboptimality criterion based on the agent's model. SEPS innovatively combines the capabilities of Constrained Policy Optimization and Explicable Policy Search. We evaluate SEPS in safety-gym environments and with a physical robot experiment to show that it can learn explicable behaviors that adhere to the agent's safety requirements and are efficient. Results show that SEPS can generate safe and explicable behaviors while ensuring a desired level of performance w.r.t. the agent's objective, and has real-world relevance in human-AI teaming."
+  },
+  {
+    "title": "Improving Pedestrian Safety at Intersections Using Probabilistic Models and Monte Carlo Simulations",
+    "url": "http://arxiv.org/abs/2503.07805v1",
+    "arxiv_id": "2503.07805v1",
+    "authors": [
+      "Alben Rome Bagabaldo",
+      "J\u00fcrgen Hackl"
+    ],
+    "published": "2025-03-10T19:39:18+00:00",
+    "summary": "National Highway Traffic Safety Administration reported 7,345 pedestrian fatalities in the United States in 2022, making pedestrian safety a pressing issue in urban mobility. This study presents a novel probabilistic simulation framework integrating dynamic pedestrian crossing models and Monte Carlo simulations to evaluate safety under varying traffic conditions. The framework captures key influences on pedestrian decisions, such as traffic light states, vehicle proximity, and waiting times, while employing the Intelligent Driver Model (IDM) to simulate realistic vehicle dynamics. Results from 500 trials show that pedestrians avoid crossing during green lights, reducing collision risks, while shorter waiting times during red lights encourage safer crossings. The risk is heightened during yellow lights, especially with nearby vehicles. This research emphasizes the importance of adaptive traffic control measures, such as pedestrian-triggered signals and enhanced traffic light timing, to mitigate risks and prioritize pedestrian safety. By modeling realistic interactions between pedestrians and vehicles, the study offers insights for designing safer and more sustainable urban intersections."
+  },
+  {
+    "title": "A Simple Approach to Constraint-Aware Imitation Learning with Application to Autonomous Racing",
+    "url": "http://arxiv.org/abs/2503.07737v1",
+    "arxiv_id": "2503.07737v1",
+    "authors": [
+      "Shengfan Cao",
+      "Eunhyek Joa",
+      "Francesco Borrelli"
+    ],
+    "published": "2025-03-10T18:00:16+00:00",
+    "summary": "Guaranteeing constraint satisfaction is challenging in imitation learning (IL), particularly in tasks that require operating near a system's handling limits. Traditional IL methods often struggle to enforce constraints, leading to suboptimal performance in high-precision tasks. In this paper, we present a simple approach to incorporating safety into the IL objective. Through simulations, we empirically validate our approach on an autonomous racing task with both full-state and image feedback, demonstrating improved constraint satisfaction and greater consistency in task performance compared to a baseline method."
+  },
+  {
+    "title": "AlphaDrive: Unleashing the Power of VLMs in Autonomous Driving via Reinforcement Learning and Reasoning",
+    "url": "http://arxiv.org/abs/2503.07608v1",
+    "arxiv_id": "2503.07608v1",
+    "authors": [
+      "Bo Jiang",
+      "Shaoyu Chen",
+      "Qian Zhang",
+      "Wenyu Liu",
+      "Xinggang Wang"
+    ],
+    "published": "2025-03-10T17:59:42+00:00",
+    "summary": "OpenAI o1 and DeepSeek R1 achieve or even surpass human expert-level performance in complex domains like mathematics and science, with reinforcement learning (RL) and reasoning playing a crucial role. In autonomous driving, recent end-to-end models have greatly improved planning performance but still struggle with long-tailed problems due to limited common sense and reasoning abilities. Some studies integrate vision-language models (VLMs) into autonomous driving, but they typically rely on pre-trained models with simple supervised fine-tuning (SFT) on driving data, without further exploration of training strategies or optimizations specifically tailored for planning. In this paper, we propose AlphaDrive, a RL and reasoning framework for VLMs in autonomous driving. AlphaDrive introduces four GRPO-based RL rewards tailored for planning and employs a two-stage planning reasoning training strategy that combines SFT with RL. As a result, AlphaDrive significantly improves both planning performance and training efficiency compared to using only SFT or without reasoning. Moreover, we are also excited to discover that, following RL training, AlphaDrive exhibits some emergent multimodal planning capabilities, which is critical for improving driving safety and efficiency. To the best of our knowledge, AlphaDrive is the first to integrate GRPO-based RL with planning reasoning into autonomous driving. Code will be released to facilitate future research."
+  },
+  {
+    "title": "Implicit Reasoning in Transformers is Reasoning through Shortcuts",
+    "url": "http://arxiv.org/abs/2503.07604v1",
+    "arxiv_id": "2503.07604v1",
+    "authors": [
+      "Tianhe Lin",
+      "Jian Xie",
+      "Siyu Yuan",
+      "Deqing Yang"
+    ],
+    "published": "2025-03-10T17:58:31+00:00",
+    "summary": "Test-time compute is emerging as a new paradigm for enhancing language models' complex multi-step reasoning capabilities, as demonstrated by the success of OpenAI's o1 and o3, as well as DeepSeek's R1. Compared to explicit reasoning in test-time compute, implicit reasoning is more inference-efficient, requiring fewer generated tokens. However, why does the advanced reasoning capability fail to emerge in the implicit reasoning style? In this work, we train GPT-2 from scratch on a curated multi-step mathematical reasoning dataset and conduct analytical experiments to investigate how language models perform implicit reasoning in multi-step tasks. Our findings reveal: 1) Language models can perform step-by-step reasoning and achieve high accuracy in both in-domain and out-of-domain tests via implicit reasoning. However, this capability only emerges when trained on fixed-pattern data. 2) Conversely, implicit reasoning abilities emerging from training on unfixed-pattern data tend to overfit a specific pattern and fail to generalize further. Notably, this limitation is also observed in state-of-the-art large language models. These findings suggest that language models acquire implicit reasoning through shortcut learning, enabling strong performance on tasks with similar patterns while lacking generalization."
+  },
+  {
+    "title": "PointVLA: Injecting the 3D World into Vision-Language-Action Models",
+    "url": "http://arxiv.org/abs/2503.07511v1",
+    "arxiv_id": "2503.07511v1",
+    "authors": [
+      "Chengmeng Li",
+      "Junjie Wen",
+      "Yan Peng",
+      "Yaxin Peng",
+      "Feifei Feng",
+      "Yichen Zhu"
+    ],
+    "published": "2025-03-10T16:32:41+00:00",
+    "summary": "Vision-Language-Action (VLA) models excel at robotic tasks by leveraging large-scale 2D vision-language pretraining, but their reliance on RGB images limits spatial reasoning critical for real-world interaction. Retraining these models with 3D data is computationally prohibitive, while discarding existing 2D datasets wastes valuable resources. To bridge this gap, we propose PointVLA, a framework that enhances pre-trained VLAs with point cloud inputs without requiring retraining. Our method freezes the vanilla action expert and injects 3D features via a lightweight modular block. To identify the most effective way of integrating point cloud representations, we conduct a skip-block analysis to pinpoint less useful blocks in the vanilla action expert, ensuring that 3D features are injected only into these blocks--minimizing disruption to pre-trained representations.   Extensive experiments demonstrate that PointVLA outperforms state-of-the-art 2D imitation learning methods, such as OpenVLA, Diffusion Policy and DexVLA, across both simulated and real-world robotic tasks. Specifically, we highlight several key advantages of PointVLA enabled by point cloud integration: (1) Few-shot multi-tasking, where PointVLA successfully performs four different tasks using only 20 demonstrations each; (2) Real-vs-photo discrimination, where PointVLA distinguishes real objects from their images, leveraging 3D world knowledge to improve safety and reliability; (3) Height adaptability, Unlike conventional 2D imitation learning methods, PointVLA enables robots to adapt to objects at varying table height that unseen in train data. Furthermore, PointVLA achieves strong performance in long-horizon tasks, such as picking and packing objects from a moving conveyor belt, showcasing its ability to generalize across complex, dynamic environments."
+  },
+  {
     "title": "Securing External Deeper-than-black-box GPAI Evaluations",
     "url": "http://arxiv.org/abs/2503.07496v1",
     "arxiv_id": "2503.07496v1",
@@ -179,6 +642,16 @@
     ],
     "published": "2025-03-10T13:28:25+00:00",
     "summary": "The evaluation and improvement of medical large language models (LLMs) are critical for their real-world deployment, particularly in ensuring accuracy, safety, and ethical alignment. Existing frameworks inadequately dissect domain-specific error patterns or address cross-modal challenges. This study introduces a granular error taxonomy through systematic analysis of top 10 models on MedBench, categorizing incorrect responses into eight types: Omissions, Hallucination, Format Mismatch, Causal Reasoning Deficiency, Contextual Inconsistency, Unanswered, Output Error, and Deficiency in Medical Language Generation. Evaluation of 10 leading models reveals vulnerabilities: despite achieving 0.86 accuracy in medical knowledge recall, critical reasoning tasks show 96.3% omission, while safety ethics evaluations expose alarming inconsistency (robustness score: 0.79) under option shuffled. Our analysis uncovers systemic weaknesses in knowledge boundary enforcement and multi-step reasoning. To address these, we propose a tiered optimization strategy spanning four levels, from prompt engineering and knowledge-augmented retrieval to hybrid neuro-symbolic architectures and causal reasoning frameworks. This work establishes an actionable roadmap for developing clinically robust LLMs while redefining evaluation paradigms through error-driven insights, ultimately advancing the safety and trustworthiness of AI in high-stakes medical environments."
+  },
+  {
+    "title": "What is missing from existing Lithium-Sulfur models to capture coin-cell behaviour?",
+    "url": "http://arxiv.org/abs/2503.07684v1",
+    "arxiv_id": "2503.07684v1",
+    "authors": [
+      "Miss. Elizabeth Olisa Monica Marinescu"
+    ],
+    "published": "2025-03-10T12:24:20+00:00",
+    "summary": "Lithium-sulfur (Li-S) batteries offer a promising alternative to current lithium-ion (Li-ion) batteries, with a high theoretical energy density, improved safety and high abundance, low cost of materials. For Li-S to reach commercial application, it is essential to understand how the behaviour scales between cell formats; new material development is predominately completed at coin-cell level, whilst pouch-cells will be used for commercial applications. Differences such as reduced electrolyte-to-sulfur (E/S) ratios and increased geometric size at larger cell formats contribute to the behavioural differences, in terms of achievable capacity, cyclability and potential degradation mechanisms.   This work focuses on the steps required to capture and test coin-cell behaviour, building upon the existing models within the literature, which predominately focus on pouch-cells. The areas investigated throughout this study, to improve the capability of the model in terms of scaling ability and causality of predictions, include the cathode surface area, precipitation dynamics and C-rate dependence."
   },
   {
     "title": "Learning and planning for optimal synergistic human-robot coordination in manufacturing contexts",
