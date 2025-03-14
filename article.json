@@ -1,5 +1,534 @@
 [
   {
+    "title": "A Frustratingly Simple Yet Highly Effective Attack Baseline: Over 90% Success Rate Against the Strong Black-box Models of GPT-4.5/4o/o1",
+    "url": "http://arxiv.org/abs/2503.10635v1",
+    "arxiv_id": "2503.10635v1",
+    "authors": [
+      "Zhaoyi Li",
+      "Xiaohan Zhao",
+      "Dong-Dong Wu",
+      "Jiacheng Cui",
+      "Zhiqiang Shen"
+    ],
+    "published": "2025-03-13T17:59:55+00:00",
+    "summary": "Despite promising performance on open-source large vision-language models (LVLMs), transfer-based targeted attacks often fail against black-box commercial LVLMs. Analyzing failed adversarial perturbations reveals that the learned perturbations typically originate from a uniform distribution and lack clear semantic details, resulting in unintended responses. This critical absence of semantic information leads commercial LVLMs to either ignore the perturbation entirely or misinterpret its embedded semantics, thereby causing the attack to fail. To overcome these issues, we notice that identifying core semantic objects is a key objective for models trained with various datasets and methodologies. This insight motivates our approach that refines semantic clarity by encoding explicit semantic details within local regions, thus ensuring interoperability and capturing finer-grained features, and by concentrating modifications on semantically rich areas rather than applying them uniformly. To achieve this, we propose a simple yet highly effective solution: at each optimization step, the adversarial image is cropped randomly by a controlled aspect ratio and scale, resized, and then aligned with the target image in the embedding space. Experimental results confirm our hypothesis. Our adversarial examples crafted with local-aggregated perturbations focused on crucial regions exhibit surprisingly good transferability to commercial LVLMs, including GPT-4.5, GPT-4o, Gemini-2.0-flash, Claude-3.5-sonnet, Claude-3.7-sonnet, and even reasoning models like o1, Claude-3.7-thinking and Gemini-2.0-flash-thinking. Our approach achieves success rates exceeding 90% on GPT-4.5, 4o, and o1, significantly outperforming all prior state-of-the-art attack methods. Our optimized adversarial examples under different configurations and training code are available at https://github.com/VILA-Lab/M-Attack."
+  },
+  {
+    "title": "DriveLMM-o1: A Step-by-Step Reasoning Dataset and Large Multimodal Model for Driving Scenario Understanding",
+    "url": "http://arxiv.org/abs/2503.10621v1",
+    "arxiv_id": "2503.10621v1",
+    "authors": [
+      "Ayesha Ishaq",
+      "Jean Lahoud",
+      "Ketan More",
+      "Omkar Thawakar",
+      "Ritesh Thawkar",
+      "Dinura Dissanayake",
+      "Noor Ahsan",
+      "Yuhao Li",
+      "Fahad Shahbaz Khan",
+      "Hisham Cholakkal",
+      "Ivan Laptev",
+      "Rao Muhammad Anwer",
+      "Salman Khan"
+    ],
+    "published": "2025-03-13T17:59:01+00:00",
+    "summary": "While large multimodal models (LMMs) have demonstrated strong performance across various Visual Question Answering (VQA) tasks, certain challenges require complex multi-step reasoning to reach accurate answers. One particularly challenging task is autonomous driving, which demands thorough cognitive processing before decisions can be made. In this domain, a sequential and interpretive understanding of visual cues is essential for effective perception, prediction, and planning. Nevertheless, common VQA benchmarks often focus on the accuracy of the final answer while overlooking the reasoning process that enables the generation of accurate responses. Moreover, existing methods lack a comprehensive framework for evaluating step-by-step reasoning in realistic driving scenarios. To address this gap, we propose DriveLMM-o1, a new dataset and benchmark specifically designed to advance step-wise visual reasoning for autonomous driving. Our benchmark features over 18k VQA examples in the training set and more than 4k in the test set, covering diverse questions on perception, prediction, and planning, each enriched with step-by-step reasoning to ensure logical inference in autonomous driving scenarios. We further introduce a large multimodal model that is fine-tuned on our reasoning dataset, demonstrating robust performance in complex driving scenarios. In addition, we benchmark various open-source and closed-source methods on our proposed dataset, systematically comparing their reasoning capabilities for autonomous driving tasks. Our model achieves a +7.49% gain in final answer accuracy, along with a 3.62% improvement in reasoning score over the previous best open-source model. Our framework, dataset, and model are available at https://github.com/ayesha-ishaq/DriveLMM-o1."
+  },
+  {
+    "title": "Siege: Autonomous Multi-Turn Jailbreaking of Large Language Models with Tree Search",
+    "url": "http://arxiv.org/abs/2503.10619v1",
+    "arxiv_id": "2503.10619v1",
+    "authors": [
+      "Andy Zhou"
+    ],
+    "published": "2025-03-13T17:57:32+00:00",
+    "summary": "We introduce Siege, a multi-turn adversarial framework that models the gradual erosion of Large Language Model (LLM) safety through a tree search perspective. Unlike single-turn jailbreaks that rely on one meticulously engineered prompt, Siege expands the conversation at each turn in a breadth-first fashion, branching out multiple adversarial prompts that exploit partial compliance from previous responses. By tracking these incremental policy leaks and re-injecting them into subsequent queries, Siege reveals how minor concessions can accumulate into fully disallowed outputs. Evaluations on the JailbreakBench dataset show that Siege achieves a 100% success rate on GPT-3.5-turbo and 97% on GPT-4 in a single multi-turn run, using fewer queries than baselines such as Crescendo or GOAT. This tree search methodology offers an in-depth view of how model safeguards degrade over successive dialogue turns, underscoring the urgency of robust multi-turn testing procedures for language models."
+  },
+  {
+    "title": "OCCUQ: Exploring Efficient Uncertainty Quantification for 3D Occupancy Prediction",
+    "url": "http://arxiv.org/abs/2503.10605v1",
+    "arxiv_id": "2503.10605v1",
+    "authors": [
+      "Severin Heidrich",
+      "Till Beemelmanns",
+      "Alexey Nekrasov",
+      "Bastian Leibe",
+      "Lutz Eckstein"
+    ],
+    "published": "2025-03-13T17:50:07+00:00",
+    "summary": "Autonomous driving has the potential to significantly enhance productivity and provide numerous societal benefits. Ensuring robustness in these safety-critical systems is essential, particularly when vehicles must navigate adverse weather conditions and sensor corruptions that may not have been encountered during training. Current methods often overlook uncertainties arising from adversarial conditions or distributional shifts, limiting their real-world applicability. We propose an efficient adaptation of an uncertainty estimation technique for 3D occupancy prediction. Our method dynamically calibrates model confidence using epistemic uncertainty estimates. Our evaluation under various camera corruption scenarios, such as fog or missing cameras, demonstrates that our approach effectively quantifies epistemic uncertainty by assigning higher uncertainty values to unseen data. We introduce region-specific corruptions to simulate defects affecting only a single camera and validate our findings through both scene-level and region-level assessments. Our results show superior performance in Out-of-Distribution (OoD) detection and confidence calibration compared to common baselines such as Deep Ensembles and MC-Dropout. Our approach consistently demonstrates reliable uncertainty measures, indicating its potential for enhancing the robustness of autonomous driving systems in real-world scenarios. Code and dataset are available at https://github.com/ika-rwth-aachen/OCCUQ ."
+  },
+  {
+    "title": "Unveiling the Mathematical Reasoning in DeepSeek Models: A Comparative Study of Large Language Models",
+    "url": "http://arxiv.org/abs/2503.10573v1",
+    "arxiv_id": "2503.10573v1",
+    "authors": [
+      "Afrar Jahin",
+      "Arif Hassan Zidan",
+      "Yu Bao",
+      "Shizhe Liang",
+      "Tianming Liu",
+      "Wei Zhang"
+    ],
+    "published": "2025-03-13T17:23:45+00:00",
+    "summary": "With the rapid evolution of Artificial Intelligence (AI), Large Language Models (LLMs) have reshaped the frontiers of various fields, spanning healthcare, public health, engineering, science, agriculture, education, arts, humanities, and mathematical reasoning. Among these advancements, DeepSeek models have emerged as noteworthy contenders, demonstrating promising capabilities that set them apart from their peers. While previous studies have conducted comparative analyses of LLMs, few have delivered a comprehensive evaluation of mathematical reasoning across a broad spectrum of LLMs. In this work, we aim to bridge this gap by conducting an in-depth comparative study, focusing on the strengths and limitations of DeepSeek models in relation to their leading counterparts. In particular, our study systematically evaluates the mathematical reasoning performance of two DeepSeek models alongside five prominent LLMs across three independent benchmark datasets. The findings reveal several key insights: 1). DeepSeek-R1 consistently achieved the highest accuracy on two of the three datasets, demonstrating strong mathematical reasoning capabilities. 2). The distilled variant of LLMs significantly underperformed compared to its peers, highlighting potential drawbacks in using distillation techniques. 3). In terms of response time, Gemini 2.0 Flash demonstrated the fastest processing speed, outperforming other models in efficiency, which is a crucial factor for real-time applications. Beyond these quantitative assessments, we delve into how architecture, training, and optimization impact LLMs' mathematical reasoning. Moreover, our study goes beyond mere performance comparison by identifying key areas for future advancements in LLM-driven mathematical reasoning. This research enhances our understanding of LLMs' mathematical reasoning and lays the groundwork for future advancements"
+  },
+  {
+    "title": "ASIDE: Architectural Separation of Instructions and Data in Language Models",
+    "url": "http://arxiv.org/abs/2503.10566v1",
+    "arxiv_id": "2503.10566v1",
+    "authors": [
+      "Egor Zverev",
+      "Evgenii Kortukov",
+      "Alexander Panfilov",
+      "Soroush Tabesh",
+      "Alexandra Volkova",
+      "Sebastian Lapuschkin",
+      "Wojciech Samek",
+      "Christoph H. Lampert"
+    ],
+    "published": "2025-03-13T17:17:17+00:00",
+    "summary": "Despite their remarkable performance, large language models lack elementary safety features, and this makes them susceptible to numerous malicious attacks. In particular, previous work has identified the absence of an intrinsic separation between instructions and data as a root cause for the success of prompt injection attacks. In this work, we propose an architectural change, ASIDE, that allows the model to clearly separate between instructions and data by using separate embeddings for them. Instead of training the embeddings from scratch, we propose a method to convert an existing model to ASIDE form by using two copies of the original model's embeddings layer, and applying an orthogonal rotation to one of them. We demonstrate the effectiveness of our method by showing (1) highly increased instruction-data separation scores without a loss in model capabilities and (2) competitive results on prompt injection benchmarks, even without dedicated safety training. Additionally, we study the working mechanism behind our method through an analysis of model representations."
+  },
+  {
+    "title": "Towards Safe Path Tracking Using the Simplex Architecture",
+    "url": "http://arxiv.org/abs/2503.10559v1",
+    "arxiv_id": "2503.10559v1",
+    "authors": [
+      "Georg J\u00e4ger",
+      "Nils-Jonathan Friedrich",
+      "Hauke Petersen",
+      "Benjamin Noack"
+    ],
+    "published": "2025-03-13T17:11:55+00:00",
+    "summary": "Robot navigation in complex environments necessitates controllers that are adaptive and safe. Traditional controllers like Regulated Pure Pursuit, Dynamic Window Approach, and Model-Predictive Path Integral, while reliable, struggle to adapt to dynamic conditions. Reinforcement Learning offers adaptability but lacks formal safety guarantees. To address this, we propose a path tracking controller leveraging the Simplex architecture. It combines a Reinforcement Learning controller for adaptiveness and performance with a high-assurance controller providing safety and stability. Our contribution is twofold. We firstly discuss general stability and safety considerations for designing controllers using the Simplex architecture. Secondly, we present a Simplex-based path tracking controller. Our simulation results, supported by preliminary in-field tests, demonstrate the controller's effectiveness in maintaining safety while achieving comparable performance to state-of-the-art methods."
+  },
+  {
+    "title": "Safety Filter for Limiting the Current of Grid-Forming Matrix Modular Multilevel Converters",
+    "url": "http://arxiv.org/abs/2503.10498v1",
+    "arxiv_id": "2503.10498v1",
+    "authors": [
+      "Michael Schneeberger",
+      "Silvia Mastellone",
+      "Florian D\u00f6rfler"
+    ],
+    "published": "2025-03-13T16:01:11+00:00",
+    "summary": "Grid-forming (GFM) converters face significant challenges in limiting current during transient grid events while preserving their grid-forming behavior. This paper offers an elegant solution to the problem with a priori guarantees, presenting a safety filter approach based on Control Barrier Functions (CBFs) to enforce current constraints with minimal deviation from the nominal voltage reference. The safety filter is implemented as a Quadratic Program, enabling real-time computation of safe voltage adjustments that ensure smooth transitions and maintain the GFM behavior during nominal operation. To provide formal safety certificate, the CBF is synthesized offline using a Sum-of-Squares optimization framework, ensuring that the converter remains within its allowable operating limits under all conditions. Additionally, a Control Lyapunov Function is incorporated to facilitate a smooth return to the nominal operating region following grid events. The proposed method is modular and can be integrated into many of the GFM control architectures, as demonstrated with two different GFM implementations. High-fidelity simulations conducted with an enhanced matrix modular multilevel converter connected to both high-inertia and low-inertia grid scenarios validate the effectiveness of the safety filter, showing that it successfully limits current during faults, preserves GFM behavior, and ensures a seamless recovery to nominal operation."
+  },
+  {
+    "title": "LLMs in Disease Diagnosis: A Comparative Study of DeepSeek-R1 and O3 Mini Across Chronic Health Conditions",
+    "url": "http://arxiv.org/abs/2503.10486v1",
+    "arxiv_id": "2503.10486v1",
+    "authors": [
+      "Gaurav Kumar Gupta",
+      "Pranal Pande"
+    ],
+    "published": "2025-03-13T15:54:26+00:00",
+    "summary": "Large Language Models (LLMs) are revolutionizing medical diagnostics by enhancing both disease classification and clinical decision-making. In this study, we evaluate the performance of two LLM- based diagnostic tools, DeepSeek R1 and O3 Mini, using a structured dataset of symptoms and diagnoses. We assessed their predictive accuracy at both the disease and category levels, as well as the reliability of their confidence scores. DeepSeek R1 achieved a disease-level accuracy of 76% and an overall accuracy of 82%, outperforming O3 Mini, which attained 72% and 75% respectively. Notably, DeepSeek R1 demonstrated exceptional performance in Mental Health, Neurological Disorders, and Oncology, where it reached 100% accuracy, while O3 Mini excelled in Autoimmune Disease classification with 100% accuracy. Both models, however, struggled with Respiratory Disease classification, recording accuracies of only 40% for DeepSeek R1 and 20% for O3 Mini. Additionally, the analysis of confidence scores revealed that DeepSeek R1 provided high-confidence predictions in 92% of cases, compared to 68% for O3 Mini. Ethical considerations regarding bias, model interpretability, and data privacy are also discussed to ensure the responsible integration of LLMs into clinical practice. Overall, our findings offer valuable insights into the strengths and limitations of LLM-based diagnostic systems and provide a roadmap for future enhancements in AI-driven healthcare."
+  },
+  {
+    "title": "Stratified Topological Autonomy for Long-Range Coordination (STALC)",
+    "url": "http://arxiv.org/abs/2503.10475v1",
+    "arxiv_id": "2503.10475v1",
+    "authors": [
+      "Cora A. Dimmig",
+      "Adam Goertz",
+      "Adam Polevoy",
+      "Mark Gonzales",
+      "Kevin C. Wolfe",
+      "Bradley Woosley",
+      "John Rogers",
+      "Joseph Moore"
+    ],
+    "published": "2025-03-13T15:45:27+00:00",
+    "summary": "Achieving unified multi-robot coordination and motion planning in complex environments is a challenging problem. In this paper, we present a hierarchical approach to long-range coordination, which we call Stratified Topological Autonomy for Long-Range Coordination (STALC). In particular, we look at the problem of minimizing visibility to observers and maximizing safety with a multi-robot team navigating through a hazardous environment. At its core, our approach relies on the notion of a dynamic topological graph, where the edge weights vary dynamically based on the locations of the robots in the graph. To create this dynamic topological graph, we evaluate the visibility of the robot team from a discrete set of observer locations (both adversarial and friendly), and construct a topological graph whose edge weights depend on both adversary position and robot team configuration. We then impose temporal constraints on the evolution of those edge weights based on robot team state and use Mixed-Integer Programming (MIP) to generate optimal multirobot plans through the graph. The visibility information also informs the lower layers of the autonomy stack to plan minimal visibility paths through the environment for the team of robots. Our approach presents methods to reduce the computational complexity for a team of robots that interact and coordinate across the team to accomplish a common goal. We demonstrate our approach in simulated and hardware experiments in forested and urban environments."
+  },
+  {
+    "title": "Applying Tabular Deep Learning Models to Estimate Crash Injury Types of Young Motorcyclists",
+    "url": "http://arxiv.org/abs/2503.10474v1",
+    "arxiv_id": "2503.10474v1",
+    "authors": [
+      "Shriyank Somvanshi",
+      "Anannya Ghosh Tusti",
+      "Rohit Chakraborty",
+      "Subasish Das"
+    ],
+    "published": "2025-03-13T15:45:13+00:00",
+    "summary": "Young motorcyclists, particularly those aged 15 to 24 years old, face a heightened risk of severe crashes due to factors such as speeding, traffic violations, and helmet usage. This study aims to identify key factors influencing crash severity by analyzing 10,726 young motorcyclist crashes in Texas from 2017 to 2022. Two advanced tabular deep learning models, ARMNet and MambaNet, were employed, using an advanced resampling technique to address class imbalance. The models were trained to classify crashes into three severity levels, Fatal or Severe, Moderate or Minor, and No Injury. ARMNet achieved an accuracy of 87 percent, outperforming 86 percent of Mambanet, with both models excelling in predicting severe and no injury crashes while facing challenges in moderate crash classification. Key findings highlight the significant influence of demographic, environmental, and behavioral factors on crash outcomes. The study underscores the need for targeted interventions, including stricter helmet enforcement and educational programs customized to young motorcyclists. These insights provide valuable guidance for policymakers in developing evidence-based strategies to enhance motorcyclist safety and reduce crash severity."
+  },
+  {
+    "title": "Light-R1: Curriculum SFT, DPO and RL for Long COT from Scratch and Beyond",
+    "url": "http://arxiv.org/abs/2503.10460v1",
+    "arxiv_id": "2503.10460v1",
+    "authors": [
+      "Liang Wen",
+      "Yunke Cai",
+      "Fenrui Xiao",
+      "Xin He",
+      "Qi An",
+      "Zhenyu Duan",
+      "Yimin Du",
+      "Junchen Liu",
+      "Lifu Tang",
+      "Xiaowei Lv",
+      "Haosheng Zou",
+      "Yongchao Deng",
+      "Shousheng Jia",
+      "Xiangzheng Zhang"
+    ],
+    "published": "2025-03-13T15:29:22+00:00",
+    "summary": "This paper presents our work on the Light-R1 series, with models, data, and code all released.   We first focus on training long COT models from scratch, specifically starting from models initially lacking long COT capabilities. Using a curriculum training recipe consisting of two-stage SFT and semi-on-policy DPO, we train our model Light-R1-32B from Qwen2.5-32B-Instruct, resulting in superior math performance compared to DeepSeek-R1-Distill-Qwen-32B. Despite being trained exclusively on math data, Light-R1-32B shows strong generalization across other domains. In the subsequent phase of this work, we highlight the significant benefit of the 3k dataset constructed for the second SFT stage on enhancing other models. By fine-tuning DeepSeek-R1-Distilled models using this dataset, we obtain new SOTA models in 7B and 14B, while the 32B model, Light-R1-32B-DS performed comparably to QwQ-32B and DeepSeek-R1.   Furthermore, we extend our work by applying reinforcement learning, specifically GRPO, on long-COT models to further improve reasoning performance. We successfully train our final Light-R1-14B-DS with RL, achieving SOTA performance among 14B parameter models in math. With AIME24 & 25 scores of 74.0 and 60.2 respectively, Light-R1-14B-DS surpasses even many 32B models and DeepSeek-R1-Distill-Llama-70B. Its RL training also exhibits well expected behavior, showing simultaneous increase in response length and reward score.   The Light-R1 series of work validates training long-COT models from scratch, showcases the art in SFT data and releases SOTA models from RL."
+  },
+  {
+    "title": "Social Media Harm Abatement: Mechanisms for Transparent Public Health Assessment",
+    "url": "http://arxiv.org/abs/2503.10458v1",
+    "arxiv_id": "2503.10458v1",
+    "authors": [
+      "Nathaniel Lubin",
+      "Yuning Liu",
+      "Amanda Yarnell",
+      "S. Bryn Austin",
+      "Zachary J. Ward",
+      "Ravi Iyer",
+      "Jonathan Stray",
+      "Matthew Lawrence",
+      "Alissa Cooper",
+      "Peter Chapman"
+    ],
+    "published": "2025-03-13T15:26:46+00:00",
+    "summary": "Social media platforms have been accused of causing a range of harms, resulting in dozens of lawsuits across jurisdictions. These lawsuits are situated within the context of a long history of American product safety litigation, suggesting opportunities for remediation outside of financial compensation. Anticipating that at least some of these cases may be successful and/or lead to settlements, this article outlines an implementable mechanism for an abatement and/or settlement plan capable of mitigating abuse. The paper describes the requirements of such a mechanism, implications for privacy and oversight, and tradeoffs that such a procedure would entail. The mechanism is framed to operate at the intersection of legal procedure, standards for transparent public health assessment, and the practical requirements of modern technology products."
+  },
+  {
+    "title": "Finetuning Generative Trajectory Model with Reinforcement Learning from Human Feedback",
+    "url": "http://arxiv.org/abs/2503.10434v1",
+    "arxiv_id": "2503.10434v1",
+    "authors": [
+      "Derun Li",
+      "Jianwei Ren",
+      "Yue Wang",
+      "Xin Wen",
+      "Pengxiang Li",
+      "Leimeng Xu",
+      "Kun Zhan",
+      "Zhongpu Xia",
+      "Peng Jia",
+      "Xianpeng Lang",
+      "Ningyi Xu",
+      "Hang Zhao"
+    ],
+    "published": "2025-03-13T14:56:17+00:00",
+    "summary": "Generating human-like and adaptive trajectories is essential for autonomous driving in dynamic environments. While generative models have shown promise in synthesizing feasible trajectories, they often fail to capture the nuanced variability of human driving styles due to dataset biases and distributional shifts. To address this, we introduce TrajHF, a human feedback-driven finetuning framework for generative trajectory models, designed to align motion planning with diverse driving preferences. TrajHF incorporates multi-conditional denoiser and reinforcement learning with human feedback to refine multi-modal trajectory generation beyond conventional imitation learning. This enables better alignment with human driving preferences while maintaining safety and feasibility constraints. TrajHF achieves PDMS of 93.95 on NavSim benchmark, significantly exceeding other methods. TrajHF sets a new paradigm for personalized and adaptable trajectory generation in autonomous driving."
+  },
+  {
+    "title": "Safe exploration in reproducing kernel Hilbert spaces",
+    "url": "http://arxiv.org/abs/2503.10352v1",
+    "arxiv_id": "2503.10352v1",
+    "authors": [
+      "Abdullah Tokmak",
+      "Kiran G. Krishnan",
+      "Thomas B. Sch\u00f6n",
+      "Dominik Baumann"
+    ],
+    "published": "2025-03-13T13:28:54+00:00",
+    "summary": "Popular safe Bayesian optimization (BO) algorithms learn control policies for safety-critical systems in unknown environments. However, most algorithms make a smoothness assumption, which is encoded by a known bounded norm in a reproducing kernel Hilbert space (RKHS). The RKHS is a potentially infinite-dimensional space, and it remains unclear how to reliably obtain the RKHS norm of an unknown function. In this work, we propose a safe BO algorithm capable of estimating the RKHS norm from data. We provide statistical guarantees on the RKHS norm estimation, integrate the estimated RKHS norm into existing confidence intervals and show that we retain theoretical guarantees, and prove safety of the resulting safe BO algorithm. We apply our algorithm to safely optimize reinforcement learning policies on physics simulators and on a real inverted pendulum, demonstrating improved performance, safety, and scalability compared to the state-of-the-art."
+  },
+  {
+    "title": "HALO: Fault-Tolerant Safety Architecture For High-Speed Autonomous Racing",
+    "url": "http://arxiv.org/abs/2503.10341v1",
+    "arxiv_id": "2503.10341v1",
+    "authors": [
+      "Aron Harder",
+      "Amar Kulkarni",
+      "Madhur Behl"
+    ],
+    "published": "2025-03-13T13:19:51+00:00",
+    "summary": "The field of high-speed autonomous racing has seen significant advances in recent years, with the rise of competitions such as RoboRace and the Indy Autonomous Challenge providing a platform for researchers to develop software stacks for autonomous race vehicles capable of reaching speeds in excess of 170 mph. Ensuring the safety of these vehicles requires the software to continuously monitor for different faults and erroneous operating conditions during high-speed operation, with the goal of mitigating any unreasonable risks posed by malfunctions in sub-systems and components. This paper presents a comprehensive overview of the HALO safety architecture, which has been implemented on a full-scale autonomous racing vehicle as part of the Indy Autonomous Challenge. The paper begins with a failure mode and criticality analysis of the perception, planning, control, and communication modules of the software stack. Specifically, we examine three different types of faults - node health, data health, and behavioral-safety faults. To mitigate these faults, the paper then outlines HALO safety archetypes and runtime monitoring methods. Finally, the paper demonstrates the effectiveness of the HALO safety architecture for each of the faults, through real-world data gathered from autonomous racing vehicle trials during multi-agent scenarios."
+  },
+  {
+    "title": "Enhance Exploration in Safe Reinforcement Learning with Contrastive Representation Learning",
+    "url": "http://arxiv.org/abs/2503.10318v1",
+    "arxiv_id": "2503.10318v1",
+    "authors": [
+      "Duc Kien Doan",
+      "Bang Giang Le",
+      "Viet Cuong Ta"
+    ],
+    "published": "2025-03-13T12:53:42+00:00",
+    "summary": "In safe reinforcement learning, agent needs to balance between exploration actions and safety constraints. Following this paradigm, domain transfer approaches learn a prior Q-function from the related environments to prevent unsafe actions. However, because of the large number of false positives, some safe actions are never executed, leading to inadequate exploration in sparse-reward environments. In this work, we aim to learn an efficient state representation to balance the exploration and safety-prefer action in a sparse-reward environment. Firstly, the image input is mapped to latent representation by an auto-encoder. A further contrastive learning objective is employed to distinguish safe and unsafe states. In the learning phase, the latent distance is used to construct an additional safety check, which allows the agent to bias the exploration if it visits an unsafe state. To verify the effectiveness of our method, the experiment is carried out in three navigation-based MiniGrid environments. The result highlights that our method can explore the environment better while maintaining a good balance between safety and efficiency."
+  },
+  {
+    "title": "CODEI: Resource-Efficient Task-Driven Co-Design of Perception and Decision Making for Mobile Robots Applied to Autonomous Vehicles",
+    "url": "http://arxiv.org/abs/2503.10296v1",
+    "arxiv_id": "2503.10296v1",
+    "authors": [
+      "Dejan Milojevic",
+      "Gioele Zardini",
+      "Miriam Elser",
+      "Andrea Censi",
+      "Emilio Frazzoli"
+    ],
+    "published": "2025-03-13T12:12:44+00:00",
+    "summary": "This paper discusses the integration challenges and strategies for designing mobile robots, by focusing on the task-driven, optimal selection of hardware and software to balance safety, efficiency, and minimal usage of resources such as costs, energy, computational requirements, and weight. We emphasize the interplay between perception and motion planning in decision-making by introducing the concept of occupancy queries to quantify the perception requirements for sampling-based motion planners. Sensor and algorithm performance are evaluated using False Negative Rates (FPR) and False Positive Rates (FPR) across various factors such as geometric relationships, object properties, sensor resolution, and environmental conditions. By integrating perception requirements with perception performance, an Integer Linear Programming (ILP) approach is proposed for efficient sensor and algorithm selection and placement. This forms the basis for a co-design optimization that includes the robot body, motion planner, perception pipeline, and computing unit. We refer to this framework for solving the co-design problem of mobile robots as CODEI, short for Co-design of Embodied Intelligence. A case study on developing an Autonomous Vehicle (AV) for urban scenarios provides actionable information for designers, and shows that complex tasks escalate resource demands, with task performance affecting choices of the autonomy stack. The study demonstrates that resource prioritization influences sensor choice: cameras are preferred for cost-effective and lightweight designs, while lidar sensors are chosen for better energy and computational efficiency."
+  },
+  {
+    "title": "Thermal Management of Lithium-Ion Batteries: A Comparative Study of Phase Change Materials and Air-Cooling Systems Equipped with Fins",
+    "url": "http://arxiv.org/abs/2503.10244v1",
+    "arxiv_id": "2503.10244v1",
+    "authors": [
+      "Masoumeh Karimi Kisomi"
+    ],
+    "published": "2025-03-13T10:45:16+00:00",
+    "summary": "Lithium-ion batteries are extensively utilized as the primary power source for electric vehicles due to their high energy density, environmental friendliness and lightweight nature. However, their performance and safety are highly dependent on operating temperature. Therefore, a battery thermal management system (BTMS) is essential to ensure the reliable operation and safety of electric vehicles. This study presents a battery thermal management system incorporating phase change material (PCM) and air cooling in a cylindrical lithium-ion cell with fins to enhance heat dissipation. The effects of each system on maximum and minimum temperature, and temperature uniformity along the battery cell are analyzed. Additionally, the impact of fins in both systems is evaluated against a finless cell. A numerical analysis utilizing ANSYS software and the finite volume method (FVM) is performed to evaluate the cooling performance of the systems. The results show that PCM reduces both the maximum and minimum temperatures compared to the air cooling system due to the phase change mechanism. In the finless battery case, the maximum temperature decreases from 316 K to 304 K when using PCM instead of the air cooling system. Also, in the same fin-based battery, the minimum temperature decreases from 307 K to 302 K by using PCM instead of the air cooling system, leading to improved temperature stability. The results indicate that, in general, the fins help reduce the maximum cell temperature when compared to the case without fins in both cases. Using rectangular fins reduces the maximum temperature by approximately 3% compared to a finless battery in the air cooling system. Additionally, the presence of fins reduces the temperature difference along the battery, ensuring a more uniform temperature distribution, such that, in the PCM system with rectangular fins, the temperature difference remains below 1 K."
+  },
+  {
+    "title": "MinorBench: A hand-built benchmark for content-based risks for children",
+    "url": "http://arxiv.org/abs/2503.10242v1",
+    "arxiv_id": "2503.10242v1",
+    "authors": [
+      "Shaun Khoo",
+      "Gabriel Chua",
+      "Rachel Shong"
+    ],
+    "published": "2025-03-13T10:34:43+00:00",
+    "summary": "Large Language Models (LLMs) are rapidly entering children's lives - through parent-driven adoption, schools, and peer networks - yet current AI ethics and safety research do not adequately address content-related risks specific to minors. In this paper, we highlight these gaps with a real-world case study of an LLM-based chatbot deployed in a middle school setting, revealing how students used and sometimes misused the system. Building on these findings, we propose a new taxonomy of content-based risks for minors and introduce MinorBench, an open-source benchmark designed to evaluate LLMs on their ability to refuse unsafe or inappropriate queries from children. We evaluate six prominent LLMs under different system prompts, demonstrating substantial variability in their child-safety compliance. Our results inform practical steps for more robust, child-focused safety mechanisms and underscore the urgency of tailoring AI systems to safeguard young users."
+  },
+  {
+    "title": "Red Teaming Contemporary AI Models: Insights from Spanish and Basque Perspectives",
+    "url": "http://arxiv.org/abs/2503.10192v1",
+    "arxiv_id": "2503.10192v1",
+    "authors": [
+      "Miguel Romero-Arjona",
+      "Pablo Valle",
+      "Juan C. Alonso",
+      "Ana B. S\u00e1nchez",
+      "Miriam Ugarte",
+      "Antonia Cazalilla",
+      "Vicente Cambr\u00f3n",
+      "Jos\u00e9 A. Parejo",
+      "Aitor Arrieta",
+      "Sergio Segura"
+    ],
+    "published": "2025-03-13T09:27:24+00:00",
+    "summary": "The battle for AI leadership is on, with OpenAI in the United States and DeepSeek in China as key contenders. In response to these global trends, the Spanish government has proposed ALIA, a public and transparent AI infrastructure incorporating small language models designed to support Spanish and co-official languages such as Basque. This paper presents the results of Red Teaming sessions, where ten participants applied their expertise and creativity to manually test three of the latest models from these initiatives$\\unicode{x2013}$OpenAI o3-mini, DeepSeek R1, and ALIA Salamandra$\\unicode{x2013}$focusing on biases and safety concerns. The results, based on 670 conversations, revealed vulnerabilities in all the models under test, with biased or unsafe responses ranging from 29.5% in o3-mini to 50.6% in Salamandra. These findings underscore the persistent challenges in developing reliable and trustworthy AI systems, particularly those intended to support Spanish and Basque languages."
+  },
+  {
+    "title": "Safety Control of Impulsive Systems with Control Barrier Functions and Adaptive Gains",
+    "url": "http://arxiv.org/abs/2503.10164v1",
+    "arxiv_id": "2503.10164v1",
+    "authors": [
+      "Zihan Liu",
+      "Yuan-Hua Ni"
+    ],
+    "published": "2025-03-13T08:38:47+00:00",
+    "summary": "This paper addresses the safety challenges in impulsive systems, where abrupt state jumps introduce significant complexities into system dynamics. A unified framework is proposed by integrating Quadratic Programming (QP), Control Barrier Functions (CBFs), and adaptive gain mechanisms to ensure system safety during impulsive events. The CBFs are constructed to enforce safety constraints by capturing the system's continuous dynamics and the effects of impulsive state transitions. An adaptive gain mechanism dynamically adjusts control inputs based on the magnitudes of the impulses and the system's proximity to safety boundaries, maintaining safety during instantaneous state jumps. A tailored QP formulation incorporates CBFs constraints and adaptive gain adjustments, optimizing control inputs while ensuring compliance with safety-critical requirements. Theoretical analysis establishes the boundedness, continuity, and feasibility of the adaptive gain and the overall framework. The effectiveness of the method is demonstrated through simulations on a robotic manipulator, showcasing its practical applicability to impulsive systems with state jumps."
+  },
+  {
+    "title": "Unlocking Generalization Power in LiDAR Point Cloud Registration",
+    "url": "http://arxiv.org/abs/2503.10149v1",
+    "arxiv_id": "2503.10149v1",
+    "authors": [
+      "Zhenxuan Zeng",
+      "Qiao Wu",
+      "Xiyu Zhang",
+      "Lin Yuanbo Wu",
+      "Pei An",
+      "Jiaqi Yang",
+      "Ji Wang",
+      "Peng Wang"
+    ],
+    "published": "2025-03-13T08:20:59+00:00",
+    "summary": "In real-world environments, a LiDAR point cloud registration method with robust generalization capabilities (across varying distances and datasets) is crucial for ensuring safety in autonomous driving and other LiDAR-based applications. However, current methods fall short in achieving this level of generalization. To address these limitations, we propose UGP, a pruned framework designed to enhance generalization power for LiDAR point cloud registration. The core insight in UGP is the elimination of cross-attention mechanisms to improve generalization, allowing the network to concentrate on intra-frame feature extraction. Additionally, we introduce a progressive self-attention module to reduce ambiguity in large-scale scenes and integrate Bird's Eye View (BEV) features to incorporate semantic information about scene elements. Together, these enhancements significantly boost the network's generalization performance. We validated our approach through various generalization experiments in multiple outdoor scenes. In cross-distance generalization experiments on KITTI and nuScenes, UGP achieved state-of-the-art mean Registration Recall rates of 94.5% and 91.4%, respectively. In cross-dataset generalization from nuScenes to KITTI, UGP achieved a state-of-the-art mean Registration Recall of 90.9%. Code will be available at https://github.com/peakpang/UGP."
+  },
+  {
+    "title": "Mapless Collision-Free Flight via MPC using Dual KD-Trees in Cluttered Environments",
+    "url": "http://arxiv.org/abs/2503.10141v1",
+    "arxiv_id": "2503.10141v1",
+    "authors": [
+      "Linzuo Zhang",
+      "Yu Hu",
+      "Yang Deng",
+      "Feng Yu",
+      "Danping Zou"
+    ],
+    "published": "2025-03-13T08:00:58+00:00",
+    "summary": "Collision-free flight in cluttered environments is a critical capability for autonomous quadrotors. Traditional methods often rely on detailed 3D map construction, trajectory generation, and tracking. However, this cascade pipeline can introduce accumulated errors and computational delays, limiting flight agility and safety. In this paper, we propose a novel method for enabling collision-free flight in cluttered environments without explicitly constructing 3D maps or generating and tracking collision-free trajectories. Instead, we leverage Model Predictive Control (MPC) to directly produce safe actions from sparse waypoints and point clouds from a depth camera. These sparse waypoints are dynamically adjusted online based on nearby obstacles detected from point clouds. To achieve this, we introduce a dual KD-Tree mechanism: the Obstacle KD-Tree quickly identifies the nearest obstacle for avoidance, while the Edge KD-Tree provides a robust initial guess for the MPC solver, preventing it from getting stuck in local minima during obstacle avoidance. We validate our approach through extensive simulations and real-world experiments. The results show that our approach significantly outperforms the mapping-based methods and is also superior to imitation learning-based methods, demonstrating reliable obstacle avoidance at up to 12 m/s in simulations and 6 m/s in real-world tests. Our method provides a simple and robust alternative to existing methods."
+  },
+  {
+    "title": "IMPACT: Intelligent Motion Planning with Acceptable Contact Trajectories via Vision-Language Models",
+    "url": "http://arxiv.org/abs/2503.10110v1",
+    "arxiv_id": "2503.10110v1",
+    "authors": [
+      "Yiyang Ling",
+      "Karan Owalekar",
+      "Oluwatobiloba Adesanya",
+      "Erdem B\u0131y\u0131k",
+      "Daniel Seita"
+    ],
+    "published": "2025-03-13T07:09:00+00:00",
+    "summary": "Motion planning involves determining a sequence of robot configurations to reach a desired pose, subject to movement and safety constraints. Traditional motion planning finds collision-free paths, but this is overly restrictive in clutter, where it may not be possible for a robot to accomplish a task without contact. In addition, contacts range from relatively benign (e.g., brushing a soft pillow) to more dangerous (e.g., toppling a glass vase). Due to this diversity, it is difficult to characterize which contacts may be acceptable or unacceptable. In this paper, we propose IMPACT, a novel motion planning framework that uses Vision-Language Models (VLMs) to infer environment semantics, identifying which parts of the environment can best tolerate contact based on object properties and locations. Our approach uses the VLM's outputs to produce a dense 3D \"cost map\" that encodes contact tolerances and seamlessly integrates with standard motion planners. We perform experiments using 20 simulation and 10 real-world scenes and assess using task success rate, object displacements, and feedback from human evaluators. Our results over 3620 simulation and 200 real-world trials suggest that IMPACT enables efficient contact-rich motion planning in cluttered settings while outperforming alternative methods and ablations. Supplementary material is available at https://impact-planning.github.io/."
+  },
+  {
+    "title": "Representation-based Reward Modeling for Efficient Safety Alignment of Large Language Model",
+    "url": "http://arxiv.org/abs/2503.10093v1",
+    "arxiv_id": "2503.10093v1",
+    "authors": [
+      "Qiyuan Deng",
+      "Xuefeng Bai",
+      "Kehai Chen",
+      "Yaowei Wang",
+      "Liqiang Nie",
+      "Min Zhang"
+    ],
+    "published": "2025-03-13T06:40:34+00:00",
+    "summary": "Reinforcement Learning (RL) algorithms for safety alignment of Large Language Models (LLMs), such as Direct Preference Optimization (DPO), encounter the challenge of distribution shift. Current approaches typically address this issue through online sampling from the target policy, which requires significant computational resources. In this paper, we hypothesize that during off-policy training, while the ranking order of output generated by policy changes, their overall distribution remains relatively stable. This stability allows the transformation of the sampling process from the target policy into a re-ranking of preference data. Building on this hypothesis, We propose a new framework that leverages the model's intrinsic safety judgment capability to extract reward signals, which are then used to calculate label confidence for preferences reordering. Extensive experimental results and theoretical analysis demonstrate that the proposed method effectively addresses the distribution shift issue, remarkably enhancing the safety performance while reducing about 300x computational overheads."
+  },
+  {
+    "title": "Advanced Tool Learning and Selection System (ATLASS): A Closed-Loop Framework Using LLM",
+    "url": "http://arxiv.org/abs/2503.10071v1",
+    "arxiv_id": "2503.10071v1",
+    "authors": [
+      "Mohd Ariful Haque",
+      "Justin Williams",
+      "Sunzida Siddique",
+      "Md. Hujaifa Islam",
+      "Hasmot Ali",
+      "Kishor Datta Gupta",
+      "Roy George"
+    ],
+    "published": "2025-03-13T05:39:00+00:00",
+    "summary": "The combination of LLM agents with external tools enables models to solve complex tasks beyond their knowledge base. Human-designed tools are inflexible and restricted to solutions within the scope of pre-existing tools created by experts. To address this problem, we propose ATLASS, an advanced tool learning and selection system designed as a closed-loop framework. It enables the LLM to solve problems by dynamically generating external tools on demand. In this framework, agents play a crucial role in orchestrating tool selection, execution, and refinement, ensuring adaptive problem-solving capabilities. The operation of ATLASS follows three phases: The first phase, Understanding Tool Requirements, involves the Agents determining whether tools are required and specifying their functionality; the second phase, Tool Retrieval/Generation, involves the Agents retrieving or generating tools based on their availability; and the third phase, Task Solving, involves combining all the component tools necessary to complete the initial task. The Tool Dataset stores the generated tools, ensuring reusability and minimizing inference cost. Current LLM-based tool generation systems have difficulty creating complex tools that need APIs or external packages. In ATLASS, we solve the problem by automatically setting up the environment, fetching relevant API documentation online, and using a Python interpreter to create a reliable, versatile tool that works in a wider range of situations. OpenAI GPT-4.0 is used as the LLM agent, and safety and ethical concerns are handled through human feedback before executing generated code. By addressing the limitations of predefined toolsets and enhancing adaptability, ATLASS serves as a real-world solution that empowers users with dynamically generated tools for complex problem-solving."
+  },
+  {
+    "title": "Enhancing Multi-Agent Systems via Reinforcement Learning with LLM-based Planner and Graph-based Policy",
+    "url": "http://arxiv.org/abs/2503.10049v1",
+    "arxiv_id": "2503.10049v1",
+    "authors": [
+      "Ziqi Jia",
+      "Junjie Li",
+      "Xiaoyang Qu",
+      "Jianzong Wang"
+    ],
+    "published": "2025-03-13T05:02:49+00:00",
+    "summary": "Multi-agent systems (MAS) have shown great potential in executing complex tasks, but coordination and safety remain significant challenges. Multi-Agent Reinforcement Learning (MARL) offers a promising framework for agent collaboration, but it faces difficulties in handling complex tasks and designing reward functions. The introduction of Large Language Models (LLMs) has brought stronger reasoning and cognitive abilities to MAS, but existing LLM-based systems struggle to respond quickly and accurately in dynamic environments. To address these challenges, we propose LLM-based Graph Collaboration MARL (LGC-MARL), a framework that efficiently combines LLMs and MARL. This framework decomposes complex tasks into executable subtasks and achieves efficient collaboration among multiple agents through graph-based coordination. Specifically, LGC-MARL consists of two main components: an LLM planner and a graph-based collaboration meta policy. The LLM planner transforms complex task instructions into a series of executable subtasks, evaluates the rationality of these subtasks using a critic model, and generates an action dependency graph. The graph-based collaboration meta policy facilitates communication and collaboration among agents based on the action dependency graph, and adapts to new task environments through meta-learning. Experimental results on the AI2-THOR simulation platform demonstrate the superior performance and scalability of LGC-MARL in completing various complex tasks."
+  },
+  {
+    "title": "Post-disaster building indoor damage and survivor detection using autonomous path planning and deep learning with unmanned aerial vehicles",
+    "url": "http://arxiv.org/abs/2503.10027v1",
+    "arxiv_id": "2503.10027v1",
+    "authors": [
+      "Xiao Pan",
+      "Sina Tavasoli",
+      "T. Y. Yang",
+      "Sina Poorghasem"
+    ],
+    "published": "2025-03-13T04:13:48+00:00",
+    "summary": "Rapid response to natural disasters such as earthquakes is a crucial element in ensuring the safety of civil infrastructures and minimizing casualties. Traditional manual inspection is labour-intensive, time-consuming, and can be dangerous for inspectors and rescue workers. This paper proposed an autonomous inspection approach for structural damage inspection and survivor detection in the post-disaster building indoor scenario, which incorporates an autonomous navigation method, deep learning-based damage and survivor detection method, and a customized low-cost micro aerial vehicle (MAV) with onboard sensors. Experimental studies in a pseudo-post-disaster office building have shown the proposed methodology can achieve high accuracy in structural damage inspection and survivor detection. Overall, the proposed inspection approach shows great potential to improve the efficiency of existing manual post-disaster building inspection."
+  },
+  {
+    "title": "OR-LLM-Agent: Automating Modeling and Solving of Operations Research Optimization Problem with Reasoning Large Language Model",
+    "url": "http://arxiv.org/abs/2503.10009v1",
+    "arxiv_id": "2503.10009v1",
+    "authors": [
+      "Bowen Zhang",
+      "Pengcheng Luo"
+    ],
+    "published": "2025-03-13T03:40:50+00:00",
+    "summary": "Operations Research (OR) has been widely applied in various fields such as resource allocation, production planning, and supply chain management. However, addressing real-world OR problems requires OR experts to perform mathematical modeling and programmers to develop solution algorithms. This traditional method, heavily reliant on experts, is costly and has long development cycles, severely limiting the widespread adoption of OR techniques. Few have considered using Artificial Intelligence (AI) to replace professionals to achieve fully automated solutions for OR problems. We propose OR-LLM-Agent, the first AI agent that enables end-to-end automation for solving real-world OR problems. OR-LLM-Agent leverages the Chain-of-Thought (CoT) reasoning capabilities of Large Language Models (LLMs) to translate natural language problem descriptions into formal mathematical models and automatically generate Gurobi solver code. In OR-LLM-Agent, OR-CodeAgent is designed to automate code execution and repair within a sandbox environment, facilitating the derivation of the final solution. Due to the lack of dedicated benchmark datasets for evaluating the automated solving of OR problems, we construct a benchmark dataset comprising 83 real-world OR problems described in natural language. We conduct comparative experiments with state-of-the-art (SOTA) reasoning LLMs, including GPT-o3-mini, DeepSeek-R1, and Gemini 2.0 Flash Thinking. The OR-LLM-Agent achieved the highest pass rate of 100% and the highest solution accuracy of 85%, demonstrating the feasibility of automated OR problem-solving. Data and code have been publicly available at https://github.com/bwz96sco/or_llm_agent."
+  },
+  {
+    "title": "ExtremeAIGC: Benchmarking LMM Vulnerability to AI-Generated Extremist Content",
+    "url": "http://arxiv.org/abs/2503.09964v1",
+    "arxiv_id": "2503.09964v1",
+    "authors": [
+      "Bhavik Chandna",
+      "Mariam Aboujenane",
+      "Usman Naseem"
+    ],
+    "published": "2025-03-13T02:10:29+00:00",
+    "summary": "Large Multimodal Models (LMMs) are increasingly vulnerable to AI-generated extremist content, including photorealistic images and text, which can be used to bypass safety mechanisms and generate harmful outputs. However, existing datasets for evaluating LMM robustness offer limited exploration of extremist content, often lacking AI-generated images, diverse image generation models, and comprehensive coverage of historical events, which hinders a complete assessment of model vulnerabilities. To fill this gap, we introduce ExtremeAIGC, a benchmark dataset and evaluation framework designed to assess LMM vulnerabilities against such content. ExtremeAIGC simulates real-world events and malicious use cases by curating diverse text- and image-based examples crafted using state-of-the-art image generation techniques. Our study reveals alarming weaknesses in LMMs, demonstrating that even cutting-edge safety measures fail to prevent the generation of extremist material. We systematically quantify the success rates of various attack strategies, exposing critical gaps in current defenses and emphasizing the need for more robust mitigation strategies."
+  },
+  {
+    "title": "Optimizing Fire Safety: Reducing False Alarms Using Advanced Machine Learning Techniques",
+    "url": "http://arxiv.org/abs/2503.09960v1",
+    "arxiv_id": "2503.09960v1",
+    "authors": [
+      "Muhammad Hassan Jamal",
+      "Abdulwahab Alazeb",
+      "Shahid Allah Bakhsh",
+      "Wadii Boulila",
+      "Syed Aziz Shah",
+      "Aizaz Ahmad Khattak",
+      "Muhammad Shahbaz Khan"
+    ],
+    "published": "2025-03-13T02:07:14+00:00",
+    "summary": "Fire safety practices are important to reduce the extent of destruction caused by fire. While smoke alarms help save lives, firefighters struggle with the increasing number of false alarms. This paper presents a precise and efficient Weighted ensemble model for decreasing false alarms. It estimates the density, computes weights according to the high and low-density regions, forwards the high region weights to KNN and low region weights to XGBoost and combines the predictions. The proposed model is effective at reducing response time, increasing fire safety, and minimizing the damage that fires cause. A specifically designed dataset for smoke detection is utilized to test the proposed model. In addition, a variety of ML models, such as Logistic Regression (LR), Decision Tree (DT), Random Forest (RF), Nai:ve Bayes (NB), K-Nearest Neighbour (KNN), Support Vector Machine (SVM), Extreme Gradient Boosting (XGBoost), Adaptive Boosting (ADAB), have also been utilized. To maximize the use of the smoke detection dataset, all the algorithms utilize the SMOTE re-sampling technique. After evaluating the assessment criteria, this paper presents a concise summary of the comprehensive findings obtained by comparing the outcomes of all models."
+  },
+  {
+    "title": "Identification and Classification of Human Performance related Challenges during Remote Driving",
+    "url": "http://arxiv.org/abs/2503.09865v1",
+    "arxiv_id": "2503.09865v1",
+    "authors": [
+      "Ole Hans",
+      "J\u00fcrgen Adamy"
+    ],
+    "published": "2025-03-12T21:50:16+00:00",
+    "summary": "Remote driving of vehicles is gaining in importance in the transportation sector, especially when Automated Driving Systems (ADSs) reach the limits of their system boundaries. This study investigates the challenges faced by human Remote Drivers (RDs) during remote driving, particularly focusing on the identification and classification of human performance-related challenges through a comprehensive analysis of real-world remote driving data Las Vegas. For this purpose, a total of 183 RD performance-related Safety Driver (SD) interventions were analyzed and classified using an introduced severity classification. As it is essential to prevent the need for SD interventions, this study identified and analyzed harsh driving events to detect an increased likelihood of interventions by the SD. In addition, the results of the subjective RD questionnaire are used to evaluate whether the objective metrics from SD interventions and harsh driving events can also be confirmed by the RDs and whether additional challenges can be uncovered. The analysis reveals learning curves, showing a significant decrease in SD interventions as RD experience increases. Early phases of remote driving experience, especially below 200 km of experience, showed the highest frequency of safety-related events, including braking too late for traffic signs and responding impatiently to other traffic participants. Over time, RDs follow defined rules for improving their control, with experience leading to less harsh braking, acceleration, and steering maneuvers. The study contributes to understanding the requirements of RDS, emphasizing the importance of targeted training to address human performance limitations. It further highlights the need for system improvements to address challenges like latency and the limited haptic feedback replaced by visual feedback, which affect the RDs' perception and vehicle control."
+  },
+  {
+    "title": "Honey Trap or Romantic Utopia: A Case Study of Final Fantasy XIV Players PII Disclosure in Intimate Partner-Seeking Posts",
+    "url": "http://arxiv.org/abs/2503.09832v1",
+    "arxiv_id": "2503.09832v1",
+    "authors": [
+      "Yihao Zhou",
+      "Tanusree Sharma"
+    ],
+    "published": "2025-03-12T20:53:06+00:00",
+    "summary": "Massively multiplayer online games (MMOGs) can foster social interaction and relationship formation, but they pose specific privacy and safety challenges, especially in the context of mediating intimate interpersonal connections. To explore the potential risks, we conducted a case study on Final Fantasy XIV (FFXIV) players intimate partner seeking posts on social media. We analyzed 1,288 posts from a public Weibo account using Latent Dirichlet Allocation (LDA) topic modeling and thematic analysis. Our findings reveal that players disclose sensitive personal information and share vulnerabilities to establish trust but face difficulties in managing identity and privacy across multiple platforms. We also found that players expectations regarding intimate partner are diversified, and mismatch of expectations may leads to issues like privacy leakage or emotional exploitation. Based on our findings, we propose design implications for reducing privacy and safety risks and fostering healthier social interactions in virtual worlds."
+  },
+  {
+    "title": "How good are deep learning methods for automated road safety analysis using video data? An experimental study",
+    "url": "http://arxiv.org/abs/2503.09807v1",
+    "arxiv_id": "2503.09807v1",
+    "authors": [
+      "Qingwu Liu",
+      "Nicolas Saunier",
+      "Guillaume-Alexandre Bilodeau"
+    ],
+    "published": "2025-03-12T20:17:50+00:00",
+    "summary": "Image-based multi-object detection (MOD) and multi-object tracking (MOT) are advancing at a fast pace. A variety of 2D and 3D MOD and MOT methods have been developed for monocular and stereo cameras. Road safety analysis can benefit from those advancements. As crashes are rare events, surrogate measures of safety (SMoS) have been developed for safety analyses. (Semi-)Automated safety analysis methods extract road user trajectories to compute safety indicators, for example, Time-to-Collision (TTC) and Post-encroachment Time (PET). Inspired by the success of deep learning in MOD and MOT, we investigate three MOT methods, including one based on a stereo-camera, using the annotated KITTI traffic video dataset. Two post-processing steps, IDsplit and SS, are developed to improve the tracking results and investigate the factors influencing the TTC. The experimental results show that, despite some advantages in terms of the numbers of interactions or similarity to the TTC distributions, all the tested methods systematically over-estimate the number of interactions and under-estimate the TTC: they report more interactions and more severe interactions, making the road user interactions appear less safe than they are. Further efforts will be directed towards testing more methods and more data, in particular from roadside sensors, to verify the results and improve the performance."
+  },
+  {
+    "title": "Constrained Language Generation with Discrete Diffusion Models",
+    "url": "http://arxiv.org/abs/2503.09790v1",
+    "arxiv_id": "2503.09790v1",
+    "authors": [
+      "Michael Cardei",
+      "Jacob K Christopher",
+      "Thomas Hartvigsen",
+      "Brian R. Bartoldson",
+      "Bhavya Kailkhura",
+      "Ferdinando Fioretto"
+    ],
+    "published": "2025-03-12T19:48:12+00:00",
+    "summary": "Constraints are critical in text generation as LLM outputs are often unreliable when it comes to ensuring generated outputs adhere to user defined instruction or general safety guidelines. To address this gap, we present Constrained Discrete Diffusion (CDD), a novel method for enforcing constraints on natural language by integrating discrete diffusion models with differentiable optimization. Unlike conventional text generators, which often rely on post-hoc filtering or model retraining for controllable generation, we propose imposing constraints directly into the discrete diffusion sampling process. We illustrate how this technique can be applied to satisfy a variety of natural language constraints, including (i) toxicity mitigation by preventing harmful content from emerging, (ii) character and sequence level lexical constraints, and (iii) novel molecule sequence generation with specific property adherence. Experimental results show that our constraint-aware procedure achieves high fidelity in meeting these requirements while preserving fluency and semantic coherence, outperforming auto-regressive and existing discrete diffusion approaches."
+  },
+  {
+    "title": "Efficient Multi-Task Inferencing: Model Merging with Gromov-Wasserstein Feature Alignment",
+    "url": "http://arxiv.org/abs/2503.09774v1",
+    "arxiv_id": "2503.09774v1",
+    "authors": [
+      "Luyang Fang",
+      "Ehsan Latif",
+      "Haoran Lu",
+      "Yifan Zhou",
+      "Ping Ma",
+      "Xiaoming Zhai"
+    ],
+    "published": "2025-03-12T19:20:33+00:00",
+    "summary": "Automatic scoring of student responses enhances efficiency in education, but deploying a separate neural network for each task increases storage demands, maintenance efforts, and redundant computations. To address these challenges, this paper introduces the Gromov-Wasserstein Scoring Model Merging (GW-SMM) method, which merges models based on feature distribution similarities measured via the Gromov-Wasserstein distance. Our approach begins by extracting features from student responses using individual models, capturing both item-specific context and unique learned representations. The Gromov-Wasserstein distance then quantifies the similarity between these feature distributions, identifying the most compatible models for merging. Models exhibiting the smallest pairwise distances, typically in pairs or trios, are merged by combining only the shared layers preceding the classification head. This strategy results in a unified feature extractor while preserving separate classification heads for item-specific scoring. We validated our approach against human expert knowledge and a GPT-o1-based merging method. GW-SMM consistently outperformed both, achieving a higher micro F1 score, macro F1 score, exact match accuracy, and per-label accuracy. The improvements in micro F1 and per-label accuracy were statistically significant compared to GPT-o1-based merging (p=0.04, p=0.01). Additionally, GW-SMM reduced storage requirements by half without compromising much accuracy, demonstrating its computational efficiency alongside reliable scoring performance."
+  },
+  {
     "title": "How to Protect Yourself from 5G Radiation? Investigating LLM Responses to Implicit Misinformation",
     "url": "http://arxiv.org/abs/2503.09598v1",
     "arxiv_id": "2503.09598v1",
