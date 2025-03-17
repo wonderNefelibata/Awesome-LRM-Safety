@@ -1,5 +1,341 @@
 [
   {
+    "title": "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
+    "url": "http://arxiv.org/abs/2503.11650v1",
+    "arxiv_id": "2503.11650v1",
+    "authors": [
+      "Chonghao Sima",
+      "Kashyap Chitta",
+      "Zhiding Yu",
+      "Shiyi Lan",
+      "Ping Luo",
+      "Andreas Geiger",
+      "Hongyang Li",
+      "Jose M. Alvarez"
+    ],
+    "published": "2025-03-14T17:59:41+00:00",
+    "summary": "How can we rely on an end-to-end autonomous vehicle's complex decision-making system during deployment? One common solution is to have a ``fallback layer'' that checks the planned trajectory for rule violations and replaces it with a pre-defined safe action if necessary. Another approach involves adjusting the planner's decisions to minimize a pre-defined ``cost function'' using additional system predictions such as road layouts and detected obstacles. However, these pre-programmed rules or cost functions cannot learn and improve with new training data, often resulting in overly conservative behaviors. In this work, we propose Centaur (Cluster Entropy for Test-time trAining using Uncertainty) which updates a planner's behavior via test-time training, without relying on hand-engineered rules or cost functions. Instead, we measure and minimize the uncertainty in the planner's decisions. For this, we develop a novel uncertainty measure, called Cluster Entropy, which is simple, interpretable, and compatible with state-of-the-art planning algorithms. Using data collected at prior test-time time-steps, we perform an update to the model's parameters using a gradient that minimizes the Cluster Entropy. With only this sole gradient update prior to inference, Centaur exhibits significant improvements, ranking first on the navtest leaderboard with notable gains in safety-critical metrics such as time to collision. To provide detailed insights on a per-scenario basis, we also introduce navsafe, a challenging new benchmark, which highlights previously undiscovered failure modes of driving models."
+  },
+  {
+    "title": "Tit-for-Tat: Safeguarding Large Vision-Language Models Against Jailbreak Attacks via Adversarial Defense",
+    "url": "http://arxiv.org/abs/2503.11619v1",
+    "arxiv_id": "2503.11619v1",
+    "authors": [
+      "Shuyang Hao",
+      "Yiwei Wang",
+      "Bryan Hooi",
+      "Ming-Hsuan Yang",
+      "Jun Liu",
+      "Chengcheng Tang",
+      "Zi Huang",
+      "Yujun Cai"
+    ],
+    "published": "2025-03-14T17:39:45+00:00",
+    "summary": "Deploying large vision-language models (LVLMs) introduces a unique vulnerability: susceptibility to malicious attacks via visual inputs. However, existing defense methods suffer from two key limitations: (1) They solely focus on textual defenses, fail to directly address threats in the visual domain where attacks originate, and (2) the additional processing steps often incur significant computational overhead or compromise model performance on benign tasks. Building on these insights, we propose ESIII (Embedding Security Instructions Into Images), a novel methodology for transforming the visual space from a source of vulnerability into an active defense mechanism. Initially, we embed security instructions into defensive images through gradient-based optimization, obtaining security instructions in the visual dimension. Subsequently, we integrate security instructions from visual and textual dimensions with the input query. The collaboration between security instructions from different dimensions ensures comprehensive security protection. Extensive experiments demonstrate that our approach effectively fortifies the robustness of LVLMs against such attacks while preserving their performance on standard benign tasks and incurring an imperceptible increase in time costs."
+  },
+  {
+    "title": "Broaden your SCOPE! Efficient Multi-turn Conversation Planning for LLMs using Semantic Space",
+    "url": "http://arxiv.org/abs/2503.11586v1",
+    "arxiv_id": "2503.11586v1",
+    "authors": [
+      "Zhiliang Chen",
+      "Xinyuan Niu",
+      "Chuan-Sheng Foo",
+      "Bryan Kian Hsiang Low"
+    ],
+    "published": "2025-03-14T16:55:46+00:00",
+    "summary": "Large language models (LLMs) are used in chatbots or AI assistants to hold conversations with a human user. In such applications, the quality (e.g., user engagement, safety) of a conversation is important and can only be exactly known at the end of the conversation. To maximize its expected quality, conversation planning reasons about the stochastic transitions within a conversation to select the optimal LLM response at each turn. Existing simulation-based conversation planning algorithms typically select the optimal response by simulating future conversations with a large number of LLM queries at every turn. However, this process is extremely time-consuming and hence impractical for real-time conversations. This paper presents a novel approach called Semantic space COnversation Planning with improved Efficiency (SCOPE) that exploits the dense semantic representation of conversations to perform conversation planning efficiently. In particular, SCOPE models the stochastic transitions in conversation semantics and their associated rewards to plan entirely within the semantic space. This allows us to select the optimal LLM response at every conversation turn without needing additional LLM queries for simulation. As a result, SCOPE can perform conversation planning 70 times faster than conventional simulation-based planning algorithms when applied to a wide variety of conversation starters and two reward functions seen in the real world, yet achieving a higher reward within a practical planning budget. Our code can be found at: https://github.com/chenzhiliang94/convo-plan-SCOPE."
+  },
+  {
+    "title": "A Review of DeepSeek Models' Key Innovative Techniques",
+    "url": "http://arxiv.org/abs/2503.11486v1",
+    "arxiv_id": "2503.11486v1",
+    "authors": [
+      "Chengen Wang",
+      "Murat Kantarcioglu"
+    ],
+    "published": "2025-03-14T15:11:29+00:00",
+    "summary": "DeepSeek-V3 and DeepSeek-R1 are leading open-source Large Language Models (LLMs) for general-purpose tasks and reasoning, achieving performance comparable to state-of-the-art closed-source models from companies like OpenAI and Anthropic -- while requiring only a fraction of their training costs. Understanding the key innovative techniques behind DeepSeek's success is crucial for advancing LLM research. In this paper, we review the core techniques driving the remarkable effectiveness and efficiency of these models, including refinements to the transformer architecture, innovations such as Multi-Head Latent Attention and Mixture of Experts, Multi-Token Prediction, the co-design of algorithms, frameworks, and hardware, the Group Relative Policy Optimization algorithm, post-training with pure reinforcement learning and iterative training alternating between supervised fine-tuning and reinforcement learning. Additionally, we identify several open questions and highlight potential research opportunities in this rapidly advancing field."
+  },
+  {
+    "title": "Certified Inductive Synthesis for Online Mixed-Integer Optimization",
+    "url": "http://arxiv.org/abs/2503.11388v1",
+    "arxiv_id": "2503.11388v1",
+    "authors": [
+      "Marco Zamponi",
+      "Emilio Incerto",
+      "Daniele Masti",
+      "Mirco Tribastone"
+    ],
+    "published": "2025-03-14T13:31:03+00:00",
+    "summary": "In fields such as autonomous and safety-critical systems, online optimization plays a crucial role in control and decision-making processes, often requiring the integration of continuous and discrete variables. These tasks are frequently modeled as mixed-integer programming (MIP) problems, where feedback data are incorporated as parameters. However, solving MIPs within strict time constraints is challenging due to their $\\mathcal{NP}$-complete nature. A promising solution to this challenge involves leveraging the largely invariant structure of these problems to perform most computations offline, thus enabling efficient online solving even on platforms with limited hardware capabilities. In this paper we present a novel implementation of this strategy that uses counterexample-guided inductive synthesis to split the MIP solution process into two stages. In the offline phase, we construct a mapping that provides feasible assignments for binary variables based on parameter values within a specified range. In the online phase, we solve the remaining continuous part of the problem by fixing the binary variables to the values predicted by this mapping. Our numerical evaluation demonstrates the efficiency and solution quality of this approach compared to standard mixed-integer solvers, highlighting its potential for real-time applications in resource-constrained environments."
+  },
+  {
+    "title": "Road Rage Reasoning with Vision-language Models (VLMs): Task Definition and Evaluation Dataset",
+    "url": "http://arxiv.org/abs/2503.11342v1",
+    "arxiv_id": "2503.11342v1",
+    "authors": [
+      "Yibing Weng",
+      "Yu Gu",
+      "Fuji Ren"
+    ],
+    "published": "2025-03-14T12:18:11+00:00",
+    "summary": "Road rage, triggered by driving-related stimuli such as traffic congestion and aggressive driving, poses a significant threat to road safety. Previous research on road rage regulation has primarily focused on response suppression, lacking proactive prevention capabilities. With the advent of Vision-Language Models (VLMs), it has become possible to reason about trigger events visually and then engage in dialog-based comforting before drivers' anger escalates. To this end, we propose the road rage reasoning task, along with a finely annotated test dataset and evaluation metrics, to assess the capabilities of current mainstream VLMs in scene understanding, event recognition, and road rage reasoning. The results indicate that current VLMs exhibit significant shortcomings in scene understanding within the visual modality, as well as in comprehending the spatial relationships between objects in the textual modality. Improving VLMs' performance in these areas will greatly benefit downstream tasks like antecedent-focused road rage regulation."
+  },
+  {
+    "title": "Contract Based Program Models for Software Model Checking",
+    "url": "http://arxiv.org/abs/2503.11236v1",
+    "arxiv_id": "2503.11236v1",
+    "authors": [
+      "Jesper Amilon",
+      "Dilian Gurov"
+    ],
+    "published": "2025-03-14T09:34:59+00:00",
+    "summary": "Model checking temporal properties of software is algorithmically hard. To be practically feasible, it usually requires the creation of simpler, abstract models of the software, over which the properties are checked. However, creating suitable abstractions is another difficult problem. We argue that such abstract models can be obtained with little effort, when the state transformation properties of the software components have already been deductively verified. As a concrete, language-independent representation of such abstractions we propose the use of \\emph{flow graphs}, a formalism previously developed for the purposes of compositional model checking. In this paper, we describe how we envisage the work flow and tool chain to support the proposed verification approach in the context of embedded, safety-critical software written in~C."
+  },
+  {
+    "title": "Can Large Reasoning Models do Analogical Reasoning under Perceptual Uncertainty?",
+    "url": "http://arxiv.org/abs/2503.11207v1",
+    "arxiv_id": "2503.11207v1",
+    "authors": [
+      "Giacomo Camposampiero",
+      "Michael Hersche",
+      "Roger Wattenhofer",
+      "Abu Sebastian",
+      "Abbas Rahimi"
+    ],
+    "published": "2025-03-14T08:52:25+00:00",
+    "summary": "This work presents a first evaluation of two state-of-the-art Large Reasoning Models (LRMs), OpenAI's o3-mini and DeepSeek R1, on analogical reasoning, focusing on well-established nonverbal human IQ tests based on Raven's progressive matrices. We benchmark with the I-RAVEN dataset and its more difficult extension, I-RAVEN-X, which tests the ability to generalize to longer reasoning rules and ranges of the attribute values. To assess the influence of visual uncertainties on these nonverbal analogical reasoning tests, we extend the I-RAVEN-X dataset, which otherwise assumes an oracle perception. We adopt a two-fold strategy to simulate this imperfect visual perception: 1) we introduce confounding attributes which, being sampled at random, do not contribute to the prediction of the correct answer of the puzzles and 2) smoothen the distributions of the input attributes' values. We observe a sharp decline in OpenAI's o3-mini task accuracy, dropping from 86.6% on the original I-RAVEN to just 17.0% -- approaching random chance -- on the more challenging I-RAVEN-X, which increases input length and range and emulates perceptual uncertainty. This drop occurred despite spending 3.4x more reasoning tokens. A similar trend is also observed for DeepSeek R1: from 80.6% to 23.2%. On the other hand, a neuro-symbolic probabilistic abductive model, ARLC, that achieves state-of-the-art performances on I-RAVEN, can robustly reason under all these out-of-distribution tests, maintaining strong accuracy with only a modest reduction from 98.6% to 88.0%. Our code is available at https://github.com/IBM/raven-large-language-models."
+  },
+  {
+    "title": "GAIPAT -Dataset on Human Gaze and Actions for Intent Prediction in Assembly Tasks",
+    "url": "http://arxiv.org/abs/2503.11186v1",
+    "arxiv_id": "2503.11186v1",
+    "authors": [
+      "Maxence Grand",
+      "Damien Pellier",
+      "Francis Jambon"
+    ],
+    "published": "2025-03-14T08:32:52+00:00",
+    "summary": "The primary objective of the dataset is to provide a better understanding of the coupling between human actions and gaze in a shared working environment with a cobot, with the aim of signifcantly enhancing the effciency and safety of humancobot interactions. More broadly, by linking gaze patterns with physical actions, the dataset offers valuable insights into cognitive processes and attention dynamics in the context of assembly tasks. The proposed dataset contains gaze and action data from approximately 80 participants, recorded during simulated industrial assembly tasks. The tasks were simulated using controlled scenarios in which participants manipulated educational building blocks. Gaze data was collected using two different eye-tracking setups -head-mounted and remote-while participants worked in two positions: sitting and standing."
+  },
+  {
+    "title": "Align in Depth: Defending Jailbreak Attacks via Progressive Answer Detoxification",
+    "url": "http://arxiv.org/abs/2503.11185v1",
+    "arxiv_id": "2503.11185v1",
+    "authors": [
+      "Yingjie Zhang",
+      "Tong Liu",
+      "Zhe Zhao",
+      "Guozhu Meng",
+      "Kai Chen"
+    ],
+    "published": "2025-03-14T08:32:12+00:00",
+    "summary": "Large Language Models (LLMs) are vulnerable to jailbreak attacks, which use crafted prompts to elicit toxic responses. These attacks exploit LLMs' difficulty in dynamically detecting harmful intents during the generation process. Traditional safety alignment methods, often relying on the initial few generation steps, are ineffective due to limited computational budget. This paper proposes DEEPALIGN, a robust defense framework that fine-tunes LLMs to progressively detoxify generated content, significantly improving both the computational budget and effectiveness of mitigating harmful generation. Our approach uses a hybrid loss function operating on hidden states to directly improve LLMs' inherent awareness of toxity during generation. Furthermore, we redefine safe responses by generating semantically relevant answers to harmful queries, thereby increasing robustness against representation-mutation attacks. Evaluations across multiple LLMs demonstrate state-of-the-art defense performance against six different attack types, reducing Attack Success Rates by up to two orders of magnitude compared to previous state-of-the-art defense while preserving utility. This work advances LLM safety by addressing limitations of conventional alignment through dynamic, context-aware mitigation."
+  },
+  {
+    "title": "Hand Over or Place On The Table? A Study On Robotic Object Delivery When The Recipient Is Occupied",
+    "url": "http://arxiv.org/abs/2503.11177v1",
+    "arxiv_id": "2503.11177v1",
+    "authors": [
+      "Thieu Long Phan",
+      "Akansel Cosgun"
+    ],
+    "published": "2025-03-14T08:25:34+00:00",
+    "summary": "This study investigates the subjective experiences of users in two robotic object delivery methods: direct handover and table placement, when users are occupied with another task. A user study involving 15 participants engaged in a typing game revealed that table placement significantly enhances user experience compared to direct handovers, particularly in terms of satisfaction, perceived safety and intuitiveness. Additionally, handovers negatively impacted typing performance, while all participants expressed a clear preference for table placement as the delivery method. These findings highlight the advantages of table placement in scenarios requiring minimal user disruption."
+  },
+  {
+    "title": "Prompt Alchemy: Automatic Prompt Refinement for Enhancing Code Generation",
+    "url": "http://arxiv.org/abs/2503.11085v1",
+    "arxiv_id": "2503.11085v1",
+    "authors": [
+      "Sixiang Ye",
+      "Zeyu Sun",
+      "Guoqing Wang",
+      "Liwei Guo",
+      "Qingyuan Liang",
+      "Zheng Li",
+      "Yong Liu"
+    ],
+    "published": "2025-03-14T04:53:03+00:00",
+    "summary": "Code generation has emerged as a key task to automate software development by converting high-level descriptions into executable code. Large language models (LLMs) excel at this but depend heavily on input prompt quality.Manual prompt engineering can be time-consuming and inconsistent, limiting LLM effectiveness. This paper introduces Prochemy, an innovative method for automatically refining prompts to boost code generation. Prochemy overcomes manual prompt limitations by automating optimization, ensuring consistency during inference, and supporting multi-agent systems.It iteratively refines prompts based on model performance, using an optimized final prompt for improved consistency across tasks. We tested Prochemy on natural language-based code generation and translation tasks using three LLM series. Results indicate Prochemy enhances existing methods, improving performance by 5.0% for GPT-3.5-Turbo and 1.9% for GPT-4o over zero-shot baselines on HumanEval. In state-of-the-art LDB, Prochemy + LDB surpasses standalone methods by 1.2-1.8%. For code translation, Prochemy boosts GPT-4o's Java-to-Python (AVATAR) performance from 74.5 to 84.1 (+12.9%) and Python-to-Java from 66.8 to 78.2 (+17.1%). Moreover, Prochemy maintains strong performance when integrated with the o1-mini model, validating its efficacy in code tasks. Designed as plug-and-play, Prochemy optimizes prompts with minimal human input, bridging the gap between simple prompts and complex frameworks."
+  },
+  {
+    "title": "Inverter Control with Time-Varying and Nonconvex State and Input Constraints",
+    "url": "http://arxiv.org/abs/2503.11075v1",
+    "arxiv_id": "2503.11075v1",
+    "authors": [
+      "Zixiao Ma",
+      "Baosen Zhang"
+    ],
+    "published": "2025-03-14T04:35:02+00:00",
+    "summary": "The growing integration of inverter-based resources (IBRs) into modern power systems poses significant challenges for maintaining reliable operation under dynamic and constrained conditions. This paper focuses on the power tracking problem for grid-connected IBRs, addressing the complexities introduced by voltage and power factor constraints. Voltage constraints, being time-varying and nonlinear input constraints, often conflict with power factor constraints, which are state constraints. These conflicts, coupled with stability requirements, add substantial complexity to control design. To overcome these challenges, we propose a computationally efficient static state-feedback controller that guarantees stability and satisfies operational constraints. The concept of achievability is introduced to evaluate whether power setpoints can be accurately tracked while adhering to all constraints. Using a parameterization framework and the S-lemma, we develop criteria to assess and maximize the continuous achievable region for IBR operation. This framework allows system operators to ensure safety and stability by precomputing a finite set of control gains, significantly reducing online computational requirements. The proposed approach is validated through simulations, demonstrating its effectiveness in handling time-varying grid disturbances and achieving reliable control performance."
+  },
+  {
+    "title": "Large Reasoning Models in Agent Scenarios: Exploring the Necessity of Reasoning Capabilities",
+    "url": "http://arxiv.org/abs/2503.11074v1",
+    "arxiv_id": "2503.11074v1",
+    "authors": [
+      "Xueyang Zhou",
+      "Guiyao Tie",
+      "Guowen Zhang",
+      "Weidong Wang",
+      "Zhigang Zuo",
+      "Di Wu",
+      "Duanfeng Chu",
+      "Pan Zhou",
+      "Lichao Sun",
+      "Neil Zhenqiang Gong"
+    ],
+    "published": "2025-03-14T04:34:31+00:00",
+    "summary": "The rise of Large Reasoning Models (LRMs) signifies a paradigm shift toward advanced computational reasoning. Yet, this progress disrupts traditional agent frameworks, traditionally anchored by execution-oriented Large Language Models (LLMs). To explore this transformation, we propose the LaRMA framework, encompassing nine tasks across Tool Usage, Plan Design, and Problem Solving, assessed with three top LLMs (e.g., Claude3.5-sonnet) and five leading LRMs (e.g., DeepSeek-R1). Our findings address four research questions: LRMs surpass LLMs in reasoning-intensive tasks like Plan Design, leveraging iterative reflection for superior outcomes; LLMs excel in execution-driven tasks such as Tool Usage, prioritizing efficiency; hybrid LLM-LRM configurations, pairing LLMs as actors with LRMs as reflectors, optimize agent performance by blending execution speed with reasoning depth; and LRMs' enhanced reasoning incurs higher computational costs, prolonged processing, and behavioral challenges, including overthinking and fact-ignoring tendencies. This study fosters deeper inquiry into LRMs' balance of deep thinking and overthinking, laying a critical foundation for future agent design advancements."
+  },
+  {
+    "title": "Approximate Reachable Sets using Singularly Perturbed Differential Games, with Application to Biological System Models",
+    "url": "http://arxiv.org/abs/2503.11021v1",
+    "arxiv_id": "2503.11021v1",
+    "authors": [
+      "Dylan Hirsch",
+      "Sylvia Herbert"
+    ],
+    "published": "2025-03-14T02:37:32+00:00",
+    "summary": "Hamilton-Jacobi Reachability (HJR) is an exciting framework used for control of safety-critical systems with nonlinear and possibly uncertain dynamics. However, HJR suffers from the curse of dimensionality, with computation times growing exponentially in the dimension of the system state. Many autonomous and controlled systems involve dynamics that evolve on multiple timescales, and for these systems, singular perturbation methods can be used for model reduction. However, such methods are more challenging to apply in HJR due to the presence of an underlying differential game. In this work, we leverage prior work on singularly perturbed differential games to identify a class of systems which can be readily reduced, and we relate these results to the quantities of interest in HJR. We demonstrate the utility of our results on two examples involving biological systems, where dynamics fitting the identified class are frequently encountered."
+  },
+  {
+    "title": "Comparative Analysis of Advanced AI-based Object Detection Models for Pavement Marking Quality Assessment during Daytime",
+    "url": "http://arxiv.org/abs/2503.11008v1",
+    "arxiv_id": "2503.11008v1",
+    "authors": [
+      "Gian Antariksa",
+      "Rohir Chakraborty",
+      "Shriyank Somvanshi",
+      "Subasish Das",
+      "Mohammad Jalayer",
+      "Deep Rameshkumar Patel",
+      "David Mills"
+    ],
+    "published": "2025-03-14T02:06:46+00:00",
+    "summary": "Visual object detection utilizing deep learning plays a vital role in computer vision and has extensive applications in transportation engineering. This paper focuses on detecting pavement marking quality during daytime using the You Only Look Once (YOLO) model, leveraging its advanced architectural features to enhance road safety through precise and real-time assessments. Utilizing image data from New Jersey, this study employed three YOLOv8 variants: YOLOv8m, YOLOv8n, and YOLOv8x. The models were evaluated based on their prediction accuracy for classifying pavement markings into good, moderate, and poor visibility categories. The results demonstrated that YOLOv8n provides the best balance between accuracy and computational efficiency, achieving the highest mean Average Precision (mAP) for objects with good visibility and demonstrating robust performance across various Intersections over Union (IoU) thresholds. This research enhances transportation safety by offering an automated and accurate method for evaluating the quality of pavement markings."
+  },
+  {
+    "title": "TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools",
+    "url": "http://arxiv.org/abs/2503.10970v1",
+    "arxiv_id": "2503.10970v1",
+    "authors": [
+      "Shanghua Gao",
+      "Richard Zhu",
+      "Zhenglun Kong",
+      "Ayush Noori",
+      "Xiaorui Su",
+      "Curtis Ginder",
+      "Theodoros Tsiligkaridis",
+      "Marinka Zitnik"
+    ],
+    "published": "2025-03-14T00:28:15+00:00",
+    "summary": "Precision therapeutics require multimodal adaptive models that generate personalized treatment recommendations. We introduce TxAgent, an AI agent that leverages multi-step reasoning and real-time biomedical knowledge retrieval across a toolbox of 211 tools to analyze drug interactions, contraindications, and patient-specific treatment strategies. TxAgent evaluates how drugs interact at molecular, pharmacokinetic, and clinical levels, identifies contraindications based on patient comorbidities and concurrent medications, and tailors treatment strategies to individual patient characteristics. It retrieves and synthesizes evidence from multiple biomedical sources, assesses interactions between drugs and patient conditions, and refines treatment recommendations through iterative reasoning. It selects tools based on task objectives and executes structured function calls to solve therapeutic tasks that require clinical reasoning and cross-source validation. The ToolUniverse consolidates 211 tools from trusted sources, including all US FDA-approved drugs since 1939 and validated clinical insights from Open Targets. TxAgent outperforms leading LLMs, tool-use models, and reasoning agents across five new benchmarks: DrugPC, BrandPC, GenericPC, TreatmentPC, and DescriptionPC, covering 3,168 drug reasoning tasks and 456 personalized treatment scenarios. It achieves 92.1% accuracy in open-ended drug reasoning tasks, surpassing GPT-4o and outperforming DeepSeek-R1 (671B) in structured multi-step reasoning. TxAgent generalizes across drug name variants and descriptions. By integrating multi-step inference, real-time knowledge grounding, and tool-assisted decision-making, TxAgent ensures that treatment recommendations align with established clinical guidelines and real-world evidence, reducing the risk of adverse events and improving therapeutic decision-making."
+  },
+  {
+    "title": "Safe Control of Second-Order Systems with Linear Constraints",
+    "url": "http://arxiv.org/abs/2503.10953v1",
+    "arxiv_id": "2503.10953v1",
+    "authors": [
+      "Mohammed Alyaseen",
+      "Nikolay Atanasov",
+      "Jorge Cortes"
+    ],
+    "published": "2025-03-13T23:39:45+00:00",
+    "summary": "Control barrier functions (CBFs) offer a powerful tool for enforcing safety specifications in control synthesis. This paper deals with the problem of constructing valid CBFs. Given a second-order system and any desired safety set with linear boundaries in the position space, we construct a provably control-invariant subset of this desired safety set. The constructed subset does not sacrifice any positions allowed by the desired safety set, which can be nonconvex. We show how our construction can also meet safety specification on the velocity. We then demonstrate that if the system satisfies standard Euler-Lagrange systems properties then our construction can also handle constraints on the allowable control inputs. We finally show the efficacy of the proposed method in a numerical example of keeping a 2D robot arm safe from collision."
+  },
+  {
+    "title": "Safe Continual Domain Adaptation after Sim2Real Transfer of Reinforcement Learning Policies in Robotics",
+    "url": "http://arxiv.org/abs/2503.10949v1",
+    "arxiv_id": "2503.10949v1",
+    "authors": [
+      "Josip Josifovski",
+      "Shangding Gu",
+      "Mohammadhossein Malmir",
+      "Haoliang Huang",
+      "Sayantan Auddy",
+      "Nicol\u00e1s Navarro-Guerrero",
+      "Costas Spanos",
+      "Alois Knoll"
+    ],
+    "published": "2025-03-13T23:28:11+00:00",
+    "summary": "Domain randomization has emerged as a fundamental technique in reinforcement learning (RL) to facilitate the transfer of policies from simulation to real-world robotic applications. Many existing domain randomization approaches have been proposed to improve robustness and sim2real transfer. These approaches rely on wide randomization ranges to compensate for the unknown actual system parameters, leading to robust but inefficient real-world policies. In addition, the policies pretrained in the domain-randomized simulation are fixed after deployment due to the inherent instability of the optimization processes based on RL and the necessity of sampling exploitative but potentially unsafe actions on the real system. This limits the adaptability of the deployed policy to the inevitably changing system parameters or environment dynamics over time. We leverage safe RL and continual learning under domain-randomized simulation to address these limitations and enable safe deployment-time policy adaptation in real-world robot control. The experiments show that our method enables the policy to adapt and fit to the current domain distribution and environment dynamics of the real system while minimizing safety risks and avoiding issues like catastrophic forgetting of the general policy found in randomized simulation during the pretraining phase. Videos and supplementary material are available at https://safe-cda.github.io/."
+  },
+  {
+    "title": "TAIJI: Textual Anchoring for Immunizing Jailbreak Images in Vision Language Models",
+    "url": "http://arxiv.org/abs/2503.10872v1",
+    "arxiv_id": "2503.10872v1",
+    "authors": [
+      "Xiangyu Yin",
+      "Yi Qi",
+      "Jinwei Hu",
+      "Zhen Chen",
+      "Yi Dong",
+      "Xingyu Zhao",
+      "Xiaowei Huang",
+      "Wenjie Ruan"
+    ],
+    "published": "2025-03-13T20:39:31+00:00",
+    "summary": "Vision Language Models (VLMs) have demonstrated impressive inference capabilities, but remain vulnerable to jailbreak attacks that can induce harmful or unethical responses. Existing defence methods are predominantly white-box approaches that require access to model parameters and extensive modifications, making them costly and impractical for many real-world scenarios. Although some black-box defences have been proposed, they often impose input constraints or require multiple queries, limiting their effectiveness in safety-critical tasks such as autonomous driving. To address these challenges, we propose a novel black-box defence framework called \\textbf{T}extual \\textbf{A}nchoring for \\textbf{I}mmunizing \\textbf{J}ailbreak \\textbf{I}mages (\\textbf{TAIJI}). TAIJI leverages key phrase-based textual anchoring to enhance the model's ability to assess and mitigate the harmful content embedded within both visual and textual prompts. Unlike existing methods, TAIJI operates effectively with a single query during inference, while preserving the VLM's performance on benign tasks. Extensive experiments demonstrate that TAIJI significantly enhances the safety and reliability of VLMs, providing a practical and efficient solution for real-world deployment."
+  },
+  {
+    "title": "Efficient Reachability Analysis for Convolutional Neural Networks Using Hybrid Zonotopes",
+    "url": "http://arxiv.org/abs/2503.10840v1",
+    "arxiv_id": "2503.10840v1",
+    "authors": [
+      "Yuhao Zhang",
+      "Xiangru Xu"
+    ],
+    "published": "2025-03-13T19:45:26+00:00",
+    "summary": "Feedforward neural networks are widely used in autonomous systems, particularly for control and perception tasks within the system loop. However, their vulnerability to adversarial attacks necessitates formal verification before deployment in safety-critical applications. Existing set propagation-based reachability analysis methods for feedforward neural networks often struggle to achieve both scalability and accuracy. This work presents a novel set-based approach for computing the reachable sets of convolutional neural networks. The proposed method leverages a hybrid zonotope representation and an efficient neural network reduction technique, providing a flexible trade-off between computational complexity and approximation accuracy. Numerical examples are presented to demonstrate the effectiveness of the proposed approach."
+  },
+  {
+    "title": "Thinking Machines: A Survey of LLM based Reasoning Strategies",
+    "url": "http://arxiv.org/abs/2503.10814v1",
+    "arxiv_id": "2503.10814v1",
+    "authors": [
+      "Dibyanayan Bandyopadhyay",
+      "Soham Bhattacharjee",
+      "Asif Ekbal"
+    ],
+    "published": "2025-03-13T19:03:41+00:00",
+    "summary": "Large Language Models (LLMs) are highly proficient in language-based tasks. Their language capabilities have positioned them at the forefront of the future AGI (Artificial General Intelligence) race. However, on closer inspection, Valmeekam et al. (2024); Zecevic et al. (2023); Wu et al. (2024) highlight a significant gap between their language proficiency and reasoning abilities. Reasoning in LLMs and Vision Language Models (VLMs) aims to bridge this gap by enabling these models to think and re-evaluate their actions and responses. Reasoning is an essential capability for complex problem-solving and a necessary step toward establishing trust in Artificial Intelligence (AI). This will make AI suitable for deployment in sensitive domains, such as healthcare, banking, law, defense, security etc. In recent times, with the advent of powerful reasoning models like OpenAI O1 and DeepSeek R1, reasoning endowment has become a critical research topic in LLMs. In this paper, we provide a detailed overview and comparison of existing reasoning techniques and present a systematic survey of reasoning-imbued language models. We also study current challenges and present our findings."
+  },
+  {
+    "title": "HALURust: Exploiting Hallucinations of Large Language Models to Detect Vulnerabilities in Rust",
+    "url": "http://arxiv.org/abs/2503.10793v1",
+    "arxiv_id": "2503.10793v1",
+    "authors": [
+      "Yu Luo",
+      "Han Zhou",
+      "Mengtao Zhang",
+      "Dylan De La Rosa",
+      "Hafsa Ahmed",
+      "Weifeng Xu",
+      "Dianxiang Xu"
+    ],
+    "published": "2025-03-13T18:38:34+00:00",
+    "summary": "As an emerging programming language, Rust has rapidly gained popularity and recognition among developers due to its strong emphasis on safety. It employs a unique ownership system and safe concurrency practices to ensure robust safety. Despite these safeguards, security in Rust still presents challenges. Since 2018, 442 Rust-related vulnerabilities have been reported in real-world applications. The limited availability of data has resulted in existing vulnerability detection tools performing poorly in real-world scenarios, often failing to adapt to new and complex vulnerabilities. This paper introduces HALURust, a novel framework that leverages hallucinations of large language models (LLMs) to detect vulnerabilities in real-world Rust scenarios. HALURust leverages LLMs' strength in natural language generation by transforming code into detailed vulnerability analysis reports. The key innovation lies in prompting the LLM to always assume the presence of a vulnerability. If the code sample is vulnerable, the LLM provides an accurate analysis; if not, it generates a hallucinated report. By fine-tuning LLMs on these hallucinations, HALURust can effectively distinguish between vulnerable and non-vulnerable code samples. HALURust was evaluated on a dataset of 81 real-world vulnerabilities, covering 447 functions and 18,691 lines of code across 54 applications. It outperformed existing methods, achieving an F1 score of 77.3%, with over 10% improvement. The hallucinated report-based fine-tuning improved detection by 20\\% compared to traditional code-based fine-tuning. Additionally, HALURust effectively adapted to unseen vulnerabilities and other programming languages, demonstrating strong generalization capabilities."
+  },
+  {
+    "title": "HeightFormer: Learning Height Prediction in Voxel Features for Roadside Vision Centric 3D Object Detection via Transformer",
+    "url": "http://arxiv.org/abs/2503.10777v1",
+    "arxiv_id": "2503.10777v1",
+    "authors": [
+      "Zhang Zhang",
+      "Chao Sun",
+      "Chao Yue",
+      "Da Wen",
+      "Yujie Chen",
+      "Tianze Wang",
+      "Jianghao Leng"
+    ],
+    "published": "2025-03-13T18:17:19+00:00",
+    "summary": "Roadside vision centric 3D object detection has received increasing attention in recent years. It expands the perception range of autonomous vehicles, enhances the road safety. Previous methods focused on predicting per-pixel height rather than depth, making significant gains in roadside visual perception. While it is limited by the perspective property of near-large and far-small on image features, making it difficult for network to understand real dimension of objects in the 3D world. BEV features and voxel features present the real distribution of objects in 3D world compared to the image features. However, BEV features tend to lose details due to the lack of explicit height information, and voxel features are computationally expensive. Inspired by this insight, an efficient framework learning height prediction in voxel features via transformer is proposed, dubbed HeightFormer. It groups the voxel features into local height sequences, and utilize attention mechanism to obtain height distribution prediction. Subsequently, the local height sequences are reassembled to generate accurate 3D features. The proposed method is applied to two large-scale roadside benchmarks, DAIR-V2X-I and Rope3D. Extensive experiments are performed and the HeightFormer outperforms the state-of-the-art methods in roadside vision centric 3D object detection task."
+  },
+  {
     "title": "A Frustratingly Simple Yet Highly Effective Attack Baseline: Over 90% Success Rate Against the Strong Black-box Models of GPT-4.5/4o/o1",
     "url": "http://arxiv.org/abs/2503.10635v1",
     "arxiv_id": "2503.10635v1",
