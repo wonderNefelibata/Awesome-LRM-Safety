@@ -1,5 +1,378 @@
 [
   {
+    "title": "Aligning Multimodal LLM with Human Preference: A Survey",
+    "url": "http://arxiv.org/abs/2503.14504v1",
+    "arxiv_id": "2503.14504v1",
+    "authors": [
+      "Tao Yu",
+      "Yi-Fan Zhang",
+      "Chaoyou Fu",
+      "Junkang Wu",
+      "Jinda Lu",
+      "Kun Wang",
+      "Xingyu Lu",
+      "Yunhang Shen",
+      "Guibin Zhang",
+      "Dingjie Song",
+      "Yibo Yan",
+      "Tianlong Xu",
+      "Qingsong Wen",
+      "Zhang Zhang",
+      "Yan Huang",
+      "Liang Wang",
+      "Tieniu Tan"
+    ],
+    "published": "2025-03-18T17:59:56+00:00",
+    "summary": "Large language models (LLMs) can handle a wide variety of general tasks with simple prompts, without the need for task-specific training. Multimodal Large Language Models (MLLMs), built upon LLMs, have demonstrated impressive potential in tackling complex tasks involving visual, auditory, and textual data. However, critical issues related to truthfulness, safety, o1-like reasoning, and alignment with human preference remain insufficiently addressed. This gap has spurred the emergence of various alignment algorithms, each targeting different application scenarios and optimization goals. Recent studies have shown that alignment algorithms are a powerful approach to resolving the aforementioned challenges. In this paper, we aim to provide a comprehensive and systematic review of alignment algorithms for MLLMs. Specifically, we explore four key aspects: (1) the application scenarios covered by alignment algorithms, including general image understanding, multi-image, video, and audio, and extended multimodal applications; (2) the core factors in constructing alignment datasets, including data sources, model responses, and preference annotations; (3) the benchmarks used to evaluate alignment algorithms; and (4) a discussion of potential future directions for the development of alignment algorithms. This work seeks to help researchers organize current advancements in the field and inspire better alignment methods. The project page of this paper is available at https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Alignment."
+  },
+  {
+    "title": "Temporal Consistency for LLM Reasoning Process Error Identification",
+    "url": "http://arxiv.org/abs/2503.14495v1",
+    "arxiv_id": "2503.14495v1",
+    "authors": [
+      "Jiacheng Guo",
+      "Yue Wu",
+      "Jiahao Qiu",
+      "Kaixuan Huang",
+      "Xinzhe Juan",
+      "Ling Yang",
+      "Mengdi Wang"
+    ],
+    "published": "2025-03-18T17:58:28+00:00",
+    "summary": "Verification is crucial for effective mathematical reasoning. We present a new temporal consistency method where verifiers iteratively refine their judgments based on the previous assessment. Unlike one-round verification or multi-model debate approaches, our method leverages consistency in a sequence of self-reflection actions to improve verification accuracy. Empirical evaluations across diverse mathematical process error identification benchmarks (Mathcheck, ProcessBench, and PRM800K) show consistent performance improvements over baseline methods. When applied to the recent DeepSeek R1 distilled models, our method demonstrates strong performance, enabling 7B/8B distilled models to outperform all 70B/72B models and GPT-4o on ProcessBench. Notably, the distilled 14B model with our method achieves performance comparable to Deepseek-R1. Our codes are available at https://github.com/jcguo123/Temporal-Consistency"
+  },
+  {
+    "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "url": "http://arxiv.org/abs/2503.14476v1",
+    "arxiv_id": "2503.14476v1",
+    "authors": [
+      "Qiying Yu",
+      "Zheng Zhang",
+      "Ruofei Zhu",
+      "Yufeng Yuan",
+      "Xiaochen Zuo",
+      "Yu Yue",
+      "Tiantian Fan",
+      "Gaohong Liu",
+      "Lingjun Liu",
+      "Xin Liu",
+      "Haibin Lin",
+      "Zhiqi Lin",
+      "Bole Ma",
+      "Guangming Sheng",
+      "Yuxuan Tong",
+      "Chi Zhang",
+      "Mofan Zhang",
+      "Wang Zhang",
+      "Hang Zhu",
+      "Jinhua Zhu",
+      "Jiaze Chen",
+      "Jiangjie Chen",
+      "Chengyi Wang",
+      "Hongli Yu",
+      "Weinan Dai",
+      "Yuxuan Song",
+      "Xiangpeng Wei",
+      "Hao Zhou",
+      "Jingjing Liu",
+      "Wei-Ying Ma",
+      "Ya-Qin Zhang",
+      "Lin Yan",
+      "Mu Qiao",
+      "Yonghui Wu",
+      "Mingxuan Wang"
+    ],
+    "published": "2025-03-18T17:49:06+00:00",
+    "summary": "Inference scaling empowers LLMs with unprecedented reasoning ability, with reinforcement learning as the core technique to elicit complex reasoning. However, key technical details of state-of-the-art reasoning LLMs are concealed (such as in OpenAI o1 blog and DeepSeek R1 technical report), thus the community still struggles to reproduce their RL training results. We propose the $\\textbf{D}$ecoupled Clip and $\\textbf{D}$ynamic s$\\textbf{A}$mpling $\\textbf{P}$olicy $\\textbf{O}$ptimization ($\\textbf{DAPO}$) algorithm, and fully open-source a state-of-the-art large-scale RL system that achieves 50 points on AIME 2024 using Qwen2.5-32B base model. Unlike previous works that withhold training details, we introduce four key techniques of our algorithm that make large-scale LLM RL a success. In addition, we open-source our training code, which is built on the verl framework, along with a carefully curated and processed dataset. These components of our open-source system enhance reproducibility and support future research in large-scale LLM RL."
+  },
+  {
+    "title": "PENCIL: Long Thoughts with Short Memory",
+    "url": "http://arxiv.org/abs/2503.14337v1",
+    "arxiv_id": "2503.14337v1",
+    "authors": [
+      "Chenxiao Yang",
+      "Nathan Srebro",
+      "David McAllester",
+      "Zhiyuan Li"
+    ],
+    "published": "2025-03-18T15:14:14+00:00",
+    "summary": "While recent works (e.g. o1, DeepSeek R1) have demonstrated great promise of using long Chain-of-Thought (CoT) to improve reasoning capabilities of language models, scaling it up during test-time is challenging due to inefficient memory usage -- intermediate computations accumulate indefinitely in context even no longer needed for future thoughts. We propose PENCIL, which incorporates a reduction mechanism into the autoregressive generation process, allowing the model to recursively clean up intermediate thoughts based on patterns learned from training. With this reduction mechanism, PENCIL significantly reduces the maximal context length required during generation, and thus can generate longer thoughts with limited memory, solving larger-scale problems given more thinking time. For example, we demonstrate PENCIL achieves 97\\% accuracy on the challenging Einstein's puzzle -- a task even large models like GPT-4 struggle with -- using only a small 25M-parameter transformer with 2048 context length. Theoretically, we prove PENCIL can perform universal space-efficient computation by simulating Turing machines with optimal time and space complexity, and thus can solve arbitrary computational tasks that would otherwise be intractable given context window constraints."
+  },
+  {
+    "title": "ADAPT: An Autonomous Forklift for Construction Site Operation",
+    "url": "http://arxiv.org/abs/2503.14331v1",
+    "arxiv_id": "2503.14331v1",
+    "authors": [
+      "Johannes Huemer",
+      "Markus Murschitz",
+      "Matthias Sch\u00f6rghuber",
+      "Lukas Reisinger",
+      "Thomas Kadiofsky",
+      "Christoph Weidinger",
+      "Mario Niedermeyer",
+      "Benedikt Widy",
+      "Marcel Zeilinger",
+      "Csaba Beleznai",
+      "Tobias Gl\u00fcck",
+      "Andreas Kugi",
+      "Patrik Zips"
+    ],
+    "published": "2025-03-18T15:03:28+00:00",
+    "summary": "Efficient material logistics play a critical role in controlling costs and schedules in the construction industry. However, manual material handling remains prone to inefficiencies, delays, and safety risks. Autonomous forklifts offer a promising solution to streamline on-site logistics, reducing reliance on human operators and mitigating labor shortages. This paper presents the development and evaluation of the Autonomous Dynamic All-terrain Pallet Transporter (ADAPT), a fully autonomous off-road forklift designed for construction environments. Unlike structured warehouse settings, construction sites pose significant challenges, including dynamic obstacles, unstructured terrain, and varying weather conditions. To address these challenges, our system integrates AI-driven perception techniques with traditional approaches for decision making, planning, and control, enabling reliable operation in complex environments. We validate the system through extensive real-world testing, comparing its long-term performance against an experienced human operator across various weather conditions. We also provide a comprehensive analysis of challenges and key lessons learned, contributing to the advancement of autonomous heavy machinery. Our findings demonstrate that autonomous outdoor forklifts can operate near human-level performance, offering a viable path toward safer and more efficient construction logistics."
+  },
+  {
+    "title": "Multi-Parameter Analysis of Li-ion Battery Degradation: Integrating Optical Fiber Sensing with Differential State of Health Metrics",
+    "url": "http://arxiv.org/abs/2503.14327v1",
+    "arxiv_id": "2503.14327v1",
+    "authors": [
+      "Idris Temitope Bello",
+      "Hassan Raza",
+      "Madithedu Muneeswara",
+      "Neha Tewari",
+      "Yin Nee Cheung",
+      "Tobi Alabi Michael",
+      "Ridwan Taiwo",
+      "Fiske Lin"
+    ],
+    "published": "2025-03-18T15:01:30+00:00",
+    "summary": "The reliability and safety of Lithium-ion batteries (LiBs) are of great concern in the energy storage industry. Nevertheless, the real-time monitoring of their degradation remains challenging due to limited quantitative metrics available during cycling. This study addresses this limitation by employing a novel approach that combines external optical fiber sensing with advanced data analysis techniques to comprehensively assess battery health. We engineered a non-invasive optical sensing platform using tandem pairs of polymeric and silica-based fiber Bragg grating (FBG) sensors affixed to the external surface of commercial Li-ion button cells, enabling simultaneous, real-time monitoring of device-level volume changes and thermal events over 600 cycles. Our analysis incorporated differential techniques to estimate the battery's state of health (SOH) based on capacity, strain, and temperature variations with respect to voltage. Additionally, we implemented and compared three deep learning models - Long Short-Term Memory (LSTM), Gated Recurrent Unit (GRU), and Artificial Neural Network (ANN) - to predict battery SOH over cycles. We were able to capture both continuous and spontaneous degradation events and provide unique insights into battery behavior across its lifecycle through differential analysis and new SOH metrics demonstrating high correlation with conventional measures. This multi-parameter approach, combining advanced sensing techniques with innovative data analysis and deep learning methods, contributes significantly to battery diagnostics, potentially improving reliability assessment, enhancing safety standards, and accelerating the development of more sustainable energy storage solutions."
+  },
+  {
+    "title": "Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making",
+    "url": "http://arxiv.org/abs/2503.14263v1",
+    "arxiv_id": "2503.14263v1",
+    "authors": [
+      "Soohwan Lee",
+      "Seoyeong Hwang",
+      "Dajung Kim",
+      "Kyungho Lee"
+    ],
+    "published": "2025-03-18T13:54:12+00:00",
+    "summary": "Group decision-making processes frequently suffer when social influence and power dynamics suppress minority viewpoints, leading to compliance and groupthink. Conversational agents can counteract these harmful dynamics by encouraging critical thinking. This study investigates how LLM-powered devil's advocate systems affect psychological safety, opinion expression, and satisfaction in power-imbalanced group dynamics. We conducted an experiment with 48 participants in 12 four-person groups, each containing three high-power (senior) and one low-power (junior) member. Each group completed decision tasks in both baseline and AI intervention conditions. Results show AI counterarguments fostered a more flexible atmosphere and significantly enhanced both process and outcome satisfaction for all participants, with particularly notable improvements for minority members. Cognitive workload increased slightly, though not significantly. This research contributes empirical evidence on how AI systems can effectively navigate power hierarchies to foster more inclusive decision-making environments, highlighting the importance of balancing intervention frequency, maintaining conversational flow, and preserving group cohesion."
+  },
+  {
+    "title": "A Chain-Driven, Sandwich-Legged Quadruped Robot: Design and Experimental Analysis",
+    "url": "http://arxiv.org/abs/2503.14255v1",
+    "arxiv_id": "2503.14255v1",
+    "authors": [
+      "Aman Singh",
+      "Bhavya Giri Goswami",
+      "Ketan Nehete",
+      "Shishir N. Y. Kolathaya"
+    ],
+    "published": "2025-03-18T13:44:34+00:00",
+    "summary": "This paper introduces a chain-driven, sandwich-legged, mid-size quadruped robot designed as an accessible research platform. The design prioritizes enhanced locomotion capabilities, improved reliability and safety of the actuation system, and simplified, cost-effective manufacturing processes. Locomotion performance is optimized through a sandwiched leg design and a dual-motor configuration, reducing leg inertia for agile movements. Reliability and safety are achieved by integrating robust cable strain reliefs, efficient heat sinks for motor thermal management, and mechanical limits to restrict leg motion. Simplified design considerations include a quasi-direct drive (QDD) actuator and the adoption of low-cost fabrication techniques, such as laser cutting and 3D printing, to minimize cost and ensure rapid prototyping. The robot weighs approximately 25 kg and is developed at a cost under \\$8000, making it a scalable and affordable solution for robotics research. Experimental validations demonstrate the platform's capability to execute trot and crawl gaits on flat terrain and slopes, highlighting its potential as a versatile and reliable quadruped research platform."
+  },
+  {
+    "title": "Inferring Event Descriptions from Time Series with Language Models",
+    "url": "http://arxiv.org/abs/2503.14190v1",
+    "arxiv_id": "2503.14190v1",
+    "authors": [
+      "Mingtian Tan",
+      "Mike A. Merrill",
+      "Zack Gottesman",
+      "Tim Althoff",
+      "David Evans",
+      "Tom Hartvigsen"
+    ],
+    "published": "2025-03-18T12:07:33+00:00",
+    "summary": "Time series data measure how environments change over time and drive decision-making in critical domains like finance and healthcare. When analyzing time series, we often seek to understand the underlying events occurring in the measured environment. For example, one might ask: What caused a sharp drop in the stock price? Events are often described with natural language, so we conduct the first study of whether Large Language Models (LLMs) can infer natural language events from time series. We curate a new benchmark featuring win probabilities collected from 4,200 basketball and American football games, featuring 1.7M timesteps with real value data and corresponding natural language events. Building on the recent wave of using LLMs on time series, we evaluate 16 LLMs and find that they demonstrate promising abilities to infer events from time series data. The open-weights DeepSeek-R1 32B model outperforms proprietary models like GPT-4o. Despite this impressive initial performance, we also find clear avenues to improve recent models, as we identify failures when altering the provided context, event sequence lengths, and evaluation strategy. (All resources needed to reproduce our work are available: https://github.com/BennyTMT/GAMETime)"
+  },
+  {
+    "title": "Towards Harmless Multimodal Assistants with Blind Preference Optimization",
+    "url": "http://arxiv.org/abs/2503.14189v1",
+    "arxiv_id": "2503.14189v1",
+    "authors": [
+      "Yongqi Li",
+      "Lu Yang",
+      "Jian Wang",
+      "Runyang You",
+      "Wenjie Li",
+      "Liqiang Nie"
+    ],
+    "published": "2025-03-18T12:02:38+00:00",
+    "summary": "Multimodal Large Language Models (MLLMs) have demonstrated impressive capabilities in multimodal understanding, reasoning, and interaction. Given the extensive applications of MLLMs, the associated safety issues have become increasingly critical. Due to the effectiveness of preference optimization in aligning MLLMs with human preferences, there is an urgent need for safety-related preference data for MLLMs. To address this, we construct the MMSafe-PO preference dataset towards harmless multimodal assistants, featuring multimodal instructions, the conversational format, and ranked paired responses from human feedback. We also identify two insightful observations: modality co-defense and modality cheating, which illustrate that MLLMs possess a certain level of inherent defense while still presenting unique safety challenges. Based on these observations, we propose the Blind Preference Optimization (BPO) approach. Comprehensive experiments on three benchmarks show that BPO effectively enhances the safety capabilities of MLLMs. Notably, BPO significantly improves the safety rate of the base MLLM by 45.0%, outperforming the DPO approach. Additionally, applying BPO to the MMSafe-PO dataset greatly reduces the base MLLM's unsafe rate on other safety benchmarks (14.5% on MM-SafetyBench and 82.9% on HarmEval, demonstrating the effectiveness and robustness of both the dataset and the approach. We release code and data at https://lu-yang666.github.io/MMsafe-PO-Web/."
+  },
+  {
+    "title": "Gravitational-wave Extraction using Independent Component Analysis",
+    "url": "http://arxiv.org/abs/2503.14179v1",
+    "arxiv_id": "2503.14179v1",
+    "authors": [
+      "Rika Shimomura",
+      "Yuuichi Tabe",
+      "Hisaaki Shinkai"
+    ],
+    "published": "2025-03-18T11:54:50+00:00",
+    "summary": "Independent component analysis (ICA) is a method to extract a set of time-series data using \"statistical independency\" of each component. We propose applying ICA for extracting gravitational wave (GW) signals. Our idea is to extract a signal that is commonly included in multiple detectors and to find it by shifting the data-set around its arrival time. In this article, we show several tests using injected signals, and show that this method can be applied to events for signal-to-noise over 15. We then demonstrate the method to actual O1-O3 events, and the identification of the arrival time can be estimated more precisely than that was previously reported. This approach does not require templates of waveform, therefore it can be applied for testing general relativity, and also for finding unknown GW."
+  },
+  {
+    "title": "DangerMaps: Personalized Safety Advice for Travel in Urban Environments using a Retrieval-Augmented Language Model",
+    "url": "http://arxiv.org/abs/2503.14103v1",
+    "arxiv_id": "2503.14103v1",
+    "authors": [
+      "Jonas Oppenlaender"
+    ],
+    "published": "2025-03-18T10:18:07+00:00",
+    "summary": "Planning a trip into a potentially unsafe area is a difficult task. We conducted a formative study on travelers' information needs, finding that most of them turn to search engines for trip planning. Search engines, however, fail to provide easily interpretable results adapted to the context and personal information needs of a traveler. Large language models (LLMs) create new possibilities for providing personalized travel safety advice. To explore this idea, we developed DangerMaps, a mapping system that assists its users in researching the safety of an urban travel destination, whether it is pre-travel or on-location. DangerMaps plots safety ratings onto a map and provides explanations on demand. This late breaking work specifically emphasizes the challenges of designing real-world applications with large language models. We provide a detailed description of our approach to prompt design and highlight future areas of research."
+  },
+  {
+    "title": "Robust Safety Critical Control Under Multiple State and Input Constraints: Volume Control Barrier Function Method",
+    "url": "http://arxiv.org/abs/2503.13996v1",
+    "arxiv_id": "2503.13996v1",
+    "authors": [
+      "Jinyang Dong",
+      "Shizhen Wu",
+      "Rui Liu",
+      "Xiao Liang",
+      "Biao Lu",
+      "Yongchun Fang"
+    ],
+    "published": "2025-03-18T07:58:58+00:00",
+    "summary": "In this paper, the safety-critical control problem for uncertain systems under multiple control barrier function (CBF) constraints and input constraints is investigated. A novel framework is proposed to generate a safety filter that minimizes changes to reference inputs when safety risks arise, ensuring a balance between safety and performance. A nonlinear disturbance observer (DOB) based on the robust integral of the sign of the error (RISE) is used to estimate system uncertainties, ensuring that the estimation error converges to zero exponentially. This error bound is integrated into the safety-critical controller to reduce conservativeness while ensuring safety. To further address the challenges arising from multiple CBF and input constraints, a novel Volume CBF (VCBF) is proposed by analyzing the feasible space of the quadratic programming (QP) problem. % ensuring solution feasibility by keeping the volume as a positive value. To ensure that the feasible space does not vanish under disturbances, a DOB-VCBF-based method is introduced, ensuring system safety while maintaining the feasibility of the resulting QP. Subsequently, several groups of simulation and experimental results are provided to validate the effectiveness of the proposed controller."
+  },
+  {
+    "title": "Empowering Smaller Models: Tuning LLaMA and Gemma with Chain-of-Thought for Ukrainian Exam Tasks",
+    "url": "http://arxiv.org/abs/2503.13988v1",
+    "arxiv_id": "2503.13988v1",
+    "authors": [
+      "Mykyta Syromiatnikov",
+      "Victoria Ruvinskaya",
+      "Nataliia Komleva"
+    ],
+    "published": "2025-03-18T07:44:49+00:00",
+    "summary": "Leading large language models have demonstrated impressive capabilities in reasoning-intensive tasks, such as standardized educational testing. However, they often require extensive training in low-resource settings with inaccessible infrastructure. Small or compact models, though more efficient, frequently lack sufficient support for underrepresented languages, leaving a performance gap in critical domains. This work explores the potential of parameter-efficient fine-tuning of compact open-weight language models to handle reasoning-intensive tasks in the underrepresented Ukrainian language, building on the findings of the ZNO-Eval benchmark. Parameter-efficient fine-tuning of LLaMA 3.1 (8 billion parameters), LLaMA 3.2 (3 billion parameters), and Gemma 2 (9 billion parameters) models on chain-of-thought solutions resulted in a modest test score improvement of up to 17.4% on complex matching tasks and 1.6% overall compared to tuning on answer letters alone, offering enhanced interpretability and robustness. In addition, the proposed tuning method with joint task topic and step-by-step solution generation outperforms standard chain-of-thought tuning in matching tasks and provides a 5.4% gain over the best LLaMA 3.2 model due to guiding the model to recall and apply domain-relevant information. Contrasting obtained results with zero-shot evaluations of leading open-weight and proprietary models such as Qwen, DeepSeek R1, OpenAI o1 and o3, Gemini, and Claude, highlight that fine-tuning LLaMA and Gemma models with 2,032 step-by-step solutions and 20 to 50 million trainable parameters on a single A100 GPU lets them outperform GPT-4o mini, Mistral Large, and larger open-weight models. This research also evaluates how merging the quantized adapter with the base model influences the generation quality. Source code and tuned models are available at https://github.com/NLPForUA/ZNO."
+  },
+  {
+    "title": "Survey of Adversarial Robustness in Multimodal Large Language Models",
+    "url": "http://arxiv.org/abs/2503.13962v1",
+    "arxiv_id": "2503.13962v1",
+    "authors": [
+      "Chengze Jiang",
+      "Zhuangzhuang Wang",
+      "Minjing Dong",
+      "Jie Gui"
+    ],
+    "published": "2025-03-18T06:54:59+00:00",
+    "summary": "Multimodal Large Language Models (MLLMs) have demonstrated exceptional performance in artificial intelligence by facilitating integrated understanding across diverse modalities, including text, images, video, audio, and speech. However, their deployment in real-world applications raises significant concerns about adversarial vulnerabilities that could compromise their safety and reliability. Unlike unimodal models, MLLMs face unique challenges due to the interdependencies among modalities, making them susceptible to modality-specific threats and cross-modal adversarial manipulations. This paper reviews the adversarial robustness of MLLMs, covering different modalities. We begin with an overview of MLLMs and a taxonomy of adversarial attacks tailored to each modality. Next, we review key datasets and evaluation metrics used to assess the robustness of MLLMs. After that, we provide an in-depth review of attacks targeting MLLMs across different modalities. Our survey also identifies critical challenges and suggests promising future research directions."
+  },
+  {
+    "title": "What was Said, What was not Said",
+    "url": "http://arxiv.org/abs/2503.13958v1",
+    "arxiv_id": "2503.13958v1",
+    "authors": [
+      "Hamid Jahanian"
+    ],
+    "published": "2025-03-18T06:50:58+00:00",
+    "summary": "In the process industry, the configuration of Safety Instrumented Systems (SIS) must comply with a defined set of safety requirements, typically documented in the Safety Requirements Specification (SRS). The functional safety standard IEC 61511 outlines the necessary content and quality criteria for the SRS. However, developing an effective SRS can be challenging. This article examines some of these challenges and proposes good practices to address them. It discusses SRS ownership, \"staged\" development of SRS, and the classification and traceability of requirements. Additionally, it explores the issue of untold \"negative\" requirements and suggests exploratory \"inspection\" of SIS Application Programs (APs) as a potential remedy."
+  },
+  {
+    "title": "Joint ADS-B in B5G for Hierarchical UAV Networks: Performance Analysis and MEC Based Optimization",
+    "url": "http://arxiv.org/abs/2503.13907v1",
+    "arxiv_id": "2503.13907v1",
+    "authors": [
+      "Chao Dong",
+      "Yiyang Liao",
+      "Ziye Jia",
+      "Qihui Wu",
+      "Lei Zhang"
+    ],
+    "published": "2025-03-18T05:10:11+00:00",
+    "summary": "Unmanned aerial vehicles (UAVs) play significant roles in multiple fields, which brings great challenges for the airspace safety. In order to achieve efficient surveillance and break the limitation of application scenarios caused by single communication, we propose the collaborative surveillance model for hierarchical UAVs based on the cooperation of automatic dependent surveillance-broadcast (ADS-B) and 5G. Specifically, UAVs are hierarchical deployed, with the low-altitude central UAV equipped with the 5G module, and the high-altitude central UAV with ADS-B, which helps automatically broadcast the flight information to surrounding aircraft and ground stations. Firstly, we build the framework, derive the analytic expression, and analyze the channel performance of both air-to-ground (A2G) and air-to-air (A2A). Then, since the redundancy or information loss during transmission aggravates the monitoring performance, the mobile edge computing (MEC) based on-board processing algorithm is proposed. Finally, the performances of the proposed model and algorithm are verified through both simulations and experiments. In detail, the redundant data filtered out by the proposed algorithm accounts for 53.48%, and the supplementary data accounts for 16.42% of the optimized data. This work designs a UAV monitoring framework and proposes an algorithm to enhance the observability of trajectory surveillance, which helps improve the airspace safety and enhance the air traffic flow management."
+  },
+  {
+    "title": "Constraints on LIGO/Virgo Compact Object Mergers from Late-time Radio Observations",
+    "url": "http://arxiv.org/abs/2503.13884v1",
+    "arxiv_id": "2503.13884v1",
+    "authors": [
+      "Ashna Gulati",
+      "Tara Murphy",
+      "Dougal Dobie",
+      "Adam Deller",
+      "David L. Kaplan",
+      "Emil Lenc",
+      "Ilya Mandel",
+      "Stefan Duchesne",
+      "Vanessa Moss"
+    ],
+    "published": "2025-03-18T04:29:27+00:00",
+    "summary": "We present results from a search for radio afterglows of compact object mergers conducted with the Australian SKA Pathfinder. We used data from four epochs of the Rapid ASKAP Continuum Survey to search compact binary merger localization regions observed during the LIGO/Virgo O2, and O3 observing runs. Our investigation focused on eleven events (published in the GWTC-1, GWTC-2, and GWTC-3 catalogues of gravitational-wave events) with 90\\% posterior localisations smaller than $150\\,\\deg^2$ and $\\ge$99\\% probabilities of being of astrophysical origin, to identify potential radio afterglow-like transients up to $\\lesssim$1500 days post-merger. We identified candidate afterglow-type variable sources in the 90\\% localisation for events -- GW190503, GW200202 and GW200208, which were ruled out as unlikely to be related to the corresponding GW event on further analysis. Since we find no likely candidate counterparts, we constrain the inclination angle and the circum-merger density at isotropic equivalent energies ranging from $2\\times10^{51} -1\\times10^{54}\\rm \\:erg$. These constraints are based on the assumption that the electron energy distribution in the associated jets follows a power-law index of $ p = 2.2$, with 1% of the shock energy in the magnetic field ($ \\epsilon_B = 0.01$) and 10% in the electrons ($\\epsilon_e = 0.1$). We discuss the detectability of late-time afterglows as a function of merger distance and inclination angles with millijansky surveys."
+  },
+  {
+    "title": "FlexStep: Enabling Flexible Error Detection in Multi/Many-core Real-time Systems",
+    "url": "http://arxiv.org/abs/2503.13848v1",
+    "arxiv_id": "2503.13848v1",
+    "authors": [
+      "Tinglue Wang",
+      "Yiming Li",
+      "Wei Tang",
+      "Jiapeng Guan",
+      "Zhenghui Guo",
+      "Renshuang Jiang",
+      "Ran Wei",
+      "Jing Li",
+      "Zhe Jiang"
+    ],
+    "published": "2025-03-18T02:42:51+00:00",
+    "summary": "Reliability and real-time responsiveness in safety-critical systems have traditionally been achieved using error detection mechanisms, such as LockStep, which require pre-configured checker cores,strict synchronisation between main and checker cores, static error detection regions, or limited preemption capabilities. However, these core-bound hardware mechanisms often lead to significant resource over-provisioning, and diminished real-time responsiveness, particularly in modern systems where tasks with varying reliability requirements are consolidated on shared processors to improve efficiency, reduce costs, and save power. To address these challenges, this work presents FlexStep, a systematic solution that integrates hardware and software across the SoC, ISA, and OS scheduling layers. FlexStep features a novel microarchitecture that supports dynamic core configuration and asynchronous, preemptive error detection. The FlexStep architecture naturally allows for flexible task scheduling and error detection, enabling new scheduling algorithms that enhance both resource efficiency and real-time schedulability. We publicly release FlexStep's source code, at https://anonymous.4open.science/r/FlexStep-DAC25-7B0C."
+  },
+  {
+    "title": "Automatic MILP Model Construction for Multi-Robot Task Allocation and Scheduling Based on Large Language Models",
+    "url": "http://arxiv.org/abs/2503.13813v1",
+    "arxiv_id": "2503.13813v1",
+    "authors": [
+      "Mingming Peng",
+      "Zhendong Chen",
+      "Jie Yang",
+      "Jin Huang",
+      "Zhengqi Shi",
+      "Qihao Liu",
+      "Xinyu Li",
+      "Liang Gao"
+    ],
+    "published": "2025-03-18T01:45:19+00:00",
+    "summary": "With the accelerated development of Industry 4.0, intelligent manufacturing systems increasingly require efficient task allocation and scheduling in multi-robot systems. However, existing methods rely on domain expertise and face challenges in adapting to dynamic production constraints. Additionally, enterprises have high privacy requirements for production scheduling data, which prevents the use of cloud-based large language models (LLMs) for solution development. To address these challenges, there is an urgent need for an automated modeling solution that meets data privacy requirements. This study proposes a knowledge-augmented mixed integer linear programming (MILP) automated formulation framework, integrating local LLMs with domain-specific knowledge bases to generate executable code from natural language descriptions automatically. The framework employs a knowledge-guided DeepSeek-R1-Distill-Qwen-32B model to extract complex spatiotemporal constraints (82% average accuracy) and leverages a supervised fine-tuned Qwen2.5-Coder-7B-Instruct model for efficient MILP code generation (90% average accuracy). Experimental results demonstrate that the framework successfully achieves automatic modeling in the aircraft skin manufacturing case while ensuring data privacy and computational efficiency. This research provides a low-barrier and highly reliable technical path for modeling in complex industrial scenarios."
+  },
+  {
+    "title": "Do Large Language Models Understand Performance Optimization?",
+    "url": "http://arxiv.org/abs/2503.13772v1",
+    "arxiv_id": "2503.13772v1",
+    "authors": [
+      "Bowen Cui",
+      "Tejas Ramesh",
+      "Oscar Hernandez",
+      "Keren Zhou"
+    ],
+    "published": "2025-03-17T23:30:23+00:00",
+    "summary": "Large Language Models (LLMs) have emerged as powerful tools for software development tasks such as code completion, translation, and optimization. However, their ability to generate efficient and correct code, particularly in complex High-Performance Computing (HPC) contexts, has remained underexplored. To address this gap, this paper presents a comprehensive benchmark suite encompassing multiple critical HPC computational motifs to evaluate the performance of code optimized by state-of-the-art LLMs, including OpenAI o1, Claude-3.5, and Llama-3.2. In addition to analyzing basic computational kernels, we developed an agent system that integrates LLMs to assess their effectiveness in real HPC applications. Our evaluation focused on key criteria such as execution time, correctness, and understanding of HPC-specific concepts. We also compared the results with those achieved using traditional HPC optimization tools. Based on the findings, we recognized the strengths of LLMs in understanding human instructions and performing automated code transformations. However, we also identified significant limitations, including their tendency to generate incorrect code and their challenges in comprehending complex control and data flows in sophisticated HPC code."
+  },
+  {
+    "title": "Do Unit Proofs Work? An Empirical Study of Compositional Bounded Model Checking for Memory Safety Verification",
+    "url": "http://arxiv.org/abs/2503.13762v1",
+    "arxiv_id": "2503.13762v1",
+    "authors": [
+      "Paschal C. Amusuo",
+      "Owen Cochell",
+      "Taylor Le Lievre",
+      "Parth V. Patil",
+      "Aravind Machiry",
+      "James C. Davis"
+    ],
+    "published": "2025-03-17T22:55:12+00:00",
+    "summary": "Memory safety defects pose a major threat to software reliability, enabling cyberattacks, outages, and crashes. To mitigate these risks, organizations adopt Compositional Bounded Model Checking (BMC), using unit proofs to formally verify memory safety. However, methods for creating unit proofs vary across organizations and are inconsistent within the same project, leading to errors and missed defects. In addition, unit proofing remains understudied, with no systematic development methods or empirical evaluations.   This work presents the first empirical study on unit proofing for memory safety verification. We introduce a systematic method for creating unit proofs that leverages verification feedback and objective criteria. Using this approach, we develop 73 unit proofs for four embedded operating systems and evaluate their effectiveness, characteristics, cost, and generalizability. Our results show unit proofs are cost-effective, detecting 74\\% of recreated defects, with an additional 9\\% found with increased BMC bounds, and 19 new defects exposed. We also found that embedded software requires small unit proofs, which can be developed in 87 minutes and executed in 61 minutes on average. These findings provide practical guidance for engineers and empirical data to inform tooling design."
+  },
+  {
+    "title": "Optimal Replenishment Policies for Industrial Vending Machines",
+    "url": "http://arxiv.org/abs/2503.13643v1",
+    "arxiv_id": "2503.13643v1",
+    "authors": [
+      "Karina M. Sindermann",
+      "Esma S. Gel",
+      "Nesim K. Erkip"
+    ],
+    "published": "2025-03-17T18:47:11+00:00",
+    "summary": "Industrial Vending Machines (IVMs) automate the dispensing of a variety of supplies like safety equipment and tools at customer sites, providing 24/7 access while tracking inventory in real-time. Industrial distribution companies typically manage the replenishment of IVMs using periodic schedules, which do not take advantage of these advanced real-time monitoring capabilities. We develop two approaches to optimize the long-term average cost of replenishments and stockouts per unit time: a state-dependent optimal control policy that jointly considers all inventory levels (referred to as trigger set policy) and a fixed cycle policy that optimizes replenishment frequency. We prove the monotonicity of the optimal trigger set policy and leverage it to design a computationally efficient approximate online control framework. Unlike existing methods, which typically handle a very limited number of items due to computational constraints, our approach scales to hundreds of items while achieving near-optimal performance. Leveraging transaction data from our industrial partner, we conduct an extensive set of numerical experiments to demonstrate this claim. Our results show that optimal fixed cycle replenishment reduces costs by 61.7 to 78.6% compared to current practice, with our online control framework delivering an additional 4.1 to 22.9% improvement. Our novel theoretical results provide practical tools for effective replenishment management in this modern vendor-managed inventory context."
+  },
+  {
     "title": "MetaScale: Test-Time Scaling with Evolving Meta-Thoughts",
     "url": "http://arxiv.org/abs/2503.13447v1",
     "arxiv_id": "2503.13447v1",
@@ -94,6 +467,17 @@
     ],
     "published": "2025-03-17T16:15:02+00:00",
     "summary": "Comprehensive evaluations of language models (LM) during both development and deployment phases are necessary because these models possess numerous capabilities (e.g., mathematical reasoning, legal support, or medical diagnostic) as well as safety risks (e.g., racial bias, toxicity, or misinformation). The average score across a wide range of benchmarks provides a signal that helps guide the use of these LMs in practice. Currently, holistic evaluations are costly due to the large volume of benchmark questions, making frequent evaluations impractical. A popular attempt to lower the cost is to compute the average score on a subset of the benchmark. This approach, unfortunately, often renders an unreliable measure of LM performance because the average score is often confounded with the difficulty of the questions in the benchmark subset. Item response theory (IRT) was designed to address this challenge, providing a reliable measurement by careful controlling for question difficulty. Unfortunately, question difficulty is expensive to estimate. Facing this challenge, we train a model that predicts question difficulty from its content, enabling a reliable measurement at a fraction of the cost. In addition, we leverage this difficulty predictor to further improve the evaluation efficiency through training a question generator given a difficulty level. This question generator is essential in adaptive testing, where, instead of using a random subset of the benchmark questions, informative questions are adaptively chosen based on the current estimation of LLM performance. Experiments on 22 common natural language benchmarks and 172 LMs show that this approach is more reliable and efficient compared to current common practice."
+  },
+  {
+    "title": "Is Crime Displacement Inevitable? Evidence from Police Crackdowns in Fortaleza, Brazil",
+    "url": "http://arxiv.org/abs/2503.13571v1",
+    "arxiv_id": "2503.13571v1",
+    "authors": [
+      "Jos\u00e9 Raimundo Carvalho",
+      "Marcelino Guerra"
+    ],
+    "published": "2025-03-17T12:25:44+00:00",
+    "summary": "We evaluated one of the most common policing strategies in Brazil: the allocation of police blitzes. This place-based focused deterrence intervention has well-defined assignments, and 3,423 interventions were precisely recorded in Fortaleza-CE, Brazil, between 2012 and 2013. Our analysis takes advantage of the high spatiotemporal daily data resolution coming from an unprecedented longitudinal micro-Big Data (GPS and PING records) to make comparisons of small intervention areas, while controlling for common daily trends, deterrence (spatial and temporal), and diffusion; to show that an average police crackdown causes a 35% decrease in violent crime occurrences. There are diminishing returns of public safety to hours spent by police in a single area, corroborating what police officers know well from their own experience and discretionary behavior. Although crime increases by 6% immediately after the end of a blitz, we observe lasting deterrent effects (diffusion) after 2-3 days. The residual deterrence cancels the relocation of the crime, and the intervention does not generate significant temporal displacement. In addition, we do not find spatial displacement from crime in blocks up to 1.5 km from a blitz. This type of micropolicing tactics generates deterrence by being highly visible in a street segment for a short period and intermittently quasirandom in space-time, which produces uncertainty that might be crucial in minimizing the temporal and spatial displacement of crime. Of public policy interest, we show that the allocation of blitzes passes in an initial cost-benefit analysis."
   },
   {
     "title": "LIVEPOINT: Fully Decentralized, Safe, Deadlock-Free Multi-Robot Control in Cluttered Environments with High-Dimensional Inputs",
