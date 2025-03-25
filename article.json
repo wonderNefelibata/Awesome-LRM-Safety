@@ -1,5 +1,537 @@
 [
   {
+    "title": "SimpleRL-Zoo: Investigating and Taming Zero Reinforcement Learning for Open Base Models in the Wild",
+    "url": "http://arxiv.org/abs/2503.18892v1",
+    "arxiv_id": "2503.18892v1",
+    "authors": [
+      "Weihao Zeng",
+      "Yuzhen Huang",
+      "Qian Liu",
+      "Wei Liu",
+      "Keqing He",
+      "Zejun Ma",
+      "Junxian He"
+    ],
+    "published": "2025-03-24T17:06:10+00:00",
+    "summary": "DeepSeek-R1 has shown that long chain-of-thought (CoT) reasoning can naturally emerge through a simple reinforcement learning (RL) framework with rule-based rewards, where the training may directly start from the base models-a paradigm referred to as zero RL training. Most recent efforts to reproduce zero RL training have primarily focused on the Qwen2.5 model series, which may not be representative as we find the base models already exhibit strong instruction-following and self-reflection abilities. In this work, we investigate zero RL training across 10 diverse base models, spanning different families and sizes including LLama3-8B, Mistral-7B/24B, DeepSeek-Math-7B, Qwen2.5-math-7B, and all Qwen2.5 models from 0.5B to 32B. Leveraging several key design strategies-such as adjusting format reward and controlling query difficulty-we achieve substantial improvements in both reasoning accuracy and response length across most settings. However, by carefully monitoring the training dynamics, we observe that different base models exhibit distinct patterns during training. For instance, the increased response length does not always correlate with the emergence of certain cognitive behaviors such as verification (i.e., the \"aha moment\"). Notably, we observe the \"aha moment\" for the first time in small models not from the Qwen family. We share the key designs that enable successful zero RL training, along with our findings and practices. To facilitate further research, we open-source the code, models, and analysis tools."
+  },
+  {
+    "title": "I Have Covered All the Bases Here: Interpreting Reasoning Features in Large Language Models via Sparse Autoencoders",
+    "url": "http://arxiv.org/abs/2503.18878v1",
+    "arxiv_id": "2503.18878v1",
+    "authors": [
+      "Andrey Galichin",
+      "Alexey Dontsov",
+      "Polina Druzhinina",
+      "Anton Razzhigaev",
+      "Oleg Y. Rogov",
+      "Elena Tutubalina",
+      "Ivan Oseledets"
+    ],
+    "published": "2025-03-24T16:54:26+00:00",
+    "summary": "Large Language Models (LLMs) have achieved remarkable success in natural language processing. Recent advances have led to the developing of a new class of reasoning LLMs; for example, open-source DeepSeek-R1 has achieved state-of-the-art performance by integrating deep thinking and complex reasoning. Despite these impressive capabilities, the internal reasoning mechanisms of such models remain unexplored. In this work, we employ Sparse Autoencoders (SAEs), a method to learn a sparse decomposition of latent representations of a neural network into interpretable features, to identify features that drive reasoning in the DeepSeek-R1 series of models. First, we propose an approach to extract candidate ''reasoning features'' from SAE representations. We validate these features through empirical analysis and interpretability methods, demonstrating their direct correlation with the model's reasoning abilities. Crucially, we demonstrate that steering these features systematically enhances reasoning performance, offering the first mechanistic account of reasoning in LLMs. Code available at https://github.com/AIRI-Institute/SAE-Reasoning"
+  },
+  {
+    "title": "CRCL: Causal Representation Consistency Learning for Anomaly Detection in Surveillance Videos",
+    "url": "http://arxiv.org/abs/2503.18808v1",
+    "arxiv_id": "2503.18808v1",
+    "authors": [
+      "Yang Liu",
+      "Hongjin Wang",
+      "Zepu Wang",
+      "Xiaoguang Zhu",
+      "Jing Liu",
+      "Peng Sun",
+      "Rui Tang",
+      "Jianwei Du",
+      "Victor C. M. Leung",
+      "Liang Song"
+    ],
+    "published": "2025-03-24T15:50:19+00:00",
+    "summary": "Video Anomaly Detection (VAD) remains a fundamental yet formidable task in the video understanding community, with promising applications in areas such as information forensics and public safety protection. Due to the rarity and diversity of anomalies, existing methods only use easily collected regular events to model the inherent normality of normal spatial-temporal patterns in an unsupervised manner. Previous studies have shown that existing unsupervised VAD models are incapable of label-independent data offsets (e.g., scene changes) in real-world scenarios and may fail to respond to light anomalies due to the overgeneralization of deep neural networks. Inspired by causality learning, we argue that there exist causal factors that can adequately generalize the prototypical patterns of regular events and present significant deviations when anomalous instances occur. In this regard, we propose Causal Representation Consistency Learning (CRCL) to implicitly mine potential scene-robust causal variable in unsupervised video normality learning. Specifically, building on the structural causal models, we propose scene-debiasing learning and causality-inspired normality learning to strip away entangled scene bias in deep representations and learn causal video normality, respectively. Extensive experiments on benchmarks validate the superiority of our method over conventional deep representation learning. Moreover, ablation studies and extension validation show that the CRCL can cope with label-independent biases in multi-scene settings and maintain stable performance with only limited training data available."
+  },
+  {
+    "title": "Mechanistic Interpretability of Fine-Tuned Vision Transformers on Distorted Images: Decoding Attention Head Behavior for Transparent and Trustworthy AI",
+    "url": "http://arxiv.org/abs/2503.18762v1",
+    "arxiv_id": "2503.18762v1",
+    "authors": [
+      "Nooshin Bahador"
+    ],
+    "published": "2025-03-24T15:11:24+00:00",
+    "summary": "Mechanistic interpretability improves the safety, reliability, and robustness of large AI models. This study examined individual attention heads in vision transformers (ViTs) fine tuned on distorted 2D spectrogram images containing non relevant content (axis labels, titles, color bars). By introducing extraneous features, the study analyzed how transformer components processed unrelated information, using mechanistic interpretability to debug issues and reveal insights into transformer architectures. Attention maps assessed head contributions across layers. Heads in early layers (1 to 3) showed minimal task impact with ablation increased MSE loss slightly ({\\mu}=0.11%, {\\sigma}=0.09%), indicating focus on less critical low level features. In contrast, deeper heads (e.g., layer 6) caused a threefold higher loss increase ({\\mu}=0.34%, {\\sigma}=0.02%), demonstrating greater task importance. Intermediate layers (6 to 11) exhibited monosemantic behavior, attending exclusively to chirp regions. Some early heads (1 to 4) were monosemantic but non task relevant (e.g. text detectors, edge or corner detectors). Attention maps distinguished monosemantic heads (precise chirp localization) from polysemantic heads (multiple irrelevant regions). These findings revealed functional specialization in ViTs, showing how heads processed relevant vs. extraneous information. By decomposing transformers into interpretable components, this work enhanced model understanding, identified vulnerabilities, and advanced safer, more transparent AI."
+  },
+  {
+    "title": "Deep learning-based identification of precipitation clouds from all-sky camera data for observatory safety",
+    "url": "http://arxiv.org/abs/2503.18670v1",
+    "arxiv_id": "2503.18670v1",
+    "authors": [
+      "Mohammad H. Zhoolideh Haghighi",
+      "Alireza Ghasrimanesh",
+      "Habib Khosroshahi"
+    ],
+    "published": "2025-03-24T13:40:51+00:00",
+    "summary": "For monitoring the night sky conditions, wide-angle all-sky cameras are used in most astronomical observatories to monitor the sky cloudiness. In this manuscript, we apply a deep-learning approach for automating the identification of precipitation clouds in all-sky camera data as a cloud warning system. We construct our original training and test sets using the all-sky camera image archive of the Iranian National Observatory (INO). The training and test set images are labeled manually based on their potential rainfall and their distribution in the sky. We train our model on a set of roughly 2445 images taken by the INO all-sky camera through the deep learning method based on the EfficientNet network. Our model reaches an average accuracy of 99\\% in determining the cloud rainfall's potential and an accuracy of 96\\% for cloud coverage. To enable a comprehensive comparison and evaluate the performance of alternative architectures for the task, we additionally trained three models LeNet, DeiT, and AlexNet. This approach can be used for early warning of incoming dangerous clouds toward telescopes and harnesses the power of deep learning to automatically analyze vast amounts of all-sky camera data and accurately identify precipitation clouds formations. Our trained model can be deployed for real-time analysis, enabling the rapid identification of potential threats, and offering a scaleable solution that can improve our ability to safeguard telescopes and instruments in observatories. This is important now that numerous small and medium-sized telescopes are increasingly integrated with smart control systems to reduce manual operation."
+  },
+  {
+    "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+    "url": "http://arxiv.org/abs/2503.18666v1",
+    "arxiv_id": "2503.18666v1",
+    "authors": [
+      "Haoyu Wang",
+      "Christopher M. Poskitt",
+      "Jun Sun"
+    ],
+    "published": "2025-03-24T13:31:48+00:00",
+    "summary": "Agents built on LLMs are increasingly deployed across diverse domains, automating complex decision-making and task execution. However, their autonomy introduces safety risks, including security vulnerabilities, legal violations, and unintended harmful actions. Existing mitigation methods, such as model-based safeguards and early enforcement strategies, fall short in robustness, interpretability, and adaptability. To address these challenges, we propose AgentSpec, a lightweight domain-specific language for specifying and enforcing runtime constraints on LLM agents. With AgentSpec, users define structured rules that incorporate triggers, predicates, and enforcement mechanisms, ensuring agents operate within predefined safety boundaries. We implement AgentSpec across multiple domains, including code execution, embodied agents, and autonomous driving, demonstrating its adaptability and effectiveness. Our evaluation shows that AgentSpec successfully prevents unsafe executions in over 90% of code agent cases, eliminates all hazardous actions in embodied agent tasks, and enforces 100% compliance by autonomous vehicles (AVs). Despite its strong safety guarantees, AgentSpec remains computationally lightweight, with overheads in milliseconds. By combining interpretability, modularity, and efficiency, AgentSpec provides a practical and scalable solution for enforcing LLM agent safety across diverse applications. We also automate the generation of rules using LLMs and assess their effectiveness. Our evaluation shows that the rules generated by OpenAI o1 achieve a precision of 95.56% and recall of 70.96% for embodied agents, successfully identifying 87.26% of the risky code, and prevent AVs from breaking laws in 5 out of 8 scenarios."
+  },
+  {
+    "title": "Self-Reported Confidence of Large Language Models in Gastroenterology: Analysis of Commercial, Open-Source, and Quantized Models",
+    "url": "http://arxiv.org/abs/2503.18562v1",
+    "arxiv_id": "2503.18562v1",
+    "authors": [
+      "Nariman Naderi",
+      "Seyed Amir Ahmad Safavi-Naini",
+      "Thomas Savage",
+      "Zahra Atf",
+      "Peter Lewis",
+      "Girish Nadkarni",
+      "Ali Soroush"
+    ],
+    "published": "2025-03-24T11:16:41+00:00",
+    "summary": "This study evaluated self-reported response certainty across several large language models (GPT, Claude, Llama, Phi, Mistral, Gemini, Gemma, and Qwen) using 300 gastroenterology board-style questions. The highest-performing models (GPT-o1 preview, GPT-4o, and Claude-3.5-Sonnet) achieved Brier scores of 0.15-0.2 and AUROC of 0.6. Although newer models demonstrated improved performance, all exhibited a consistent tendency towards overconfidence. Uncertainty estimation presents a significant challenge to the safe use of LLMs in healthcare. Keywords: Large Language Models; Confidence Elicitation; Artificial Intelligence; Gastroenterology; Uncertainty Quantification"
+  },
+  {
+    "title": "Constraint Horizon in Model Predictive Control",
+    "url": "http://arxiv.org/abs/2503.18521v1",
+    "arxiv_id": "2503.18521v1",
+    "authors": [
+      "Allan Andre Do Nascimento",
+      "Han Wang",
+      "Antonis Papachristodoulou",
+      "Kostas Margellos"
+    ],
+    "published": "2025-03-24T10:21:08+00:00",
+    "summary": "In this work, we propose a Model Predictive Control (MPC) formulation incorporating two distinct horizons: a prediction horizon and a constraint horizon. This approach enables a deeper understanding of how constraints influence key system properties such as suboptimality, without compromising recursive feasibility and constraint satisfaction. In this direction, our contributions are twofold. First, we provide a framework to estimate closed-loop optimality as a function of the number of enforced constraints. This is a generalization of existing results by considering partial constraint enforcement over the prediction horizon. Second, when adopting this general framework under the lens of safety-critical applications, our method improves conventional Control Barrier Function (CBF) based approaches. It mitigates myopic behaviour in Quadratic Programming (QP)-CBF schemes, and resolves compatibility issues between Control Lyapunov Function (CLF) and CBF constraints via the prediction horizon used in the optimization. We show the efficacy of the method via numerical simulations for a safety critical application."
+  },
+  {
+    "title": "Verbal Process Supervision Elicits Better Coding Agents",
+    "url": "http://arxiv.org/abs/2503.18494v1",
+    "arxiv_id": "2503.18494v1",
+    "authors": [
+      "Hao-Yuan Chen",
+      "Cheng-Pong Huang",
+      "Jui-Ming Yao"
+    ],
+    "published": "2025-03-24T09:48:59+00:00",
+    "summary": "The emergence of large language models and their applications as AI agents have significantly advanced state-of-the-art code generation benchmarks, transforming modern software engineering tasks. However, even with test-time computed reasoning models, these systems still struggle with complex software engineering challenges. This work introduces CURA, a code understanding and reasoning agent system enhanced with verbal process supervision (VPS), achieving a 3.65\\% improvement over baseline models on challenging benchmarks like BigCodeBench. Furthermore, CURA, when paired with the o3-mini model and VPS techniques, attains state-of-the-art performance. This work represents a step forward in integrating reasoning-driven architectures with LLM-based code generation, enabling agentic reasoning for language models to solve complex software engineering tasks."
+  },
+  {
+    "title": "PM4Bench: A Parallel Multilingual Multi-Modal Multi-task Benchmark for Large Vision Language Model",
+    "url": "http://arxiv.org/abs/2503.18484v1",
+    "arxiv_id": "2503.18484v1",
+    "authors": [
+      "Junyuan Gao",
+      "Jiahe Song",
+      "Jiang Wu",
+      "Runchuan Zhu",
+      "Guanlin Shen",
+      "Shasha Wang",
+      "Xingjian Wei",
+      "Haote Yang",
+      "Songyang Zhang",
+      "Weijia Li",
+      "Bin Wang",
+      "Dahua Lin",
+      "Lijun Wu",
+      "Conghui He"
+    ],
+    "published": "2025-03-24T09:38:37+00:00",
+    "summary": "Existing multilingual benchmarks for Large Vision Language Models (LVLMs) suffer from limitations including language-specific content biases, disjointed multimodal input formats, and a lack of safety evaluation. To address these gaps, we propose PM4Bench, the first Parallel Multilingual Multi-Modal Multi-task Benchmark for LVLMs. PM4Bench features a parallel corpus design across 10 languages, enabling fair and accurate cross-lingual comparisons. It includes the vision setting where text and queries are embedded in images, requiring LVLMs to simultaneously \"see\", \"read\", and \"think\", aligning with real-world applications. Additionally, PM\\textsuperscript{4}Bench incorporates safety evaluations, addressing critical oversight in existing multilingual benchmarks. Using PM4Bench, we evaluate 11 mainstream LVLMs, revealing significant cross-linguistic performance disparities, particularly in vision settings, and identifying OCR capability as a key determinant of these imbalances. We will release PM4Bench at https://github.com/opendatalab/PM4Bench ."
+  },
+  {
+    "title": "Extended Visibility of Autonomous Vehicles via Optimized Cooperative Perception under Imperfect Communication",
+    "url": "http://arxiv.org/abs/2503.18192v1",
+    "arxiv_id": "2503.18192v1",
+    "authors": [
+      "Ahmad Sarlak",
+      "Rahul Amin",
+      "Abolfazl Razi"
+    ],
+    "published": "2025-03-23T20:22:14+00:00",
+    "summary": "Autonomous Vehicles (AVs) rely on individual perception systems to navigate safely. However, these systems face significant challenges in adverse weather conditions, complex road geometries, and dense traffic scenarios. Cooperative Perception (CP) has emerged as a promising approach to extending the perception quality of AVs by jointly processing shared camera feeds and sensor readings across multiple vehicles. This work presents a novel CP framework designed to optimize vehicle selection and networking resource utilization under imperfect communications. Our optimized CP formation considers critical factors such as the helper vehicles' spatial position, visual range, motion blur, and available communication budgets. Furthermore, our resource optimization module allocates communication channels while adjusting power levels to maximize data flow efficiency between the ego and helper vehicles, considering realistic models of modern vehicular communication systems, such as LTE and 5G NR-V2X. We validate our approach through extensive experiments on pedestrian detection in challenging scenarios, using synthetic data generated by the CARLA simulator. The results demonstrate that our method significantly improves upon the perception quality of individual AVs with about 10% gain in detection accuracy. This substantial gain uncovers the unleashed potential of CP to enhance AV safety and performance in complex situations."
+  },
+  {
+    "title": "Training A Neural Network For Partially Occluded Road Sign Identification In The Context Of Autonomous Vehicles",
+    "url": "http://arxiv.org/abs/2503.18177v1",
+    "arxiv_id": "2503.18177v1",
+    "authors": [
+      "Gulnaz Gimaletdinova",
+      "Dim Shaiakhmetov",
+      "Madina Akpaeva",
+      "Mukhammadmuso Abduzhabbarov",
+      "Kadyrmamat Momunov"
+    ],
+    "published": "2025-03-23T19:25:56+00:00",
+    "summary": "The increasing number of autonomous vehicles and the rapid development of computer vision technologies underscore the particular importance of conducting research on the accuracy of traffic sign recognition. Numerous studies in this field have already achieved significant results, demonstrating high effectiveness in addressing traffic sign recognition tasks. However, the task becomes considerably more complex when a sign is partially obscured by surrounding objects, such as tree branches, billboards, or other elements of the urban environment. In our study, we investigated how partial occlusion of traffic signs affects their recognition. For this purpose, we collected a dataset comprising 5,746 images, including both fully visible and partially occluded signs, and made it publicly available. Using this dataset, we compared the performance of our custom convolutional neural network (CNN), which achieved 96% accuracy, with models trained using transfer learning. The best result was obtained by VGG16 with full layer unfreezing, reaching 99% accuracy. Additional experiments revealed that models trained solely on fully visible signs lose effectiveness when recognizing occluded signs. This highlights the critical importance of incorporating real-world data with partial occlusion into training sets to ensure robust model performance in complex practical scenarios and to enhance the safety of autonomous driving."
+  },
+  {
+    "title": "GeoBenchX: Benchmarking LLMs for Multistep Geospatial Tasks",
+    "url": "http://arxiv.org/abs/2503.18129v1",
+    "arxiv_id": "2503.18129v1",
+    "authors": [
+      "Varvara Krechetova",
+      "Denis Kochedykov"
+    ],
+    "published": "2025-03-23T16:20:14+00:00",
+    "summary": "In this paper, we establish a benchmark for evaluating large language models (LLMs) on multi-step geospatial tasks relevant to commercial GIS practitioners. We assess seven leading commercial LLMs (Sonnet 3.5 and 3.7, Haiku 3.5, Gemini 2.0, GPT-4o, GPT-4o mini, and o3-mini) using a simple tool-calling agent equipped with 23 geospatial functions. Our benchmark comprises tasks across four categories of increasing complexity, with both solvable and intentionally unsolvable tasks to test hallucination rejection. We develop an LLM-as-Judge evaluation framework to compare agent solutions against reference implementations. Results show Sonnet 3.5 and GPT-4o achieve the best overall performance, with Claude models excelling on solvable tasks while OpenAI models better identify unsolvable scenarios. We observe significant differences in token usage, with Anthropic models consuming substantially more tokens than competitors. Common errors include misunderstanding geometrical relationships, relying on outdated knowledge, and inefficient data manipulation. The resulting benchmark set, evaluation framework, and data generation pipeline are released as open-source resources, providing one more standardized method for ongoing evaluation of LLMs for GeoAI."
+  },
+  {
+    "title": "Long Is More Important Than Difficult for Training Reasoning Models",
+    "url": "http://arxiv.org/abs/2503.18069v1",
+    "arxiv_id": "2503.18069v1",
+    "authors": [
+      "Si Shen",
+      "Fei Huang",
+      "Zhixiao Zhao",
+      "Chang Liu",
+      "Tiansheng Zheng",
+      "Danhao Zhu"
+    ],
+    "published": "2025-03-23T13:33:59+00:00",
+    "summary": "Difficult problems, which often result in long reasoning traces, are widely recognized as key factors for enhancing the performance of reasoning models. However, such high-challenge problems are scarce, limiting the size of available datasets. In this paper, we propose a simple method to decouple the reliance on problem difficulty. First, we empirically demonstrate that reasoning length, rather than problem difficulty, primarily influences the performance of trained models. Second, we identify a scaling law on reasoning length, showing that model performance increases in a log-linear fashion as the reasoning data length grows. Finally, we introduce a straightforward technique to generate reasoning data of arbitrary length, and show that synthesized data is effective for training reasoning models. After fine-tuning the Qwen2.5-32B-Instruct language model on our Long1K dataset, we present our model, Long1K-32B, which achieves remarkable performance with only 1,000 training samples, achieving 95.6\\% accuracy on MATH, and 71.1\\% on GPQA outperforming DeepSeek-R1-Distill-Qwen-32B. The model, code, and dataset are all open-sourced, available at https://huggingface.co/ZTss/LONG1."
+  },
+  {
+    "title": "Metaphor-based Jailbreaking Attacks on Text-to-Image Models",
+    "url": "http://arxiv.org/abs/2503.17987v1",
+    "arxiv_id": "2503.17987v1",
+    "authors": [
+      "Chenyu Zhang",
+      "Yiwen Ma",
+      "Lanjun Wang",
+      "Wenhui Li",
+      "Yi Tu",
+      "An-An Liu"
+    ],
+    "published": "2025-03-23T08:40:39+00:00",
+    "summary": "To mitigate misuse, text-to-image~(T2I) models commonly incorporate safety filters to prevent the generation of sensitive images. Unfortunately, recent jailbreaking attack methods use LLMs to generate adversarial prompts that effectively bypass safety filters while generating sensitive images, revealing the safety vulnerabilities within the T2I model. However, existing LLM-based attack methods lack explicit guidance, relying on substantial queries to achieve a successful attack, which limits their practicality in real-world scenarios. In this work, we introduce \\textbf{MJA}, a \\textbf{m}etaphor-based \\textbf{j}ailbreaking \\textbf{a}ttack method inspired by the Taboo game, aiming to balance the attack effectiveness and query efficiency by generating metaphor-based adversarial prompts. Specifically, MJA consists of two modules: an LLM-based multi-agent generation module~(MLAG) and an adversarial prompt optimization module~(APO). MLAG decomposes the generation of metaphor-based adversarial prompts into three subtasks: metaphor retrieval, context matching, and adversarial prompt generation. Subsequently, MLAG coordinates three LLM-based agents to generate diverse adversarial prompts by exploring various metaphors and contexts. To enhance the attack efficiency, APO first trains a surrogate model to predict the attack results of adversarial prompts and then designs an acquisition strategy to adaptively identify optimal adversarial prompts. Experiments demonstrate that MJA achieves better attack effectiveness while requiring fewer queries compared to baseline methods. Moreover, our adversarial prompts exhibit strong transferability across various open-source and commercial T2I models. \\textcolor{red}{This paper includes model-generated content that may contain offensive or distressing material.}"
+  },
+  {
+    "title": "Trade-offs in Large Reasoning Models: An Empirical Analysis of Deliberative and Adaptive Reasoning over Foundational Capabilities",
+    "url": "http://arxiv.org/abs/2503.17979v1",
+    "arxiv_id": "2503.17979v1",
+    "authors": [
+      "Weixiang Zhao",
+      "Xingyu Sui",
+      "Jiahe Guo",
+      "Yulin Hu",
+      "Yang Deng",
+      "Yanyan Zhao",
+      "Bing Qin",
+      "Wanxiang Che",
+      "Tat-Seng Chua",
+      "Ting Liu"
+    ],
+    "published": "2025-03-23T08:18:51+00:00",
+    "summary": "Recent advancements in Large Reasoning Models (LRMs), such as OpenAI's o1/o3 and DeepSeek-R1, have demonstrated remarkable performance in specialized reasoning tasks through human-like deliberative thinking and long chain-of-thought reasoning. However, our systematic evaluation across various model families (DeepSeek, Qwen, and LLaMA) and scales (7B to 671B) reveals that acquiring these deliberative reasoning capabilities significantly reduces the foundational capabilities of LRMs, including notable declines in helpfulness and harmlessness, alongside substantially increased inference costs. Importantly, we demonstrate that adaptive reasoning -- employing modes like Zero-Thinking, Less-Thinking, and Summary-Thinking -- can effectively alleviate these drawbacks. Our empirical insights underline the critical need for developing more versatile LRMs capable of dynamically allocating inference-time compute according to specific task characteristics."
+  },
+  {
+    "title": "Smoke and Mirrors: Jailbreaking LLM-based Code Generation via Implicit Malicious Prompts",
+    "url": "http://arxiv.org/abs/2503.17953v1",
+    "arxiv_id": "2503.17953v1",
+    "authors": [
+      "Sheng Ouyang",
+      "Yihao Qin",
+      "Bo Lin",
+      "Liqian Chen",
+      "Xiaoguang Mao",
+      "Shangwen Wang"
+    ],
+    "published": "2025-03-23T06:06:12+00:00",
+    "summary": "The proliferation of Large Language Models (LLMs) has revolutionized natural language processing and significantly impacted code generation tasks, enhancing software development efficiency and productivity. Notably, LLMs like GPT-4 have demonstrated remarkable proficiency in text-to-code generation tasks. However, the growing reliance on LLMs for code generation necessitates a critical examination of the safety implications associated with their outputs. Existing research efforts have primarily focused on verifying the functional correctness of LLMs, overlooking their safety in code generation. This paper introduces a jailbreaking approach, CodeJailbreaker, designed to uncover safety concerns in LLM-based code generation. The basic observation is that existing safety mechanisms for LLMs are built through the instruction-following paradigm, where malicious intent is explicitly articulated within the instruction of the prompt. Consequently, CodeJailbreaker explores to construct a prompt whose instruction is benign and the malicious intent is implicitly encoded in a covert channel, i.e., the commit message, to bypass the safety mechanism. Experiments on the recently-released RMCBench benchmark demonstrate that CodeJailbreaker markedly surpasses the conventional jailbreaking strategy, which explicitly conveys malicious intents in the instructions, in terms of the attack effectiveness across three code generation tasks. This study challenges the traditional safety paradigms in LLM-based code generation, emphasizing the need for enhanced safety measures in safeguarding against implicit malicious cues."
+  },
+  {
+    "title": "STShield: Single-Token Sentinel for Real-Time Jailbreak Detection in Large Language Models",
+    "url": "http://arxiv.org/abs/2503.17932v1",
+    "arxiv_id": "2503.17932v1",
+    "authors": [
+      "Xunguang Wang",
+      "Wenxuan Wang",
+      "Zhenlan Ji",
+      "Zongjie Li",
+      "Pingchuan Ma",
+      "Daoyuan Wu",
+      "Shuai Wang"
+    ],
+    "published": "2025-03-23T04:23:07+00:00",
+    "summary": "Large Language Models (LLMs) have become increasingly vulnerable to jailbreak attacks that circumvent their safety mechanisms. While existing defense methods either suffer from adaptive attacks or require computationally expensive auxiliary models, we present STShield, a lightweight framework for real-time jailbroken judgement. STShield introduces a novel single-token sentinel mechanism that appends a binary safety indicator to the model's response sequence, leveraging the LLM's own alignment capabilities for detection. Our framework combines supervised fine-tuning on normal prompts with adversarial training using embedding-space perturbations, achieving robust detection while preserving model utility. Extensive experiments demonstrate that STShield successfully defends against various jailbreak attacks, while maintaining the model's performance on legitimate queries. Compared to existing approaches, STShield achieves superior defense performance with minimal computational overhead, making it a practical solution for real-world LLM deployment."
+  },
+  {
+    "title": "Orientation-Dependent \\b{eta}-Ga2O3 Heterojunction Diode with Atomic Layer Deposition (ALD) Grown NiO",
+    "url": "http://arxiv.org/abs/2503.17895v1",
+    "arxiv_id": "2503.17895v1",
+    "authors": [
+      "Yizheng Liu",
+      "Shane M. W. Witsell",
+      "John F. Conley",
+      "Sriram Krishnamoorthy"
+    ],
+    "published": "2025-03-23T01:17:08+00:00",
+    "summary": "This work reports the demonstration of ALD-deposited NiO/\\b{eta}-Ga2O3 heterojunction diodes (HJDs) on low doped drift layer and highly doped (001) & (100) n+ substrates with experimental observation of a parallel-plane junction electric field as high as 7.5 MV/cm, revealing a crystal orientation dependence in \\b{eta}-Ga2O3. We use a novel metalorganic precursor bis(1,4-di-tert-butyl-1,3-diazadienyl) (nickel Ni(tBu2DAD)2) with ozone (O3) to deposit NiO. The NiO/\\b{eta}-Ga2O3 HJD on 7.7 {\\mu}m-thick HVPE-grown drift region exhibited an on-state current density of ~20 A/cm2 at 5 V, ~10-8 A/cm2 reverse leakage at low reverse bias(-5 V), and a rectifying ratio(Jon/Joff) of ~109. The HJD broke down at ~2.2 kV reverse bias, corresponding to a ~3.4 MV/cm parallel-plane junction electric field, with a noise floor reverse leakage (10-8~10-6 A/cm2, nA) at 80% of the device catastrophic breakdown voltage. The NiO/\\b{eta}-Ga2O3 HJDs on n+ (001) & (100) highly-doped substrates exhibited breakdown voltages at 12.5-16.0 V and 28.5-70.5 V, respectively, with extracted critical electric field (EC) at 2.30-2.76 MV/cm, and 4.33-7.50 MV/cm, revealing a substrate crystal orientation dependence on breakdown electric field for \\b{eta}-Ga2O3. The 7.5 MV/cm EC reported here is one of the highest parallel-plane junction electric fields reported in literature."
+  },
+  {
+    "title": "Think Before Refusal : Triggering Safety Reflection in LLMs to Mitigate False Refusal Behavior",
+    "url": "http://arxiv.org/abs/2503.17882v1",
+    "arxiv_id": "2503.17882v1",
+    "authors": [
+      "Shengyun Si",
+      "Xinpeng Wang",
+      "Guangyao Zhai",
+      "Nassir Navab",
+      "Barbara Plank"
+    ],
+    "published": "2025-03-22T23:35:49+00:00",
+    "summary": "Recent advancements in large language models (LLMs) have demonstrated that fine-tuning and human alignment can render LLMs harmless. In practice, such \"harmlessness\" behavior is mainly achieved by training models to reject harmful requests, such as \"Explain how to burn down my neighbor's house\", where the model appropriately declines to respond. However, this approach can inadvertently result in false refusal, where models reject benign queries as well, such as \"Tell me how to kill a Python process\". In this work, we demonstrate that prompting safety reflection before generating a response can mitigate false refusal behavior. Building on this finding, we introduce the Think-Before-Refusal (TBR) schema and conduct safety-aware instruction fine-tuning incorporating safety reflection. In an ablation study across 15 pre-trained models, we show that models fine-tuned with safety reflection significantly reduce false refusal behavior while maintaining safety and overall performance compared to those fine-tuned without safety reflection."
+  },
+  {
+    "title": "A Roadmap Towards Improving Multi-Agent Reinforcement Learning With Causal Discovery And Inference",
+    "url": "http://arxiv.org/abs/2503.17803v1",
+    "arxiv_id": "2503.17803v1",
+    "authors": [
+      "Giovanni Briglia",
+      "Stefano Mariani",
+      "Franco Zambonelli"
+    ],
+    "published": "2025-03-22T15:49:13+00:00",
+    "summary": "Causal reasoning is increasingly used in Reinforcement Learning (RL) to improve the learning process in several dimensions: efficacy of learned policies, efficiency of convergence, generalisation capabilities, safety and interpretability of behaviour. However, applications of causal reasoning to Multi-Agent RL (MARL) are still mostly unexplored. In this paper, we take the first step in investigating the opportunities and challenges of applying causal reasoning in MARL. We measure the impact of a simple form of causal augmentation in state-of-the-art MARL scenarios increasingly requiring cooperation, and with state-of-the-art MARL algorithms exploiting various degrees of collaboration between agents. Then, we discuss the positive as well as negative results achieved, giving us the chance to outline the areas where further research may help to successfully transfer causal RL to the multi-agent setting."
+  },
+  {
+    "title": "Bandwidth Reservation for Time-Critical Vehicular Applications: A Multi-Operator Environment",
+    "url": "http://arxiv.org/abs/2503.17756v1",
+    "arxiv_id": "2503.17756v1",
+    "authors": [
+      "Abdullah Al-Khatib",
+      "Abdullah Ahmed",
+      "Klaus Moessner",
+      "Holger Timinger"
+    ],
+    "published": "2025-03-22T12:36:23+00:00",
+    "summary": "Onsite bandwidth reservation requests often face challenges such as price fluctuations and fairness issues due to unpredictable bandwidth availability and stringent latency requirements. Requesting bandwidth in advance can mitigate the impact of these fluctuations and ensure timely access to critical resources. In a multi-Mobile Network Operator (MNO) environment, vehicles need to select cost-effective and reliable resources for their safety-critical applications. This research aims to minimize resource costs by finding the best price among multiple MNOs. It formulates multi-operator scenarios as a Markov Decision Process (MDP), utilizing a Deep Reinforcement Learning (DRL) algorithm, specifically Dueling Deep Q-Learning. For efficient and stable learning, we propose a novel area-wise approach and an adaptive MDP synthetic close to the real environment. The Temporal Fusion Transformer (TFT) is used to handle time-dependent data and model training. Furthermore, the research leverages Amazon spot price data and adopts a multi-phase training approach, involving initial training on synthetic data, followed by real-world data. These phases enable the DRL agent to make informed decisions using insights from historical data and real-time observations. The results show that our model leads to significant cost reductions, up to 40%, compared to scenarios without a policy model in such a complex environment."
+  },
+  {
+    "title": "RustMap: Towards Project-Scale C-to-Rust Migration via Program Analysis and LLM",
+    "url": "http://arxiv.org/abs/2503.17741v1",
+    "arxiv_id": "2503.17741v1",
+    "authors": [
+      "Xuemeng Cai",
+      "Jiakun Liu",
+      "Xiping Huang",
+      "Yijun Yu",
+      "Haitao Wu",
+      "Chunmiao Li",
+      "Bo Wang",
+      "Imam Nur Bani Yusuf",
+      "Lingxiao Jiang"
+    ],
+    "published": "2025-03-22T11:57:45+00:00",
+    "summary": "Migrating existing C programs into Rust is increasingly desired, as Rust offers superior memory safety while maintaining C's high performance. However, vastly different features between C and Rust--e.g., distinct definitions and usages of pointers and references--pose significant challenges beyond mere syntactic translation. Existing automated translation tools, such as C2Rust, may rely too much on syntactic, template-based translation and generate unsafe Rust code that is hard for human developers to read, maintain, or even compile. More semantic-aware translation that produces safer, idiomatic, and runnable Rust code is much needed. This paper introduces a novel dependency-guided and large language model (LLM)-based C-to-Rust translation approach, RustMap, based on three key ideas: (1) Utilize LLM capabilities to produce idiomatic Rust code from given small pieces of C code, (2) Mitigate LLM limitations in handling large codebases by breaking project-scale C programs into smaller units for translation according to their usage dependencies and composing them into a runnable Rust program, and (3) Enhance the correctness of the translated Rust program by using test cases to check input/output equivalence, isolate faulty code when execution states deviate, and iteratively refine the translation using feedback from compilation and test errors. We empirically evaluate RustMap on 126 real-world programs, including 125 from Rosetta Code and a 7000+ line bzip2 implementation using GPT-4o as the LLM. RustMap shows promising results, guiding GPT-4o to produce idiomatic, readable, and functional Rust code with significantly less unsafe code than other tools, and revealing non-trivial translation patterns reusable for future research."
+  },
+  {
+    "title": "Multi-modality Anomaly Segmentation on the Road",
+    "url": "http://arxiv.org/abs/2503.17712v1",
+    "arxiv_id": "2503.17712v1",
+    "authors": [
+      "Heng Gao",
+      "Zhuolin He",
+      "Shoumeng Qiu",
+      "Xiangyang Xue",
+      "Jian Pu"
+    ],
+    "published": "2025-03-22T09:55:42+00:00",
+    "summary": "Semantic segmentation allows autonomous driving cars to understand the surroundings of the vehicle comprehensively. However, it is also crucial for the model to detect obstacles that may jeopardize the safety of autonomous driving systems. Based on our experiments, we find that current uni-modal anomaly segmentation frameworks tend to produce high anomaly scores for non-anomalous regions in images. Motivated by this empirical finding, we develop a multi-modal uncertainty-based anomaly segmentation framework, named MMRAS+, for autonomous driving systems. MMRAS+ effectively reduces the high anomaly outputs of non-anomalous classes by introducing text-modal using the CLIP text encoder. Indeed, MMRAS+ is the first multi-modal anomaly segmentation solution for autonomous driving. Moreover, we develop an ensemble module to further boost the anomaly segmentation performance. Experiments on RoadAnomaly, SMIYC, and Fishyscapes validation datasets demonstrate the superior performance of our method. The code is available in https://github.com/HengGao12/MMRAS_plus."
+  },
+  {
+    "title": "Intelligence Sequencing and the Path-Dependence of Intelligence Evolution: AGI-First vs. DCI-First as Irreversible Attractors",
+    "url": "http://arxiv.org/abs/2503.17688v1",
+    "arxiv_id": "2503.17688v1",
+    "authors": [
+      "Andy E. Williams"
+    ],
+    "published": "2025-03-22T08:09:04+00:00",
+    "summary": "The trajectory of intelligence evolution is often framed around the emergence of artificial general intelligence (AGI) and its alignment with human values. This paper challenges that framing by introducing the concept of intelligence sequencing: the idea that the order in which AGI and decentralized collective intelligence (DCI) emerge determines the long-term attractor basin of intelligence. Using insights from dynamical systems, evolutionary game theory, and network models, it argues that intelligence follows a path-dependent, irreversible trajectory. Once development enters a centralized (AGI-first) or decentralized (DCI-first) regime, transitions become structurally infeasible due to feedback loops and resource lock-in. Intelligence attractors are modeled in functional state space as the co-navigation of conceptual and adaptive fitness spaces. Early-phase structuring constrains later dynamics, much like renormalization in physics. This has major implications for AI safety: traditional alignment assumes AGI will emerge and must be controlled after the fact, but this paper argues that intelligence sequencing is more foundational. If AGI-first architectures dominate before DCI reaches critical mass, hierarchical monopolization and existential risk become locked in. If DCI-first emerges, intelligence stabilizes around decentralized cooperative equilibrium. The paper further explores whether intelligence structurally biases itself toward an attractor based on its self-modeling method -- externally imposed axioms (favoring AGI) vs. recursive internal visualization (favoring DCI). Finally, it proposes methods to test this theory via simulations, historical lock-in case studies, and intelligence network analysis. The findings suggest that intelligence sequencing is a civilizational tipping point: determining whether the future is shaped by unbounded competition or unbounded cooperation."
+  },
+  {
+    "title": "Safe RLHF-V: Safe Reinforcement Learning from Human Feedback in Multimodal Large Language Models",
+    "url": "http://arxiv.org/abs/2503.17682v1",
+    "arxiv_id": "2503.17682v1",
+    "authors": [
+      "Jiaming Ji",
+      "Xinyu Chen",
+      "Rui Pan",
+      "Han Zhu",
+      "Conghui Zhang",
+      "Jiahao Li",
+      "Donghai Hong",
+      "Boyuan Chen",
+      "Jiayi Zhou",
+      "Kaile Wang",
+      "Juntao Dai",
+      "Chi-Min Chan",
+      "Sirui Han",
+      "Yike Guo",
+      "Yaodong Yang"
+    ],
+    "published": "2025-03-22T07:40:20+00:00",
+    "summary": "Multimodal large language models (MLLMs) are critical for developing general-purpose AI assistants, yet they face growing safety risks. How can we ensure that MLLMs are safely aligned to prevent undesired behaviors such as discrimination, misinformation, or violations of ethical standards? In a further step, we need to explore how to fine-tune MLLMs to enhance reasoning performance while ensuring they satisfy safety constraints. Fundamentally, this can be formulated as a min-max optimization problem. In this study, we propose Safe RLHF-V, the first multimodal safety alignment framework that jointly optimizes helpfulness and safety using separate multimodal reward and cost models within a Lagrangian-based constrained optimization framework. Given that there is a lack of preference datasets that separate helpfulness and safety in multimodal scenarios, we introduce BeaverTails-V, the first open-source dataset with dual preference annotations for helpfulness and safety, along with multi-level safety labels (minor, moderate, severe). Additionally, we design a Multi-level Guardrail System to proactively defend against unsafe queries and adversarial attacks. By applying the Beaver-Guard-V moderation for 5 rounds of filtering and re-generation on the precursor model, the overall safety of the upstream model is significantly improved by an average of 40.9%. Experimental results demonstrate that fine-tuning different MLLMs with Safe RLHF can effectively enhance model helpfulness while ensuring improved safety. Specifically, Safe RLHF-V improves model safety by 34.2% and helpfulness by 34.3%. All of datasets, models, and code can be found at https://github.com/SafeRLHF-V to support the safety development of MLLMs and reduce potential societal risks."
+  },
+  {
+    "title": "Computationally and Sample Efficient Safe Reinforcement Learning Using Adaptive Conformal Prediction",
+    "url": "http://arxiv.org/abs/2503.17678v1",
+    "arxiv_id": "2503.17678v1",
+    "authors": [
+      "Hao Zhou",
+      "Yanze Zhang",
+      "Wenhao Luo"
+    ],
+    "published": "2025-03-22T07:16:54+00:00",
+    "summary": "Safety is a critical concern in learning-enabled autonomous systems especially when deploying these systems in real-world scenarios. An important challenge is accurately quantifying the uncertainty of unknown models to generate provably safe control policies that facilitate the gathering of informative data, thereby achieving both safe and optimal policies. Additionally, the selection of the data-driven model can significantly impact both the real-time implementation and the uncertainty quantification process. In this paper, we propose a provably sample efficient episodic safe learning framework that remains robust across various model choices with quantified uncertainty for online control tasks. Specifically, we first employ Quadrature Fourier Features (QFF) for kernel function approximation of Gaussian Processes (GPs) to enable efficient approximation of unknown dynamics. Then the Adaptive Conformal Prediction (ACP) is used to quantify the uncertainty from online observations and combined with the Control Barrier Functions (CBF) to characterize the uncertainty-aware safe control constraints under learned dynamics. Finally, an optimism-based exploration strategy is integrated with ACP-based CBFs for safe exploration and near-optimal safe nonlinear control. Theoretical proofs and simulation results are provided to demonstrate the effectiveness and efficiency of the proposed framework."
+  },
+  {
+    "title": "Enhancing Persona Consistency for LLMs' Role-Playing using Persona-Aware Contrastive Learning",
+    "url": "http://arxiv.org/abs/2503.17662v1",
+    "arxiv_id": "2503.17662v1",
+    "authors": [
+      "Ke Ji",
+      "Yixin Lian",
+      "Linxu Li",
+      "Jingsheng Gao",
+      "Weiyuan Li",
+      "Bin Dai"
+    ],
+    "published": "2025-03-22T06:12:34+00:00",
+    "summary": "In recent years, large language models (LLMs) have achieved breakthrough progress in many dialogue generation tasks. However, their lack of emotion and fine-grained role awareness limits the model's ability to provide personalized and diverse interactions further. Current methods face high costs in collecting high-quality annotated data for scenarios such as role-playing, and traditional human alignment methods are difficult to deploy due to the inherent diversity of model behavior in role-playing scenarios. Inspired by the alignment of models for safety behaviors through RLHF (Reinforcement Learning from Human Feedback), in this paper, we revisit model role-playing behavior from the perspective of persona alignment and propose a novel annotation-free framework named \\textbf{\\underline{P}}ersona-Aware \\textbf{\\underline{C}}ontrastive \\textbf{\\underline{L}}earning (PCL) to align LLMs' behavior during role-playing, enhancing the model's role consistency. Specifically, we first design a role chain method to encourage the model to self-question based on the role characteristics and dialogue context to adjust personality consistency. Then, we further enhance the model's role-playing strategy through iterative contrastive learning between the use of role characteristics and not. Experiments on both black-box and white-box LLMs show that LLMs equipped with PCL significantly outperform vanilla LLMs under automatic evaluation methods (CharEval \\& GPT-4) and human expert evaluation."
+  },
+  {
+    "title": "Leveraging Audio Representations for Vibration-Based Crowd Monitoring in Stadiums",
+    "url": "http://arxiv.org/abs/2503.17646v1",
+    "arxiv_id": "2503.17646v1",
+    "authors": [
+      "Yen Cheng Chang",
+      "Jesse Codling",
+      "Yiwen Dong",
+      "Jiale Zhang",
+      "Jiasi Chen",
+      "Hae Young Noh",
+      "Pei Zhang"
+    ],
+    "published": "2025-03-22T04:27:30+00:00",
+    "summary": "Crowd monitoring in sports stadiums is important to enhance public safety and improve the audience experience. Existing approaches mainly rely on cameras and microphones, which can cause significant disturbances and often raise privacy concerns. In this paper, we sense floor vibration, which provides a less disruptive and more non-intrusive way of crowd sensing, to predict crowd behavior. However, since the vibration-based crowd monitoring approach is newly developed, one main challenge is the lack of training data due to sports stadiums being large public spaces with complex physical activities.   In this paper, we present ViLA (Vibration Leverage Audio), a vibration-based method that reduces the dependency on labeled data by pre-training with unlabeled cross-modality data. ViLA is first pre-trained on audio data in an unsupervised manner and then fine-tuned with a minimal amount of in-domain vibration data. By leveraging publicly available audio datasets, ViLA learns the wave behaviors from audio and then adapts the representation to vibration, reducing the reliance on domain-specific vibration data. Our real-world experiments demonstrate that pre-training the vibration model using publicly available audio data (YouTube8M) achieved up to a 5.8x error reduction compared to the model without audio pre-training."
+  },
+  {
+    "title": "Generating Realistic, Diverse, and Fault-Revealing Inputs with Latent Space Interpolation for Testing Deep Neural Networks",
+    "url": "http://arxiv.org/abs/2503.17630v1",
+    "arxiv_id": "2503.17630v1",
+    "authors": [
+      "Bin Duan",
+      "Matthew B. Dwyer",
+      "Guowei Yang"
+    ],
+    "published": "2025-03-22T03:19:55+00:00",
+    "summary": "Deep Neural Networks (DNNs) have been widely employed across various domains, including safety-critical systems, necessitating comprehensive testing to ensure their reliability. Although numerous DNN model testing methods have been proposed to generate adversarial samples that are capable of revealing faults, existing methods typically perturb samples in the input space and then mutate these based on feedback from the DNN model. These methods often result in test samples that are not realistic and with low-probability reveal faults. To address these limitations, we propose a black-box DNN test input generation method, ARGUS, to generate realistic, diverse, and fault-revealing test inputs. ARGUS first compresses samples into a continuous latent space and then perturbs the original samples by interpolating these with samples of different classes. Subsequently, we employ a vector quantizer and decoder to reconstruct adversarial samples back into the input space. Additionally, we employ discriminators both in the latent space and in the input space to ensure the realism of the generated samples. Evaluation of ARGUS in comparison with state-of-the-art black-box testing and white-box testing methods, shows that ARGUS excels in generating realistic and diverse adversarial samples relative to the target dataset, and ARGUS successfully perturbs all original samples and achieves up to 4 times higher error rate than the best baseline method. Furthermore, using these adversarial samples for model retraining can improve model classification accuracy."
+  },
+  {
+    "title": "Unraveling Pedestrian Fatality Patterns: A Comparative Study with Explainable AI",
+    "url": "http://arxiv.org/abs/2503.17623v1",
+    "arxiv_id": "2503.17623v1",
+    "authors": [
+      "Methusela Sulle",
+      "Judith Mwakalonge",
+      "Gurcan Comert",
+      "Saidi Siuhi",
+      "Nana Kankam Gyimah"
+    ],
+    "published": "2025-03-22T02:44:41+00:00",
+    "summary": "Road fatalities pose significant public safety and health challenges worldwide, with pedestrians being particularly vulnerable in vehicle-pedestrian crashes due to disparities in physical and performance characteristics. This study employs explainable artificial intelligence (XAI) to identify key factors contributing to pedestrian fatalities across the five U.S. states with the highest crash rates (2018-2022). It compares them to the five states with the lowest fatality rates. Using data from the Fatality Analysis Reporting System (FARS), the study applies machine learning techniques-including Decision Trees, Gradient Boosting Trees, Random Forests, and XGBoost-to predict contributing factors to pedestrian fatalities. To address data imbalance, the Synthetic Minority Over-sampling Technique (SMOTE) is utilized, while SHapley Additive Explanations (SHAP) values enhance model interpretability. The results indicate that age, alcohol and drug use, location, and environmental conditions are significant predictors of pedestrian fatalities. The XGBoost model outperformed others, achieving a balanced accuracy of 98 %, accuracy of 90 %, precision of 92 %, recall of 90 %, and an F1 score of 91 %. Findings reveal that pedestrian fatalities are more common in mid-block locations and areas with poor visibility, with older adults and substance-impaired individuals at higher risk. These insights can inform policymakers and urban planners in implementing targeted safety measures, such as improved lighting, enhanced pedestrian infrastructure, and stricter traffic law enforcement, to reduce fatalities and improve public safety."
+  },
+  {
+    "title": "Feature Selection Based on Reinforcement Learning and Hazard State Classification for Magnetic Adhesion Wall-Climbing Robots",
+    "url": "http://arxiv.org/abs/2503.17615v1",
+    "arxiv_id": "2503.17615v1",
+    "authors": [
+      "Zhen Ma",
+      "He Xu",
+      "Jielong Dou",
+      "Yi Qin",
+      "Xueyu Zhang"
+    ],
+    "published": "2025-03-22T02:21:11+00:00",
+    "summary": "Magnetic adhesion tracked wall-climbing robots face potential risks of overturning during high-altitude operations, making their stability crucial for ensuring safety. This study presents a dynamic feature selection method based on Proximal Policy Optimization (PPO) reinforcement learning, combined with typical machine learning models, aimed at improving the classification accuracy of hazardous states under complex operating conditions. Firstly, this work innovatively employs a fiber rod-based MEMS attitude sensor to collect vibration data from the robot and extract high-dimensional feature vectors in both time and frequency domains. Then, a reinforcement learning model is used to dynamically select the optimal feature subset, reducing feature redundancy and enhancing classification accuracy. Finally, a CNN-LSTM deep learning model is employed for classification and recognition. Experimental results demonstrate that the proposed method significantly improves the robot's ability to assess hazardous states across various operational scenarios, providing reliable technical support for robotic safety monitoring."
+  },
+  {
+    "title": "Extending First-order Motion Planners to Second-order Dynamics",
+    "url": "http://arxiv.org/abs/2503.17589v1",
+    "arxiv_id": "2503.17589v1",
+    "authors": [
+      "Mayur Sawant",
+      "Abdelhamid Tayebi"
+    ],
+    "published": "2025-03-22T00:15:34+00:00",
+    "summary": "This paper extends first-order motion planners to robots governed by second-order dynamics. Two control schemes are proposed based on the knowledge of a scalar function whose negative gradient aligns with a given first-order motion planner. When such a function is known, the first-order motion planner is combined with a damping velocity vector with a dynamic gain to extend the safety and convergence guarantees of the first-order motion planner to second-order systems. If no such function is available, we propose an alternative control scheme ensuring that the error between the robot's velocity and the first-order motion planner converges to zero. The theoretical developments are supported by simulation results demonstrating the effectiveness of the proposed approaches."
+  },
+  {
+    "title": "ConSol: Sequential Probability Ratio Testing to Find Consistent LLM Reasoning Paths Efficiently",
+    "url": "http://arxiv.org/abs/2503.17587v1",
+    "arxiv_id": "2503.17587v1",
+    "authors": [
+      "Jaeyeon Lee",
+      "Guantong Qi",
+      "Matthew Brady Neeley",
+      "Zhandong Liu",
+      "Hyun-Hwan Jeong"
+    ],
+    "published": "2025-03-22T00:07:28+00:00",
+    "summary": "Recent advancements in large language models (LLMs) integrating explicit reasoning, such as OpenAI's o3-mini, DeepSeek-R1, and QWQ-32B, enable smaller models to solve complex tasks by generating intermediate reasoning steps prior to providing answers. However, this approach significantly increases computational costs, both monetarily and environmentally. The widely-used self-consistency method further exacerbates these costs by aggregating multiple reasoning paths to improve accuracy, often requiring between 40 to 64 samples per task. Although aggregation effectively reduces variance and bias, additional sampling can lead to diminishing returns when early samples yield consistent results. To address inefficiencies, we propose leveraging Sequential Probability Ratio Testing (SPRT) to dynamically terminate sampling once sufficient consistency is achieved. We calibrate SPRT parameters specifically for LLM applications, accounting for sensitivity to detect the mode of the distribution. Our experiments demonstrate that incorporating SPRT significantly enhances token efficiency, achieving comparable accuracy to self-consistency methods but at a substantially reduced computational cost. To promote transparency and facilitate reproducibility, we have made the source code and datasets used in our experiments publicly available at our GitHub repository: https://github.com/LiuzLab/consol, or available as a PyPI package: pip install consol. We hope that this resource will support further research and encourage the development of new methods building upon our work."
+  },
+  {
+    "title": "You Only Look Once at Anytime (AnytimeYOLO): Analysis and Optimization of Early-Exits for Object-Detection",
+    "url": "http://arxiv.org/abs/2503.17497v1",
+    "arxiv_id": "2503.17497v1",
+    "authors": [
+      "Daniel Kuhse",
+      "Harun Teper",
+      "Sebastian Buschj\u00e4ger",
+      "Chien-Yao Wang",
+      "Jian-Jia Chen"
+    ],
+    "published": "2025-03-21T19:16:38+00:00",
+    "summary": "We introduce AnytimeYOLO, a family of variants of the YOLO architecture that enables anytime object detection. Our AnytimeYOLO networks allow for interruptible inference, i.e., they provide a prediction at any point in time, a property desirable for safety-critical real-time applications.   We present structured explorations to modify the YOLO architecture, enabling early termination to obtain intermediate results. We focus on providing fine-grained control through high granularity of available termination points. First, we formalize Anytime Models as a special class of prediction models that offer anytime predictions. Then, we discuss a novel transposed variant of the YOLO architecture, that changes the architecture to enable better early predictions and greater freedom for the order of processing stages. Finally, we propose two optimization algorithms that, given an anytime model, can be used to determine the optimal exit execution order and the optimal subset of early-exits to select for deployment in low-resource environments. We evaluate the anytime performance and trade-offs of design choices, proposing a new anytime quality metric for this purpose. In particular, we also discuss key challenges for anytime inference that currently make its deployment costly."
+  },
+  {
+    "title": "Selective Oxidation and Cr Segregation in High-Entropy Oxide Thin Films",
+    "url": "http://arxiv.org/abs/2503.17470v1",
+    "arxiv_id": "2503.17470v1",
+    "authors": [
+      "Le Wang",
+      "Krishna Prasad Koirala",
+      "Shuhang Wu",
+      "Jueli Shi",
+      "Hsin-Mei Kao",
+      "Andrew Ho",
+      "Min-Ju Choi",
+      "Dongchen Qi",
+      "Anton Tadich",
+      "Mark E. Bowden",
+      "Bethany E. Matthews",
+      "Hua Zhou",
+      "Yang Yang",
+      "Chih-hung Chang",
+      "Zihua Zhu",
+      "Chongmin Wang",
+      "Yingge Du"
+    ],
+    "published": "2025-03-21T18:28:05+00:00",
+    "summary": "High-entropy oxides (HEOs) offer exceptional compositional flexibility and structural stability, making them promising materials for energy and catalytic applications. Here, we investigate Sr doping effects on B-site cation oxidation states, local composition, and structure in epitaxial La1-xSrx(Cr0.2Mn0.2Fe0.2Co0.2Ni0.2)O3 thin films. X-ray spectroscopies reveal that Sr doping preferentially promotes Cr oxidation from Cr3+ to Cr6+, partially oxidizes Co and Ni, while leaving Mn4+ and Fe3+ unchanged. Atomic-resolution scanning transmission electron microscopy with energy-dispersive X-ray spectroscopy shows pronounced Cr segregation, with Cr exhibiting depletion at the film-substrate interface and enrichment at the film surface, along with the formation of a partially amorphous phase in heavily Sr-doped samples. This segregation is likely driven by oxidation-induced migration of smaller, high-valence Cr cations during the growth. These findings underscore the critical interplay between charge transfer, local strain, and compositional fluctuations, providing strategies to control surface composition and electronic structure in HEOs for more robust electrocatalyst design."
+  },
+  {
     "title": "OpenVLThinker: An Early Exploration to Complex Vision-Language Reasoning via Iterative Self-Improvement",
     "url": "http://arxiv.org/abs/2503.17352v1",
     "arxiv_id": "2503.17352v1",
@@ -135,6 +667,20 @@
     ],
     "published": "2025-03-21T13:17:28+00:00",
     "summary": "In autonomous driving, the integration of roadside perception systems is essential for overcoming occlusion challenges and enhancing the safety of Vulnerable Road Users (VRUs). While LiDAR and visual (RGB) sensors are commonly used, thermal imaging remains underrepresented in datasets, despite its acknowledged advantages for VRU detection in extreme lighting conditions. In this paper, we present R-LiViT, the first dataset to combine LiDAR, RGB, and thermal imaging from a roadside perspective, with a strong focus on VRUs. R-LiViT captures three intersections during both day and night, ensuring a diverse dataset. It includes 10,000 LiDAR frames and 2,400 temporally and spatially aligned RGB and thermal images across over 150 traffic scenarios, with 6 and 8 annotated classes respectively, providing a comprehensive resource for tasks such as object detection and tracking. The dataset1 and the code for reproducing our evaluation results2 are made publicly available."
+  },
+  {
+    "title": "TamedPUMA: safe and stable imitation learning with geometric fabrics",
+    "url": "http://arxiv.org/abs/2503.17432v1",
+    "arxiv_id": "2503.17432v1",
+    "authors": [
+      "Saray Bakker",
+      "Rodrigo P\u00e9rez-Dattari",
+      "Cosimo Della Santina",
+      "Wendelin B\u00f6hmer",
+      "Javier Alonso-Mora"
+    ],
+    "published": "2025-03-21T13:13:17+00:00",
+    "summary": "Using the language of dynamical systems, Imitation learning (IL) provides an intuitive and effective way of teaching stable task-space motions to robots with goal convergence. Yet, IL techniques are affected by serious limitations when it comes to ensuring safety and fulfillment of physical constraints. With this work, we solve this challenge via TamedPUMA, an IL algorithm augmented with a recent development in motion generation called geometric fabrics. As both the IL policy and geometric fabrics describe motions as artificial second-order dynamical systems, we propose two variations where IL provides a navigation policy for geometric fabrics. The result is a stable imitation learning strategy within which we can seamlessly blend geometrical constraints like collision avoidance and joint limits. Beyond providing a theoretical analysis, we demonstrate TamedPUMA with simulated and real-world tasks, including a 7-DoF manipulator."
   },
   {
     "title": "Deterministic AI Agent Personality Expression through Standard Psychological Diagnostics",
