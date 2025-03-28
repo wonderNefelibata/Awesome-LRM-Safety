@@ -1,5 +1,543 @@
 [
   {
+    "title": "Video-R1: Reinforcing Video Reasoning in MLLMs",
+    "url": "http://arxiv.org/abs/2503.21776v1",
+    "arxiv_id": "2503.21776v1",
+    "authors": [
+      "Kaituo Feng",
+      "Kaixiong Gong",
+      "Bohao Li",
+      "Zonghao Guo",
+      "Yibing Wang",
+      "Tianshuo Peng",
+      "Benyou Wang",
+      "Xiangyu Yue"
+    ],
+    "published": "2025-03-27T17:59:51+00:00",
+    "summary": "Inspired by DeepSeek-R1's success in eliciting reasoning abilities through rule-based reinforcement learning (RL), we introduce Video-R1 as the first attempt to systematically explore the R1 paradigm for eliciting video reasoning within multimodal large language models (MLLMs). However, directly applying RL training with the GRPO algorithm to video reasoning presents two primary challenges: (i) a lack of temporal modeling for video reasoning, and (ii) the scarcity of high-quality video-reasoning data. To address these issues, we first propose the T-GRPO algorithm, which encourages models to utilize temporal information in videos for reasoning. Additionally, instead of relying solely on video data, we incorporate high-quality image-reasoning data into the training process. We have constructed two datasets: Video-R1-COT-165k for SFT cold start and Video-R1-260k for RL training, both comprising image and video data. Experimental results demonstrate that Video-R1 achieves significant improvements on video reasoning benchmarks such as VideoMMMU and VSI-Bench, as well as on general video benchmarks including MVBench and TempCompass, etc. Notably, Video-R1-7B attains a 35.8% accuracy on video spatial reasoning benchmark VSI-bench, surpassing the commercial proprietary model GPT-4o. All codes, models, data are released."
+  },
+  {
+    "title": "LeX-Art: Rethinking Text Generation via Scalable High-Quality Data Synthesis",
+    "url": "http://arxiv.org/abs/2503.21749v1",
+    "arxiv_id": "2503.21749v1",
+    "authors": [
+      "Shitian Zhao",
+      "Qilong Wu",
+      "Xinyue Li",
+      "Bo Zhang",
+      "Ming Li",
+      "Qi Qin",
+      "Dongyang Liu",
+      "Kaipeng Zhang",
+      "Hongsheng Li",
+      "Yu Qiao",
+      "Peng Gao",
+      "Bin Fu",
+      "Zhen Li"
+    ],
+    "published": "2025-03-27T17:56:15+00:00",
+    "summary": "We introduce LeX-Art, a comprehensive suite for high-quality text-image synthesis that systematically bridges the gap between prompt expressiveness and text rendering fidelity. Our approach follows a data-centric paradigm, constructing a high-quality data synthesis pipeline based on Deepseek-R1 to curate LeX-10K, a dataset of 10K high-resolution, aesthetically refined 1024$\\times$1024 images. Beyond dataset construction, we develop LeX-Enhancer, a robust prompt enrichment model, and train two text-to-image models, LeX-FLUX and LeX-Lumina, achieving state-of-the-art text rendering performance. To systematically evaluate visual text generation, we introduce LeX-Bench, a benchmark that assesses fidelity, aesthetics, and alignment, complemented by Pairwise Normalized Edit Distance (PNED), a novel metric for robust text accuracy evaluation. Experiments demonstrate significant improvements, with LeX-Lumina achieving a 79.81% PNED gain on CreateBench, and LeX-FLUX outperforming baselines in color (+3.18%), positional (+4.45%), and font accuracy (+3.81%). Our codes, models, datasets, and demo are publicly available."
+  },
+  {
+    "title": "GateLens: A Reasoning-Enhanced LLM Agent for Automotive Software Release Analytics",
+    "url": "http://arxiv.org/abs/2503.21735v1",
+    "arxiv_id": "2503.21735v1",
+    "authors": [
+      "Arsham Gholamzadeh Khoee",
+      "Shuai Wang",
+      "Yinan Yu",
+      "Robert Feldt",
+      "Dhasarathy Parthasarathy"
+    ],
+    "published": "2025-03-27T17:48:32+00:00",
+    "summary": "Ensuring the reliability and effectiveness of software release decisions is critical, particularly in safety-critical domains like automotive systems. Precise analysis of release validation data, often presented in tabular form, plays a pivotal role in this process. However, traditional methods that rely on manual analysis of extensive test datasets and validation metrics are prone to delays and high costs. Large Language Models (LLMs) offer a promising alternative but face challenges in analytical reasoning, contextual understanding, handling out-of-scope queries, and processing structured test data consistently; limitations that hinder their direct application in safety-critical scenarios. This paper introduces GateLens, an LLM-based tool for analyzing tabular data in the automotive domain. GateLens translates natural language queries into Relational Algebra (RA) expressions and then generates optimized Python code. It outperforms the baseline system on benchmarking datasets, achieving higher F1 scores and handling complex and ambiguous queries with greater robustness. Ablation studies confirm the critical role of the RA module, with performance dropping sharply when omitted. Industrial evaluations reveal that GateLens reduces analysis time by over 80% while maintaining high accuracy and reliability. As demonstrated by presented results, GateLens achieved high performance without relying on few-shot examples, showcasing strong generalization across various query types from diverse company roles. Insights from deploying GateLens with a partner automotive company offer practical guidance for integrating AI into critical workflows such as release validation. Results show that by automating test result analysis, GateLens enables faster, more informed, and dependable release decisions, and can thus advance software scalability and reliability in automotive systems."
+  },
+  {
+    "title": "MAVERIX: Multimodal Audio-Visual Evaluation Reasoning IndeX",
+    "url": "http://arxiv.org/abs/2503.21699v1",
+    "arxiv_id": "2503.21699v1",
+    "authors": [
+      "Liuyue Xie",
+      "George Z. Wei",
+      "Avik Kuthiala",
+      "Ce Zheng",
+      "Ananya Bal",
+      "Mosam Dabhi",
+      "Liting Wen",
+      "Taru Rustagi",
+      "Ethan Lai",
+      "Sushil Khyalia",
+      "Rohan Choudhury",
+      "Morteza Ziyadi",
+      "Xu Zhang",
+      "Hao Yang",
+      "L\u00e1szl\u00f3 A. Jeni"
+    ],
+    "published": "2025-03-27T17:04:33+00:00",
+    "summary": "Frontier models have either been language-only or have primarily focused on vision and language modalities. Although recent advancements in models with vision and audio understanding capabilities have shown substantial progress, the field lacks a standardized evaluation framework for thoroughly assessing their cross-modality perception performance. We introduce MAVERIX~(Multimodal Audio-Visual Evaluation Reasoning IndeX), a novel benchmark with 700 videos and 2,556 questions explicitly designed to evaluate multimodal models through tasks that necessitate close integration of video and audio information. MAVERIX uniquely provides models with audiovisual tasks, closely mimicking the multimodal perceptual experiences available to humans during inference and decision-making processes. To our knowledge, MAVERIX is the first benchmark aimed explicitly at assessing comprehensive audiovisual integration. Experiments with state-of-the-art models, including Gemini 1.5 Pro and o1, show performance approaching human levels (around 70% accuracy), while human experts reach near-ceiling performance (95.1%). With standardized evaluation protocols, a rigorously annotated pipeline, and a public toolkit, MAVERIX establishes a challenging testbed for advancing audiovisual multimodal intelligence."
+  },
+  {
+    "title": "Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks",
+    "url": "http://arxiv.org/abs/2503.21696v1",
+    "arxiv_id": "2503.21696v1",
+    "authors": [
+      "Wenqi Zhang",
+      "Mengna Wang",
+      "Gangao Liu",
+      "Xu Huixin",
+      "Yiwei Jiang",
+      "Yongliang Shen",
+      "Guiyang Hou",
+      "Zhe Zheng",
+      "Hang Zhang",
+      "Xin Li",
+      "Weiming Lu",
+      "Peng Li",
+      "Yueting Zhuang"
+    ],
+    "published": "2025-03-27T17:00:51+00:00",
+    "summary": "Recent advances in deep thinking models have demonstrated remarkable reasoning capabilities on mathematical and coding tasks. However, their effectiveness in embodied domains which require continuous interaction with environments through image action interleaved trajectories remains largely -unexplored. We present Embodied Reasoner, a model that extends o1 style reasoning to interactive embodied search tasks. Unlike mathematical reasoning that relies primarily on logical deduction, embodied scenarios demand spatial understanding, temporal reasoning, and ongoing self-reflection based on interaction history. To address these challenges, we synthesize 9.3k coherent Observation-Thought-Action trajectories containing 64k interactive images and 90k diverse thinking processes (analysis, spatial reasoning, reflection, planning, and verification). We develop a three-stage training pipeline that progressively enhances the model's capabilities through imitation learning, self-exploration via rejection sampling, and self-correction through reflection tuning. The evaluation shows that our model significantly outperforms those advanced visual reasoning models, e.g., it exceeds OpenAI o1, o3-mini, and Claude-3.7 by +9\\%, 24\\%, and +13\\%. Analysis reveals our model exhibits fewer repeated searches and logical inconsistencies, with particular advantages in complex long-horizon tasks. Real-world environments also show our superiority while exhibiting fewer repeated searches and logical inconsistency cases."
+  },
+  {
+    "title": "UI-R1: Enhancing Action Prediction of GUI Agents by Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2503.21620v1",
+    "arxiv_id": "2503.21620v1",
+    "authors": [
+      "Zhengxi Lu",
+      "Yuxiang Chai",
+      "Yaxuan Guo",
+      "Xi Yin",
+      "Liang Liu",
+      "Hao Wang",
+      "Guanjing Xiong",
+      "Hongsheng Li"
+    ],
+    "published": "2025-03-27T15:39:30+00:00",
+    "summary": "The recent DeepSeek-R1 has showcased the emergence of reasoning capabilities in LLMs through reinforcement learning (RL) with rule-based rewards. Building on this idea, we are the first to explore how rule-based RL can enhance the reasoning capabilities of multimodal large language models (MLLMs) for graphic user interface (GUI) action prediction tasks. To this end, we curate a small yet high-quality dataset of 136 challenging tasks, encompassing five common action types on mobile devices. We also introduce a unified rule-based action reward, enabling model optimization via policy-based algorithms such as Group Relative Policy Optimization (GRPO). Experimental results demonstrate that our proposed data-efficient model, UI-R1-3B, achieves substantial improvements on both in-domain (ID) and out-of-domain (OOD) tasks. Specifically, on the ID benchmark AndroidControl, the action type accuracy improves by 15%, while grounding accuracy increases by 10.3%, compared with the base model (i.e. Qwen2.5-VL-3B). On the OOD GUI grounding benchmark ScreenSpot-Pro, our model surpasses the base model by 6.0% and achieves competitive performance with larger models (e.g., OS-Atlas-7B), which are trained via supervised fine-tuning (SFT) on 76K data. These results underscore the potential of rule-based reinforcement learning to advance GUI understanding and control, paving the way for future research in this domain."
+  },
+  {
+    "title": "A Survey of Efficient Reasoning for Large Reasoning Models: Language, Multimodality, and Beyond",
+    "url": "http://arxiv.org/abs/2503.21614v1",
+    "arxiv_id": "2503.21614v1",
+    "authors": [
+      "Xiaoye Qu",
+      "Yafu Li",
+      "Zhaochen Su",
+      "Weigao Sun",
+      "Jianhao Yan",
+      "Dongrui Liu",
+      "Ganqu Cui",
+      "Daizong Liu",
+      "Shuxian Liang",
+      "Junxian He",
+      "Peng Li",
+      "Wei Wei",
+      "Jing Shao",
+      "Chaochao Lu",
+      "Yue Zhang",
+      "Xian-Sheng Hua",
+      "Bowen Zhou",
+      "Yu Cheng"
+    ],
+    "published": "2025-03-27T15:36:30+00:00",
+    "summary": "Recent Large Reasoning Models (LRMs), such as DeepSeek-R1 and OpenAI o1, have demonstrated strong performance gains by scaling up the length of Chain-of-Thought (CoT) reasoning during inference. However, a growing concern lies in their tendency to produce excessively long reasoning traces, which are often filled with redundant content (e.g., repeated definitions), over-analysis of simple problems, and superficial exploration of multiple reasoning paths for harder tasks. This inefficiency introduces significant challenges for training, inference, and real-world deployment (e.g., in agent-based systems), where token economy is critical. In this survey, we provide a comprehensive overview of recent efforts aimed at improving reasoning efficiency in LRMs, with a particular focus on the unique challenges that arise in this new paradigm. We identify common patterns of inefficiency, examine methods proposed across the LRM lifecycle, i.e., from pretraining to inference, and discuss promising future directions for research. To support ongoing development, we also maintain a real-time GitHub repository tracking recent progress in the field. We hope this survey serves as a foundation for further exploration and inspires innovation in this rapidly evolving area."
+  },
+  {
+    "title": "Prompt, Divide, and Conquer: Bypassing Large Language Model Safety Filters via Segmented and Distributed Prompt Processing",
+    "url": "http://arxiv.org/abs/2503.21598v1",
+    "arxiv_id": "2503.21598v1",
+    "authors": [
+      "Johan Wahr\u00e9us",
+      "Ahmed Hussain",
+      "Panos Papadimitratos"
+    ],
+    "published": "2025-03-27T15:19:55+00:00",
+    "summary": "Large Language Models (LLMs) have transformed task automation and content generation across various domains while incorporating safety filters to prevent misuse. We introduce a novel jailbreaking framework that employs distributed prompt processing combined with iterative refinements to bypass these safety measures, particularly in generating malicious code. Our architecture consists of four key modules: prompt segmentation, parallel processing, response aggregation, and LLM-based jury evaluation. Tested on 500 malicious prompts across 10 cybersecurity categories, the framework achieves a 73.2% Success Rate (SR) in generating malicious code. Notably, our comparative analysis reveals that traditional single-LLM judge evaluation overestimates SRs (93.8%) compared to our LLM jury system (73.2%), with manual verification confirming that single-judge assessments often accept incomplete implementations. Moreover, we demonstrate that our distributed architecture improves SRs by 12% over the non-distributed approach in an ablation study, highlighting both the effectiveness of distributed prompt processing and the importance of robust evaluation methodologies in assessing jailbreak attempts."
+  },
+  {
+    "title": "Combining Artificial Users and Psychotherapist Assessment to Evaluate Large Language Model-based Mental Health Chatbots",
+    "url": "http://arxiv.org/abs/2503.21540v1",
+    "arxiv_id": "2503.21540v1",
+    "authors": [
+      "Florian Onur Kuhlmeier",
+      "Leon Hanschmann",
+      "Melina Rabe",
+      "Stefan Luettke",
+      "Eva-Lotta Brakemeier",
+      "Alexander Maedche"
+    ],
+    "published": "2025-03-27T14:31:17+00:00",
+    "summary": "Large Language Models (LLMs) promise to overcome limitations of rule-based mental health chatbots through more natural conversations. However, evaluating LLM-based mental health chatbots presents a significant challenge: Their probabilistic nature requires comprehensive testing to ensure therapeutic quality, yet conducting such evaluations with people with depression would impose an additional burden on vulnerable people and risk exposing them to potentially harmful content. Our paper presents an evaluation approach for LLM-based mental health chatbots that combines dialogue generation with artificial users and dialogue evaluation by psychotherapists. We developed artificial users based on patient vignettes, systematically varying characteristics such as depression severity, personality traits, and attitudes toward chatbots, and let them interact with a LLM-based behavioral activation chatbot. Ten psychotherapists evaluated 48 randomly selected dialogues using standardized rating scales to assess the quality of behavioral activation and its therapeutic capabilities. We found that while artificial users showed moderate authenticity, they enabled comprehensive testing across different users. In addition, the chatbot demonstrated promising capabilities in delivering behavioral activation and maintaining safety. Furthermore, we identified deficits, such as ensuring the appropriateness of the activity plan, which reveals necessary improvements for the chatbot. Our framework provides an effective method for evaluating LLM-based mental health chatbots while protecting vulnerable people during the evaluation process. Future research should improve the authenticity of artificial users and develop LLM-augmented evaluation tools to make psychotherapist evaluation more efficient, and thus further advance the evaluation of LLM-based mental health chatbots."
+  },
+  {
+    "title": "Bayesian Pseudo Posterior Mechanism for Differentially Private Machine Learning",
+    "url": "http://arxiv.org/abs/2503.21528v1",
+    "arxiv_id": "2503.21528v1",
+    "authors": [
+      "Robert Chew",
+      "Matthew R. Williams",
+      "Elan A. Segarra",
+      "Alexander J. Preiss",
+      "Amanda Konet",
+      "Terrance D. Savitsky"
+    ],
+    "published": "2025-03-27T14:17:05+00:00",
+    "summary": "Differential privacy (DP) is becoming increasingly important for deployed machine learning applications because it provides strong guarantees for protecting the privacy of individuals whose data is used to train models. However, DP mechanisms commonly used in machine learning tend to struggle on many real world distributions, including highly imbalanced or small labeled training sets. In this work, we propose a new scalable DP mechanism for deep learning models, SWAG-PPM, by using a pseudo posterior distribution that downweights by-record likelihood contributions proportionally to their disclosure risks as the randomized mechanism. As a motivating example from official statistics, we demonstrate SWAG-PPM on a workplace injury text classification task using a highly imbalanced public dataset published by the U.S. Occupational Safety and Health Administration (OSHA). We find that SWAG-PPM exhibits only modest utility degradation against a non-private comparator while greatly outperforming the industry standard DP-SGD for a similar privacy budget."
+  },
+  {
+    "title": "Behavioral response to mobile phone evacuation alerts",
+    "url": "http://arxiv.org/abs/2503.21497v1",
+    "arxiv_id": "2503.21497v1",
+    "authors": [
+      "Erick Elejalde",
+      "Timur Naushirvanov",
+      "Kyriaki Kalimeri",
+      "Elisa Omodei",
+      "M\u00e1rton Karsai",
+      "Loreto Bravo",
+      "Leo Ferres"
+    ],
+    "published": "2025-03-27T13:33:56+00:00",
+    "summary": "This study examines behavioral responses to mobile phone evacuation alerts during the February 2024 wildfires in Valpara\\'iso, Chile. Using anonymized mobile network data from 580,000 devices, we analyze population movement following emergency SMS notifications. Results reveal three key patterns: (1) initial alerts trigger immediate evacuation responses with connectivity dropping by 80\\% within 1.5 hours, while subsequent messages show diminishing effects; (2) substantial evacuation also occurs in non-warned areas, indicating potential transportation congestion; (3) socioeconomic disparities exist in evacuation timing, with high-income areas evacuating faster and showing less differentiation between warned and non-warned locations. Statistical modeling demonstrates socioeconomic variations in both evacuation decision rates and recovery patterns. These findings inform emergency communication strategies for climate-driven disasters, highlighting the need for targeted alerts, socioeconomically calibrated messaging, and staged evacuation procedures to enhance public safety during crises."
+  },
+  {
+    "title": "Data-Driven Contact-Aware Control Method for Real-Time Deformable Tool Manipulation: A Case Study in the Environmental Swabbing",
+    "url": "http://arxiv.org/abs/2503.21491v1",
+    "arxiv_id": "2503.21491v1",
+    "authors": [
+      "Siavash Mahmoudi",
+      "Amirreza Davar",
+      "Dongyi Wang"
+    ],
+    "published": "2025-03-27T13:27:46+00:00",
+    "summary": "Deformable Object Manipulation (DOM) remains a critical challenge in robotics due to the complexities of developing suitable model-based control strategies. Deformable Tool Manipulation (DTM) further complicates this task by introducing additional uncertainties between the robot and its environment. While humans effortlessly manipulate deformable tools using touch and experience, robotic systems struggle to maintain stability and precision. To address these challenges, we present a novel State-Adaptive Koopman LQR (SA-KLQR) control framework for real-time deformable tool manipulation, demonstrated through a case study in environmental swab sampling for food safety. This method leverages Koopman operator-based control to linearize nonlinear dynamics while adapting to state-dependent variations in tool deformation and contact forces. A tactile-based feedback system dynamically estimates and regulates the swab tool's angle, contact pressure, and surface coverage, ensuring compliance with food safety standards. Additionally, a sensor-embedded contact pad monitors force distribution to mitigate tool pivoting and deformation, improving stability during dynamic interactions. Experimental results validate the SA-KLQR approach, demonstrating accurate contact angle estimation, robust trajectory tracking, and reliable force regulation. The proposed framework enhances precision, adaptability, and real-time control in deformable tool manipulation, bridging the gap between data-driven learning and optimal control in robotic interaction tasks."
+  },
+  {
+    "title": "Exploring the Roles of Large Language Models in Reshaping Transportation Systems: A Survey, Framework, and Roadmap",
+    "url": "http://arxiv.org/abs/2503.21411v1",
+    "arxiv_id": "2503.21411v1",
+    "authors": [
+      "Tong Nie",
+      "Jian Sun",
+      "Wei Ma"
+    ],
+    "published": "2025-03-27T11:56:27+00:00",
+    "summary": "Modern transportation systems face pressing challenges due to increasing demand, dynamic environments, and heterogeneous information integration. The rapid evolution of Large Language Models (LLMs) offers transformative potential to address these challenges. Extensive knowledge and high-level capabilities derived from pretraining evolve the default role of LLMs as text generators to become versatile, knowledge-driven task solvers for intelligent transportation systems. This survey first presents LLM4TR, a novel conceptual framework that systematically categorizes the roles of LLMs in transportation into four synergetic dimensions: information processors, knowledge encoders, component generators, and decision facilitators. Through a unified taxonomy, we systematically elucidate how LLMs bridge fragmented data pipelines, enhance predictive analytics, simulate human-like reasoning, and enable closed-loop interactions across sensing, learning, modeling, and managing tasks in transportation systems. For each role, our review spans diverse applications, from traffic prediction and autonomous driving to safety analytics and urban mobility optimization, highlighting how emergent capabilities of LLMs such as in-context learning and step-by-step reasoning can enhance the operation and management of transportation systems. We further curate practical guidance, including available resources and computational guidelines, to support real-world deployment. By identifying challenges in existing LLM-based solutions, this survey charts a roadmap for advancing LLM-driven transportation research, positioning LLMs as central actors in the next generation of cyber-physical-social mobility ecosystems. Online resources can be found in the project page: https://github.com/tongnie/awesome-llm4tr."
+  },
+  {
+    "title": "HybridoNet-Adapt: A Domain-Adapted Framework for Accurate Lithium-Ion Battery RUL Prediction",
+    "url": "http://arxiv.org/abs/2503.21392v1",
+    "arxiv_id": "2503.21392v1",
+    "authors": [
+      "Khoa Tran",
+      "Bao Huynh",
+      "Tri Le",
+      "Lam Pham",
+      "Vy-Rin Nguyen"
+    ],
+    "published": "2025-03-27T11:35:25+00:00",
+    "summary": "Accurate prediction of the remaining useful life (RUL) in Lithium-ion battery (LIB) health management systems is crucial for ensuring reliability and safety. Current methods typically assume that training and testing data share the same distribution, overlooking the benefits of incorporating diverse data sources to enhance model performance. To address this limitation, we introduce a data-independent RUL prediction framework along with its domain adaptation (DA) approach, which leverages heterogeneous data sources for improved target predictions. Our approach integrates comprehensive data preprocessing, including feature extraction, denoising, and normalization, with a data-independent prediction model that combines Long Short-Term Memory (LSTM), Multihead Attention, and a Neural Ordinary Differential Equation (NODE) block, termed HybridoNet. The domain-adapted version, HybridoNet Adapt, is trained using a novel technique inspired by the Domain-Adversarial Neural Network (DANN) framework, a regression ensemble method, and Maximum Mean Discrepancy (MMD) to learn domain-invariant features from labeled cycling data in the source and target domains. Experimental results demonstrate that our approach outperforms state-of-the-art techniques, providing reliable RUL predictions for real-world applications."
+  },
+  {
+    "title": "Challenging the Boundaries of Reasoning: An Olympiad-Level Math Benchmark for Large Language Models",
+    "url": "http://arxiv.org/abs/2503.21380v1",
+    "arxiv_id": "2503.21380v1",
+    "authors": [
+      "Haoxiang Sun",
+      "Yingqian Min",
+      "Zhipeng Chen",
+      "Wayne Xin Zhao",
+      "Zheng Liu",
+      "Zhongyuan Wang",
+      "Lei Fang",
+      "Ji-Rong Wen"
+    ],
+    "published": "2025-03-27T11:20:17+00:00",
+    "summary": "In recent years, the rapid development of large reasoning models has resulted in the saturation of existing benchmarks for evaluating mathematical reasoning, highlighting the urgent need for more challenging and rigorous evaluation frameworks. To address this gap, we introduce OlymMATH, a novel Olympiad-level mathematical benchmark, designed to rigorously test the complex reasoning capabilities of LLMs. OlymMATH features 200 meticulously curated problems, each manually verified and available in parallel English and Chinese versions. The problems are systematically organized into two distinct difficulty tiers: (1) AIME-level problems (easy) that establish a baseline for mathematical reasoning assessment, and (2) significantly more challenging problems (hard) designed to push the boundaries of current state-of-the-art models. In our benchmark, these problems span four core mathematical fields, each including a verifiable numerical solution to enable objective, rule-based evaluation. Empirical results underscore the significant challenge presented by OlymMATH, with state-of-the-art models including DeepSeek-R1 and OpenAI's o3-mini demonstrating notably limited accuracy on the hard subset. Furthermore, the benchmark facilitates comprehensive bilingual assessment of mathematical reasoning abilities-a critical dimension that remains largely unaddressed in mainstream mathematical reasoning benchmarks. We release the OlymMATH benchmark at the STILL project: https://github.com/RUCAIBox/Slow_Thinking_with_LLMs."
+  },
+  {
+    "title": "Safety of particle filters: Some first results on the time evolution of particle filter estimates",
+    "url": "http://arxiv.org/abs/2503.21334v1",
+    "arxiv_id": "2503.21334v1",
+    "authors": [
+      "Mathieu Gerber"
+    ],
+    "published": "2025-03-27T10:13:00+00:00",
+    "summary": "Particle filters (PFs) is a class of Monte Carlo algorithms that propagate over time a set of $N\\in\\mathbb{N}$ particles which can be used to estimate, in an online fashion, the sequence of filtering distributions $(\\hat{\\eta}_t)_{t\\geq 1}$ defined by a state-space model. Despite the popularity of PFs, the time evolution of their estimates does not appear to have been previously studied in the literature. Denoting by $(\\hat{\\eta}_t^N)_{t\\geq 1}$ the PF estimate of $(\\hat{\\eta}_t)_{t\\geq 1}$ and letting $\\kappa\\in (0,1)$, we first show that for any number of particles $N$ it holds that, with probability one, we have $\\|\\hat{\\eta}_t^N- \\hat{\\eta}_t\\|\\geq \\kappa$ for infinitely many $t\\geq 1$, with $\\|\\cdot\\|$ a measure of distance between probability distributions. Considering a simple filtering problem we then provide reassuring results concerning the ability of PFs to estimate jointly a finite set $\\{\\hat{\\eta}_t\\}_{t=1}^T$ of filtering distributions by studying $\\P(\\sup_{t\\in\\{1,\\dots,T\\}}\\|\\hat{\\eta}_t^{N}-\\hat{\\eta}_t\\|\\geq \\kappa)$. Finally, on the same toy filtering problem, we prove that sequential quasi-Monte Carlo, a randomized quasi-Monte Carlo version of PF algorithms, offers greater safety guarantees than PFs in the sense that, for this algorithm, it holds that $\\lim_{N\\rightarrow\\infty}\\sup_{t\\geq 1}\\|\\hat{\\eta}_t^N-\\hat{\\eta}_t\\|=0$ with probability one."
+  },
+  {
+    "title": "DeBackdoor: A Deductive Framework for Detecting Backdoor Attacks on Deep Models with Limited Data",
+    "url": "http://arxiv.org/abs/2503.21305v1",
+    "arxiv_id": "2503.21305v1",
+    "authors": [
+      "Dorde Popovic",
+      "Amin Sadeghi",
+      "Ting Yu",
+      "Sanjay Chawla",
+      "Issa Khalil"
+    ],
+    "published": "2025-03-27T09:31:10+00:00",
+    "summary": "Backdoor attacks are among the most effective, practical, and stealthy attacks in deep learning. In this paper, we consider a practical scenario where a developer obtains a deep model from a third party and uses it as part of a safety-critical system. The developer wants to inspect the model for potential backdoors prior to system deployment. We find that most existing detection techniques make assumptions that are not applicable to this scenario. In this paper, we present a novel framework for detecting backdoors under realistic restrictions. We generate candidate triggers by deductively searching over the space of possible triggers. We construct and optimize a smoothed version of Attack Success Rate as our search objective. Starting from a broad class of template attacks and just using the forward pass of a deep model, we reverse engineer the backdoor attack. We conduct extensive evaluation on a wide range of attacks, models, and datasets, with our technique performing almost perfectly across these settings."
+  },
+  {
+    "title": "Optimizing Resource Allocation and Scheduling towards FRMCS and GSM-R networks coexistence in Railway Systems",
+    "url": "http://arxiv.org/abs/2503.21300v1",
+    "arxiv_id": "2503.21300v1",
+    "authors": [
+      "Mohamed Aziz Aboud",
+      "Nawel Zangar",
+      "Rami Langar",
+      "Marion Berbineau",
+      "Jerome Madec"
+    ],
+    "published": "2025-03-27T09:26:49+00:00",
+    "summary": "The actual railway communication system used in Europe for high-speed trains (HST) is called the GSM-R system, which is a communication system based on 2G infrastructure. This system is meant to be replaced by a new system based on 5G NR infrastructure called the Future Railway Mobile Communication System (FRMCS) by 2030. For the next years, both systems will probably coexist in the same frequency band since the migration from GSM-R to FRMCS is planned to be done progressively until the GSM-R system is completely shut down, mainly due to safety and budget constraints. In this paper, we study the resource allocation for the FRMCS system sharing the same frequency band as the already deployed GSM-R system. We formulate the resource allocation problem as an integer linear problem (ILP), known to be NP-hard.To solve it in a reasonable time, we propose a scheduling algorithm, called Intelligent Traffic Scheduling Preemptor (ITSP), that allocates resources for the different FRMCS traffic types considered (critical traffic and performance traffic) in the same frequency band with the GSM-R system. Our algorithm is channel quality Indicator (CQI) aware and uses the preemption mechanism in 5G NR standards to optimize the resource allocation for the FRMCS system without impacting the actual GSM-R resource allocation in the context of the white space concept."
+  },
+  {
+    "title": "Haptic bilateral teleoperation system for free-hand dental procedures",
+    "url": "http://arxiv.org/abs/2503.21288v1",
+    "arxiv_id": "2503.21288v1",
+    "authors": [
+      "Lorenzo Pagliara",
+      "Enrico Ferrentino",
+      "Andrea Chiacchio",
+      "Giovanni Russo"
+    ],
+    "published": "2025-03-27T09:11:34+00:00",
+    "summary": "Free-hand dental procedures are typically repetitive, time-consuming and require high precision and manual dexterity. Dental robots can play a key role in improving procedural accuracy and safety, enhancing patient comfort, and reducing operator workload. However, robotic solutions for free-hand procedures remain limited or completely lacking, and their acceptance is still low. To address this gap, we develop a haptic bilateral teleoperation system (HBTS) for free-hand dental procedures. The system includes a dedicated mechanical end-effector, compatible with standard clinical tools, and equipped with an endoscopic camera for improved visibility of the intervention site. By ensuring motion and force correspondence between the operator's actions and the robot's movements, monitored through visual feedback, we enhance the operator's sensory awareness and motor accuracy. Furthermore, recognizing the need to ensure procedural safety, we limit interaction forces by scaling the motion references provided to the admittance controller based solely on measured contact forces. This ensures effective force limitation in all contact states without requiring prior knowledge of the environment. The proposed HBTS is validated in a dental scaling procedure using a dental phantom. The results show that the system improves the naturalness, safety, and accuracy of teleoperation, highlighting its potential to enhance free-hand dental procedures."
+  },
+  {
+    "title": "Orange Quality Grading with Deep Learning",
+    "url": "http://arxiv.org/abs/2503.21250v1",
+    "arxiv_id": "2503.21250v1",
+    "authors": [
+      "Mohamed Lamine Mekhalfi",
+      "Paul Chippendale",
+      "Francisco Fraile",
+      "Marcos Rico"
+    ],
+    "published": "2025-03-27T08:14:56+00:00",
+    "summary": "Orange grading is a crucial step in the fruit industry, as it helps to sort oranges according to different criteria such as size, quality, ripeness, and health condition, ensuring safety for human consumption and better price allocation and client satisfaction. Automated grading enables faster processing, precision, and reduced human labor. In this paper, we implement a deep learning-based solution for orange grading via machine vision. Unlike typical grading systems that analyze fruits from a single view, we capture multiview images of each single orange in order to enable a richer representation. Afterwards, we compose the acquired images into one collage. This enables the analysis of the whole orange skin. We train a convolutional neural network (CNN) on the composed images to grade the oranges into three classes, namely good, bad, and undefined. We also evaluate the performance with two different CNNs (ResNet-18 and SqueezeNet). We show experimentally that multi-view grading is superior to single view grading."
+  },
+  {
+    "title": "Extending Silicon Lifetime: A Review of Design Techniques for Reliable Integrated Circuits",
+    "url": "http://arxiv.org/abs/2503.21165v1",
+    "arxiv_id": "2503.21165v1",
+    "authors": [
+      "Shaik Jani Babu",
+      "Fan Hu",
+      "Linyu Zhu",
+      "Sonal Singhal",
+      "Xinfei Guo"
+    ],
+    "published": "2025-03-27T05:25:32+00:00",
+    "summary": "Reliability has become an increasing concern in modern computing. Integrated circuits (ICs) are the backbone of modern computing devices across industries, including artificial intelligence (AI), consumer electronics, healthcare, automotive, industrial, and aerospace. Moore Law has driven the semiconductor IC industry toward smaller dimensions, improved performance, and greater energy efficiency. However, as transistors shrink to atomic scales, aging-related degradation mechanisms such as Bias Temperature Instability (BTI), Hot Carrier Injection (HCI), Time-Dependent Dielectric Breakdown (TDDB), Electromigration (EM), and stochastic aging-induced variations have become major reliability threats. From an application perspective, applications like AI training and autonomous driving require continuous and sustainable operation to minimize recovery costs and enhance safety. Additionally, the high cost of chip replacement and reproduction underscores the need for extended lifespans. These factors highlight the urgency of designing more reliable ICs. This survey addresses the critical aging issues in ICs, focusing on fundamental degradation mechanisms and mitigation strategies. It provides a comprehensive overview of aging impact and the methods to counter it, starting with the root causes of aging and summarizing key monitoring techniques at both circuit and system levels. A detailed analysis of circuit-level mitigation strategies highlights the distinct aging characteristics of digital, analog, and SRAM circuits, emphasizing the need for tailored solutions. The survey also explores emerging software approaches in design automation, aging characterization, and mitigation, which are transforming traditional reliability optimization. Finally, it outlines the challenges and future directions for improving aging management and ensuring the long-term reliability of ICs across diverse applications."
+  },
+  {
+    "title": "Adversarial Wear and Tear: Exploiting Natural Damage for Generating Physical-World Adversarial Examples",
+    "url": "http://arxiv.org/abs/2503.21164v1",
+    "arxiv_id": "2503.21164v1",
+    "authors": [
+      "Samra Irshad",
+      "Seungkyu Lee",
+      "Nassir Navab",
+      "Hong Joo Lee",
+      "Seong Tae Kim"
+    ],
+    "published": "2025-03-27T05:19:41+00:00",
+    "summary": "The presence of adversarial examples in the physical world poses significant challenges to the deployment of Deep Neural Networks in safety-critical applications such as autonomous driving. Most existing methods for crafting physical-world adversarial examples are ad-hoc, relying on temporary modifications like shadows, laser beams, or stickers that are tailored to specific scenarios. In this paper, we introduce a new class of physical-world adversarial examples, AdvWT, which draws inspiration from the naturally occurring phenomenon of `wear and tear', an inherent property of physical objects. Unlike manually crafted perturbations, `wear and tear' emerges organically over time due to environmental degradation, as seen in the gradual deterioration of outdoor signboards. To achieve this, AdvWT follows a two-step approach. First, a GAN-based, unsupervised image-to-image translation network is employed to model these naturally occurring damages, particularly in the context of outdoor signboards. The translation network encodes the characteristics of damaged signs into a latent `damage style code'. In the second step, we introduce adversarial perturbations into the style code, strategically optimizing its transformation process. This manipulation subtly alters the damage style representation, guiding the network to generate adversarial images where the appearance of damages remains perceptually realistic, while simultaneously ensuring their effectiveness in misleading neural networks. Through comprehensive experiments on two traffic sign datasets, we show that AdvWT effectively misleads DNNs in both digital and physical domains. AdvWT achieves an effective attack success rate, greater robustness, and a more natural appearance compared to existing physical-world adversarial examples. Additionally, integrating AdvWT into training enhances a model's generalizability to real-world damaged signs."
+  },
+  {
+    "title": "How to Secure Existing C and C++ Software without Memory Safety",
+    "url": "http://arxiv.org/abs/2503.21145v1",
+    "arxiv_id": "2503.21145v1",
+    "authors": [
+      "\u00dalfar Erlingsson"
+    ],
+    "published": "2025-03-27T04:20:47+00:00",
+    "summary": "The most important security benefit of software memory safety is easy to state: for C and C++ software, attackers can exploit most bugs and vulnerabilities to gain full, unfettered control of software behavior, whereas this is not true for most bugs in memory-safe software.   Fortunately, this security benefit -- most bugs don't give attackers full control -- can be had for unmodified C/C++ software, without per-application effort.   This doesn't require trying to establish memory safety; instead, it is sufficient to eliminate most of the combinatorial ways in which software with corrupted memory can execute. To eliminate these interleavings, there already exist practical compiler and runtime mechanisms that incur little overhead and need no special hardware or platform support.   Each of the mechanisms described here is already in production use, at scale, on one or more platforms. By supporting their combined use in development toolchains, the security of all C and C++ software against remote code execution attacks can be rapidly, and dramatically, improved."
+  },
+  {
+    "title": "Safe Human Robot Navigation in Warehouse Scenario",
+    "url": "http://arxiv.org/abs/2503.21141v1",
+    "arxiv_id": "2503.21141v1",
+    "authors": [
+      "Seth Farrell",
+      "Chenghao Li",
+      "Hongzhan Yu",
+      "Ryo Yoshimitsu",
+      "Sicun Gao",
+      "Henrik I. Christensen"
+    ],
+    "published": "2025-03-27T04:12:27+00:00",
+    "summary": "The integration of autonomous mobile robots (AMRs) in industrial environments, particularly warehouses, has revolutionized logistics and operational efficiency. However, ensuring the safety of human workers in dynamic, shared spaces remains a critical challenge. This work proposes a novel methodology that leverages control barrier functions (CBFs) to enhance safety in warehouse navigation. By integrating learning-based CBFs with the Open Robotics Middleware Framework (OpenRMF), the system achieves adaptive and safety-enhanced controls in multi-robot, multi-agent scenarios. Experiments conducted using various robot platforms demonstrate the efficacy of the proposed approach in avoiding static and dynamic obstacles, including human pedestrians. Our experiments evaluate different scenarios in which the number of robots, robot platforms, speed, and number of obstacles are varied, from which we achieve promising performance."
+  },
+  {
+    "title": "Bounds on Deep Neural Network Partial Derivatives with Respect to Parameters",
+    "url": "http://arxiv.org/abs/2503.21007v1",
+    "arxiv_id": "2503.21007v1",
+    "authors": [
+      "Omkar Sudhir Patil",
+      "Brandon C. Fallin",
+      "Cristian F. Nino",
+      "Rebecca G. Hart",
+      "Warren E. Dixon"
+    ],
+    "published": "2025-03-26T21:48:50+00:00",
+    "summary": "Deep neural networks (DNNs) have emerged as a powerful tool with a growing body of literature exploring Lyapunov-based approaches for real-time system identification and control. These methods depend on establishing bounds for the second partial derivatives of DNNs with respect to their parameters, a requirement often assumed but rarely addressed explicitly. This paper provides rigorous mathematical formulations of polynomial bounds on both the first and second partial derivatives of DNNs with respect to their parameters. We present lemmas that characterize these bounds for fully-connected DNNs, while accommodating various classes of activation function including sigmoidal and ReLU-like functions. Our analysis yields closed-form expressions that enable precise stability guarantees for Lyapunov-based deep neural networks (Lb-DNNs). Furthermore, we extend our results to bound the higher-order terms in first-order Taylor approximations of DNNs, providing important tools for convergence analysis in gradient-based learning algorithms. The developed theoretical framework develops explicit, computable expressions, for previously assumed bounds, thereby strengthening the mathematical foundation of neural network applications in safety-critical control systems."
+  },
+  {
+    "title": "Multi-head Reward Aggregation Guided by Entropy",
+    "url": "http://arxiv.org/abs/2503.20995v1",
+    "arxiv_id": "2503.20995v1",
+    "authors": [
+      "Xiaomin Li",
+      "Xupeng Chen",
+      "Jingxuan Fan",
+      "Eric Hanchen Jiang",
+      "Mingye Gao"
+    ],
+    "published": "2025-03-26T21:16:48+00:00",
+    "summary": "Aligning large language models (LLMs) with safety guidelines typically involves reinforcement learning from human feedback (RLHF), relying on human-generated preference annotations. However, assigning consistent overall quality ratings is challenging, prompting recent research to shift towards detailed evaluations based on multiple specific safety criteria. This paper uncovers a consistent observation: safety rules characterized by high rating entropy are generally less reliable in identifying responses preferred by humans. Leveraging this finding, we introduce ENCORE, a straightforward entropy-guided approach that composes multi-head rewards by downweighting rules exhibiting high rating entropy. Theoretically, we demonstrate that rules with elevated entropy naturally receive minimal weighting in the Bradley-Terry optimization framework, justifying our entropy-based penalization. Through extensive experiments on RewardBench safety tasks, our method significantly surpasses several competitive baselines, including random weighting, uniform weighting, single-head Bradley-Terry models, and LLM-based judging methods. Our proposed approach is training-free, broadly applicable to various datasets, and maintains interpretability, offering a practical and effective solution for multi-attribute reward modeling."
+  },
+  {
+    "title": "Musical Chairs: A new benchmark to evaluate AI",
+    "url": "http://arxiv.org/abs/2503.20986v1",
+    "arxiv_id": "2503.20986v1",
+    "authors": [
+      "Chris Santos-Lang",
+      "Christopher M. Homan"
+    ],
+    "published": "2025-03-26T20:58:22+00:00",
+    "summary": "This paper presents a new contribution to the growing set of benchmarks used to prune potential AI designs. Much as one might evaluate a machine in terms of its performance at chess, this benchmark involves testing a machine in terms of its performance at a game called \"Musical Chairs.\" At the time of writing, Claude, ChatGPT, and Qwen each failed this test, so the test could aid in their ongoing improvement. Furthermore, this paper sets a stage for future innovation in game theory and AI safety by providing an example of success with non-standard approaches to each: studying a game beyond the scope of previous game theoretic tools and mitigating a serious AI safety risk in a way that requires neither determination of values nor their enforcement."
+  },
+  {
+    "title": "Clean & Clear: Feasibility of Safe LLM Clinical Guidance",
+    "url": "http://arxiv.org/abs/2503.20953v1",
+    "arxiv_id": "2503.20953v1",
+    "authors": [
+      "Julia Ive",
+      "Felix Jozsa",
+      "Nick Jackson",
+      "Paulina Bondaronek",
+      "Ciaran Scott Hill",
+      "Richard Dobson"
+    ],
+    "published": "2025-03-26T19:36:43+00:00",
+    "summary": "Background:   Clinical guidelines are central to safe evidence-based medicine in modern healthcare, providing diagnostic criteria, treatment options and monitoring advice for a wide range of illnesses. LLM-empowered chatbots have shown great promise in Healthcare Q&A tasks, offering the potential to provide quick and accurate responses to medical inquiries.   Our main objective was the development and preliminary assessment of an LLM-empowered chatbot software capable of reliably answering clinical guideline questions using University College London Hospital (UCLH) clinical guidelines.   Methods: We used the open-weight Llama-3.1-8B LLM to extract relevant information from the UCLH guidelines to answer questions. Our approach highlights the safety and reliability of referencing information over its interpretation and response generation. Seven doctors from the ward assessed the chatbot's performance by comparing its answers to the gold standard.   Results: Our chatbot demonstrates promising performance in terms of relevance, with ~73% of its responses rated as very relevant, showcasing a strong understanding of the clinical context. Importantly, our chatbot achieves a recall of 0.98 for extracted guideline lines, substantially minimising the risk of missing critical information. Approximately 78% of responses were rated satisfactory in terms of completeness. A small portion (~14.5%) contained minor unnecessary information, indicating occasional lapses in precision. The chatbot' showed high efficiency, with an average completion time of 10 seconds, compared to 30 seconds for human respondents. Evaluation of clinical reasoning showed that 72% of the chatbot's responses were without flaws. Our chatbot demonstrates significant potential to speed up and improve the process of accessing locally relevant clinical information for healthcare professionals."
+  },
+  {
+    "title": "A Study of Perceived Safety for Soft Robotics in Caregiving Tasks",
+    "url": "http://arxiv.org/abs/2503.20916v1",
+    "arxiv_id": "2503.20916v1",
+    "authors": [
+      "Cosima du Pasquier",
+      "Jennifer Grannen",
+      "Chuer Pan",
+      "Serin L. Huber",
+      "Aliyah Smith",
+      "Monroe Kennedy",
+      "Shuran Song",
+      "Dorsa Sadigh",
+      "Allison M. Okamura"
+    ],
+    "published": "2025-03-26T18:43:49+00:00",
+    "summary": "In this project, we focus on human-robot interaction in caregiving scenarios like bathing, where physical contact is inevitable and necessary for proper task execution because force must be applied to the skin. Using finite element analysis, we designed a 3D-printed gripper combining positive and negative pressure for secure yet compliant handling. Preliminary tests showed it exerted a lower, more uniform pressure profile than a standard rigid gripper. In a user study, participants' trust in robots significantly increased after they experienced a brief bathing demonstration performed by a robotic arm equipped with the soft gripper. These results suggest that soft robotics can enhance perceived safety and acceptance in intimate caregiving scenarios."
+  },
+  {
+    "title": "Conceptual Design Report for the MATHUSLA Long-Lived Particle Detector near CMS",
+    "url": "http://arxiv.org/abs/2503.20893v1",
+    "arxiv_id": "2503.20893v1",
+    "authors": [
+      "Branden Aitken",
+      "Cristiano Alpigiani",
+      "Juan Carlos Arteaga-Vel\u00e1zquez",
+      "Mitchel Baker",
+      "Kincso Balazs",
+      "Jared Barron",
+      "Brian Batell",
+      "Austin Batz",
+      "Yan Benhammou",
+      "Tamara Alice Bud",
+      "Karen Salom\u00e9 Caballero-Mora",
+      "John Paul Chou",
+      "David Curtin",
+      "Albert de Roeck",
+      "Miriam Diamond",
+      "Mariia Didenko",
+      "Keith R. Dienes",
+      "William Dougherty",
+      "Liam Andrew Dougherty",
+      "Marco Drewes",
+      "Sameer Erramilli",
+      "Erez Etzion",
+      "Arturo Fern\u00e1ndez T\u00e9llez",
+      "Grace Finlayson",
+      "Oliver Fischer",
+      "Jim Freeman",
+      "Jonathan Gall",
+      "Ali Garabaglu",
+      "Bhawna Gomber",
+      "Stephen Elliott Greenberg",
+      "Jaipratap Singh Grewal",
+      "Zoe Hallman",
+      "Bahgat Hassan",
+      "Yuekun Heng",
+      "Keegan Humphrey",
+      "Trystan Humphrey",
+      "Graham D. Kribs",
+      "Alex Lau",
+      "Jiahao Liao",
+      "Zhen Liu",
+      "Giovanni Marsella",
+      "Matthew McCullough",
+      "David McKeen",
+      "Patrick Meade",
+      "Caleb Miller",
+      "Gilad Mizrachi",
+      "O. G. Morales-Olivares",
+      "David Morrissey",
+      "Abdulrahman Ahmed Morsy",
+      "John Osborn",
+      "Gabriel Owh",
+      "Michalis Panagiotou",
+      "Mason Proffitt",
+      "Runze Ren",
+      "Steven H. Robertson",
+      "Mario Rodr\u00edguez-Cahuantzi",
+      "Heather Russell",
+      "Victoria S\u00e1nchez",
+      "Halil Saka",
+      "Mamoksh Samra",
+      "Rodney Schnarr",
+      "Jessie Shelton",
+      "Yiftah Silver",
+      "Daniel Stolarski",
+      "Martin A. Subieta Vasquez",
+      "Sanjay Kumar Swain",
+      "Steffie Ann Thayil",
+      "Brooks Thomas",
+      "Emma Torro",
+      "Yuhsin Tsai",
+      "Bennett Winnicky-Lewis",
+      "Igor Zolkin",
+      "Jose Zurita"
+    ],
+    "published": "2025-03-26T18:04:42+00:00",
+    "summary": "We present the Conceptual Design Report (CDR) for the MATHUSLA (MAssive Timing Hodoscope for Ultra-Stable neutraL pArticles) long-lived particle detector at the HL-LHC, covering the design, fabrication and installation at CERN Point 5. MATHUSLA is a 40 m-scale detector with an air-filled decay volume that is instrumented with scintillator tracking detectors, to be located near CMS. Its large size, close proximity to the CMS interaction point and about 100 m of rock shielding from HL-LHC backgrounds allows it to detect LLP production rates and lifetimes that are one to two orders of magnitude beyond the ultimate sensitivity of the HL-LHC main detectors for many highly motivated LLP signals. Data taking is projected to commence with the start of HL-LHC operations. We present a new 40m design for the detector: its individual scintillator bars and wavelength-shifting fibers, their organization into tracking layers, tracking modules, tower modules and the veto detector; define a high-level design for the supporting electronics, DAQ and trigger system, including supplying a hardware trigger signal to CMS to record the LLP production event; outline computing systems, civil engineering and safety considerations; and present preliminary cost estimates and timelines for the project. We also conduct detailed simulation studies of the important cosmic ray and HL-LHC muon backgrounds, implementing full track/vertex reconstruction and background rejection, to ultimately demonstrate high signal efficiency and $\\ll 1$ background event in realistic LLP searches for the main physics targets at MATHUSLA. This sensitivity is robust with respect to detector design or background simulation details. Appendices provide various supplemental information."
+  },
+  {
+    "title": "Coolight: Enhancing Nighttime Safety for Urban Student Commuters",
+    "url": "http://arxiv.org/abs/2503.20888v1",
+    "arxiv_id": "2503.20888v1",
+    "authors": [
+      "Mitsuka Kiyohara",
+      "Ethan Mondri"
+    ],
+    "published": "2025-03-26T18:02:02+00:00",
+    "summary": "Safety while walking alone at night is a key indicator of a citizen's well-being and a society's inclusiveness. However, this is not equally felt across all demographic groups, especially for university students living in urban areas. We present Coolight, a mobile application designed to reduce stress and anxiety for nighttime walking through an interactive live map, real-time community incident reports, location sharing, and a route planner optimized for user safety. Coolight's design was informed through interviews, questionnaires, and usability tests with university students and their friends and families in Toronto, Canada. This paper describes the concept, research, design approach, and evaluation results of a solution addressing safety concerns urban commuters face at night."
+  },
+  {
     "title": "Understanding R1-Zero-Like Training: A Critical Perspective",
     "url": "http://arxiv.org/abs/2503.20783v1",
     "arxiv_id": "2503.20783v1",
@@ -61,6 +599,23 @@
     "summary": "Recent research shows that LLMs can simulate ``believable'' human behaviors to power LLM agents via prompt-only methods. In this work, we focus on evaluating and improving LLM's objective ``accuracy'' rather than the subjective ``believability'' in the web action generation task, leveraging a large-scale, real-world dataset collected from online shopping human actions. We present the first comprehensive quantitative evaluation of state-of-the-art LLMs (e.g., DeepSeek-R1, Llama, and Claude) on the task of web action generation. Our results show that fine-tuning LLMs on real-world behavioral data substantially improves their ability to generate actions compared to prompt-only methods. Furthermore, incorporating synthesized reasoning traces into model training leads to additional performance gains, demonstrating the value of explicit rationale in behavior modeling. This work establishes a new benchmark for evaluating LLMs in behavior simulation and offers actionable insights into how real-world action data and reasoning augmentation can enhance the fidelity of LLM agents."
   },
   {
+    "title": "Beyond Believability: Accurate Human Behavior Simulation with Fine-Tuned LLMs",
+    "url": "http://arxiv.org/abs/2503.20749v2",
+    "arxiv_id": "2503.20749v2",
+    "authors": [
+      "Yuxuan Lu",
+      "Jing Huang",
+      "Yan Han",
+      "Bennet Bei",
+      "Yaochen Xie",
+      "Dakuo Wang",
+      "Jessie Wang",
+      "Qi He"
+    ],
+    "published": "2025-03-26T17:33:27+00:00",
+    "summary": "Recent research shows that LLMs can simulate ``believable'' human behaviors to power LLM agents via prompt-only methods. In this work, we focus on evaluating and improving LLM's objective ``accuracy'' rather than the subjective ``believability'' in the web action generation task, leveraging a large-scale, real-world dataset collected from online shopping human actions. We present the first comprehensive quantitative evaluation of state-of-the-art LLMs (e.g., DeepSeek-R1, Llama, and Claude) on the task of web action generation. Our results show that fine-tuning LLMs on real-world behavioral data substantially improves their ability to generate actions compared to prompt-only methods. Furthermore, incorporating synthesized reasoning traces into model training leads to additional performance gains, demonstrating the value of explicit rationale in behavior modeling. This work establishes a new benchmark for evaluating LLMs in behavior simulation and offers actionable insights into how real-world action data and reasoning augmentation can enhance the fidelity of LLM agents."
+  },
+  {
     "title": "Ontology-based Semantic Similarity Measures for Clustering Medical Concepts in Drug Safety",
     "url": "http://arxiv.org/abs/2503.20737v1",
     "arxiv_id": "2503.20737v1",
@@ -87,9 +642,33 @@
     "summary": "Vehicle rollovers pose a significant safety risk and account for a disproportionately high number of fatalities in road accidents. This paper addresses the challenge of rollover prevention using Data-EnablEd Predictive Control (DeePC), a data-driven control strategy that directly leverages raw input-output data to maintain vehicle stability without requiring explicit system modeling. To enhance computational efficiency, we employ a reduced-dimension DeePC that utilizes singular value decomposition-based dimension reduction to significantly lower computation complexity without compromising control performance. This optimization enables real-time application in scenarios with high-dimensional data, making the approach more practical for deployment in real-world vehicles. The proposed approach is validated through high-fidelity CarSim simulations in both sedan and utility truck scenarios, demonstrating its versatility and ability to maintain vehicle stability under challenging driving conditions. Comparative results with Linear Model Predictive Control (LMPC) highlight the superior performance of DeePC in preventing rollovers while preserving maneuverability. The findings suggest that DeePC offers a robust and adaptable solution for rollover prevention, capable of handling varying road and vehicle conditions."
   },
   {
+    "title": "The Backfiring Effect of Weak AI Safety Regulation",
+    "url": "http://arxiv.org/abs/2503.20848v1",
+    "arxiv_id": "2503.20848v1",
+    "authors": [
+      "Benjamin Laufer",
+      "Jon Kleinberg",
+      "Hoda Heidari"
+    ],
+    "published": "2025-03-26T16:08:22+00:00",
+    "summary": "Recent policy proposals aim to improve the safety of general-purpose AI, but there is little understanding of the efficacy of different regulatory approaches to AI safety. We present a strategic model that explores the interactions between the regulator, the general-purpose AI technology creators, and domain specialists--those who adapt the AI for specific applications. Our analysis examines how different regulatory measures, targeting different parts of the development chain, affect the outcome of the development process. In particular, we assume AI technology is described by two key attributes: safety and performance. The regulator first sets a minimum safety standard that applies to one or both players, with strict penalties for non-compliance. The general-purpose creator then develops the technology, establishing its initial safety and performance levels. Next, domain specialists refine the AI for their specific use cases, and the resulting revenue is distributed between the specialist and generalist through an ex-ante bargaining process. Our analysis of this game reveals two key insights: First, weak safety regulation imposed only on the domain specialists can backfire. While it might seem logical to regulate use cases (as opposed to the general-purpose technology), our analysis shows that weak regulations targeting domain specialists alone can unintentionally reduce safety. This effect persists across a wide range of settings. Second, in sharp contrast to the previous finding, we observe that stronger, well-placed regulation can in fact benefit all players subjected to it. When regulators impose appropriate safety standards on both AI creators and domain specialists, the regulation functions as a commitment mechanism, leading to safety and performance gains, surpassing what is achieved under no regulation or regulating one player only."
+  },
+  {
     "title": "PVLens: Enhancing Pharmacovigilance Through Automated Label Extraction",
     "url": "http://arxiv.org/abs/2503.20639v1",
     "arxiv_id": "2503.20639v1",
+    "authors": [
+      "Jeffery L Painter",
+      "Gregory E Powell",
+      "Andrew Bate"
+    ],
+    "published": "2025-03-26T15:33:26+00:00",
+    "summary": "Reliable drug safety reference databases are essential for pharmacovigilance, yet existing resources like SIDER are outdated and static. We introduce PVLens, an automated system that extracts labeled safety information from FDA Structured Product Labels (SPLs) and maps terms to MedDRA. PVLens integrates automation with expert oversight through a web-based review tool. In validation against 97 drug labels, PVLens achieved an F1 score of 0.882, with high recall (0.983) and moderate precision (0.799). By offering a scalable, more accurate and continuously updated alternative to SIDER, PVLens enhances real-time pharamcovigilance with improved accuracy and contemporaneous insights."
+  },
+  {
+    "title": "PVLens: Enhancing Pharmacovigilance Through Automated Label Extraction",
+    "url": "http://arxiv.org/abs/2503.20639v2",
+    "arxiv_id": "2503.20639v2",
     "authors": [
       "Jeffery L Painter",
       "Gregory E Powell",
@@ -242,6 +821,20 @@
       "Jacob Ziff",
       "Casey Randazzo",
       "Hari Subramonyam"
+    ],
+    "published": "2025-03-26T06:09:29+00:00",
+    "summary": "As the COVID-19 pandemic evolved, the Center for Disease Control and Prevention used Twitter to share updates about the virus and safety guidelines, reaching millions instantly, in what we call the CDC public. We analyze two years of tweets, from, to, and about the CDC using a mixed-methods approach to characterize the nature and credibility of COVID-19 discourse and audience engagement. We found that the CDC is not engaging in two-way communication with the CDC publics and that discussions about COVID-19 reflected societal divisions and political polarization. We introduce a crisis message journey concept showing how the CDC public responds to the changing nature of the crisis (e.g., new variants) using ``receipts'' of earlier, and at times contradictory, guidelines. We propose design recommendations to support the CDC in tailoring messages to specific users and publics (e.g., users interested in racial equity) and in managing misinformation, especially in reaction to crisis flashpoints."
+  },
+  {
+    "title": "From the CDC to emerging infectious disease publics: The long-now of polarizing and complex health crises",
+    "url": "http://arxiv.org/abs/2503.20262v2",
+    "arxiv_id": "2503.20262v2",
+    "authors": [
+      "Tawfiq Ammari",
+      "Anna Gutowska",
+      "Jacob Ziff",
+      "Casey Randazzo",
+      "Harihan Subramonyam"
     ],
     "published": "2025-03-26T06:09:29+00:00",
     "summary": "As the COVID-19 pandemic evolved, the Center for Disease Control and Prevention used Twitter to share updates about the virus and safety guidelines, reaching millions instantly, in what we call the CDC public. We analyze two years of tweets, from, to, and about the CDC using a mixed-methods approach to characterize the nature and credibility of COVID-19 discourse and audience engagement. We found that the CDC is not engaging in two-way communication with the CDC publics and that discussions about COVID-19 reflected societal divisions and political polarization. We introduce a crisis message journey concept showing how the CDC public responds to the changing nature of the crisis (e.g., new variants) using ``receipts'' of earlier, and at times contradictory, guidelines. We propose design recommendations to support the CDC in tailoring messages to specific users and publics (e.g., users interested in racial equity) and in managing misinformation, especially in reaction to crisis flashpoints."
