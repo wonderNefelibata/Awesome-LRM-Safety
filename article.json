@@ -289,6 +289,23 @@
     "summary": "Reinforcement learning (RL) with verifiable rewards (RLVR) has shown promising results in mathematical reasoning and coding tasks where well-structured reference answers are available. However, its applicability to broader domains remains underexplored. In this work, we study the extension of RLVR to more diverse domains such as medicine, chemistry, psychology, and economics. We observe high agreement in binary judgments across different large language models (LLMs) when objective reference answers exist, which challenges the necessity of large-scale annotation for training domain-specific reward models. To address the limitations of binary rewards when handling unstructured reference answers, we further incorporate model-based soft scoring into RLVR to improve its flexibility. Our experiments show that a distilled generative reward model can serve as an effective cross-domain verifier, providing reliable reward signals for RL without requiring domain-specific annotations. By fine-tuning a base 7B model using various RL algorithms against our reward model, we obtain policies that outperform state-of-the-art open-source aligned LLMs such as Qwen2.5-72B-Instruct and DeepSeek-R1-Distill-Qwen-32B by a large margin, across domains in free-form answer settings. This also strengthens RLVR's robustness and scalability, highlighting its potential for real-world applications with noisy or weak labels."
   },
   {
+    "title": "Crossing the Reward Bridge: Expanding RL with Verifiable Rewards Across Diverse Domains",
+    "url": "http://arxiv.org/abs/2503.23829v2",
+    "arxiv_id": "2503.23829v2",
+    "authors": [
+      "Yi Su",
+      "Dian Yu",
+      "Linfeng Song",
+      "Juntao Li",
+      "Haitao Mi",
+      "Zhaopeng Tu",
+      "Min Zhang",
+      "Dong Yu"
+    ],
+    "published": "2025-03-31T08:22:49+00:00",
+    "summary": "Reinforcement learning with verifiable rewards (RLVR) has demonstrated significant success in enhancing mathematical reasoning and coding performance of large language models (LLMs), especially when structured reference answers are accessible for verification. However, its extension to broader, less structured domains remains unexplored. In this work, we investigate the effectiveness and scalability of RLVR across diverse real-world domains including medicine, chemistry, psychology, economics, and education, where structured reference answers are typically unavailable. We reveal that binary verification judgments on broad-domain tasks exhibit high consistency across various LLMs provided expert-written reference answers exist. Motivated by this finding, we utilize a generative scoring technique that yields soft, model-based reward signals to overcome limitations posed by binary verifications, especially in free-form, unstructured answer scenarios. We further demonstrate the feasibility of training cross-domain generative reward models using relatively small (7B) LLMs without the need for extensive domain-specific annotation. Through comprehensive experiments, our RLVR framework establishes clear performance gains, significantly outperforming state-of-the-art open-source aligned models such as Qwen2.5-72B and DeepSeek-R1-Distill-Qwen-32B across domains in free-form settings. Our approach notably enhances the robustness, flexibility, and scalability of RLVR, representing a substantial step towards practical reinforcement learning applications in complex, noisy-label scenarios."
+  },
+  {
     "title": "Thinking Longer, Not Larger: Enhancing Software Engineering Agents via Scaling Test-Time Compute",
     "url": "http://arxiv.org/abs/2503.23803v1",
     "arxiv_id": "2503.23803v1",
@@ -604,6 +621,23 @@
     "title": "Reasoning-SQL: Reinforcement Learning with SQL Tailored Partial Rewards for Reasoning-Enhanced Text-to-SQL",
     "url": "http://arxiv.org/abs/2503.23157v1",
     "arxiv_id": "2503.23157v1",
+    "authors": [
+      "Mohammadreza Pourreza",
+      "Shayan Talaei",
+      "Ruoxi Sun",
+      "Xingchen Wan",
+      "Hailong Li",
+      "Azalia Mirhoseini",
+      "Amin Saberi",
+      "Sercan \"O. Arik"
+    ],
+    "published": "2025-03-29T17:29:30+00:00",
+    "summary": "Text-to-SQL is a challenging task involving multiple reasoning-intensive subtasks, including natural language understanding, database schema comprehension, and precise SQL query formulation. Existing approaches often rely on handcrafted reasoning paths with inductive biases that can limit their overall effectiveness. Motivated by the recent success of reasoning-enhanced models such as DeepSeek R1 and OpenAI o1, which effectively leverage reward-driven self-exploration to enhance reasoning capabilities and generalization, we propose a novel set of partial rewards tailored specifically for the Text-to-SQL task. Our reward set includes schema-linking, AI feedback, n-gram similarity, and syntax check, explicitly designed to address the reward sparsity issue prevalent in reinforcement learning (RL). Leveraging group relative policy optimization (GRPO), our approach explicitly encourages large language models (LLMs) to develop intrinsic reasoning skills necessary for accurate SQL query generation. With models of different sizes, we demonstrate that RL-only training with our proposed rewards consistently achieves higher accuracy and superior generalization compared to supervised fine-tuning (SFT). Remarkably, our RL-trained 14B-parameter model significantly outperforms larger proprietary models, e.g. o3-mini by 4% and Gemini-1.5-Pro-002 by 3% on the BIRD benchmark. These highlight the efficacy of our proposed RL-training framework with partial rewards for enhancing both accuracy and reasoning capabilities in Text-to-SQL tasks."
+  },
+  {
+    "title": "Reasoning-SQL: Reinforcement Learning with SQL Tailored Partial Rewards for Reasoning-Enhanced Text-to-SQL",
+    "url": "http://arxiv.org/abs/2503.23157v2",
+    "arxiv_id": "2503.23157v2",
     "authors": [
       "Mohammadreza Pourreza",
       "Shayan Talaei",
