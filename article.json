@@ -1,5 +1,296 @@
 [
   {
+    "title": "Addressing Relative Degree Issues in Control Barrier Function Synthesis with Physics-Informed Neural Networks",
+    "url": "http://arxiv.org/abs/2504.06242v1",
+    "arxiv_id": "2504.06242v1",
+    "authors": [
+      "Lukas Brunke",
+      "Siqi Zhou",
+      "Francesco D'Orazio",
+      "Angela P. Schoellig"
+    ],
+    "published": "2025-04-08T17:41:43+00:00",
+    "summary": "In robotics, control barrier function (CBF)-based safety filters are commonly used to enforce state constraints. A critical challenge arises when the relative degree of the CBF varies across the state space. This variability can create regions within the safe set where the control input becomes unconstrained. When implemented as a safety filter, this may result in chattering near the safety boundary and ultimately compromise system safety. To address this issue, we propose a novel approach for CBF synthesis by formulating it as solving a set of boundary value problems. The solutions to the boundary value problems are determined using physics-informed neural networks (PINNs). Our approach ensures that the synthesized CBFs maintain a constant relative degree across the set of admissible states, thereby preventing unconstrained control scenarios. We illustrate the approach in simulation and further verify it through real-world quadrotor experiments, demonstrating its effectiveness in preserving desired system safety properties."
+  },
+  {
+    "title": "TxGemma: Efficient and Agentic LLMs for Therapeutics",
+    "url": "http://arxiv.org/abs/2504.06196v1",
+    "arxiv_id": "2504.06196v1",
+    "authors": [
+      "Eric Wang",
+      "Samuel Schmidgall",
+      "Paul F. Jaeger",
+      "Fan Zhang",
+      "Rory Pilgrim",
+      "Yossi Matias",
+      "Joelle Barral",
+      "David Fleet",
+      "Shekoofeh Azizi"
+    ],
+    "published": "2025-04-08T16:39:02+00:00",
+    "summary": "Therapeutic development is a costly and high-risk endeavor that is often plagued by high failure rates. To address this, we introduce TxGemma, a suite of efficient, generalist large language models (LLMs) capable of therapeutic property prediction as well as interactive reasoning and explainability. Unlike task-specific models, TxGemma synthesizes information from diverse sources, enabling broad application across the therapeutic development pipeline. The suite includes 2B, 9B, and 27B parameter models, fine-tuned from Gemma-2 on a comprehensive dataset of small molecules, proteins, nucleic acids, diseases, and cell lines. Across 66 therapeutic development tasks, TxGemma achieved superior or comparable performance to the state-of-the-art generalist model on 64 (superior on 45), and against state-of-the-art specialist models on 50 (superior on 26). Fine-tuning TxGemma models on therapeutic downstream tasks, such as clinical trial adverse event prediction, requires less training data than fine-tuning base LLMs, making TxGemma suitable for data-limited applications. Beyond these predictive capabilities, TxGemma features conversational models that bridge the gap between general LLMs and specialized property predictors. These allow scientists to interact in natural language, provide mechanistic reasoning for predictions based on molecular structure, and engage in scientific discussions. Building on this, we further introduce Agentic-Tx, a generalist therapeutic agentic system powered by Gemini 2.5 that reasons, acts, manages diverse workflows, and acquires external domain knowledge. Agentic-Tx surpasses prior leading models on the Humanity's Last Exam benchmark (Chemistry & Biology) with 52.3% relative improvement over o3-mini (high) and 26.7% over o3-mini (high) on GPQA (Chemistry) and excels with improvements of 6.3% (ChemBench-Preference) and 2.4% (ChemBench-Mini) over o3-mini (high)."
+  },
+  {
+    "title": "A Self-Supervised Framework for Space Object Behaviour Characterisation",
+    "url": "http://arxiv.org/abs/2504.06176v1",
+    "arxiv_id": "2504.06176v1",
+    "authors": [
+      "Ian Groves",
+      "Andrew Campbell",
+      "James Fernandes",
+      "Diego Rodriguez",
+      "Paul Murray",
+      "Massimiliano Vasile",
+      "Victoria Nockles"
+    ],
+    "published": "2025-04-08T16:19:19+00:00",
+    "summary": "Foundation Models, pre-trained on large unlabelled datasets before task-specific fine-tuning, are increasingly being applied to specialised domains. Recent examples include ClimaX for climate and Clay for satellite Earth observation, but a Foundation Model for Space Object Behavioural Analysis has not yet been developed. As orbital populations grow, automated methods for characterising space object behaviour are crucial for space safety. We present a Space Safety and Sustainability Foundation Model focusing on space object behavioural analysis using light curves (LCs). We implemented a Perceiver-Variational Autoencoder (VAE) architecture, pre-trained with self-supervised reconstruction and masked reconstruction on 227,000 LCs from the MMT-9 observatory. The VAE enables anomaly detection, motion prediction, and LC generation. We fine-tuned the model for anomaly detection & motion prediction using two independent LC simulators (CASSANDRA and GRIAL respectively), using CAD models of boxwing, Sentinel-3, SMOS, and Starlink platforms. Our pre-trained model achieved a reconstruction error of 0.01%, identifying potentially anomalous light curves through reconstruction difficulty. After fine-tuning, the model scored 88% and 82% accuracy, with 0.90 and 0.95 ROC AUC scores respectively in both anomaly detection and motion mode prediction (sun-pointing, spin, etc.). Analysis of high-confidence anomaly predictions on real data revealed distinct patterns including characteristic object profiles and satellite glinting. Here, we demonstrate how self-supervised learning can simultaneously enable anomaly detection, motion prediction, and synthetic data generation from rich representations learned in pre-training. Our work therefore supports space safety and sustainability through automated monitoring and simulation capabilities."
+  },
+  {
+    "title": "Safe Interaction via Monte Carlo Linear-Quadratic Games",
+    "url": "http://arxiv.org/abs/2504.06124v1",
+    "arxiv_id": "2504.06124v1",
+    "authors": [
+      "Benjamin A. Christie",
+      "Dylan P. Losey"
+    ],
+    "published": "2025-04-08T15:18:38+00:00",
+    "summary": "Safety is critical during human-robot interaction. But -- because people are inherently unpredictable -- it is often difficult for robots to plan safe behaviors. Instead of relying on our ability to anticipate humans, here we identify robot policies that are robust to unexpected human decisions. We achieve this by formulating human-robot interaction as a zero-sum game, where (in the worst case) the human's actions directly conflict with the robot's objective. Solving for the Nash Equilibrium of this game provides robot policies that maximize safety and performance across a wide range of human actions. Existing approaches attempt to find these optimal policies by leveraging Hamilton-Jacobi analysis (which is intractable) or linear-quadratic approximations (which are inexact). By contrast, in this work we propose a computationally efficient and theoretically justified method that converges towards the Nash Equilibrium policy. Our approach (which we call MCLQ) leverages linear-quadratic games to obtain an initial guess at safe robot behavior, and then iteratively refines that guess with a Monte Carlo search. Not only does MCLQ provide real-time safety adjustments, but it also enables the designer to tune how conservative the robot is -- preventing the system from focusing on unrealistic human behaviors. Our simulations and user study suggest that this approach advances safety in terms of both computation time and expected performance. See videos of our experiments here: https://youtu.be/KJuHeiWVuWY."
+  },
+  {
+    "title": "Leanabell-Prover: Posttraining Scaling in Formal Reasoning",
+    "url": "http://arxiv.org/abs/2504.06122v1",
+    "arxiv_id": "2504.06122v1",
+    "authors": [
+      "Jingyuan Zhang",
+      "Qi Wang",
+      "Xingguang Ji",
+      "Yahui Liu",
+      "Yang Yue",
+      "Fuzheng Zhang",
+      "Di Zhang",
+      "Guorui Zhou",
+      "Kun Gai"
+    ],
+    "published": "2025-04-08T15:15:26+00:00",
+    "summary": "Recent advances in automated theorem proving (ATP) through LLMs have highlighted the potential of formal reasoning with Lean 4 codes. However, ATP has not yet be revolutionized by the recent posttraining scaling as demonstrated by Open AI O1/O3 and Deepseek R1. In this work, we investigate the entire posttraining of ATP, aiming to align it with breakthroughs in reasoning models in natural languages.To begin, we continual train current ATP models with a hybrid dataset, which consists of numerous statement-proof pairs, and additional data aimed at incorporating cognitive behaviors that emulate human reasoning and hypothesis refinement. Next, we explore reinforcement learning with the use of outcome reward returned by Lean 4 compiler. Through our designed continual training and reinforcement learning processes, we have successfully improved existing formal provers, including both DeepSeek-Prover-v1.5 and Goedel-Prover, achieving state-of-the-art performance in the field of whole-proof generation. For example, we achieve a 59.8% pass rate (pass@32) on MiniF2F. This is an on-going project and we will progressively update our findings, release our data and training details."
+  },
+  {
+    "title": "Uncertainty-Aware Hybrid Machine Learning in Virtual Sensors for Vehicle Sideslip Angle Estimation",
+    "url": "http://arxiv.org/abs/2504.06105v1",
+    "arxiv_id": "2504.06105v1",
+    "authors": [
+      "Abinav Kalyanasundaram",
+      "Karthikeyan Chandra Sekaran",
+      "Philipp Stauber",
+      "Michael Lange",
+      "Wolfgang Utschick",
+      "Michael Botsch"
+    ],
+    "published": "2025-04-08T14:49:58+00:00",
+    "summary": "Precise vehicle state estimation is crucial for safe and reliable autonomous driving. The number of measurable states and their precision offered by the onboard vehicle sensor system are often constrained by cost. For instance, measuring critical quantities such as the Vehicle Sideslip Angle (VSA) poses significant commercial challenges using current optical sensors. This paper addresses these limitations by focusing on the development of high-performance virtual sensors to enhance vehicle state estimation for active safety. The proposed Uncertainty-Aware Hybrid Learning (UAHL) architecture integrates a machine learning model with vehicle motion models to estimate VSA directly from onboard sensor data. A key aspect of the UAHL architecture is its focus on uncertainty quantification for individual model estimates and hybrid fusion. These mechanisms enable the dynamic weighting of uncertainty-aware predictions from machine learning and vehicle motion models to produce accurate and reliable hybrid VSA estimates. This work also presents a novel dataset named Real-world Vehicle State Estimation Dataset (ReV-StED), comprising synchronized measurements from advanced vehicle dynamic sensors. The experimental results demonstrate the superior performance of the proposed method for VSA estimation, highlighting UAHL as a promising architecture for advancing virtual sensors and enhancing active safety in autonomous vehicles."
+  },
+  {
+    "title": "Llama-3-Nanda-10B-Chat: An Open Generative Large Language Model for Hindi",
+    "url": "http://arxiv.org/abs/2504.06011v1",
+    "arxiv_id": "2504.06011v1",
+    "authors": [
+      "Monojit Choudhury",
+      "Shivam Chauhan",
+      "Rocktim Jyoti Das",
+      "Dhruv Sahnan",
+      "Xudong Han",
+      "Haonan Li",
+      "Aaryamonvikram Singh",
+      "Alok Anil Jadhav",
+      "Utkarsh Agarwal",
+      "Mukund Choudhary",
+      "Debopriyo Banerjee",
+      "Fajri Koto",
+      "Junaid Bhat",
+      "Awantika Shukla",
+      "Samujjwal Ghosh",
+      "Samta Kamboj",
+      "Onkar Pandit",
+      "Lalit Pradhan",
+      "Rahul Pal",
+      "Sunil Sahu",
+      "Soundar Doraiswamy",
+      "Parvez Mullah",
+      "Ali El Filali",
+      "Neha Sengupta",
+      "Gokul Ramakrishnan",
+      "Rituraj Joshi",
+      "Gurpreet Gosal",
+      "Avraham Sheinin",
+      "Natalia Vassilieva",
+      "Preslav Nakov"
+    ],
+    "published": "2025-04-08T13:16:54+00:00",
+    "summary": "Developing high-quality large language models (LLMs) for moderately resourced languages presents unique challenges in data availability, model adaptation, and evaluation. We introduce Llama-3-Nanda-10B-Chat, or Nanda for short, a state-of-the-art Hindi-centric instruction-tuned generative LLM, designed to push the boundaries of open-source Hindi language models. Built upon Llama-3-8B, Nanda incorporates continuous pre-training with expanded transformer blocks, leveraging the Llama Pro methodology. A key challenge was the limited availability of high-quality Hindi text data; we addressed this through rigorous data curation, augmentation, and strategic bilingual training, balancing Hindi and English corpora to optimize cross-linguistic knowledge transfer. With 10 billion parameters, Nanda stands among the top-performing open-source Hindi and multilingual models of similar scale, demonstrating significant advantages over many existing models. We provide an in-depth discussion of training strategies, fine-tuning techniques, safety alignment, and evaluation metrics, demonstrating how these approaches enabled Nanda to achieve state-of-the-art results. By open-sourcing Nanda, we aim to advance research in Hindi LLMs and support a wide range of real-world applications across academia, industry, and public services."
+  },
+  {
+    "title": "Collision-free landing of multiple UAVs on moving ground vehicles using time-varying control barrier functions",
+    "url": "http://arxiv.org/abs/2504.05939v1",
+    "arxiv_id": "2504.05939v1",
+    "authors": [
+      "Viswa Narayanan Sankaranarayanan",
+      "Akshit Saradagi",
+      "Sumeet Satpute",
+      "George Nikolakopoulos"
+    ],
+    "published": "2025-04-08T11:54:45+00:00",
+    "summary": "In this article, we present a centralized approach for the control of multiple unmanned aerial vehicles (UAVs) for landing on moving unmanned ground vehicles (UGVs) using control barrier functions (CBFs). The proposed control framework employs two kinds of CBFs to impose safety constraints on the UAVs' motion. The first class of CBFs (LCBF) is a three-dimensional exponentially decaying function centered above the landing platform, designed to safely and precisely land UAVs on the UGVs. The second set is a spherical CBF (SCBF), defined between every pair of UAVs, which avoids collisions between them. The LCBF is time-varying and adapts to the motions of the UGVs. In the proposed CBF approach, the control input from the UAV's nominal tracking controller designed to reach the landing platform is filtered to choose a minimally-deviating control input that ensures safety (as defined by the CBFs). As the control inputs of every UAV are shared in establishing multiple CBF constraints, we prove that the control inputs are shared without conflict in rendering the safe sets forward invariant. The performance of the control framework is validated through a simulated scenario involving three UAVs landing on three moving targets."
+  },
+  {
+    "title": "Evaluation of the impact of expert knowledge: How decision support scores impact the effectiveness of automatic knowledge-driven feature engineering (aKDFE)",
+    "url": "http://arxiv.org/abs/2504.05928v1",
+    "arxiv_id": "2504.05928v1",
+    "authors": [
+      "Olof Bj\u00f6rneld",
+      "Tora Hammar",
+      "Daniel Nilsson",
+      "Alisa Lincke",
+      "Welf L\u00f6we"
+    ],
+    "published": "2025-04-08T11:34:38+00:00",
+    "summary": "Adverse Drug Events (ADEs), harmful medication effects, pose significant healthcare challenges, impacting patient safety and costs. This study evaluates automatic Knowledge-Driven Feature Engineering (aKDFE) for improved ADE prediction from Electronic Health Record (EHR) data, comparing it with automated event-based Knowledge Discovery in Databases (KDD). We investigated how incorporating domain-specific ADE risk scores for prolonged heart QT interval, extracted from the Janusmed Riskprofile (Janusmed) Clinical Decision Support System (CDSS), affects prediction performance using EHR data and medication handling events. Results indicate that, while aKDFE step 1 (event-based feature generation) alone did not significantly improve ADE prediction performance, aKDFE step 2 (patient-centric transformation) enhances the prediction performance. High Area Under the Receiver Operating Characteristic curve (AUROC) values suggest strong feature correlations to the outcome, aligning with the predictive power of patients' prior healthcare history for ADEs. Statistical analysis did not confirm that incorporating the Janusmed information (i) risk scores and (ii) medication route of administration into the model's feature set enhanced predictive performance. However, the patient-centric transformation applied by aKDFE proved to be a highly effective feature engineering approach. Limitations include a single-project focus, potential bias from machine learning pipeline methods, and reliance on AUROC. In conclusion, aKDFE, particularly with patient-centric transformation, improves ADE prediction from EHR data. Future work will explore attention-based models, event feature sequences, and automatic methods for incorporating domain knowledge into the aKDFE framework."
+  },
+  {
+    "title": "Mind the Trojan Horse: Image Prompt Adapter Enabling Scalable and Deceptive Jailbreaking",
+    "url": "http://arxiv.org/abs/2504.05838v1",
+    "arxiv_id": "2504.05838v1",
+    "authors": [
+      "Junxi Chen",
+      "Junhao Dong",
+      "Xiaohua Xie"
+    ],
+    "published": "2025-04-08T09:20:29+00:00",
+    "summary": "Recently, the Image Prompt Adapter (IP-Adapter) has been increasingly integrated into text-to-image diffusion models (T2I-DMs) to improve controllability. However, in this paper, we reveal that T2I-DMs equipped with the IP-Adapter (T2I-IP-DMs) enable a new jailbreak attack named the hijacking attack. We demonstrate that, by uploading imperceptible image-space adversarial examples (AEs), the adversary can hijack massive benign users to jailbreak an Image Generation Service (IGS) driven by T2I-IP-DMs and mislead the public to discredit the service provider. Worse still, the IP-Adapter's dependency on open-source image encoders reduces the knowledge required to craft AEs. Extensive experiments verify the technical feasibility of the hijacking attack. In light of the revealed threat, we investigate several existing defenses and explore combining the IP-Adapter with adversarially trained models to overcome existing defenses' limitations. Our code is available at https://github.com/fhdnskfbeuv/attackIPA."
+  },
+  {
+    "title": "X-ray Strain and Stress Tensor Tomography",
+    "url": "http://arxiv.org/abs/2504.05796v1",
+    "arxiv_id": "2504.05796v1",
+    "authors": [
+      "Peter Modregger",
+      "James. A. D. Ball",
+      "Felix Wittwer",
+      "Ahmar Khaliq",
+      "Jonathan Wright"
+    ],
+    "published": "2025-04-08T08:23:26+00:00",
+    "summary": "The microscopic distribution of strain and stress plays a crucial role for the performance, safety, and lifetime of components in aeronautics, automotive and critical infrastructure [1]. While non-destructive methods for measuring the stress close to the surface have long been long established, only a limited number of approaches for depth-resolved measurements based on x-rays or neutrons are available [2]. These feature significant limitations, including long scan times, intricate experimental set-ups, limited spatial resolution or anisotropic gauge volumes with aspect ratios of 1:10 or worse. Here, we present a method that overcomes these limitations and obtains tomographic reconstructions of the full six-dimensional strain and stress tensor components. Using a simple and wide spread experimental set-up that combines x-ray powder diffraction with single axis tomography, we achieve non-destructive determination of depth-resolved strain and stress distributions with isotropic resolution. The presented method could be of interest for additive manufacturing of metals [3,4], battery research [5], in-situ metallurgy [6] and the experimental validation of finite element simulations [7]."
+  },
+  {
+    "title": "Building Proactive and Instant-Reactive Safety Designs to Address Harassment in Social Virtual Reality",
+    "url": "http://arxiv.org/abs/2504.05781v1",
+    "arxiv_id": "2504.05781v1",
+    "authors": [
+      "Zhehui Liao",
+      "Hanwen Zhao",
+      "Ayush Kulkarni",
+      "Shaan Singh Chattrath",
+      "Amy X. Zhang"
+    ],
+    "published": "2025-04-08T08:05:11+00:00",
+    "summary": "Social Virtual Reality (VR) games offer immersive socialization experiences but pose significant challenges of harassment. Common solutions, such as reporting and moderation, address harassment after it happens but fail to prevent or stop harassment in the moment. In this study, we explore and design proactive and instant-reactive safety designs to mitigate harassment in social VR. Proactive designs prevent harassment from occurring, while instant-reactive designs minimize harm during incidents. We explore three directions for design: user-initiated personal bubbles, clarifying social norms, and encouraging bystander intervention. Through an iterative process, we first conducted a formative interview study to determine design goals for making these features effective, fit user needs, and robust to manipulation. We then implemented Puffer, an integrated safety system that includes a suite of proactive and instant-reactive features, as a social VR prototype. From an evaluation using simulated scenarios with participants, we find evidence that Puffer can help protect players during emergencies, foster prosocial norms, and create more positive social interactions. We conclude by discussing how system safety features can be designed to complement existing proactive and instant-reactive strategies, particularly for people with marginalized identities."
+  },
+  {
+    "title": "SAP-CoPE: Social-Aware Planning using Cooperative Pose Estimation with Infrastructure Sensor Nodes",
+    "url": "http://arxiv.org/abs/2504.05727v1",
+    "arxiv_id": "2504.05727v1",
+    "authors": [
+      "Minghao Ning",
+      "Yufeng Yang",
+      "Shucheng Huang",
+      "Jiaming Zhong",
+      "Keqi Shu",
+      "Chen Sun",
+      "Ehsan Hashemi",
+      "Amir Khajepour"
+    ],
+    "published": "2025-04-08T06:55:39+00:00",
+    "summary": "Autonomous driving systems must operate safely in human-populated indoor environments, where challenges such as limited perception and occlusion sensitivity arise when relying solely on onboard sensors. These factors generate difficulties in the accurate recognition of human intentions and the generation of comfortable, socially aware trajectories. To address these issues, we propose SAP-CoPE, a social-aware planning framework that integrates cooperative infrastructure with a novel 3D human pose estimation method and a model predictive control-based controller. This real-time framework formulates an optimization problem that accounts for uncertainty propagation in the camera projection matrix while ensuring human joint coherence. The proposed method is adaptable to single- or multi-camera configurations and can incorporate sparse LiDAR point-cloud data. To enhance safety and comfort in human environments, we integrate a human personal space field based on human pose into a model predictive controller, enabling the system to navigate while avoiding discomfort zones. Extensive evaluations in both simulated and real-world settings demonstrate the effectiveness of our approach in generating socially aware trajectories for autonomous systems."
+  },
+  {
+    "title": "CVA6-VMRT: A Modular Approach Towards Time-Predictable Virtual Memory in a 64-bit Application Class RISC-V Processor",
+    "url": "http://arxiv.org/abs/2504.05718v1",
+    "arxiv_id": "2504.05718v1",
+    "authors": [
+      "Christopher Reinwardt",
+      "Robert Balas",
+      "Alessandro Ottaviano",
+      "Angelo Garofalo",
+      "Luca Benini"
+    ],
+    "published": "2025-04-08T06:38:27+00:00",
+    "summary": "The increasing complexity of autonomous systems has driven a shift to integrated heterogeneous SoCs with real-time and safety demands. Ensuring deterministic WCETs and low-latency for critical tasks requires minimizing interference on shared resources like virtual memory. Existing techniques, such as software coloring and memory replication, introduce significant area and performance overhead, especially with virtualized memory where address translation adds latency uncertainty. To address these limitations, we propose CVA6-VMRT, an extension of the open-source RISC-V CVA6 core, adding hardware support for predictability in virtual memory access with minimal area overhead. CVA6-VMRT features dynamically partitioned Translation Look-aside Buffers (TLBs) and hybrid L1 cache/scratchpad memory (SPM) functionality. It allows fine-grained per-thread control of resources, enabling the operating system to manage TLB replacements, including static overwrites, to ensure single-cycle address translation for critical memory regions. Additionally, CVA6-VMRT enables runtime partitioning of data and instruction caches into cache and SPM sections, providing low and predictable access times for critical data without impacting other accesses. In a virtualized setting, CVA6-VMRT enhances execution time determinism for critical guests by 94% during interference from non-critical guests, with minimal impact on their average absolute execution time compared to isolated execution of the critical guests only. This interference-aware behaviour is achieved with just a 4% area overhead and no timing penalty compared to the baseline CVA6 core."
+  },
+  {
+    "title": "Separator Injection Attack: Uncovering Dialogue Biases in Large Language Models Caused by Role Separators",
+    "url": "http://arxiv.org/abs/2504.05689v1",
+    "arxiv_id": "2504.05689v1",
+    "authors": [
+      "Xitao Li",
+      "Haijun Wang",
+      "Jiang Wu",
+      "Ting Liu"
+    ],
+    "published": "2025-04-08T05:20:56+00:00",
+    "summary": "Conversational large language models (LLMs) have gained widespread attention due to their instruction-following capabilities. To ensure conversational LLMs follow instructions, role separators are employed to distinguish between different participants in a conversation. However, incorporating role separators introduces potential vulnerabilities. Misusing roles can lead to prompt injection attacks, which can easily misalign the model's behavior with the user's intentions, raising significant security concerns. Although various prompt injection attacks have been proposed, recent research has largely overlooked the impact of role separators on safety. This highlights the critical need to thoroughly understand the systemic weaknesses in dialogue systems caused by role separators. This paper identifies modeling weaknesses caused by role separators. Specifically, we observe a strong positional bias associated with role separators, which is inherent in the format of dialogue modeling and can be triggered by the insertion of role separators. We further develop the Separators Injection Attack (SIA), a new orthometric attack based on role separators. The experiment results show that SIA is efficient and extensive in manipulating model behavior with an average gain of 18.2% for manual methods and enhances the attack success rate to 100% with automatic methods."
+  },
+  {
+    "title": "Sugar-Coated Poison: Benign Generation Unlocks LLM Jailbreaking",
+    "url": "http://arxiv.org/abs/2504.05652v1",
+    "arxiv_id": "2504.05652v1",
+    "authors": [
+      "Yu-Hang Wu",
+      "Yu-Jie Xiong",
+      "Jie-Zhang"
+    ],
+    "published": "2025-04-08T03:57:09+00:00",
+    "summary": "Large Language Models (LLMs) have become increasingly integral to a wide range of applications. However, they still remain the threat of jailbreak attacks, where attackers manipulate designed prompts to make the models elicit malicious outputs. Analyzing jailbreak methods can help us delve into the weakness of LLMs and improve it. In this paper, We reveal a vulnerability in large language models (LLMs), which we term Defense Threshold Decay (DTD), by analyzing the attention weights of the model's output on input and subsequent output on prior output: as the model generates substantial benign content, its attention weights shift from the input to prior output, making it more susceptible to jailbreak attacks. To demonstrate the exploitability of DTD, we propose a novel jailbreak attack method, Sugar-Coated Poison (SCP), which induces the model to generate substantial benign content through benign input and adversarial reasoning, subsequently producing malicious content. To mitigate such attacks, we introduce a simple yet effective defense strategy, POSD, which significantly reduces jailbreak success rates while preserving the model's generalization capabilities."
+  },
+  {
+    "title": "Fairness in Machine Learning-based Hand Load Estimation: A Case Study on Load Carriage Tasks",
+    "url": "http://arxiv.org/abs/2504.05610v1",
+    "arxiv_id": "2504.05610v1",
+    "authors": [
+      "Arafat Rahman",
+      "Sol Lim",
+      "Seokhyun Chung"
+    ],
+    "published": "2025-04-08T01:55:40+00:00",
+    "summary": "Predicting external hand load from sensor data is essential for ergonomic exposure assessments, as obtaining this information typically requires direct observation or supplementary data. While machine learning methods have been used to estimate external hand load from worker postures or force exertion data, our findings reveal systematic bias in these predictions due to individual differences such as age and biological sex. To explore this issue, we examined bias in hand load prediction by varying the sex ratio in the training dataset. We found substantial sex disparity in predictive performance, especially when the training dataset is more sex-imbalanced. To address this bias, we developed and evaluated a fair predictive model for hand load estimation that leverages a Variational Autoencoder (VAE) with feature disentanglement. This approach is designed to separate sex-agnostic and sex-specific latent features, minimizing feature overlap. The disentanglement capability enables the model to make predictions based solely on sex-agnostic features of motion patterns, ensuring fair prediction for both biological sexes. Our proposed fair algorithm outperformed conventional machine learning methods (e.g., Random Forests) in both fairness and predictive accuracy, achieving a lower mean absolute error (MAE) difference across male and female sets and improved fairness metrics such as statistical parity (SP) and positive and negative residual differences (PRD and NRD), even when trained on imbalanced sex datasets. These findings emphasize the importance of fairness-aware machine learning algorithms to prevent potential disadvantages in workplace health and safety for certain worker populations."
+  },
+  {
+    "title": "Towards Zero Trust Security in Connected Vehicles: A Comprehensive Survey",
+    "url": "http://arxiv.org/abs/2504.05485v1",
+    "arxiv_id": "2504.05485v1",
+    "authors": [
+      "Malak Annabi",
+      "Abdelhafid Zeroual",
+      "Nadhir Messai"
+    ],
+    "published": "2025-04-07T20:29:11+00:00",
+    "summary": "Zero Trust is the new cybersecurity model that challenges the traditional one by promoting continuous verification of users, devices, and applications, whatever their position or origin. This model is critical for reducing the attack surface and preventing lateral movement without relying on implicit trust. Adopting the zero trust principle in Intelligent Transportation Systems (ITS), especially in the context of connected vehicles (CVs), presents an adequate solution in the face of increasing cyber threats, thereby strengthening the ITS environment. This paper offers an understanding of Zero Trust security through a comprehensive review of existing literature, principles, and challenges. It specifically examines its applications in emerging technologies, particularly within connected vehicles, addressing potential issues and cyber threats faced by CVs. Inclusion/exclusion criteria for the systematic literature review were planned alongside a bibliometric analysis. Moreover, keyword co-occurrence analysis was done, which indicates trends and general themes for the Zero Trust model, Zero Trust implementation, and Zero Trust application. Furthermore, the paper explores various ZT models proposed in the literature for connected vehicles, shedding light on the challenges associated with their integration into CV systems. Future directions of this research will focus on incorporating Zero Trust principles within Vehicle-to-Vehicle (V2V) and Vehicle-to-Infrastructure (V2I) communication paradigms. This initiative intends to enhance the security posture and safety protocols within interconnected vehicular networks. The proposed research seeks to address the unique cybersecurity vulnerabilities inherent in the highly dynamic nature of vehicular communication systems."
+  },
+  {
+    "title": "Graph Neural Networks for Enhancing Ensemble Forecasts of Extreme Rainfall",
+    "url": "http://arxiv.org/abs/2504.05471v1",
+    "arxiv_id": "2504.05471v1",
+    "authors": [
+      "Christopher B\u00fclte",
+      "Sohir Maskey",
+      "Philipp Scholl",
+      "Jonas von Berg",
+      "Gitta Kutyniok"
+    ],
+    "published": "2025-04-07T20:01:55+00:00",
+    "summary": "Climate change is increasing the occurrence of extreme precipitation events, threatening infrastructure, agriculture, and public safety. Ensemble prediction systems provide probabilistic forecasts but exhibit biases and difficulties in capturing extreme weather. While post-processing techniques aim to enhance forecast accuracy, they rarely focus on precipitation, which exhibits complex spatial dependencies and tail behavior. Our novel framework leverages graph neural networks to post-process ensemble forecasts, specifically modeling the extremes of the underlying distribution. This allows to capture spatial dependencies and improves forecast accuracy for extreme events, thus leading to more reliable forecasts and mitigating risks of extreme precipitation and flooding."
+  },
+  {
     "title": "Truthful or Fabricated? Using Causal Attribution to Mitigate Reward Hacking in Explanations",
     "url": "http://arxiv.org/abs/2504.05294v1",
     "arxiv_id": "2504.05294v1",
@@ -44,6 +335,19 @@
     ],
     "published": "2025-04-07T15:58:23+00:00",
     "summary": "Machine learning (ML) systems are vulnerable to performance decline over time due to dataset shift. To address this problem, experts often suggest that ML systems should be regularly updated to ensure ongoing performance stability. Some scholarly literature has begun to address the epistemic and ethical challenges associated with different updating methodologies. Thus far, however, little attention has been paid to the impact of model updating on the ML-assisted decision-making process itself, particularly in the AI ethics and AI epistemology literatures. This article aims to address this gap in the literature. It argues that model updating introduces a new sub-type of opacity into ML-assisted decision-making -- update opacity -- that occurs when users cannot understand how or why an update has changed the reasoning or behaviour of an ML system. This type of opacity presents a variety of distinctive epistemic and safety concerns that available solutions to the black box problem in ML are largely ill-equipped to address. A variety of alternative strategies may be developed or pursued to address the problem of update opacity more directly, including bi-factual explanations, dynamic model reporting, and update compatibility. However, each of these strategies presents its own risks or carries significant limitations. Further research will be needed to address the epistemic and safety concerns associated with model updating and update opacity going forward."
+  },
+  {
+    "title": "Handling Weather Uncertainty in Air Traffic Prediction through an Inverse Approach",
+    "url": "http://arxiv.org/abs/2504.05366v1",
+    "arxiv_id": "2504.05366v1",
+    "authors": [
+      "G. Lancia",
+      "D. Falanga",
+      "S. Alam",
+      "G. Lulli"
+    ],
+    "published": "2025-04-07T15:42:09+00:00",
+    "summary": "Adverse weather conditions, particularly convective phenomena, pose significant challenges to Air Traffic Management, often requiring real-time rerouting decisions that impact efficiency and safety. This study introduces a 3-D Gaussian Mixture Model to predict long lead-time flight trajectory changes, incorporating comprehensive weather and traffic data. Utilizing high-resolution meteorological datasets, including convective weather maps and wind data, alongside traffic records, the model demonstrates robust performance in forecasting reroutes up to 60 minutes. The novel 3-D Gaussian Mixture Model framework employs a probabilistic approach to capture uncertainty while providing accurate forecasts of altitude, latitude, and longitude. Extensive evaluation revealed a Mean Absolute Percentage Error below 0.02 across varying lead times, highlighting the model's accuracy and scalability. By integrating explainability techniques such as the Vanilla Gradient algorithm, the study provides insights into feature contributions, showing that they contribute to improving Air Traffic Management strategies to mitigate weather-induced disruptions."
   },
   {
     "title": "Balancing Robustness and Efficiency in Embedded DNNs Through Activation Function Selection",
