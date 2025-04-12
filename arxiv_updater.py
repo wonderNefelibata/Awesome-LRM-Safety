@@ -4,7 +4,7 @@ import json
 import re
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-# 配置参数
+# 配置参数（需要再优化）
 QUERY_TERMS = {
     'include': [
         "cat:cs",  # computer science
@@ -20,8 +20,9 @@ QUERY_TERMS = {
     ],
     'exclude': []
 }
-MAX_NEW_PAPERS = 50
-LATEST_PAPERS_COUNT = 20
+
+MAX_NEW_PAPERS = 50 # 每次尝试获取的最大论文数
+LATEST_PAPERS_COUNT = 20 # 在主页面上显示的最新论文数量
 
 def extract_arxiv_id(url):
     """从arXiv URL中提取基础ID（不含版本号）"""
@@ -54,7 +55,7 @@ def update_article_json(new_papers):
     """更新论文数据库"""
     try:
         with open('article.json', 'r') as f:
-            existing_papers = json.load(f)
+            existing_papers = json.load(f) # 读取现有数据
     except (FileNotFoundError, json.JSONDecodeError):
         existing_papers = []
 
@@ -111,19 +112,23 @@ def update_readme():
     
     # 生成最新表格
     latest_table = generate_markdown_table(latest)
-    
-    # 生成历史表格（可折叠）
-    history_section = ""
-    if historical:
-        history_table = generate_markdown_table(historical)
-        history_section = f"""
-<details>
-<summary>📚 View Historical Papers ({len(historical)} entries)</summary>
 
-{history_table}
-</details>
-"""
-    # 更新README内容
+    # 生成历史表格
+    history_section = generate_markdown_table(historical)
+
+#     # 生成历史表格（可折叠）
+#     history_section = ""
+#     if historical:
+#         history_table = generate_markdown_table(historical)
+#         history_section = f"""
+# <details>
+# <summary>📚 View Historical Papers ({len(historical)} entries)</summary>
+
+# {history_table}
+# </details>
+# """
+        
+    # 更新主页README内容
     with open('README.md', 'r+', encoding='utf-8') as f:
         content = f.read()
 
@@ -138,30 +143,39 @@ def update_readme():
         # print("content[start1:end1]:", content[start1:end1])
         new_content = content.replace(content[start1:end1], 
                                           "<!-- LATEST_PAPERS_START -->")
+        
+        new_content = new_content.replace("<!-- LATEST_PAPERS_START --><!-- LATEST_PAPERS_END -->", 
+                                          f"<!-- LATEST_PAPERS_START -->\n{latest_table}\n<!-- LATEST_PAPERS_END -->")
 
-        placeholder3 = '<!-- HISTORICAL_PAPERS_START -->'
-        placeholder4 = '<!-- HISTORICAL_PAPERS_END -->'
+        # placeholder3 = '<!-- HISTORICAL_PAPERS_START -->'
+        # placeholder4 = '<!-- HISTORICAL_PAPERS_END -->'
 
-        start2 = new_content.find(placeholder3)
-        end2 = new_content.find(placeholder4)
+        # start2 = new_content.find(placeholder3)
+        # end2 = new_content.find(placeholder4)
 
         # print("start2:", start2)
         # print("end2:", end2)
         # print("new_content[start2:end2]:", new_content[start2:end2])
-        new_content = new_content.replace(new_content[start2:end2], 
-                                          "<!-- HISTORICAL_PAPERS_START -->")
+        # new_content = new_content.replace(new_content[start2:end2], 
+        #                                   "<!-- HISTORICAL_PAPERS_START -->")
 
         
         # print("latest_table:", latest_table)
         # print("history_section:", history_section)
-        new_content = new_content.replace("<!-- LATEST_PAPERS_START --><!-- LATEST_PAPERS_END -->", 
-                                          f"<!-- LATEST_PAPERS_START -->\n{latest_table}\n<!-- LATEST_PAPERS_END -->").replace("<!-- HISTORICAL_PAPERS_START --><!-- HISTORICAL_PAPERS_END -->",
-                                          f"<!-- HISTORICAL_PAPERS_START -->\n{history_section}\n<!-- HISTORICAL_PAPERS_END -->")
+        # new_content = new_content.replace("<!-- LATEST_PAPERS_START --><!-- LATEST_PAPERS_END -->", 
+        #                                   f"<!-- LATEST_PAPERS_START -->\n{latest_table}\n<!-- LATEST_PAPERS_END -->").replace("<!-- HISTORICAL_PAPERS_START --><!-- HISTORICAL_PAPERS_END -->",
+        #                                   f"<!-- HISTORICAL_PAPERS_START -->\n{history_section}\n<!-- HISTORICAL_PAPERS_END -->")
         
         # 把new_content写进README.md
-        f.seek(0)
+        f.seek(0) # 回到文件开头
         f.write(new_content)
-        f.truncate()
+        f.truncate() # 截断文件，去掉原来文件中多余的内容
+
+    # 更新./articles/README.md的内容
+    with open('./articles/README.md', 'r+', encoding='utf-8') as f:
+        f.seek(0) 
+        f.write(history_section)
+        f.truncate() 
         
 
 
