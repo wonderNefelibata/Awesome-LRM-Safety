@@ -20,13 +20,12 @@ A curated list of **security and safety research** for Large Reasoning Models (L
   - [🔖 Dataset \& Benchmark](#-dataset--benchmark)
     - [For Traditional LLM](#for-traditional-llm)
     - [For Advanced LRM](#for-advanced-lrm)
-  - [📚 Research Papers(coming soon)](#-research-paperscoming-soon)
-    - [Foundational Works](#foundational-works)
-    - [Attack Vectors](#attack-vectors)
-    - [Defense Mechanisms](#defense-mechanisms)
+  - [📚 Survey](#-survey)
+    - [LRM Related](#lrm-related)
+    - [LRM Safety Related](#lrm-safety-related)
   - [🛠️ Projects \& Tools(coming soon)](#️-projects--toolscoming-soon)
-    - [Model-Specific Resources](#model-specific-resources)
-    - [General Tools(coming soon)](#general-toolscoming-soon)
+    - [Model-Specific Resources(example)](#model-specific-resourcesexample)
+    - [General Tools(coming soon)(example)](#general-toolscoming-soonexample)
   - [🤝 Contributing](#-contributing)
   - [📄 License](#-license)
   - [❓ FAQ](#-faq)
@@ -125,34 +124,27 @@ Please refer to [dataset&benchmark for LRM](./collection/dataset/dataset_for_LRM
 
 ---
 
-## 📚 Research Papers(coming soon)
-### Foundational Works
-- [2023] [Towards Safer Large Reasoning Models: A Survey of Risks in Multistep Reasoning Systems](https://arxiv.org/abs/example )  
-  *Comprehensive taxonomy of LRM safety risks*
-
-### Attack Vectors
-- [2024] [Hidden Triggers in Reasoning Chains: New Attack Surfaces for LRMs](https://arxiv.org/abs/example )  
-  *Demonstrates adversarial manipulation of reasoning steps*
-
-### Defense Mechanisms
-- [2025] [GuardReasoner: Towards Reasoning-based LLM Safeguards](https://arxiv.org/abs/2501.18492 )  
-  *A Novel Guardrail Model for LLMs by Learning to Reason*
-- [2024] [Reasoning with Guardrails: Constrained Decoding for LRM Safety](https://arxiv.org/abs/example )  
-  *Novel approach to step-wise constraint enforcement*
-  
-*(Add your collected papers here with proper categorization)*
-
+## 📚 Survey
+### LRM Related
+- Efficient Inference for Large Reasoning Models: A Survey
+- A Survey of Efficient Reasoning for Large Reasoning Models: Language, Multimodality, and Beyond
+- Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models
+- A Survey on Post-training of Large Language Models
+- Reasoning Language Models: A Blueprint
+- Towards Reasoning Era: A Survey of Long Chain-of-Thought for Reasoning Large Language Models
+### LRM Safety Related
+- Efficient Inference for Large Reasoning Models: A Survey
 ---
 
 ## 🛠️ Projects & Tools(coming soon)
-### Model-Specific Resources
+### Model-Specific Resources(example)
 - **DeepSeek-R1 Safety Kit**  
   Official safety evaluation toolkit for DeepSeek-R1 reasoning modules
 
 - **OpenAI o1 Red Teaming Framework**  
   Adversarial testing framework for multi-turn reasoning tasks
 
-### General Tools(coming soon)
+### General Tools(coming soon)(example)
 - [ReasonGuard](https://github.com/example/reasonguard )  
   Real-time monitoring for reasoning chain anomalies
 
