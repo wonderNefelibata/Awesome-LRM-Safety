@@ -16,6 +16,7 @@ A curated list of **security and safety research** for Large Reasoning Models (L
     - [Open Source Models](#open-source-models)
     - [Close Source Models](#close-source-models)
   - [📰 Latest arXiv Papers (Auto-Updated)](#-latest-arxiv-papers-auto-updated)
+  - [Earlier Papers](#earlier-papers)
   - [🔑 Key Safety Domains(coming soon)](#-key-safety-domainscoming-soon)
   - [🔖 Dataset \& Benchmark](#-dataset--benchmark)
     - [For Traditional LLM](#for-traditional-llm)
@@ -98,6 +99,7 @@ It is updated every 12 hours, presenting the latest 20 relevant papers
 </details>
 <!-- LATEST_PAPERS_END -->
 
+[Earlier Papers](./articles/README.md)
 ---
 
 ## 🔑 Key Safety Domains(coming soon)
