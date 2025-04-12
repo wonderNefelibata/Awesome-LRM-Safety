@@ -65,7 +65,7 @@ This repository aims to catalog research addressing these challenges and promote
 ---
 
 ## 📰 Latest arXiv Papers (Auto-Updated)
-It is updated every 12 hours, presenting the latest 20 relevant papers.And [Earlier Papers](./articles/README.md) can be found here.
+It is updated every 12 hours, presenting the latest 20 relevant papers.And Earlier Papers can be found [here](./articles/README.md).
 
 
 <!-- LATEST_PAPERS_START -->
