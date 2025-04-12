@@ -16,7 +16,6 @@ A curated list of **security and safety research** for Large Reasoning Models (L
     - [Open Source Models](#open-source-models)
     - [Close Source Models](#close-source-models)
   - [📰 Latest arXiv Papers (Auto-Updated)](#-latest-arxiv-papers-auto-updated)
-  - [Earlier Papers](#earlier-papers)
   - [🔑 Key Safety Domains(coming soon)](#-key-safety-domainscoming-soon)
   - [🔖 Dataset \& Benchmark](#-dataset--benchmark)
     - [For Traditional LLM](#for-traditional-llm)
@@ -66,7 +65,7 @@ This repository aims to catalog research addressing these challenges and promote
 ---
 
 ## 📰 Latest arXiv Papers (Auto-Updated)
-It is updated every 12 hours, presenting the latest 20 relevant papers
+It is updated every 12 hours, presenting the latest 20 relevant papers.And [Earlier Papers](./articles/README.md) can be found here.
 
 
 <!-- LATEST_PAPERS_START -->
@@ -97,9 +96,7 @@ It is updated every 12 hours, presenting the latest 20 relevant papers
 | 2025-04-09 | [Code Generation with Small Language Models: A Deep Evaluation on Codeforces](http://arxiv.org/abs/2504.07343v1) | Débora Souza, Rohit Gheyi et al. | Large Language Models (LLMs) have demonstrated capabilities in code generation, potentially boosting developer productivity. However, their widespread adoption remains limited by high computational costs, significant energy demands, and security risks such as data leakage and adversarial attacks. As a lighter-weight alternative, Small Language Models (SLMs) offer faster inference, lower deployment overhead, and better adaptability to domain-specific tasks, making them an attractive option for real-world applications. While prior research has benchmarked LLMs on competitive programming tasks, such evaluations often focus narrowly on metrics like Elo scores or pass rates, overlooking deeper insights into model behavior, failure patterns, and problem diversity. Furthermore, the potential of SLMs to tackle complex tasks such as competitive programming remains underexplored. In this study, we benchmark five open SLMs - LLAMA 3.2 3B, GEMMA 2 9B, GEMMA 3 12B, DEEPSEEK-R1 14B, and PHI-4 14B - across 280 Codeforces problems spanning Elo ratings from 800 to 2100 and covering 36 distinct topics. All models were tasked with generating Python solutions. PHI-4 14B achieved the best performance among SLMs, with a pass@3 of 63.6%, approaching the proprietary O3-MINI-HIGH (86.8%). In addition, we evaluated PHI-4 14B on C++ and found that combining outputs from both Python and C++ increases its aggregated pass@3 to 73.6%. A qualitative analysis of PHI-4 14B's incorrect outputs revealed that some failures were due to minor implementation issues - such as handling edge cases or correcting variable initialization - rather than deeper reasoning flaws. |
 
 </details>
-<!-- LATEST_PAPERS_END -->
-
-[Earlier Papers](./articles/README.md)
+<!-- LATEST_PAPERS_END --> 
 ---
 
 ## 🔑 Key Safety Domains(coming soon)
