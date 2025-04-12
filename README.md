@@ -105,13 +105,25 @@ It is updated every 12 hours, presenting the latest 20 relevant papers
 
 **Fig.1**: LLM Safety [[Ma et al., 2025]([arXiv:2502.05206](https://arxiv.org/abs/2502.05206))]
 
-| Category               | Key Challenges                          | Related Topics                          |
-|------------------------|-----------------------------------------|------------------------------------------|
-| **Adversarial Robustness** | Prompt injection, Reasoning path poisoning | Red teaming, Formal verification        |
-| **Privacy Preservation**  | Intermediate step memorization, Data leakage | Differential privacy, Federated learning|
-| **Ethical Alignment**     | Value locking, Contextual moral reasoning | Constitutional AI, Value learning       |
-| **System Safety**         | Cascading failures, Reward hacking       | Safe interruptibility, System monitoring|
-| **Regulatory Compliance** | Audit trails, Explainability requirements | Model cards, Governance frameworks      |
+Here we only list the security scenarios involved in the most popular research directions.
+
+- Adversarial Attack
+  - white box
+  - black box
+  - grey box
+- Jailbreak Attacks
+  - white box
+    - gradient-based
+  - black box
+    - prompt injection
+    - role play
+    - encodind-based
+    - multilingual-based
+- Backdoor Attacks 
+- DDos Attack
+- Privacy Leakage
+- System Data Leakage
+- Deepfake
 
 ---
 
