@@ -32,6 +32,18 @@
     "summary": "This paper presents a robust adaptive learning Model Predictive Control (MPC) framework for linear systems with parametric uncertainties and additive disturbances performing iterative tasks. The approach iteratively refines the parameter estimates using set membership estimation. Performance enhancement over iterations is achieved by learning the terminal cost from data. Safety is enforced using a terminal set, which is also learned iteratively. The proposed method guarantees recursive feasibility, constraint satisfaction, and a robust bound on the closed-loop cost. Numerical simulations on a mass-spring-damper system demonstrate improved computational efficiency and control performance compared to an existing robust adaptive MPC approach."
   },
   {
+    "title": "Robust MPC for Uncertain Linear Systems -- Combining Model Adaptation and Iterative Learning",
+    "url": "http://arxiv.org/abs/2504.11261v2",
+    "arxiv_id": "2504.11261v2",
+    "authors": [
+      "Hannes Petrenz",
+      "Johannes K\u00f6hler",
+      "Francesco Borrelli"
+    ],
+    "published": "2025-04-15T15:00:34+00:00",
+    "summary": "This paper presents a robust adaptive learning Model Predictive Control (MPC) framework for linear systems with parametric uncertainties and additive disturbances performing iterative tasks. The approach iteratively refines the parameter estimates using set membership estimation. Performance enhancement over iterations is achieved by learning the terminal cost from data. Safety is enforced using a terminal set, which is also learned iteratively. The proposed method guarantees recursive feasibility, constraint satisfaction, and a robust bound on the closed-loop cost. Numerical simulations on a mass-spring-damper system demonstrate improved computational efficiency and control performance compared to an existing robust adaptive MPC approach."
+  },
+  {
     "title": "Towards Automated Safety Requirements Derivation Using Agent-based RAG",
     "url": "http://arxiv.org/abs/2504.11243v1",
     "arxiv_id": "2504.11243v1",
@@ -119,9 +131,36 @@
     "summary": "The growing demand for robots to operate effectively in diverse environments necessitates the need for robust real-time anomaly detection techniques during robotic operations. However, deep learning-based models in robotics face significant challenges due to limited training data and highly noisy signal features. In this paper, we present Sparse Masked Autoregressive Flow-based Adversarial AutoEncoders model to address these problems. This approach integrates Masked Autoregressive Flow model into Adversarial AutoEncoders to construct a flexible latent space and utilize Sparse autoencoder to efficiently focus on important features, even in scenarios with limited feature space. Our experiments demonstrate that the proposed model achieves a 4.96% to 9.75% higher area under the receiver operating characteristic curve for pick-and-place robotic operations with randomly placed cans, compared to existing state-of-the-art methods. Notably, it showed up to 19.67% better performance in scenarios involving collisions with lightweight objects. Additionally, unlike the existing state-of-the-art model, our model performs inferences within 1 millisecond, ensuring real-time anomaly detection. These capabilities make our model highly applicable to machine learning-based robotic safety systems in dynamic environments. The code will be made publicly available after acceptance."
   },
   {
+    "title": "A Real-time Anomaly Detection Method for Robots based on a Flexible and Sparse Latent Space",
+    "url": "http://arxiv.org/abs/2504.11170v2",
+    "arxiv_id": "2504.11170v2",
+    "authors": [
+      "Taewook Kang",
+      "Bum-Jae You",
+      "Juyoun Park",
+      "Yisoo Lee"
+    ],
+    "published": "2025-04-15T13:17:14+00:00",
+    "summary": "The growing demand for robots to operate effectively in diverse environments necessitates the need for robust real-time anomaly detection techniques during robotic operations. However, deep learning-based models in robotics face significant challenges due to limited training data and highly noisy signal features. In this paper, we present Sparse Masked Autoregressive Flow-based Adversarial AutoEncoders model to address these problems. This approach integrates Masked Autoregressive Flow model into Adversarial AutoEncoders to construct a flexible latent space and utilize Sparse autoencoder to efficiently focus on important features, even in scenarios with limited feature space. Our experiments demonstrate that the proposed model achieves a 4.96% to 9.75% higher area under the receiver operating characteristic curve for pick-and-place robotic operations with randomly placed cans, compared to existing state-of-the-art methods. Notably, it showed up to 19.67% better performance in scenarios involving collisions with lightweight objects. Additionally, unlike the existing state-of-the-art model, our model performs inferences within 1 millisecond, ensuring real-time anomaly detection. These capabilities make our model highly applicable to machine learning-based robotic safety systems in dynamic environments. The code will be made publicly available after acceptance."
+  },
+  {
     "title": "Bypassing Prompt Injection and Jailbreak Detection in LLM Guardrails",
     "url": "http://arxiv.org/abs/2504.11168v1",
     "arxiv_id": "2504.11168v1",
+    "authors": [
+      "William Hackett",
+      "Lewis Birch",
+      "Stefan Trawicki",
+      "Neeraj Suri",
+      "Peter Garraghan"
+    ],
+    "published": "2025-04-15T13:16:02+00:00",
+    "summary": "Large Language Models (LLMs) guardrail systems are designed to protect against prompt injection and jailbreak attacks. However, they remain vulnerable to evasion techniques. We demonstrate two approaches for bypassing LLM prompt injection and jailbreak detection systems via traditional character injection methods and algorithmic Adversarial Machine Learning (AML) evasion techniques. Through testing against six prominent protection systems, including Microsoft's Azure Prompt Shield and Meta's Prompt Guard, we show that both methods can be used to evade detection while maintaining adversarial utility achieving in some instances up to 100% evasion success. Furthermore, we demonstrate that adversaries can enhance Attack Success Rates (ASR) against black-box targets by leveraging word importance ranking computed by offline white-box models. Our findings reveal vulnerabilities within current LLM protection mechanisms and highlight the need for more robust guardrail systems."
+  },
+  {
+    "title": "Bypassing Prompt Injection and Jailbreak Detection in LLM Guardrails",
+    "url": "http://arxiv.org/abs/2504.11168v2",
+    "arxiv_id": "2504.11168v2",
     "authors": [
       "William Hackett",
       "Lewis Birch",
@@ -445,6 +484,17 @@
     "summary": "An AI system can create and maintain knowledge only to the extent that it can verify that knowledge itself. Recent work on long Chain-of-Thought reasoning has demonstrated great potential of LLMs on solving competitive problems, but their verification ability remains to be weak and not sufficiently investigated. In this paper, we propose Heimdall, the long CoT verification LLM that can accurately judge the correctness of solutions. With pure reinforcement learning, we boost the verification accuracy from 62.5% to 94.5% on competitive math problems. By scaling with repeated sampling, the accuracy further increases to 97.5%. Through human evaluation, Heimdall demonstrates impressive generalization capabilities, successfully detecting most issues in challenging math proofs, the type of which is not included during training. Furthermore, we propose Pessimistic Verification to extend the functionality of Heimdall to scaling up the problem solving. It calls Heimdall to judge the solutions from a solver model and based on the pessimistic principle, selects the most likely correct solution with the least uncertainty. Taking DeepSeek-R1-Distill-Qwen-32B as the solver model, Pessimistic Verification improves the solution accuracy on AIME2025 from 54.2% to 70.0% with 16x compute budget and to 83.3% with more compute budget. With the stronger solver Gemini 2.5 Pro, the score reaches 93.0%. Finally, we prototype an automatic knowledge discovery system, a ternary system where one poses questions, another provides solutions, and the third verifies the solutions. Using the data synthesis work NuminaMath for the first two components, Heimdall effectively identifies problematic records within the dataset and reveals that nearly half of the data is flawed, which interestingly aligns with the recent ablation studies from NuminaMath."
   },
   {
+    "title": "Heimdall: test-time scaling on the generative verification",
+    "url": "http://arxiv.org/abs/2504.10337v2",
+    "arxiv_id": "2504.10337v2",
+    "authors": [
+      "Wenlei Shi",
+      "Xing Jin"
+    ],
+    "published": "2025-04-14T15:46:33+00:00",
+    "summary": "An AI system can create and maintain knowledge only to the extent that it can verify that knowledge itself. Recent work on long Chain-of-Thought reasoning has demonstrated great potential of LLMs on solving competitive problems, but their verification ability remains to be weak and not sufficiently investigated. In this paper, we propose Heimdall, the long CoT verification LLM that can accurately judge the correctness of solutions. With pure reinforcement learning, we boost the verification accuracy from 62.5% to 94.5% on competitive math problems. By scaling with repeated sampling, the accuracy further increases to 97.5%. Through human evaluation, Heimdall demonstrates impressive generalization capabilities, successfully detecting most issues in challenging math proofs, the type of which is not included during training. Furthermore, we propose Pessimistic Verification to extend the functionality of Heimdall to scaling up the problem solving. It calls Heimdall to judge the solutions from a solver model and based on the pessimistic principle, selects the most likely correct solution with the least uncertainty. Taking DeepSeek-R1-Distill-Qwen-32B as the solver model, Pessimistic Verification improves the solution accuracy on AIME2025 from 54.2% to 70.0% with 16x compute budget and to 83.3% with more compute budget. With the stronger solver Gemini 2.5 Pro, the score reaches 93.0%. Finally, we prototype an automatic knowledge discovery system, a ternary system where one poses questions, another provides solutions, and the third verifies the solutions. Using the data synthesis work NuminaMath for the first two components, Heimdall effectively identifies problematic records within the dataset and reveals that nearly half of the data is flawed, which interestingly aligns with the recent ablation studies from NuminaMath."
+  },
+  {
     "title": "Cumulative-Time Signal Temporal Logic",
     "url": "http://arxiv.org/abs/2504.10325v1",
     "arxiv_id": "2504.10325v1",
@@ -514,6 +564,20 @@
     "title": "LLM Unlearning Reveals a Stronger-Than-Expected Coreset Effect in Current Benchmarks",
     "url": "http://arxiv.org/abs/2504.10185v1",
     "arxiv_id": "2504.10185v1",
+    "authors": [
+      "Soumyadeep Pal",
+      "Changsheng Wang",
+      "James Diffenderfer",
+      "Bhavya Kailkhura",
+      "Sijia Liu"
+    ],
+    "published": "2025-04-14T12:38:37+00:00",
+    "summary": "Large language model unlearning has become a critical challenge in ensuring safety and controlled model behavior by removing undesired data-model influences from the pretrained model while preserving general utility. Significant recent efforts have been dedicated to developing LLM unlearning benchmarks such as WMDP (Weapons of Mass Destruction Proxy) and MUSE (Machine Unlearning Six-way Evaluation), facilitating standardized unlearning performance assessment and method comparison. Despite their usefulness, we uncover for the first time a novel coreset effect within these benchmarks. Specifically, we find that LLM unlearning achieved with the original (full) forget set can be effectively maintained using a significantly smaller subset (functioning as a \"coreset\"), e.g., as little as 5% of the forget set, even when selected at random. This suggests that LLM unlearning in these benchmarks can be performed surprisingly easily, even in an extremely low-data regime. We demonstrate that this coreset effect remains strong, regardless of the LLM unlearning method used, such as NPO (Negative Preference Optimization) and RMU (Representation Misdirection Unlearning), the popular ones in these benchmarks. The surprisingly strong coreset effect is also robust across various data selection methods, ranging from random selection to more sophisticated heuristic approaches. We explain the coreset effect in LLM unlearning through a keyword-based perspective, showing that keywords extracted from the forget set alone contribute significantly to unlearning effectiveness and indicating that current unlearning is driven by a compact set of high-impact tokens rather than the entire dataset. We further justify the faithfulness of coreset-unlearned models along additional dimensions, such as mode connectivity and robustness to jailbreaking attacks. Codes are available at https://github.com/OPTML-Group/MU-Coreset."
+  },
+  {
+    "title": "LLM Unlearning Reveals a Stronger-Than-Expected Coreset Effect in Current Benchmarks",
+    "url": "http://arxiv.org/abs/2504.10185v2",
+    "arxiv_id": "2504.10185v2",
     "authors": [
       "Soumyadeep Pal",
       "Changsheng Wang",
