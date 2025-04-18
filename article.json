@@ -1,5 +1,407 @@
 [
   {
+    "title": "Generate, but Verify: Reducing Hallucination in Vision-Language Models with Retrospective Resampling",
+    "url": "http://arxiv.org/abs/2504.13169v1",
+    "arxiv_id": "2504.13169v1",
+    "authors": [
+      "Tsung-Han Wu",
+      "Heekyung Lee",
+      "Jiaxin Ge",
+      "Joseph E. Gonzalez",
+      "Trevor Darrell",
+      "David M. Chan"
+    ],
+    "published": "2025-04-17T17:59:22+00:00",
+    "summary": "Vision-Language Models (VLMs) excel at visual understanding but often suffer from visual hallucinations, where they generate descriptions of nonexistent objects, actions, or concepts, posing significant risks in safety-critical applications. Existing hallucination mitigation methods typically follow one of two paradigms: generation adjustment, which modifies decoding behavior to align text with visual inputs, and post-hoc verification, where external models assess and correct outputs. While effective, generation adjustment methods often rely on heuristics and lack correction mechanisms, while post-hoc verification is complicated, typically requiring multiple models and tending to reject outputs rather than refine them. In this work, we introduce REVERSE, a unified framework that integrates hallucination-aware training with on-the-fly self-verification. By leveraging a new hallucination-verification dataset containing over 1.3M semi-synthetic samples, along with a novel inference-time retrospective resampling technique, our approach enables VLMs to both detect hallucinations during generation and dynamically revise those hallucinations. Our evaluations show that REVERSE achieves state-of-the-art hallucination reduction, outperforming the best existing methods by up to 12% on CHAIR-MSCOCO and 28% on HaloQuest. Our dataset, model, and code are available at: https://reverse-vlm.github.io."
+  },
+  {
+    "title": "Energy-Based Reward Models for Robust Language Model Alignment",
+    "url": "http://arxiv.org/abs/2504.13134v1",
+    "arxiv_id": "2504.13134v1",
+    "authors": [
+      "Anamika Lochab",
+      "Ruqi Zhang"
+    ],
+    "published": "2025-04-17T17:47:15+00:00",
+    "summary": "Reward models (RMs) are essential for aligning Large Language Models (LLMs) with human preferences. However, they often struggle with capturing complex human preferences and generalizing to unseen data. To address these challenges, we introduce Energy-Based Reward Model (EBRM), a lightweight post-hoc refinement framework that enhances RM robustness and generalization. EBRM models the reward distribution explicitly, capturing uncertainty in human preferences and mitigating the impact of noisy or misaligned annotations. It achieves this through conflict-aware data filtering, label-noise-aware contrastive training, and hybrid initialization. Notably, EBRM enhances RMs without retraining, making it computationally efficient and adaptable across different models and tasks. Empirical evaluations on RM benchmarks demonstrate significant improvements in both robustness and generalization, achieving up to a 5.97% improvement in safety-critical alignment tasks compared to standard RMs. Furthermore, reinforcement learning experiments confirm that our refined rewards enhance alignment quality, effectively delaying reward hacking. These results demonstrate our approach as a scalable and effective enhancement for existing RMs and alignment pipelines. The code is available at EBRM."
+  },
+  {
+    "title": "LLMs Meet Finance: Fine-Tuning Foundation Models for the Open FinLLM Leaderboard",
+    "url": "http://arxiv.org/abs/2504.13125v1",
+    "arxiv_id": "2504.13125v1",
+    "authors": [
+      "Varun Rao",
+      "Youran Sun",
+      "Mahendra Kumar",
+      "Tejas Mutneja",
+      "Agastya Mukherjee",
+      "Haizhao Yang"
+    ],
+    "published": "2025-04-17T17:42:02+00:00",
+    "summary": "This paper investigates the application of large language models (LLMs) to financial tasks. We fine-tuned foundation models using the Open FinLLM Leaderboard as a benchmark. Building on Qwen2.5 and Deepseek-R1, we employed techniques including supervised fine-tuning (SFT), direct preference optimization (DPO), and reinforcement learning (RL) to enhance their financial capabilities. The fine-tuned models demonstrated substantial performance gains across a wide range of financial tasks. Moreover, we measured the data scaling law in the financial domain. Our work demonstrates the potential of large language models (LLMs) in financial applications."
+  },
+  {
+    "title": "Accuracy is Not Agreement: Expert-Aligned Evaluation of Crash Narrative Classification Models",
+    "url": "http://arxiv.org/abs/2504.13068v1",
+    "arxiv_id": "2504.13068v1",
+    "authors": [
+      "Sudesh Ramesh Bhagat",
+      "Ibne Farabi Shihab",
+      "Anuj Sharma"
+    ],
+    "published": "2025-04-17T16:29:08+00:00",
+    "summary": "This study explores the relationship between deep learning (DL) model accuracy and expert agreement in the classification of crash narratives. We evaluate five DL models -- including BERT variants, the Universal Sentence Encoder (USE), and a zero-shot classifier -- against expert-labeled data and narrative text. The analysis is further extended to four large language models (LLMs): GPT-4, LLaMA 3, Qwen, and Claude. Our results reveal a counterintuitive trend: models with higher technical accuracy often exhibit lower agreement with domain experts, whereas LLMs demonstrate greater expert alignment despite relatively lower accuracy scores. To quantify and interpret model-expert agreement, we employ Cohen's Kappa, Principal Component Analysis (PCA), and SHAP-based explainability techniques. Findings indicate that expert-aligned models tend to rely more on contextual and temporal language cues, rather than location-specific keywords. These results underscore that accuracy alone is insufficient for evaluating models in safety-critical NLP applications. We advocate for incorporating expert agreement as a complementary metric in model evaluation frameworks and highlight the promise of LLMs as interpretable, scalable tools for crash analysis pipelines."
+  },
+  {
+    "title": "GraphAttack: Exploiting Representational Blindspots in LLM Safety Mechanisms",
+    "url": "http://arxiv.org/abs/2504.13052v1",
+    "arxiv_id": "2504.13052v1",
+    "authors": [
+      "Sinan He",
+      "An Wang"
+    ],
+    "published": "2025-04-17T16:09:12+00:00",
+    "summary": "Large Language Models (LLMs) have been equipped with safety mechanisms to prevent harmful outputs, but these guardrails can often be bypassed through \"jailbreak\" prompts. This paper introduces a novel graph-based approach to systematically generate jailbreak prompts through semantic transformations. We represent malicious prompts as nodes in a graph structure with edges denoting different transformations, leveraging Abstract Meaning Representation (AMR) and Resource Description Framework (RDF) to parse user goals into semantic components that can be manipulated to evade safety filters. We demonstrate a particularly effective exploitation vector by instructing LLMs to generate code that realizes the intent described in these semantic graphs, achieving success rates of up to 87% against leading commercial LLMs. Our analysis reveals that contextual framing and abstraction are particularly effective at circumventing safety measures, highlighting critical gaps in current safety alignment techniques that focus primarily on surface-level patterns. These findings provide insights for developing more robust safeguards against structured semantic attacks. Our research contributes both a theoretical framework and practical methodology for systematically stress-testing LLM safety mechanisms."
+  },
+  {
+    "title": "QI-MPC: A Hybrid Quantum-Inspired Model Predictive Control for Learning Optimal Policies",
+    "url": "http://arxiv.org/abs/2504.13041v1",
+    "arxiv_id": "2504.13041v1",
+    "authors": [
+      "Muhammad Al-Zafar Khan",
+      "Jamal Al-Karaki"
+    ],
+    "published": "2025-04-17T15:55:37+00:00",
+    "summary": "In this paper, we present Quantum-Inspired Model Predictive Control (QIMPC), an approach that uses Variational Quantum Circuits (VQCs) to learn control polices in MPC problems. The viability of the approach is tested in five experiments: A target-tracking control strategy, energy-efficient building climate control, autonomous vehicular dynamics, the simple pendulum, and the compound pendulum. Three safety guarantees were established for the approach, and the experiments gave the motivation for two important theoretical results that, in essence, identify systems for which the approach works best."
+  },
+  {
+    "title": "Safe Physics-Informed Machine Learning for Dynamics and Control",
+    "url": "http://arxiv.org/abs/2504.12952v1",
+    "arxiv_id": "2504.12952v1",
+    "authors": [
+      "Jan Drgona",
+      "Truong X. Nghiem",
+      "Thomas Beckers",
+      "Mahyar Fazlyab",
+      "Enrique Mallada",
+      "Colin Jones",
+      "Draguna Vrabie",
+      "Steven L. Brunton",
+      "Rolf Findeisen"
+    ],
+    "published": "2025-04-17T13:52:55+00:00",
+    "summary": "This tutorial paper focuses on safe physics-informed machine learning in the context of dynamics and control, providing a comprehensive overview of how to integrate physical models and safety guarantees. As machine learning techniques enhance the modeling and control of complex dynamical systems, ensuring safety and stability remains a critical challenge, especially in safety-critical applications like autonomous vehicles, robotics, medical decision-making, and energy systems. We explore various approaches for embedding and ensuring safety constraints, such as structural priors, Lyapunov functions, Control Barrier Functions, predictive control, projections, and robust optimization techniques, ensuring that the learned models respect stability and safety criteria. Additionally, we delve into methods for uncertainty quantification and safety verification, including reachability analysis and neural network verification tools, which help validate that control policies remain within safe operating bounds even in uncertain environments. The paper includes illustrative examples demonstrating the implementation aspects of safe learning frameworks that combine the strengths of data-driven approaches with the rigor of physical principles, offering a path toward the safe control of complex dynamical systems."
+  },
+  {
+    "title": "In Which Areas of Technical AI Safety Could Geopolitical Rivals Cooperate?",
+    "url": "http://arxiv.org/abs/2504.12914v1",
+    "arxiv_id": "2504.12914v1",
+    "authors": [
+      "Ben Bucknall",
+      "Saad Siddiqui",
+      "Lara Thurnherr",
+      "Conor McGurk",
+      "Ben Harack",
+      "Anka Reuel",
+      "Patricia Paskov",
+      "Casey Mahoney",
+      "S\u00f6ren Mindermann",
+      "Scott Singer",
+      "Vinay Hiremath",
+      "Charbel-Rapha\u00ebl Segerie",
+      "Oscar Delaney",
+      "Alessandro Abate",
+      "Fazl Barez",
+      "Michael K. Cohen",
+      "Philip Torr",
+      "Ferenc Husz\u00e1r",
+      "Anisoara Calinescu",
+      "Gabriel Davis Jones",
+      "Yoshua Bengio",
+      "Robert Trager"
+    ],
+    "published": "2025-04-17T13:03:56+00:00",
+    "summary": "International cooperation is common in AI research, including between geopolitical rivals. While many experts advocate for greater international cooperation on AI safety to address shared global risks, some view cooperation on AI with suspicion, arguing that it can pose unacceptable risks to national security. However, the extent to which cooperation on AI safety poses such risks, as well as provides benefits, depends on the specific area of cooperation. In this paper, we consider technical factors that impact the risks of international cooperation on AI safety research, focusing on the degree to which such cooperation can advance dangerous capabilities, result in the sharing of sensitive information, or provide opportunities for harm. We begin by why nations historically cooperate on strategic technologies and analyse current US-China cooperation in AI as a case study. We further argue that existing frameworks for managing associated risks can be supplemented with consideration of key risks specific to cooperation on technical AI safety research. Through our analysis, we find that research into AI verification mechanisms and shared protocols may be suitable areas for such cooperation. Through this analysis we aim to help researchers and governments identify and mitigate the risks of international cooperation on AI safety research, so that the benefits of cooperation can be fully realised."
+  },
+  {
+    "title": "UncAD: Towards Safe End-to-end Autonomous Driving via Online Map Uncertainty",
+    "url": "http://arxiv.org/abs/2504.12826v1",
+    "arxiv_id": "2504.12826v1",
+    "authors": [
+      "Pengxuan Yang",
+      "Yupeng Zheng",
+      "Qichao Zhang",
+      "Kefei Zhu",
+      "Zebin Xing",
+      "Qiao Lin",
+      "Yun-Fu Liu",
+      "Zhiguo Su",
+      "Dongbin Zhao"
+    ],
+    "published": "2025-04-17T10:40:36+00:00",
+    "summary": "End-to-end autonomous driving aims to produce planning trajectories from raw sensors directly. Currently, most approaches integrate perception, prediction, and planning modules into a fully differentiable network, promising great scalability. However, these methods typically rely on deterministic modeling of online maps in the perception module for guiding or constraining vehicle planning, which may incorporate erroneous perception information and further compromise planning safety. To address this issue, we delve into the importance of online map uncertainty for enhancing autonomous driving safety and propose a novel paradigm named UncAD. Specifically, UncAD first estimates the uncertainty of the online map in the perception module. It then leverages the uncertainty to guide motion prediction and planning modules to produce multi-modal trajectories. Finally, to achieve safer autonomous driving, UncAD proposes an uncertainty-collision-aware planning selection strategy according to the online map uncertainty to evaluate and select the best trajectory. In this study, we incorporate UncAD into various state-of-the-art (SOTA) end-to-end methods. Experiments on the nuScenes dataset show that integrating UncAD, with only a 1.9% increase in parameters, can reduce collision rates by up to 26% and drivable area conflict rate by up to 42%. Codes, pre-trained models, and demo videos can be accessed at https://github.com/pengxuanyang/UncAD."
+  },
+  {
+    "title": "Supporting Urban Low-Altitude Economy: Channel Gain Map Inference Based on 3D Conditional GAN",
+    "url": "http://arxiv.org/abs/2504.12794v1",
+    "arxiv_id": "2504.12794v1",
+    "authors": [
+      "Yonghao Wang",
+      "Ruoguang Li",
+      "Di Wu",
+      "Jiaqi Chen",
+      "Yong Zeng"
+    ],
+    "published": "2025-04-17T09:55:03+00:00",
+    "summary": "The advancement of advanced air mobility (AAM) in recent years has given rise to the concept of low-altitude economy (LAE). However, the diverse flight activities associated with the emerging LAE applications in urban scenarios confront complex physical environments, which urgently necessitates ubiquitous and reliable communication to guarantee the operation safety of the low-altitude aircraft. As one of promising technologies for the sixth generation (6G) mobile networks, channel knowledge map (CKM) enables the environment-aware communication by constructing a site-specific dataset, thereby providing a priori on-site information for the aircraft to obtain the channel state information (CSI) at arbitrary locations with much reduced online overhead. Diverse base station (BS) deployments in the three-dimensional (3D) urban low-altitude environment require efficient 3D CKM construction to capture spatial channel characteristics with less overhead. Towards this end, this paper proposes a 3D channel gain map (CGM) inference method based on a 3D conditional generative adversarial network (3D-CGAN). Specifically, we first analyze the potential deployment types of BSs in urban low-altitude scenario, and investigate the CGM representation with the corresponding 3D channel gain model. The framework of the proposed 3D-CGAN is then discussed, which is trained by a dataset consisting of existing CGMs. Consequently, the trained 3D-CGAN is capable of inferring the corresponding CGM only based on the BS coordinate without additional measurement. The simulation results demonstrate that the CGMs inferred by the proposed 3D-CGAN outperform those of the benchmark schemes, which can accurately reflect the radio propagation condition in 3D environment."
+  },
+  {
+    "title": "On Error Classification from Physiological Signals within Airborne Environment",
+    "url": "http://arxiv.org/abs/2504.12769v1",
+    "arxiv_id": "2504.12769v1",
+    "authors": [
+      "Niall McGuire",
+      "Yashar Moshfeghi"
+    ],
+    "published": "2025-04-17T09:08:21+00:00",
+    "summary": "Human error remains a critical concern in aviation safety, contributing to 70-80% of accidents despite technological advancements. While physiological measures show promise for error detection in laboratory settings, their effectiveness in dynamic flight environments remains underexplored. Through live flight trials with nine commercial pilots, we investigated whether established error-detection approaches maintain accuracy during actual flight operations. Participants completed standardized multi-tasking scenarios across conditions ranging from laboratory settings to straight-and-level flight and 2G manoeuvres while we collected synchronized physiological data. Our findings demonstrate that EEG-based classification maintains high accuracy (87.83%) during complex flight manoeuvres, comparable to laboratory performance (89.23%). Eye-tracking showed moderate performance (82.50\\%), while ECG performed near chance level (51.50%). Classification accuracy remained stable across flight conditions, with minimal degradation during 2G manoeuvres. These results provide the first evidence that physiological error detection can translate effectively to operational aviation environments."
+  },
+  {
+    "title": "Falcon: Advancing Asynchronous BFT Consensus for Lower Latency and Enhanced Throughput",
+    "url": "http://arxiv.org/abs/2504.12766v1",
+    "arxiv_id": "2504.12766v1",
+    "authors": [
+      "Xiaohai Dai",
+      "Chaozheng Ding",
+      "Wei Li",
+      "Jiang Xiao",
+      "Bolin Zhang",
+      "Chen Yu",
+      "Albert Y. Zomaya",
+      "Hai Jin"
+    ],
+    "published": "2025-04-17T09:03:55+00:00",
+    "summary": "Asynchronous Byzantine Fault Tolerant (BFT) consensus protocols have garnered significant attention with the rise of blockchain technology. A typical asynchronous protocol is designed by executing sequential instances of the Asynchronous Common Sub-seQuence (ACSQ). The ACSQ protocol consists of two primary components: the Asynchronous Common Subset (ACS) protocol and a block sorting mechanism, with the ACS protocol comprising two stages: broadcast and agreement. However, current protocols encounter three critical issues: high latency arising from the execution of the agreement stage, latency instability due to the integral-sorting mechanism, and reduced throughput caused by block discarding. To address these issues,we propose Falcon, an asynchronous BFT protocol that achieves low latency and enhanced throughput. Falcon introduces a novel broadcast protocol, Graded Broadcast (GBC), which enables a block to be included in the ACS set directly, bypassing the agreement stage and thereby reducing latency. To ensure safety, Falcon incorporates a new binary agreement protocol called Asymmetrical Asynchronous Binary Agreement (AABA), designed to complement GBC. Additionally, Falcon employs a partial-sorting mechanism, allowing continuous rather than simultaneous block committing, enhancing latency stability. Finally, we incorporate an agreement trigger that, before its activation, enables nodes to wait for more blocks to be delivered and committed, thereby boosting throughput. We conduct a series of experiments to evaluate Falcon, demonstrating its superior performance."
+  },
+  {
+    "title": "Distributed Intelligent Sensing and Communications for 6G: Architecture and Use Cases",
+    "url": "http://arxiv.org/abs/2504.12765v1",
+    "arxiv_id": "2504.12765v1",
+    "authors": [
+      "Kyriakos Stylianopoulos",
+      "Giyyarpuram Madhusudan",
+      "Guillaume Jornod",
+      "Sami Mekki",
+      "Francesca Costanzo",
+      "Hui Chen",
+      "Placido Mursia",
+      "Maurizio Crozzoli",
+      "Emilio Calvanese Strinati",
+      "George C. Alexandropoulos",
+      "Henk Wymeersch"
+    ],
+    "published": "2025-04-17T09:02:36+00:00",
+    "summary": "The Distributed Intelligent Sensing and Communication (DISAC) framework redefines Integrated Sensing and Communication (ISAC) for 6G by leveraging distributed architectures to enhance scalability, adaptability, and resource efficiency. This paper presents key architectural enablers, including advanced data representation, seamless target handover, support for heterogeneous devices, and semantic integration. Two use cases illustrate the transformative potential of DISAC: smart factory shop floors and Vulnerable Road User (VRU) protection at smart intersections. These scenarios demonstrate significant improvements in precision, safety, and operational efficiency compared to traditional ISAC systems. The preliminary DISAC architecture incorporates intelligent data processing, distributed coordination, and emerging technologies such as Reconfigurable Intelligent Surfaces (RIS) to meet 6G's stringent requirements. By addressing critical challenges in sensing accuracy, latency, and real-time decision-making, DISAC positions itself as a cornerstone for next-generation wireless networks, advancing innovation in dynamic and complex environments."
+  },
+  {
+    "title": "Incorporating a Deep Neural Network into Moving Horizon Estimation for Embedded Thermal Torque Derating of an Electric Machine",
+    "url": "http://arxiv.org/abs/2504.12736v1",
+    "arxiv_id": "2504.12736v1",
+    "authors": [
+      "Alexander Winkler",
+      "Pranav Shah",
+      "Katrin Baumg\u00e4rtner",
+      "Vasu Sharma",
+      "David Gordon",
+      "Jakob Andert"
+    ],
+    "published": "2025-04-17T08:24:32+00:00",
+    "summary": "This study introduces a novel state estimation framework that incorporates Deep Neural Networks (DNNs) into Moving Horizon Estimation (MHE), shifting from traditional physics-based models to rapidly developed data-driven techniques. A DNN model with Long Short-Term Memory (LSTM) nodes is trained on synthetic data generated by a high-fidelity thermal model of a Permanent Magnet Synchronous Machine (PMSM), which undergoes thermal derating as part of the torque control strategy in a battery electric vehicle. The MHE is constructed by integrating the trained DNN with a simplified driving dynamics model in a discrete-time formulation, incorporating the LSTM hidden and cell states in the state vector to retain system dynamics. The resulting optimal control problem (OCP) is formulated as a nonlinear program (NLP) and implemented using the acados framework. Model-in-the-loop (MiL) simulations demonstrate accurate temperature estimation, even under noisy sensor conditions or failures. Achieving threefold real-time capability on embedded hardware confirms the feasibility of the approach for practical deployment. The primary focus of this study is to assess the feasibility of the MHE framework using a DNN-based plant model instead of focusing on quantitative comparisons of vehicle performance. Overall, this research highlights the potential of DNN-based MHE for real-time, safety-critical applications by combining the strengths of model-based and data-driven methods."
+  },
+  {
+    "title": "Collaborative Perception Datasets for Autonomous Driving: A Review",
+    "url": "http://arxiv.org/abs/2504.12696v1",
+    "arxiv_id": "2504.12696v1",
+    "authors": [
+      "Naibang Wang",
+      "Deyong Shang",
+      "Yan Gong",
+      "Xiaoxi Hu",
+      "Ziying Song",
+      "Lei Yang",
+      "Yuhan Huang",
+      "Xiaoyu Wang",
+      "Jianli Lu"
+    ],
+    "published": "2025-04-17T06:49:21+00:00",
+    "summary": "Collaborative perception has attracted growing interest from academia and industry due to its potential to enhance perception accuracy, safety, and robustness in autonomous driving through multi-agent information fusion. With the advancement of Vehicle-to-Everything (V2X) communication, numerous collaborative perception datasets have emerged, varying in cooperation paradigms, sensor configurations, data sources, and application scenarios. However, the absence of systematic summarization and comparative analysis hinders effective resource utilization and standardization of model evaluation. As the first comprehensive review focused on collaborative perception datasets, this work reviews and compares existing resources from a multi-dimensional perspective. We categorize datasets based on cooperation paradigms, examine their data sources and scenarios, and analyze sensor modalities and supported tasks. A detailed comparative analysis is conducted across multiple dimensions. We also outline key challenges and future directions, including dataset scalability, diversity, domain adaptation, standardization, privacy, and the integration of large language models. To support ongoing research, we provide a continuously updated online repository of collaborative perception datasets and related literature: https://github.com/frankwnb/Collaborative-Perception-Datasets-for-Autonomous-Driving."
+  },
+  {
+    "title": "Embodied-R: Collaborative Framework for Activating Embodied Spatial Reasoning in Foundation Models via Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2504.12680v1",
+    "arxiv_id": "2504.12680v1",
+    "authors": [
+      "Baining Zhao",
+      "Ziyou Wang",
+      "Jianjie Fang",
+      "Chen Gao",
+      "Fanhang Man",
+      "Jinqiang Cui",
+      "Xin Wang",
+      "Xinlei Chen",
+      "Yong Li",
+      "Wenwu Zhu"
+    ],
+    "published": "2025-04-17T06:16:11+00:00",
+    "summary": "Humans can perceive and reason about spatial relationships from sequential visual observations, such as egocentric video streams. However, how pretrained models acquire such abilities, especially high-level reasoning, remains unclear. This paper introduces Embodied-R, a collaborative framework combining large-scale Vision-Language Models (VLMs) for perception and small-scale Language Models (LMs) for reasoning. Using Reinforcement Learning (RL) with a novel reward system considering think-answer logical consistency, the model achieves slow-thinking capabilities with limited computational resources. After training on only 5k embodied video samples, Embodied-R with a 3B LM matches state-of-the-art multimodal reasoning models (OpenAI-o1, Gemini-2.5-pro) on both in-distribution and out-of-distribution embodied spatial reasoning tasks. Embodied-R also exhibits emergent thinking patterns such as systematic analysis and contextual integration. We further explore research questions including response length, training on VLM, strategies for reward design, and differences in model generalization after SFT (Supervised Fine-Tuning) and RL training."
+  },
+  {
+    "title": "Predicting Driver's Perceived Risk: a Model Based on Semi-Supervised Learning Strategy",
+    "url": "http://arxiv.org/abs/2504.12665v1",
+    "arxiv_id": "2504.12665v1",
+    "authors": [
+      "Siwei Huang",
+      "Chenhao Yang",
+      "Chuan Hu"
+    ],
+    "published": "2025-04-17T05:50:33+00:00",
+    "summary": "Drivers' perception of risk determines their acceptance, trust, and use of the Automated Driving Systems (ADSs). However, perceived risk is subjective and difficult to evaluate using existing methods. To address this issue, a driver's subjective perceived risk (DSPR) model is proposed, regarding perceived risk as a dynamically triggered mechanism with anisotropy and attenuation. 20 participants are recruited for a driver-in-the-loop experiment to report their real-time subjective risk ratings (SRRs) when experiencing various automatic driving scenarios. A convolutional neural network and bidirectional long short-term memory network with temporal pattern attention (CNN-Bi-LSTM-TPA) is embedded into a semi-supervised learning strategy to predict SRRs, aiming to reduce data noise caused by subjective randomness of participants. The results illustrate that DSPR achieves the highest prediction accuracy of 87.91% in predicting SRRs, compared to three state-of-the-art risk models. The semi-supervised strategy improves accuracy by 20.12%. Besides, CNN-Bi-LSTM-TPA network presents the highest accuracy among four different LSTM structures. This study offers an effective method for assessing driver's perceived risk, providing support for the safety enhancement of ADS and driver's trust improvement."
+  },
+  {
+    "title": "VLMGuard-R1: Proactive Safety Alignment for VLMs via Reasoning-Driven Prompt Optimization",
+    "url": "http://arxiv.org/abs/2504.12661v1",
+    "arxiv_id": "2504.12661v1",
+    "authors": [
+      "Menglan Chen",
+      "Xianghe Pang",
+      "Jingjing Dong",
+      "WenHao Wang",
+      "Yaxin Du",
+      "Siheng Chen"
+    ],
+    "published": "2025-04-17T05:46:41+00:00",
+    "summary": "Aligning Vision-Language Models (VLMs) with safety standards is essential to mitigate risks arising from their multimodal complexity, where integrating vision and language unveils subtle threats beyond the reach of conventional safeguards. Inspired by the insight that reasoning across modalities is key to preempting intricate vulnerabilities, we propose a novel direction for VLM safety: multimodal reasoning-driven prompt rewriting. To this end, we introduce VLMGuard-R1, a proactive framework that refines user inputs through a reasoning-guided rewriter, dynamically interpreting text-image interactions to deliver refined prompts that bolster safety across diverse VLM architectures without altering their core parameters. To achieve this, we devise a three-stage reasoning pipeline to synthesize a dataset that trains the rewriter to infer subtle threats, enabling tailored, actionable responses over generic refusals. Extensive experiments across three benchmarks with five VLMs reveal that VLMGuard-R1 outperforms four baselines. In particular, VLMGuard-R1 achieves a remarkable 43.59\\% increase in average safety across five models on the SIUO benchmark."
+  },
+  {
+    "title": "Photon Calibration Performance of KAGRA during the 4th Joint Observing Run (O4)",
+    "url": "http://arxiv.org/abs/2504.12657v1",
+    "arxiv_id": "2504.12657v1",
+    "authors": [
+      "Dan Chen",
+      "Shingo Hido",
+      "Darkhan Tuyenbayev",
+      "Dripta Bhattacharjee",
+      "Nobuyuki Kanda",
+      "Richard Savage",
+      "Rishabh Bajpai",
+      "Sadakazu Haino",
+      "Takahiro Sawada",
+      "Takahiro Yamamoto",
+      "Takayuki Tomaru",
+      "Yoshiki Moriwaki"
+    ],
+    "published": "2025-04-17T05:36:31+00:00",
+    "summary": "KAGRA is a kilometer-scale cryogenic gravitational-wave (GW) detector in Japan. It joined the 4th joint observing run (O4) in May 2023 in collaboration with the Laser Interferometer GW Observatory (LIGO) in the USA, and Virgo in Italy. After one month of observations, KAGRA entered a break period to enhance its sensitivity to GWs, and it is planned to rejoin O4 before its scheduled end in October 2025. To accurately recover the information encoded in the GW signals, it is essential to properly calibrate the observed signals. We employ a photon calibration (Pcal) system as a reference signal injector to calibrate the output signals obtained from the telescope. In ideal future conditions, the uncertainty in Pcal could dominate the uncertainty in the observed data. In this paper, we present the methods used to estimate the uncertainty in the Pcal systems employed during KAGRA O4 and report an estimated system uncertainty of 0.79%, which is three times lower than the uncertainty achieved in the previous 3rd joint observing run (O3) in 2020. Additionally, we investigate the uncertainty in the Pcal laser power sensors, which had the highest impact on the Pcal uncertainty, and estimate the beam positions on the KAGRA main mirror, which had the second highest impact. The Pcal systems in KAGRA are the first fully functional calibration systems for a cryogenic GW telescope. To avoid interference with the KAGRA cryogenic systems, the Pcal systems incorporate unique features regarding their placement and the use of telephoto cameras, which can capture images of the mirror surface at almost normal incidence. As future GW telescopes, such as the Einstein Telescope, are expected to adopt cryogenic techniques, the performance of the KAGRA Pcal systems can serve as a valuable reference."
+  },
+  {
+    "title": "Graph-based Path Planning with Dynamic Obstacle Avoidance for Autonomous Parking",
+    "url": "http://arxiv.org/abs/2504.12616v1",
+    "arxiv_id": "2504.12616v1",
+    "authors": [
+      "Farhad Nawaz",
+      "Minjun Sung",
+      "Darshan Gadginmath",
+      "Jovin D'sa",
+      "Sangjae Bae",
+      "David Isele",
+      "Nadia Figueroa",
+      "Nikolai Matni",
+      "Faizan M. Tariq"
+    ],
+    "published": "2025-04-17T03:43:20+00:00",
+    "summary": "Safe and efficient path planning in parking scenarios presents a significant challenge due to the presence of cluttered environments filled with static and dynamic obstacles. To address this, we propose a novel and computationally efficient planning strategy that seamlessly integrates the predictions of dynamic obstacles into the planning process, ensuring the generation of collision-free paths. Our approach builds upon the conventional Hybrid A star algorithm by introducing a time-indexed variant that explicitly accounts for the predictions of dynamic obstacles during node exploration in the graph, thus enabling dynamic obstacle avoidance. We integrate the time-indexed Hybrid A star algorithm within an online planning framework to compute local paths at each planning step, guided by an adaptively chosen intermediate goal. The proposed method is validated in diverse parking scenarios, including perpendicular, angled, and parallel parking. Through simulations, we showcase our approach's potential in greatly improving the efficiency and safety when compared to the state of the art spline-based planning method for parking situations."
+  },
+  {
+    "title": "ZeroSumEval: Scaling LLM Evaluation with Inter-Model Competition",
+    "url": "http://arxiv.org/abs/2504.12562v1",
+    "arxiv_id": "2504.12562v1",
+    "authors": [
+      "Haidar Khan",
+      "Hisham A. Alyahya",
+      "Yazeed Alnumay",
+      "M Saiful Bari",
+      "B\u00fclent Yener"
+    ],
+    "published": "2025-04-17T01:23:50+00:00",
+    "summary": "Evaluating the capabilities of Large Language Models (LLMs) has traditionally relied on static benchmark datasets, human assessments, or model-based evaluations - methods that often suffer from overfitting, high costs, and biases. ZeroSumEval is a novel competition-based evaluation protocol that leverages zero-sum games to assess LLMs with dynamic benchmarks that resist saturation. ZeroSumEval encompasses a diverse suite of games, including security challenges (PyJail), classic games (Chess, Liar's Dice, Poker), knowledge tests (MathQuiz), and persuasion challenges (Gandalf, Debate). These games are designed to evaluate a range of AI capabilities such as strategic reasoning, planning, knowledge application, and creativity. Building upon recent studies that highlight the effectiveness of game-based evaluations for LLMs, ZeroSumEval enhances these approaches by providing a standardized and extensible framework. To demonstrate this, we conduct extensive experiments with >7000 simulations across 7 games and 13 models. Our results show that while frontier models from the GPT and Claude families can play common games and answer questions, they struggle to play games that require creating novel and challenging questions. We also observe that models cannot reliably jailbreak each other and fail generally at tasks requiring creativity. We release our code at https://github.com/facebookresearch/ZeroSumEval."
+  },
+  {
+    "title": "TraCeS: Trajectory Based Credit Assignment From Sparse Safety Feedback",
+    "url": "http://arxiv.org/abs/2504.12557v1",
+    "arxiv_id": "2504.12557v1",
+    "authors": [
+      "Siow Meng Low",
+      "Akshat Kumar"
+    ],
+    "published": "2025-04-17T01:11:08+00:00",
+    "summary": "In safe reinforcement learning (RL), auxiliary safety costs are used to align the agent to safe decision making. In practice, safety constraints, including cost functions and budgets, are unknown or hard to specify, as it requires anticipation of all possible unsafe behaviors. We therefore address a general setting where the true safety definition is unknown, and has to be learned from sparsely labeled data. Our key contributions are: first, we design a safety model that performs credit assignment to estimate each decision step's impact on the overall safety using a dataset of diverse trajectories and their corresponding binary safety labels (i.e., whether the corresponding trajectory is safe/unsafe). Second, we illustrate the architecture of our safety model to demonstrate its ability to learn a separate safety score for each timestep. Third, we reformulate the safe RL problem using the proposed safety model and derive an effective algorithm to optimize a safe yet rewarding policy. Finally, our empirical results corroborate our findings and show that this approach is effective in satisfying unknown safety definition, and scalable to various continuous control tasks."
+  },
+  {
+    "title": "ELAB: Extensive LLM Alignment Benchmark in Persian Language",
+    "url": "http://arxiv.org/abs/2504.12553v1",
+    "arxiv_id": "2504.12553v1",
+    "authors": [
+      "Zahra Pourbahman",
+      "Fatemeh Rajabi",
+      "Mohammadhossein Sadeghi",
+      "Omid Ghahroodi",
+      "Somaye Bakhshaei",
+      "Arash Amini",
+      "Reza Kazemi",
+      "Mahdieh Soleymani Baghshah"
+    ],
+    "published": "2025-04-17T00:50:41+00:00",
+    "summary": "This paper presents a comprehensive evaluation framework for aligning Persian Large Language Models (LLMs) with critical ethical dimensions, including safety, fairness, and social norms. It addresses the gaps in existing LLM evaluation frameworks by adapting them to Persian linguistic and cultural contexts. This benchmark creates three types of Persian-language benchmarks: (i) translated data, (ii) new data generated synthetically, and (iii) new naturally collected data. We translate Anthropic Red Teaming data, AdvBench, HarmBench, and DecodingTrust into Persian. Furthermore, we create ProhibiBench-fa, SafeBench-fa, FairBench-fa, and SocialBench-fa as new datasets to address harmful and prohibited content in indigenous culture. Moreover, we collect extensive dataset as GuardBench-fa to consider Persian cultural norms. By combining these datasets, our work establishes a unified framework for evaluating Persian LLMs, offering a new approach to culturally grounded alignment evaluation. A systematic evaluation of Persian LLMs is performed across the three alignment aspects: safety (avoiding harmful content), fairness (mitigating biases), and social norms (adhering to culturally accepted behaviors). We present a publicly available leaderboard that benchmarks Persian LLMs with respect to safety, fairness, and social norms at: https://huggingface.co/spaces/MCILAB/LLM_Alignment_Evaluation."
+  },
+  {
+    "title": "Knowledge Acquisition on Mass-shooting Events via LLMs for AI-Driven Justice",
+    "url": "http://arxiv.org/abs/2504.12545v1",
+    "arxiv_id": "2504.12545v1",
+    "authors": [
+      "Benign John Ihugba",
+      "Afsana Nasrin",
+      "Ling Wu",
+      "Lin Li",
+      "Lijun Qian",
+      "Xishuang Dong"
+    ],
+    "published": "2025-04-17T00:13:04+00:00",
+    "summary": "Mass-shooting events pose a significant challenge to public safety, generating large volumes of unstructured textual data that hinder effective investigations and the formulation of public policy. Despite the urgency, few prior studies have effectively automated the extraction of key information from these events to support legal and investigative efforts. This paper presented the first dataset designed for knowledge acquisition on mass-shooting events through the application of named entity recognition (NER) techniques. It focuses on identifying key entities such as offenders, victims, locations, and criminal instruments, that are vital for legal and investigative purposes. The NER process is powered by Large Language Models (LLMs) using few-shot prompting, facilitating the efficient extraction and organization of critical information from diverse sources, including news articles, police reports, and social media. Experimental results on real-world mass-shooting corpora demonstrate that GPT-4o is the most effective model for mass-shooting NER, achieving the highest Micro Precision, Micro Recall, and Micro F1-scores. Meanwhile, o1-mini delivers competitive performance, making it a resource-efficient alternative for less complex NER tasks. It is also observed that increasing the shot count enhances the performance of all models, but the gains are more substantial for GPT-4o and o1-mini, highlighting their superior adaptability to few-shot learning scenarios."
+  },
+  {
+    "title": "What do people expect from Artificial Intelligence? Public opinion on alignment in AI moderation from Germany and the United States",
+    "url": "http://arxiv.org/abs/2504.12476v1",
+    "arxiv_id": "2504.12476v1",
+    "authors": [
+      "Andreas Jungherr",
+      "Adrian Rauchfleisch"
+    ],
+    "published": "2025-04-16T20:27:03+00:00",
+    "summary": "Recent advances in generative Artificial Intelligence have raised public awareness, shaping expectations and concerns about their societal implications. Central to these debates is the question of AI alignment -- how well AI systems meet public expectations regarding safety, fairness, and social values. However, little is known about what people expect from AI-enabled systems and how these expectations differ across national contexts. We present evidence from two surveys of public preferences for key functional features of AI-enabled systems in Germany (n = 1800) and the United States (n = 1756). We examine support for four types of alignment in AI moderation: accuracy and reliability, safety, bias mitigation, and the promotion of aspirational imaginaries. U.S. respondents report significantly higher AI use and consistently greater support for all alignment features, reflecting broader technological openness and higher societal involvement with AI. In both countries, accuracy and safety enjoy the strongest support, while more normatively charged goals -- like fairness and aspirational imaginaries -- receive more cautious backing, particularly in Germany. We also explore how individual experience with AI, attitudes toward free speech, political ideology, partisan affiliation, and gender shape these preferences. AI use and free speech support explain more variation in Germany. In contrast, U.S. responses show greater attitudinal uniformity, suggesting that higher exposure to AI may consolidate public expectations. These findings contribute to debates on AI governance and cross-national variation in public preferences. More broadly, our study demonstrates the value of empirically grounding AI alignment debates in public attitudes and of explicitly developing normatively grounded expectations into theoretical and policy discussions on the governance of AI-generated content."
+  },
+  {
+    "title": "Learning-based Delay Compensation for Enhanced Control of Assistive Soft Robots",
+    "url": "http://arxiv.org/abs/2504.12428v1",
+    "arxiv_id": "2504.12428v1",
+    "authors": [
+      "Adri\u00e0 Momp\u00f3 Alepuz",
+      "Dimitrios Papageorgiou",
+      "Silvia Tolu"
+    ],
+    "published": "2025-04-16T18:57:23+00:00",
+    "summary": "Soft robots are increasingly used in healthcare, especially for assistive care, due to their inherent safety and adaptability. Controlling soft robots is challenging due to their nonlinear dynamics and the presence of time delays, especially in applications like a soft robotic arm for patient care. This paper presents a learning-based approach to approximate the nonlinear state predictor (Smith Predictor), aiming to improve tracking performance in a two-module soft robot arm with a short inherent input delay. The method uses Kernel Recursive Least Squares Tracker (KRLST) for online learning of the system dynamics and a Legendre Delay Network (LDN) to compress past input history for efficient delay compensation. Experimental results demonstrate significant improvement in tracking performance compared to a baseline model-based non-linear controller. Statistical analysis confirms the significance of the improvements. The method is computationally efficient and adaptable online, making it suitable for real-world scenarios and highlighting its potential for enabling safer and more accurate control of soft robots in assistive care applications."
+  },
+  {
     "title": "Accountable Liveness",
     "url": "http://arxiv.org/abs/2504.12218v1",
     "arxiv_id": "2504.12218v1",
@@ -256,6 +658,17 @@
     ],
     "published": "2025-04-16T07:16:35+00:00",
     "summary": "Cooperative path planning is gaining its importance due to the increasing demand on using multiple unmanned aerial vehicles (UAVs) for complex missions. This work addresses the problem by introducing a new algorithm named MultiRRT that extends the rapidly exploring random tree (RRT) to generate paths for a group of UAVs to reach multiple goal locations at the same time. We first derive the dynamics constraint of the UAV and include it in the problem formulation. MultiRRT is then developed, taking into account the cooperative requirements and safe constraints during its path-searching process. The algorithm features two new mechanisms, node reduction and Bezier interpolation, to ensure the feasibility and optimality of the paths generated. Importantly, the interpolated paths are proven to meet the safety and dynamics constraints imposed by obstacles and the UAVs. A number of simulations, comparisons, and experiments have been conducted to evaluate the performance of the proposed approach. The results show that MultiRRT can generate collision-free paths for multiple UAVs to reach their goals with better scores in path length and smoothness metrics than state-of-the-art RRT variants including Theta-RRT, FN-RRT, RRT*, and RRT*-Smart. The generated paths are also tested in practical flights with real UAVs to evaluate their validity for cooperative tasks. The source code of the algorithm is available at https://github.com/duynamrcv/multi-target_RRT"
+  },
+  {
+    "title": "Towards an AI Observatory for the Nuclear Sector: A tool for anticipatory governance",
+    "url": "http://arxiv.org/abs/2504.12358v1",
+    "arxiv_id": "2504.12358v1",
+    "authors": [
+      "Aditi Verma",
+      "Elizabeth Williams"
+    ],
+    "published": "2025-04-16T03:43:15+00:00",
+    "summary": "AI models are rapidly becoming embedded in all aspects of nuclear energy research and work but the safety, security, and safeguards consequences of this embedding are not well understood. In this paper, we call for the creation of an anticipatory system of governance for AI in the nuclear sector as well as the creation of a global AI observatory as a means for operationalizing anticipatory governance. The paper explores the contours of the nuclear AI observatory and an anticipatory system of governance by drawing on work in science and technology studies, public policy, and foresight studies."
   },
   {
     "title": "Safety with Agency: Human-Centered Safety Filter with Application to AI-Assisted Motorsports",
