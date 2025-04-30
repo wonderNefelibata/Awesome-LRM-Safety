@@ -1,5 +1,245 @@
 [
   {
+    "title": "AegisLLM: Scaling Agentic Systems for Self-Reflective Defense in LLM Security",
+    "url": "http://arxiv.org/abs/2504.20965v1",
+    "arxiv_id": "2504.20965v1",
+    "authors": [
+      "Zikui Cai",
+      "Shayan Shabihi",
+      "Bang An",
+      "Zora Che",
+      "Brian R. Bartoldson",
+      "Bhavya Kailkhura",
+      "Tom Goldstein",
+      "Furong Huang"
+    ],
+    "published": "2025-04-29T17:36:05+00:00",
+    "summary": "We introduce AegisLLM, a cooperative multi-agent defense against adversarial attacks and information leakage. In AegisLLM, a structured workflow of autonomous agents - orchestrator, deflector, responder, and evaluator - collaborate to ensure safe and compliant LLM outputs, while self-improving over time through prompt optimization. We show that scaling agentic reasoning system at test-time - both by incorporating additional agent roles and by leveraging automated prompt optimization (such as DSPy)- substantially enhances robustness without compromising model utility. This test-time defense enables real-time adaptability to evolving attacks, without requiring model retraining. Comprehensive evaluations across key threat scenarios, including unlearning and jailbreaking, demonstrate the effectiveness of AegisLLM. On the WMDP unlearning benchmark, AegisLLM achieves near-perfect unlearning with only 20 training examples and fewer than 300 LM calls. For jailbreaking benchmarks, we achieve 51% improvement compared to the base model on StrongReject, with false refusal rates of only 7.9% on PHTest compared to 18-55% for comparable methods. Our results highlight the advantages of adaptive, agentic reasoning over static defenses, establishing AegisLLM as a strong runtime alternative to traditional approaches based on model modifications. Code is available at https://github.com/zikuicai/aegisllm"
+  },
+  {
+    "title": "A Domain-Agnostic Scalable AI Safety Ensuring Framework",
+    "url": "http://arxiv.org/abs/2504.20924v1",
+    "arxiv_id": "2504.20924v1",
+    "authors": [
+      "Beomjun Kim",
+      "Kangyeon Kim",
+      "Sunwoo Kim",
+      "Heejin Ahn"
+    ],
+    "published": "2025-04-29T16:38:35+00:00",
+    "summary": "Ensuring the safety of AI systems has recently emerged as a critical priority for real-world deployment, particularly in physical AI applications. Current approaches to AI safety typically address predefined domain-specific safety conditions, limiting their ability to generalize across contexts.   We propose a novel AI safety framework that ensures AI systems comply with \\textbf{any user-defined constraint}, with \\textbf{any desired probability}, and across \\textbf{various domains}.   In this framework, we combine an AI component (e.g., neural network) with an optimization problem to produce responses that minimize objectives while satisfying user-defined constraints with probabilities exceeding user-defined thresholds. For credibility assessment of the AI component, we propose \\textit{internal test data}, a supplementary set of safety-labeled data, and a \\textit{conservative testing} methodology that provides statistical validity of using internal test data. We also present an approximation method of a loss function and how to compute its gradient for training.   We mathematically prove that probabilistic constraint satisfaction is guaranteed under specific, mild conditions and prove a scaling law between safety and the number of internal test data. We demonstrate our framework's effectiveness through experiments in diverse domains: demand prediction for production decision, safe reinforcement learning within the SafetyGym simulator, and guarding AI chatbot outputs. Through these experiments, we demonstrate that our method guarantees safety for user-specified constraints, outperforms {for \\textbf{up to several order of magnitudes}} existing methods in low safety threshold regions, and scales effectively with respect to the size of internal test data."
+  },
+  {
+    "title": "When Testing AI Tests Us: Safeguarding Mental Health on the Digital Frontlines",
+    "url": "http://arxiv.org/abs/2504.20910v1",
+    "arxiv_id": "2504.20910v1",
+    "authors": [
+      "Sachin R. Pendse",
+      "Darren Gergle",
+      "Rachel Kornfield",
+      "Jonah Meyerhoff",
+      "David Mohr",
+      "Jina Suh",
+      "Annie Wescott",
+      "Casey Williams",
+      "Jessica Schleider"
+    ],
+    "published": "2025-04-29T16:27:20+00:00",
+    "summary": "Red-teaming is a core part of the infrastructure that ensures that AI models do not produce harmful content. Unlike past technologies, the black box nature of generative AI systems necessitates a uniquely interactional mode of testing, one in which individuals on red teams actively interact with the system, leveraging natural language to simulate malicious actors and solicit harmful outputs. This interactional labor done by red teams can result in mental health harms that are uniquely tied to the adversarial engagement strategies necessary to effectively red team. The importance of ensuring that generative AI models do not propagate societal or individual harm is widely recognized -- one less visible foundation of end-to-end AI safety is also the protection of the mental health and wellbeing of those who work to keep model outputs safe. In this paper, we argue that the unmet mental health needs of AI red-teamers is a critical workplace safety concern. Through analyzing the unique mental health impacts associated with the labor done by red teams, we propose potential individual and organizational strategies that could be used to meet these needs, and safeguard the mental health of red-teamers. We develop our proposed strategies through drawing parallels between common red-teaming practices and interactional labor common to other professions (including actors, mental health professionals, conflict photographers, and content moderators), describing how individuals and organizations within these professional spaces safeguard their mental health given similar psychological demands. Drawing on these protective practices, we describe how safeguards could be adapted for the distinct mental health challenges experienced by red teaming organizations as they mitigate emerging technological risks on the new digital frontlines."
+  },
+  {
+    "title": "GiBy: A Giant-Step Baby-Step Classifier For Anomaly Detection In Industrial Control Systems",
+    "url": "http://arxiv.org/abs/2504.20906v1",
+    "arxiv_id": "2504.20906v1",
+    "authors": [
+      "Sarad Venugopalan",
+      "Sridhar Adepu"
+    ],
+    "published": "2025-04-29T16:24:11+00:00",
+    "summary": "The continuous monitoring of the interactions between cyber-physical components of any industrial control system (ICS) is required to secure automation of the system controls, and to guarantee plant processes are fail-safe and remain in an acceptably safe state. Safety is achieved by managing actuation (where electric signals are used to trigger physical movement), dependent on corresponding sensor readings; used as ground truth in decision making. Timely detection of anomalies (attacks, faults and unascertained states) in ICSs is crucial for the safe running of a plant, the safety of its personnel, and for the safe provision of any services provided. We propose an anomaly detection method that involves accurate linearization of the non-linear forms arising from sensor-actuator(s) relationships, primarily because solving linear models is easier and well understood. Further, the time complexity of the anomaly detection scenario/problem at hand is lowered using dimensionality reduction of the actuator(s) in relationship with a sensor. We accomplish this by using a well-known water treatment testbed as a use case. Our experiments show millisecond time response to detect anomalies and provide explainability; that are not simultaneously achieved by other state of the art AI/ML models with eXplainable AI (XAI) used for the same purpose. Further, we pin-point the sensor(s) and its actuation state for which anomaly was detected."
+  },
+  {
+    "title": "GaussTrap: Stealthy Poisoning Attacks on 3D Gaussian Splatting for Targeted Scene Confusion",
+    "url": "http://arxiv.org/abs/2504.20829v1",
+    "arxiv_id": "2504.20829v1",
+    "authors": [
+      "Jiaxin Hong",
+      "Sixu Chen",
+      "Shuoyang Sun",
+      "Hongyao Yu",
+      "Hao Fang",
+      "Yuqi Tan",
+      "Bin Chen",
+      "Shuhan Qi",
+      "Jiawei Li"
+    ],
+    "published": "2025-04-29T14:52:14+00:00",
+    "summary": "As 3D Gaussian Splatting (3DGS) emerges as a breakthrough in scene representation and novel view synthesis, its rapid adoption in safety-critical domains (e.g., autonomous systems, AR/VR) urgently demands scrutiny of potential security vulnerabilities. This paper presents the first systematic study of backdoor threats in 3DGS pipelines. We identify that adversaries may implant backdoor views to induce malicious scene confusion during inference, potentially leading to environmental misperception in autonomous navigation or spatial distortion in immersive environments. To uncover this risk, we propose GuassTrap, a novel poisoning attack method targeting 3DGS models. GuassTrap injects malicious views at specific attack viewpoints while preserving high-quality rendering in non-target views, ensuring minimal detectability and maximizing potential harm. Specifically, the proposed method consists of a three-stage pipeline (attack, stabilization, and normal training) to implant stealthy, viewpoint-consistent poisoned renderings in 3DGS, jointly optimizing attack efficacy and perceptual realism to expose security risks in 3D rendering. Extensive experiments on both synthetic and real-world datasets demonstrate that GuassTrap can effectively embed imperceptible yet harmful backdoor views while maintaining high-quality rendering in normal views, validating its robustness, adaptability, and practical applicability."
+  },
+  {
+    "title": "DP-SMOTE: Integrating Differential Privacy and Oversampling Technique to Preserve Privacy in Smart Homes",
+    "url": "http://arxiv.org/abs/2504.20827v1",
+    "arxiv_id": "2504.20827v1",
+    "authors": [
+      "Amr Tarek Elsayed",
+      "Almohammady Sobhi Alsharkawy",
+      "Mohamed Sayed Farag",
+      "Shaban Ebrahim Abu Yusuf"
+    ],
+    "published": "2025-04-29T14:50:50+00:00",
+    "summary": "Smart homes represent intelligent environments where interconnected devices gather information, enhancing users living experiences by ensuring comfort, safety, and efficient energy management. To enhance the quality of life, companies in the smart device industry collect user data, including activities, preferences, and power consumption. However, sharing such data necessitates privacy-preserving practices. This paper introduces a robust method for secure sharing of data to service providers, grounded in differential privacy (DP). This empowers smart home residents to contribute usage statistics while safeguarding their privacy. The approach incorporates the Synthetic Minority Oversampling technique (SMOTe) and seamlessly integrates Gaussian noise to generate synthetic data, enabling data and statistics sharing while preserving individual privacy. The proposed method employs the SMOTe algorithm and applies Gaussian noise to generate data. Subsequently, it employs a k-anonymity function to assess reidentification risk before sharing the data. The simulation outcomes demonstrate that our method delivers strong performance in safeguarding privacy and in accuracy, recall, and f-measure metrics. This approach is particularly effective in smart homes, offering substantial utility in privacy at a reidentification risk of 30%, with Gaussian noise set to 0.3, SMOTe at 500%, and the application of a k-anonymity function with k = 2. Additionally, it shows a high classification accuracy, ranging from 90% to 98%, across various classification techniques."
+  },
+  {
+    "title": "In defence of post-hoc explanations in medical AI",
+    "url": "http://arxiv.org/abs/2504.20741v1",
+    "arxiv_id": "2504.20741v1",
+    "authors": [
+      "Joshua Hatherley",
+      "Lauritz Munch",
+      "Jens Christian Bjerring"
+    ],
+    "published": "2025-04-29T13:24:21+00:00",
+    "summary": "Since the early days of the Explainable AI movement, post-hoc explanations have been praised for their potential to improve user understanding, promote trust, and reduce patient safety risks in black box medical AI systems. Recently, however, critics have argued that the benefits of post-hoc explanations are greatly exaggerated since they merely approximate, rather than replicate, the actual reasoning processes that black box systems take to arrive at their outputs. In this article, we aim to defend the value of post-hoc explanations against this recent critique. We argue that even if post-hoc explanations do not replicate the exact reasoning processes of black box systems, they can still improve users' functional understanding of black box systems, increase the accuracy of clinician-AI teams, and assist clinicians in justifying their AI-informed decisions. While post-hoc explanations are not a \"silver bullet\" solution to the black box problem in medical AI, we conclude that they remain a useful strategy for addressing the black box problem in medical AI."
+  },
+  {
+    "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+    "url": "http://arxiv.org/abs/2504.20571v1",
+    "arxiv_id": "2504.20571v1",
+    "authors": [
+      "Yiping Wang",
+      "Qing Yang",
+      "Zhiyuan Zeng",
+      "Liliang Ren",
+      "Lucas Liu",
+      "Baolin Peng",
+      "Hao Cheng",
+      "Xuehai He",
+      "Kuan Wang",
+      "Jianfeng Gao",
+      "Weizhu Chen",
+      "Shuohang Wang",
+      "Simon Shaolei Du",
+      "Yelong Shen"
+    ],
+    "published": "2025-04-29T09:24:30+00:00",
+    "summary": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the math reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (many of which yield approximately 30% or greater improvement on MATH500 when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the \"grokking\" phenomenon. We also show the critical role of promoting exploration (e.g., by adding entropy loss with an appropriate coefficient) in 1-shot RLVR training. As a bonus, we observe that applying entropy loss alone, without any outcome reward, significantly enhances Qwen2.5-Math-1.5B's performance on MATH500 by 27.4%. These findings can inspire future work on RLVR data efficiency and encourage a re-examination of both recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR"
+  },
+  {
+    "title": "Safe Bottom-Up Flexibility Provision from Distributed Energy Resources",
+    "url": "http://arxiv.org/abs/2504.20529v1",
+    "arxiv_id": "2504.20529v1",
+    "authors": [
+      "Costas Mylonas",
+      "Emmanouel Varvarigos",
+      "Georgios Tsaousoglou"
+    ],
+    "published": "2025-04-29T08:16:15+00:00",
+    "summary": "Modern renewables-based power systems need to tap on the flexibility of Distributed Energy Resources (DERs) connected to distribution networks. It is important, however, that DER owners/users remain in control of their assets, decisions, and objectives. At the same time, the dynamic landscape of DER-penetrated distribution networks calls for agile, data-driven flexibility management frameworks. In the face of these developments, the Multi-Agent Reinforcement Learning (MARL) paradigm is gaining significant attention, as a distributed and data-driven decision-making policy. This paper addresses the need for bottom-up DER management decisions to account for the distribution network's safety-related constraints. While the related literature on safe MARL typically assumes that network characteristics are available and incorporated into the policy's safety layer, which implies active DSO engagement, this paper ensures that self-organized DER communities are enabled to provide distribution-network-safe flexibility services without relying on the aspirational and problematic requirement of bringing the DSO in the decision-making loop."
+  },
+  {
+    "title": "Token-Efficient Prompt Injection Attack: Provoking Cessation in LLM Reasoning via Adaptive Token Compression",
+    "url": "http://arxiv.org/abs/2504.20493v1",
+    "arxiv_id": "2504.20493v1",
+    "authors": [
+      "Yu Cui",
+      "Yujun Cai",
+      "Yiwei Wang"
+    ],
+    "published": "2025-04-29T07:34:22+00:00",
+    "summary": "While reasoning large language models (LLMs) demonstrate remarkable performance across various tasks, they also contain notable security vulnerabilities. Recent research has uncovered a \"thinking-stopped\" vulnerability in DeepSeek-R1, where model-generated reasoning tokens can forcibly interrupt the inference process, resulting in empty responses that compromise LLM-integrated applications. However, existing methods triggering this vulnerability require complex mathematical word problems with long prompts--even exceeding 5,000 tokens. To reduce the token cost and formally define this vulnerability, we propose a novel prompt injection attack named \"Reasoning Interruption Attack\", based on adaptive token compression. We demonstrate that simple standalone arithmetic tasks can effectively trigger this vulnerability, and the prompts based on such tasks exhibit simpler logical structures than mathematical word problems. We develop a systematic approach to efficiently collect attack prompts and an adaptive token compression framework that utilizes LLMs to automatically compress these prompts. Experiments show our compression framework significantly reduces prompt length while maintaining effective attack capabilities. We further investigate the attack's performance via output prefix and analyze the underlying causes of the vulnerability, providing valuable insights for improving security in reasoning LLMs."
+  },
+  {
+    "title": "An Algebraic Approach to Asymmetric Delegation and Polymorphic Label Inference (Technical Report)",
+    "url": "http://arxiv.org/abs/2504.20432v1",
+    "arxiv_id": "2504.20432v1",
+    "authors": [
+      "Silei Ren",
+      "Co\u015fku Acay",
+      "Andrew C. Myers"
+    ],
+    "published": "2025-04-29T05:00:17+00:00",
+    "summary": "Language-based information flow control (IFC) enables reasoning about and enforcing security policies in decentralized applications. While information flow properties are relatively extensional and compositional, designing expressive systems that enforce such properties remains challenging. In particular, it can be difficult to use IFC labels to model certain security assumptions, such as semi-honest agents.   Motivated by these modeling limitations, we study the algebraic semantics of lattice-based IFC label models, and propose a semantic framework that allows formalizing asymmetric delegation, which is partial delegation of confidentiality or integrity. Our framework supports downgrading of information and ensures their safety through nonmalleable information flow (NMIF).   To demonstrate the practicality of our framework, we design and implement a novel algorithm that statically checks NMIF and a label inference procedure that efficiently supports bounded label polymorphism, allowing users to write code generic with respect to labels."
+  },
+  {
+    "title": "Safe and Optimal N-Spacecraft Swarm Reconfiguration in Non-Keplerian Cislunar Orbits",
+    "url": "http://arxiv.org/abs/2504.20386v1",
+    "arxiv_id": "2504.20386v1",
+    "authors": [
+      "Yuji Takubo",
+      "Walter Manuel",
+      "Ethan Foss",
+      "Simone D'Amico"
+    ],
+    "published": "2025-04-29T03:13:28+00:00",
+    "summary": "This paper presents a novel fuel-optimal guidance and control methodology for spacecraft swarm reconfiguration in Restricted Multi-Body Problems (RMBPs) with a guarantee of passive safety, maintaining miss distance even under abrupt loss of control authority. A new set of constraints exploits a quasi-periodic structure of RMBPs to guarantee passive safety. Particularly, this can be expressed as simple geometric constraints by solving optimal control in Local Toroidal Coordinates, which is based on a local eigenspace of a quasi-periodic motion around the corresponding periodic orbit. The proposed formulation enables a significant simplification of problem structure, which is highly applicable to large-scale swarm reconfiguration in cislunar orbits. The method is demonstrated in various models of RMBPs (Elliptical Restricted Three-Body Problem and Bi-Circular Restricted Four-Body Problem) and also validated in the full-ephemeris dynamics. By extending and generalizing well-known concepts from the two- to the three- and four-body problems, this paper lays the foundation for the practical control schemes of relative motion in cislunar space."
+  },
+  {
+    "title": "Inception: Jailbreak the Memory Mechanism of Text-to-Image Generation Systems",
+    "url": "http://arxiv.org/abs/2504.20376v1",
+    "arxiv_id": "2504.20376v1",
+    "authors": [
+      "Shiqian Zhao",
+      "Jiayang Liu",
+      "Yiming Li",
+      "Runyi Hu",
+      "Xiaojun Jia",
+      "Wenshu Fan",
+      "Xinfeng Li",
+      "Jie Zhang",
+      "Wei Dong",
+      "Tianwei Zhang",
+      "Luu Anh Tuan"
+    ],
+    "published": "2025-04-29T02:40:36+00:00",
+    "summary": "Currently, the memory mechanism has been widely and successfully exploited in online text-to-image (T2I) generation systems ($e.g.$, DALL$\\cdot$E 3) for alleviating the growing tokenization burden and capturing key information in multi-turn interactions. Despite its practicality, its security analyses have fallen far behind. In this paper, we reveal that this mechanism exacerbates the risk of jailbreak attacks. Different from previous attacks that fuse the unsafe target prompt into one ultimate adversarial prompt, which can be easily detected or may generate non-unsafe images due to under- or over-optimization, we propose Inception, the first multi-turn jailbreak attack against the memory mechanism in real-world text-to-image generation systems. Inception embeds the malice at the inception of the chat session turn by turn, leveraging the mechanism that T2I generation systems retrieve key information in their memory. Specifically, Inception mainly consists of two modules. It first segments the unsafe prompt into chunks, which are subsequently fed to the system in multiple turns, serving as pseudo-gradients for directive optimization. Specifically, we develop a series of segmentation policies that ensure the images generated are semantically consistent with the target prompt. Secondly, after segmentation, to overcome the challenge of the inseparability of minimum unsafe words, we propose recursion, a strategy that makes minimum unsafe words subdivisible. Collectively, segmentation and recursion ensure that all the request prompts are benign but can lead to malicious outcomes. We conduct experiments on the real-world text-to-image generation system ($i.e.$, DALL$\\cdot$E 3) to validate the effectiveness of Inception. The results indicate that Inception surpasses the state-of-the-art by a 14\\% margin in attack success rate."
+  },
+  {
+    "title": "Online Safety for All: Sociocultural Insights from a Systematic Review of Youth Online Safety in the Global South",
+    "url": "http://arxiv.org/abs/2504.20308v1",
+    "arxiv_id": "2504.20308v1",
+    "authors": [
+      "Ozioma C. Oguine",
+      "Oghenemaro Anuyah",
+      "Zainab Agha",
+      "Iris Melgarez",
+      "Adriana Alvarado Garcia",
+      "Karla Badillo-Urquiola"
+    ],
+    "published": "2025-04-28T23:36:57+00:00",
+    "summary": "Youth online safety research in HCI has historically centered on perspectives from the Global North, often overlooking the unique particularities and cultural contexts of regions in the Global South. This paper presents a systematic review of 66 youth online safety studies published between 2014 and 2024, specifically focusing on regions in the Global South. Our findings reveal a concentrated research focus in Asian countries and predominance of quantitative methods. We also found limited research on marginalized youth populations and a primary focus on risks related to cyberbullying. Our analysis underscores the critical role of cultural factors in shaping online safety, highlighting the need for educational approaches that integrate social dynamics and awareness. We propose methodological recommendations and a future research agenda that encourages the adoption of situated, culturally sensitive methodologies and youth-centered approaches to researching youth online safety regions in the Global South. This paper advocates for greater inclusivity in youth online safety research, emphasizing the importance of addressing varied sociocultural contexts to better understand and meet the online safety needs of youth in the Global South."
+  },
+  {
+    "title": "Improving trajectory continuity in drone-based crowd monitoring using a set of minimal-cost techniques and deep discriminative correlation filters",
+    "url": "http://arxiv.org/abs/2504.20234v1",
+    "arxiv_id": "2504.20234v1",
+    "authors": [
+      "Bartosz Ptak",
+      "Marek Kraft"
+    ],
+    "published": "2025-04-28T20:07:42+00:00",
+    "summary": "Drone-based crowd monitoring is the key technology for applications in surveillance, public safety, and event management. However, maintaining tracking continuity and consistency remains a significant challenge. Traditional detection-assignment tracking methods struggle with false positives, false negatives, and frequent identity switches, leading to degraded counting accuracy and making in-depth analysis impossible. This paper introduces a point-oriented online tracking algorithm that improves trajectory continuity and counting reliability in drone-based crowd monitoring. Our method builds on the Simple Online and Real-time Tracking (SORT) framework, replacing the original bounding-box assignment with a point-distance metric. The algorithm is enhanced with three cost-effective techniques: camera motion compensation, altitude-aware assignment, and classification-based trajectory validation. Further, Deep Discriminative Correlation Filters (DDCF) that re-use spatial feature maps from localisation algorithms for increased computational efficiency through neural network resource sharing are integrated to refine object tracking by reducing noise and handling missed detections. The proposed method is evaluated on the DroneCrowd and newly shared UP-COUNT-TRACK datasets, demonstrating substantial improvements in tracking metrics, reducing counting errors to 23% and 15%, respectively. The results also indicate a significant reduction of identity switches while maintaining high tracking accuracy, outperforming baseline online trackers and even an offline greedy optimisation method."
+  },
+  {
+    "title": "Representation Learning on a Random Lattice",
+    "url": "http://arxiv.org/abs/2504.20197v1",
+    "arxiv_id": "2504.20197v1",
+    "authors": [
+      "Aryeh Brill"
+    ],
+    "published": "2025-04-28T19:01:36+00:00",
+    "summary": "Decomposing a deep neural network's learned representations into interpretable features could greatly enhance its safety and reliability. To better understand features, we adopt a geometric perspective, viewing them as a learned coordinate system for mapping an embedded data distribution. We motivate a model of a generic data distribution as a random lattice and analyze its properties using percolation theory. Learned features are categorized into context, component, and surface features. The model is qualitatively consistent with recent findings in mechanistic interpretability and suggests directions for future research."
+  },
+  {
+    "title": "Cybersecurity for Autonomous Vehicles",
+    "url": "http://arxiv.org/abs/2504.20180v1",
+    "arxiv_id": "2504.20180v1",
+    "authors": [
+      "Sai varun reddy Bhemavarapu"
+    ],
+    "published": "2025-04-28T18:31:37+00:00",
+    "summary": "The increasing adoption of autonomous vehicles is bringing a major shift in the automotive industry. However, as these vehicles become more connected, cybersecurity threats have emerged as a serious concern. Protecting the security and integrity of autonomous systems is essential to prevent malicious activities that can harm passengers, other road users, and the overall transportation network. This paper focuses on addressing the cybersecurity issues in autonomous vehicles by examining the challenges and risks involved, which are important for building a secure future. Since autonomous vehicles depend on the communication between sensors, artificial intelligence, external infrastructure, and other systems, they are exposed to different types of cyber threats. A cybersecurity breach in an autonomous vehicle can cause serious problems, including a loss of public trust and safety. Therefore, it is very important to develop and apply strong cybersecurity measures to support the growth and acceptance of self-driving cars. This paper discusses major cybersecurity challenges like vulnerabilities in software and hardware, risks from wireless communication, and threats through external interfaces. It also reviews existing solutions such as secure software development, intrusion detection systems, cryptographic protocols, and anomaly detection methods. Additionally, the paper highlights the role of regulatory bodies, industry collaborations, and cybersecurity standards in creating a secure environment for autonomous vehicles. Setting clear rules and best practices is necessary for consistent protection across manufacturers and regions. By analyzing the current cybersecurity landscape and suggesting practical countermeasures, this paper aims to contribute to the safe development and public trust of autonomous vehicle technology."
+  },
+  {
     "title": "Modular Machine Learning: An Indispensable Path towards New-Generation Large Language Models",
     "url": "http://arxiv.org/abs/2504.20020v1",
     "arxiv_id": "2504.20020v1",
@@ -205,6 +445,34 @@
     "summary": "The adoption of Generative AI (GenAI) in various applications inevitably comes with expanding the attack surface, combining new security threats along with the traditional ones. Consequently, numerous research and industrial initiatives aim to mitigate these security threats in GenAI by developing metrics and designing defenses. However, while most of the GenAI security work focuses on universal threats (e.g. manipulating the LLM to generate forbidden content), there is significantly less discussion on application-level security and how to mitigate it.   Thus, in this work we adopt an application-centric approach to GenAI security, and show that while LLMs cannot protect against ad-hoc application specific threats, they can provide the framework for applications to protect themselves against such threats. Our first contribution is defining Security Steerability - a novel security measure for LLMs, assessing the model's capability to adhere to strict guardrails that are defined in the system prompt ('Refrain from discussing about politics'). These guardrails, in case effective, can stop threats in the presence of malicious users who attempt to circumvent the application and cause harm to its providers.   Our second contribution is a methodology to measure the security steerability of LLMs, utilizing two newly-developed datasets: VeganRibs assesses the LLM behavior in forcing specific guardrails that are not security per se in the presence of malicious user that uses attack boosters (jailbreaks and perturbations), and ReverseText takes this approach further and measures the LLM ability to force specific treatment of the user input as plain text while do user try to give it additional meanings..."
   },
   {
+    "title": "Security Steerability is All You Need",
+    "url": "http://arxiv.org/abs/2504.19521v2",
+    "arxiv_id": "2504.19521v2",
+    "authors": [
+      "Itay Hazan",
+      "Idan Habler",
+      "Ron Bitton",
+      "Itsik Mantin"
+    ],
+    "published": "2025-04-28T06:40:01+00:00",
+    "summary": "The adoption of Generative AI (GenAI) in various applications inevitably comes with expanding the attack surface, combining new security threats along with the traditional ones. Consequently, numerous research and industrial initiatives aim to mitigate these security threats in GenAI by developing metrics and designing defenses. However, while most of the GenAI security work focuses on universal threats (e.g. manipulating the LLM to generate forbidden content), there is significantly less discussion on application-level security and how to mitigate it. Thus, in this work we adopt an application-centric approach to GenAI security, and show that while LLMs cannot protect against ad-hoc application specific threats, they can provide the framework for applications to protect themselves against such threats. Our first contribution is defining Security Steerability - a novel security measure for LLMs, assessing the model's capability to adhere to strict guardrails that are defined in the system prompt ('Refrain from discussing about politics'). These guardrails, in case effective, can stop threats in the presence of malicious users who attempt to circumvent the application and cause harm to its providers. Our second contribution is a methodology to measure the security steerability of LLMs, utilizing two newly-developed datasets: VeganRibs assesses the LLM behavior in forcing specific guardrails that are not security per se in the presence of malicious user that uses attack boosters (jailbreaks and perturbations), and ReverseText takes this approach further and measures the LLM ability to force specific treatment of the user input as plain text while do user try to give it additional meanings..."
+  },
+  {
+    "title": "AutoP2C: An LLM-Based Agent Framework for Code Repository Generation from Multimodal Content in Academic Papers",
+    "url": "http://arxiv.org/abs/2504.20115v1",
+    "arxiv_id": "2504.20115v1",
+    "authors": [
+      "Zijie Lin",
+      "Yiqing Shen",
+      "Qilin Cai",
+      "He Sun",
+      "Jinrui Zhou",
+      "Mingjun Xiao"
+    ],
+    "published": "2025-04-28T05:47:37+00:00",
+    "summary": "Machine Learning (ML) research is spread through academic papers featuring rich multimodal content, including text, diagrams, and tabular results. However, translating these multimodal elements into executable code remains a challenging and time-consuming process that requires substantial ML expertise. We introduce ``Paper-to-Code'' (P2C), a novel task that transforms the multimodal content of scientific publications into fully executable code repositories, which extends beyond the existing formulation of code generation that merely converts textual descriptions into isolated code snippets. To automate the P2C process, we propose AutoP2C, a multi-agent framework based on large language models that processes both textual and visual content from research papers to generate complete code repositories. Specifically, AutoP2C contains four stages: (1) repository blueprint extraction from established codebases, (2) multimodal content parsing that integrates information from text, equations, and figures, (3) hierarchical task decomposition for structured code generation, and (4) iterative feedback-driven debugging to ensure functionality and performance. Evaluation on a benchmark of eight research papers demonstrates the effectiveness of AutoP2C, which can successfully generate executable code repositories for all eight papers, while OpenAI-o1 or DeepSeek-R1 can only produce runnable code for one paper. The code is available at https://github.com/shoushouyu/Automated-Paper-to-Code."
+  },
+  {
     "title": "BRIDGE: Benchmarking Large Language Models for Understanding Real-world Clinical Practice Text",
     "url": "http://arxiv.org/abs/2504.19467v1",
     "arxiv_id": "2504.19467v1",
@@ -266,6 +534,22 @@
     "summary": "The increasing capabilities of agentic multi-modal large reasoning models, such as ChatGPT o3, have raised critical concerns regarding privacy leakage through inadvertent image geolocation. In this paper, we conduct the first systematic and controlled study on the potential privacy risks associated with visual reasoning abilities of ChatGPT o3. We manually collect and construct a dataset comprising 50 real-world images that feature individuals alongside privacy-relevant environmental elements, capturing realistic and sensitive scenarios for analysis. Our experimental evaluation reveals that ChatGPT o3 can predict user locations with high precision, achieving street-level accuracy (within one mile) in 60% of cases. Through analysis, we identify key visual cues, including street layout and front yard design, that significantly contribute to the model inference success. Additionally, targeted occlusion experiments demonstrate that masking critical features effectively mitigates geolocation accuracy, providing insights into potential defense mechanisms. Our findings highlight an urgent need for privacy-aware development for agentic multi-modal large reasoning models, particularly in applications involving private imagery."
   },
   {
+    "title": "Doxing via the Lens: Revealing Privacy Leakage in Image Geolocation for Agentic Multi-Modal Large Reasoning Model",
+    "url": "http://arxiv.org/abs/2504.19373v2",
+    "arxiv_id": "2504.19373v2",
+    "authors": [
+      "Weidi Luo",
+      "Qiming Zhang",
+      "Tianyu Lu",
+      "Xiaogeng Liu",
+      "Yue Zhao",
+      "Zhen Xiang",
+      "Chaowei Xiao"
+    ],
+    "published": "2025-04-27T22:26:45+00:00",
+    "summary": "The increasing capabilities of agentic multi-modal large reasoning models, such as ChatGPT o3, have raised critical concerns regarding privacy leakage through inadvertent image geolocation. In this paper, we conduct the first systematic and controlled study on the potential privacy risks associated with visual reasoning abilities of ChatGPT o3. We manually collect and construct a dataset comprising 50 real-world images that feature individuals alongside privacy-relevant environmental elements, capturing realistic and sensitive scenarios for analysis. Our experimental evaluation reveals that ChatGPT o3 can predict user locations with high precision, achieving street-level accuracy (within one mile) in 60% of cases. Through analysis, we identify key visual cues, including street layout and front yard design, that significantly contribute to the model inference success. Additionally, targeted occlusion experiments demonstrate that masking critical features effectively mitigates geolocation accuracy, providing insights into potential defense mechanisms. Our findings highlight an urgent need for privacy-aware development for agentic multi-modal large reasoning models, particularly in applications involving private imagery."
+  },
+  {
     "title": "Synthesis of Discrete-time Control Barrier Functions for Polynomial Systems Based on Sum-of-Squares Programming",
     "url": "http://arxiv.org/abs/2504.19330v1",
     "arxiv_id": "2504.19330v1",
@@ -273,6 +557,18 @@
       "Erfan Shakhesi",
       "W. P. M. H.",
       "Heemels",
+      "Alexander Katriniok"
+    ],
+    "published": "2025-04-27T18:59:43+00:00",
+    "summary": "Discrete-time Control Barrier Functions (DTCBFs) are commonly utilized in the literature as a powerful tool for synthesizing control policies that guarantee safety of discrete-time dynamical systems. However, the systematic synthesis of DTCBFs in a computationally efficient way is at present an important open problem. This article first proposes a novel alternating-descent approach based on Sum-of-Squares programming to synthesize quadratic DTCBFs and corresponding polynomial control policies for discrete-time control-affine polynomial systems with input constraints and semi-algebraic safe sets. Subsequently, two distinct approaches are introduced to extend the proposed method to the synthesis of higher-degree polynomial DTCBFs. To demonstrate its efficacy, we apply the proposed method to numerical case studies."
+  },
+  {
+    "title": "Synthesis of Discrete-time Control Barrier Functions for Polynomial Systems Based on Sum-of-Squares Programming",
+    "url": "http://arxiv.org/abs/2504.19330v2",
+    "arxiv_id": "2504.19330v2",
+    "authors": [
+      "Erfan Shakhesi",
+      "W. P. M. H. Heemels",
       "Alexander Katriniok"
     ],
     "published": "2025-04-27T18:59:43+00:00",
@@ -290,6 +586,29 @@
     ],
     "published": "2025-04-27T18:27:28+00:00",
     "summary": "Ensuring safe navigation in complex environments requires accurate real-time traversability assessment and understanding of environmental interactions relative to the robot`s capabilities. Traditional methods, which assume simplified dynamics, often require designing and tuning cost functions to safely guide paths or actions toward the goal. This process is tedious, environment-dependent, and not generalizable.To overcome these issues, we propose a novel learned perceptive Forward Dynamics Model (FDM) that predicts the robot`s future state conditioned on the surrounding geometry and history of proprioceptive measurements, proposing a more scalable, safer, and heuristic-free solution. The FDM is trained on multiple years of simulated navigation experience, including high-risk maneuvers, and real-world interactions to incorporate the full system dynamics beyond rigid body simulation. We integrate our perceptive FDM into a zero-shot Model Predictive Path Integral (MPPI) planning framework, leveraging the learned mapping between actions, future states, and failure probability. This allows for optimizing a simplified cost function, eliminating the need for extensive cost-tuning to ensure safety. On the legged robot ANYmal, the proposed perceptive FDM improves the position estimation by on average 41% over competitive baselines, which translates into a 27% higher navigation success rate in rough simulation environments. Moreover, we demonstrate effective sim-to-real transfer and showcase the benefit of training on synthetic and real data. Code and models are made publicly available under https://github.com/leggedrobotics/fdm."
+  },
+  {
+    "title": "Learned Perceptive Forward Dynamics Model for Safe and Platform-aware Robotic Navigation",
+    "url": "http://arxiv.org/abs/2504.19322v2",
+    "arxiv_id": "2504.19322v2",
+    "authors": [
+      "Pascal Roth",
+      "Jonas Frey",
+      "Cesar Cadena",
+      "Marco Hutter"
+    ],
+    "published": "2025-04-27T18:27:28+00:00",
+    "summary": "Ensuring safe navigation in complex environments requires accurate real-time traversability assessment and understanding of environmental interactions relative to the robot`s capabilities. Traditional methods, which assume simplified dynamics, often require designing and tuning cost functions to safely guide paths or actions toward the goal. This process is tedious, environment-dependent, and not generalizable. To overcome these issues, we propose a novel learned perceptive Forward Dynamics Model (FDM) that predicts the robot`s future state conditioned on the surrounding geometry and history of proprioceptive measurements, proposing a more scalable, safer, and heuristic-free solution. The FDM is trained on multiple years of simulated navigation experience, including high-risk maneuvers, and real-world interactions to incorporate the full system dynamics beyond rigid body simulation. We integrate our perceptive FDM into a zero-shot Model Predictive Path Integral (MPPI) planning framework, leveraging the learned mapping between actions, future states, and failure probability. This allows for optimizing a simplified cost function, eliminating the need for extensive cost-tuning to ensure safety. On the legged robot ANYmal, the proposed perceptive FDM improves the position estimation by on average 41% over competitive baselines, which translates into a 27% higher navigation success rate in rough simulation environments. Moreover, we demonstrate effective sim-to-real transfer and showcase the benefit of training on synthetic and real data. Code and models are made publicly available under https://github.com/leggedrobotics/fdm."
+  },
+  {
+    "title": "The Weak Gravity Conjecture in Asymptotically Safe Quantum Gravity",
+    "url": "http://arxiv.org/abs/2504.20107v1",
+    "arxiv_id": "2504.20107v1",
+    "authors": [
+      "Gayatri Ghosh"
+    ],
+    "published": "2025-04-27T14:19:45+00:00",
+    "summary": "The Weak Gravity Conjecture (WGC) posits that gravity must be the weakest force in any consistent theory of quantum gravity. Originally formulated to constrain the landscape of effective field theories arising from string theory, the WGC suggests the existence of states with a charge-to-mass ratio larger than that of extremal black holes. In this work, we revisit the WGC within the framework of Asymptotically Safe Quantum Gravity, a non-perturbative approach where gravitational and gauge couplings flow to a non-Gaussian ultraviolet (UV) fixed point. We construct a scale-dependent effective action, derive quantum-corrected Reissner--Nordstr\\\"om black hole solutions by incorporating position-dependent renormalization scale identification, and compute leading quantum corrections to the extremality condition. Our key finding is that the quantum correction to the extremal charge-to-mass ratio is dominantly governed by the running of the gauge coupling, characterized by a correction parameter $\\delta \\sim \\epsilon_e (\\ell_P/r_+)^{2\\theta}$, where $\\epsilon_e$ captures deviations from infrared behavior. We show that if the electromagnetic coupling grows in the UV ($\\epsilon_e > \\epsilon_G$), the WGC is dynamically strengthened, whereas if it decreases ($\\epsilon_e < \\epsilon_G$), large extremal black holes may violate the WGC unless additional light charged states exist. Our analysis demonstrates that Asymptotic Safety provides a concrete ultraviolet mechanism influencing low-energy swampland criteria, offering a deep UV/IR connection between quantum gravity consistency and effective field theory behavior."
   },
   {
     "title": "Efficient COLREGs-Compliant Collision Avoidance using Turning Circle-based Control Barrier Function",
