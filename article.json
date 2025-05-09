@@ -1,5 +1,290 @@
 [
   {
+    "title": "Reasoning Models Don't Always Say What They Think",
+    "url": "http://arxiv.org/abs/2505.05410v1",
+    "arxiv_id": "2505.05410v1",
+    "authors": [
+      "Yanda Chen",
+      "Joe Benton",
+      "Ansh Radhakrishnan",
+      "Jonathan Uesato",
+      "Carson Denison",
+      "John Schulman",
+      "Arushi Somani",
+      "Peter Hase",
+      "Misha Wagner",
+      "Fabien Roger",
+      "Vlad Mikulik",
+      "Samuel R. Bowman",
+      "Jan Leike",
+      "Jared Kaplan",
+      "Ethan Perez"
+    ],
+    "published": "2025-05-08T16:51:43+00:00",
+    "summary": "Chain-of-thought (CoT) offers a potential boon for AI safety as it allows monitoring a model's CoT to try to understand its intentions and reasoning processes. However, the effectiveness of such monitoring hinges on CoTs faithfully representing models' actual reasoning processes. We evaluate CoT faithfulness of state-of-the-art reasoning models across 6 reasoning hints presented in the prompts and find: (1) for most settings and models tested, CoTs reveal their usage of hints in at least 1% of examples where they use the hint, but the reveal rate is often below 20%, (2) outcome-based reinforcement learning initially improves faithfulness but plateaus without saturating, and (3) when reinforcement learning increases how frequently hints are used (reward hacking), the propensity to verbalize them does not increase, even without training against a CoT monitor. These results suggest that CoT monitoring is a promising way of noticing undesired behaviors during training and evaluations, but that it is not sufficient to rule them out. They also suggest that in settings like ours where CoT reasoning is not necessary, test-time monitoring of CoTs is unlikely to reliably catch rare and catastrophic unexpected behaviors."
+  },
+  {
+    "title": "PillarMamba: Learning Local-Global Context for Roadside Point Cloud via Hybrid State Space Model",
+    "url": "http://arxiv.org/abs/2505.05397v1",
+    "arxiv_id": "2505.05397v1",
+    "authors": [
+      "Zhang Zhang",
+      "Chao Sun",
+      "Chao Yue",
+      "Da Wen",
+      "Tianze Wang",
+      "Jianghao Leng"
+    ],
+    "published": "2025-05-08T16:33:04+00:00",
+    "summary": "Serving the Intelligent Transport System (ITS) and Vehicle-to-Everything (V2X) tasks, roadside perception has received increasing attention in recent years, as it can extend the perception range of connected vehicles and improve traffic safety. However, roadside point cloud oriented 3D object detection has not been effectively explored. To some extent, the key to the performance of a point cloud detector lies in the receptive field of the network and the ability to effectively utilize the scene context. The recent emergence of Mamba, based on State Space Model (SSM), has shaken up the traditional convolution and transformers that have long been the foundational building blocks, due to its efficient global receptive field. In this work, we introduce Mamba to pillar-based roadside point cloud perception and propose a framework based on Cross-stage State-space Group (CSG), called PillarMamba. It enhances the expressiveness of the network and achieves efficient computation through cross-stage feature fusion. However, due to the limitations of scan directions, state space model faces local connection disrupted and historical relationship forgotten. To address this, we propose the Hybrid State-space Block (HSB) to obtain the local-global context of roadside point cloud. Specifically, it enhances neighborhood connections through local convolution and preserves historical memory through residual attention. The proposed method outperforms the state-of-the-art methods on the popular large scale roadside benchmark: DAIR-V2X-I. The code will be released soon."
+  },
+  {
+    "title": "Robust Online Learning with Private Information",
+    "url": "http://arxiv.org/abs/2505.05341v1",
+    "arxiv_id": "2505.05341v1",
+    "authors": [
+      "Kyohei Okumura"
+    ],
+    "published": "2025-05-08T15:29:06+00:00",
+    "summary": "This paper investigates the robustness of online learning algorithms when learners possess private information. No-external-regret algorithms, prevalent in machine learning, are vulnerable to strategic manipulation, allowing an adaptive opponent to extract full surplus. Even standard no-weak-external-regret algorithms, designed for optimal learning in stationary environments, exhibit similar vulnerabilities. This raises a fundamental question: can a learner simultaneously prevent full surplus extraction by adaptive opponents while maintaining optimal performance in well-behaved environments? To address this, we model the problem as a two-player repeated game, where the learner with private information plays against the environment, facing ambiguity about the environment's types: stationary or adaptive. We introduce \\emph{partial safety} as a key design criterion for online learning algorithms to prevent full surplus extraction. We then propose the \\emph{Explore-Exploit-Punish} (\\textsf{EEP}) algorithm and prove that it satisfies partial safety while achieving optimal learning in stationary environments, and has a variant that delivers improved welfare performance. Our findings highlight the risks of applying standard online learning algorithms in strategic settings with adverse selection. We advocate for a shift toward online learning algorithms that explicitly incorporate safeguards against strategic manipulation while ensuring strong learning performance."
+  },
+  {
+    "title": "Advancing Neural Network Verification through Hierarchical Safety Abstract Interpretation",
+    "url": "http://arxiv.org/abs/2505.05235v1",
+    "arxiv_id": "2505.05235v1",
+    "authors": [
+      "Luca Marzari",
+      "Isabella Mastroeni",
+      "Alessandro Farinelli"
+    ],
+    "published": "2025-05-08T13:29:46+00:00",
+    "summary": "Traditional methods for formal verification (FV) of deep neural networks (DNNs) are constrained by a binary encoding of safety properties, where a model is classified as either safe or unsafe (robust or not robust). This binary encoding fails to capture the nuanced safety levels within a model, often resulting in either overly restrictive or too permissive requirements. In this paper, we introduce a novel problem formulation called Abstract DNN-Verification, which verifies a hierarchical structure of unsafe outputs, providing a more granular analysis of the safety aspect for a given DNN. Crucially, by leveraging abstract interpretation and reasoning about output reachable sets, our approach enables assessing multiple safety levels during the FV process, requiring the same (in the worst case) or even potentially less computational effort than the traditional binary verification approach. Specifically, we demonstrate how this formulation allows rank adversarial inputs according to their abstract safety level violation, offering a more detailed evaluation of the model's safety and robustness. Our contributions include a theoretical exploration of the relationship between our novel abstract safety formulation and existing approaches that employ abstract interpretation for robustness verification, complexity analysis of the novel problem introduced, and an empirical evaluation considering both a complex deep reinforcement learning task (based on Habitat 3.0) and standard DNN-Verification benchmarks."
+  },
+  {
+    "title": "PaniCar: Securing the Perception of Advanced Driving Assistance Systems Against Emergency Vehicle Lighting",
+    "url": "http://arxiv.org/abs/2505.05183v1",
+    "arxiv_id": "2505.05183v1",
+    "authors": [
+      "Elad Feldman",
+      "Jacob Shams",
+      "Dudi Biton",
+      "Alfred Chen",
+      "Shaoyuan Xie",
+      "Satoru Koda",
+      "Yisroel Mirsky",
+      "Asaf Shabtai",
+      "Yuval Elovici",
+      "Ben Nassi"
+    ],
+    "published": "2025-05-08T12:33:48+00:00",
+    "summary": "The safety of autonomous cars has come under scrutiny in recent years, especially after 16 documented incidents involving Teslas (with autopilot engaged) crashing into parked emergency vehicles (police cars, ambulances, and firetrucks). While previous studies have revealed that strong light sources often introduce flare artifacts in the captured image, which degrade the image quality, the impact of flare on object detection performance remains unclear. In this research, we unveil PaniCar, a digital phenomenon that causes an object detector's confidence score to fluctuate below detection thresholds when exposed to activated emergency vehicle lighting. This vulnerability poses a significant safety risk, and can cause autonomous vehicles to fail to detect objects near emergency vehicles. In addition, this vulnerability could be exploited by adversaries to compromise the security of advanced driving assistance systems (ADASs). We assess seven commercial ADASs (Tesla Model 3, \"manufacturer C\", HP, Pelsee, AZDOME, Imagebon, Rexing), four object detectors (YOLO, SSD, RetinaNet, Faster R-CNN), and 14 patterns of emergency vehicle lighting to understand the influence of various technical and environmental factors. We also evaluate four SOTA flare removal methods and show that their performance and latency are insufficient for real-time driving constraints. To mitigate this risk, we propose Caracetamol, a robust framework designed to enhance the resilience of object detectors against the effects of activated emergency vehicle lighting. Our evaluation shows that on YOLOv3 and Faster RCNN, Caracetamol improves the models' average confidence of car detection by 0.20, the lower confidence bound by 0.33, and reduces the fluctuation range by 0.33. In addition, Caracetamol is capable of processing frames at a rate of between 30-50 FPS, enabling real-time ADAS car detection."
+  },
+  {
+    "title": "Duplex Self-Aligning Resonant Beam Communications and Power Transfer with Coupled Spatially Distributed Laser Resonator",
+    "url": "http://arxiv.org/abs/2505.05107v1",
+    "arxiv_id": "2505.05107v1",
+    "authors": [
+      "Mingliang Xiong",
+      "Qingwen Liu",
+      "Hao Deng",
+      "Gang Wang",
+      "Gang Li",
+      "Bin He"
+    ],
+    "published": "2025-05-08T10:11:36+00:00",
+    "summary": "Sustainable energy supply and high-speed communications are two significant needs for mobile electronic devices. This paper introduces a self-aligning resonant beam system for simultaneous light information and power transfer (SLIPT), employing a novel coupled spatially distributed resonator (CSDR). The system utilizes a resonant beam for efficient power delivery and a second-harmonic beam for concurrent data transmission, inherently minimizing echo interference and enabling bidirectional communication. Through comprehensive analyses, we investigate the CSDR's stable region, beam evolution, and power characteristics in relation to working distance and device parameters. Numerical simulations validate the CSDR-SLIPT system's feasibility by identifying a stable beam waist location for achieving accurate mode-match coupling between two spatially distributed resonant cavities and demonstrating its operational range and efficient power delivery across varying distances. The research reveals the system's benefits in terms of both safety and energy transmission efficiency. We also demonstrate the trade-off among the reflectivities of the cavity mirrors in the CSDR. These findings offer valuable design insights for resonant beam systems, advancing SLIPT with significant potential for remote device connectivity."
+  },
+  {
+    "title": "DispBench: Benchmarking Disparity Estimation to Synthetic Corruptions",
+    "url": "http://arxiv.org/abs/2505.05091v1",
+    "arxiv_id": "2505.05091v1",
+    "authors": [
+      "Shashank Agnihotri",
+      "Amaan Ansari",
+      "Annika Dackermann",
+      "Fabian R\u00f6sch",
+      "Margret Keuper"
+    ],
+    "published": "2025-05-08T09:40:17+00:00",
+    "summary": "Deep learning (DL) has surpassed human performance on standard benchmarks, driving its widespread adoption in computer vision tasks. One such task is disparity estimation, estimating the disparity between matching pixels in stereo image pairs, which is crucial for safety-critical applications like medical surgeries and autonomous navigation. However, DL-based disparity estimation methods are highly susceptible to distribution shifts and adversarial attacks, raising concerns about their reliability and generalization. Despite these concerns, a standardized benchmark for evaluating the robustness of disparity estimation methods remains absent, hindering progress in the field.   To address this gap, we introduce DispBench, a comprehensive benchmarking tool for systematically assessing the reliability of disparity estimation methods. DispBench evaluates robustness against synthetic image corruptions such as adversarial attacks and out-of-distribution shifts caused by 2D Common Corruptions across multiple datasets and diverse corruption scenarios. We conduct the most extensive performance and robustness analysis of disparity estimation methods to date, uncovering key correlations between accuracy, reliability, and generalization. Open-source code for DispBench: https://github.com/shashankskagnihotri/benchmarking_robustness/tree/disparity_estimation/final/disparity_estimation"
+  },
+  {
+    "title": "Adaptive Contextual Embedding for Robust Far-View Borehole Detection",
+    "url": "http://arxiv.org/abs/2505.05008v1",
+    "arxiv_id": "2505.05008v1",
+    "authors": [
+      "Xuesong Liu",
+      "Tianyu Hao",
+      "Emmett J. Ientilucci"
+    ],
+    "published": "2025-05-08T07:25:42+00:00",
+    "summary": "In controlled blasting operations, accurately detecting densely distributed tiny boreholes from far-view imagery is critical for operational safety and efficiency. However, existing detection methods often struggle due to small object scales, highly dense arrangements, and limited distinctive visual features of boreholes. To address these challenges, we propose an adaptive detection approach that builds upon existing architectures (e.g., YOLO) by explicitly leveraging consistent embedding representations derived through exponential moving average (EMA)-based statistical updates.   Our method introduces three synergistic components: (1) adaptive augmentation utilizing dynamically updated image statistics to robustly handle illumination and texture variations; (2) embedding stabilization to ensure consistent and reliable feature extraction; and (3) contextual refinement leveraging spatial context for improved detection accuracy. The pervasive use of EMA in our method is particularly advantageous given the limited visual complexity and small scale of boreholes, allowing stable and robust representation learning even under challenging visual conditions. Experiments on a challenging proprietary quarry-site dataset demonstrate substantial improvements over baseline YOLO-based architectures, highlighting our method's effectiveness in realistic and complex industrial scenarios."
+  },
+  {
+    "title": "A Vehicle System for Navigating Among Vulnerable Road Users Including Remote Operation",
+    "url": "http://arxiv.org/abs/2505.04982v1",
+    "arxiv_id": "2505.04982v1",
+    "authors": [
+      "Oscar de Groot",
+      "Alberto Bertipaglia",
+      "Hidde Boekema",
+      "Vishrut Jain",
+      "Marcell Kegl",
+      "Varun Kotian",
+      "Ted Lentsch",
+      "Yancong Lin",
+      "Chrysovalanto Messiou",
+      "Emma Schippers",
+      "Farzam Tajdari",
+      "Shiming Wang",
+      "Zimin Xia",
+      "Mubariz Zaffar",
+      "Ronald Ensing",
+      "Mario Garzon",
+      "Javier Alonso-Mora",
+      "Holger Caesar",
+      "Laura Ferranti",
+      "Riender Happee",
+      "Julian F. P. Kooij",
+      "Georgios Papaioannou",
+      "Barys Shyrokau",
+      "Dariu M. Gavrila"
+    ],
+    "published": "2025-05-08T06:39:47+00:00",
+    "summary": "We present a vehicle system capable of navigating safely and efficiently around Vulnerable Road Users (VRUs), such as pedestrians and cyclists. The system comprises key modules for environment perception, localization and mapping, motion planning, and control, integrated into a prototype vehicle. A key innovation is a motion planner based on Topology-driven Model Predictive Control (T-MPC). The guidance layer generates multiple trajectories in parallel, each representing a distinct strategy for obstacle avoidance or non-passing. The underlying trajectory optimization constrains the joint probability of collision with VRUs under generic uncertainties. To address extraordinary situations (\"edge cases\") that go beyond the autonomous capabilities - such as construction zones or encounters with emergency responders - the system includes an option for remote human operation, supported by visual and haptic guidance. In simulation, our motion planner outperforms three baseline approaches in terms of safety and efficiency. We also demonstrate the full system in prototype vehicle tests on a closed track, both in autonomous and remotely operated modes."
+  },
+  {
+    "title": "LVLM-MPC Collaboration for Autonomous Driving: A Safety-Aware and Task-Scalable Control Architecture",
+    "url": "http://arxiv.org/abs/2505.04980v1",
+    "arxiv_id": "2505.04980v1",
+    "authors": [
+      "Kazuki Atsuta",
+      "Kohei Honda",
+      "Hiroyuki Okuda",
+      "Tatsuya Suzuki"
+    ],
+    "published": "2025-05-08T06:35:30+00:00",
+    "summary": "This paper proposes a novel Large Vision-Language Model (LVLM) and Model Predictive Control (MPC) integration framework that delivers both task scalability and safety for Autonomous Driving (AD). LVLMs excel at high-level task planning across diverse driving scenarios. However, since these foundation models are not specifically designed for driving and their reasoning is not consistent with the feasibility of low-level motion planning, concerns remain regarding safety and smooth task switching. This paper integrates LVLMs with MPC Builder, which automatically generates MPCs on demand, based on symbolic task commands generated by the LVLM, while ensuring optimality and safety. The generated MPCs can strongly assist the execution or rejection of LVLM-driven task switching by providing feedback on the feasibility of the given tasks and generating task-switching-aware MPCs. Our approach provides a safe, flexible, and adaptable control framework, bridging the gap between cutting-edge foundation models and reliable vehicle operation. We demonstrate the effectiveness of our approach through a simulation experiment, showing that our system can safely and effectively handle highway driving while maintaining the flexibility and adaptability of LVLMs."
+  },
+  {
+    "title": "Belief Filtering for Epistemic Control in Linguistic State Space",
+    "url": "http://arxiv.org/abs/2505.04927v1",
+    "arxiv_id": "2505.04927v1",
+    "authors": [
+      "Sebastian Dumbrava"
+    ],
+    "published": "2025-05-08T03:52:43+00:00",
+    "summary": "We examine belief filtering as a mechanism for the epistemic control of artificial agents, focusing on the regulation of internal cognitive states represented as linguistic expressions. This mechanism is developed within the Semantic Manifold framework, where belief states are dynamic, structured ensembles of natural language fragments. Belief filters act as content-aware operations on these fragments across various cognitive transitions. This paper illustrates how the inherent interpretability and modularity of such a linguistically-grounded cognitive architecture directly enable belief filtering, offering a principled approach to agent regulation. The study highlights the potential for enhancing AI safety and alignment through structured interventions in an agent's internal semantic space and points to new directions for architecturally embedded cognitive governance."
+  },
+  {
+    "title": "Perception, Reason, Think, and Plan: A Survey on Large Multimodal Reasoning Models",
+    "url": "http://arxiv.org/abs/2505.04921v1",
+    "arxiv_id": "2505.04921v1",
+    "authors": [
+      "Yunxin Li",
+      "Zhenyu Liu",
+      "Zitao Li",
+      "Xuanyu Zhang",
+      "Zhenran Xu",
+      "Xinyu Chen",
+      "Haoyuan Shi",
+      "Shenyuan Jiang",
+      "Xintong Wang",
+      "Jifang Wang",
+      "Shouzheng Huang",
+      "Xinping Zhao",
+      "Borui Jiang",
+      "Lanqing Hong",
+      "Longyue Wang",
+      "Zhuotao Tian",
+      "Baoxing Huai",
+      "Wenhan Luo",
+      "Weihua Luo",
+      "Zheng Zhang",
+      "Baotian Hu",
+      "Min Zhang"
+    ],
+    "published": "2025-05-08T03:35:23+00:00",
+    "summary": "Reasoning lies at the heart of intelligence, shaping the ability to make decisions, draw conclusions, and generalize across domains. In artificial intelligence, as systems increasingly operate in open, uncertain, and multimodal environments, reasoning becomes essential for enabling robust and adaptive behavior. Large Multimodal Reasoning Models (LMRMs) have emerged as a promising paradigm, integrating modalities such as text, images, audio, and video to support complex reasoning capabilities and aiming to achieve comprehensive perception, precise understanding, and deep reasoning. As research advances, multimodal reasoning has rapidly evolved from modular, perception-driven pipelines to unified, language-centric frameworks that offer more coherent cross-modal understanding. While instruction tuning and reinforcement learning have improved model reasoning, significant challenges remain in omni-modal generalization, reasoning depth, and agentic behavior. To address these issues, we present a comprehensive and structured survey of multimodal reasoning research, organized around a four-stage developmental roadmap that reflects the field's shifting design philosophies and emerging capabilities. First, we review early efforts based on task-specific modules, where reasoning was implicitly embedded across stages of representation, alignment, and fusion. Next, we examine recent approaches that unify reasoning into multimodal LLMs, with advances such as Multimodal Chain-of-Thought (MCoT) and multimodal reinforcement learning enabling richer and more structured reasoning chains. Finally, drawing on empirical insights from challenging benchmarks and experimental cases of OpenAI O3 and O4-mini, we discuss the conceptual direction of native large multimodal reasoning models (N-LMRMs), which aim to support scalable, agentic, and adaptive reasoning and planning in complex, real-world environments."
+  },
+  {
+    "title": "GCN-Based Throughput-Oriented Handover Management in Dense 5G Vehicular Networks",
+    "url": "http://arxiv.org/abs/2505.04894v1",
+    "arxiv_id": "2505.04894v1",
+    "authors": [
+      "Nazanin Mehregan",
+      "Robson E. De Grande"
+    ],
+    "published": "2025-05-08T02:03:46+00:00",
+    "summary": "The rapid advancement of 5G has transformed vehicular networks, offering high bandwidth, low latency, and fast data rates essential for real-time applications in smart cities and vehicles. These improvements enhance traffic safety and entertainment services. However, the limited coverage and frequent handovers in 5G networks cause network instability, especially in high-mobility environments due to the ping-pong effect. This paper presents TH-GCN (Throughput-oriented Graph Convolutional Network), a novel approach for optimizing handover management in dense 5G networks. Using graph neural networks (GNNs), TH-GCN models vehicles and base stations as nodes in a dynamic graph enriched with features such as signal quality, throughput, vehicle speed, and base station load. By integrating both user equipment and base station perspectives, this dual-centric approach enables adaptive, real-time handover decisions that improve network stability. Simulation results show that TH-GCN reduces handovers by up to 78 percent and improves signal quality by 10 percent, outperforming existing methods."
+  },
+  {
+    "title": "Federated Learning for Cyber Physical Systems: A Comprehensive Survey",
+    "url": "http://arxiv.org/abs/2505.04873v1",
+    "arxiv_id": "2505.04873v1",
+    "authors": [
+      "Minh K. Quan",
+      "Pubudu N. Pathirana",
+      "Mayuri Wijayasundara",
+      "Sujeeva Setunge",
+      "Dinh C. Nguyen",
+      "Christopher G. Brinton",
+      "David J. Love",
+      "H. Vincent Poor"
+    ],
+    "published": "2025-05-08T01:17:15+00:00",
+    "summary": "The integration of machine learning (ML) in cyber physical systems (CPS) is a complex task due to the challenges that arise in terms of real-time decision making, safety, reliability, device heterogeneity, and data privacy. There are also open research questions that must be addressed in order to fully realize the potential of ML in CPS. Federated learning (FL), a distributed approach to ML, has become increasingly popular in recent years. It allows models to be trained using data from decentralized sources. This approach has been gaining popularity in the CPS field, as it integrates computer, communication, and physical processes. Therefore, the purpose of this work is to provide a comprehensive analysis of the most recent developments of FL-CPS, including the numerous application areas, system topologies, and algorithms developed in recent years. The paper starts by discussing recent advances in both FL and CPS, followed by their integration. Then, the paper compares the application of FL in CPS with its applications in the internet of things (IoT) in further depth to show their connections and distinctions. Furthermore, the article scrutinizes how FL is utilized in critical CPS applications, e.g., intelligent transportation systems, cybersecurity services, smart cities, and smart healthcare solutions. The study also includes critical insights and lessons learned from various FL-CPS implementations. The paper's concluding section delves into significant concerns and suggests avenues for further research in this fast-paced and dynamic era."
+  },
+  {
+    "title": "PR2: Peephole Raw Pointer Rewriting with LLMs for Translating C to Safer Rust",
+    "url": "http://arxiv.org/abs/2505.04852v1",
+    "arxiv_id": "2505.04852v1",
+    "authors": [
+      "Yifei Gao",
+      "Chengpeng Wang",
+      "Pengxiang Huang",
+      "Xuwei Liu",
+      "Mingwei Zheng",
+      "Xiangyu Zhang"
+    ],
+    "published": "2025-05-07T23:30:27+00:00",
+    "summary": "There has been a growing interest in translating C code to Rust due to Rust's robust memory and thread safety guarantees. Tools such as C2RUST enable syntax-guided transpilation from C to semantically equivalent Rust code. However, the resulting Rust programs often rely heavily on unsafe constructs--particularly raw pointers--which undermines Rust's safety guarantees. This paper aims to improve the memory safety of Rust programs generated by C2RUST by eliminating raw pointers. Specifically, we propose a peephole raw pointer rewriting technique that lifts raw pointers in individual functions to appropriate Rust data structures. Technically, PR2 employs decision-tree-based prompting to guide the pointer lifting process. Additionally, it leverages code change analysis to guide the repair of errors introduced during rewriting, effectively addressing errors encountered during compilation and test case execution. We implement PR2 as a prototype and evaluate it using gpt-4o-mini on 28 real-world C projects. The results show that PR2 successfully eliminates 13.22% of local raw pointers across these projects, significantly enhancing the safety of the translated Rust code. On average, PR2 completes the transformation of a project in 5.44 hours, at an average cost of $1.46."
+  },
+  {
+    "title": "Comparative Study of Generative Models for Early Detection of Failures in Medical Devices",
+    "url": "http://arxiv.org/abs/2505.04845v1",
+    "arxiv_id": "2505.04845v1",
+    "authors": [
+      "Binesh Sadanandan",
+      "Bahareh Arghavani Nobar",
+      "Vahid Behzadan"
+    ],
+    "published": "2025-05-07T22:49:53+00:00",
+    "summary": "The medical device industry has significantly advanced by integrating sophisticated electronics like microchips and field-programmable gate arrays (FPGAs) to enhance the safety and usability of life-saving devices. These complex electro-mechanical systems, however, introduce challenging failure modes that are not easily detectable with conventional methods. Effective fault detection and mitigation become vital as reliance on such electronics grows. This paper explores three generative machine learning-based approaches for fault detection in medical devices, leveraging sensor data from surgical staplers,a class 2 medical device. Historically considered low-risk, these devices have recently been linked to an increasing number of injuries and fatalities. The study evaluates the performance and data requirements of these machine-learning approaches, highlighting their potential to enhance device safety."
+  },
+  {
+    "title": "Red Teaming the Mind of the Machine: A Systematic Evaluation of Prompt Injection and Jailbreak Vulnerabilities in LLMs",
+    "url": "http://arxiv.org/abs/2505.04806v1",
+    "arxiv_id": "2505.04806v1",
+    "authors": [
+      "Chetan Pathade"
+    ],
+    "published": "2025-05-07T21:15:40+00:00",
+    "summary": "Large Language Models (LLMs) are increasingly integrated into consumer and enterprise applications. Despite their capabilities, they remain susceptible to adversarial attacks such as prompt injection and jailbreaks that override alignment safeguards. This paper provides a systematic investigation of jailbreak strategies against various state-of-the-art LLMs. We categorize over 1,400 adversarial prompts, analyze their success against GPT-4, Claude 2, Mistral 7B, and Vicuna, and examine their generalizability and construction logic. We further propose layered mitigation strategies and recommend a hybrid red-teaming and sandboxing approach for robust LLM security."
+  },
+  {
+    "title": "Replay to Remember (R2R): An Efficient Uncertainty-driven Unsupervised Continual Learning Framework Using Generative Replay",
+    "url": "http://arxiv.org/abs/2505.04787v1",
+    "arxiv_id": "2505.04787v1",
+    "authors": [
+      "Sriram Mandalika",
+      "Harsha Vardhan",
+      "Athira Nambiar"
+    ],
+    "published": "2025-05-07T20:29:31+00:00",
+    "summary": "Continual Learning entails progressively acquiring knowledge from new data while retaining previously acquired knowledge, thereby mitigating ``Catastrophic Forgetting'' in neural networks. Our work presents a novel uncertainty-driven Unsupervised Continual Learning framework using Generative Replay, namely ``Replay to Remember (R2R)''. The proposed R2R architecture efficiently uses unlabelled and synthetic labelled data in a balanced proportion using a cluster-level uncertainty-driven feedback mechanism and a VLM-powered generative replay module. Unlike traditional memory-buffer methods that depend on pretrained models and pseudo-labels, our R2R framework operates without any prior training. It leverages visual features from unlabeled data and adapts continuously using clustering-based uncertainty estimation coupled with dynamic thresholding. Concurrently, a generative replay mechanism along with DeepSeek-R1 powered CLIP VLM produces labelled synthetic data representative of past experiences, resembling biological visual thinking that replays memory to remember and act in new, unseen tasks. Extensive experimental analyses are carried out in CIFAR-10, CIFAR-100, CINIC-10, SVHN and TinyImageNet datasets. Our proposed R2R approach improves knowledge retention, achieving a state-of-the-art performance of 98.13%, 73.06%, 93.41%, 95.18%, 59.74%, respectively, surpassing state-of-the-art performance by over 4.36%."
+  },
+  {
     "title": "Fight Fire with Fire: Defending Against Malicious RL Fine-Tuning via Reward Neutralization",
     "url": "http://arxiv.org/abs/2505.04578v1",
     "arxiv_id": "2505.04578v1",
@@ -222,6 +507,17 @@
     "summary": "As the adoption of deep learning models has grown beyond human capacity for verification, meta-algorithms are needed to ensure reliable model inference. Concept drift detection is a field dedicated to identifying statistical shifts that is underutilized in monitoring neural networks that may encounter inference data with distributional characteristics diverging from their training data. Given the wide variety of model architectures, applications, and datasets, it is important that concept drift detection algorithms are adaptable to different inference scenarios. In this paper, we introduce an application of the $\\chi^2$ Goodness of Fit Hypothesis Test as a drift detection meta-algorithm applied to a multilayer perceptron, a convolutional neural network, and a transformer trained for machine vision as they are exposed to simulated drift during inference. To that end, we demonstrate how unexpected drops in accuracy due to concept drift can be detected without directly examining the inference outputs. Our approach enhances safety by ensuring models are continually evaluated for reliability across varying conditions."
   },
   {
+    "title": "REVEAL: Multi-turn Evaluation of Image-Input Harms for Vision LLM",
+    "url": "http://arxiv.org/abs/2505.04673v1",
+    "arxiv_id": "2505.04673v1",
+    "authors": [
+      "Madhur Jindal",
+      "Saurabh Deshpande"
+    ],
+    "published": "2025-05-07T10:09:55+00:00",
+    "summary": "Vision Large Language Models (VLLMs) represent a significant advancement in artificial intelligence by integrating image-processing capabilities with textual understanding, thereby enhancing user interactions and expanding application domains. However, their increased complexity introduces novel safety and ethical challenges, particularly in multi-modal and multi-turn conversations. Traditional safety evaluation frameworks, designed for text-based, single-turn interactions, are inadequate for addressing these complexities. To bridge this gap, we introduce the REVEAL (Responsible Evaluation of Vision-Enabled AI LLMs) Framework, a scalable and automated pipeline for evaluating image-input harms in VLLMs. REVEAL includes automated image mining, synthetic adversarial data generation, multi-turn conversational expansion using crescendo attack strategies, and comprehensive harm assessment through evaluators like GPT-4o.   We extensively evaluated five state-of-the-art VLLMs, GPT-4o, Llama-3.2, Qwen2-VL, Phi3.5V, and Pixtral, across three important harm categories: sexual harm, violence, and misinformation. Our findings reveal that multi-turn interactions result in significantly higher defect rates compared to single-turn evaluations, highlighting deeper vulnerabilities in VLLMs. Notably, GPT-4o demonstrated the most balanced performance as measured by our Safety-Usability Index (SUI) followed closely by Pixtral. Additionally, misinformation emerged as a critical area requiring enhanced contextual defenses. Llama-3.2 exhibited the highest MT defect rate ($16.55 \\%$) while Qwen2-VL showed the highest MT refusal rate ($19.1 \\%$)."
+  },
+  {
     "title": "From Incidents to Insights: Patterns of Responsibility following AI Harms",
     "url": "http://arxiv.org/abs/2505.04291v1",
     "arxiv_id": "2505.04291v1",
@@ -270,9 +566,35 @@
     "summary": "Existing large language models (LLMs) are advancing rapidly and produce outstanding results in image generation tasks, yet their content safety checks remain vulnerable to prompt-based jailbreaks. Through preliminary testing on platforms such as ChatGPT, MetaAI, and Grok, we observed that even short, natural prompts could lead to the generation of compromising images ranging from realistic depictions of forged documents to manipulated images of public figures.   We introduce Unmasking the Canvas (UTC Benchmark; UTCB), a dynamic and scalable benchmark dataset to evaluate LLM vulnerability in image generation. Our methodology combines structured prompt engineering, multilingual obfuscation (e.g., Zulu, Gaelic, Base64), and evaluation using Groq-hosted LLaMA-3. The pipeline supports both zero-shot and fallback prompting strategies, risk scoring, and automated tagging. All generations are stored with rich metadata and curated into Bronze (non-verified), Silver (LLM-aided verification), and Gold (manually verified) tiers. UTCB is designed to evolve over time with new data sources, prompt templates, and model behaviors.   Warning: This paper includes visual examples of adversarial inputs designed to test model safety. All outputs have been redacted to ensure responsible disclosure."
   },
   {
+    "title": "Fine-Tuning Large Language Models and Evaluating Retrieval Methods for Improved Question Answering on Building Codes",
+    "url": "http://arxiv.org/abs/2505.04666v1",
+    "arxiv_id": "2505.04666v1",
+    "authors": [
+      "Mohammad Aqib",
+      "Mohd Hamza",
+      "Qipei Mei",
+      "Ying Hei Chui"
+    ],
+    "published": "2025-05-07T05:04:30+00:00",
+    "summary": "Building codes are regulations that establish standards for the design, construction, and safety of buildings to ensure structural integrity, fire protection, and accessibility. They are often extensive, complex, and subject to frequent updates, making manual querying challenging and time-consuming. Key difficulties include navigating large volumes of text, interpreting technical language, and identifying relevant clauses across different sections. A potential solution is to build a Question-Answering (QA) system that answers user queries based on building codes. Among the various methods for building a QA system, Retrieval-Augmented Generation (RAG) stands out in performance. RAG consists of two components: a retriever and a language model. This study focuses on identifying a suitable retriever method for building codes and optimizing the generational capability of the language model using fine-tuning techniques. We conducted a detailed evaluation of various retrieval methods by performing the retrieval on the National Building Code of Canada (NBCC) and explored the impact of domain-specific fine-tuning on several language models using the dataset derived from NBCC. Our analysis included a comparative assessment of different retrievers and the performance of both pre-trained and fine-tuned models to determine the efficacy and domain-specific adaptation of language models using fine-tuning on the NBCC dataset. Experimental results showed that Elasticsearch proved to be the most robust retriever among all. The findings also indicate that fine-tuning language models on an NBCC-specific dataset can enhance their ability to generate contextually relevant responses. When combined with context retrieved by a powerful retriever like Elasticsearch, this improvement in LLM performance can optimize the RAG system, enabling it to better navigate the complexities of the NBCC."
+  },
+  {
     "title": "In-Situ Hardware Error Detection Using Specification-Derived Petri Net Models and Behavior-Derived State Sequences",
     "url": "http://arxiv.org/abs/2505.04108v1",
     "arxiv_id": "2505.04108v1",
+    "authors": [
+      "Tomonari Tanaka",
+      "Takumi Uezono",
+      "Kohei Suenaga",
+      "Masanori Hashimoto"
+    ],
+    "published": "2025-05-07T03:51:02+00:00",
+    "summary": "In hardware accelerators used in data centers and safety-critical applications, soft errors and resultant silent data corruption significantly compromise reliability, particularly when upsets occur in control-flow operations, leading to severe failures. To address this, we introduce two methods for monitoring control flows: using specification-derived Petri nets and using behavior-derived state transitions. We validated our method across four designs: convolutional layer operation, Gaussian blur, AES encryption, and a router in Network-on-Chip. Our fault injection campaign targeting the control registers and primary control inputs demonstrated high error detection rates in both datapath and control logic. Synthesis results show that a maximum detection rate is achieved with a few to around 10% area overhead in most cases. The proposed detectors quickly detect 48% to 100% of failures resulting from upsets in internal control registers and perturbations in primary control inputs. The two proposed methods were compared in terms of area overhead and error detection rate. By selectively applying these two methods, a wide range of area constraints can be accommodated, enabling practical implementation and effectively enhancing error detection capabilities."
+  },
+  {
+    "title": "In-Situ Hardware Error Detection Using Specification-Derived Petri Net Models and Behavior-Derived State Sequences",
+    "url": "http://arxiv.org/abs/2505.04108v2",
+    "arxiv_id": "2505.04108v2",
     "authors": [
       "Tomonari Tanaka",
       "Takumi Uezono",
@@ -340,6 +662,19 @@
     "summary": "If AI systems match or exceed human capabilities on a wide range of tasks, it may become difficult for humans to efficiently judge their actions -- making it hard to use human feedback to steer them towards desirable traits. One proposed solution is to leverage another superhuman system to point out flaws in the system's outputs via a debate. This paper outlines the value of debate for AI safety, as well as the assumptions and further research required to make debate work. It does so by sketching an ``alignment safety case'' -- an argument that an AI system will not autonomously take actions which could lead to egregious harm, despite being able to do so. The sketch focuses on the risk of an AI R\\&D agent inside an AI company sabotaging research, for example by producing false results. To prevent this, the agent is trained via debate, subject to exploration guarantees, to teach the system to be honest. Honesty is maintained throughout deployment via online training. The safety case rests on four key claims: (1) the agent has become good at the debate game, (2) good performance in the debate game implies that the system is mostly honest, (3) the system will not become significantly less honest during deployment, and (4) the deployment context is tolerant of some errors. We identify open research problems that, if solved, could render this a compelling argument that an AI system is safe."
   },
   {
+    "title": "An alignment safety case sketch based on debate",
+    "url": "http://arxiv.org/abs/2505.03989v2",
+    "arxiv_id": "2505.03989v2",
+    "authors": [
+      "Marie Davidsen Buhl",
+      "Jacob Pfau",
+      "Benjamin Hilton",
+      "Geoffrey Irving"
+    ],
+    "published": "2025-05-06T21:53:44+00:00",
+    "summary": "If AI systems match or exceed human capabilities on a wide range of tasks, it may become difficult for humans to efficiently judge their actions -- making it hard to use human feedback to steer them towards desirable traits. One proposed solution is to leverage another superhuman system to point out flaws in the system's outputs via a debate. This paper outlines the value of debate for AI safety, as well as the assumptions and further research required to make debate work. It does so by sketching an ``alignment safety case'' -- an argument that an AI system will not autonomously take actions which could lead to egregious harm, despite being able to do so. The sketch focuses on the risk of an AI R\\&D agent inside an AI company sabotaging research, for example by producing false results. To prevent this, the agent is trained via debate, subject to exploration guarantees, to teach the system to be honest. Honesty is maintained throughout deployment via online training. The safety case rests on four key claims: (1) the agent has become good at the debate game, (2) good performance in the debate game implies that the system is mostly honest, (3) the system will not become significantly less honest during deployment, and (4) the deployment context is tolerant of some errors. We identify open research problems that, if solved, could render this a compelling argument that an AI system is safe."
+  },
+  {
     "title": "LogiDebrief: A Signal-Temporal Logic based Automated Debriefing Approach with Large Language Models Integration",
     "url": "http://arxiv.org/abs/2505.03985v1",
     "arxiv_id": "2505.03985v1",
@@ -388,6 +723,17 @@
     ],
     "published": "2025-05-06T21:05:31+00:00",
     "summary": "The increasing frequency and severity of natural disasters underscore the critical importance of effective disaster emergency response planning to minimize human and economic losses. This survey provides a comprehensive review of recent advancements (2019--2024) in five essential areas of disaster emergency response planning: evacuation, facility location, casualty transport, search and rescue, and relief distribution. Research in these areas is systematically categorized based on methodologies, including optimization models, machine learning, and simulation, with a focus on their individual strengths and synergies. A notable contribution of this work is its examination of the interplay between machine learning, simulation, and optimization frameworks, highlighting how these approaches can address the dynamic, uncertain, and complex nature of disaster scenarios. By identifying key research trends and challenges, this study offers valuable insights to improve the effectiveness and resilience of emergency response strategies in future disaster planning efforts."
+  },
+  {
+    "title": "A Comparative Analysis of Ethical and Safety Gaps in LLMs using Relative Danger Coefficient",
+    "url": "http://arxiv.org/abs/2505.04654v1",
+    "arxiv_id": "2505.04654v1",
+    "authors": [
+      "Yehor Tereshchenko",
+      "Mika H\u00e4m\u00e4l\u00e4inen"
+    ],
+    "published": "2025-05-06T20:58:04+00:00",
+    "summary": "Artificial Intelligence (AI) and Large Language Models (LLMs) have rapidly evolved in recent years, showcasing remarkable capabilities in natural language understanding and generation. However, these advancements also raise critical ethical questions regarding safety, potential misuse, discrimination and overall societal impact. This article provides a comparative analysis of the ethical performance of various AI models, including the brand new DeepSeek-V3(R1 with reasoning and without), various GPT variants (4o, 3.5 Turbo, 4 Turbo, o1/o3 mini) and Gemini (1.5 flash, 2.0 flash and 2.0 flash exp) and highlights the need for robust human oversight, especially in situations with high stakes. Furthermore, we present a new metric for calculating harm in LLMs called Relative Danger Coefficient (RDC)."
   },
   {
     "title": "Learning Interactions Between Continuous Treatments and Covariates with a Semiparametric Model",
@@ -467,6 +813,27 @@
     "title": "Demonstrating ViSafe: Vision-enabled Safety for High-speed Detect and Avoid",
     "url": "http://arxiv.org/abs/2505.03694v1",
     "arxiv_id": "2505.03694v1",
+    "authors": [
+      "Parv Kapoor",
+      "Ian Higgins",
+      "Nikhil Keetha",
+      "Jay Patrikar",
+      "Brady Moon",
+      "Zelin Ye",
+      "Yao He",
+      "Ivan Cisneros",
+      "Yaoyu Hu",
+      "Changliu Liu",
+      "Eunsuk Kang",
+      "Sebastian Scherer"
+    ],
+    "published": "2025-05-06T16:59:54+00:00",
+    "summary": "Assured safe-separation is essential for achieving seamless high-density operation of airborne vehicles in a shared airspace. To equip resource-constrained aerial systems with this safety-critical capability, we present ViSafe, a high-speed vision-only airborne collision avoidance system. ViSafe offers a full-stack solution to the Detect and Avoid (DAA) problem by tightly integrating a learning-based edge-AI framework with a custom multi-camera hardware prototype designed under SWaP-C constraints. By leveraging perceptual input-focused control barrier functions (CBF) to design, encode, and enforce safety thresholds, ViSafe can provide provably safe runtime guarantees for self-separation in high-speed aerial operations. We evaluate ViSafe's performance through an extensive test campaign involving both simulated digital twins and real-world flight scenarios. By independently varying agent types, closure rates, interaction geometries, and environmental conditions (e.g., weather and lighting), we demonstrate that ViSafe consistently ensures self-separation across diverse scenarios. In first-of-its-kind real-world high-speed collision avoidance tests with closure rates reaching 144 km/h, ViSafe sets a new benchmark for vision-only autonomous collision avoidance, establishing a new standard for safety in high-speed aerial navigation."
+  },
+  {
+    "title": "Demonstrating ViSafe: Vision-enabled Safety for High-speed Detect and Avoid",
+    "url": "http://arxiv.org/abs/2505.03694v2",
+    "arxiv_id": "2505.03694v2",
     "authors": [
       "Parv Kapoor",
       "Ian Higgins",
