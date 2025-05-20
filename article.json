@@ -1,5 +1,695 @@
 [
   {
+    "title": "AdaptThink: Reasoning Models Can Learn When to Think",
+    "url": "http://arxiv.org/abs/2505.13417v1",
+    "arxiv_id": "2505.13417v1",
+    "authors": [
+      "Jiajie Zhang",
+      "Nianyi Lin",
+      "Lei Hou",
+      "Ling Feng",
+      "Juanzi Li"
+    ],
+    "published": "2025-05-19T17:50:52+00:00",
+    "summary": "Recently, large reasoning models have achieved impressive performance on various tasks by employing human-like deep thinking. However, the lengthy thinking process substantially increases inference overhead, making efficiency a critical bottleneck. In this work, we first demonstrate that NoThinking, which prompts the reasoning model to skip thinking and directly generate the final solution, is a better choice for relatively simple tasks in terms of both performance and efficiency. Motivated by this, we propose AdaptThink, a novel RL algorithm to teach reasoning models to choose the optimal thinking mode adaptively based on problem difficulty. Specifically, AdaptThink features two core components: (1) a constrained optimization objective that encourages the model to choose NoThinking while maintaining the overall performance; (2) an importance sampling strategy that balances Thinking and NoThinking samples during on-policy training, thereby enabling cold start and allowing the model to explore and exploit both thinking modes throughout the training process. Our experiments indicate that AdaptThink significantly reduces the inference costs while further enhancing performance. Notably, on three math datasets, AdaptThink reduces the average response length of DeepSeek-R1-Distill-Qwen-1.5B by 53% and improves its accuracy by 2.4%, highlighting the promise of adaptive thinking-mode selection for optimizing the balance between reasoning quality and efficiency. Our codes and models are available at https://github.com/THU-KEG/AdaptThink."
+  },
+  {
+    "title": "GUARD: Generation-time LLM Unlearning via Adaptive Restriction and Detection",
+    "url": "http://arxiv.org/abs/2505.13312v1",
+    "arxiv_id": "2505.13312v1",
+    "authors": [
+      "Zhijie Deng",
+      "Chris Yuhao Liu",
+      "Zirui Pang",
+      "Xinlei He",
+      "Lei Feng",
+      "Qi Xuan",
+      "Zhaowei Zhu",
+      "Jiaheng Wei"
+    ],
+    "published": "2025-05-19T16:26:58+00:00",
+    "summary": "Large Language Models (LLMs) have demonstrated strong capabilities in memorizing vast amounts of knowledge across diverse domains. However, the ability to selectively forget specific knowledge is critical for ensuring the safety and compliance of deployed models. Existing unlearning efforts typically fine-tune the model with resources such as forget data, retain data, and a calibration model. These additional gradient steps blur the decision boundary between forget and retain knowledge, making unlearning often at the expense of overall performance. To avoid the negative impact of fine-tuning, it would be better to unlearn solely at inference time by safely guarding the model against generating responses related to the forget target, without destroying the fluency of text generation. In this work, we propose Generation-time Unlearning via Adaptive Restriction and Detection (GUARD), a framework that enables dynamic unlearning during LLM generation. Specifically, we first employ a prompt classifier to detect unlearning targets and extract the corresponding forbidden token. We then dynamically penalize and filter candidate tokens during generation using a combination of token matching and semantic matching, effectively preventing the model from leaking the forgotten content. Experimental results on copyright content unlearning tasks over the Harry Potter dataset and the MUSE benchmark, as well as entity unlearning tasks on the TOFU dataset, demonstrate that GUARD achieves strong forget quality across various tasks while causing almost no degradation to the LLM's general capabilities, striking an excellent trade-off between forgetting and utility."
+  },
+  {
+    "title": "I'll believe it when I see it: Images increase misinformation sharing in Vision-Language Models",
+    "url": "http://arxiv.org/abs/2505.13302v1",
+    "arxiv_id": "2505.13302v1",
+    "authors": [
+      "Alice Plebe",
+      "Timothy Douglas",
+      "Diana Riazi",
+      "R. Maria del Rio-Chanona"
+    ],
+    "published": "2025-05-19T16:20:54+00:00",
+    "summary": "Large language models are increasingly integrated into news recommendation systems, raising concerns about their role in spreading misinformation. In humans, visual content is known to boost credibility and shareability of information, yet its effect on vision-language models (VLMs) remains unclear. We present the first study examining how images influence VLMs' propensity to reshare news content, whether this effect varies across model families, and how persona conditioning and content attributes modulate this behavior. To support this analysis, we introduce two methodological contributions: a jailbreaking-inspired prompting strategy that elicits resharing decisions from VLMs while simulating users with antisocial traits and political alignments; and a multimodal dataset of fact-checked political news from PolitiFact, paired with corresponding images and ground-truth veracity labels. Experiments across model families reveal that image presence increases resharing rates by 4.8% for true news and 15.0% for false news. Persona conditioning further modulates this effect: Dark Triad traits amplify resharing of false news, whereas Republican-aligned profiles exhibit reduced veracity sensitivity. Of all the tested models, only Claude-3-Haiku demonstrates robustness to visual misinformation. These findings highlight emerging risks in multimodal model behavior and motivate the development of tailored evaluation frameworks and mitigation strategies for personalized AI systems. Code and dataset are available at: https://github.com/3lis/misinfo_vlm"
+  },
+  {
+    "title": "Effective and Transparent RAG: Adaptive-Reward Reinforcement Learning for Decision Traceability",
+    "url": "http://arxiv.org/abs/2505.13258v1",
+    "arxiv_id": "2505.13258v1",
+    "authors": [
+      "Jingyi Ren",
+      "Yekun Xu",
+      "Xiaolong Wang",
+      "Weitao Li",
+      "Weizhi Ma",
+      "Yang Liu"
+    ],
+    "published": "2025-05-19T15:40:29+00:00",
+    "summary": "Retrieval-Augmented Generation (RAG) has significantly improved the performance of large language models (LLMs) on knowledge-intensive domains. However, although RAG achieved successes across distinct domains, there are still some unsolved challenges: 1) Effectiveness. Existing research mainly focuses on developing more powerful RAG retrievers, but how to enhance the generator's (LLM's) ability to utilize the retrieved information for reasoning and generation? 2) Transparency. Most RAG methods ignore which retrieved content actually contributes to the reasoning process, resulting in a lack of interpretability and visibility. To address this, we propose ARENA (Adaptive-Rewarded Evidence Navigation Agent), a transparent RAG generator framework trained via reinforcement learning (RL) with our proposed rewards. Based on the structured generation and adaptive reward calculation, our RL-based training enables the model to identify key evidence, perform structured reasoning, and generate answers with interpretable decision traces. Applied to Qwen2.5-7B-Instruct and Llama3.1-8B-Instruct, abundant experiments with various RAG baselines demonstrate that our model achieves 10-30% improvements on all multi-hop QA datasets, which is comparable with the SOTA Commercially-developed LLMs (e.g., OpenAI-o1, DeepSeek-R1). Further analyses show that ARENA has strong flexibility to be adopted on new datasets without extra training. Our models and codes are publicly released."
+  },
+  {
+    "title": "Adversarial Testing in LLMs: Insights into Decision-Making Vulnerabilities",
+    "url": "http://arxiv.org/abs/2505.13195v1",
+    "arxiv_id": "2505.13195v1",
+    "authors": [
+      "Lili Zhang",
+      "Haomiaomiao Wang",
+      "Long Cheng",
+      "Libao Deng",
+      "Tomas Ward"
+    ],
+    "published": "2025-05-19T14:50:44+00:00",
+    "summary": "As Large Language Models (LLMs) become increasingly integrated into real-world decision-making systems, understanding their behavioural vulnerabilities remains a critical challenge for AI safety and alignment. While existing evaluation metrics focus primarily on reasoning accuracy or factual correctness, they often overlook whether LLMs are robust to adversarial manipulation or capable of using adaptive strategy in dynamic environments. This paper introduces an adversarial evaluation framework designed to systematically stress-test the decision-making processes of LLMs under interactive and adversarial conditions. Drawing on methodologies from cognitive psychology and game theory, our framework probes how models respond in two canonical tasks: the two-armed bandit task and the Multi-Round Trust Task. These tasks capture key aspects of exploration-exploitation trade-offs, social cooperation, and strategic flexibility. We apply this framework to several state-of-the-art LLMs, including GPT-3.5, GPT-4, Gemini-1.5, and DeepSeek-V3, revealing model-specific susceptibilities to manipulation and rigidity in strategy adaptation. Our findings highlight distinct behavioral patterns across models and emphasize the importance of adaptability and fairness recognition for trustworthy AI deployment. Rather than offering a performance benchmark, this work proposes a methodology for diagnosing decision-making weaknesses in LLM-based agents, providing actionable insights for alignment and safety research."
+  },
+  {
+    "title": "Interpretable Robotic Friction Learning via Symbolic Regression",
+    "url": "http://arxiv.org/abs/2505.13186v1",
+    "arxiv_id": "2505.13186v1",
+    "authors": [
+      "Philipp Scholl",
+      "Alexander Dietrich",
+      "Sebastian Wolf",
+      "Jinoh Lee",
+      "Alin-Albu Sch\u00e4ffer",
+      "Gitta Kutyniok",
+      "Maged Iskandar"
+    ],
+    "published": "2025-05-19T14:44:02+00:00",
+    "summary": "Accurately modeling the friction torque in robotic joints has long been challenging due to the request for a robust mathematical description. Traditional model-based approaches are often labor-intensive, requiring extensive experiments and expert knowledge, and they are difficult to adapt to new scenarios and dependencies. On the other hand, data-driven methods based on neural networks are easier to implement but often lack robustness, interpretability, and trustworthiness--key considerations for robotic hardware and safety-critical applications such as human-robot interaction. To address the limitations of both approaches, we propose the use of symbolic regression (SR) to estimate the friction torque. SR generates interpretable symbolic formulas similar to those produced by model-based methods while being flexible to accommodate various dynamic effects and dependencies. In this work, we apply SR algorithms to approximate the friction torque using collected data from a KUKA LWR-IV+ robot. Our results show that SR not only yields formulas with comparable complexity to model-based approaches but also achieves higher accuracy. Moreover, SR-derived formulas can be seamlessly extended to include load dependencies and other dynamic factors."
+  },
+  {
+    "title": "Information Science Principles of Machine Learning: A Causal Chain Meta-Framework Based on Formalized Information Mapping",
+    "url": "http://arxiv.org/abs/2505.13182v1",
+    "arxiv_id": "2505.13182v1",
+    "authors": [
+      "Jianfeng Xu"
+    ],
+    "published": "2025-05-19T14:39:41+00:00",
+    "summary": "[Objective] This study focuses on addressing the current lack of a unified formal theoretical framework in machine learning, as well as the deficiencies in interpretability and ethical safety assurance. [Methods] A formal information model is first constructed, utilizing sets of well-formed formulas to explicitly define the ontological states and carrier mappings of typical components in machine learning. Learnable and processable predicates, along with learning and processing functions, are introduced to analyze the logical deduction and constraint rules of the causal chains within models. [Results] A meta-framework for machine learning theory (MLT-MF) is established. Based on this framework, universal definitions for model interpretability and ethical safety are proposed. Furthermore, three key theorems are proved: the equivalence of model interpretability and information recoverability, the assurance of ethical safety, and the estimation of generalization error. [Limitations] The current framework assumes ideal conditions with noiseless information-enabling mappings and primarily targets model learning and processing logic in static scenarios. It does not yet address information fusion and conflict resolution across ontological spaces in multimodal or multi-agent systems. [Conclusions] This work overcomes the limitations of fragmented research and provides a unified theoretical foundation for systematically addressing the critical challenges currently faced in machine learning."
+  },
+  {
+    "title": "Constraint-Aware Diffusion Guidance for Robotics: Real-Time Obstacle Avoidance for Autonomous Racing",
+    "url": "http://arxiv.org/abs/2505.13131v1",
+    "arxiv_id": "2505.13131v1",
+    "authors": [
+      "Hao Ma",
+      "Sabrina Bodmer",
+      "Andrea Carron",
+      "Melanie Zeilinger",
+      "Michael Muehlebach"
+    ],
+    "published": "2025-05-19T14:00:17+00:00",
+    "summary": "Diffusion models hold great potential in robotics due to their ability to capture complex, high-dimensional data distributions. However, their lack of constraint-awareness limits their deployment in safety-critical applications. We propose Constraint-Aware Diffusion Guidance (CoDiG), a data-efficient and general-purpose framework that integrates barrier functions into the denoising process, guiding diffusion sampling toward constraint-satisfying outputs. CoDiG enables constraint satisfaction even with limited training data and generalizes across tasks. We evaluate our framework in the challenging setting of miniature autonomous racing, where real-time obstacle avoidance is essential. Real-world experiments show that CoDiG generates safe outputs efficiently under dynamic conditions, highlighting its potential for broader robotic applications. A demonstration video is available at https://youtu.be/KNYsTdtdxOU."
+  },
+  {
+    "title": "Evaluatiing the efficacy of LLM Safety Solutions : The Palit Benchmark Dataset",
+    "url": "http://arxiv.org/abs/2505.13028v1",
+    "arxiv_id": "2505.13028v1",
+    "authors": [
+      "Sayon Palit",
+      "Daniel Woods"
+    ],
+    "published": "2025-05-19T12:12:00+00:00",
+    "summary": "Large Language Models (LLMs) are increasingly integrated into critical systems in industries like healthcare and finance. Users can often submit queries to LLM-enabled chatbots, some of which can enrich responses with information retrieved from internal databases storing sensitive data. This gives rise to a range of attacks in which a user submits a malicious query and the LLM-system outputs a response that creates harm to the owner, such as leaking internal data or creating legal liability by harming a third-party. While security tools are being developed to counter these threats, there is little formal evaluation of their effectiveness and usability. This study addresses this gap by conducting a thorough comparative analysis of LLM security tools. We identified 13 solutions (9 closed-source, 4 open-source), but only 7 were evaluated due to a lack of participation by proprietary model owners.To evaluate, we built a benchmark dataset of malicious prompts, and evaluate these tools performance against a baseline LLM model (ChatGPT-3.5-Turbo). Our results show that the baseline model has too many false positives to be used for this task. Lakera Guard and ProtectAI LLM Guard emerged as the best overall tools showcasing the tradeoff between usability and performance. The study concluded with recommendations for greater transparency among closed source providers, improved context-aware detections, enhanced open-source engagement, increased user awareness, and the adoption of more representative performance metrics."
+  },
+  {
+    "title": "Evaluating the Performance of RAG Methods for Conversational AI in the Airport Domain",
+    "url": "http://arxiv.org/abs/2505.13006v1",
+    "arxiv_id": "2505.13006v1",
+    "authors": [
+      "Yuyang Li",
+      "Philip J. M. Kerbusch",
+      "Raimon H. R. Pruim",
+      "Tobias K\u00e4fer"
+    ],
+    "published": "2025-05-19T11:46:30+00:00",
+    "summary": "Airports from the top 20 in terms of annual passengers are highly dynamic environments with thousands of flights daily, and they aim to increase the degree of automation. To contribute to this, we implemented a Conversational AI system that enables staff in an airport to communicate with flight information systems. This system not only answers standard airport queries but also resolves airport terminology, jargon, abbreviations, and dynamic questions involving reasoning. In this paper, we built three different Retrieval-Augmented Generation (RAG) methods, including traditional RAG, SQL RAG, and Knowledge Graph-based RAG (Graph RAG). Experiments showed that traditional RAG achieved 84.84% accuracy using BM25 + GPT-4 but occasionally produced hallucinations, which is risky to airport safety. In contrast, SQL RAG and Graph RAG achieved 80.85% and 91.49% accuracy respectively, with significantly fewer hallucinations. Moreover, Graph RAG was especially effective for questions that involved reasoning. Based on our observations, we thus recommend SQL RAG and Graph RAG are better for airport environments, due to fewer hallucinations and the ability to handle dynamic questions."
+  },
+  {
+    "title": "EffiBench-X: A Multi-Language Benchmark for Measuring Efficiency of LLM-Generated Code",
+    "url": "http://arxiv.org/abs/2505.13004v1",
+    "arxiv_id": "2505.13004v1",
+    "authors": [
+      "Yuhao Qing",
+      "Boyu Zhu",
+      "Mingzhe Du",
+      "Zhijiang Guo",
+      "Terry Yue Zhuo",
+      "Qianru Zhang",
+      "Jie M. Zhang",
+      "Heming Cui",
+      "Siu-Ming Yiu",
+      "Dong Huang",
+      "See-Kiong Ng",
+      "Luu Anh Tuan"
+    ],
+    "published": "2025-05-19T11:43:37+00:00",
+    "summary": "Existing code generation benchmarks primarily evaluate functional correctness, with limited focus on code efficiency and often restricted to a single language like Python. To address this gap, we introduce EffiBench-X, the first multi-language benchmark designed to measure the efficiency of LLM-generated code. EffiBench-X supports Python, C++, Java, JavaScript, Ruby, and Golang. It comprises competitive programming tasks with human-expert solutions as efficiency baselines. Evaluating state-of-the-art LLMs on EffiBench-X reveals that while models generate functionally correct code, they consistently underperform human experts in efficiency. Even the most efficient LLM-generated solutions (Qwen3-32B) achieve only around \\textbf{62\\%} of human efficiency on average, with significant language-specific variations. LLMs show better efficiency in Python, Ruby, and JavaScript than in Java, C++, and Golang. For instance, DeepSeek-R1's Python code is significantly more efficient than its Java code. These results highlight the critical need for research into LLM optimization techniques to improve code efficiency across diverse languages. The dataset and evaluation infrastructure are submitted and available at https://github.com/EffiBench/EffiBench-X.git and https://huggingface.co/datasets/EffiBench/effibench-x."
+  },
+  {
+    "title": "ExTrans: Multilingual Deep Reasoning Translation via Exemplar-Enhanced Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2505.12996v1",
+    "arxiv_id": "2505.12996v1",
+    "authors": [
+      "Jiaan Wang",
+      "Fandong Meng",
+      "Jie Zhou"
+    ],
+    "published": "2025-05-19T11:34:47+00:00",
+    "summary": "In recent years, the emergence of large reasoning models (LRMs), such as OpenAI-o1 and DeepSeek-R1, has shown impressive capabilities in complex problems, e.g., mathematics and coding. Some pioneering studies attempt to bring the success of LRMs in neural machine translation (MT). They try to build LRMs with deep reasoning MT ability via reinforcement learning (RL). Despite some progress that has been made, these attempts generally focus on several high-resource languages, e.g., English and Chinese, leaving the performance on other languages unclear. Besides, the reward modeling methods in previous work do not fully unleash the potential of reinforcement learning in MT. In this work, we first design a new reward modeling method that compares the translation results of the policy MT model with a strong LRM (i.e., DeepSeek-R1-671B), and quantifies the comparisons to provide rewards. Experimental results demonstrate the superiority of the reward modeling method. Using Qwen2.5-7B-Instruct as the backbone, the trained model achieves the new state-of-the-art performance in literary translation, and outperforms strong LRMs including OpenAI-o1 and DeepSeeK-R1. Furthermore, we extend our method to the multilingual settings with 11 languages. With a carefully designed lightweight reward modeling in RL, we can simply transfer the strong MT ability from a single direction into multiple (i.e., 90) translation directions and achieve impressive multilingual MT performance."
+  },
+  {
+    "title": "LoD: Loss-difference OOD Detection by Intentionally Label-Noisifying Unlabeled Wild Data",
+    "url": "http://arxiv.org/abs/2505.12952v1",
+    "arxiv_id": "2505.12952v1",
+    "authors": [
+      "Chuanxing Geng",
+      "Qifei Li",
+      "Xinrui Wang",
+      "Dong Liang",
+      "Songcan Chen",
+      "Pong C. Yuen"
+    ],
+    "published": "2025-05-19T10:44:52+00:00",
+    "summary": "Using unlabeled wild data containing both in-distribution (ID) and out-of-distribution (OOD) data to improve the safety and reliability of models has recently received increasing attention. Existing methods either design customized losses for labeled ID and unlabeled wild data then perform joint optimization, or first filter out OOD data from the latter then learn an OOD detector. While achieving varying degrees of success, two potential issues remain: (i) Labeled ID data typically dominates the learning of models, inevitably making models tend to fit OOD data as IDs; (ii) The selection of thresholds for identifying OOD data in unlabeled wild data usually faces dilemma due to the unavailability of pure OOD samples. To address these issues, we propose a novel loss-difference OOD detection framework (LoD) by \\textit{intentionally label-noisifying} unlabeled wild data. Such operations not only enable labeled ID data and OOD data in unlabeled wild data to jointly dominate the models' learning but also ensure the distinguishability of the losses between ID and OOD samples in unlabeled wild data, allowing the classic clustering technique (e.g., K-means) to filter these OOD samples without requiring thresholds any longer. We also provide theoretical foundation for LoD's viability, and extensive experiments verify its superiority."
+  },
+  {
+    "title": "ORQA: A Benchmark and Foundation Model for Holistic Operating Room Modeling",
+    "url": "http://arxiv.org/abs/2505.12890v1",
+    "arxiv_id": "2505.12890v1",
+    "authors": [
+      "Ege \u00d6zsoy",
+      "Chantal Pellegrini",
+      "David Bani-Harouni",
+      "Kun Yuan",
+      "Matthias Keicher",
+      "Nassir Navab"
+    ],
+    "published": "2025-05-19T09:20:29+00:00",
+    "summary": "The real-world complexity of surgeries necessitates surgeons to have deep and holistic comprehension to ensure precision, safety, and effective interventions. Computational systems are required to have a similar level of comprehension within the operating room. Prior works, limited to single-task efforts like phase recognition or scene graph generation, lack scope and generalizability. In this work, we introduce ORQA, a novel OR question answering benchmark and foundational multimodal model to advance OR intelligence. By unifying all four public OR datasets into a comprehensive benchmark, we enable our approach to concurrently address a diverse range of OR challenges. The proposed multimodal large language model fuses diverse OR signals such as visual, auditory, and structured data, for a holistic modeling of the OR. Finally, we propose a novel, progressive knowledge distillation paradigm, to generate a family of models optimized for different speed and memory requirements. We show the strong performance of ORQA on our proposed benchmark, and its zero-shot generalization, paving the way for scalable, unified OR modeling and significantly advancing multimodal surgical intelligence. We will release our code and data upon acceptance."
+  },
+  {
+    "title": "GAP: Graph-Assisted Prompts for Dialogue-based Medication Recommendation",
+    "url": "http://arxiv.org/abs/2505.12888v1",
+    "arxiv_id": "2505.12888v1",
+    "authors": [
+      "Jialun Zhong",
+      "Yanzeng Li",
+      "Sen Hu",
+      "Yang Zhang",
+      "Teng Xu",
+      "Lei Zou"
+    ],
+    "published": "2025-05-19T09:18:19+00:00",
+    "summary": "Medication recommendations have become an important task in the healthcare domain, especially in measuring the accuracy and safety of medical dialogue systems (MDS). Different from the recommendation task based on electronic health records (EHRs), dialogue-based medication recommendations require research on the interaction details between patients and doctors, which is crucial but may not exist in EHRs. Recent advancements in large language models (LLM) have extended the medical dialogue domain. These LLMs can interpret patients' intent and provide medical suggestions including medication recommendations, but some challenges are still worth attention. During a multi-turn dialogue, LLMs may ignore the fine-grained medical information or connections across the dialogue turns, which is vital for providing accurate suggestions. Besides, LLMs may generate non-factual responses when there is a lack of domain-specific knowledge, which is more risky in the medical domain. To address these challenges, we propose a \\textbf{G}raph-\\textbf{A}ssisted \\textbf{P}rompts (\\textbf{GAP}) framework for dialogue-based medication recommendation. It extracts medical concepts and corresponding states from dialogue to construct an explicitly patient-centric graph, which can describe the neglected but important information. Further, combined with external medical knowledge graphs, GAP can generate abundant queries and prompts, thus retrieving information from multiple sources to reduce the non-factual responses. We evaluate GAP on a dialogue-based medication recommendation dataset and further explore its potential in a more difficult scenario, dynamically diagnostic interviewing. Extensive experiments demonstrate its competitive performance when compared with strong baselines."
+  },
+  {
+    "title": "Practical Equivalence Testing and Its Application in Synthetic Pre-Crash Scenario Validation",
+    "url": "http://arxiv.org/abs/2505.12827v1",
+    "arxiv_id": "2505.12827v1",
+    "authors": [
+      "Jian Wu",
+      "Ulrich Sander",
+      "Carol Flannagan",
+      "Minxiang Zhao",
+      "Jonas B\u00e4rgman"
+    ],
+    "published": "2025-05-19T08:12:35+00:00",
+    "summary": "The use of representative pre-crash scenarios is critical for assessing the safety impact of driving automation systems through simulation. However, a gap remains in the robust evaluation of the similarity between synthetic and real-world pre-crash scenarios and their crash characteristics. Without proper validation, it cannot be ensured that the synthetic test scenarios adequately represent real-world driving behaviors and crash characteristics. One reason for this validation gap is the lack of focus on methods to confirm that the synthetic test scenarios are practically equivalent to real-world ones, given the assessment scope. Traditional statistical methods, like significance testing, focus on detecting differences rather than establishing equivalence; since failure to detect a difference does not imply equivalence, they are of limited applicability for validating synthetic pre-crash scenarios and crash characteristics. This study addresses this gap by proposing an equivalence testing method based on the Bayesian Region of Practical Equivalence (ROPE) framework. This method is designed to assess the practical equivalence of scenario characteristics that are most relevant for the intended assessment, making it particularly appropriate for the domain of virtual safety assessments. We first review existing equivalence testing methods. Then we propose and demonstrate the Bayesian ROPE-based method by testing the equivalence of two rear-end pre-crash datasets. Our approach focuses on the most relevant scenario characteristics. Our analysis provides insights into the practicalities and effectiveness of equivalence testing in synthetic test scenario validation and demonstrates the importance of testing for improving the credibility of synthetic data for automated vehicle safety assessment, as well as the credibility of subsequent safety impact assessments."
+  },
+  {
+    "title": "Language Models That Walk the Talk: A Framework for Formal Fairness Certificates",
+    "url": "http://arxiv.org/abs/2505.12767v1",
+    "arxiv_id": "2505.12767v1",
+    "authors": [
+      "Danqing Chen",
+      "Tobias Ladner",
+      "Ahmed Rayen Mhadhbi",
+      "Matthias Althoff"
+    ],
+    "published": "2025-05-19T06:46:17+00:00",
+    "summary": "As large language models become integral to high-stakes applications, ensuring their robustness and fairness is critical. Despite their success, large language models remain vulnerable to adversarial attacks, where small perturbations, such as synonym substitutions, can alter model predictions, posing risks in fairness-critical areas, such as gender bias mitigation, and safety-critical areas, such as toxicity detection. While formal verification has been explored for neural networks, its application to large language models remains limited. This work presents a holistic verification framework to certify the robustness of transformer-based language models, with a focus on ensuring gender fairness and consistent outputs across different gender-related terms. Furthermore, we extend this methodology to toxicity detection, offering formal guarantees that adversarially manipulated toxic inputs are consistently detected and appropriately censored, thereby ensuring the reliability of moderation systems. By formalizing robustness within the embedding space, this work strengthens the reliability of language models in ethical AI deployment and content moderation."
+  },
+  {
+    "title": "Bullying the Machine: How Personas Increase LLM Vulnerability",
+    "url": "http://arxiv.org/abs/2505.12692v1",
+    "arxiv_id": "2505.12692v1",
+    "authors": [
+      "Ziwei Xu",
+      "Udit Sanghi",
+      "Mohan Kankanhalli"
+    ],
+    "published": "2025-05-19T04:32:02+00:00",
+    "summary": "Large Language Models (LLMs) are increasingly deployed in interactions where they are prompted to adopt personas. This paper investigates whether such persona conditioning affects model safety under bullying, an adversarial manipulation that applies psychological pressures in order to force the victim to comply to the attacker. We introduce a simulation framework in which an attacker LLM engages a victim LLM using psychologically grounded bullying tactics, while the victim adopts personas aligned with the Big Five personality traits. Experiments using multiple open-source LLMs and a wide range of adversarial goals reveal that certain persona configurations -- such as weakened agreeableness or conscientiousness -- significantly increase victim's susceptibility to unsafe outputs. Bullying tactics involving emotional or sarcastic manipulation, such as gaslighting and ridicule, are particularly effective. These findings suggest that persona-driven interaction introduces a novel vector for safety risks in LLMs and highlight the need for persona-aware safety evaluation and alignment strategies."
+  },
+  {
+    "title": "CURE: Concept Unlearning via Orthogonal Representation Editing in Diffusion Models",
+    "url": "http://arxiv.org/abs/2505.12677v1",
+    "arxiv_id": "2505.12677v1",
+    "authors": [
+      "Shristi Das Biswas",
+      "Arani Roy",
+      "Kaushik Roy"
+    ],
+    "published": "2025-05-19T03:53:06+00:00",
+    "summary": "As Text-to-Image models continue to evolve, so does the risk of generating unsafe, copyrighted, or privacy-violating content. Existing safety interventions - ranging from training data curation and model fine-tuning to inference-time filtering and guidance - often suffer from incomplete concept removal, susceptibility to jail-breaking, computational inefficiency, or collateral damage to unrelated capabilities. In this paper, we introduce CURE, a training-free concept unlearning framework that operates directly in the weight space of pre-trained diffusion models, enabling fast, interpretable, and highly specific suppression of undesired concepts. At the core of our method is the Spectral Eraser, a closed-form, orthogonal projection module that identifies discriminative subspaces using Singular Value Decomposition over token embeddings associated with the concepts to forget and retain. Intuitively, the Spectral Eraser identifies and isolates features unique to the undesired concept while preserving safe attributes. This operator is then applied in a single step update to yield an edited model in which the target concept is effectively unlearned - without retraining, supervision, or iterative optimization. To balance the trade-off between filtering toxicity and preserving unrelated concepts, we further introduce an Expansion Mechanism for spectral regularization which selectively modulates singular vectors based on their relative significance to control the strength of forgetting. All the processes above are in closed-form, guaranteeing extremely efficient erasure in only $2$ seconds. Benchmarking against prior approaches, CURE achieves a more efficient and thorough removal for targeted artistic styles, objects, identities, or explicit content, with minor damage to original generation ability and demonstrates enhanced robustness against red-teaming."
+  },
+  {
+    "title": "TS-VLM: Text-Guided SoftSort Pooling for Vision-Language Models in Multi-View Driving Reasoning",
+    "url": "http://arxiv.org/abs/2505.12670v1",
+    "arxiv_id": "2505.12670v1",
+    "authors": [
+      "Lihong Chen",
+      "Hossein Hassani",
+      "Soodeh Nikan"
+    ],
+    "published": "2025-05-19T03:37:15+00:00",
+    "summary": "Vision-Language Models (VLMs) have shown remarkable potential in advancing autonomous driving by leveraging multi-modal fusion in order to enhance scene perception, reasoning, and decision-making. Despite their potential, existing models suffer from computational overhead and inefficient integration of multi-view sensor data that make them impractical for real-time deployment in safety-critical autonomous driving applications. To address these shortcomings, this paper is devoted to designing a lightweight VLM called TS-VLM, which incorporates a novel Text-Guided SoftSort Pooling (TGSSP) module. By resorting to semantics of the input queries, TGSSP ranks and fuses visual features from multiple views, enabling dynamic and query-aware multi-view aggregation without reliance on costly attention mechanisms. This design ensures the query-adaptive prioritization of semantically related views, which leads to improved contextual accuracy in multi-view reasoning for autonomous driving. Extensive evaluations on the DriveLM benchmark demonstrate that, on the one hand, TS-VLM outperforms state-of-the-art models with a BLEU-4 score of 56.82, METEOR of 41.91, ROUGE-L of 74.64, and CIDEr of 3.39. On the other hand, TS-VLM reduces computational cost by up to 90%, where the smallest version contains only 20.1 million parameters, making it more practical for real-time deployment in autonomous vehicles."
+  },
+  {
+    "title": "Digital Twins in the Cloud: A Modular, Scalable and Interoperable Framework for Accelerating Verification and Validation of Autonomous Driving Solutions",
+    "url": "http://arxiv.org/abs/2505.12661v1",
+    "arxiv_id": "2505.12661v1",
+    "authors": [
+      "Tanmay Vilas Samak",
+      "Chinmay Vilas Samak",
+      "Giovanni Martino",
+      "Pranav Nair",
+      "Venkat Krovi"
+    ],
+    "published": "2025-05-19T03:23:48+00:00",
+    "summary": "Verification and validation (V&V) of autonomous vehicles (AVs) typically requires exhaustive testing across a variety of operating environments and driving scenarios including rare, extreme, or hazardous situations that might be difficult or impossible to capture in reality. Additionally, physical V&V methods such as track-based evaluations or public-road testing are often constrained by time, cost, and safety, which motivates the need for virtual proving grounds. However, the fidelity and scalability of simulation-based V&V methods can quickly turn into a bottleneck. In such a milieu, this work proposes a virtual proving ground that flexibly scales digital twins within high-performance computing clusters (HPCCs) and automates the V&V process. Here, digital twins enable high-fidelity virtual representation of the AV and its operating environments, allowing extensive scenario-based testing. Meanwhile, HPCC infrastructure brings substantial advantages in terms of computational power and scalability, enabling rapid iterations of simulations, processing and storage of massive amounts of data, and deployment of large-scale test campaigns, thereby reducing the time and cost associated with the V&V process. We demonstrate the efficacy of this approach through a case study that focuses on the variability analysis of a candidate autonomy algorithm to identify potential vulnerabilities in its perception, planning, and control sub-systems. The modularity, scalability, and interoperability of the proposed framework are demonstrated by deploying a test campaign comprising 256 test cases on two different HPCC architectures to ensure continuous operation in a publicly shared resource setting. The findings highlight the ability of the proposed framework to accelerate and streamline the V&V process, thereby significantly compressing (~30x) the timeline."
+  },
+  {
+    "title": "SafeMove-RL: A Certifiable Reinforcement Learning Framework for Dynamic Motion Constraints in Trajectory Planning",
+    "url": "http://arxiv.org/abs/2505.12648v1",
+    "arxiv_id": "2505.12648v1",
+    "authors": [
+      "Tengfei Liu",
+      "Haoyang Zhong",
+      "Jiazheng Hu",
+      "Tan Zhang"
+    ],
+    "published": "2025-05-19T03:00:44+00:00",
+    "summary": "This study presents a dynamic safety margin-based reinforcement learning framework for local motion planning in dynamic and uncertain environments. The proposed planner integrates real-time trajectory optimization with adaptive gap analysis, enabling effective feasibility assessment under partial observability constraints. To address safety-critical computations in unknown scenarios, an enhanced online learning mechanism is introduced, which dynamically corrects spatial trajectories by forming dynamic safety margins while maintaining control invariance. Extensive evaluations, including ablation studies and comparisons with state-of-the-art algorithms, demonstrate superior success rates and computational efficiency. The framework's effectiveness is further validated on both simulated and physical robotic platforms."
+  },
+  {
+    "title": "R1dacted: Investigating Local Censorship in DeepSeek's R1 Language Model",
+    "url": "http://arxiv.org/abs/2505.12625v1",
+    "arxiv_id": "2505.12625v1",
+    "authors": [
+      "Ali Naseh",
+      "Harsh Chaudhari",
+      "Jaechul Roh",
+      "Mingshi Wu",
+      "Alina Oprea",
+      "Amir Houmansadr"
+    ],
+    "published": "2025-05-19T02:16:56+00:00",
+    "summary": "DeepSeek recently released R1, a high-performing large language model (LLM) optimized for reasoning tasks. Despite its efficient training pipeline, R1 achieves competitive performance, even surpassing leading reasoning models like OpenAI's o1 on several benchmarks. However, emerging reports suggest that R1 refuses to answer certain prompts related to politically sensitive topics in China. While existing LLMs often implement safeguards to avoid generating harmful or offensive outputs, R1 represents a notable shift - exhibiting censorship-like behavior on politically charged queries. In this paper, we investigate this phenomenon by first introducing a large-scale set of heavily curated prompts that get censored by R1, covering a range of politically sensitive topics, but are not censored by other models. We then conduct a comprehensive analysis of R1's censorship patterns, examining their consistency, triggers, and variations across topics, prompt phrasing, and context. Beyond English-language queries, we explore censorship behavior in other languages. We also investigate the transferability of censorship to models distilled from the R1 language model. Finally, we propose techniques for bypassing or removing this censorship. Our findings reveal possible additional censorship integration likely shaped by design choices during training or alignment, raising concerns about transparency, bias, and governance in language model deployment."
+  },
+  {
+    "title": "SurveillanceVQA-589K: A Benchmark for Comprehensive Surveillance Video-Language Understanding with Large Models",
+    "url": "http://arxiv.org/abs/2505.12589v1",
+    "arxiv_id": "2505.12589v1",
+    "authors": [
+      "Bo Liu",
+      "Pengfei Qiao",
+      "Minhan Ma",
+      "Xuange Zhang",
+      "Yinan Tang",
+      "Peng Xu",
+      "Kun Liu",
+      "Tongtong Yuan"
+    ],
+    "published": "2025-05-19T00:57:04+00:00",
+    "summary": "Understanding surveillance video content remains a critical yet underexplored challenge in vision-language research, particularly due to its real-world complexity, irregular event dynamics, and safety-critical implications. In this work, we introduce SurveillanceVQA-589K, the largest open-ended video question answering benchmark tailored to the surveillance domain. The dataset comprises 589,380 QA pairs spanning 12 cognitively diverse question types, including temporal reasoning, causal inference, spatial understanding, and anomaly interpretation, across both normal and abnormal video scenarios. To construct the benchmark at scale, we design a hybrid annotation pipeline that combines temporally aligned human-written captions with Large Vision-Language Model-assisted QA generation using prompt-based techniques. We also propose a multi-dimensional evaluation protocol to assess contextual, temporal, and causal comprehension. We evaluate eight LVLMs under this framework, revealing significant performance gaps, especially in causal and anomaly-related tasks, underscoring the limitations of current models in real-world surveillance contexts. Our benchmark provides a practical and comprehensive resource for advancing video-language understanding in safety-critical applications such as intelligent monitoring, incident analysis, and autonomous decision-making."
+  },
+  {
+    "title": "A Comprehensive Survey on Physical Risk Control in the Era of Foundation Model-enabled Robotics",
+    "url": "http://arxiv.org/abs/2505.12583v1",
+    "arxiv_id": "2505.12583v1",
+    "authors": [
+      "Takeshi Kojima",
+      "Yaonan Zhu",
+      "Yusuke Iwasawa",
+      "Toshinori Kitamura",
+      "Gang Yan",
+      "Shu Morikuni",
+      "Ryosuke Takanami",
+      "Alfredo Solano",
+      "Tatsuya Matsushima",
+      "Akiko Murakami",
+      "Yutaka Matsuo"
+    ],
+    "published": "2025-05-19T00:11:42+00:00",
+    "summary": "Recent Foundation Model-enabled robotics (FMRs) display greatly improved general-purpose skills, enabling more adaptable automation than conventional robotics. Their ability to handle diverse tasks thus creates new opportunities to replace human labor. However, unlike general foundation models, FMRs interact with the physical world, where their actions directly affect the safety of humans and surrounding objects, requiring careful deployment and control. Based on this proposition, our survey comprehensively summarizes robot control approaches to mitigate physical risks by covering all the lifespan of FMRs ranging from pre-deployment to post-accident stage. Specifically, we broadly divide the timeline into the following three phases: (1) pre-deployment phase, (2) pre-incident phase, and (3) post-incident phase. Throughout this survey, we find that there is much room to study (i) pre-incident risk mitigation strategies, (ii) research that assumes physical interaction with humans, and (iii) essential issues of foundation models themselves. We hope that this survey will be a milestone in providing a high-resolution analysis of the physical risks of FMRs and their control, contributing to the realization of a good human-robot relationship."
+  },
+  {
+    "title": "A Survey of Attacks on Large Language Models",
+    "url": "http://arxiv.org/abs/2505.12567v1",
+    "arxiv_id": "2505.12567v1",
+    "authors": [
+      "Wenrui Xu",
+      "Keshab K. Parhi"
+    ],
+    "published": "2025-05-18T22:55:16+00:00",
+    "summary": "Large language models (LLMs) and LLM-based agents have been widely deployed in a wide range of applications in the real world, including healthcare diagnostics, financial analysis, customer support, robotics, and autonomous driving, expanding their powerful capability of understanding, reasoning, and generating natural languages. However, the wide deployment of LLM-based applications exposes critical security and reliability risks, such as the potential for malicious misuse, privacy leakage, and service disruption that weaken user trust and undermine societal safety. This paper provides a systematic overview of the details of adversarial attacks targeting both LLMs and LLM-based agents. These attacks are organized into three phases in LLMs: Training-Phase Attacks, Inference-Phase Attacks, and Availability & Integrity Attacks. For each phase, we analyze the details of representative and recently introduced attack methods along with their corresponding defenses. We hope our survey will provide a good tutorial and a comprehensive understanding of LLM security, especially for attacks on LLMs. We desire to raise attention to the risks inherent in widely deployed LLM-based applications and highlight the urgent need for robust mitigation strategies for evolving threats."
+  },
+  {
+    "title": "Towards Reliable and Interpretable Traffic Crash Pattern Prediction and Safety Interventions Using Customized Large Language Models",
+    "url": "http://arxiv.org/abs/2505.12545v1",
+    "arxiv_id": "2505.12545v1",
+    "authors": [
+      "Yang Zhao",
+      "Pu Wang",
+      "Yibo Zhao",
+      "Hongru Du",
+      "Hao",
+      "Yang"
+    ],
+    "published": "2025-05-18T21:02:30+00:00",
+    "summary": "Predicting crash events is crucial for understanding crash distributions and their contributing factors, thereby enabling the design of proactive traffic safety policy interventions. However, existing methods struggle to interpret the complex interplay among various sources of traffic crash data, including numeric characteristics, textual reports, crash imagery, environmental conditions, and driver behavior records. As a result, they often fail to capture the rich semantic information and intricate interrelationships embedded in these diverse data sources, limiting their ability to identify critical crash risk factors. In this research, we propose TrafficSafe, a framework that adapts LLMs to reframe crash prediction and feature attribution as text-based reasoning. A multi-modal crash dataset including 58,903 real-world reports together with belonged infrastructure, environmental, driver, and vehicle information is collected and textualized into TrafficSafe Event Dataset. By customizing and fine-tuning LLMs on this dataset, the TrafficSafe LLM achieves a 42% average improvement in F1-score over baselines. To interpret these predictions and uncover contributing factors, we introduce TrafficSafe Attribution, a sentence-level feature attribution framework enabling conditional risk analysis. Findings show that alcohol-impaired driving is the leading factor in severe crashes, with aggressive and impairment-related behaviors having nearly twice the contribution for severe crashes compared to other driver behaviors. Furthermore, TrafficSafe Attribution highlights pivotal features during model training, guiding strategic crash data collection for iterative performance improvements. The proposed TrafficSafe offers a transformative leap in traffic safety research, providing a blueprint for translating advanced AI technologies into responsible, actionable, and life-saving outcomes."
+  },
+  {
+    "title": "Development of a non-wearable support robot capable of reproducing natural standing-up movements",
+    "url": "http://arxiv.org/abs/2505.12525v1",
+    "arxiv_id": "2505.12525v1",
+    "authors": [
+      "Atsuya Kusui",
+      "Susumu Hirai",
+      "Asuka Takai"
+    ],
+    "published": "2025-05-18T19:26:40+00:00",
+    "summary": "To reproduce natural standing-up motion, recent studies have emphasized the importance of coordination between the assisting robot and the human. However, many non-wearable assistive devices have struggled to replicate natural motion trajectories. While wearable devices offer better coordination with the human body, they present challenges in completely isolating mechanical and electrical hazards. To address this, we developed a novel standing-assist robot that integrates features of both wearable and non-wearable systems, aiming to achieve high coordination while maintaining safety. The device employs a four-link mechanism aligned with the human joint structure, designed to reproduce the S-shaped trajectory of the hip and the arc trajectory of the knee during natural standing-up motion. Subject-specific trajectory data were obtained using a gyroscope, and the link lengths were determined to drive the seat along the optimal path. A feedforward speed control using a stepping motor was implemented, and the reproducibility of the trajectory was evaluated based on the geometric constraints of the mechanism. A load-bearing experiment with weights fixed to the seat was conducted to assess the trajectory accuracy under different conditions. Results showed that the reproduction errors for the hip and knee trajectories remained within approximately 4 percent of the seat's total displacement, demonstrating high fidelity to the target paths. In addition, durability testing, thermal safety evaluation, and risk assessment confirmed the reliability and safety of the system for indoor use. These findings suggest that the proposed design offers a promising approach for developing assistive technologies that adapt to individual physical characteristics, with potential applications in elderly care and rehabilitation."
+  },
+  {
+    "title": "BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation",
+    "url": "http://arxiv.org/abs/2505.12443v1",
+    "arxiv_id": "2505.12443v1",
+    "authors": [
+      "Wenqi Lyu",
+      "Zerui Li",
+      "Yanyuan Qiao",
+      "Qi Wu"
+    ],
+    "published": "2025-05-18T14:33:17+00:00",
+    "summary": "Multimodal large language models (MLLMs) have recently gained attention for their generalization and reasoning capabilities in Vision-and-Language Navigation (VLN) tasks, leading to the rise of MLLM-driven navigators. However, MLLMs are vulnerable to jailbreak attacks, where crafted prompts bypass safety mechanisms and trigger undesired outputs. In embodied scenarios, such vulnerabilities pose greater risks: unlike plain text models that generate toxic content, embodied agents may interpret malicious instructions as executable commands, potentially leading to real-world harm. In this paper, we present the first systematic jailbreak attack paradigm targeting MLLM-driven navigator. We propose a three-tiered attack framework and construct malicious queries across four intent categories, concatenated with standard navigation instructions. In the Matterport3D simulator, we evaluate navigation agents powered by five MLLMs and report an average attack success rate over 90%. To test real-world feasibility, we replicate the attack on a physical robot. Our results show that even well-crafted prompts can induce harmful actions and intents in MLLMs, posing risks beyond toxic output and potentially leading to physical harm."
+  },
+  {
+    "title": "Addressing the Scarcity of Benchmarks for Graph XAI",
+    "url": "http://arxiv.org/abs/2505.12437v1",
+    "arxiv_id": "2505.12437v1",
+    "authors": [
+      "Michele Fontanesi",
+      "Alessio Micheli",
+      "Marco Podda",
+      "Domenico Tortorella"
+    ],
+    "published": "2025-05-18T14:19:52+00:00",
+    "summary": "While Graph Neural Networks (GNNs) have become the de facto model for learning from structured data, their decisional process remains opaque to the end user, undermining their deployment in safety-critical applications. In the case of graph classification, Explainable Artificial Intelligence (XAI) techniques address this major issue by identifying sub-graph motifs that explain predictions. However, advancements in this field are hindered by a chronic scarcity of benchmark datasets with known ground-truth motifs to assess the explanations' quality. Current graph XAI benchmarks are limited to synthetic data or a handful of real-world tasks hand-curated by domain experts. In this paper, we propose a general method to automate the construction of XAI benchmarks for graph classification from real-world datasets. We provide both 15 ready-made benchmarks, as well as the code to generate more than 2000 additional XAI benchmarks with our method. As a use case, we employ our benchmarks to assess the effectiveness of some popular graph explainers."
+  },
+  {
+    "title": "Kornia-rs: A Low-Level 3D Computer Vision Library In Rust",
+    "url": "http://arxiv.org/abs/2505.12425v1",
+    "arxiv_id": "2505.12425v1",
+    "authors": [
+      "Edgar Riba",
+      "Jian Shi",
+      "Aditya Kumar",
+      "Andrew Shen",
+      "Gary Bradski"
+    ],
+    "published": "2025-05-18T13:50:00+00:00",
+    "summary": "We present \\textit{kornia-rs}, a high-performance 3D computer vision library written entirely in native Rust, designed for safety-critical and real-time applications. Unlike C++-based libraries like OpenCV or wrapper-based solutions like OpenCV-Rust, \\textit{kornia-rs} is built from the ground up to leverage Rust's ownership model and type system for memory and thread safety. \\textit{kornia-rs} adopts a statically-typed tensor system and a modular set of crates, providing efficient image I/O, image processing and 3D operations. To aid cross-platform compatibility, \\textit{kornia-rs} offers Python bindings, enabling seamless and efficient integration with Rust code. Empirical results show that \\textit{kornia-rs} achieves a 3~ 5 times speedup in image transformation tasks over native Rust alternatives, while offering comparable performance to C++ wrapper-based libraries. In addition to 2D vision capabilities, \\textit{kornia-rs} addresses a significant gap in the Rust ecosystem by providing a set of 3D computer vision operators. This paper presents the architecture and performance characteristics of \\textit{kornia-rs}, demonstrating its effectiveness in real-world computer vision applications."
+  },
+  {
+    "title": "SLOT: Sample-specific Language Model Optimization at Test-time",
+    "url": "http://arxiv.org/abs/2505.12392v1",
+    "arxiv_id": "2505.12392v1",
+    "authors": [
+      "Yang Hu",
+      "Xingyu Zhang",
+      "Xueji Fang",
+      "Zhiyang Chen",
+      "Xiao Wang",
+      "Huatian Zhang",
+      "Guojun Qi"
+    ],
+    "published": "2025-05-18T12:37:56+00:00",
+    "summary": "We propose SLOT (Sample-specific Language Model Optimization at Test-time), a novel and parameter-efficient test-time inference approach that enhances a language model's ability to more accurately respond to individual prompts. Existing Large Language Models (LLMs) often struggle with complex instructions, leading to poor performances on those not well represented among general samples. To address this, SLOT conducts few optimization steps at test-time to update a light-weight sample-specific parameter vector. It is added to the final hidden layer before the output head, and enables efficient adaptation by caching the last layer features during per-sample optimization. By minimizing the cross-entropy loss on the input prompt only, SLOT helps the model better aligned with and follow each given instruction. In experiments, we demonstrate that our method outperforms the compared models across multiple benchmarks and LLMs. For example, Qwen2.5-7B with SLOT achieves an accuracy gain of 8.6% on GSM8K from 57.54% to 66.19%, while DeepSeek-R1-Distill-Llama-70B with SLOT achieves a SOTA accuracy of 68.69% on GPQA among 70B-level models. Our code is available at https://github.com/maple-research-lab/SLOT."
+  },
+  {
+    "title": "DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization",
+    "url": "http://arxiv.org/abs/2505.12366v1",
+    "arxiv_id": "2505.12366v1",
+    "authors": [
+      "Gang Li",
+      "Ming Lin",
+      "Tomer Galanti",
+      "Zhengzhong Tu",
+      "Tianbao Yang"
+    ],
+    "published": "2025-05-18T11:08:32+00:00",
+    "summary": "The recent success and openness of DeepSeek-R1 have brought widespread attention to Group Relative Policy Optimization (GRPO) as a reinforcement learning method for large reasoning models (LRMs). In this work, we analyze the GRPO objective under a binary reward setting and reveal an inherent limitation of question-level difficulty bias. We also identify a connection between GRPO and traditional discriminative methods in supervised learning. Motivated by these insights, we introduce a new Discriminative Constrained Optimization (DisCO) framework for reinforcing LRMs, grounded in the principle of discriminative learning. The main differences between DisCO and GRPO and its recent variants are: (1) it replaces the group relative objective with a discriminative objective defined by a scoring function; (2) it abandons clipping-based surrogates in favor of non-clipping RL surrogate objectives used as scoring functions; (3) it employs a simple yet effective constrained optimization approach to enforce the KL divergence constraint, ensuring stable training. As a result, DisCO offers notable advantages over GRPO and its variants: (i) it completely eliminates difficulty bias by adopting discriminative objectives; (ii) it addresses the entropy instability in GRPO and its variants through the use of non-clipping scoring functions and a constrained optimization approach; (iii) it allows the incorporation of advanced discriminative learning techniques to address data imbalance, where a significant number of questions have more negative than positive generated answers during training. Our experiments on enhancing the mathematical reasoning capabilities of SFT-finetuned models show that DisCO significantly outperforms GRPO and its improved variants such as DAPO, achieving average gains of 7\\% over GRPO and 6\\% over DAPO across six benchmark tasks for an 1.5B model."
+  },
+  {
+    "title": "A universal policy wrapper with guarantees",
+    "url": "http://arxiv.org/abs/2505.12354v1",
+    "arxiv_id": "2505.12354v1",
+    "authors": [
+      "Anton Bolychev",
+      "Georgiy Malaniya",
+      "Grigory Yaremenko",
+      "Anastasia Krasnaya",
+      "Pavel Osinenko"
+    ],
+    "published": "2025-05-18T10:37:27+00:00",
+    "summary": "We introduce a universal policy wrapper for reinforcement learning agents that ensures formal goal-reaching guarantees. In contrast to standard reinforcement learning algorithms that excel in performance but lack rigorous safety assurances, our wrapper selectively switches between a high-performing base policy -- derived from any existing RL method -- and a fallback policy with known convergence properties. Base policy's value function supervises this switching process, determining when the fallback policy should override the base policy to ensure the system remains on a stable path. The analysis proves that our wrapper inherits the fallback policy's goal-reaching guarantees while preserving or improving upon the performance of the base policy. Notably, it operates without needing additional system knowledge or online constrained optimization, making it readily deployable across diverse reinforcement learning architectures and tasks."
+  },
+  {
+    "title": "Reasoning-CV: Fine-tuning Powerful Reasoning LLMs for Knowledge-Assisted Claim Verification",
+    "url": "http://arxiv.org/abs/2505.12348v1",
+    "arxiv_id": "2505.12348v1",
+    "authors": [
+      "Zhi Zheng",
+      "Wee Sun Lee"
+    ],
+    "published": "2025-05-18T10:28:54+00:00",
+    "summary": "Claim verification is essential in combating misinformation, and large language models (LLMs) have recently emerged in this area as powerful tools for assessing the veracity of claims using external knowledge. Existing LLM-based methods for claim verification typically adopt a Decompose-Then-Verify paradigm, which involves decomposing complex claims into several independent sub-claims and verifying each sub-claim separately. However, this paradigm often introduces errors during the claim decomposition process. To mitigate these errors, we propose to develop the Chain-of-Thought (CoT)-Verify paradigm, which leverages LLM reasoning methods to generate CoT-verification paths for the original complex claim without requiring decompositions into sub-claims and separate verification stages. The CoT-Verify paradigm allows us to propose a natural fine-tuning method called Reasoning-CV to enhance the verification capabilities in LLMs. Reasoning-CV includes a supervised fine-tuning (SFT) stage and a self-improvement direct preference optimization (DPO) stage. Utilizing only an 8B pre-trained LLM, Reasoning-CV demonstrates superior knowledge-assisted claim verification performances compared to existing Decompose-Then-Verify methods, as well as powerful black-box LLMs such as GPT-4o+CoT and o1-preview. Our code is available."
+  },
+  {
+    "title": "OSS-Bench: Benchmark Generator for Coding LLMs",
+    "url": "http://arxiv.org/abs/2505.12331v1",
+    "arxiv_id": "2505.12331v1",
+    "authors": [
+      "Yuancheng Jiang",
+      "Roland Yap",
+      "Zhenkai Liang"
+    ],
+    "published": "2025-05-18T09:53:51+00:00",
+    "summary": "In light of the rapid adoption of AI coding assistants, LLM-assisted development has become increasingly prevalent, creating an urgent need for robust evaluation of generated code quality. Existing benchmarks often require extensive manual effort to create static datasets, rely on indirect or insufficiently challenging tasks, depend on non-scalable ground truth, or neglect critical low-level security evaluations, particularly memory-safety issues. In this work, we introduce OSS-Bench, a benchmark generator that automatically constructs large-scale, live evaluation tasks from real-world open-source software. OSS-Bench replaces functions with LLM-generated code and evaluates them using three natural metrics: compilability, functional correctness, and memory safety, leveraging robust signals like compilation failures, test-suite violations, and sanitizer alerts as ground truth. In our evaluation, the benchmark, instantiated as OSS-Bench(php) and OSS-Bench(sql), profiles 17 diverse LLMs, revealing insights such as intra-family behavioral patterns and inconsistencies between model size and performance. Our results demonstrate that OSS-Bench mitigates overfitting by leveraging the evolving complexity of OSS and highlights LLMs' limited understanding of low-level code security via extended fuzzing experiments. Overall, OSS-Bench offers a practical and scalable framework for benchmarking the real-world coding capabilities of LLMs."
+  },
+  {
+    "title": "Robust Planning for Autonomous Driving via Mixed Adversarial Diffusion Predictions",
+    "url": "http://arxiv.org/abs/2505.12327v1",
+    "arxiv_id": "2505.12327v1",
+    "authors": [
+      "Albert Zhao",
+      "Stefano Soatto"
+    ],
+    "published": "2025-05-18T09:44:57+00:00",
+    "summary": "We describe a robust planning method for autonomous driving that mixes normal and adversarial agent predictions output by a diffusion model trained for motion prediction. We first train a diffusion model to learn an unbiased distribution of normal agent behaviors. We then generate a distribution of adversarial predictions by biasing the diffusion model at test time to generate predictions that are likely to collide with a candidate plan. We score plans using expected cost with respect to a mixture distribution of normal and adversarial predictions, leading to a planner that is robust against adversarial behaviors but not overly conservative when agents behave normally. Unlike current approaches, we do not use risk measures that over-weight adversarial behaviors while placing little to no weight on low-cost normal behaviors or use hard safety constraints that may not be appropriate for all driving scenarios. We show the effectiveness of our method on single-agent and multi-agent jaywalking scenarios as well as a red light violation scenario."
+  },
+  {
+    "title": "The Tower of Babel Revisited: Multilingual Jailbreak Prompts on Closed-Source Large Language Models",
+    "url": "http://arxiv.org/abs/2505.12287v1",
+    "arxiv_id": "2505.12287v1",
+    "authors": [
+      "Linghan Huang",
+      "Haolin Jin",
+      "Zhaoge Bi",
+      "Pengyue Yang",
+      "Peizhou Zhao",
+      "Taozhao Chen",
+      "Xiongfei Wu",
+      "Lei Ma",
+      "Huaming Chen"
+    ],
+    "published": "2025-05-18T07:51:19+00:00",
+    "summary": "Large language models (LLMs) have seen widespread applications across various domains, yet remain vulnerable to adversarial prompt injections. While most existing research on jailbreak attacks and hallucination phenomena has focused primarily on open-source models, we investigate the frontier of closed-source LLMs under multilingual attack scenarios. We present a first-of-its-kind integrated adversarial framework that leverages diverse attack techniques to systematically evaluate frontier proprietary solutions, including GPT-4o, DeepSeek-R1, Gemini-1.5-Pro, and Qwen-Max. Our evaluation spans six categories of security contents in both English and Chinese, generating 38,400 responses across 32 types of jailbreak attacks. Attack success rate (ASR) is utilized as the quantitative metric to assess performance from three dimensions: prompt design, model architecture, and language environment. Our findings suggest that Qwen-Max is the most vulnerable, while GPT-4o shows the strongest defense. Notably, prompts in Chinese consistently yield higher ASRs than their English counterparts, and our novel Two-Sides attack technique proves to be the most effective across all models. This work highlights a dire need for language-aware alignment and robust cross-lingual defenses in LLMs, and we hope it will inspire researchers, developers, and policymakers toward more robust and inclusive AI systems."
+  },
+  {
+    "title": "Efficient RL Training for Reasoning Models via Length-Aware Optimization",
+    "url": "http://arxiv.org/abs/2505.12284v1",
+    "arxiv_id": "2505.12284v1",
+    "authors": [
+      "Danlong Yuan",
+      "Tian Xie",
+      "Shaohan Huang",
+      "Zhuocheng Gong",
+      "Huishuai Zhang",
+      "Chong Luo",
+      "Furu Wei",
+      "Dongyan Zhao"
+    ],
+    "published": "2025-05-18T07:46:43+00:00",
+    "summary": "Large reasoning models, such as OpenAI o1 or DeepSeek R1, have demonstrated remarkable performance on reasoning tasks but often incur a long reasoning path with significant memory and time costs. Existing methods primarily aim to shorten reasoning paths by introducing additional training data and stages. In this paper, we propose three critical reward designs integrated directly into the reinforcement learning process of large reasoning models, which reduce the response length without extra training stages. Experiments on four settings show that our method significantly decreases response length while maintaining or even improving performance. Specifically, in a logic reasoning setting, we achieve a 40% reduction in response length averaged by steps alongside a 14% gain in performance. For math problems, we reduce response length averaged by steps by 33% while preserving performance."
+  },
+  {
+    "title": "LLM Context Conditioning and PWP Prompting for Multimodal Validation of Chemical Formulas",
+    "url": "http://arxiv.org/abs/2505.12257v1",
+    "arxiv_id": "2505.12257v1",
+    "authors": [
+      "Evgeny Markhasin"
+    ],
+    "published": "2025-05-18T06:33:08+00:00",
+    "summary": "Identifying subtle technical errors within complex scientific and technical documents, especially those requiring multimodal interpretation (e.g., formulas in images), presents a significant hurdle for Large Language Models (LLMs) whose inherent error-correction tendencies can mask inaccuracies. This exploratory proof-of-concept (PoC) study investigates structured LLM context conditioning, informed by Persistent Workflow Prompting (PWP) principles, as a methodological strategy to modulate this LLM behavior at inference time. The approach is designed to enhance the reliability of readily available, general-purpose LLMs (specifically Gemini 2.5 Pro and ChatGPT Plus o3) for precise validation tasks, crucially relying only on their standard chat interfaces without API access or model modifications. To explore this methodology, we focused on validating chemical formulas within a single, complex test paper with known textual and image-based errors. Several prompting strategies were evaluated: while basic prompts proved unreliable, an approach adapting PWP structures to rigorously condition the LLM's analytical mindset appeared to improve textual error identification with both models. Notably, this method also guided Gemini 2.5 Pro to repeatedly identify a subtle image-based formula error previously overlooked during manual review, a task where ChatGPT Plus o3 failed in our tests. These preliminary findings highlight specific LLM operational modes that impede detail-oriented validation and suggest that PWP-informed context conditioning offers a promising and highly accessible technique for developing more robust LLM-driven analytical workflows, particularly for tasks requiring meticulous error detection in scientific and technical documents. Extensive validation beyond this limited PoC is necessary to ascertain broader applicability."
+  },
+  {
+    "title": "Persuasion and Safety in the Era of Generative AI",
+    "url": "http://arxiv.org/abs/2505.12248v1",
+    "arxiv_id": "2505.12248v1",
+    "authors": [
+      "Haein Kong"
+    ],
+    "published": "2025-05-18T06:04:46+00:00",
+    "summary": "As large language models (LLMs) achieve advanced persuasive capabilities, concerns about their potential risks have grown. The EU AI Act prohibits AI systems that use manipulative or deceptive techniques to undermine informed decision-making, highlighting the need to distinguish between rational persuasion, which engages reason, and manipulation, which exploits cognitive biases. My dissertation addresses the lack of empirical studies in this area by developing a taxonomy of persuasive techniques, creating a human-annotated dataset, and evaluating LLMs' ability to distinguish between these methods. This work contributes to AI safety by providing resources to mitigate the risks of persuasive AI and fostering discussions on ethical persuasion in the age of generative AI."
+  },
+  {
+    "title": "PANORAMA: A synthetic PII-laced dataset for studying sensitive data memorization in LLMs",
+    "url": "http://arxiv.org/abs/2505.12238v1",
+    "arxiv_id": "2505.12238v1",
+    "authors": [
+      "Sriram Selvam",
+      "Anneswa Ghosh"
+    ],
+    "published": "2025-05-18T05:27:35+00:00",
+    "summary": "The memorization of sensitive and personally identifiable information (PII) by large language models (LLMs) poses growing privacy risks as models scale and are increasingly deployed in real-world applications. Existing efforts to study sensitive and PII data memorization and develop mitigation strategies are hampered by the absence of comprehensive, realistic, and ethically sourced datasets reflecting the diversity of sensitive information found on the web. We introduce PANORAMA - Profile-based Assemblage for Naturalistic Online Representation and Attribute Memorization Analysis, a large-scale synthetic corpus of 384,789 samples derived from 9,674 synthetic profiles designed to closely emulate the distribution, variety, and context of PII and sensitive data as it naturally occurs in online environments. Our data generation pipeline begins with the construction of internally consistent, multi-attribute human profiles using constrained selection to reflect real-world demographics such as education, health attributes, financial status, etc. Using a combination of zero-shot prompting and OpenAI o3-mini, we generate diverse content types - including wiki-style articles, social media posts, forum discussions, online reviews, comments, and marketplace listings - each embedding realistic, contextually appropriate PII and other sensitive information. We validate the utility of PANORAMA by fine-tuning the Mistral-7B model on 1x, 5x, 10x, and 25x data replication rates with a subset of data and measure PII memorization rates - revealing not only consistent increases with repetition but also variation across content types, highlighting PANORAMA's ability to model how memorization risks differ by context. Our dataset and code are publicly available, providing a much-needed resource for privacy risk assessment, model auditing, and the development of privacy-preserving LLMs."
+  },
+  {
+    "title": "Self-Destructive Language Model",
+    "url": "http://arxiv.org/abs/2505.12186v1",
+    "arxiv_id": "2505.12186v1",
+    "authors": [
+      "Yuhui Wang",
+      "Rongyi Zhu",
+      "Ting Wang"
+    ],
+    "published": "2025-05-18T01:08:18+00:00",
+    "summary": "Harmful fine-tuning attacks pose a major threat to the security of large language models (LLMs), allowing adversaries to compromise safety guardrails with minimal harmful data. While existing defenses attempt to reinforce LLM alignment, they fail to address models' inherent \"trainability\" on harmful data, leaving them vulnerable to stronger attacks with increased learning rates or larger harmful datasets. To overcome this critical limitation, we introduce SEAM, a novel alignment-enhancing defense that transforms LLMs into self-destructive models with intrinsic resilience to misalignment attempts. Specifically, these models retain their capabilities for legitimate tasks while exhibiting substantial performance degradation when fine-tuned on harmful data. The protection is achieved through a novel loss function that couples the optimization trajectories of benign and harmful data, enhanced with adversarial gradient ascent to amplify the self-destructive effect. To enable practical training, we develop an efficient Hessian-free gradient estimate with theoretical error bounds. Extensive evaluation across LLMs and datasets demonstrates that SEAM creates a no-win situation for adversaries: the self-destructive models achieve state-of-the-art robustness against low-intensity attacks and undergo catastrophic performance collapse under high-intensity attacks, rendering them effectively unusable. (warning: this paper contains potentially harmful content generated by LLMs.)"
+  },
+  {
+    "title": "Truth Neurons",
+    "url": "http://arxiv.org/abs/2505.12182v1",
+    "arxiv_id": "2505.12182v1",
+    "authors": [
+      "Haohang Li",
+      "Yupeng Cao",
+      "Yangyang Yu",
+      "Jordan W. Suchow",
+      "Zining Zhu"
+    ],
+    "published": "2025-05-18T00:47:21+00:00",
+    "summary": "Despite their remarkable success and deployment across diverse workflows, language models sometimes produce untruthful responses. Our limited understanding of how truthfulness is mechanistically encoded within these models jeopardizes their reliability and safety. In this paper, we propose a method for identifying representations of truthfulness at the neuron level. We show that language models contain truth neurons, which encode truthfulness in a subject-agnostic manner. Experiments conducted across models of varying scales validate the existence of truth neurons, confirming that the encoding of truthfulness at the neuron level is a property shared by many language models. The distribution patterns of truth neurons over layers align with prior findings on the geometry of truthfulness. Selectively suppressing the activations of truth neurons found through the TruthfulQA dataset degrades performance both on TruthfulQA and on other benchmarks, showing that the truthfulness mechanisms are not tied to a specific dataset. Our results offer novel insights into the mechanisms underlying truthfulness in language models and highlight potential directions toward improving their trustworthiness and reliability."
+  },
+  {
+    "title": "Reasoning Large Language Model Errors Arise from Hallucinating Critical Problem Features",
+    "url": "http://arxiv.org/abs/2505.12151v1",
+    "arxiv_id": "2505.12151v1",
+    "authors": [
+      "Alex Heyman",
+      "Joel Zylberberg"
+    ],
+    "published": "2025-05-17T21:55:12+00:00",
+    "summary": "Large language models have recently made great strides in reasoning task performance through chain-of-thought (CoT) strategies trained via reinforcement learning; however, these \"reasoning large language models\" (RLLMs) remain imperfect reasoners, and understanding the frequencies and causes of their failure modes is important for both users and developers. We test o1-mini, o3-mini, DeepSeek-R1, Claude 3.7 Sonnet, Gemini 2.5 Pro Preview, and Grok 3 Mini Beta on graph coloring as a variable-complexity constraint-satisfaction logic problem, and find evidence from both error rate comparisons and CoT/explanation text analysis that RLLMs are prone to hallucinate edges not specified in the prompt's description of the graph. This phenomenon persists across multiple problem complexity levels and semantic frames, and it appears to account for a significant fraction of the incorrect answers from every tested model, and the vast majority of them for some models. Our results indicate that RLLMs may possess broader issues with misrepresentation of problem specifics, and we offer suggestions for design choices to mitigate this weakness."
+  },
+  {
+    "title": "A Multi-Task Benchmark for Abusive Language Detection in Low-Resource Settings",
+    "url": "http://arxiv.org/abs/2505.12116v1",
+    "arxiv_id": "2505.12116v1",
+    "authors": [
+      "Fitsum Gaim",
+      "Hoyun Song",
+      "Huije Lee",
+      "Changgeon Ko",
+      "Eui Jun Hwang",
+      "Jong C. Park"
+    ],
+    "published": "2025-05-17T18:52:47+00:00",
+    "summary": "Content moderation research has recently made significant advances, but still fails to serve the majority of the world's languages due to the lack of resources, leaving millions of vulnerable users to online hostility. This work presents a large-scale human-annotated multi-task benchmark dataset for abusive language detection in Tigrinya social media with joint annotations for three tasks: abusiveness, sentiment, and topic classification. The dataset comprises 13,717 YouTube comments annotated by nine native speakers, collected from 7,373 videos with a total of over 1.2 billion views across 51 channels. We developed an iterative term clustering approach for effective data selection. Recognizing that around 64% of Tigrinya social media content uses Romanized transliterations rather than native Ge'ez script, our dataset accommodates both writing systems to reflect actual language use. We establish strong baselines across the tasks in the benchmark, while leaving significant challenges for future contributions. Our experiments reveal that small, specialized multi-task models outperform the current frontier models in the low-resource setting, achieving up to 86% accuracy (+7 points) in abusiveness detection. We make the resources publicly available to promote research on online safety."
+  },
+  {
+    "title": "Why Not Act on What You Know? Unleashing Safety Potential of LLMs via Self-Aware Guard Enhancement",
+    "url": "http://arxiv.org/abs/2505.12060v1",
+    "arxiv_id": "2505.12060v1",
+    "authors": [
+      "Peng Ding",
+      "Jun Kuang",
+      "Zongyu Wang",
+      "Xuezhi Cao",
+      "Xunliang Cai",
+      "Jiajun Chen",
+      "Shujian Huang"
+    ],
+    "published": "2025-05-17T15:54:52+00:00",
+    "summary": "Large Language Models (LLMs) have shown impressive capabilities across various tasks but remain vulnerable to meticulously crafted jailbreak attacks. In this paper, we identify a critical safety gap: while LLMs are adept at detecting jailbreak prompts, they often produce unsafe responses when directly processing these inputs. Inspired by this insight, we propose SAGE (Self-Aware Guard Enhancement), a training-free defense strategy designed to align LLMs' strong safety discrimination performance with their relatively weaker safety generation ability. SAGE consists of two core components: a Discriminative Analysis Module and a Discriminative Response Module, enhancing resilience against sophisticated jailbreak attempts through flexible safety discrimination instructions. Extensive experiments demonstrate SAGE's effectiveness and robustness across various open-source and closed-source LLMs of different sizes and architectures, achieving an average 99% defense success rate against numerous complex and covert jailbreak methods while maintaining helpfulness on general benchmarks. We further conduct mechanistic interpretability analysis through hidden states and attention distributions, revealing the underlying mechanisms of this detection-generation discrepancy. Our work thus contributes to developing future LLMs with coherent safety awareness and generation behavior. Our code and datasets are publicly available at https://github.com/NJUNLP/SAGE."
+  },
+  {
+    "title": "Tiny QA Benchmark++: Ultra-Lightweight, Synthetic Multilingual Dataset Generation & Smoke-Tests for Continuous LLM Evaluation",
+    "url": "http://arxiv.org/abs/2505.12058v1",
+    "arxiv_id": "2505.12058v1",
+    "authors": [
+      "Vincent Koc"
+    ],
+    "published": "2025-05-17T15:40:03+00:00",
+    "summary": "Tiny QA Benchmark++ (TQB++) presents an ultra-lightweight, multilingual smoke-test suite designed to give large-language-model (LLM) pipelines a unit-test style safety net dataset that runs in seconds with minimal cost. Born out of the tight feedback-loop demands building the Comet Opik prompt-optimization SDK, where waiting on heavyweight benchmarks breaks developer flow. TQB++ couples a 52-item English gold set (less than 20 kB) with a tiny synthetic-data generator pypi package built on provider-agnostic LiteLLM. The generator lets practitioners mint their own tiny packs in any language, domain, or difficulty, while ten ready-made packs already cover Arabic, Chinese, French, German, Japanese, Korean, Portuguese, Russian, Spanish, and Turkish. Every dataset ships with Croissant metadata and plug-and-play files for OpenAI-Evals, LangChain, and standard CI tools, so teams can drop deterministic micro-benchmarks directly into pull-request gates, prompt-engineering loops, and production dashboards without touching GPU budgets. A complete TQB++ run adds only a few seconds to pipeline latency yet reliably flags prompt-template errors, tokenizer drift, and fine-tuning side-effects long before full-scale suites like MMLU or BIG-Bench would finish configuring. The entire framework is released to accelerate continuous, resource-efficient quality assurance across the generative-AI ecosystem."
+  },
+  {
+    "title": "CorBenchX: Large-Scale Chest X-Ray Error Dataset and Vision-Language Model Benchmark for Report Error Correction",
+    "url": "http://arxiv.org/abs/2505.12057v1",
+    "arxiv_id": "2505.12057v1",
+    "authors": [
+      "Jing Zou",
+      "Qingqiu Li",
+      "Chenyu Lian",
+      "Lihao Liu",
+      "Xiaohan Yan",
+      "Shujun Wang",
+      "Jing Qin"
+    ],
+    "published": "2025-05-17T15:39:39+00:00",
+    "summary": "AI-driven models have shown great promise in detecting errors in radiology reports, yet the field lacks a unified benchmark for rigorous evaluation of error detection and further correction. To address this gap, we introduce CorBenchX, a comprehensive suite for automated error detection and correction in chest X-ray reports, designed to advance AI-assisted quality control in clinical practice. We first synthesize a large-scale dataset of 26,326 chest X-ray error reports by injecting clinically common errors via prompting DeepSeek-R1, with each corrupted report paired with its original text, error type, and human-readable description. Leveraging this dataset, we benchmark both open- and closed-source vision-language models,(e.g., InternVL, Qwen-VL, GPT-4o, o4-mini, and Claude-3.7) for error detection and correction under zero-shot prompting. Among these models, o4-mini achieves the best performance, with 50.6 % detection accuracy and correction scores of BLEU 0.853, ROUGE 0.924, BERTScore 0.981, SembScore 0.865, and CheXbertF1 0.954, remaining below clinical-level accuracy, highlighting the challenge of precise report correction. To advance the state of the art, we propose a multi-step reinforcement learning (MSRL) framework that optimizes a multi-objective reward combining format compliance, error-type accuracy, and BLEU similarity. We apply MSRL to QwenVL2.5-7B, the top open-source model in our benchmark, achieving an improvement of 38.3% in single-error detection precision and 5.2% in single-error correction over the zero-shot baseline."
+  },
+  {
+    "title": "Safe Delta: Consistently Preserving Safety when Fine-Tuning LLMs on Diverse Datasets",
+    "url": "http://arxiv.org/abs/2505.12038v1",
+    "arxiv_id": "2505.12038v1",
+    "authors": [
+      "Ning Lu",
+      "Shengcai Liu",
+      "Jiahao Wu",
+      "Weiyu Chen",
+      "Zhirui Zhang",
+      "Yew-Soon Ong",
+      "Qi Wang",
+      "Ke Tang"
+    ],
+    "published": "2025-05-17T15:01:07+00:00",
+    "summary": "Large language models (LLMs) have shown great potential as general-purpose AI assistants across various domains. To fully leverage this potential in specific applications, many companies provide fine-tuning API services, enabling users to upload their own data for LLM customization. However, fine-tuning services introduce a new safety threat: user-uploaded data, whether harmful or benign, can break the model's alignment, leading to unsafe outputs. Moreover, existing defense methods struggle to address the diversity of fine-tuning datasets (e.g., varying sizes, tasks), often sacrificing utility for safety or vice versa. To address this issue, we propose Safe Delta, a safety-aware post-training defense method that adjusts the delta parameters (i.e., the parameter change before and after fine-tuning). Specifically, Safe Delta estimates the safety degradation, selects delta parameters to maximize utility while limiting overall safety loss, and applies a safety compensation vector to mitigate residual safety loss. Through extensive experiments on four diverse datasets with varying settings, our approach consistently preserves safety while ensuring that the utility gain from benign datasets remains unaffected."
+  },
+  {
     "title": "SHIELD: Safety on Humanoids via CBFs In Expectation on Learned Dynamics",
     "url": "http://arxiv.org/abs/2505.11494v1",
     "arxiv_id": "2505.11494v1",
