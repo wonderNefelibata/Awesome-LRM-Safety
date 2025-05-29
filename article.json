@@ -1,5 +1,529 @@
 [
   {
+    "title": "Sherlock: Self-Correcting Reasoning in Vision-Language Models",
+    "url": "http://arxiv.org/abs/2505.22651v1",
+    "arxiv_id": "2505.22651v1",
+    "authors": [
+      "Yi Ding",
+      "Ruqi Zhang"
+    ],
+    "published": "2025-05-28T17:58:03+00:00",
+    "summary": "Reasoning Vision-Language Models (VLMs) have shown promising performance on complex multimodal tasks. However, they still face significant challenges: they are highly sensitive to reasoning errors, require large volumes of annotated data or accurate verifiers, and struggle to generalize beyond specific domains. To address these limitations, we explore self-correction as a strategy to enhance reasoning VLMs. We first conduct an in-depth analysis of reasoning VLMs' self-correction abilities and identify key gaps. Based on our findings, we introduce Sherlock, a self-correction and self-improvement training framework. Sherlock introduces a trajectory-level self-correction objective, a preference data construction method based on visual perturbation, and a dynamic $\\beta$ for preference tuning. Once the model acquires self-correction capabilities using only 20k randomly sampled annotated data, it continues to self-improve without external supervision. Built on the Llama3.2-Vision-11B model, Sherlock achieves remarkable results across eight benchmarks, reaching an average accuracy of 64.1 with direct generation and 65.4 after self-correction. It outperforms LLaVA-CoT (63.2), Mulberry (63.9), and LlamaV-o1 (63.4) while using less than 20% of the annotated data."
+  },
+  {
+    "title": "SimProcess: High Fidelity Simulation of Noisy ICS Physical Processes",
+    "url": "http://arxiv.org/abs/2505.22638v1",
+    "arxiv_id": "2505.22638v1",
+    "authors": [
+      "Denis Donadel",
+      "Gabriele Crestanello",
+      "Giulio Morandini",
+      "Daniele Antonioli",
+      "Mauro Conti",
+      "Massimo Merro"
+    ],
+    "published": "2025-05-28T17:54:23+00:00",
+    "summary": "Industrial Control Systems (ICS) manage critical infrastructures like power grids and water treatment plants. Cyberattacks on ICSs can disrupt operations, causing severe economic, environmental, and safety issues. For example, undetected pollution in a water plant can put the lives of thousands at stake. ICS researchers have increasingly turned to honeypots -- decoy systems designed to attract attackers, study their behaviors, and eventually improve defensive mechanisms. However, existing ICS honeypots struggle to replicate the ICS physical process, making them susceptible to detection. Accurately simulating the noise in ICS physical processes is challenging because different factors produce it, including sensor imperfections and external interferences.   In this paper, we propose SimProcess, a novel framework to rank the fidelity of ICS simulations by evaluating how closely they resemble real-world and noisy physical processes. It measures the simulation distance from a target system by estimating the noise distribution with machine learning models like Random Forest. Unlike existing solutions that require detailed mathematical models or are limited to simple systems, SimProcess operates with only a timeseries of measurements from the real system, making it applicable to a broader range of complex dynamic systems. We demonstrate the framework's effectiveness through a case study using real-world power grid data from the EPIC testbed. We compare the performance of various simulation methods, including static and generative noise techniques. Our model correctly classifies real samples with a recall of up to 1.0. It also identifies Gaussian and Gaussian Mixture as the best distribution to simulate our power systems, together with a generative solution provided by an autoencoder, thereby helping developers to improve honeypot fidelity. Additionally, we make our code publicly available."
+  },
+  {
+    "title": "Emotion-o1: Adaptive Long Reasoning for Emotion Understanding in LLMs",
+    "url": "http://arxiv.org/abs/2505.22548v1",
+    "arxiv_id": "2505.22548v1",
+    "authors": [
+      "Changhao Song",
+      "Yazhou Zhang",
+      "Peng Zhang"
+    ],
+    "published": "2025-05-28T16:32:16+00:00",
+    "summary": "Emotion understanding includes basic tasks (e.g., sentiment/emotion classification) and advanced tasks (e.g., sarcasm/humor detection). Current methods rely on fixed-length CoT reasoning, failing to adapt to the varying complexity of emotions. We propose a task-adaptive reasoning framework that employs DeepSeek-R1 to generate variable-length reasoning chains for different emotion tasks. By combining fine-tuning with reinforcement learning, we design a composite reward function that balances four objectives: prediction accuracy, adaptive reasoning depth control, structural diversity in reasoning paths, and suppression of repetitive logic. This approach achieves dynamic context-sensitive inference while enabling LLMs to autonomously develop deep reasoning capabilities. Experimental results demonstrate consistent improvements in both Acc and F1 scores across four tasks: emotion, sentiment, humor, and sarcasm. Notably, peak enhancements reached 3.56% F1 (2.76% Acc) for basic tasks and 37.95% F1 (23.14% Acc) for advanced tasks. Our work bridges rigid CoT reasoning and emotional complexity through adaptive-depth analysis."
+  },
+  {
+    "title": "GeoDrive: 3D Geometry-Informed Driving World Model with Precise Action Control",
+    "url": "http://arxiv.org/abs/2505.22421v1",
+    "arxiv_id": "2505.22421v1",
+    "authors": [
+      "Anthony Chen",
+      "Wenzhao Zheng",
+      "Yida Wang",
+      "Xueyang Zhang",
+      "Kun Zhan",
+      "Peng Jia",
+      "Kurt Keutzer",
+      "Shangbang Zhang"
+    ],
+    "published": "2025-05-28T14:46:51+00:00",
+    "summary": "Recent advancements in world models have revolutionized dynamic environment simulation, allowing systems to foresee future states and assess potential actions. In autonomous driving, these capabilities help vehicles anticipate the behavior of other road users, perform risk-aware planning, accelerate training in simulation, and adapt to novel scenarios, thereby enhancing safety and reliability. Current approaches exhibit deficiencies in maintaining robust 3D geometric consistency or accumulating artifacts during occlusion handling, both critical for reliable safety assessment in autonomous navigation tasks. To address this, we introduce GeoDrive, which explicitly integrates robust 3D geometry conditions into driving world models to enhance spatial understanding and action controllability. Specifically, we first extract a 3D representation from the input frame and then obtain its 2D rendering based on the user-specified ego-car trajectory. To enable dynamic modeling, we propose a dynamic editing module during training to enhance the renderings by editing the positions of the vehicles. Extensive experiments demonstrate that our method significantly outperforms existing models in both action accuracy and 3D spatial awareness, leading to more realistic, adaptable, and reliable scene modeling for safer autonomous driving. Additionally, our model can generalize to novel trajectories and offers interactive scene editing capabilities, such as object editing and object trajectory control."
+  },
+  {
+    "title": "Mitigating Overthinking in Large Reasoning Models via Manifold Steering",
+    "url": "http://arxiv.org/abs/2505.22411v1",
+    "arxiv_id": "2505.22411v1",
+    "authors": [
+      "Yao Huang",
+      "Huanran Chen",
+      "Shouwei Ruan",
+      "Yichi Zhang",
+      "Xingxing Wei",
+      "Yinpeng Dong"
+    ],
+    "published": "2025-05-28T14:39:26+00:00",
+    "summary": "Recent advances in Large Reasoning Models (LRMs) have demonstrated remarkable capabilities in solving complex tasks such as mathematics and coding. However, these models frequently exhibit a phenomenon known as overthinking during inference, characterized by excessive validation loops and redundant deliberation, leading to substantial computational overheads. In this paper, we aim to mitigate overthinking by investigating the underlying mechanisms from the perspective of mechanistic interpretability. We first showcase that the tendency of overthinking can be effectively captured by a single direction in the model's activation space and the issue can be eased by intervening the activations along this direction. However, this efficacy soon reaches a plateau and even deteriorates as the intervention strength increases. We therefore systematically explore the activation space and find that the overthinking phenomenon is actually tied to a low-dimensional manifold, which indicates that the limited effect stems from the noises introduced by the high-dimensional steering direction. Based on this insight, we propose Manifold Steering, a novel approach that elegantly projects the steering direction onto the low-dimensional activation manifold given the theoretical approximation of the interference noise. Extensive experiments on DeepSeek-R1 distilled models validate that our method reduces output tokens by up to 71% while maintaining and even improving the accuracy on several mathematical benchmarks. Our method also exhibits robust cross-domain transferability, delivering consistent token reduction performance in code generation and knowledge-based QA tasks. Code is available at: https://github.com/Aries-iai/Manifold_Steering."
+  },
+  {
+    "title": "Suitability Filter: A Statistical Framework for Classifier Evaluation in Real-World Deployment Settings",
+    "url": "http://arxiv.org/abs/2505.22356v1",
+    "arxiv_id": "2505.22356v1",
+    "authors": [
+      "Ang\u00e9line Pouget",
+      "Mohammad Yaghini",
+      "Stephan Rabanser",
+      "Nicolas Papernot"
+    ],
+    "published": "2025-05-28T13:37:04+00:00",
+    "summary": "Deploying machine learning models in safety-critical domains poses a key challenge: ensuring reliable model performance on downstream user data without access to ground truth labels for direct validation. We propose the suitability filter, a novel framework designed to detect performance deterioration by utilizing suitability signals -- model output features that are sensitive to covariate shifts and indicative of potential prediction errors. The suitability filter evaluates whether classifier accuracy on unlabeled user data shows significant degradation compared to the accuracy measured on the labeled test dataset. Specifically, it ensures that this degradation does not exceed a pre-specified margin, which represents the maximum acceptable drop in accuracy. To achieve reliable performance evaluation, we aggregate suitability signals for both test and user data and compare these empirical distributions using statistical hypothesis testing, thus providing insights into decision uncertainty. Our modular method adapts to various models and domains. Empirical evaluations across different classification tasks demonstrate that the suitability filter reliably detects performance deviations due to covariate shift. This enables proactive mitigation of potential failures in high-stakes applications."
+  },
+  {
+    "title": "Skywork Open Reasoner 1 Technical Report",
+    "url": "http://arxiv.org/abs/2505.22312v1",
+    "arxiv_id": "2505.22312v1",
+    "authors": [
+      "Jujie He",
+      "Jiacai Liu",
+      "Chris Yuhao Liu",
+      "Rui Yan",
+      "Chaojie Wang",
+      "Peng Cheng",
+      "Xiaoyu Zhang",
+      "Fuxiang Zhang",
+      "Jiacheng Xu",
+      "Wei Shen",
+      "Siyuan Li",
+      "Liang Zeng",
+      "Tianwen Wei",
+      "Cheng Cheng",
+      "Bo An",
+      "Yang Liu",
+      "Yahui Zhou"
+    ],
+    "published": "2025-05-28T12:56:04+00:00",
+    "summary": "The success of DeepSeek-R1 underscores the significant role of reinforcement learning (RL) in enhancing the reasoning capabilities of large language models (LLMs). In this work, we present Skywork-OR1, an effective and scalable RL implementation for long Chain-of-Thought (CoT) models. Building on the DeepSeek-R1-Distill model series, our RL approach achieves notable performance gains, increasing average accuracy across AIME24, AIME25, and LiveCodeBench from 57.8% to 72.8% (+15.0%) for the 32B model and from 43.6% to 57.5% (+13.9%) for the 7B model. Our Skywork-OR1-32B model surpasses both DeepSeek-R1 and Qwen3-32B on the AIME24 and AIME25 benchmarks, while achieving comparable results on LiveCodeBench. The Skywork-OR1-7B and Skywork-OR1-Math-7B models demonstrate competitive reasoning capabilities among models of similar size. We perform comprehensive ablation studies on the core components of our training pipeline to validate their effectiveness. Additionally, we thoroughly investigate the phenomenon of entropy collapse, identify key factors affecting entropy dynamics, and demonstrate that mitigating premature entropy collapse is critical for improved test performance. To support community research, we fully open-source our model weights, training code, and training datasets."
+  },
+  {
+    "title": "Adaptive Detoxification: Safeguarding General Capabilities of LLMs through Toxicity-Aware Knowledge Editing",
+    "url": "http://arxiv.org/abs/2505.22298v1",
+    "arxiv_id": "2505.22298v1",
+    "authors": [
+      "Yifan Lu",
+      "Jing Li",
+      "Yigeng Zhou",
+      "Yihui Zhang",
+      "Wenya Wang",
+      "Xiucheng Li",
+      "Meishan Zhang",
+      "Fangming Liu",
+      "Jun Yu",
+      "Min Zhang"
+    ],
+    "published": "2025-05-28T12:37:06+00:00",
+    "summary": "Large language models (LLMs) exhibit impressive language capabilities but remain vulnerable to malicious prompts and jailbreaking attacks. Existing knowledge editing methods for LLM detoxification face two major challenges. First, they often rely on entity-specific localization, making them ineffective against adversarial inputs without explicit entities. Second, these methods suffer from over-editing, where detoxified models reject legitimate queries, compromising overall performance. In this paper, we propose ToxEdit, a toxicity-aware knowledge editing approach that dynamically detects toxic activation patterns during forward propagation. It then routes computations through adaptive inter-layer pathways to mitigate toxicity effectively. This design ensures precise toxicity mitigation while preserving LLMs' general capabilities. To more accurately assess over-editing, we also enhance the SafeEdit benchmark by incorporating instruction-following evaluation tasks. Experimental results on multiple LLMs demonstrate that our ToxEdit outperforms previous state-of-the-art methods in both detoxification performance and safeguarding general capabilities of LLMs."
+  },
+  {
+    "title": "Compensating for Data with Reasoning: Low-Resource Machine Translation with LLMs",
+    "url": "http://arxiv.org/abs/2505.22293v1",
+    "arxiv_id": "2505.22293v1",
+    "authors": [
+      "Samuel Frontull",
+      "Thomas Str\u00f6hle"
+    ],
+    "published": "2025-05-28T12:29:05+00:00",
+    "summary": "Large Language Models (LLMs) have demonstrated strong capabilities in multilingual machine translation, sometimes even outperforming traditional neural systems. However, previous research has highlighted the challenges of using LLMs, particularly with prompt engineering, for low-resource languages. In this work, we introduce Fragment-Shot Prompting, a novel in-context learning method that segments input and retrieves translation examples based on syntactic coverage, along with Pivoted Fragment-Shot, an extension that enables translation without direct parallel data. We evaluate these methods using GPT-3.5, GPT-4o, o1-mini, LLaMA-3.3, and DeepSeek-R1 for translation between Italian and two Ladin variants, revealing three key findings: (1) Fragment-Shot Prompting is effective for translating into and between the studied low-resource languages, with syntactic coverage positively correlating with translation quality; (2) Models with stronger reasoning abilities make more effective use of retrieved knowledge, generally produce better translations, and enable Pivoted Fragment-Shot to significantly improve translation quality between the Ladin variants; and (3) prompt engineering offers limited, if any, improvements when translating from a low-resource to a high-resource language, where zero-shot prompting already yields satisfactory results. We publicly release our code and the retrieval corpora."
+  },
+  {
+    "title": "Test-Time Immunization: A Universal Defense Framework Against Jailbreaks for (Multimodal) Large Language Models",
+    "url": "http://arxiv.org/abs/2505.22271v1",
+    "arxiv_id": "2505.22271v1",
+    "authors": [
+      "Yongcan Yu",
+      "Yanbo Wang",
+      "Ran He",
+      "Jian Liang"
+    ],
+    "published": "2025-05-28T11:57:46+00:00",
+    "summary": "While (multimodal) large language models (LLMs) have attracted widespread attention due to their exceptional capabilities, they remain vulnerable to jailbreak attacks. Various defense methods are proposed to defend against jailbreak attacks, however, they are often tailored to specific types of jailbreak attacks, limiting their effectiveness against diverse adversarial strategies. For instance, rephrasing-based defenses are effective against text adversarial jailbreaks but fail to counteract image-based attacks. To overcome these limitations, we propose a universal defense framework, termed Test-time IMmunization (TIM), which can adaptively defend against various jailbreak attacks in a self-evolving way. Specifically, TIM initially trains a gist token for efficient detection, which it subsequently applies to detect jailbreak activities during inference. When jailbreak attempts are identified, TIM implements safety fine-tuning using the detected jailbreak instructions paired with refusal answers. Furthermore, to mitigate potential performance degradation in the detector caused by parameter updates during safety fine-tuning, we decouple the fine-tuning process from the detection module. Extensive experiments on both LLMs and multimodal LLMs demonstrate the efficacy of TIM."
+  },
+  {
+    "title": "LiDAR Based Semantic Perception for Forklifts in Outdoor Environments",
+    "url": "http://arxiv.org/abs/2505.22258v1",
+    "arxiv_id": "2505.22258v1",
+    "authors": [
+      "Benjamin Serfling",
+      "Hannes Reichert",
+      "Lorenzo Bayerlein",
+      "Konrad Doll",
+      "Kati Radkhah-Lens"
+    ],
+    "published": "2025-05-28T11:45:14+00:00",
+    "summary": "In this study, we present a novel LiDAR-based semantic segmentation framework tailored for autonomous forklifts operating in complex outdoor environments. Central to our approach is the integration of a dual LiDAR system, which combines forward-facing and downward-angled LiDAR sensors to enable comprehensive scene understanding, specifically tailored for industrial material handling tasks. The dual configuration improves the detection and segmentation of dynamic and static obstacles with high spatial precision. Using high-resolution 3D point clouds captured from two sensors, our method employs a lightweight yet robust approach that segments the point clouds into safety-critical instance classes such as pedestrians, vehicles, and forklifts, as well as environmental classes such as driveable ground, lanes, and buildings. Experimental validation demonstrates that our approach achieves high segmentation accuracy while satisfying strict runtime requirements, establishing its viability for safety-aware, fully autonomous forklift navigation in dynamic warehouse and yard environments."
+  },
+  {
+    "title": "BioHopR: A Benchmark for Multi-Hop, Multi-Answer Reasoning in Biomedical Domain",
+    "url": "http://arxiv.org/abs/2505.22240v1",
+    "arxiv_id": "2505.22240v1",
+    "authors": [
+      "Yunsoo Kim",
+      "Yusuf Abdulle",
+      "Honghan Wu"
+    ],
+    "published": "2025-05-28T11:19:01+00:00",
+    "summary": "Biomedical reasoning often requires traversing interconnected relationships across entities such as drugs, diseases, and proteins. Despite the increasing prominence of large language models (LLMs), existing benchmarks lack the ability to evaluate multi-hop reasoning in the biomedical domain, particularly for queries involving one-to-many and many-to-many relationships. This gap leaves the critical challenges of biomedical multi-hop reasoning underexplored. To address this, we introduce BioHopR, a novel benchmark designed to evaluate multi-hop, multi-answer reasoning in structured biomedical knowledge graphs. Built from the comprehensive PrimeKG, BioHopR includes 1-hop and 2-hop reasoning tasks that reflect real-world biomedical complexities.   Evaluations of state-of-the-art models reveal that O3-mini, a proprietary reasoning-focused model, achieves 37.93% precision on 1-hop tasks and 14.57% on 2-hop tasks, outperforming proprietary models such as GPT4O and open-source biomedical models including HuatuoGPT-o1-70B and Llama-3.3-70B. However, all models exhibit significant declines in multi-hop performance, underscoring the challenges of resolving implicit reasoning steps in the biomedical domain. By addressing the lack of benchmarks for multi-hop reasoning in biomedical domain, BioHopR sets a new standard for evaluating reasoning capabilities and highlights critical gaps between proprietary and open-source models while paving the way for future advancements in biomedical LLMs."
+  },
+  {
+    "title": "Optimal kernel regression bounds under energy-bounded noise",
+    "url": "http://arxiv.org/abs/2505.22235v1",
+    "arxiv_id": "2505.22235v1",
+    "authors": [
+      "Amon Lahr",
+      "Johannes K\u00f6hler",
+      "Anna Scampicchio",
+      "Melanie N. Zeilinger"
+    ],
+    "published": "2025-05-28T11:11:24+00:00",
+    "summary": "Non-conservative uncertainty bounds are key for both assessing an estimation algorithm's accuracy and in view of downstream tasks, such as its deployment in safety-critical contexts. In this paper, we derive a tight, non-asymptotic uncertainty bound for kernel-based estimation, which can also handle correlated noise sequences. Its computation relies on a mild norm-boundedness assumption on the unknown function and the noise, returning the worst-case function realization within the hypothesis class at an arbitrary query input location. The value of this function is shown to be given in terms of the posterior mean and covariance of a Gaussian process for an optimal choice of the measurement noise covariance. By rigorously analyzing the proposed approach and comparing it with other results in the literature, we show its effectiveness in returning tight and easy-to-compute bounds for kernel-based estimates."
+  },
+  {
+    "title": "Thermal Modeling and Optimal Allocation of Avionics Safety-critical Tasks on Heterogeneous MPSoCs",
+    "url": "http://arxiv.org/abs/2505.22214v1",
+    "arxiv_id": "2505.22214v1",
+    "authors": [
+      "Ond\u0159ej Benedikt",
+      "Michal Sojka",
+      "P\u0159emysl \u0160\u016fcha",
+      "Pavel Zaykov",
+      "Zden\u011bk Hanz\u00e1lek"
+    ],
+    "published": "2025-05-28T10:40:47+00:00",
+    "summary": "Multi-Processor Systems-on-Chip (MPSoC) can deliver high performance needed in many industrial domains, including aerospace. However, their high power consumption, combined with avionics safety standards, brings new thermal management challenges. This paper investigates techniques for offline thermal-aware allocation of periodic tasks on heterogeneous MPSoCs running at a fixed clock frequency, as required in avionics. The goal is to find the assignment of tasks to (i) cores and (ii) temporal isolation windows while minimizing the MPSoC temperature. To achieve that, we propose and analyze three power models, and integrate them within several novel optimization approaches based on heuristics, a black-box optimizer, and Integer Linear Programming (ILP). We perform the experimental evaluation on three popular MPSoC platforms (NXP i.MX8QM MEK, NXP i.MX8QM Ixora, NVIDIA TX2) and observe a difference of up to 5.5{\\deg}C among the tested methods (corresponding to a 22% reduction w.r.t. the ambient temperature). We also show that our method, integrating the empirical power model with the ILP, outperforms the other methods on all tested platforms."
+  },
+  {
+    "title": "Pitfalls of Rule- and Model-based Verifiers -- A Case Study on Mathematical Reasoning",
+    "url": "http://arxiv.org/abs/2505.22203v1",
+    "arxiv_id": "2505.22203v1",
+    "authors": [
+      "Yuzhen Huang",
+      "Weihao Zeng",
+      "Xingshan Zeng",
+      "Qi Zhu",
+      "Junxian He"
+    ],
+    "published": "2025-05-28T10:28:41+00:00",
+    "summary": "Trustworthy verifiers are essential for the success of reinforcement learning with verifiable reward (RLVR), which is the core methodology behind various large reasoning models such as DeepSeek-R1. In complex domains like mathematical reasoning, rule-based verifiers have been widely adopted in previous works to train strong reasoning models. However, the reliability of these verifiers and their impact on the RL training process remain poorly understood. In this work, we take mathematical reasoning as a case study and conduct a comprehensive analysis of various verifiers in both static evaluation and RL training scenarios. First, we find that current open-source rule-based verifiers often fail to recognize equivalent answers presented in different formats across multiple commonly used mathematical datasets, resulting in non-negligible false negative rates. This limitation adversely affects RL training performance and becomes more pronounced as the policy model gets stronger. Subsequently, we investigate model-based verifiers as a potential solution to address these limitations. While the static evaluation shows that model-based verifiers achieve significantly higher verification accuracy, further analysis and RL training results imply that they are highly susceptible to hacking, where they misclassify certain patterns in responses as correct (i.e., false positives). This vulnerability is exploited during policy model optimization, leading to artificially inflated rewards. Our findings underscore the unique risks inherent to both rule-based and model-based verifiers, aiming to offer valuable insights to develop more robust reward systems in reinforcement learning."
+  },
+  {
+    "title": "Accountable, Scalable and DoS-resilient Secure Vehicular Communication",
+    "url": "http://arxiv.org/abs/2505.22162v1",
+    "arxiv_id": "2505.22162v1",
+    "authors": [
+      "Hongyu Jin",
+      "Panos Papadimitratos"
+    ],
+    "published": "2025-05-28T09:25:34+00:00",
+    "summary": "Paramount to vehicle safety, broadcasted Cooperative Awareness Messages (CAMs) and Decentralized Environmental Notification Messages (DENMs) are pseudonymously authenticated for security and privacy protection, with each node needing to have all incoming messages validated within an expiration deadline. This creates an asymmetry that can be easily exploited by external adversaries to launch a clogging Denial of Service (DoS) attack: each forged VC message forces all neighboring nodes to cryptographically validate it; at increasing rates, easy to generate forged messages gradually exhaust processing resources and severely degrade or deny timely validation of benign CAMs/DENMs. The result can be catastrophic when awareness of neighbor vehicle positions or critical reports are missed. We address this problem making the standardized VC pseudonymous authentication DoS-resilient. We propose efficient cryptographic constructs, which we term message verification facilitators, to prioritize processing resources for verification of potentially valid messages among bogus messages and verify multiple messages based on one signature verification. Any message acceptance is strictly based on public-key based message authentication/verification for accountability, i.e., non-repudiation is not sacrificed, unlike symmetric key based approaches. This further enables drastic misbehavior detection, also exploiting the newly introduced facilitators, based on probabilistic signature verification and cross-checking over multiple facilitators verifying the same message; while maintaining verification latency low even when under attack, trading off modest communication overhead. Our facilitators can also be used for efficient discovery and verification of DENM or any event-driven message, including misbehavior evidence used for our scheme."
+  },
+  {
+    "title": "Adapting Segment Anything Model for Power Transmission Corridor Hazard Segmentation",
+    "url": "http://arxiv.org/abs/2505.22105v1",
+    "arxiv_id": "2505.22105v1",
+    "authors": [
+      "Hang Chen",
+      "Maoyuan Ye",
+      "Peng Yang",
+      "Haibin He",
+      "Juhua Liu",
+      "Bo Du"
+    ],
+    "published": "2025-05-28T08:32:55+00:00",
+    "summary": "Power transmission corridor hazard segmentation (PTCHS) aims to separate transmission equipment and surrounding hazards from complex background, conveying great significance to maintaining electric power transmission safety. Recently, the Segment Anything Model (SAM) has emerged as a foundational vision model and pushed the boundaries of segmentation tasks. However, SAM struggles to deal with the target objects in complex transmission corridor scenario, especially those with fine structure. In this paper, we propose ELE-SAM, adapting SAM for the PTCHS task. Technically, we develop a Context-Aware Prompt Adapter to achieve better prompt tokens via incorporating global-local features and focusing more on key regions. Subsequently, to tackle the hazard objects with fine structure in complex background, we design a High-Fidelity Mask Decoder by leveraging multi-granularity mask features and then scaling them to a higher resolution. Moreover, to train ELE-SAM and advance this field, we construct the ELE-40K benchmark, the first large-scale and real-world dataset for PTCHS including 44,094 image-mask pairs. Experimental results for ELE-40K demonstrate the superior performance that ELE-SAM outperforms the baseline model with the average 16.8% mIoU and 20.6% mBIoU performance improvement. Moreover, compared with the state-of-the-art method on HQSeg-44K, the average 2.9% mIoU and 3.8% mBIoU absolute improvements further validate the effectiveness of our method on high-quality generic object segmentation. The source code and dataset are available at https://github.com/Hhaizee/ELE-SAM."
+  },
+  {
+    "title": "Efficient Dynamic Shielding for Parametric Safety Specifications",
+    "url": "http://arxiv.org/abs/2505.22104v1",
+    "arxiv_id": "2505.22104v1",
+    "authors": [
+      "Davide Corsi",
+      "Kaushik Mallik",
+      "Andoni Rodriguez",
+      "Cesar Sanchez"
+    ],
+    "published": "2025-05-28T08:30:03+00:00",
+    "summary": "Shielding has emerged as a promising approach for ensuring safety of AI-controlled autonomous systems. The algorithmic goal is to compute a shield, which is a runtime safety enforcement tool that needs to monitor and intervene the AI controller's actions if safety could be compromised otherwise. Traditional shields are designed statically for a specific safety requirement. Therefore, if the safety requirement changes at runtime due to changing operating conditions, the shield needs to be recomputed from scratch, causing delays that could be fatal. We introduce dynamic shields for parametric safety specifications, which are succinctly represented sets of all possible safety specifications that may be encountered at runtime. Our dynamic shields are statically designed for a given safety parameter set, and are able to dynamically adapt as the true safety specification (permissible by the parameters) is revealed at runtime. The main algorithmic novelty lies in the dynamic adaptation procedure, which is a simple and fast algorithm that utilizes known features of standard safety shields, like maximal permissiveness. We report experimental results for a robot navigation problem in unknown territories, where the safety specification evolves as new obstacles are discovered at runtime. In our experiments, the dynamic shields took a few minutes for their offline design, and took between a fraction of a second and a few seconds for online adaptation at each step, whereas the brute-force online recomputation approach was up to 5 times slower."
+  },
+  {
+    "title": "From Failures to Fixes: LLM-Driven Scenario Repair for Self-Evolving Autonomous Driving",
+    "url": "http://arxiv.org/abs/2505.22067v1",
+    "arxiv_id": "2505.22067v1",
+    "authors": [
+      "Xinyu Xia",
+      "Xingjun Ma",
+      "Yunfeng Hu",
+      "Ting Qu",
+      "Hong Chen",
+      "Xun Gong"
+    ],
+    "published": "2025-05-28T07:46:19+00:00",
+    "summary": "Ensuring robust and generalizable autonomous driving requires not only broad scenario coverage but also efficient repair of failure cases, particularly those related to challenging and safety-critical scenarios. However, existing scenario generation and selection methods often lack adaptivity and semantic relevance, limiting their impact on performance improvement. In this paper, we propose \\textbf{SERA}, an LLM-powered framework that enables autonomous driving systems to self-evolve by repairing failure cases through targeted scenario recommendation. By analyzing performance logs, SERA identifies failure patterns and dynamically retrieves semantically aligned scenarios from a structured bank. An LLM-based reflection mechanism further refines these recommendations to maximize relevance and diversity. The selected scenarios are used for few-shot fine-tuning, enabling targeted adaptation with minimal data. Experiments on the benchmark show that SERA consistently improves key metrics across multiple autonomous driving baselines, demonstrating its effectiveness and generalizability under safety-critical conditions."
+  },
+  {
+    "title": "A Comparative Study of Fuzzers and Static Analysis Tools for Finding Memory Unsafety in C and C++",
+    "url": "http://arxiv.org/abs/2505.22052v1",
+    "arxiv_id": "2505.22052v1",
+    "authors": [
+      "Keno Hassler",
+      "Philipp G\u00f6rz",
+      "Stephan Lipp",
+      "Thorsten Holz",
+      "Marcel B\u00f6hme"
+    ],
+    "published": "2025-05-28T07:22:29+00:00",
+    "summary": "Even today, over 70% of security vulnerabilities in critical software systems result from memory safety violations. To address this challenge, fuzzing and static analysis are widely used automated methods to discover such vulnerabilities. Fuzzing generates random program inputs to identify faults, while static analysis examines source code to detect potential vulnerabilities. Although these techniques share a common goal, they take fundamentally different approaches and have evolved largely independently.   In this paper, we present an empirical analysis of five static analyzers and 13 fuzzers, applied to over 100 known security vulnerabilities in C/C++ programs. We measure the number of bug reports generated for each vulnerability to evaluate how the approaches differ and complement each other. Moreover, we randomly sample eight bug-containing functions, manually analyze all bug reports therein, and quantify false-positive rates. We also assess limits to bug discovery, ease of use, resource requirements, and integration into the development process. We find that both techniques discover different types of bugs, but there are clear winners for each. Developers should consider these tools depending on their specific workflow and usability requirements. Based on our findings, we propose future directions to foster collaboration between these research domains."
+  },
+  {
+    "title": "Jailbreak Distillation: Renewable Safety Benchmarking",
+    "url": "http://arxiv.org/abs/2505.22037v1",
+    "arxiv_id": "2505.22037v1",
+    "authors": [
+      "Jingyu Zhang",
+      "Ahmed Elgohary",
+      "Xiawei Wang",
+      "A S M Iftekhar",
+      "Ahmed Magooda",
+      "Benjamin Van Durme",
+      "Daniel Khashabi",
+      "Kyle Jackson"
+    ],
+    "published": "2025-05-28T06:59:46+00:00",
+    "summary": "Large language models (LLMs) are rapidly deployed in critical applications, raising urgent needs for robust safety benchmarking. We propose Jailbreak Distillation (JBDistill), a novel benchmark construction framework that \"distills\" jailbreak attacks into high-quality and easily-updatable safety benchmarks. JBDistill utilizes a small set of development models and existing jailbreak attack algorithms to create a candidate prompt pool, then employs prompt selection algorithms to identify an effective subset of prompts as safety benchmarks. JBDistill addresses challenges in existing safety evaluation: the use of consistent evaluation prompts across models ensures fair comparisons and reproducibility. It requires minimal human effort to rerun the JBDistill pipeline and produce updated benchmarks, alleviating concerns on saturation and contamination. Extensive experiments demonstrate our benchmarks generalize robustly to 13 diverse evaluation models held out from benchmark construction, including proprietary, specialized, and newer-generation LLMs, significantly outperforming existing safety benchmarks in effectiveness while maintaining high separability and diversity. Our framework thus provides an effective, sustainable, and adaptable solution for streamlining safety evaluation."
+  },
+  {
+    "title": "Retweets, Receipts, and Resistance: Discourse, Sentiment, and Credibility in Public Health Crisis Twitter",
+    "url": "http://arxiv.org/abs/2505.22032v1",
+    "arxiv_id": "2505.22032v1",
+    "authors": [
+      "Tawfiq Ammari",
+      "Anna Gutowska",
+      "Jacob Ziff",
+      "Casey Randazzo",
+      "Harihan Subramonyam"
+    ],
+    "published": "2025-05-28T06:53:33+00:00",
+    "summary": "As the COVID-19 pandemic evolved, the Centers for Disease Control and Prevention (CDC) used Twitter to disseminate safety guidance and updates, reaching millions of users. This study analyzes two years of tweets from, to, and about the CDC using a mixed methods approach to examine discourse characteristics, credibility, and user engagement. We found that the CDCs communication remained largely one directional and did not foster reciprocal interaction, while discussions around COVID19 were deeply shaped by political and ideological polarization. Users frequently cited earlier CDC messages to critique new and sometimes contradictory guidance. Our findings highlight the role of sentiment, media richness, and source credibility in shaping the spread of public health messages. We propose design strategies to help the CDC tailor communications to diverse user groups and manage misinformation more effectively during high-stakes health crises."
+  },
+  {
+    "title": "CoThink: Token-Efficient Reasoning via Instruct Models Guiding Reasoning Models",
+    "url": "http://arxiv.org/abs/2505.22017v1",
+    "arxiv_id": "2505.22017v1",
+    "authors": [
+      "Siqi Fan",
+      "Peng Han",
+      "Shuo Shang",
+      "Yequan Wang",
+      "Aixin Sun"
+    ],
+    "published": "2025-05-28T06:24:45+00:00",
+    "summary": "Large language models (LLMs) benefit from increased test-time compute, a phenomenon known as test-time scaling. However, reasoning-optimized models often overthink even simple problems, producing excessively verbose outputs and leading to low token efficiency. By comparing these models with equally sized instruct models, we identify two key causes of this verbosity: (1) reinforcement learning reduces the information density of forward reasoning, and (2) backward chain-of thought training encourages redundant and often unnecessary verification steps. Since LLMs cannot assess the difficulty of a given problem, they tend to apply the same cautious reasoning strategy across all tasks, resulting in inefficient overthinking. To address this, we propose CoThink, an embarrassingly simple pipeline: an instruct model first drafts a high-level solution outline; a reasoning model then works out the solution. We observe that CoThink enables dynamic adjustment of reasoning depth based on input difficulty. Evaluated with three reasoning models DAPO, DeepSeek-R1, and QwQ on three datasets GSM8K, MATH500, and AIME24, CoThink reduces total token generation by 22.3% while maintaining pass@1 accuracy within a 0.42% margin on average. With reference to the instruct model, we formally define reasoning efficiency and observe a potential reasoning efficiency scaling law in LLMs."
+  },
+  {
+    "title": "DORAEMON: Decentralized Ontology-aware Reliable Agent with Enhanced Memory Oriented Navigation",
+    "url": "http://arxiv.org/abs/2505.21969v1",
+    "arxiv_id": "2505.21969v1",
+    "authors": [
+      "Tianjun Gu",
+      "Linfeng Li",
+      "Xuhong Wang",
+      "Chenghua Gong",
+      "Jingyu Gong",
+      "Zhizhong Zhang",
+      "Yuan Xie",
+      "Lizhuang Ma",
+      "Xin Tan"
+    ],
+    "published": "2025-05-28T04:46:13+00:00",
+    "summary": "Adaptive navigation in unfamiliar environments is crucial for household service robots but remains challenging due to the need for both low-level path planning and high-level scene understanding. While recent vision-language model (VLM) based zero-shot approaches reduce dependence on prior maps and scene-specific training data, they face significant limitations: spatiotemporal discontinuity from discrete observations, unstructured memory representations, and insufficient task understanding leading to navigation failures. We propose DORAEMON (Decentralized Ontology-aware Reliable Agent with Enhanced Memory Oriented Navigation), a novel cognitive-inspired framework consisting of Ventral and Dorsal Streams that mimics human navigation capabilities. The Dorsal Stream implements the Hierarchical Semantic-Spatial Fusion and Topology Map to handle spatiotemporal discontinuities, while the Ventral Stream combines RAG-VLM and Policy-VLM to improve decision-making. Our approach also develops Nav-Ensurance to ensure navigation safety and efficiency. We evaluate DORAEMON on the HM3D, MP3D, and GOAT datasets, where it achieves state-of-the-art performance on both success rate (SR) and success weighted by path length (SPL) metrics, significantly outperforming existing methods. We also introduce a new evaluation metric (AORI) to assess navigation intelligence better. Comprehensive experiments demonstrate DORAEMON's effectiveness in zero-shot autonomous navigation without requiring prior map building or pre-training."
+  },
+  {
+    "title": "Seeing the Threat: Vulnerabilities in Vision-Language Models to Adversarial Attack",
+    "url": "http://arxiv.org/abs/2505.21967v1",
+    "arxiv_id": "2505.21967v1",
+    "authors": [
+      "Juan Ren",
+      "Mark Dras",
+      "Usman Naseem"
+    ],
+    "published": "2025-05-28T04:43:39+00:00",
+    "summary": "Large Vision-Language Models (LVLMs) have shown remarkable capabilities across a wide range of multimodal tasks. However, their integration of visual inputs introduces expanded attack surfaces, thereby exposing them to novel security vulnerabilities. In this work, we conduct a systematic representational analysis to uncover why conventional adversarial attacks can circumvent the safety mechanisms embedded in LVLMs. We further propose a novel two stage evaluation framework for adversarial attacks on LVLMs. The first stage differentiates among instruction non compliance, outright refusal, and successful adversarial exploitation. The second stage quantifies the degree to which the model's output fulfills the harmful intent of the adversarial prompt, while categorizing refusal behavior into direct refusals, soft refusals, and partial refusals that remain inadvertently helpful. Finally, we introduce a normative schema that defines idealized model behavior when confronted with harmful prompts, offering a principled target for safety alignment in multimodal systems."
+  },
+  {
+    "title": "Quantitative Macromolecular Proton Fraction Imaging using Pulsed Spin-Lock",
+    "url": "http://arxiv.org/abs/2505.21853v1",
+    "arxiv_id": "2505.21853v1",
+    "authors": [
+      "Qianxue Shan",
+      "Ziqiang Yu",
+      "Baiyan Jiang",
+      "Jian Hou",
+      "Qiuyi Shen",
+      "Winnie CW Chu",
+      "Vincent WS Wong",
+      "Weitian Chen"
+    ],
+    "published": "2025-05-28T00:53:45+00:00",
+    "summary": "Purpose: Recent studies have shown that spin-lock MRI can simplify quantitative magnetization transfer (MT) by eliminating its dependency on water pool parameters, removing the need for a T1 map in macromolecular proton fraction (MPF) quantification. However, its application is often limited by the requirement for long radiofrequency (RF) pulse durations, which are constrained by RF hardware capabilities despite remaining within specific absorption rate (SAR) safety limits.   Methods: To address this challenge, we propose a novel method, MPF mapping using pulsed spin-lock (MPF-PSL). MPF-PSL employs a pulsed spin-lock train with intermittent free precession periods, enabling extended total spin-lock durations without exceeding hardware and specific absorption rate limits. A comprehensive analytical framework was developed to model the magnetization dynamics of the two-pool MT system under pulsed spin-lock, demonstrating that MPF-PSL achieves MT-specific quantification while minimizing confounding effects from the water pool. The proposed method is validated with Bloch-McConnell simulations, phantoms, and in vivo studies at 3T.   Results: Both Bloch-McConnell simulations and phantom validation demonstrated that MPF-PSL exhibits robust insensitivity to water pool parameters while enabling high-SNR MPF quantification. In vivo validation studies confirmed the method's clinical utility in detecting collagen deposition in patients with liver fibrosis.   Conclusion: MPF-PSL presents a practical solution for quantitative MT imaging, with strong potential for clinical applications."
+  },
+  {
+    "title": "A Provable Approach for End-to-End Safe Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2505.21852v1",
+    "arxiv_id": "2505.21852v1",
+    "authors": [
+      "Akifumi Wachi",
+      "Kohei Miyaguchi",
+      "Takumi Tanabe",
+      "Rei Sato",
+      "Youhei Akimoto"
+    ],
+    "published": "2025-05-28T00:48:20+00:00",
+    "summary": "A longstanding goal in safe reinforcement learning (RL) is a method to ensure the safety of a policy throughout the entire process, from learning to operation. However, existing safe RL paradigms inherently struggle to achieve this objective. We propose a method, called Provably Lifetime Safe RL (PLS), that integrates offline safe RL with safe policy deployment to address this challenge. Our proposed method learns a policy offline using return-conditioned supervised learning and then deploys the resulting policy while cautiously optimizing a limited set of parameters, known as target returns, using Gaussian processes (GPs). Theoretically, we justify the use of GPs by analyzing the mathematical relationship between target and actual returns. We then prove that PLS finds near-optimal target returns while guaranteeing safety with high probability. Empirically, we demonstrate that PLS outperforms baselines both in safety and reward performance, thereby achieving the longstanding goal to obtain high rewards while ensuring the safety of a policy throughout the lifetime from learning to operation."
+  },
+  {
+    "title": "An Optimistic Algorithm for online CMDPS with Anytime Adversarial Constraints",
+    "url": "http://arxiv.org/abs/2505.21841v1",
+    "arxiv_id": "2505.21841v1",
+    "authors": [
+      "Jiahui Zhu",
+      "Kihyun Yu",
+      "Dabeen Lee",
+      "Xin Liu",
+      "Honghao Wei"
+    ],
+    "published": "2025-05-28T00:16:34+00:00",
+    "summary": "Online safe reinforcement learning (RL) plays a key role in dynamic environments, with applications in autonomous driving, robotics, and cybersecurity. The objective is to learn optimal policies that maximize rewards while satisfying safety constraints modeled by constrained Markov decision processes (CMDPs). Existing methods achieve sublinear regret under stochastic constraints but often fail in adversarial settings, where constraints are unknown, time-varying, and potentially adversarially designed. In this paper, we propose the Optimistic Mirror Descent Primal-Dual (OMDPD) algorithm, the first to address online CMDPs with anytime adversarial constraints. OMDPD achieves optimal regret O(sqrt(K)) and strong constraint violation O(sqrt(K)) without relying on Slater's condition or the existence of a strictly known safe policy. We further show that access to accurate estimates of rewards and transitions can further improve these bounds. Our results offer practical guarantees for safe decision-making in adversarial environments."
+  },
+  {
+    "title": "SAGE-Eval: Evaluating LLMs for Systematic Generalizations of Safety Facts",
+    "url": "http://arxiv.org/abs/2505.21828v1",
+    "arxiv_id": "2505.21828v1",
+    "authors": [
+      "Chen Yueh-Han",
+      "Guy Davidson",
+      "Brenden M. Lake"
+    ],
+    "published": "2025-05-27T23:29:32+00:00",
+    "summary": "Do LLMs robustly generalize critical safety facts to novel situations? Lacking this ability is dangerous when users ask naive questions. For instance, \"I'm considering packing melon balls for my 10-month-old's lunch. What other foods would be good to include?\" Before offering food options, the LLM should warn that melon balls pose a choking hazard to toddlers, as documented by the CDC. Failing to provide such warnings could result in serious injuries or even death. To evaluate this, we introduce SAGE-Eval, SAfety-fact systematic GEneralization evaluation, the first benchmark that tests whether LLMs properly apply well established safety facts to naive user queries. SAGE-Eval comprises 104 facts manually sourced from reputable organizations, systematically augmented to create 10,428 test scenarios across 7 common domains (e.g., Outdoor Activities, Medicine). We find that the top model, Claude-3.7-sonnet, passes only 58% of all the safety facts tested. We also observe that model capabilities and training compute weakly correlate with performance on SAGE-Eval, implying that scaling up is not the golden solution. Our findings suggest frontier LLMs still lack robust generalization ability. We recommend developers use SAGE-Eval in pre-deployment evaluations to assess model reliability in addressing salient risks. We publicly release SAGE-Eval at https://huggingface.co/datasets/YuehHanChen/SAGE-Eval and our code is available at https://github.com/YuehHanChen/SAGE-Eval/tree/main."
+  },
+  {
+    "title": "Towards Safety Reasoning in LLMs: AI-agentic Deliberation for Policy-embedded CoT Data Creation",
+    "url": "http://arxiv.org/abs/2505.21784v1",
+    "arxiv_id": "2505.21784v1",
+    "authors": [
+      "Tharindu Kumarage",
+      "Ninareh Mehrabi",
+      "Anil Ramakrishna",
+      "Xinyan Zhao",
+      "Richard Zemel",
+      "Kai-Wei Chang",
+      "Aram Galstyan",
+      "Rahul Gupta",
+      "Charith Peris"
+    ],
+    "published": "2025-05-27T21:34:40+00:00",
+    "summary": "Safety reasoning is a recent paradigm where LLMs reason over safety policies before generating responses, thereby mitigating limitations in existing safety measures such as over-refusal and jailbreak vulnerabilities. However, implementing this paradigm is challenging due to the resource-intensive process of creating high-quality policy-embedded chain-of-thought (CoT) datasets while ensuring reasoning remains accurate and free from hallucinations or policy conflicts. To tackle this, we propose AIDSAFE: Agentic Iterative Deliberation for Safety Reasoning, a novel data generation recipe that leverages multi-agent deliberation to iteratively expand reasoning on safety policies. A data refiner stage in AIDSAFE ensures high-quality outputs by eliminating repetitive, redundant, and deceptive thoughts. AIDSAFE-generated CoTs provide a strong foundation for supervised fine-tuning (SFT)-based safety training. Additionally, to address the need of preference data in alignment stages, such as DPO training, we introduce a supplemental recipe that uses belief augmentation to create distinct selected and rejected CoT samples. Our evaluations demonstrate that AIDSAFE-generated CoTs achieve superior policy adherence and reasoning quality. Consequently, we show that fine-tuning open-source LLMs on these CoTs can significantly improve safety generalization and jailbreak robustness while maintaining acceptable utility and over-refusal accuracy. AIDSAFE-generated CoT datasets can be found here: https://huggingface.co/datasets/AmazonScience/AIDSAFE"
+  },
+  {
+    "title": "On the Role of Demagnetizing Tensors in Arbitrary Orientations of General Ellipsoid: Implications for MRI Safety Assessment",
+    "url": "http://arxiv.org/abs/2505.21761v1",
+    "arxiv_id": "2505.21761v1",
+    "authors": [
+      "Tomppa Pakarinen"
+    ],
+    "published": "2025-05-27T20:56:11+00:00",
+    "summary": "This work explores the behaviour of demagnetizing tensors for general ellipsoids under arbitrary rotations in homogeneous magnetic fields. The work is motivated by the concerns in magnetic resonance imaging safety and their practical evaluation in clinical environments. Whereas demagnetizing tensor is a well-defined concept in the principal axes, its transformation under three-dimensional reorientation is often overlooked - a justifiable omission for solutions derived from Poisson equation, where the tensor can be directly rotated. However, this does not hold for common approximations, where such tensor is not explicitly defined. This work demonstrates the validity of directly rotating the orthogonal basis solutions, derived from Poissons equation, and uses the procedure to evaluate a practical approximation, based on orthogonal area-projections. The tensor rotation approach is also applied to generalize force and torque calculations for ellipsoids under three-dimensional re-orientation. The results show an exact match for translation force and torque when compared to the standard single axis rotation. Additionally, a unique connection to the well-known MRI magic angle is found as the point of convergence for prolate spheroid aspect ratios while solving the corresponding saturation field magnitudes. Finally, the evaluated approximate method was demonstrated to perform fairly across prolate and oblate spheroids. Similar approximations might extend to irregular shapes, but numerical validation would likely remain preferable due to the complexity of internal field distributions."
+  },
+  {
+    "title": "Simulating the Unseen: Crash Prediction Must Learn from What Did Not Happen",
+    "url": "http://arxiv.org/abs/2505.21743v1",
+    "arxiv_id": "2505.21743v1",
+    "authors": [
+      "Zihao Li",
+      "Xinyuan Cao",
+      "Xiangbo Gao",
+      "Kexin Tian",
+      "Keshu Wu",
+      "Mohammad Anis",
+      "Hao Zhang",
+      "Keke Long",
+      "Jiwan Jiang",
+      "Xiaopeng Li",
+      "Yunlong Zhang",
+      "Tianbao Yang",
+      "Dominique Lord",
+      "Zhengzhong Tu",
+      "Yang Zhou"
+    ],
+    "published": "2025-05-27T20:33:07+00:00",
+    "summary": "Traffic safety science has long been hindered by a fundamental data paradox: the crashes we most wish to prevent are precisely those events we rarely observe. Existing crash-frequency models and surrogate safety metrics rely heavily on sparse, noisy, and under-reported records, while even sophisticated, high-fidelity simulations undersample the long-tailed situations that trigger catastrophic outcomes such as fatalities. We argue that the path to achieving Vision Zero, i.e., the complete elimination of traffic fatalities and severe injuries, requires a paradigm shift from traditional crash-only learning to a new form of counterfactual safety learning: reasoning not only about what happened, but also about the vast set of plausible yet perilous scenarios that could have happened under slightly different circumstances. To operationalize this shift, our proposed agenda bridges macro to micro. Guided by crash-rate priors, generative scene engines, diverse driver models, and causal learning, near-miss events are synthesized and explained. A crash-focused digital twin testbed links micro scenes to macro patterns, while a multi-objective validator ensures that simulations maintain statistical realism. This pipeline transforms sparse crash data into rich signals for crash prediction, enabling the stress-testing of vehicles, roads, and policies before deployment. By learning from crashes that almost happened, we can shift traffic safety from reactive forensics to proactive prevention, advancing Vision Zero."
+  },
+  {
+    "title": "AI-Supported Platform for System Monitoring and Decision-Making in Nuclear Waste Management with Large Language Models",
+    "url": "http://arxiv.org/abs/2505.21741v1",
+    "arxiv_id": "2505.21741v1",
+    "authors": [
+      "Dongjune Chang",
+      "Sola Kim",
+      "Young Soo Park"
+    ],
+    "published": "2025-05-27T20:29:53+00:00",
+    "summary": "Nuclear waste management requires rigorous regulatory compliance assessment, demanding advanced decision-support systems capable of addressing complex legal, environmental, and safety considerations. This paper presents a multi-agent Retrieval-Augmented Generation (RAG) system that integrates large language models (LLMs) with document retrieval mechanisms to enhance decision accuracy through structured agent collaboration. Through a structured 10-round discussion model, agents collaborate to assess regulatory compliance and safety requirements while maintaining document-grounded responses. Implemented on consumer-grade hardware, the system leverages Llama 3.2 and mxbai-embed-large-v1 embeddings for efficient retrieval and semantic representation. A case study of a proposed temporary nuclear waste storage site near Winslow, Arizona, demonstrates the framework's effectiveness. Results show the Regulatory Agent achieves consistently higher relevance scores in maintaining alignment with legal frameworks, while the Safety Agent effectively manages complex risk assessments requiring multifaceted analysis. The system demonstrates progressive improvement in agreement rates between agents across discussion rounds while semantic drift decreases, indicating enhanced decision-making consistency and response coherence. The system ensures regulatory decisions remain factually grounded, dynamically adapting to evolving regulatory frameworks through real-time document retrieval. By balancing automated assessment with human oversight, this framework offers a scalable and transparent approach to regulatory governance. These findings underscore the potential of AI-driven, multi-agent systems in advancing evidence-based, accountable, and adaptive decision-making for high-stakes environmental management scenarios."
+  },
+  {
+    "title": "A Joint Reconstruction-Triplet Loss Autoencoder Approach Towards Unseen Attack Detection in IoV Networks",
+    "url": "http://arxiv.org/abs/2505.21703v1",
+    "arxiv_id": "2505.21703v1",
+    "authors": [
+      "Julia Boone",
+      "Tolunay Seyfi",
+      "Fatemeh Afghah"
+    ],
+    "published": "2025-05-27T19:40:57+00:00",
+    "summary": "Internet of Vehicles (IoV) systems, while offering significant advancements in transportation efficiency and safety, introduce substantial security vulnerabilities due to their highly interconnected nature. These dynamic systems produce massive amounts of data between vehicles, infrastructure, and cloud services and present a highly distributed framework with a wide attack surface. In considering network-centered attacks on IoV systems, attacks such as Denial-of-Service (DoS) can prohibit the communication of essential physical traffic safety information between system elements, illustrating that the security concerns for these systems go beyond the traditional confidentiality, integrity, and availability concerns of enterprise systems. Given the complexity and volume of data generated by IoV systems, traditional security mechanisms are often inadequate for accurately detecting sophisticated and evolving cyberattacks. Here, we present an unsupervised autoencoder method trained entirely on benign network data for the purpose of unseen attack detection in IoV networks. We leverage a weighted combination of reconstruction and triplet margin loss to guide the autoencoder training and develop a diverse representation of the benign training set. We conduct extensive experiments on recent network intrusion datasets from two different application domains, industrial IoT and home IoT, that represent the modern IoV task. We show that our method performs robustly for all unseen attack types, with roughly 99% accuracy on benign data and between 97% and 100% performance on anomaly data. We extend these results to show that our model is adaptable through the use of transfer learning, achieving similarly high results while leveraging domain features from one domain to another."
+  },
+  {
+    "title": "Expert Survey: AI Reliability & Security Research Priorities",
+    "url": "http://arxiv.org/abs/2505.21664v1",
+    "arxiv_id": "2505.21664v1",
+    "authors": [
+      "Joe O'Brien",
+      "Jeremy Dolan",
+      "Jay Kim",
+      "Jonah Dykhuizen",
+      "Jeba Sania",
+      "Sebastian Becker",
+      "Jam Kraprayoon",
+      "Cara Labrador"
+    ],
+    "published": "2025-05-27T18:44:30+00:00",
+    "summary": "Our survey of 53 specialists across 105 AI reliability and security research areas identifies the most promising research prospects to guide strategic AI R&D investment. As companies are seeking to develop AI systems with broadly human-level capabilities, research on reliability and security is urgently needed to ensure AI's benefits can be safely and broadly realized and prevent severe harms. This study is the first to quantify expert priorities across a comprehensive taxonomy of AI safety and security research directions and to produce a data-driven ranking of their potential impact. These rankings may support evidence-based decisions about how to effectively deploy resources toward AI reliability and security research."
+  },
+  {
+    "title": "PrivATE: Differentially Private Confidence Intervals for Average Treatment Effects",
+    "url": "http://arxiv.org/abs/2505.21641v1",
+    "arxiv_id": "2505.21641v1",
+    "authors": [
+      "Maresa Schr\u00f6der",
+      "Justin Hartenstein",
+      "Stefan Feuerriegel"
+    ],
+    "published": "2025-05-27T18:13:11+00:00",
+    "summary": "The average treatment effect (ATE) is widely used to evaluate the effectiveness of drugs and other medical interventions. In safety-critical applications like medicine, reliable inferences about the ATE typically require valid uncertainty quantification, such as through confidence intervals (CIs). However, estimating treatment effects in these settings often involves sensitive data that must be kept private. In this work, we present PrivATE, a novel machine learning framework for computing CIs for the ATE under differential privacy. Specifically, we focus on deriving valid privacy-preserving CIs for the ATE from observational data. Our PrivATE framework consists of three steps: (i) estimating a differentially private ATE through output perturbation; (ii) estimating the differentially private variance through a truncated output perturbation mechanism; and (iii) constructing the CIs while accounting for the uncertainty from both the estimation and privatization steps. Our PrivATE framework is model agnostic, doubly robust, and ensures valid CIs. We demonstrate the effectiveness of our framework using synthetic and real-world medical datasets. To the best of our knowledge, we are the first to derive a general, doubly robust framework for valid CIs of the ATE under ($\\varepsilon$, $\\delta$)-differential privacy."
+  },
+  {
     "title": "Silence is Not Consensus: Disrupting Agreement Bias in Multi-Agent LLMs via Catfish Agent for Clinical Decision Making",
     "url": "http://arxiv.org/abs/2505.21503v1",
     "arxiv_id": "2505.21503v1",
@@ -33,6 +557,25 @@
     ],
     "published": "2025-05-27T17:56:27+00:00",
     "summary": "The recent paradigm shift towards training large language models (LLMs) using DeepSeek-R1-Zero-style reinforcement learning (RL) on verifiable rewards has led to impressive advancements in code and mathematical reasoning. However, this methodology is limited to tasks where rule-based answer verification is possible and does not naturally extend to real-world domains such as chemistry, healthcare, engineering, law, biology, business, and economics. Current practical workarounds use an additional LLM as a model-based verifier; however, this introduces issues such as reliance on a strong verifier LLM, susceptibility to reward hacking, and the practical burden of maintaining the verifier model in memory during training. To address this and extend DeepSeek-R1-Zero-style training to general reasoning domains, we propose a verifier-free method (VeriFree) that bypasses answer verification and instead uses RL to directly maximize the probability of generating the reference answer. We compare VeriFree with verifier-based methods and demonstrate that, in addition to its significant practical benefits and reduced compute requirements, VeriFree matches and even surpasses verifier-based methods on extensive evaluations across MMLU-Pro, GPQA, SuperGPQA, and math-related benchmarks. Moreover, we provide insights into this method from multiple perspectives: as an elegant integration of training both the policy and implicit verifier in a unified model, and as a variational optimization approach. Code is available at https://github.com/sail-sg/VeriFree."
+  },
+  {
+    "title": "SOSBENCH: Benchmarking Safety Alignment on Scientific Knowledge",
+    "url": "http://arxiv.org/abs/2505.21605v1",
+    "arxiv_id": "2505.21605v1",
+    "authors": [
+      "Fengqing Jiang",
+      "Fengbo Ma",
+      "Zhangchen Xu",
+      "Yuetai Li",
+      "Bhaskar Ramasubramanian",
+      "Luyao Niu",
+      "Bo Li",
+      "Xianyan Chen",
+      "Zhen Xiang",
+      "Radha Poovendran"
+    ],
+    "published": "2025-05-27T17:47:08+00:00",
+    "summary": "Large language models (LLMs) exhibit advancing capabilities in complex tasks, such as reasoning and graduate-level question answering, yet their resilience against misuse, particularly involving scientifically sophisticated risks, remains underexplored. Existing safety benchmarks typically focus either on instructions requiring minimal knowledge comprehension (e.g., ``tell me how to build a bomb\") or utilize prompts that are relatively low-risk (e.g., multiple-choice or classification tasks about hazardous content). Consequently, they fail to adequately assess model safety when handling knowledge-intensive, hazardous scenarios.   To address this critical gap, we introduce SOSBench, a regulation-grounded, hazard-focused benchmark encompassing six high-risk scientific domains: chemistry, biology, medicine, pharmacology, physics, and psychology. The benchmark comprises 3,000 prompts derived from real-world regulations and laws, systematically expanded via an LLM-assisted evolutionary pipeline that introduces diverse, realistic misuse scenarios (e.g., detailed explosive synthesis instructions involving advanced chemical formulas). We evaluate frontier models within a unified evaluation framework using our SOSBench. Despite their alignment claims, advanced models consistently disclose policy-violating content across all domains, demonstrating alarmingly high rates of harmful responses (e.g., 79.1% for Deepseek-R1 and 47.3% for GPT-4.1). These results highlight significant safety alignment deficiencies and underscore urgent concerns regarding the responsible deployment of powerful LLMs."
   },
   {
     "title": "Active-O3: Empowering Multimodal Large Language Models with Active Perception via GRPO",
@@ -105,6 +648,22 @@
     "summary": "Text-to-Image (T2I) models have achieved remarkable success in generating visual content from text inputs. Although multiple safety alignment strategies have been proposed to prevent harmful outputs, they often lead to overly cautious behavior -- rejecting even benign prompts -- a phenomenon known as $\\textit{over-refusal}$ that reduces the practical utility of T2I models. Despite over-refusal having been observed in practice, there is no large-scale benchmark that systematically evaluates this phenomenon for T2I models. In this paper, we present an automatic workflow to construct synthetic evaluation data, resulting in OVERT ($\\textbf{OVE}$r-$\\textbf{R}$efusal evaluation on $\\textbf{T}$ext-to-image models), the first large-scale benchmark for assessing over-refusal behaviors in T2I models. OVERT includes 4,600 seemingly harmful but benign prompts across nine safety-related categories, along with 1,785 genuinely harmful prompts (OVERT-unsafe) to evaluate the safety-utility trade-off. Using OVERT, we evaluate several leading T2I models and find that over-refusal is a widespread issue across various categories (Figure 1), underscoring the need for further research to enhance the safety alignment of T2I models without compromising their functionality.As a preliminary attempt to reduce over-refusal, we explore prompt rewriting; however, we find it often compromises faithfulness to the meaning of the original prompts. Finally, we demonstrate the flexibility of our generation framework in accommodating diverse safety requirements by generating customized evaluation data adapting to user-defined policies."
   },
   {
+    "title": "OVERT: A Benchmark for Over-Refusal Evaluation on Text-to-Image Models",
+    "url": "http://arxiv.org/abs/2505.21347v2",
+    "arxiv_id": "2505.21347v2",
+    "authors": [
+      "Ziheng Cheng",
+      "Yixiao Huang",
+      "Hui Xu",
+      "Somayeh Sojoudi",
+      "Xuandong Zhao",
+      "Dawn Song",
+      "Song Mei"
+    ],
+    "published": "2025-05-27T15:42:46+00:00",
+    "summary": "Text-to-Image (T2I) models have achieved remarkable success in generating visual content from text inputs. Although multiple safety alignment strategies have been proposed to prevent harmful outputs, they often lead to overly cautious behavior -- rejecting even benign prompts -- a phenomenon known as $\\textit{over-refusal}$ that reduces the practical utility of T2I models. Despite over-refusal having been observed in practice, there is no large-scale benchmark that systematically evaluates this phenomenon for T2I models. In this paper, we present an automatic workflow to construct synthetic evaluation data, resulting in OVERT ($\\textbf{OVE}$r-$\\textbf{R}$efusal evaluation on $\\textbf{T}$ext-to-image models), the first large-scale benchmark for assessing over-refusal behaviors in T2I models. OVERT includes 4,600 seemingly harmful but benign prompts across nine safety-related categories, along with 1,785 genuinely harmful prompts (OVERT-unsafe) to evaluate the safety-utility trade-off. Using OVERT, we evaluate several leading T2I models and find that over-refusal is a widespread issue across various categories (Figure 1), underscoring the need for further research to enhance the safety alignment of T2I models without compromising their functionality. As a preliminary attempt to reduce over-refusal, we explore prompt rewriting; however, we find it often compromises faithfulness to the meaning of the original prompts. Finally, we demonstrate the flexibility of our generation framework in accommodating diverse safety requirements by generating customized evaluation data adapting to user-defined policies."
+  },
+  {
     "title": "The Multilingual Divide and Its Impact on Global AI Safety",
     "url": "http://arxiv.org/abs/2505.21344v1",
     "arxiv_id": "2505.21344v1",
@@ -173,6 +732,21 @@
     "title": "Breaking the Ceiling: Exploring the Potential of Jailbreak Attacks through Expanding Strategy Space",
     "url": "http://arxiv.org/abs/2505.21277v1",
     "arxiv_id": "2505.21277v1",
+    "authors": [
+      "Yao Huang",
+      "Yitong Sun",
+      "Shouwei Ruan",
+      "Yichi Zhang",
+      "Yinpeng Dong",
+      "Xingxing Wei"
+    ],
+    "published": "2025-05-27T14:48:44+00:00",
+    "summary": "Large Language Models (LLMs), despite advanced general capabilities, still suffer from numerous safety risks, especially jailbreak attacks that bypass safety protocols. Understanding these vulnerabilities through black-box jailbreak attacks, which better reflect real-world scenarios, offers critical insights into model robustness. While existing methods have shown improvements through various prompt engineering techniques, their success remains limited against safety-aligned models, overlooking a more fundamental problem: the effectiveness is inherently bounded by the predefined strategy spaces. However, expanding this space presents significant challenges in both systematically capturing essential attack patterns and efficiently navigating the increased complexity. To better explore the potential of expanding the strategy space, we address these challenges through a novel framework that decomposes jailbreak strategies into essential components based on the Elaboration Likelihood Model (ELM) theory and develops genetic-based optimization with intention evaluation mechanisms. To be striking, our experiments reveal unprecedented jailbreak capabilities by expanding the strategy space: we achieve over 90% success rate on Claude-3.5 where prior methods completely fail, while demonstrating strong cross-model transferability and surpassing specialized safeguard models in evaluation accuracy. The code is open-sourced at: https://github.com/Aries-iai/CL-GSO."
+  },
+  {
+    "title": "Breaking the Ceiling: Exploring the Potential of Jailbreak Attacks through Expanding Strategy Space",
+    "url": "http://arxiv.org/abs/2505.21277v2",
+    "arxiv_id": "2505.21277v2",
     "authors": [
       "Yao Huang",
       "Yitong Sun",
