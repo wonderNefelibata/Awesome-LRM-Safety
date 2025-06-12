@@ -1,5 +1,365 @@
 [
   {
+    "title": "From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring",
+    "url": "http://arxiv.org/abs/2506.09996v1",
+    "arxiv_id": "2506.09996v1",
+    "authors": [
+      "Yang Li",
+      "Qiang Sheng",
+      "Yehan Yang",
+      "Xueyao Zhang",
+      "Juan Cao"
+    ],
+    "published": "2025-06-11T17:59:58+00:00",
+    "summary": "Though safety alignment has been applied to most large language models (LLMs), LLM service providers generally deploy a subsequent moderation as the external safety guardrail in real-world products. Existing moderators mainly practice a conventional full detection, which determines the harmfulness based on the complete LLM output, causing high service latency. Recent works pay more attention to partial detection where moderators oversee the generation midway and early stop the output if harmfulness is detected, but they directly apply moderators trained with the full detection paradigm to incomplete outputs, introducing a training-inference gap that lowers the performance. In this paper, we explore how to form a data-and-model solution that natively supports partial detection. For the data, we construct FineHarm, a dataset consisting of 29K prompt-response pairs with fine-grained annotations to provide reasonable supervision for token-level training. Then, we propose the streaming content monitor, which is trained with dual supervision of response- and token-level labels and can follow the output stream of LLM to make a timely judgment of harmfulness. Experiments show that SCM gains 0.95+ in macro F1 score that is comparable to full detection, by only seeing the first 18% of tokens in responses on average. Moreover, the SCM can serve as a pseudo-harmfulness annotator for improving safety alignment and lead to a higher harmlessness score than DPO."
+  },
+  {
+    "title": "Assessing a Safety Case: Bottom-up Guidance for Claims and Evidence Evaluation",
+    "url": "http://arxiv.org/abs/2506.09929v1",
+    "arxiv_id": "2506.09929v1",
+    "authors": [
+      "Scott Schnelle",
+      "Francesca Favaro",
+      "Laura Fraade-Blanar",
+      "David Wichner",
+      "Holland Broce",
+      "Justin Miranda"
+    ],
+    "published": "2025-06-11T16:52:03+00:00",
+    "summary": "As Automated Driving Systems (ADS) technology advances, ensuring safety and public trust requires robust assurance frameworks, with safety cases emerging as a critical tool toward such a goal. This paper explores an approach to assess how a safety case is supported by its claims and evidence, toward establishing credibility for the overall case. Starting from a description of the building blocks of a safety case (claims, evidence, and optional format-dependent entries), this paper delves into the assessment of support of each claim through the provided evidence. Two domains of assessment are outlined for each claim: procedural support (formalizing process specification) and implementation support (demonstrating process application). Additionally, an assessment of evidence status is also undertaken, independently from the claims support. Scoring strategies and evaluation guidelines are provided, including detailed scoring tables for claim support and evidence status assessment. The paper further discusses governance, continual improvement, and timing considerations for safety case assessments. Reporting of results and findings is contextualized within its primary use for internal decision-making on continual improvement efforts. The presented approach builds on state of the art auditing practices, but specifically tackles the question of judging the credibility of a safety case. While not conclusive on its own, it provides a starting point toward a comprehensive \"Case Credibility Assessment\" (CCA), starting from the evaluation of the support for each claim (individually and in aggregate), as well as every piece of evidence provided. By delving into the technical intricacies of ADS safety cases, this work contributes to the ongoing discourse on safety assurance and aims to facilitate the responsible integration of ADS technology into society."
+  },
+  {
+    "title": "OctoNav: Towards Generalist Embodied Navigation",
+    "url": "http://arxiv.org/abs/2506.09839v1",
+    "arxiv_id": "2506.09839v1",
+    "authors": [
+      "Chen Gao",
+      "Liankai Jin",
+      "Xingyu Peng",
+      "Jiazhao Zhang",
+      "Yue Deng",
+      "Annan Li",
+      "He Wang",
+      "Si Liu"
+    ],
+    "published": "2025-06-11T15:15:17+00:00",
+    "summary": "Embodied navigation stands as a foundation pillar within the broader pursuit of embodied AI. However, previous navigation research is divided into different tasks/capabilities, e.g., ObjNav, ImgNav and VLN, where they differ in task objectives and modalities, making datasets and methods are designed individually. In this work, we take steps toward generalist navigation agents, which can follow free-form instructions that include arbitrary compounds of multi-modal and multi-capability. To achieve this, we propose a large-scale benchmark and corresponding method, termed OctoNav-Bench and OctoNav-R1. Specifically, OctoNav-Bench features continuous environments and is constructed via a designed annotation pipeline. We thoroughly craft instruction-trajectory pairs, where instructions are diverse in free-form with arbitrary modality and capability. Also, we construct a Think-Before-Action (TBA-CoT) dataset within OctoNav-Bench to provide the thinking process behind actions. For OctoNav-R1, we build it upon MLLMs and adapt it to a VLA-type model, which can produce low-level actions solely based on 2D visual observations. Moreover, we design a Hybrid Training Paradigm (HTP) that consists of three stages, i.e., Action-/TBA-SFT, Nav-GPRO, and Online RL stages. Each stage contains specifically designed learning policies and rewards. Importantly, for TBA-SFT and Nav-GRPO designs, we are inspired by the OpenAI-o1 and DeepSeek-R1, which show impressive reasoning ability via thinking-before-answer. Thus, we aim to investigate how to achieve thinking-before-action in the embodied navigation field, to improve model's reasoning ability toward generalists. Specifically, we propose TBA-SFT to utilize the TBA-CoT dataset to fine-tune the model as a cold-start phrase and then leverage Nav-GPRO to improve its thinking ability. Finally, OctoNav-R1 shows superior performance compared with previous methods."
+  },
+  {
+    "title": "Superstudent intelligence in thermodynamics",
+    "url": "http://arxiv.org/abs/2506.09822v1",
+    "arxiv_id": "2506.09822v1",
+    "authors": [
+      "Rebecca Loubet",
+      "Pascal Zittlau",
+      "Marco Hoffmann",
+      "Luisa Vollmer",
+      "Sophie Fellenz",
+      "Heike Leitte",
+      "Fabian Jirasek",
+      "Johannes Lenhard",
+      "Hans Hasse"
+    ],
+    "published": "2025-06-11T15:01:41+00:00",
+    "summary": "In this short note, we report and analyze a striking event: OpenAI's large language model o3 has outwitted all students in a university exam on thermodynamics. The thermodynamics exam is a difficult hurdle for most students, where they must show that they have mastered the fundamentals of this important topic. Consequently, the failure rates are very high, A-grades are rare - and they are considered proof of the students' exceptional intellectual abilities. This is because pattern learning does not help in the exam. The problems can only be solved by knowledgeably and creatively combining principles of thermodynamics. We have given our latest thermodynamics exam not only to the students but also to OpenAI's most powerful reasoning model, o3, and have assessed the answers of o3 exactly the same way as those of the students. In zero-shot mode, the model o3 solved all problems correctly, better than all students who took the exam; its overall score was in the range of the best scores we have seen in more than 10,000 similar exams since 1985. This is a turning point: machines now excel in complex tasks, usually taken as proof of human intellectual capabilities. We discuss the consequences this has for the work of engineers and the education of future engineers."
+  },
+  {
+    "title": "CoRT: Code-integrated Reasoning within Thinking",
+    "url": "http://arxiv.org/abs/2506.09820v1",
+    "arxiv_id": "2506.09820v1",
+    "authors": [
+      "Chengpeng Li",
+      "Zhengyang Tang",
+      "Ziniu Li",
+      "Mingfeng Xue",
+      "Keqin Bao",
+      "Tian Ding",
+      "Ruoyu Sun",
+      "Benyou Wang",
+      "Xiang Wang",
+      "Junyang Lin",
+      "Dayiheng Liu"
+    ],
+    "published": "2025-06-11T14:59:02+00:00",
+    "summary": "Large Reasoning Models (LRMs) like o1 and DeepSeek-R1 have shown remarkable progress in natural language reasoning with long chain-of-thought (CoT), yet they remain inefficient or inaccurate when handling complex mathematical operations. Addressing these limitations through computational tools (e.g., computation libraries and symbolic solvers) is promising, but it introduces a technical challenge: Code Interpreter (CI) brings external knowledge beyond the model's internal text representations, thus the direct combination is not efficient. This paper introduces CoRT, a post-training framework for teaching LRMs to leverage CI effectively and efficiently. As a first step, we address the data scarcity issue by synthesizing code-integrated reasoning data through Hint-Engineering, which strategically inserts different hints at appropriate positions to optimize LRM-CI interaction. We manually create 30 high-quality samples, upon which we post-train models ranging from 1.5B to 32B parameters, with supervised fine-tuning, rejection fine-tuning and reinforcement learning. Our experimental results demonstrate that Hint-Engineering models achieve 4\\% and 8\\% absolute improvements on DeepSeek-R1-Distill-Qwen-32B and DeepSeek-R1-Distill-Qwen-1.5B respectively, across five challenging mathematical reasoning datasets. Furthermore, Hint-Engineering models use about 30\\% fewer tokens for the 32B model and 50\\% fewer tokens for the 1.5B model compared with the natural language models. The models and code are available at https://github.com/ChengpengLi1003/CoRT."
+  },
+  {
+    "title": "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
+    "url": "http://arxiv.org/abs/2506.09800v1",
+    "arxiv_id": "2506.09800v1",
+    "authors": [
+      "Haochen Liu",
+      "Tianyu Li",
+      "Haohan Yang",
+      "Li Chen",
+      "Caojun Wang",
+      "Ke Guo",
+      "Haochen Tian",
+      "Hongchen Li",
+      "Hongyang Li",
+      "Chen Lv"
+    ],
+    "published": "2025-06-11T14:42:11+00:00",
+    "summary": "End-to-end autonomous driving has emerged as a promising paradigm for directly mapping sensor inputs to planning maneuvers using learning-based modular integrations. However, existing imitation learning (IL)-based models suffer from generalization to hard cases, and a lack of corrective feedback loop under post-deployment. While reinforcement learning (RL) offers a potential solution to tackle hard cases with optimality, it is often hindered by overfitting to specific driving cases, resulting in catastrophic forgetting of generalizable knowledge and sample inefficiency. To overcome these challenges, we propose Reinforced Refinement with Self-aware Expansion (R2SE), a novel learning pipeline that constantly refines hard domain while keeping generalizable driving policy for model-agnostic end-to-end driving systems. Through reinforcement fine-tuning and policy expansion that facilitates continuous improvement, R2SE features three key components: 1) Generalist Pretraining with hard-case allocation trains a generalist imitation learning (IL) driving system while dynamically identifying failure-prone cases for targeted refinement; 2) Residual Reinforced Specialist Fine-tuning optimizes residual corrections using reinforcement learning (RL) to improve performance in hard case domain while preserving global driving knowledge; 3) Self-aware Adapter Expansion dynamically integrates specialist policies back into the generalist model, enhancing continuous performance improvement. Experimental results in closed-loop simulation and real-world datasets demonstrate improvements in generalization, safety, and long-horizon policy robustness over state-of-the-art E2E systems, highlighting the effectiveness of reinforce refinement for scalable autonomous driving."
+  },
+  {
+    "title": "Translating a VDM Model of a Medical Device into Kapture",
+    "url": "http://arxiv.org/abs/2506.09636v1",
+    "arxiv_id": "2506.09636v1",
+    "authors": [
+      "Joe Hare",
+      "Leo Freitas",
+      "Ken Pierce"
+    ],
+    "published": "2025-06-11T11:50:50+00:00",
+    "summary": "As the complexity of safety-critical medical devices increases, so does the need for clear, verifiable, software requirements. This paper explores the use of Kapture, a formal modelling tool developed by D-RisQ, to translate an existing formal VDM model of a medical implant for treating focal epilepsy called CANDO. The work was undertaken without prior experience in formal methods. The paper assess Kapture's usability, the challenges of formal modelling, and the effectiveness of the translated model. The result is a model in Kapture which covers over 90% of the original VDM model, and produces matching traces of results. While several issues were encountered during design and implementation, mainly due to the initial learning curve, this paper demonstrates that complex systems can be effectively modelled in Kapture by inexperienced users and highlights some difficulties in translating VDM specifications to Kapture."
+  },
+  {
+    "title": "Effective Red-Teaming of Policy-Adherent Agents",
+    "url": "http://arxiv.org/abs/2506.09600v1",
+    "arxiv_id": "2506.09600v1",
+    "authors": [
+      "Itay Nakash",
+      "George Kour",
+      "Koren Lazar",
+      "Matan Vetzler",
+      "Guy Uziel",
+      "Ateret Anaby-Tavor"
+    ],
+    "published": "2025-06-11T10:59:47+00:00",
+    "summary": "Task-oriented LLM-based agents are increasingly used in domains with strict policies, such as refund eligibility or cancellation rules. The challenge lies in ensuring that the agent consistently adheres to these rules and policies, appropriately refusing any request that would violate them, while still maintaining a helpful and natural interaction. This calls for the development of tailored design and evaluation methodologies to ensure agent resilience against malicious user behavior. We propose a novel threat model that focuses on adversarial users aiming to exploit policy-adherent agents for personal benefit. To address this, we present CRAFT, a multi-agent red-teaming system that leverages policy-aware persuasive strategies to undermine a policy-adherent agent in a customer-service scenario, outperforming conventional jailbreak methods such as DAN prompts, emotional manipulation, and coercive. Building upon the existing tau-bench benchmark, we introduce tau-break, a complementary benchmark designed to rigorously assess the agent's robustness against manipulative user behavior. Finally, we evaluate several straightforward yet effective defense strategies. While these measures provide some protection, they fall short, highlighting the need for stronger, research-driven safeguards to protect policy-adherent agents from adversarial attacks"
+  },
+  {
+    "title": "Understanding the Performance and Power of LLM Inferencing on Edge Accelerators",
+    "url": "http://arxiv.org/abs/2506.09554v1",
+    "arxiv_id": "2506.09554v1",
+    "authors": [
+      "Mayank Arya",
+      "Yogesh Simmhan"
+    ],
+    "published": "2025-06-11T09:36:32+00:00",
+    "summary": "Large Language Models (LLMs) have demonstrated exceptional benefits to a wide range of domains, for tasks as diverse as code generation and robot navigation. While LLMs are usually served from cloud data centers, mission-critical and privacy-sensitive applications may require local hosting of open LLM models. Given the large GPU memory footprint needed for LLMs, edge accelerators such as Nvidia Jetson Orin AGX with 64GB of shared GPU-CPU RAM are a compelling choice. However, the feasibility and performance of LLM inference on edge accelerators is under-explored. This study presents a detailed evaluation of LLM inference on the NVIDIA Jetson Orin AGX, on four SOTA models ranging from 2.7B to 32.8B parameters, such as Meta Llama3.1, Microsoft-Phi2, Deepseek-R1-Qwen.We investigate the impact of varying batch sizes, sequence lengths, and quantization levels on latency, throughput, and perplexity, and also explore various custom power modes on the Orin AGX to perform power and energy consumption analysis. Our findings offer interesting insights on the trade-offs between efficiency, inference speed and resource use, e.g., increasing the sequence length causes a decrease in token throughput and quantization causes smaller LLMs to be slower. These results can help optimize LLM serving on edge accelerators for practical applications."
+  },
+  {
+    "title": "Enhancing Human-Robot Collaboration: A Sim2Real Domain Adaptation Algorithm for Point Cloud Segmentation in Industrial Environments",
+    "url": "http://arxiv.org/abs/2506.09552v1",
+    "arxiv_id": "2506.09552v1",
+    "authors": [
+      "Fatemeh Mohammadi Amin",
+      "Darwin G. Caldwell",
+      "Hans Wernher van de Venn"
+    ],
+    "published": "2025-06-11T09:36:07+00:00",
+    "summary": "The robust interpretation of 3D environments is crucial for human-robot collaboration (HRC) applications, where safety and operational efficiency are paramount. Semantic segmentation plays a key role in this context by enabling a precise and detailed understanding of the environment. Considering the intense data hunger for real-world industrial annotated data essential for effective semantic segmentation, this paper introduces a pioneering approach in the Sim2Real domain adaptation for semantic segmentation of 3D point cloud data, specifically tailored for HRC. Our focus is on developing a network that robustly transitions from simulated environments to real-world applications, thereby enhancing its practical utility and impact on a safe HRC.   In this work, we propose a dual-stream network architecture (FUSION) combining Dynamic Graph Convolutional Neural Networks (DGCNN) and Convolutional Neural Networks (CNN) augmented with residual layers as a Sim2Real domain adaptation algorithm for an industrial environment. The proposed model was evaluated on real-world HRC setups and simulation industrial point clouds, it showed increased state-of-the-art performance, achieving a segmentation accuracy of 97.76%, and superior robustness compared to existing methods."
+  },
+  {
+    "title": "Automated Synthesis of Formally Verified Multi-Abstraction Function Summaries",
+    "url": "http://arxiv.org/abs/2506.09550v1",
+    "arxiv_id": "2506.09550v1",
+    "authors": [
+      "Fanpeng Yang",
+      "Xu Ma",
+      "Shuling Wang",
+      "Xiong Xu",
+      "Qinxiang Cao",
+      "Naijun Zhan",
+      "Xiaofeng Li",
+      "Bin Gu"
+    ],
+    "published": "2025-06-11T09:33:02+00:00",
+    "summary": "Function summaries, which characterize the behavior of code segments (typically functions) through preconditions and postconditions, are essential for understanding, reusing, and verifying software, particularly in safety-critical domains like aerospace embedded systems. However, these mission-critical legacy code serving as a valuable reused asset often lacks formal specifications. It is challenging to automatically generate function summaries for C programs, due to the existence of complex features such as loops, nested function calls, pointer aliasing, and so on. Moreover, function summaries should support multiple abstraction levels to meet diverse requirements, e.g. precise summaries capturing full functionality for formal verification and intuitive summaries for human understanding.   To address these challenges, we first propose a novel framework that combines symbolic execution, large language models (LLMs), and formal verification to generate Relatively Strongest Postconditions (RSPs) and build function summaries that fully capture program behavior. Our approach leverages VST-A's symbolic execution to precisely track program execution paths and state transitions, employs LLMs to infer loop invariants based on predefined templates, and uses Frama-C to guarantee soundness of generated summaries in an iterative refinement loop. Furthermore, from generated RSPs, we automatically synthesize strongest non-redundant postconditions expressed within given domain specific language. We compare our approach with existing work through extensive experiments."
+  },
+  {
+    "title": "Give Me FP32 or Give Me Death? Challenges and Solutions for Reproducible Reasoning",
+    "url": "http://arxiv.org/abs/2506.09501v1",
+    "arxiv_id": "2506.09501v1",
+    "authors": [
+      "Jiayi Yuan",
+      "Hao Li",
+      "Xinheng Ding",
+      "Wenya Xie",
+      "Yu-Jhe Li",
+      "Wentian Zhao",
+      "Kun Wan",
+      "Jing Shi",
+      "Xia Hu",
+      "Zirui Liu"
+    ],
+    "published": "2025-06-11T08:23:53+00:00",
+    "summary": "Large Language Models (LLMs) are now integral across various domains and have demonstrated impressive performance. Progress, however, rests on the premise that benchmark scores are both accurate and reproducible. We demonstrate that the reproducibility of LLM performance is fragile: changing system configuration such as evaluation batch size, GPU count, and GPU version can introduce significant difference in the generated responses. This issue is especially pronounced in reasoning models, where minor rounding differences in early tokens can cascade into divergent chains of thought, ultimately affecting accuracy. For instance, under bfloat16 precision with greedy decoding, a reasoning model like DeepSeek-R1-Distill-Qwen-7B can exhibit up to 9% variation in accuracy and 9,000 tokens difference in response length due to differences in GPU count, type, and evaluation batch size. We trace the root cause of this variability to the non-associative nature of floating-point arithmetic under limited numerical precision. This work presents the first systematic investigation into how numerical precision affects reproducibility in LLM inference. Through carefully controlled experiments across various hardware, software, and precision settings, we quantify when and how model outputs diverge. Our analysis reveals that floating-point precision -- while critical for reproducibility -- is often neglected in evaluation practices. Inspired by this, we develop a lightweight inference pipeline, dubbed LayerCast, that stores weights in 16-bit precision but performs all computations in FP32, balancing memory efficiency with numerical stability. Code is available at https://github.com/nanomaoli/llm_reproducibility."
+  },
+  {
+    "title": "Adv-BMT: Bidirectional Motion Transformer for Safety-Critical Traffic Scenario Generation",
+    "url": "http://arxiv.org/abs/2506.09485v1",
+    "arxiv_id": "2506.09485v1",
+    "authors": [
+      "Yuxin Liu",
+      "Zhenghao Peng",
+      "Xuanhao Cui",
+      "Bolei Zhou"
+    ],
+    "published": "2025-06-11T07:54:50+00:00",
+    "summary": "Scenario-based testing is essential for validating the performance of autonomous driving (AD) systems. However, such testing is limited by the scarcity of long-tailed, safety-critical scenarios in existing datasets collected in the real world. To tackle the data issue, we propose the Adv-BMT framework, which augments real-world scenarios with diverse and realistic adversarial interactions. The core component of Adv-BMT is a bidirectional motion transformer (BMT) model to perform inverse traffic motion predictions, which takes agent information in the last time step of the scenario as input, and reconstruct the traffic in the inverse of chronological order until the initial time step. The Adv-BMT framework is a two-staged pipeline: it first conducts adversarial initializations and then inverse motion predictions. Different from previous work, we do not need any collision data for pretraining, and are able to generate realistic and diverse collision interactions. Our experimental results validate the quality of generated collision scenarios by Adv-BMT: training in our augmented dataset would reduce episode collision rates by 20\\% compared to previous work."
+  },
+  {
+    "title": "Optimization and Control Technologies for Renewable-Dominated Hydrogen-Blended Integrated Gas-Electricity System: A Review",
+    "url": "http://arxiv.org/abs/2506.09447v1",
+    "arxiv_id": "2506.09447v1",
+    "authors": [
+      "Wenxin Liu",
+      "Jiakun Fang",
+      "Shichang Cui",
+      "Iskandar Abdullaev",
+      "Suyang Zhou",
+      "Xiaomeng Ai",
+      "Jinyu Wen"
+    ],
+    "published": "2025-06-11T06:53:26+00:00",
+    "summary": "The growing coupling among electricity, gas, and hydrogen systems is driven by green hydrogen blending into existing natural gas pipelines, paving the way toward a renewable-dominated energy future. However, the integration poses significant challenges, particularly ensuring efficient and safe operation under varying hydrogen penetration and infrastructure adaptability. This paper reviews progress in optimization and control technologies for hydrogen-blended integrated gas-electricity system. First, key technologies and international demonstration projects are introduced to provide an overview of current developments. Besides, advances in gas-electricity system integration, including modeling, scheduling, planning and market design, are reviewed respectively. Then, the potential for cross-system fault propagation is highlighted, and practical methods for safety analysis and control are proposed. Finally, several possible research directions are introduced, aiming to ensure efficient renewable integration and reliable operation."
+  },
+  {
+    "title": "Securing Open RAN: A Survey of Cryptographic Challenges and Emerging Solutions for 5G",
+    "url": "http://arxiv.org/abs/2506.09418v1",
+    "arxiv_id": "2506.09418v1",
+    "authors": [
+      "Ryan Barker",
+      "Fatemeh Afghah"
+    ],
+    "published": "2025-06-11T06:04:40+00:00",
+    "summary": "The advent of Open Radio Access Networks (O-RAN) introduces modularity and flexibility into 5G deployments but also surfaces novel security challenges across disaggregated interfaces. This literature review synthesizes recent research across thirteen academic and industry sources, examining vulnerabilities such as cipher bidding-down attacks, partial encryption exposure on control/user planes, and performance trade-offs in securing O-RAN interfaces like E2 and O1. The paper surveys key cryptographic tools -- SNOW-V, AES-256, and ZUC-256 -- evaluating their throughput, side-channel resilience, and adaptability to heterogeneous slices (eMBB, URLLC, mMTC). Emphasis is placed on emerging testbeds and AI-driven controllers that facilitate dynamic orchestration, anomaly detection, and secure configuration. We conclude by outlining future research directions, including hardware offloading, cross-layer cipher adaptation, and alignment with 3GPP TS 33.501 and O-RAN Alliance security mandates, all of which point toward the need for integrated, zero-trust architectures in 6G."
+  },
+  {
+    "title": "Token Constraint Decoding Improves Robustness on Question Answering for Large Language Models",
+    "url": "http://arxiv.org/abs/2506.09408v1",
+    "arxiv_id": "2506.09408v1",
+    "authors": [
+      "Jui-Ming Yao",
+      "Hao-Yuan Chen",
+      "Zi-Xian Tang",
+      "Bing-Jia Tan",
+      "Sheng-Wei Peng",
+      "Bing-Cheng Xie",
+      "Shun-Feng Su"
+    ],
+    "published": "2025-06-11T05:33:56+00:00",
+    "summary": "Large Language Models (LLMs) have demonstrated impressive performance on multiple-choice question answering (MCQA) benchmarks, yet they remain highly vulnerable to minor input perturbations. In this paper, we introduce and evaluate Token Constraint Decoding (TCD). This simple yet effective inference-time algorithm enforces alignment between token-level predictions to enhance robustness in noisy settings. Through extensive experiments on CommonsenseQA, MMLU, and MMLU-Pro, we show that TCD, especially when paired with prompt engineering (PE) fixes, significantly restores performance degraded by input noise, yielding up to +39\\% absolute gains for weaker models like Gemma3 1B. Penalty sweep analyses further reveal that TCD implicitly regularizes overconfident outputs, with different models requiring distinct penalty schedules to maximize resilience. Our findings establish TCD as a practical, model-agnostic approach for improving reasoning stability under real-world imperfections and pave the way for more reliable deployment of LLMs in safety-critical or user-facing applications."
+  },
+  {
+    "title": "SAGE: Exploring the Boundaries of Unsafe Concept Domain with Semantic-Augment Erasing",
+    "url": "http://arxiv.org/abs/2506.09363v1",
+    "arxiv_id": "2506.09363v1",
+    "authors": [
+      "Hongguang Zhu",
+      "Yunchao Wei",
+      "Mengyu Wang",
+      "Siyu Jiao",
+      "Yan Fang",
+      "Jiannan Huang",
+      "Yao Zhao"
+    ],
+    "published": "2025-06-11T03:21:24+00:00",
+    "summary": "Diffusion models (DMs) have achieved significant progress in text-to-image generation. However, the inevitable inclusion of sensitive information during pre-training poses safety risks, such as unsafe content generation and copyright infringement. Concept erasing finetunes weights to unlearn undesirable concepts, and has emerged as a promising solution. However, existing methods treat unsafe concept as a fixed word and repeatedly erase it, trapping DMs in ``word concept abyss'', which prevents generalized concept-related erasing. To escape this abyss, we introduce semantic-augment erasing which transforms concept word erasure into concept domain erasure by the cyclic self-check and self-erasure. It efficiently explores and unlearns the boundary representation of concept domain through semantic spatial relationships between original and training DMs, without requiring additional preprocessed data. Meanwhile, to mitigate the retention degradation of irrelevant concepts while erasing unsafe concepts, we further propose the global-local collaborative retention mechanism that combines global semantic relationship alignment with local predicted noise preservation, effectively expanding the retentive receptive field for irrelevant concepts. We name our method SAGE, and extensive experiments demonstrate the comprehensive superiority of SAGE compared with other methods in the safe generation of DMs. The code and weights will be open-sourced at https://github.com/KevinLight831/SAGE."
+  },
+  {
+    "title": "DAVSP: Safety Alignment for Large Vision-Language Models via Deep Aligned Visual Safety Prompt",
+    "url": "http://arxiv.org/abs/2506.09353v1",
+    "arxiv_id": "2506.09353v1",
+    "authors": [
+      "Yitong Zhang",
+      "Jia Li",
+      "Liyi Cai",
+      "Ge Li"
+    ],
+    "published": "2025-06-11T03:06:41+00:00",
+    "summary": "Large Vision-Language Models (LVLMs) have achieved impressive progress across various applications but remain vulnerable to malicious queries that exploit the visual modality. Existing alignment approaches typically fail to resist malicious queries while preserving utility on benign ones effectively. To address these challenges, we propose Deep Aligned Visual Safety Prompt (DAVSP), which is built upon two key innovations. First, we introduce the Visual Safety Prompt, which appends a trainable padding region around the input image. It preserves visual features and expands the optimization space. Second, we propose Deep Alignment, a novel approach to train the visual safety prompt through supervision in the model's activation space. It enhances the inherent ability of LVLMs to perceive malicious queries, achieving deeper alignment than prior works. Extensive experiments across five benchmarks on two representative LVLMs demonstrate that DAVSP effectively resists malicious queries while preserving benign input utility. Furthermore, DAVSP exhibits great cross-model generation ability. Ablation studies further reveal that both the Visual Safety Prompt and Deep Alignment are essential components, jointly contributing to its overall effectiveness. The code is publicly available at https://github.com/zhangyitonggg/DAVSP."
+  },
+  {
+    "title": "\"Is This Really a Human Peer Supporter?\": Misalignments Between Peer Supporters and Experts in LLM-Supported Interactions",
+    "url": "http://arxiv.org/abs/2506.09354v1",
+    "arxiv_id": "2506.09354v1",
+    "authors": [
+      "Kellie Yu Hui Sim",
+      "Roy Ka-Wei Lee",
+      "Kenny Tsu Wei Choo"
+    ],
+    "published": "2025-06-11T03:06:41+00:00",
+    "summary": "Mental health is a growing global concern, prompting interest in AI-driven solutions to expand access to psychosocial support. Peer support, grounded in lived experience, offers a valuable complement to professional care. However, variability in training, effectiveness, and definitions raises concerns about quality, consistency, and safety. Large Language Models (LLMs) present new opportunities to enhance peer support interactions, particularly in real-time, text-based interactions. We present and evaluate an AI-supported system with an LLM-simulated distressed client, context-sensitive LLM-generated suggestions, and real-time emotion visualisations. 2 mixed-methods studies with 12 peer supporters and 5 mental health professionals (i.e., experts) examined the system's effectiveness and implications for practice. Both groups recognised its potential to enhance training and improve interaction quality. However, we found a key tension emerged: while peer supporters engaged meaningfully, experts consistently flagged critical issues in peer supporter responses, such as missed distress cues and premature advice-giving. This misalignment highlights potential limitations in current peer support training, especially in emotionally charged contexts where safety and fidelity to best practices are essential. Our findings underscore the need for standardised, psychologically grounded training, especially as peer support scales globally. They also demonstrate how LLM-supported systems can scaffold this development--if designed with care and guided by expert oversight. This work contributes to emerging conversations on responsible AI integration in mental health and the evolving role of LLMs in augmenting peer-delivered care."
+  },
+  {
+    "title": "Efficient Edge Deployment of Quantized YOLOv4-Tiny for Aerial Emergency Object Detection on Raspberry Pi 5",
+    "url": "http://arxiv.org/abs/2506.09300v1",
+    "arxiv_id": "2506.09300v1",
+    "authors": [
+      "Sindhu Boddu",
+      "Arindam Mukherjee"
+    ],
+    "published": "2025-06-10T23:33:20+00:00",
+    "summary": "This paper presents the deployment and performance evaluation of a quantized YOLOv4-Tiny model for real-time object detection in aerial emergency imagery on a resource-constrained edge device the Raspberry Pi 5. The YOLOv4-Tiny model was quantized to INT8 precision using TensorFlow Lite post-training quantization techniques and evaluated for detection speed, power consumption, and thermal feasibility under embedded deployment conditions. The quantized model achieved an inference time of 28.2 ms per image with an average power consumption of 13.85 W, demonstrating a significant reduction in power usage compared to its FP32 counterpart. Detection accuracy remained robust across key emergency classes such as Ambulance, Police, Fire Engine, and Car Crash. These results highlight the potential of low-power embedded AI systems for real-time deployment in safety-critical emergency response applications."
+  },
+  {
+    "title": "Down But Not Out: The Case of Long-Period Comet C/2021 O3 (Panstarrs)",
+    "url": "http://arxiv.org/abs/2506.09263v1",
+    "arxiv_id": "2506.09263v1",
+    "authors": [
+      "David Jewitt. Jing Li",
+      "Michael Jaeger",
+      "Yoonyoung Kim"
+    ],
+    "published": "2025-06-10T21:55:49+00:00",
+    "summary": "We combine ground- and space-based observations of long-period comet C/2021 O3 (Panstarrs) (perihelion distance 0.287 au) in order to investigate its reported near-perihelion destruction. Pre-perihelion photometric observations show a remarkably small heliocentric dependence of the scattered light, $\\propto r_H^{-s}$ with $s = 2.59\\pm0.21$, distinct from values reported in other long-period comets, for which $s$ = 4 is the canonical standard. The index is smaller than expected of coma production by equilibrium sublimation of either supervolatiles (for which $s \\sim$ 4 is expected), or water ice ($s \\sim$ 6 to 8) across the $\\sim$4 au to 2 au range. The absolute magnitude deduced from the pre-perihelion data is $H$ = 13.0$\\pm$0.3 (coma scattering cross-section $\\sim$225 km$^2$ for an assumed geometric albedo 0.04) while, after perihelion, the cross-section fades by a factor of 25 to $H$ = 16.5 ($\\sim$9 km$^2$). STEREO spacecraft observations near perihelion show a long debris trail whose properties are consistent with forward scattering from radius $\\sim$7 $\\mu$m particles. The data show that the nucleus of C/2021 O3 was not destroyed at perihelion. Although the lightcurve from 3.9 au inbound to 0.8 au outbound cannot be uniquely interpreted, a simple and plausible explanation is provided by seasonal dimming on a nucleus having high obliquity and an asymmetric distribution of near-surface volatiles. The survival of the nucleus against rotational disruption suggests a pre-perihelion nucleus radius $r_n \\gtrsim$ 1.0 km while the photometric limit to the radius of the nucleus after perihelion is $r_n < 1.7$ km (geometric albedo 0.04 assumed)."
+  },
+  {
+    "title": "Augmented Reality User Interfaces for First Responders: A Scoping Literature Review",
+    "url": "http://arxiv.org/abs/2506.09236v1",
+    "arxiv_id": "2506.09236v1",
+    "authors": [
+      "Erin Argo",
+      "Tanim Ahmed",
+      "Sarah Gable",
+      "Callie Hampton",
+      "Jeronimo Grandi",
+      "Regis Kopper"
+    ],
+    "published": "2025-06-10T20:44:15+00:00",
+    "summary": "During the past decade, there has been a significant increase in research focused on integrating AR User Interfaces into public safety applications, particularly for first responders in the domains of Emergency Medical Services, Firefighting, and Law Enforcement. This paper presents the results of a scoping review involving the application of AR user interfaces in the public safety domain and applies an established systematic review methodology to provide a comprehensive analysis of the current research landscape, identifying key trends, challenges, and gaps in the literature. This review includes peer-reviewed publications indexed by the major scientific databases up to April 2025. A basic keyword search retrieved 1,751 papers, of which 90 were deemed relevant for this review. An in-depth analysis of the literature allowed the development of a faceted taxonomy that categorizes AR user interfaces for public safety. This classification lays a solid foundation for future research, while also highlighting key design considerations, challenges, and gaps in the literature. This review serves as a valuable resource for researchers and developers, offering insights that can drive further advances in the field."
+  },
+  {
+    "title": "Towards Full-Scenario Safety Evaluation of Automated Vehicles: A Volume-Based Method",
+    "url": "http://arxiv.org/abs/2506.09182v1",
+    "arxiv_id": "2506.09182v1",
+    "authors": [
+      "Hang Zhou",
+      "Chengyuan Ma",
+      "Shiyu Shen",
+      "Xiaopeng Li"
+    ],
+    "published": "2025-06-10T18:58:08+00:00",
+    "summary": "With the rapid development of automated vehicles (AVs) in recent years, commercially available AVs are increasingly demonstrating high-level automation capabilities. However, most existing AV safety evaluation methods are primarily designed for simple maneuvers such as car-following and lane-changing. While suitable for basic tests, these methods are insufficient for assessing high-level automation functions deployed in more complex environments. First, these methods typically use crash rate as the evaluation metric, whose accuracy heavily depends on the quality and completeness of naturalistic driving environment data used to estimate scenario probabilities. Such data is often difficult and expensive to collect. Second, when applied to diverse scenarios, these methods suffer from the curse of dimensionality, making large-scale evaluation computationally intractable. To address these challenges, this paper proposes a novel framework for full-scenario AV safety evaluation. A unified model is first introduced to standardize the representation of diverse driving scenarios. This modeling approach constrains the dimension of most scenarios to a regular highway setting with three lanes and six surrounding background vehicles, significantly reducing dimensionality. To further avoid the limitations of probability-based method, we propose a volume-based evaluation method that quantifies the proportion of risky scenarios within the entire scenario space. For car-following scenarios, we prove that the set of safe scenarios is convex under specific settings, enabling exact volume computation. Experimental results validate the effectiveness of the proposed volume-based method using both AV behavior models from existing literature and six production AV models calibrated from field-test trajectory data in the Ultra-AV dataset. Code and data will be made publicly available upon acceptance of this paper."
+  },
+  {
+    "title": "Robot-Gated Interactive Imitation Learning with Adaptive Intervention Mechanism",
+    "url": "http://arxiv.org/abs/2506.09176v1",
+    "arxiv_id": "2506.09176v1",
+    "authors": [
+      "Haoyuan Cai",
+      "Zhenghao Peng",
+      "Bolei Zhou"
+    ],
+    "published": "2025-06-10T18:43:26+00:00",
+    "summary": "Interactive Imitation Learning (IIL) allows agents to acquire desired behaviors through human interventions, but current methods impose high cognitive demands on human supervisors. We propose the Adaptive Intervention Mechanism (AIM), a novel robot-gated IIL algorithm that learns an adaptive criterion for requesting human demonstrations. AIM utilizes a proxy Q-function to mimic the human intervention rule and adjusts intervention requests based on the alignment between agent and human actions. By assigning high Q-values when the agent deviates from the expert and decreasing these values as the agent becomes proficient, the proxy Q-function enables the agent to assess the real-time alignment with the expert and request assistance when needed. Our expert-in-the-loop experiments reveal that AIM significantly reduces expert monitoring efforts in both continuous and discrete control tasks. Compared to the uncertainty-based baseline Thrifty-DAgger, our method achieves a 40% improvement in terms of human take-over cost and learning efficiency. Furthermore, AIM effectively identifies safety-critical states for expert assistance, thereby collecting higher-quality expert demonstrations and reducing overall expert data and environment interactions needed. Code and demo video are available at https://github.com/metadriverse/AIM."
+  },
+  {
+    "title": "On Polynomial Stochastic Barrier Functions: Bernstein Versus Sum-of-Squares",
+    "url": "http://arxiv.org/abs/2506.09164v1",
+    "arxiv_id": "2506.09164v1",
+    "authors": [
+      "Peter Amorese",
+      "Morteza Lahijanian"
+    ],
+    "published": "2025-06-10T18:25:16+00:00",
+    "summary": "Stochastic Barrier Functions (SBFs) certify the safety of stochastic systems by formulating a functional optimization problem, which state-of-the-art methods solve using Sum-of-Squares (SoS) polynomials. This work focuses on polynomial SBFs and introduces a new formulation based on Bernstein polynomials and provides a comparative analysis of its theoretical and empirical performance against SoS methods. We show that the Bernstein formulation leads to a linear program (LP), in contrast to the semi-definite program (SDP) required for SoS, and that its relaxations exhibit favorable theoretical convergence properties. However, our empirical results reveal that the Bernstein approach struggles to match SoS in practical performance, exposing an intriguing gap between theoretical advantages and real-world feasibility."
+  },
+  {
     "title": "Cosmos-Drive-Dreams: Scalable Synthetic Driving Data Generation with World Foundation Models",
     "url": "http://arxiv.org/abs/2506.09042v1",
     "arxiv_id": "2506.09042v1",
@@ -42,6 +402,18 @@
     "title": "Comparing human and LLM proofreading in L2 writing: Impact on lexical and syntactic features",
     "url": "http://arxiv.org/abs/2506.09021v1",
     "arxiv_id": "2506.09021v1",
+    "authors": [
+      "Hakyung Sung",
+      "Karla Csuros",
+      "Min-Chang Sung"
+    ],
+    "published": "2025-06-10T17:49:10+00:00",
+    "summary": "This study examines the lexical and syntactic interventions of human and LLM proofreading aimed at improving overall intelligibility in identical second language writings, and evaluates the consistency of outcomes across three LLMs (ChatGPT-4o, Llama3.1-8b, Deepseek-r1-8b). Findings show that both human and LLM proofreading enhance bigram lexical features, which may contribute to better coherence and contextual connectedness between adjacent words. However, LLM proofreading exhibits a more generative approach, extensively reworking vocabulary and sentence structures, such as employing more diverse and sophisticated vocabulary and incorporating a greater number of adjective modifiers in noun phrases. The proofreading outcomes are highly consistent in major lexical and syntactic features across the three models."
+  },
+  {
+    "title": "Comparing human and LLM proofreading in L2 writing: Impact on lexical and syntactic features",
+    "url": "http://arxiv.org/abs/2506.09021v2",
+    "arxiv_id": "2506.09021v2",
     "authors": [
       "Hakyung Sung",
       "Karla Csuros",
@@ -105,6 +477,22 @@
     "summary": "Adversarial threats against LLMs are escalating faster than current defenses can adapt. We expose a critical geometric blind spot in alignment: adversarial prompts exploit latent camouflage, embedding perilously close to the safe representation manifold while encoding unsafe intent thereby evading surface level defenses like Direct Preference Optimization (DPO), which remain blind to the latent geometry. We introduce ALKALI, the first rigorously curated adversarial benchmark and the most comprehensive to date spanning 9,000 prompts across three macro categories, six subtypes, and fifteen attack families. Evaluation of 21 leading LLMs reveals alarmingly high Attack Success Rates (ASRs) across both open and closed source models, exposing an underlying vulnerability we term latent camouflage, a structural blind spot where adversarial completions mimic the latent geometry of safe ones. To mitigate this vulnerability, we introduce GRACE - Geometric Representation Aware Contrastive Enhancement, an alignment framework coupling preference learning with latent space regularization. GRACE enforces two constraints: latent separation between safe and adversarial completions, and adversarial cohesion among unsafe and jailbreak behaviors. These operate over layerwise pooled embeddings guided by a learned attention profile, reshaping internal geometry without modifying the base model, and achieve up to 39% ASR reduction. Moreover, we introduce AVQI, a geometry aware metric that quantifies latent alignment failure via cluster separation and compactness. AVQI reveals when unsafe completions mimic the geometry of safe ones, offering a principled lens into how models internally encode safety. We make the code publicly available at https://anonymous.4open.science/r/alkali-B416/README.md."
   },
   {
+    "title": "AdversariaL attacK sAfety aLIgnment(ALKALI): Safeguarding LLMs through GRACE: Geometric Representation-Aware Contrastive Enhancement- Introducing Adversarial Vulnerability Quality Index (AVQI)",
+    "url": "http://arxiv.org/abs/2506.08885v2",
+    "arxiv_id": "2506.08885v2",
+    "authors": [
+      "Danush Khanna",
+      "Krishna Kumar",
+      "Basab Ghosh",
+      "Vinija Jain",
+      "Vasu Sharma",
+      "Aman Chadha",
+      "Amitava Das"
+    ],
+    "published": "2025-06-10T15:14:17+00:00",
+    "summary": "Adversarial threats against LLMs are escalating faster than current defenses can adapt. We expose a critical geometric blind spot in alignment: adversarial prompts exploit latent camouflage, embedding perilously close to the safe representation manifold while encoding unsafe intent thereby evading surface level defenses like Direct Preference Optimization (DPO), which remain blind to the latent geometry. We introduce ALKALI, the first rigorously curated adversarial benchmark and the most comprehensive to date spanning 9,000 prompts across three macro categories, six subtypes, and fifteen attack families. Evaluation of 21 leading LLMs reveals alarmingly high Attack Success Rates (ASRs) across both open and closed source models, exposing an underlying vulnerability we term latent camouflage, a structural blind spot where adversarial completions mimic the latent geometry of safe ones. To mitigate this vulnerability, we introduce GRACE - Geometric Representation Aware Contrastive Enhancement, an alignment framework coupling preference learning with latent space regularization. GRACE enforces two constraints: latent separation between safe and adversarial completions, and adversarial cohesion among unsafe and jailbreak behaviors. These operate over layerwise pooled embeddings guided by a learned attention profile, reshaping internal geometry without modifying the base model, and achieve up to 39% ASR reduction. Moreover, we introduce AVQI, a geometry aware metric that quantifies latent alignment failure via cluster separation and compactness. AVQI reveals when unsafe completions mimic the geometry of safe ones, offering a principled lens into how models internally encode safety. We make the code publicly available at https://anonymous.4open.science/r/alkali-B416/README.md."
+  },
+  {
     "title": "Safety-Driven Response Adaptive Randomisation: An Application in Non-inferiority Oncology Trials",
     "url": "http://arxiv.org/abs/2506.08864v1",
     "arxiv_id": "2506.08864v1",
@@ -147,6 +535,18 @@
     "title": "Societal AI Research Has Become Less Interdisciplinary",
     "url": "http://arxiv.org/abs/2506.08738v1",
     "arxiv_id": "2506.08738v1",
+    "authors": [
+      "Dror Kris Markus",
+      "Fabrizio Gilardi",
+      "Daria Stetsenko"
+    ],
+    "published": "2025-06-10T12:34:53+00:00",
+    "summary": "As artificial intelligence (AI) systems become deeply embedded in everyday life, calls to align AI development with ethical and societal values have intensified. Interdisciplinary collaboration is often championed as a key pathway for fostering such engagement. Yet it remains unclear whether interdisciplinary research teams are actually leading this shift in practice. This study analyzes over 100,000 AI-related papers published on ArXiv between 2014 and 2024 to examine how ethical values and societal concerns are integrated into technical AI research. We develop a classifier to identify societal content and measure the extent to which research papers express these considerations. We find a striking shift: while interdisciplinary teams remain more likely to produce societally-oriented research, computer science-only teams now account for a growing share of the field's overall societal output. These teams are increasingly integrating societal concerns into their papers and tackling a wide range of domains - from fairness and safety to healthcare and misinformation. These findings challenge common assumptions about the drivers of societal AI and raise important questions. First, what are the implications for emerging understandings of AI safety and governance if most societally-oriented research is being undertaken by exclusively technical teams? Second, for scholars in the social sciences and humanities: in a technical field increasingly responsive to societal demands, what distinctive perspectives can we still offer to help shape the future of AI?"
+  },
+  {
+    "title": "Societal AI Research Has Become Less Interdisciplinary",
+    "url": "http://arxiv.org/abs/2506.08738v2",
+    "arxiv_id": "2506.08738v2",
     "authors": [
       "Dror Kris Markus",
       "Fabrizio Gilardi",
@@ -267,6 +667,26 @@
     "summary": "Large language models (LLMs) are vulnerable to safety risks during fine-tuning, where small amounts of malicious or harmless data can compromise safeguards. In this paper, building on the concept of alignment direction -- defined by the weight difference between aligned and unaligned models -- we observe that perturbations along this direction preserve model safety. In contrast, perturbations along directions orthogonal to this alignment are strongly linked to harmful direction perturbations, rapidly degrading safety and framing the parameter space as a narrow safety basin. Based on this insight, we propose a methodology for safety fine-tuning called AsFT (Anchoring Safety in Fine-Tuning), which integrates a regularization term into the training objective. This term uses the alignment direction as an anchor to suppress updates in harmful directions, ensuring that fine-tuning is constrained within the narrow safety basin. Extensive experiments on multiple datasets show that AsFT outperforms Safe LoRA, reducing harmful behavior by 7.60 percent, improving model performance by 3.44 percent, and maintaining robust performance across various experimental settings. Code is available at https://github.com/PKU-YuanGroup/AsFT"
   },
   {
+    "title": "AsFT: Anchoring Safety During LLM Fine-Tuning Within Narrow Safety Basin",
+    "url": "http://arxiv.org/abs/2506.08473v2",
+    "arxiv_id": "2506.08473v2",
+    "authors": [
+      "Shuo Yang",
+      "Qihui Zhang",
+      "Yuyang Liu",
+      "Yue Huang",
+      "Xiaojun Jia",
+      "Kunpeng Ning",
+      "Jiayu Yao",
+      "Jigang Wang",
+      "Hailiang Dai",
+      "Yibing Song",
+      "Li Yuan"
+    ],
+    "published": "2025-06-10T05:59:48+00:00",
+    "summary": "Large language models (LLMs) are vulnerable to safety risks during fine-tuning, where small amounts of malicious or harmless data can compromise safeguards. In this paper, building on the concept of alignment direction -- defined by the weight difference between aligned and unaligned models -- we observe that perturbations along this direction preserve model safety. In contrast, perturbations along directions orthogonal to this alignment are strongly linked to harmful direction perturbations, rapidly degrading safety and framing the parameter space as a narrow safety basin. Based on this insight, we propose a methodology for safety fine-tuning called AsFT (Anchoring Safety in Fine-Tuning), which integrates a regularization term into the training objective. This term uses the alignment direction as an anchor to suppress updates in harmful directions, ensuring that fine-tuning is constrained within the narrow safety basin. Extensive experiments on multiple datasets show that AsFT outperforms Safe LoRA, reducing harmful behavior by 7.60 percent, improving model performance by 3.44 percent, and maintaining robust performance across various experimental settings. Code is available at https://github.com/PKU-YuanGroup/AsFT"
+  },
+  {
     "title": "Diffusion Models for Safety Validation of Autonomous Driving Systems",
     "url": "http://arxiv.org/abs/2506.08459v1",
     "arxiv_id": "2506.08459v1",
@@ -322,9 +742,42 @@
     "summary": "Machine translation has long been a central task in natural language processing. With the rapid advancement of large language models (LLMs), there has been remarkable progress in translation quality. However, fully realizing the translation potential of LLMs remains an open challenge. Recent studies have explored multi-agent systems to decompose complex translation tasks into collaborative subtasks, showing initial promise in enhancing translation quality through agent cooperation and specialization. Nevertheless, existing multi-agent translation frameworks largely neglect foundational insights from cognitive translation studies. These insights emphasize how human translators employ different cognitive strategies, such as balancing literal and free translation, refining expressions based on context, and iteratively evaluating outputs. To address this limitation, we propose a cognitively informed multi-agent framework called TACTIC, which stands for T ranslation A gents with Cognitive- T heoretic Interactive Collaboration. The framework comprises six functionally distinct agents that mirror key cognitive processes observed in human translation behavior. These include agents for drafting, refinement, evaluation, scoring, context reasoning, and external knowledge gathering. By simulating an interactive and theory-grounded translation workflow, TACTIC effectively leverages the full capacity of LLMs for high-quality translation. Experimental results on diverse language pairs from the FLORES-200 and WMT24 benchmarks show that our method consistently achieves state-of-the-art performance. Using DeepSeek-V3 as the base model, TACTIC surpasses GPT-4.1 by an average of +0.6 XCOMET and +1.18 COMETKIWI-23. Compared to DeepSeek-R1, it further improves by +0.84 XCOMET and +2.99 COMETKIWI-23. Code is available at https://github.com/weiyali126/TACTIC."
   },
   {
+    "title": "TACTIC: Translation Agents with Cognitive-Theoretic Interactive Collaboration",
+    "url": "http://arxiv.org/abs/2506.08403v2",
+    "arxiv_id": "2506.08403v2",
+    "authors": [
+      "Weiya Li",
+      "Junjie Chen",
+      "Bei Li",
+      "Boyang Liu",
+      "Zichen Wen",
+      "Nuanqiao Shan",
+      "Xiaoqian Liu",
+      "Anping Liu",
+      "Huajie Liu",
+      "Hu Song",
+      "Linfeng Zhang"
+    ],
+    "published": "2025-06-10T03:22:30+00:00",
+    "summary": "Machine translation has long been a central task in natural language processing. With the rapid advancement of large language models (LLMs), there has been remarkable progress in translation quality. However, fully realizing the translation potential of LLMs remains an open challenge. Recent studies have explored multi-agent systems to decompose complex translation tasks into collaborative subtasks, showing initial promise in enhancing translation quality through agent cooperation and specialization. Nevertheless, existing multi-agent translation frameworks largely neglect foundational insights from cognitive translation studies. These insights emphasize how human translators employ different cognitive strategies, such as balancing literal and free translation, refining expressions based on context, and iteratively evaluating outputs. To address this limitation, we propose a cognitively informed multi-agent framework called TACTIC, which stands for T ranslation A gents with Cognitive- T heoretic Interactive Collaboration. The framework comprises six functionally distinct agents that mirror key cognitive processes observed in human translation behavior. These include agents for drafting, refinement, evaluation, scoring, context reasoning, and external knowledge gathering. By simulating an interactive and theory-grounded translation workflow, TACTIC effectively leverages the full capacity of LLMs for high-quality translation. Experimental results on diverse language pairs from the FLORES-200 and WMT24 benchmarks show that our method consistently achieves state-of-the-art performance. Using DeepSeek-V3 as the base model, TACTIC surpasses GPT-4.1 by an average of +0.6 XCOMET and +1.18 COMETKIWI-23. Compared to DeepSeek-R1, it further improves by +0.84 XCOMET and +2.99 COMETKIWI-23. Code is available at https://github.com/weiyali126/TACTIC."
+  },
+  {
     "title": "SafeCoT: Improving VLM Safety with Minimal Reasoning",
     "url": "http://arxiv.org/abs/2506.08399v1",
     "arxiv_id": "2506.08399v1",
+    "authors": [
+      "Jiachen Ma",
+      "Zhanhui Zhou",
+      "Chao Yang",
+      "Chaochao Lu"
+    ],
+    "published": "2025-06-10T03:13:50+00:00",
+    "summary": "Ensuring safe and appropriate responses from vision-language models (VLMs) remains a critical challenge, particularly in high-risk or ambiguous scenarios. We introduce SafeCoT, a lightweight, interpretable framework that leverages rule-based chain-of-thought (CoT) supervision to improve refusal behavior in VLMs. Unlike prior methods that rely on large-scale safety annotations or complex modeling, SafeCoT uses minimal supervision to help models reason about safety risks and make context-aware refusals. Experiments across multiple benchmarks show that SafeCoT significantly reduces overrefusal and enhances generalization, even with limited training data. Our approach offers a scalable solution for aligning VLMs with safety-critical objectives."
+  },
+  {
+    "title": "SafeCoT: Improving VLM Safety with Minimal Reasoning",
+    "url": "http://arxiv.org/abs/2506.08399v2",
+    "arxiv_id": "2506.08399v2",
     "authors": [
       "Jiachen Ma",
       "Zhanhui Zhou",
