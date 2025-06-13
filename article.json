@@ -1,5 +1,403 @@
 [
   {
+    "title": "How Well Can Reasoning Models Identify and Recover from Unhelpful Thoughts?",
+    "url": "http://arxiv.org/abs/2506.10979v1",
+    "arxiv_id": "2506.10979v1",
+    "authors": [
+      "Sohee Yang",
+      "Sang-Woo Lee",
+      "Nora Kassner",
+      "Daniela Gottesman",
+      "Sebastian Riedel",
+      "Mor Geva"
+    ],
+    "published": "2025-06-12T17:59:53+00:00",
+    "summary": "Recent reasoning models show the ability to reflect, backtrack, and self-validate their reasoning, which is crucial in spotting mistakes and arriving at accurate solutions. A natural question that arises is how effectively models can perform such self-reevaluation. We tackle this question by investigating how well reasoning models identify and recover from four types of unhelpful thoughts: uninformative rambling thoughts, thoughts irrelevant to the question, thoughts misdirecting the question as a slightly different question, and thoughts that lead to incorrect answers. We show that models are effective at identifying most unhelpful thoughts but struggle to recover from the same thoughts when these are injected into their thinking process, causing significant performance drops. Models tend to naively continue the line of reasoning of the injected irrelevant thoughts, which showcases that their self-reevaluation abilities are far from a general \"meta-cognitive\" awareness. Moreover, we observe non/inverse-scaling trends, where larger models struggle more than smaller ones to recover from short irrelevant thoughts, even when instructed to reevaluate their reasoning. We demonstrate the implications of these findings with a jailbreak experiment using irrelevant thought injection, showing that the smallest models are the least distracted by harmful-response-triggering thoughts. Overall, our findings call for improvement in self-reevaluation of reasoning models to develop better reasoning and safer systems."
+  },
+  {
+    "title": "Build the web for agents, not agents for the web",
+    "url": "http://arxiv.org/abs/2506.10953v1",
+    "arxiv_id": "2506.10953v1",
+    "authors": [
+      "Xing Han L\u00f9",
+      "Gaurav Kamath",
+      "Marius Mosbach",
+      "Siva Reddy"
+    ],
+    "published": "2025-06-12T17:53:58+00:00",
+    "summary": "Recent advancements in Large Language Models (LLMs) and multimodal counterparts have spurred significant interest in developing web agents -- AI systems capable of autonomously navigating and completing tasks within web environments. While holding tremendous promise for automating complex web interactions, current approaches face substantial challenges due to the fundamental mismatch between human-designed interfaces and LLM capabilities. Current methods struggle with the inherent complexity of web inputs, whether processing massive DOM trees, relying on screenshots augmented with additional information, or bypassing the user interface entirely through API interactions. This position paper advocates for a paradigm shift in web agent research: rather than forcing web agents to adapt to interfaces designed for humans, we should develop a new interaction paradigm specifically optimized for agentic capabilities. To this end, we introduce the concept of an Agentic Web Interface (AWI), an interface specifically designed for agents to navigate a website. We establish six guiding principles for AWI design, emphasizing safety, efficiency, and standardization, to account for the interests of all primary stakeholders. This reframing aims to overcome fundamental limitations of existing interfaces, paving the way for more efficient, reliable, and transparent web agent design, which will be a collaborative effort involving the broader ML community."
+  },
+  {
+    "title": "Monitoring Decomposition Attacks in LLMs with Lightweight Sequential Monitors",
+    "url": "http://arxiv.org/abs/2506.10949v1",
+    "arxiv_id": "2506.10949v1",
+    "authors": [
+      "Chen Yueh-Han",
+      "Nitish Joshi",
+      "Yulin Chen",
+      "Maksym Andriushchenko",
+      "Rico Angell",
+      "He He"
+    ],
+    "published": "2025-06-12T17:50:58+00:00",
+    "summary": "Current LLM safety defenses fail under decomposition attacks, where a malicious goal is decomposed into benign subtasks that circumvent refusals. The challenge lies in the existing shallow safety alignment techniques: they only detect harm in the immediate prompt and do not reason about long-range intent, leaving them blind to malicious intent that emerges over a sequence of seemingly benign instructions. We therefore propose adding an external monitor that observes the conversation at a higher granularity. To facilitate our study of monitoring decomposition attacks, we curate the largest and most diverse dataset to date, including question-answering, text-to-image, and agentic tasks. We verify our datasets by testing them on frontier LLMs and show an 87% attack success rate on average on GPT-4o. This confirms that decomposition attack is broadly effective. Additionally, we find that random tasks can be injected into the decomposed subtasks to further obfuscate malicious intents. To defend in real time, we propose a lightweight sequential monitoring framework that cumulatively evaluates each subtask. We show that a carefully prompt engineered lightweight monitor achieves a 93% defense success rate, beating reasoning models like o3 mini as a monitor. Moreover, it remains robust against random task injection and cuts cost by 90% and latency by 50%. Our findings suggest that lightweight sequential monitors are highly effective in mitigating decomposition attacks and are viable in deployment."
+  },
+  {
+    "title": "Viability of Future Actions: Robust Safety in Reinforcement Learning via Entropy Regularization",
+    "url": "http://arxiv.org/abs/2506.10871v1",
+    "arxiv_id": "2506.10871v1",
+    "authors": [
+      "Pierre-Fran\u00e7ois Massiani",
+      "Alexander von Rohr",
+      "Lukas Haverbeck",
+      "Sebastian Trimpe"
+    ],
+    "published": "2025-06-12T16:34:19+00:00",
+    "summary": "Despite the many recent advances in reinforcement learning (RL), the question of learning policies that robustly satisfy state constraints under unknown disturbances remains open. In this paper, we offer a new perspective on achieving robust safety by analyzing the interplay between two well-established techniques in model-free RL: entropy regularization, and constraints penalization. We reveal empirically that entropy regularization in constrained RL inherently biases learning toward maximizing the number of future viable actions, thereby promoting constraints satisfaction robust to action noise. Furthermore, we show that by relaxing strict safety constraints through penalties, the constrained RL problem can be approximated arbitrarily closely by an unconstrained one and thus solved using standard model-free RL. This reformulation preserves both safety and optimality while empirically improving resilience to disturbances. Our results indicate that the connection between entropy regularization and robustness is a promising avenue for further empirical and theoretical investigation, as it enables robust safety in RL through simple reward shaping."
+  },
+  {
+    "title": "MultiCoSim: A Python-based Multi-Fidelity Co-Simulation Framework",
+    "url": "http://arxiv.org/abs/2506.10869v1",
+    "arxiv_id": "2506.10869v1",
+    "authors": [
+      "Quinn Thibeault",
+      "Giulia Pedrielli"
+    ],
+    "published": "2025-06-12T16:31:39+00:00",
+    "summary": "Simulation is a foundational tool for the analysis and testing of cyber-physical systems (CPS), underpinning activities such as algorithm development, runtime monitoring, and system verification. As CPS grow in complexity and scale, particularly in safety-critical and learning-enabled settings, accurate analysis and synthesis increasingly rely on the rapid use of simulation experiments. Because CPS inherently integrate hardware, software, and physical processes, simulation platforms must support co-simulation of heterogeneous components at varying levels of fidelity. Despite recent advances in high-fidelity modeling of hardware, firmware, and physics, co-simulation in diverse environments remains challenging. These limitations hinder the development of reusable benchmarks and impede the use of simulation for automated and comparative evaluation.   Existing simulation tools often rely on rigid configurations, lack automation support, and present obstacles to portability and modularity. Many are configured through static text files or impose constraints on how simulation components are represented and connected, making it difficult to flexibly compose systems or integrate components across platforms.   To address these challenges, we introduce MultiCoSim, a Python-based simulation framework that enables users to define, compose, and configure simulation components programmatically. MultiCoSim supports distributed, component-based co-simulation and allows seamless substitution and reconfiguration of components. We demonstrate the flexibility of MultiCoSim through case studies that include co-simulations involving custom automaton-based controllers, as well as integration with off-the-shelf platforms like the PX4 autopilot for aerial robotics. These examples highlight MultiCoSim's capability to streamline CPS simulation pipelines for research and development."
+  },
+  {
+    "title": "Automotive Radar Online Channel Imbalance Estimation via NLMS",
+    "url": "http://arxiv.org/abs/2506.10841v1",
+    "arxiv_id": "2506.10841v1",
+    "authors": [
+      "Esmaeil Kavousi Ghafi",
+      "Oliver Lang",
+      "Matthias Wagner",
+      "Alexander Melzer",
+      "Mario Huemer"
+    ],
+    "published": "2025-06-12T15:57:29+00:00",
+    "summary": "Automotive radars are one of the essential enablers of advanced driver assistance systems (ADASs). Continuous monitoring of the functional safety and reliability of automotive radars is a crucial requirement to prevent accidents and increase road safety. One of the most critical aspects to monitor in this context is radar channel imbalances, as they are a key parameter regarding the reliability of the radar. These imbalances may originate from several parameter variations or hardware fatigues, e.g., a solder ball break (SBB), and may affect some radar processing steps, such as the angle of arrival estimation. In this work, a novel method for online estimation of automotive radar channel imbalances is proposed. The proposed method exploits a normalized least mean squares (NLMS) algorithm as a block in the processing chain of the radar to estimate the channel imbalances. The input of this block is the detected targets in the range-Doppler map of the radar on the road without any prior knowledge on the angular parameters of the targets. This property in combination with low computational complexity of the NLMS, makes the proposed method suitable for online channel imbalance estimation, in parallel to the normal operation of the radar. Furthermore, it features reduced dependency on specific targets of interest and faster update rates of the channel imbalance estimation compared to the majority of state-of-the-art methods. This improvement is achieved by allowing for multiple targets in the angular spectrum, whereas most other methods are restricted to only single targets in the angular spectrum. The performance of the proposed method is validated using various simulation scenarios and is supported by measurement results."
+  },
+  {
+    "title": "RationalVLA: A Rational Vision-Language-Action Model with Dual System",
+    "url": "http://arxiv.org/abs/2506.10826v1",
+    "arxiv_id": "2506.10826v1",
+    "authors": [
+      "Wenxuan Song",
+      "Jiayi Chen",
+      "Wenxue Li",
+      "Xu He",
+      "Han Zhao",
+      "Pengxiang Ding Shiyan Su",
+      "Feilong Tang",
+      "Xuelian Cheng",
+      "Donglin Wang",
+      "Zongyuan Ge",
+      "Xinhu Zheng",
+      "Zhe Liu",
+      "Hesheng Wang",
+      "Yunhui Liu",
+      "Haoang Li"
+    ],
+    "published": "2025-06-12T15:44:51+00:00",
+    "summary": "A fundamental requirement for real-world robotic deployment is the ability to understand and respond to natural language instructions. Existing language-conditioned manipulation tasks typically assume that instructions are perfectly aligned with the environment. This assumption limits robustness and generalization in realistic scenarios where instructions may be ambiguous, irrelevant, or infeasible. To address this problem, we introduce RAtional MAnipulation (RAMA), a new benchmark that challenges models with both unseen executable instructions and defective ones that should be rejected. In RAMA, we construct a dataset with over 14,000 samples, including diverse defective instructions spanning six dimensions: visual, physical, semantic, motion, safety, and out-of-context. We further propose the Rational Vision-Language-Action model (RationalVLA). It is a dual system for robotic arms that integrates the high-level vision-language model with the low-level manipulation policy by introducing learnable latent space embeddings. This design enables RationalVLA to reason over instructions, reject infeasible commands, and execute manipulation effectively. Experiments demonstrate that RationalVLA outperforms state-of-the-art baselines on RAMA by a 14.5% higher success rate and 0.94 average task length, while maintaining competitive performance on standard manipulation tasks. Real-world trials further validate its effectiveness and robustness in practical applications. Our project page is https://irpn-eai.github.io/rationalvla."
+  },
+  {
+    "title": "Barium Calcium Zirconium Titanate Thin Film-Based Capacitive Thermoelectric Converter for Low-Grade Waste Heat",
+    "url": "http://arxiv.org/abs/2506.10759v1",
+    "arxiv_id": "2506.10759v1",
+    "authors": [
+      "Mohammad K. Al Thehaiban",
+      "Vladimir S. Getov",
+      "Qiaomu Yao",
+      "Chukwudike C. Ukeje",
+      "Peter K. Petrov"
+    ],
+    "published": "2025-06-12T14:43:08+00:00",
+    "summary": "A capacitive thermoelectric device can harvest thermal energy and convert it to electrical energy by employing a temperature-dependent dielectric material whose permittivity sharply changes with temperature. Electricity can be generated by fluctuating the temperature of the capacitor. Currently, capacitive thermoelectric devices are not broadly used, which can be attributed to the low efficiency of the existing solutions, the lack of dielectric materials with suitable temperature non-linearity of the dielectric permittivity, and the complexity of modulating heat flux on the dielectric material. Here, we propose a device based on (Ba0.85Ca0.15)(Ti0.92Zr0.08)O3 and (Ba0.73Ca0.27)(Ti0.98Zr0.02)O3 thin films. The estimated power output under different operation conditions and dynamic workload of an Intel E5-2630 microprocessor show that these thin film materials are promising and can potentially be used for a capacitive thermoelectric converter."
+  },
+  {
+    "title": "Beyond True or False: Retrieval-Augmented Hierarchical Analysis of Nuanced Claims",
+    "url": "http://arxiv.org/abs/2506.10728v1",
+    "arxiv_id": "2506.10728v1",
+    "authors": [
+      "Priyanka Kargupta",
+      "Runchu Tian",
+      "Jiawei Han"
+    ],
+    "published": "2025-06-12T14:17:45+00:00",
+    "summary": "Claims made by individuals or entities are oftentimes nuanced and cannot be clearly labeled as entirely \"true\" or \"false\" -- as is frequently the case with scientific and political claims. However, a claim (e.g., \"vaccine A is better than vaccine B\") can be dissected into its integral aspects and sub-aspects (e.g., efficacy, safety, distribution), which are individually easier to validate. This enables a more comprehensive, structured response that provides a well-rounded perspective on a given problem while also allowing the reader to prioritize specific angles of interest within the claim (e.g., safety towards children). Thus, we propose ClaimSpect, a retrieval-augmented generation-based framework for automatically constructing a hierarchy of aspects typically considered when addressing a claim and enriching them with corpus-specific perspectives. This structure hierarchically partitions an input corpus to retrieve relevant segments, which assist in discovering new sub-aspects. Moreover, these segments enable the discovery of varying perspectives towards an aspect of the claim (e.g., support, neutral, or oppose) and their respective prevalence (e.g., \"how many biomedical papers believe vaccine A is more transportable than B?\"). We apply ClaimSpect to a wide variety of real-world scientific and political claims featured in our constructed dataset, showcasing its robustness and accuracy in deconstructing a nuanced claim and representing perspectives within a corpus. Through real-world case studies and human evaluation, we validate its effectiveness over multiple baselines."
+  },
+  {
+    "title": "PREMISE: Scalable and Strategic Prompt Optimization for Efficient Mathematical Reasoning in Large Models",
+    "url": "http://arxiv.org/abs/2506.10716v1",
+    "arxiv_id": "2506.10716v1",
+    "authors": [
+      "Ye Yu",
+      "Yaoning Yu",
+      "Haohan Wang"
+    ],
+    "published": "2025-06-12T14:05:09+00:00",
+    "summary": "Large reasoning models (LRMs) such as Claude 3.7 Sonnet and OpenAI o1 achieve strong performance on mathematical benchmarks using lengthy chain-of-thought (CoT) reasoning, but the resulting traces are often unnecessarily verbose. This inflates token usage and cost, limiting deployment in latency-sensitive or API-constrained settings. We introduce PREMISE (PRompt-based Efficient Mathematical Inference with Strategic Evaluation), a prompt-only framework that reduces reasoning overhead without modifying model weights. PREMISE combines trace-level diagnostics with gradient-inspired prompt optimization to minimize redundant computation while preserving answer accuracy. The approach jointly optimizes brevity and correctness through a multi-objective textual search that balances token length and answer validity. Unlike prior work, PREMISE runs in a single-pass black-box interface, so it can be applied directly to commercial LLMs. On GSM8K, SVAMP, and Math500 we match or exceed baseline accuracy ($96\\%\\rightarrow96\\%$ with Claude, $91\\%\\rightarrow92\\%$ with Gemini) while reducing reasoning tokens by up to $87.5\\%$ and cutting dollar cost by $69$--$82\\%$. These results show that prompt-level optimization is a practical and scalable path to efficient LRM inference without compromising reasoning quality."
+  },
+  {
+    "title": "GOLIATH: A Decentralized Framework for Data Collection in Intelligent Transportation Systems",
+    "url": "http://arxiv.org/abs/2506.10665v1",
+    "arxiv_id": "2506.10665v1",
+    "authors": [
+      "Davide Maffiola",
+      "Stefano Longari",
+      "Michele Carminati",
+      "Mara Tanelli",
+      "Stefano Zanero"
+    ],
+    "published": "2025-06-12T12:55:25+00:00",
+    "summary": "Intelligent Transportation Systems (ITSs) technology has advanced during the past years, and it is now used for several applications that require vehicles to exchange real-time data, such as in traffic information management. Traditionally, road traffic information has been collected using on-site sensors. However, crowd-sourcing traffic information from onboard sensors or smartphones has become a viable alternative. State-of-the-art solutions currently follow a centralized model where only the service provider has complete access to the collected traffic data and represent a single point of failure and trust. In this paper, we propose GOLIATH, a blockchain-based decentralized framework that runs on the In-Vehicle Infotainment (IVI) system to collect real-time information exchanged between the network's participants. Our approach mitigates the limitations of existing crowd-sourcing centralized solutions by guaranteeing trusted information collection and exchange, fully exploiting the intrinsic distributed nature of vehicles. We demonstrate its feasibility in the context of vehicle positioning and traffic information management. Each vehicle participating in the decentralized network shares its position and neighbors' ones in the form of a transaction recorded on the ledger, which uses a novel consensus mechanism to validate it. We design the consensus mechanism resilient against a realistic set of adversaries that aim to tamper or disable the communication. We evaluate the proposed framework in a simulated (but realistic) environment, which considers different threats and allows showing its robustness and safety properties."
+  },
+  {
+    "title": "CyFence: Securing Cyber-Physical Controllers via Trusted Execution Environment",
+    "url": "http://arxiv.org/abs/2506.10638v1",
+    "arxiv_id": "2506.10638v1",
+    "authors": [
+      "Stefano Longari",
+      "Alessandro Pozone",
+      "Jessica Leoni",
+      "Mario Polino",
+      "Michele Carminati",
+      "Mara Tanelli",
+      "Stefano Zanero"
+    ],
+    "published": "2025-06-12T12:22:45+00:00",
+    "summary": "In the last decades, Cyber-physical Systems (CPSs) have experienced a significant technological evolution and increased connectivity, at the cost of greater exposure to cyber-attacks. Since many CPS are used in safety-critical systems, such attacks entail high risks and potential safety harms. Although several defense strategies have been proposed, they rarely exploit the cyber-physical nature of the system. In this work, we exploit the nature of CPS by proposing CyFence, a novel architecture that improves the resilience of closed-loop control systems against cyber-attacks by adding a semantic check, used to confirm that the system is behaving as expected. To ensure the security of the semantic check code, we use the Trusted Execution Environment implemented by modern processors. We evaluate CyFence considering a real-world application, consisting of an active braking digital controller, demonstrating that it can mitigate different types of attacks with a negligible computation overhead."
+  },
+  {
+    "title": "Time Series Forecasting as Reasoning: A Slow-Thinking Approach with Reinforced LLMs",
+    "url": "http://arxiv.org/abs/2506.10630v1",
+    "arxiv_id": "2506.10630v1",
+    "authors": [
+      "Yucong Luo",
+      "Yitong Zhou",
+      "Mingyue Cheng",
+      "Jiahao Wang",
+      "Daoyu Wang",
+      "Tingyue Pan",
+      "Jintao Zhang"
+    ],
+    "published": "2025-06-12T12:15:50+00:00",
+    "summary": "To advance time series forecasting (TSF), various methods have been proposed to improve prediction accuracy, evolving from statistical techniques to data-driven deep learning architectures. Despite their effectiveness, most existing methods still adhere to a fast thinking paradigm-relying on extracting historical patterns and mapping them to future values as their core modeling philosophy, lacking an explicit thinking process that incorporates intermediate time series reasoning. Meanwhile, emerging slow-thinking LLMs (e.g., OpenAI-o1) have shown remarkable multi-step reasoning capabilities, offering an alternative way to overcome these issues. However, prompt engineering alone presents several limitations - including high computational cost, privacy risks, and limited capacity for in-depth domain-specific time series reasoning. To address these limitations, a more promising approach is to train LLMs to develop slow thinking capabilities and acquire strong time series reasoning skills. For this purpose, we propose Time-R1, a two-stage reinforcement fine-tuning framework designed to enhance multi-step reasoning ability of LLMs for time series forecasting. Specifically, the first stage conducts supervised fine-tuning for warmup adaptation, while the second stage employs reinforcement learning to improve the model's generalization ability. Particularly, we design a fine-grained multi-objective reward specifically for time series forecasting, and then introduce GRIP (group-based relative importance for policy optimization), which leverages non-uniform sampling to further encourage and optimize the model's exploration of effective reasoning paths. Experiments demonstrate that Time-R1 significantly improves forecast performance across diverse datasets."
+  },
+  {
+    "title": "Scalable Software Testing in Fast Virtual Platforms: Leveraging SystemC, QEMU and Containerization",
+    "url": "http://arxiv.org/abs/2506.10624v1",
+    "arxiv_id": "2506.10624v1",
+    "authors": [
+      "Lukas J\u00fcnger",
+      "Jan Henrik Weinstock",
+      "Tim Kraus"
+    ],
+    "published": "2025-06-12T12:08:53+00:00",
+    "summary": "The ever-increasing complexity of HW/SW systems presents a persistent challenge, particularly in safety-critical domains like automotive, where extensive testing is imperative. However, the availability of hardware often lags behind, hindering early-stage software development. To address this, Virtual Platforms (VPs) based on the SystemC TLM-2.0 standard have emerged as a pivotal solution, enabling pre-silicon execution and testing of unmodified target software. In this study, we propose an approach leveraging containerization to encapsulate VPs in order to reduce environment dependencies and enable cloud deployment for fast, parallelized test execution, as well as open-source VP technologies such as QEMU and VCML to obviate the need for seat licenses. To demonstrate the efficacy of our approach, we present an Artificial Intelligence (AI) accelerator VP case study. Through our research, we offer a robust solution to address the challenges posed by the complexity of HW/SW systems, with practical implications for accelerating HW/SW co-development."
+  },
+  {
+    "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+    "url": "http://arxiv.org/abs/2506.10597v1",
+    "arxiv_id": "2506.10597v1",
+    "authors": [
+      "Xunguang Wang",
+      "Zhenlan Ji",
+      "Wenxuan Wang",
+      "Zongjie Li",
+      "Daoyuan Wu",
+      "Shuai Wang"
+    ],
+    "published": "2025-06-12T11:42:40+00:00",
+    "summary": "Large Language Models (LLMs) have achieved remarkable progress, but their deployment has exposed critical vulnerabilities, particularly to jailbreak attacks that circumvent safety mechanisms. Guardrails--external defense mechanisms that monitor and control LLM interaction--have emerged as a promising solution. However, the current landscape of LLM guardrails is fragmented, lacking a unified taxonomy and comprehensive evaluation framework. In this Systematization of Knowledge (SoK) paper, we present the first holistic analysis of jailbreak guardrails for LLMs. We propose a novel, multi-dimensional taxonomy that categorizes guardrails along six key dimensions, and introduce a Security-Efficiency-Utility evaluation framework to assess their practical effectiveness. Through extensive analysis and experiments, we identify the strengths and limitations of existing guardrail approaches, explore their universality across attack types, and provide insights into optimizing defense combinations. Our work offers a structured foundation for future research and development, aiming to guide the principled advancement and deployment of robust LLM guardrails. The code is available at https://github.com/xunguangwang/SoK4JailbreakGuardrails."
+  },
+  {
+    "title": "LogiPlan: A Structured Benchmark for Logical Planning and Relational Reasoning in LLMs",
+    "url": "http://arxiv.org/abs/2506.10527v1",
+    "arxiv_id": "2506.10527v1",
+    "authors": [
+      "Yanan Cai",
+      "Ahmed Salem",
+      "Besmira Nushi",
+      "Mark Russinovich"
+    ],
+    "published": "2025-06-12T09:47:02+00:00",
+    "summary": "We introduce LogiPlan, a novel benchmark designed to evaluate the capabilities of large language models (LLMs) in logical planning and reasoning over complex relational structures. Logical relational reasoning is important for applications that may rely on LLMs to generate and query structured graphs of relations such as network infrastructure, knowledge bases, or business process schema. Our framework allows for dynamic variation of task complexity by controlling the number of objects, relations, and the minimum depth of relational chains, providing a fine-grained assessment of model performance across difficulty levels. LogiPlan encompasses three complementary tasks: (1) Plan Generation, where models must construct valid directed relational graphs meeting specified structural constraints; (2) Consistency Detection, testing models' ability to identify inconsistencies in relational structures; and (3) Comparison Question, evaluating models' capacity to determine the validity of queried relationships within a given graph. Additionally, we assess models' self-correction capabilities by prompting them to verify and refine their initial solutions. We evaluate state-of-the-art models including DeepSeek R1, Gemini 2.0 Pro, Gemini 2 Flash Thinking, GPT-4.5, GPT-4o, Llama 3.1 405B, O3-mini, O1, and Claude 3.7 Sonnet across these tasks, revealing significant performance gaps that correlate with model scale and architecture. Our analysis demonstrates that while recent reasoning-enhanced models show promising results on simpler instances, they struggle with more complex configurations requiring deeper logical planning."
+  },
+  {
+    "title": "Scientists' First Exam: Probing Cognitive Abilities of MLLM via Perception, Understanding, and Reasoning",
+    "url": "http://arxiv.org/abs/2506.10521v1",
+    "arxiv_id": "2506.10521v1",
+    "authors": [
+      "Yuhao Zhou",
+      "Yiheng Wang",
+      "Xuming He",
+      "Ruoyao Xiao",
+      "Zhiwei Li",
+      "Qiantai Feng",
+      "Zijie Guo",
+      "Yuejin Yang",
+      "Hao Wu",
+      "Wenxuan Huang",
+      "Jiaqi Wei",
+      "Dan Si",
+      "Xiuqi Yao",
+      "Jia Bu",
+      "Haiwen Huang",
+      "Tianfan Fu",
+      "Shixiang Tang",
+      "Ben Fei",
+      "Dongzhan Zhou",
+      "Fenghua Ling",
+      "Yan Lu",
+      "Siqi Sun",
+      "Chenhui Li",
+      "Guanjie Zheng",
+      "Jiancheng Lv",
+      "Wenlong Zhang",
+      "Lei Bai"
+    ],
+    "published": "2025-06-12T09:29:16+00:00",
+    "summary": "Scientific discoveries increasingly rely on complex multimodal reasoning based on information-intensive scientific data and domain-specific expertise. Empowered by expert-level scientific benchmarks, scientific Multimodal Large Language Models (MLLMs) hold the potential to significantly enhance this discovery process in realistic workflows. However, current scientific benchmarks mostly focus on evaluating the knowledge understanding capabilities of MLLMs, leading to an inadequate assessment of their perception and reasoning abilities. To address this gap, we present the Scientists' First Exam (SFE) benchmark, designed to evaluate the scientific cognitive capacities of MLLMs through three interconnected levels: scientific signal perception, scientific attribute understanding, scientific comparative reasoning. Specifically, SFE comprises 830 expert-verified VQA pairs across three question types, spanning 66 multimodal tasks across five high-value disciplines. Extensive experiments reveal that current state-of-the-art GPT-o3 and InternVL-3 achieve only 34.08% and 26.52% on SFE, highlighting significant room for MLLMs to improve in scientific realms. We hope the insights obtained in SFE will facilitate further developments in AI-enhanced scientific discoveries."
+  },
+  {
+    "title": "J-DDL: Surface Damage Detection and Localization System for Fighter Aircraft",
+    "url": "http://arxiv.org/abs/2506.10505v1",
+    "arxiv_id": "2506.10505v1",
+    "authors": [
+      "Jin Huang",
+      "Mingqiang Wei",
+      "Zikuan Li",
+      "Hangyu Qu",
+      "Wei Zhao",
+      "Xinyu Bai"
+    ],
+    "published": "2025-06-12T09:05:35+00:00",
+    "summary": "Ensuring the safety and extended operational life of fighter aircraft necessitates frequent and exhaustive inspections. While surface defect detection is feasible for human inspectors, manual methods face critical limitations in scalability, efficiency, and consistency due to the vast surface area, structural complexity, and operational demands of aircraft maintenance. We propose a smart surface damage detection and localization system for fighter aircraft, termed J-DDL. J-DDL integrates 2D images and 3D point clouds of the entire aircraft surface, captured using a combined system of laser scanners and cameras, to achieve precise damage detection and localization. Central to our system is a novel damage detection network built on the YOLO architecture, specifically optimized for identifying surface defects in 2D aircraft images. Key innovations include lightweight Fasternet blocks for efficient feature extraction, an optimized neck architecture incorporating Efficient Multiscale Attention (EMA) modules for superior feature aggregation, and the introduction of a novel loss function, Inner-CIOU, to enhance detection accuracy. After detecting damage in 2D images, the system maps the identified anomalies onto corresponding 3D point clouds, enabling accurate 3D localization of defects across the aircraft surface. Our J-DDL not only streamlines the inspection process but also ensures more comprehensive and detailed coverage of large and complex aircraft exteriors. To facilitate further advancements in this domain, we have developed the first publicly available dataset specifically focused on aircraft damage. Experimental evaluations validate the effectiveness of our framework, underscoring its potential to significantly advance automated aircraft inspection technologies."
+  },
+  {
+    "title": "Towards more efficient quantitative safety validation of residual risk for assisted and automated driving",
+    "url": "http://arxiv.org/abs/2506.10363v1",
+    "arxiv_id": "2506.10363v1",
+    "authors": [
+      "Daniel Betschinske",
+      "Malte Schrimpf",
+      "Steven Peters",
+      "Kamil Klonecki",
+      "Jan Peter Karch",
+      "Moritz Lippert"
+    ],
+    "published": "2025-06-12T05:41:53+00:00",
+    "summary": "The safety validation of Advanced Driver Assistance Systems (ADAS) and Automated Driving Systems (ADS) increasingly demands efficient and reliable methods to quantify residual risk while adhering to international standards such as ISO 21448. Traditionally, Field Operational Testing (FOT) has been pivotal for macroscopic safety validation of automotive driving functions up to SAE automation level 2. However, state-of-the-art derivations for empirical safety demonstrations using FOT often result in impractical testing efforts, particularly at higher automation levels. Even at lower automation levels, this limitation - coupled with the substantial costs associated with FOT - motivates the exploration of approaches to enhance the efficiency of FOT-based macroscopic safety validation. Therefore, this publication systematically identifies and evaluates state-of-the-art Reduction Approaches (RAs) for FOT, including novel methods reported in the literature. Based on an analysis of ISO 21448, two models are derived: a generic model capturing the argumentation components of the standard, and a base model, exemplarily applied to Automatic Emergency Braking (AEB) systems, establishing a baseline for the real-world driving requirement for a Quantitative Safety Validation of Residual Risk (QSVRR). Subsequently, the RAs are assessed using four criteria: quantifiability, threats to validity, missing links, and black box compatibility, highlighting potential benefits, inherent limitations, and identifying key areas for further research. Our evaluation reveals that, while several approaches offer potential, none are free from missing links or other substantial shortcomings. Moreover, no identified alternative can fully replace FOT, reflecting its crucial role in the safety validation of ADAS and ADS."
+  },
+  {
+    "title": "The Alignment Trap: Complexity Barriers",
+    "url": "http://arxiv.org/abs/2506.10304v1",
+    "arxiv_id": "2506.10304v1",
+    "authors": [
+      "Jasper Yao"
+    ],
+    "published": "2025-06-12T02:30:30+00:00",
+    "summary": "We establish fundamental computational complexity barriers to verifying AI safety as system capabilities scale. Our main results show that for AI systems with expressiveness EXP$(m)$ above a critical threshold $\\tau$, safety verification requires exponential time and is coNP-complete. We formalize the Capability-Risk Scaling (CRS) dynamic, which demonstrates how increasing AI capability drives societal safety requirements toward perfection, creating an inescapable tension with verification complexity. Through four core theorems, we prove that (1) verification complexity grows exponentially with system expressiveness, (2) safe policies comprise at most a $2^{-2^m}$ fraction of the policy space, (3) no finite set of alignment techniques can provide universal coverage, and (4) robust safety properties form measure-zero sets for neural networks. These results characterize an \"intractability gap\" where practical safety requirements fall within the region of computational intractability. We conclude by presenting a strategic trilemma: AI development must either constrain system complexity to maintain verifiable safety, accept unverifiable risks while scaling capabilities, or develop fundamentally new safety paradigms beyond verification. Our work provides the first systematic complexity-theoretic analysis of AI alignment and establishes rigorous bounds that any safety approach must confront. A formal verification of the core theorems in Lean4 is currently in progress."
+  },
+  {
+    "title": "Learning Safe Control via On-the-Fly Bandit Exploration",
+    "url": "http://arxiv.org/abs/2506.10279v1",
+    "arxiv_id": "2506.10279v1",
+    "authors": [
+      "Alexandre Capone",
+      "Ryan Cosner",
+      "Aaaron Ames",
+      "Sandra Hirche"
+    ],
+    "published": "2025-06-12T01:40:24+00:00",
+    "summary": "Control tasks with safety requirements under high levels of model uncertainty are increasingly common. Machine learning techniques are frequently used to address such tasks, typically by leveraging model error bounds to specify robust constraint-based safety filters. However, if the learned model uncertainty is very high, the corresponding filters are potentially invalid, meaning no control input satisfies the constraints imposed by the safety filter. While most works address this issue by assuming some form of safe backup controller, ours tackles it by collecting additional data on the fly using a Gaussian process bandit-type algorithm. We combine a control barrier function with a learned model to specify a robust certificate that ensures safety if feasible. Whenever infeasibility occurs, we leverage the control barrier function to guide exploration, ensuring the collected data contributes toward the closed-loop system safety. By combining a safety filter with exploration in this manner, our method provably achieves safety in a setting that allows for a zero-mean prior dynamics model, without requiring a backup controller. To the best of our knowledge, it is the first safe learning-based control method that achieves this."
+  },
+  {
+    "title": "Optimal Voltage Control Using Online Exponential Barrier Method",
+    "url": "http://arxiv.org/abs/2506.10247v1",
+    "arxiv_id": "2506.10247v1",
+    "authors": [
+      "Peng Zhang",
+      "Baosen Zhang"
+    ],
+    "published": "2025-06-12T00:10:16+00:00",
+    "summary": "This paper address the optimal voltage control problem of distribution systems with high penetration of inverter-based renewable energy resources, under inaccurate model information. We propose the online exponential barrier method that explicitly leverages the online feedback from grids to enhance the robustness to model inaccuracy and incorporates the voltage constraints to maintain the safety requirements. We provide analytical results on the optimal barrier parameter selection and sufficient conditions for the safety guarantee of converged voltages. We also establish theoretical results on the exponential convergence rate with proper step-size. The effectiveness of the proposed framework is validated on a 56-bus radial network, where we significantly improve the robustness against model inaccuracy compared to existing methods."
+  },
+  {
+    "title": "Data-Centric Safety and Ethical Measures for Data and AI Governance",
+    "url": "http://arxiv.org/abs/2506.10217v1",
+    "arxiv_id": "2506.10217v1",
+    "authors": [
+      "Srija Chakraborty"
+    ],
+    "published": "2025-06-11T22:26:50+00:00",
+    "summary": "Datasets play a key role in imparting advanced capabilities to artificial intelligence (AI) foundation models that can be adapted to various downstream tasks. These downstream applications can introduce both beneficial and harmful capabilities -- resulting in dual use AI foundation models, with various technical and regulatory approaches to monitor and manage these risks. However, despite the crucial role of datasets, responsible dataset design and ensuring data-centric safety and ethical practices have received less attention. In this study, we pro-pose responsible dataset design framework that encompasses various stages in the AI and dataset lifecycle to enhance safety measures and reduce the risk of AI misuse due to low quality, unsafe and unethical data content. This framework is domain agnostic, suitable for adoption for various applications and can promote responsible practices in dataset creation, use, and sharing to facilitate red teaming, minimize risks, and increase trust in AI models."
+  },
+  {
+    "title": "Towards Responsible AI: Advances in Safety, Fairness, and Accountability of Autonomous Systems",
+    "url": "http://arxiv.org/abs/2506.10192v1",
+    "arxiv_id": "2506.10192v1",
+    "authors": [
+      "Filip Cano"
+    ],
+    "published": "2025-06-11T21:30:02+00:00",
+    "summary": "Ensuring responsible use of artificial intelligence (AI) has become imperative as autonomous systems increasingly influence critical societal domains. However, the concept of trustworthy AI remains broad and multi-faceted. This thesis advances knowledge in the safety, fairness, transparency, and accountability of AI systems. In safety, we extend classical deterministic shielding techniques to become resilient against delayed observations, enabling practical deployment in real-world conditions. We also implement both deterministic and probabilistic safety shields into simulated autonomous vehicles to prevent collisions with road users, validating the use of these techniques in realistic driving simulators. We introduce fairness shields, a novel post-processing approach to enforce group fairness in sequential decision-making settings over finite and periodic time horizons. By optimizing intervention costs while strictly ensuring fairness constraints, this method efficiently balances fairness with minimal interference. For transparency and accountability, we propose a formal framework for assessing intentional behaviour in probabilistic decision-making agents, introducing quantitative metrics of agency and intention quotient. We use these metrics to propose a retrospective analysis of intention, useful for determining responsibility when autonomous systems cause unintended harm. Finally, we unify these contributions through the ``reactive decision-making'' framework, providing a general formalization that consolidates previous approaches. Collectively, the advancements presented contribute practically to the realization of safer, fairer, and more accountable AI systems, laying the foundations for future research in trustworthy AI."
+  },
+  {
+    "title": "Disclosure Audits for LLM Agents",
+    "url": "http://arxiv.org/abs/2506.10171v1",
+    "arxiv_id": "2506.10171v1",
+    "authors": [
+      "Saswat Das",
+      "Jameson Sandler",
+      "Ferdinando Fioretto"
+    ],
+    "published": "2025-06-11T20:47:37+00:00",
+    "summary": "Large Language Model agents have begun to appear as personal assistants, customer service bots, and clinical aides. While these applications deliver substantial operational benefits, they also require continuous access to sensitive data, which increases the likelihood of unauthorized disclosures. This study proposes an auditing framework for conversational privacy that quantifies and audits these risks. The proposed Conversational Manipulation for Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to stress-test agents that enforce strict privacy directives. Rather than focusing solely on a single disclosure event, CMPL simulates realistic multi-turn interactions to systematically uncover latent vulnerabilities. Our evaluation on diverse domains, data modalities, and safety configurations demonstrate the auditing framework's ability to reveal privacy risks that are not deterred by existing single-turn defenses. In addition to introducing CMPL as a diagnostic tool, the paper delivers (1) an auditing procedure grounded in quantifiable risk metrics and (2) an open benchmark for evaluation of conversational privacy across agent implementations."
+  },
+  {
+    "title": "Measuring Corporate Human Capital Disclosures: Lexicon, Data, Code, and Research Opportunities",
+    "url": "http://arxiv.org/abs/2506.10155v1",
+    "arxiv_id": "2506.10155v1",
+    "authors": [
+      "Elizabeth Demers",
+      "Victor Xiaoqi Wang",
+      "Kean Wu"
+    ],
+    "published": "2025-06-11T20:18:37+00:00",
+    "summary": "Human capital (HC) is increasingly important to corporate value creation. Unlike other assets, however, HC is not currently subject to well-defined measurement or disclosure rules. We use a machine learning algorithm (word2vec) trained on a confirmed set of HC disclosures to develop a comprehensive list of HC-related keywords classified into five subcategories (DEI; health and safety; labor relations and culture; compensation and benefits; and demographics and other) that capture the multidimensional nature of HC management. We share our lexicon, corporate HC disclosures, and the Python code used to develop the lexicon, and we provide detailed examples of using our data and code, including for fine-tuning a BERT model. Researchers can use our HC lexicon (or modify the code to capture another construct of interest) with their samples of corporate communications to address pertinent HC questions. We close with a discussion of future research opportunities related to HC management and disclosure."
+  },
+  {
+    "title": "Estimating the Joint Probability of Scenario Parameters with Gaussian Mixture Copula Models",
+    "url": "http://arxiv.org/abs/2506.10098v1",
+    "arxiv_id": "2506.10098v1",
+    "authors": [
+      "Christian Reichenb\u00e4cher",
+      "Philipp Rank",
+      "Jochen Hipp",
+      "Oliver Bringmann"
+    ],
+    "published": "2025-06-11T18:30:20+00:00",
+    "summary": "This paper presents the first application of Gaussian Mixture Copula Models to the statistical modeling of driving scenarios for the safety validation of automated driving systems. Knowledge of the joint probability distribution of scenario parameters is essential for scenario-based safety assessment, where risk quantification depends on the likelihood of concrete parameter combinations. Gaussian Mixture Copula Models bring together the multimodal expressivity of Gaussian Mixture Models and the flexibility of copulas, enabling separate modeling of marginal distributions and dependencies. We benchmark Gaussian Mixture Copula Models against previously proposed approaches - Gaussian Mixture Models and Gaussian Copula Models - using real-world driving data drawn from scenarios defined in United Nations Regulation No. 157. Our evaluation across 18 million scenario instances demonstrates that Gaussian Mixture Copula Models provide a better fit to the data in terms of both likelihood and Sinkhorn distance. These results suggest that Gaussian Mixture Copula Models are a compelling foundation for future scenario-based validation frameworks."
+  },
+  {
+    "title": "Optimizing Latent Dimension Allocation in Hierarchical VAEs: Balancing Attenuation and Information Retention for OOD Detection",
+    "url": "http://arxiv.org/abs/2506.10089v1",
+    "arxiv_id": "2506.10089v1",
+    "authors": [
+      "Dane Williamson",
+      "Yangfeng Ji",
+      "Matthew Dwyer"
+    ],
+    "published": "2025-06-11T18:16:19+00:00",
+    "summary": "Out-of-distribution (OOD) detection is a critical task in machine learning, particularly for safety-critical applications where unexpected inputs must be reliably flagged. While hierarchical variational autoencoders (HVAEs) offer improved representational capacity over traditional VAEs, their performance is highly sensitive to how latent dimensions are distributed across layers. Existing approaches often allocate latent capacity arbitrarily, leading to ineffective representations or posterior collapse. In this work, we introduce a theoretically grounded framework for optimizing latent dimension allocation in HVAEs, drawing on principles from information theory to formalize the trade-off between information loss and representational attenuation. We prove the existence of an optimal allocation ratio $r^{\\ast}$ under a fixed latent budget, and empirically show that tuning this ratio consistently improves OOD detection performance across datasets and architectures. Our approach outperforms baseline HVAE configurations and provides practical guidance for principled latent structure design, leading to more robust OOD detection with deep generative models."
+  },
+  {
     "title": "From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring",
     "url": "http://arxiv.org/abs/2506.09996v1",
     "arxiv_id": "2506.09996v1",
@@ -84,6 +482,26 @@
     "summary": "Large Reasoning Models (LRMs) like o1 and DeepSeek-R1 have shown remarkable progress in natural language reasoning with long chain-of-thought (CoT), yet they remain inefficient or inaccurate when handling complex mathematical operations. Addressing these limitations through computational tools (e.g., computation libraries and symbolic solvers) is promising, but it introduces a technical challenge: Code Interpreter (CI) brings external knowledge beyond the model's internal text representations, thus the direct combination is not efficient. This paper introduces CoRT, a post-training framework for teaching LRMs to leverage CI effectively and efficiently. As a first step, we address the data scarcity issue by synthesizing code-integrated reasoning data through Hint-Engineering, which strategically inserts different hints at appropriate positions to optimize LRM-CI interaction. We manually create 30 high-quality samples, upon which we post-train models ranging from 1.5B to 32B parameters, with supervised fine-tuning, rejection fine-tuning and reinforcement learning. Our experimental results demonstrate that Hint-Engineering models achieve 4\\% and 8\\% absolute improvements on DeepSeek-R1-Distill-Qwen-32B and DeepSeek-R1-Distill-Qwen-1.5B respectively, across five challenging mathematical reasoning datasets. Furthermore, Hint-Engineering models use about 30\\% fewer tokens for the 32B model and 50\\% fewer tokens for the 1.5B model compared with the natural language models. The models and code are available at https://github.com/ChengpengLi1003/CoRT."
   },
   {
+    "title": "CoRT: Code-integrated Reasoning within Thinking",
+    "url": "http://arxiv.org/abs/2506.09820v2",
+    "arxiv_id": "2506.09820v2",
+    "authors": [
+      "Chengpeng Li",
+      "Zhengyang Tang",
+      "Ziniu Li",
+      "Mingfeng Xue",
+      "Keqin Bao",
+      "Tian Ding",
+      "Ruoyu Sun",
+      "Benyou Wang",
+      "Xiang Wang",
+      "Junyang Lin",
+      "Dayiheng Liu"
+    ],
+    "published": "2025-06-11T14:59:02+00:00",
+    "summary": "Large Reasoning Models (LRMs) like o1 and DeepSeek-R1 have shown remarkable progress in natural language reasoning with long chain-of-thought (CoT), yet they remain inefficient or inaccurate when handling complex mathematical operations. Addressing these limitations through computational tools (e.g., computation libraries and symbolic solvers) is promising, but it introduces a technical challenge: Code Interpreter (CI) brings external knowledge beyond the model's internal text representations, thus the direct combination is not efficient. This paper introduces CoRT, a post-training framework for teaching LRMs to leverage CI effectively and efficiently. As a first step, we address the data scarcity issue by synthesizing code-integrated reasoning data through Hint-Engineering, which strategically inserts different hints at appropriate positions to optimize LRM-CI interaction. We manually create 30 high-quality samples, upon which we post-train models ranging from 1.5B to 32B parameters, with supervised fine-tuning, rejection fine-tuning and reinforcement learning. Our experimental results demonstrate that Hint-Engineering models achieve 4\\% and 8\\% absolute improvements on DeepSeek-R1-Distill-Qwen-32B and DeepSeek-R1-Distill-Qwen-1.5B respectively, across five challenging mathematical reasoning datasets. Furthermore, Hint-Engineering models use about 30\\% fewer tokens for the 32B model and 50\\% fewer tokens for the 1.5B model compared with the natural language models. The models and code are available at https://github.com/ChengpengLi1003/CoRT."
+  },
+  {
     "title": "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
     "url": "http://arxiv.org/abs/2506.09800v1",
     "arxiv_id": "2506.09800v1",
@@ -141,6 +559,17 @@
     "summary": "Large Language Models (LLMs) have demonstrated exceptional benefits to a wide range of domains, for tasks as diverse as code generation and robot navigation. While LLMs are usually served from cloud data centers, mission-critical and privacy-sensitive applications may require local hosting of open LLM models. Given the large GPU memory footprint needed for LLMs, edge accelerators such as Nvidia Jetson Orin AGX with 64GB of shared GPU-CPU RAM are a compelling choice. However, the feasibility and performance of LLM inference on edge accelerators is under-explored. This study presents a detailed evaluation of LLM inference on the NVIDIA Jetson Orin AGX, on four SOTA models ranging from 2.7B to 32.8B parameters, such as Meta Llama3.1, Microsoft-Phi2, Deepseek-R1-Qwen.We investigate the impact of varying batch sizes, sequence lengths, and quantization levels on latency, throughput, and perplexity, and also explore various custom power modes on the Orin AGX to perform power and energy consumption analysis. Our findings offer interesting insights on the trade-offs between efficiency, inference speed and resource use, e.g., increasing the sequence length causes a decrease in token throughput and quantization causes smaller LLMs to be slower. These results can help optimize LLM serving on edge accelerators for practical applications."
   },
   {
+    "title": "Understanding the Performance and Power of LLM Inferencing on Edge Accelerators",
+    "url": "http://arxiv.org/abs/2506.09554v2",
+    "arxiv_id": "2506.09554v2",
+    "authors": [
+      "Mayank Arya",
+      "Yogesh Simmhan"
+    ],
+    "published": "2025-06-11T09:36:32+00:00",
+    "summary": "Large Language Models (LLMs) have demonstrated exceptional benefits to a wide range of domains, for tasks as diverse as code generation and robot navigation. While LLMs are usually served from cloud data centers, mission-critical and privacy-sensitive applications may require local hosting of open LLM models. Given the large GPU memory footprint needed for LLMs, edge accelerators such as Nvidia Jetson Orin AGX with 64GB of shared GPU-CPU RAM are a compelling choice. However, the feasibility and performance of LLM inference on edge accelerators is under-explored. This study presents a detailed evaluation of LLM inference on the NVIDIA Jetson Orin AGX, on four SOTA models ranging from 2.7B to 32.8B parameters, such as Meta Llama3.1, Microsoft-Phi2, Deepseek-R1-Qwen. We investigate the impact of varying batch sizes, sequence lengths, and quantization levels on latency, throughput, and perplexity, and also explore various custom power modes on the Orin AGX to perform power and energy consumption analysis. Our findings offer interesting insights on the trade-offs between efficiency, inference speed and resource use, e.g., increasing the sequence length causes a decrease in token throughput and quantization causes smaller LLMs to be slower. These results can help optimize LLM serving on edge accelerators for practical applications."
+  },
+  {
     "title": "Enhancing Human-Robot Collaboration: A Sim2Real Domain Adaptation Algorithm for Point Cloud Segmentation in Industrial Environments",
     "url": "http://arxiv.org/abs/2506.09552v1",
     "arxiv_id": "2506.09552v1",
@@ -168,6 +597,21 @@
     ],
     "published": "2025-06-11T09:33:02+00:00",
     "summary": "Function summaries, which characterize the behavior of code segments (typically functions) through preconditions and postconditions, are essential for understanding, reusing, and verifying software, particularly in safety-critical domains like aerospace embedded systems. However, these mission-critical legacy code serving as a valuable reused asset often lacks formal specifications. It is challenging to automatically generate function summaries for C programs, due to the existence of complex features such as loops, nested function calls, pointer aliasing, and so on. Moreover, function summaries should support multiple abstraction levels to meet diverse requirements, e.g. precise summaries capturing full functionality for formal verification and intuitive summaries for human understanding.   To address these challenges, we first propose a novel framework that combines symbolic execution, large language models (LLMs), and formal verification to generate Relatively Strongest Postconditions (RSPs) and build function summaries that fully capture program behavior. Our approach leverages VST-A's symbolic execution to precisely track program execution paths and state transitions, employs LLMs to infer loop invariants based on predefined templates, and uses Frama-C to guarantee soundness of generated summaries in an iterative refinement loop. Furthermore, from generated RSPs, we automatically synthesize strongest non-redundant postconditions expressed within given domain specific language. We compare our approach with existing work through extensive experiments."
+  },
+  {
+    "title": "GenBreak: Red Teaming Text-to-Image Generators Using Large Language Models",
+    "url": "http://arxiv.org/abs/2506.10047v1",
+    "arxiv_id": "2506.10047v1",
+    "authors": [
+      "Zilong Wang",
+      "Xiang Zheng",
+      "Xiaosen Wang",
+      "Bo Wang",
+      "Xingjun Ma",
+      "Yu-Gang Jiang"
+    ],
+    "published": "2025-06-11T09:09:12+00:00",
+    "summary": "Text-to-image (T2I) models such as Stable Diffusion have advanced rapidly and are now widely used in content creation. However, these models can be misused to generate harmful content, including nudity or violence, posing significant safety risks. While most platforms employ content moderation systems, underlying vulnerabilities can still be exploited by determined adversaries. Recent research on red-teaming and adversarial attacks against T2I models has notable limitations: some studies successfully generate highly toxic images but use adversarial prompts that are easily detected and blocked by safety filters, while others focus on bypassing safety mechanisms but fail to produce genuinely harmful outputs, neglecting the discovery of truly high-risk prompts. Consequently, there remains a lack of reliable tools for evaluating the safety of defended T2I models. To address this gap, we propose GenBreak, a framework that fine-tunes a red-team large language model (LLM) to systematically explore underlying vulnerabilities in T2I generators. Our approach combines supervised fine-tuning on curated datasets with reinforcement learning via interaction with a surrogate T2I model. By integrating multiple reward signals, we guide the LLM to craft adversarial prompts that enhance both evasion capability and image toxicity, while maintaining semantic coherence and diversity. These prompts demonstrate strong effectiveness in black-box attacks against commercial T2I generators, revealing practical and concerning safety weaknesses."
   },
   {
     "title": "Give Me FP32 or Give Me Death? Challenges and Solutions for Reproducible Reasoning",
