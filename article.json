@@ -1,5 +1,249 @@
 [
   {
+    "title": "Tracing LLM Reasoning Processes with Strategic Games: A Framework for Planning, Revision, and Resource-Constrained Decision Making",
+    "url": "http://arxiv.org/abs/2506.12012v1",
+    "arxiv_id": "2506.12012v1",
+    "authors": [
+      "Xiaopeng Yuan",
+      "Xingjian Zhang",
+      "Ke Xu",
+      "Yifan Xu",
+      "Lijun Yu",
+      "Jindong Wang",
+      "Yushun Dong",
+      "Haohan Wang"
+    ],
+    "published": "2025-06-13T17:59:10+00:00",
+    "summary": "Large language models (LLMs) are increasingly used for tasks that require complex reasoning. Most benchmarks focus on final outcomes but overlook the intermediate reasoning steps - such as planning, revision, and decision making under resource constraints. We argue that measuring these internal processes is essential for understanding model behavior and improving reliability. We propose using strategic games as a natural evaluation environment: closed, rule-based systems with clear states, limited resources, and automatic feedback. We introduce a framework that evaluates LLMs along three core dimensions: planning, revision, and resource-constrained decision making. To operationalize this, we define metrics beyond win rate, including overcorrection risk rate, correction success rate, improvement slope, and over-budget ratio. In 4320 adversarial rounds across 12 leading models, ChatGPT-o3-mini achieves the top composite score, with a win rate of 74.7 percent, a correction success rate of 78.6 percent, and an improvement slope of 0.041. By contrast, Qwen-Plus, despite an overcorrection risk rate of 81.6 percent, wins only 25.6 percent of its matches - primarily due to excessive resource use. We also observe a negative correlation between overcorrection risk rate and correction success rate (Pearson r = -0.51, p = 0.093), suggesting that more frequent edits do not always improve outcomes. Our findings highlight the value of assessing not only what LLMs decide but how they arrive at those decisions"
+  },
+  {
+    "title": "Compression Aware Certified Training",
+    "url": "http://arxiv.org/abs/2506.11992v1",
+    "arxiv_id": "2506.11992v1",
+    "authors": [
+      "Changming Xu",
+      "Gagandeep Singh"
+    ],
+    "published": "2025-06-13T17:48:50+00:00",
+    "summary": "Deep neural networks deployed in safety-critical, resource-constrained environments must balance efficiency and robustness. Existing methods treat compression and certified robustness as separate goals, compromising either efficiency or safety. We propose CACTUS (Compression Aware Certified Training Using network Sets), a general framework for unifying these objectives during training. CACTUS models maintain high certified accuracy even when compressed. We apply CACTUS for both pruning and quantization and show that it effectively trains models which can be efficiently compressed while maintaining high accuracy and certifiable robustness. CACTUS achieves state-of-the-art accuracy and certified performance for both pruning and quantization on a variety of datasets and input specifications."
+  },
+  {
+    "title": "Automated Treatment Planning for Interstitial HDR Brachytherapy for Locally Advanced Cervical Cancer using Deep Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2506.11957v1",
+    "arxiv_id": "2506.11957v1",
+    "authors": [
+      "Mohammadamin Moradi",
+      "Runyu Jiang",
+      "Yingzi Liu",
+      "Malvern Madondo",
+      "Tianming Wu",
+      "James J. Sohn",
+      "Xiaofeng Yang",
+      "Yasmin Hasan",
+      "Zhen Tian"
+    ],
+    "published": "2025-06-13T17:07:30+00:00",
+    "summary": "High-dose-rate (HDR) brachytherapy plays a critical role in the treatment of locally advanced cervical cancer but remains highly dependent on manual treatment planning expertise. The objective of this study is to develop a fully automated HDR brachytherapy planning framework that integrates reinforcement learning (RL) and dose-based optimization to generate clinically acceptable treatment plans with improved consistency and efficiency. We propose a hierarchical two-stage autoplanning framework. In the first stage, a deep Q-network (DQN)-based RL agent iteratively selects treatment planning parameters (TPPs), which control the trade-offs between target coverage and organ-at-risk (OAR) sparing. The agent's state representation includes both dose-volume histogram (DVH) metrics and current TPP values, while its reward function incorporates clinical dose objectives and safety constraints, including D90, V150, V200 for targets, and D2cc for all relevant OARs (bladder, rectum, sigmoid, small bowel, and large bowel). In the second stage, a customized Adam-based optimizer computes the corresponding dwell time distribution for the selected TPPs using a clinically informed loss function. The framework was evaluated on a cohort of patients with complex applicator geometries. The proposed framework successfully learned clinically meaningful TPP adjustments across diverse patient anatomies. For the unseen test patients, the RL-based automated planning method achieved an average score of 93.89%, outperforming the clinical plans which averaged 91.86%. These findings are notable given that score improvements were achieved while maintaining full target coverage and reducing CTV hot spots in most cases."
+  },
+  {
+    "title": "Improving Large Language Model Safety with Contrastive Representation Learning",
+    "url": "http://arxiv.org/abs/2506.11938v1",
+    "arxiv_id": "2506.11938v1",
+    "authors": [
+      "Samuel Simko",
+      "Mrinmaya Sachan",
+      "Bernhard Sch\u00f6lkopf",
+      "Zhijing Jin"
+    ],
+    "published": "2025-06-13T16:42:09+00:00",
+    "summary": "Large Language Models (LLMs) are powerful tools with profound societal impacts, yet their ability to generate responses to diverse and uncontrolled inputs leaves them vulnerable to adversarial attacks. While existing defenses often struggle to generalize across varying attack types, recent advancements in representation engineering offer promising alternatives. In this work, we propose a defense framework that formulates model defense as a contrastive representation learning (CRL) problem. Our method finetunes a model using a triplet-based loss combined with adversarial hard negative mining to encourage separation between benign and harmful representations. Our experimental results across multiple models demonstrate that our approach outperforms prior representation engineering-based defenses, improving robustness against both input-level and embedding-space attacks without compromising standard performance. Our code is available at https://github.com/samuelsimko/crl-llm-defense"
+  },
+  {
+    "title": "Real-World Deployment of a Lane Change Prediction Architecture Based on Knowledge Graph Embeddings and Bayesian Inference",
+    "url": "http://arxiv.org/abs/2506.11925v1",
+    "arxiv_id": "2506.11925v1",
+    "authors": [
+      "M. Manzour",
+      "Catherine M. Elias",
+      "Omar M. Shehata",
+      "R. Izquierdo",
+      "M. A. Sotelo"
+    ],
+    "published": "2025-06-13T16:24:28+00:00",
+    "summary": "Research on lane change prediction has gained a lot of momentum in the last couple of years. However, most research is confined to simulation or results obtained from datasets, leaving a gap between algorithmic advances and on-road deployment. This work closes that gap by demonstrating, on real hardware, a lane-change prediction system based on Knowledge Graph Embeddings (KGEs) and Bayesian inference. Moreover, the ego-vehicle employs a longitudinal braking action to ensure the safety of both itself and the surrounding vehicles. Our architecture consists of two modules: (i) a perception module that senses the environment, derives input numerical features, and converts them into linguistic categories; and communicates them to the prediction module; (ii) a pretrained prediction module that executes a KGE and Bayesian inference model to anticipate the target vehicle's maneuver and transforms the prediction into longitudinal braking action. Real-world hardware experimental validation demonstrates that our prediction system anticipates the target vehicle's lane change three to four seconds in advance, providing the ego vehicle sufficient time to react and allowing the target vehicle to make the lane change safely."
+  },
+  {
+    "title": "The Throughput Gain of Hypercycle-level Resource Reservation for Time-Triggered Ethernet",
+    "url": "http://arxiv.org/abs/2506.11745v1",
+    "arxiv_id": "2506.11745v1",
+    "authors": [
+      "Peng Wang",
+      "Suman Sourav",
+      "Binbin Chen",
+      "Hongyan Li",
+      "Feng Wang",
+      "Fan Zhang"
+    ],
+    "published": "2025-06-13T12:56:56+00:00",
+    "summary": "Time-Triggered Communication is a key technology for many safety-critical systems, with applications spanning the areas of aerospace and industrial control. Such communication relies on time-triggered flows, with each flow consisting of periodic packets originating from a source and destined for a destination node. Each packet needs to reach its destination before its deadline. Different flows can have different cycle lengths. To achieve assured transmission of time-triggered flows, existing efforts constrain the packets of a flow to be cyclically transmitted along the same path. Under such Fixed Cyclic Scheduling (FCS), reservation for flows with different cycle lengths can become incompatible over a shared link, limiting the total number of admissible flows. Considering the cycle lengths of different flows, a hyper-cycle has length equal to their least common multiple (LCM). It determines the time duration over which the scheduling compatibility of the different flows can be checked. In this work, we propose a more flexible schedule scheme called the Hypercycle-level Flexible Schedule (HFS) scheme, where a flow's resource reservation can change across cycles within a hypercycle. HFS can significantly increase the number of admitted flows by providing more scheduling options while remaining perfectly compatible with existing Time-Triggered Ethernet system. We show that, theoretically the possible capacity gain provided by HFS over FCS can be unbounded. We formulate the joint pathfinding and scheduling problem under HFS as an ILP problem which we prove to be NP-Hard. To solve HFS efficiently, we further propose a least-load-first heuristic (HFS-LLF), solving HFS as a sequence of shortest path problems. Extensive study shows that HFS admits up to 6 times the number of flows achieved by FCS. Moreover, our proposed HFS-LLF can run 104 times faster than solving HFS using a generic solver."
+  },
+  {
+    "title": "Model Organisms for Emergent Misalignment",
+    "url": "http://arxiv.org/abs/2506.11613v1",
+    "arxiv_id": "2506.11613v1",
+    "authors": [
+      "Edward Turner",
+      "Anna Soligo",
+      "Mia Taylor",
+      "Senthooran Rajamanoharan",
+      "Neel Nanda"
+    ],
+    "published": "2025-06-13T09:34:25+00:00",
+    "summary": "Recent work discovered Emergent Misalignment (EM): fine-tuning large language models on narrowly harmful datasets can lead them to become broadly misaligned. A survey of experts prior to publication revealed this was highly unexpected, demonstrating critical gaps in our understanding of model alignment. In this work, we both advance understanding and provide tools for future research. Using new narrowly misaligned datasets, we create a set of improved model organisms that achieve 99% coherence (vs. 67% prior), work with smaller 0.5B parameter models (vs. 32B), and that induce misalignment using a single rank-1 LoRA adapter. We demonstrate that EM occurs robustly across diverse model sizes, three model families, and numerous training protocols including full supervised fine-tuning. Leveraging these cleaner model organisms, we isolate a mechanistic phase transition and demonstrate that it corresponds to a robust behavioural phase transition in all studied organisms. Aligning large language models is critical for frontier AI safety, yet EM exposes how far we are from achieving this robustly. By distilling clean model organisms that isolate a minimal alignment-compromising change, and where this is learnt, we establish a foundation for future research into understanding and mitigating alignment risks in LLMs."
+  },
+  {
+    "title": "Linearly Solving Robust Rotation Estimation",
+    "url": "http://arxiv.org/abs/2506.11547v1",
+    "arxiv_id": "2506.11547v1",
+    "authors": [
+      "Yinlong Liu",
+      "Tianyu Huang",
+      "Zhi-Xin Yang"
+    ],
+    "published": "2025-06-13T08:00:03+00:00",
+    "summary": "Rotation estimation plays a fundamental role in computer vision and robot tasks, and extremely robust rotation estimation is significantly useful for safety-critical applications. Typically, estimating a rotation is considered a non-linear and non-convex optimization problem that requires careful design. However, in this paper, we provide some new perspectives that solving a rotation estimation problem can be reformulated as solving a linear model fitting problem without dropping any constraints and without introducing any singularities. In addition, we explore the dual structure of a rotation motion, revealing that it can be represented as a great circle on a quaternion sphere surface. Accordingly, we propose an easily understandable voting-based method to solve rotation estimation. The proposed method exhibits exceptional robustness to noise and outliers and can be computed in parallel with graphics processing units (GPUs) effortlessly. Particularly, leveraging the power of GPUs, the proposed method can obtain a satisfactory rotation solution for large-scale($10^6$) and severely corrupted (99$\\%$ outlier ratio) rotation estimation problems under 0.5 seconds. Furthermore, to validate our theoretical framework and demonstrate the superiority of our proposed method, we conduct controlled experiments and real-world dataset experiments. These experiments provide compelling evidence supporting the effectiveness and robustness of our approach in solving rotation estimation problems."
+  },
+  {
+    "title": "Do Not Immerse and Drive? Prolonged Effects of Cybersickness on Physiological Stress Markers And Cognitive Performance",
+    "url": "http://arxiv.org/abs/2506.11536v1",
+    "arxiv_id": "2506.11536v1",
+    "authors": [
+      "Daniel Zielasko",
+      "Ben Rehling",
+      "Bernadette von Dawans",
+      "Gregor Domes"
+    ],
+    "published": "2025-06-13T07:40:31+00:00",
+    "summary": "Extended exposure to virtual reality environments can induce motion sickness, often referred to as cybersickness, which may lead to physiological stress responses and impaired cognitive performance. This study investigates the aftereffects of VR-induced motion sickness with a focus on physiological stress markers and working memory performance. Using a carousel simulation to elicit cybersickness, we assessed subjective discomfort (SSQ, FMS), physiological stress (salivary cortisol, alpha-amylase, electrodermal activity, heart rate), and cognitive performance (n-Back task) over a 90-minute post-exposure period. Our findings demonstrate a significant increase in both subjective and physiological stress indicators following VR exposure, accompanied by a decline in working memory performance. Notably, delayed symptom progression was observed in a substantial proportion of participants, with some reporting peak symptoms up to 90 minutes post-stimulation. Salivary cortisol levels remained elevated throughout the observation period, indicating prolonged stress recovery. These results highlight the need for longer washout phases in XR research and raise safety concerns for professional applications involving post-exposure task performance."
+  },
+  {
+    "title": "Foundation Models in Autonomous Driving: A Survey on Scenario Generation and Scenario Analysis",
+    "url": "http://arxiv.org/abs/2506.11526v1",
+    "arxiv_id": "2506.11526v1",
+    "authors": [
+      "Yuan Gao",
+      "Mattia Piccinini",
+      "Yuchen Zhang",
+      "Dingrui Wang",
+      "Korbinian Moller",
+      "Roberto Brusnicki",
+      "Baha Zarrouki",
+      "Alessio Gambi",
+      "Jan Frederik Totz",
+      "Kai Storms",
+      "Steven Peters",
+      "Andrea Stocco",
+      "Bassam Alrifaee",
+      "Marco Pavone",
+      "Johannes Betz"
+    ],
+    "published": "2025-06-13T07:25:59+00:00",
+    "summary": "For autonomous vehicles, safe navigation in complex environments depends on handling a broad range of diverse and rare driving scenarios. Simulation- and scenario-based testing have emerged as key approaches to development and validation of autonomous driving systems. Traditional scenario generation relies on rule-based systems, knowledge-driven models, and data-driven synthesis, often producing limited diversity and unrealistic safety-critical cases. With the emergence of foundation models, which represent a new generation of pre-trained, general-purpose AI models, developers can process heterogeneous inputs (e.g., natural language, sensor data, HD maps, and control actions), enabling the synthesis and interpretation of complex driving scenarios. In this paper, we conduct a survey about the application of foundation models for scenario generation and scenario analysis in autonomous driving (as of May 2025). Our survey presents a unified taxonomy that includes large language models, vision-language models, multimodal large language models, diffusion models, and world models for the generation and analysis of autonomous driving scenarios. In addition, we review the methodologies, open-source datasets, simulation platforms, and benchmark challenges, and we examine the evaluation metrics tailored explicitly to scenario generation and analysis. Finally, the survey concludes by highlighting the open challenges and research questions, and outlining promising future research directions. All reviewed papers are listed in a continuously maintained repository, which contains supplementary materials and is available at https://github.com/TUM-AVS/FM-for-Scenario-Generation-Analysis."
+  },
+  {
+    "title": "Investigating Vulnerabilities and Defenses Against Audio-Visual Attacks: A Comprehensive Survey Emphasizing Multimodal Models",
+    "url": "http://arxiv.org/abs/2506.11521v1",
+    "arxiv_id": "2506.11521v1",
+    "authors": [
+      "Jinming Wen",
+      "Xinyi Wu",
+      "Shuai Zhao",
+      "Yanhao Jia",
+      "Yuwen Li"
+    ],
+    "published": "2025-06-13T07:22:36+00:00",
+    "summary": "Multimodal large language models (MLLMs), which bridge the gap between audio-visual and natural language processing, achieve state-of-the-art performance on several audio-visual tasks. Despite the superior performance of MLLMs, the scarcity of high-quality audio-visual training data and computational resources necessitates the utilization of third-party data and open-source MLLMs, a trend that is increasingly observed in contemporary research. This prosperity masks significant security risks. Empirical studies demonstrate that the latest MLLMs can be manipulated to produce malicious or harmful content. This manipulation is facilitated exclusively through instructions or inputs, including adversarial perturbations and malevolent queries, effectively bypassing the internal security mechanisms embedded within the models. To gain a deeper comprehension of the inherent security vulnerabilities associated with audio-visual-based multimodal models, a series of surveys investigates various types of attacks, including adversarial and backdoor attacks. While existing surveys on audio-visual attacks provide a comprehensive overview, they are limited to specific types of attacks, which lack a unified review of various types of attacks. To address this issue and gain insights into the latest trends in the field, this paper presents a comprehensive and systematic review of audio-visual attacks, which include adversarial attacks, backdoor attacks, and jailbreak attacks. Furthermore, this paper also reviews various types of attacks in the latest audio-visual-based MLLMs, a dimension notably absent in existing surveys. Drawing upon comprehensive insights from a substantial review, this paper delineates both challenges and emergent trends for future research on audio-visual attacks and defense."
+  },
+  {
+    "title": "Taming Stable Diffusion for Computed Tomography Blind Super-Resolution",
+    "url": "http://arxiv.org/abs/2506.11496v1",
+    "arxiv_id": "2506.11496v1",
+    "authors": [
+      "Chunlei Li",
+      "Yilei Shi",
+      "Haoxi Hu",
+      "Jingliang Hu",
+      "Xiao Xiang Zhu",
+      "Lichao Mou"
+    ],
+    "published": "2025-06-13T06:45:05+00:00",
+    "summary": "High-resolution computed tomography (CT) imaging is essential for medical diagnosis but requires increased radiation exposure, creating a critical trade-off between image quality and patient safety. While deep learning methods have shown promise in CT super-resolution, they face challenges with complex degradations and limited medical training data. Meanwhile, large-scale pre-trained diffusion models, particularly Stable Diffusion, have demonstrated remarkable capabilities in synthesizing fine details across various vision tasks. Motivated by this, we propose a novel framework that adapts Stable Diffusion for CT blind super-resolution. We employ a practical degradation model to synthesize realistic low-quality images and leverage a pre-trained vision-language model to generate corresponding descriptions. Subsequently, we perform super-resolution using Stable Diffusion with a specialized controlling strategy, conditioned on both low-resolution inputs and the generated text descriptions. Extensive experiments show that our method outperforms existing approaches, demonstrating its potential for achieving high-quality CT imaging at reduced radiation doses. Our code will be made publicly available."
+  },
+  {
+    "title": "On the Natural Robustness of Vision-Language Models Against Visual Perception Attacks in Autonomous Driving",
+    "url": "http://arxiv.org/abs/2506.11472v1",
+    "arxiv_id": "2506.11472v1",
+    "authors": [
+      "Pedram MohajerAnsari",
+      "Amir Salarpour",
+      "Michael K\u00fchr",
+      "Siyu Huang",
+      "Mohammad Hamad",
+      "Sebastian Steinhorst",
+      "Habeeb Olufowobi",
+      "Mert D. Pes\u00e9"
+    ],
+    "published": "2025-06-13T05:22:12+00:00",
+    "summary": "Autonomous vehicles (AVs) rely on deep neural networks (DNNs) for critical tasks such as traffic sign recognition (TSR), automated lane centering (ALC), and vehicle detection (VD). However, these models are vulnerable to attacks that can cause misclassifications and compromise safety. Traditional defense mechanisms, including adversarial training, often degrade benign accuracy and fail to generalize against unseen attacks. In this work, we introduce Vehicle Vision Language Models (V2LMs), fine-tuned vision-language models specialized for AV perception. Our findings demonstrate that V2LMs inherently exhibit superior robustness against unseen attacks without requiring adversarial training, maintaining significantly higher accuracy than conventional DNNs under adversarial conditions. We evaluate two deployment strategies: Solo Mode, where individual V2LMs handle specific perception tasks, and Tandem Mode, where a single unified V2LM is fine-tuned for multiple tasks simultaneously. Experimental results reveal that DNNs suffer performance drops of 33% to 46% under attacks, whereas V2LMs maintain adversarial accuracy with reductions of less than 8% on average. The Tandem Mode further offers a memory-efficient alternative while achieving comparable robustness to Solo Mode. We also explore integrating V2LMs as parallel components to AV perception to enhance resilience against adversarial threats. Our results suggest that V2LMs offer a promising path toward more secure and resilient AV perception systems."
+  },
+  {
+    "title": "ReVeal: Self-Evolving Code Agents via Iterative Generation-Verification",
+    "url": "http://arxiv.org/abs/2506.11442v1",
+    "arxiv_id": "2506.11442v1",
+    "authors": [
+      "Yiyang Jin",
+      "Kunzhao Xu",
+      "Hang Li",
+      "Xueting Han",
+      "Yanmin Zhou",
+      "Cheng Li",
+      "Jing Bai"
+    ],
+    "published": "2025-06-13T03:41:04+00:00",
+    "summary": "Recent advances in reinforcement learning (RL) with verifiable outcome rewards have significantly improved the reasoning capabilities of large language models (LLMs), especially when combined with multi-turn tool interactions. However, existing methods lack both meaningful verification signals from realistic environments and explicit optimization for verification, leading to unreliable self-verification. To address these limitations, we propose ReVeal, a multi-turn reinforcement learning framework that interleaves code generation with explicit self-verification and tool-based evaluation. ReVeal enables LLMs to autonomously generate test cases, invoke external tools for precise feedback, and improves performance via a customized RL algorithm with dense, per-turn rewards. As a result, ReVeal fosters the co-evolution of a model's generation and verification capabilities through RL training, expanding the reasoning boundaries of the base model, demonstrated by significant gains in Pass@k on LiveCodeBench. It also enables test-time scaling into deeper inference regimes, with code consistently evolving as the number of turns increases during inference, ultimately surpassing DeepSeek-R1-Zero-Qwen-32B. These findings highlight the promise of ReVeal as a scalable and effective paradigm for building more robust and autonomous AI agents."
+  },
+  {
+    "title": "A Step-by-Step Guide to Creating a Robust Autonomous Drone Testing Pipeline",
+    "url": "http://arxiv.org/abs/2506.11400v1",
+    "arxiv_id": "2506.11400v1",
+    "authors": [
+      "Yupeng Jiang",
+      "Yao Deng",
+      "Sebastian Schroder",
+      "Linfeng Liang",
+      "Suhaas Gambhir",
+      "Alice James",
+      "Avishkar Seth",
+      "James Pirrie",
+      "Yihao Zhang",
+      "Xi Zheng"
+    ],
+    "published": "2025-06-13T01:55:23+00:00",
+    "summary": "Autonomous drones are rapidly reshaping industries ranging from aerial delivery and infrastructure inspection to environmental monitoring and disaster response. Ensuring the safety, reliability, and efficiency of these systems is paramount as they transition from research prototypes to mission-critical platforms. This paper presents a step-by-step guide to establishing a robust autonomous drone testing pipeline, covering each critical stage: Software-in-the-Loop (SIL) Simulation Testing, Hardware-in-the-Loop (HIL) Testing, Controlled Real-World Testing, and In-Field Testing. Using practical examples, including the marker-based autonomous landing system, we demonstrate how to systematically verify drone system behaviors, identify integration issues, and optimize performance. Furthermore, we highlight emerging trends shaping the future of drone testing, including the integration of Neurosymbolic and LLMs, creating co-simulation environments, and Digital Twin-enabled simulation-based testing techniques. By following this pipeline, developers and researchers can achieve comprehensive validation, minimize deployment risks, and prepare autonomous drones for safe and reliable real-world operations."
+  },
+  {
+    "title": "Learning a Continue-Thinking Token for Enhanced Test-Time Scaling",
+    "url": "http://arxiv.org/abs/2506.11274v1",
+    "arxiv_id": "2506.11274v1",
+    "authors": [
+      "Liran Ringel",
+      "Elad Tolochinsky",
+      "Yaniv Romano"
+    ],
+    "published": "2025-06-12T20:28:54+00:00",
+    "summary": "Test-time scaling has emerged as an effective approach for improving language model performance by utilizing additional compute at inference time. Recent studies have shown that overriding end-of-thinking tokens (e.g., replacing \"</think>\" with \"Wait\") can extend reasoning steps and improve accuracy. In this work, we explore whether a dedicated continue-thinking token can be learned to trigger extended reasoning. We augment a distilled version of DeepSeek-R1 with a single learned \"<|continue-thinking|>\" token, training only its embedding via reinforcement learning while keeping the model weights frozen. Our experiments show that this learned token achieves improved accuracy on standard math benchmarks compared to both the baseline model and a test-time scaling approach that uses a fixed token (e.g., \"Wait\") for budget forcing. In particular, we observe that in cases where the fixed-token approach enhances the base model's accuracy, our method achieves a markedly greater improvement. For example, on the GSM8K benchmark, the fixed-token approach yields a 1.3% absolute improvement in accuracy, whereas our learned-token method achieves a 4.2% improvement over the base model that does not use budget forcing."
+  },
+  {
     "title": "How Well Can Reasoning Models Identify and Recover from Unhelpful Thoughts?",
     "url": "http://arxiv.org/abs/2506.10979v1",
     "arxiv_id": "2506.10979v1",
@@ -103,6 +347,30 @@
     ],
     "published": "2025-06-12T15:44:51+00:00",
     "summary": "A fundamental requirement for real-world robotic deployment is the ability to understand and respond to natural language instructions. Existing language-conditioned manipulation tasks typically assume that instructions are perfectly aligned with the environment. This assumption limits robustness and generalization in realistic scenarios where instructions may be ambiguous, irrelevant, or infeasible. To address this problem, we introduce RAtional MAnipulation (RAMA), a new benchmark that challenges models with both unseen executable instructions and defective ones that should be rejected. In RAMA, we construct a dataset with over 14,000 samples, including diverse defective instructions spanning six dimensions: visual, physical, semantic, motion, safety, and out-of-context. We further propose the Rational Vision-Language-Action model (RationalVLA). It is a dual system for robotic arms that integrates the high-level vision-language model with the low-level manipulation policy by introducing learnable latent space embeddings. This design enables RationalVLA to reason over instructions, reject infeasible commands, and execute manipulation effectively. Experiments demonstrate that RationalVLA outperforms state-of-the-art baselines on RAMA by a 14.5% higher success rate and 0.94 average task length, while maintaining competitive performance on standard manipulation tasks. Real-world trials further validate its effectiveness and robustness in practical applications. Our project page is https://irpn-eai.github.io/rationalvla."
+  },
+  {
+    "title": "RationalVLA: A Rational Vision-Language-Action Model with Dual System",
+    "url": "http://arxiv.org/abs/2506.10826v2",
+    "arxiv_id": "2506.10826v2",
+    "authors": [
+      "Wenxuan Song",
+      "Jiayi Chen",
+      "Wenxue Li",
+      "Xu He",
+      "Han Zhao",
+      "Can Cui",
+      "Pengxiang Ding Shiyan Su",
+      "Feilong Tang",
+      "Xuelian Cheng",
+      "Donglin Wang",
+      "Zongyuan Ge",
+      "Xinhu Zheng",
+      "Zhe Liu",
+      "Hesheng Wang",
+      "Haoang Li"
+    ],
+    "published": "2025-06-12T15:44:51+00:00",
+    "summary": "A fundamental requirement for real-world robotic deployment is the ability to understand and respond to natural language instructions. Existing language-conditioned manipulation tasks typically assume that instructions are perfectly aligned with the environment. This assumption limits robustness and generalization in realistic scenarios where instructions may be ambiguous, irrelevant, or infeasible. To address this problem, we introduce RAtional MAnipulation (RAMA), a new benchmark that challenges models with both unseen executable instructions and defective ones that should be rejected. In RAMA, we construct a dataset with over 14,000 samples, including diverse defective instructions spanning six dimensions: visual, physical, semantic, motion, safety, and out-of-context. We further propose the Rational Vision-Language-Action model (RationalVLA). It is a dual system for robotic arms that integrates the high-level vision-language model with the low-level manipulation policy by introducing learnable latent space embeddings. This design enables RationalVLA to reason over instructions, reject infeasible commands, and execute manipulation effectively. Experiments demonstrate that RationalVLA outperforms state-of-the-art baselines on RAMA by a 14.5% higher success rate and 0.94 average task length, while maintaining competitive performance on standard manipulation tasks. Real-world trials further validate its effectiveness and robustness in practical applications. Our project page is https://irpn-eai.github.io/RationalVLA."
   },
   {
     "title": "Barium Calcium Zirconium Titanate Thin Film-Based Capacitive Thermoelectric Converter for Low-Grade Waste Heat",
@@ -232,6 +500,42 @@
     "title": "Scientists' First Exam: Probing Cognitive Abilities of MLLM via Perception, Understanding, and Reasoning",
     "url": "http://arxiv.org/abs/2506.10521v1",
     "arxiv_id": "2506.10521v1",
+    "authors": [
+      "Yuhao Zhou",
+      "Yiheng Wang",
+      "Xuming He",
+      "Ruoyao Xiao",
+      "Zhiwei Li",
+      "Qiantai Feng",
+      "Zijie Guo",
+      "Yuejin Yang",
+      "Hao Wu",
+      "Wenxuan Huang",
+      "Jiaqi Wei",
+      "Dan Si",
+      "Xiuqi Yao",
+      "Jia Bu",
+      "Haiwen Huang",
+      "Tianfan Fu",
+      "Shixiang Tang",
+      "Ben Fei",
+      "Dongzhan Zhou",
+      "Fenghua Ling",
+      "Yan Lu",
+      "Siqi Sun",
+      "Chenhui Li",
+      "Guanjie Zheng",
+      "Jiancheng Lv",
+      "Wenlong Zhang",
+      "Lei Bai"
+    ],
+    "published": "2025-06-12T09:29:16+00:00",
+    "summary": "Scientific discoveries increasingly rely on complex multimodal reasoning based on information-intensive scientific data and domain-specific expertise. Empowered by expert-level scientific benchmarks, scientific Multimodal Large Language Models (MLLMs) hold the potential to significantly enhance this discovery process in realistic workflows. However, current scientific benchmarks mostly focus on evaluating the knowledge understanding capabilities of MLLMs, leading to an inadequate assessment of their perception and reasoning abilities. To address this gap, we present the Scientists' First Exam (SFE) benchmark, designed to evaluate the scientific cognitive capacities of MLLMs through three interconnected levels: scientific signal perception, scientific attribute understanding, scientific comparative reasoning. Specifically, SFE comprises 830 expert-verified VQA pairs across three question types, spanning 66 multimodal tasks across five high-value disciplines. Extensive experiments reveal that current state-of-the-art GPT-o3 and InternVL-3 achieve only 34.08% and 26.52% on SFE, highlighting significant room for MLLMs to improve in scientific realms. We hope the insights obtained in SFE will facilitate further developments in AI-enhanced scientific discoveries."
+  },
+  {
+    "title": "Scientists' First Exam: Probing Cognitive Abilities of MLLM via Perception, Understanding, and Reasoning",
+    "url": "http://arxiv.org/abs/2506.10521v2",
+    "arxiv_id": "2506.10521v2",
     "authors": [
       "Yuhao Zhou",
       "Yiheng Wang",
