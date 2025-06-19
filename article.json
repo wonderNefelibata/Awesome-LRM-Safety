@@ -1,5 +1,299 @@
 [
   {
+    "title": "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers",
+    "url": "http://arxiv.org/abs/2506.15674v1",
+    "arxiv_id": "2506.15674v1",
+    "authors": [
+      "Tommaso Green",
+      "Martin Gubri",
+      "Haritz Puerto",
+      "Sangdoo Yun",
+      "Seong Joon Oh"
+    ],
+    "published": "2025-06-18T17:57:01+00:00",
+    "summary": "We study privacy leakage in the reasoning traces of large reasoning models used as personal agents. Unlike final outputs, reasoning traces are often assumed to be internal and safe. We challenge this assumption by showing that reasoning traces frequently contain sensitive user data, which can be extracted via prompt injections or accidentally leak into outputs. Through probing and agentic evaluations, we demonstrate that test-time compute approaches, particularly increased reasoning steps, amplify such leakage. While increasing the budget of those test-time compute approaches makes models more cautious in their final answers, it also leads them to reason more verbosely and leak more in their own thinking. This reveals a core tension: reasoning improves utility but enlarges the privacy attack surface. We argue that safety efforts must extend to the model's internal thinking, not just its outputs."
+  },
+  {
+    "title": "deepSURF: Detecting Memory Safety Vulnerabilities in Rust Through Fuzzing LLM-Augmented Harnesses",
+    "url": "http://arxiv.org/abs/2506.15648v1",
+    "arxiv_id": "2506.15648v1",
+    "authors": [
+      "Georgios Androutsopoulos",
+      "Antonio Bianchi"
+    ],
+    "published": "2025-06-18T17:18:23+00:00",
+    "summary": "Although Rust ensures memory safety by default, it also permits the use of unsafe code, which can introduce memory safety vulnerabilities if misused. Unfortunately, existing tools for detecting memory bugs in Rust typically exhibit limited detection capabilities, inadequately handle Rust-specific types, or rely heavily on manual intervention.   To address these limitations, we present deepSURF, a tool that integrates static analysis with Large Language Model (LLM)-guided fuzzing harness generation to effectively identify memory safety vulnerabilities in Rust libraries, specifically targeting unsafe code. deepSURF introduces a novel approach for handling generics by substituting them with custom types and generating tailored implementations for the required traits, enabling the fuzzer to simulate user-defined behaviors within the fuzzed library. Additionally, deepSURF employs LLMs to augment fuzzing harnesses dynamically, facilitating exploration of complex API interactions and significantly increasing the likelihood of exposing memory safety vulnerabilities. We evaluated deepSURF on 27 real-world Rust crates, successfully rediscovering 20 known memory safety bugs and uncovering 6 previously unknown vulnerabilities, demonstrating clear improvements over state-of-the-art tools."
+  },
+  {
+    "title": "LoX: Low-Rank Extrapolation Robustifies LLM Safety Against Fine-tuning",
+    "url": "http://arxiv.org/abs/2506.15606v1",
+    "arxiv_id": "2506.15606v1",
+    "authors": [
+      "Gabrel J. Perin",
+      "Runjin Chen",
+      "Xuxi Chen",
+      "Nina S. T. Hirata",
+      "Zhangyang Wang",
+      "Junyuan Hong"
+    ],
+    "published": "2025-06-18T16:30:02+00:00",
+    "summary": "Large Language Models (LLMs) have become indispensable in real-world applications. However, their widespread adoption raises significant safety concerns, particularly in responding to socially harmful questions. Despite substantial efforts to improve model safety through alignment, aligned models can still have their safety protections undermined by subsequent fine-tuning - even when the additional training data appears benign. In this paper, we empirically demonstrate that this vulnerability stems from the sensitivity of safety-critical low-rank subspaces in LLM parameters to fine-tuning. Building on this insight, we propose a novel training-free method, termed Low-Rank Extrapolation (LoX), to enhance safety robustness by extrapolating the safety subspace of an aligned LLM. Our experimental results confirm the effectiveness of LoX, demonstrating significant improvements in robustness against both benign and malicious fine-tuning attacks while preserving the model's adaptability to new tasks. For instance, LoX leads to 11% to 54% absolute reductions in attack success rates (ASR) facing benign or malicious fine-tuning attacks. By investigating the ASR landscape of parameters, we attribute the success of LoX to that the extrapolation moves LLM parameters to a flatter zone, thereby less sensitive to perturbations. The code is available at github.com/VITA-Group/LoX."
+  },
+  {
+    "title": "RePCS: Diagnosing Data Memorization in LLM-Powered Retrieval-Augmented Generation",
+    "url": "http://arxiv.org/abs/2506.15513v1",
+    "arxiv_id": "2506.15513v1",
+    "authors": [
+      "Le Vu Anh",
+      "Nguyen Viet Anh",
+      "Mehmet Dik",
+      "Luong Van Nghia"
+    ],
+    "published": "2025-06-18T14:48:19+00:00",
+    "summary": "Retrieval-augmented generation (RAG) has become a common strategy for updating large language model (LLM) responses with current, external information. However, models may still rely on memorized training data, bypass the retrieved evidence, and produce contaminated outputs. We introduce Retrieval-Path Contamination Scoring (RePCS), a diagnostic method that detects such behavior without requiring model access or retraining. RePCS compares two inference paths: (i) a parametric path using only the query, and (ii) a retrieval-augmented path using both the query and retrieved context by computing the Kullback-Leibler (KL) divergence between their output distributions. A low divergence suggests that the retrieved context had minimal impact, indicating potential memorization. This procedure is model-agnostic, requires no gradient or internal state access, and adds only a single additional forward pass. We further derive PAC-style guarantees that link the KL threshold to user-defined false positive and false negative rates. On the Prompt-WNQA benchmark, RePCS achieves a ROC-AUC of 0.918. This result outperforms the strongest prior method by 6.5 percentage points while keeping latency overhead below 4.7% on an NVIDIA T4 GPU. RePCS offers a lightweight, black-box safeguard to verify whether a RAG system meaningfully leverages retrieval, making it especially valuable in safety-critical applications."
+  },
+  {
+    "title": "Designing Intent: A Multimodal Framework for Human-Robot Cooperation in Industrial Workspaces",
+    "url": "http://arxiv.org/abs/2506.15293v1",
+    "arxiv_id": "2506.15293v1",
+    "authors": [
+      "Francesco Chiossi",
+      "Julian Rasch",
+      "Robin Welsch",
+      "Albrecht Schmidt",
+      "Florian Michahelles"
+    ],
+    "published": "2025-06-18T09:23:54+00:00",
+    "summary": "As robots enter collaborative workspaces, ensuring mutual understanding between human workers and robotic systems becomes a prerequisite for trust, safety, and efficiency. In this position paper, we draw on the cooperation scenario of the AIMotive project in which a human and a cobot jointly perform assembly tasks to argue for a structured approach to intent communication. Building on the Situation Awareness-based Agent Transparency (SAT) framework and the notion of task abstraction levels, we propose a multidimensional design space that maps intent content (SAT1, SAT3), planning horizon (operational to strategic), and modality (visual, auditory, haptic). We illustrate how this space can guide the design of multimodal communication strategies tailored to dynamic collaborative work contexts. With this paper, we lay the conceptual foundation for a future design toolkit aimed at supporting transparent human-robot interaction in the workplace. We highlight key open questions and design challenges, and propose a shared agenda for multimodal, adaptive, and trustworthy robotic collaboration in hybrid work environments."
+  },
+  {
+    "title": "AI-driven visual monitoring of industrial assembly tasks",
+    "url": "http://arxiv.org/abs/2506.15285v1",
+    "arxiv_id": "2506.15285v1",
+    "authors": [
+      "Mattia Nardon",
+      "Stefano Messelodi",
+      "Antonio Granata",
+      "Fabio Poiesi",
+      "Alberto Danese",
+      "Davide Boscaini"
+    ],
+    "published": "2025-06-18T09:08:42+00:00",
+    "summary": "Visual monitoring of industrial assembly tasks is critical for preventing equipment damage due to procedural errors and ensuring worker safety. Although commercial solutions exist, they typically require rigid workspace setups or the application of visual markers to simplify the problem. We introduce ViMAT, a novel AI-driven system for real-time visual monitoring of assembly tasks that operates without these constraints. ViMAT combines a perception module that extracts visual observations from multi-view video streams with a reasoning module that infers the most likely action being performed based on the observed assembly state and prior task knowledge. We validate ViMAT on two assembly tasks, involving the replacement of LEGO components and the reconfiguration of hydraulic press molds, demonstrating its effectiveness through quantitative and qualitative analysis in challenging real-world scenarios characterized by partial and uncertain visual observations. Project page: https://tev-fbk.github.io/ViMAT"
+  },
+  {
+    "title": "From LLMs to MLLMs to Agents: A Survey of Emerging Paradigms in Jailbreak Attacks and Defenses within LLM Ecosystem",
+    "url": "http://arxiv.org/abs/2506.15170v1",
+    "arxiv_id": "2506.15170v1",
+    "authors": [
+      "Yanxu Mao",
+      "Tiehan Cui",
+      "Peipei Liu",
+      "Datao You",
+      "Hongsong Zhu"
+    ],
+    "published": "2025-06-18T06:33:19+00:00",
+    "summary": "Large language models (LLMs) are rapidly evolving from single-modal systems to multimodal LLMs and intelligent agents, significantly expanding their capabilities while introducing increasingly severe security risks. This paper presents a systematic survey of the growing complexity of jailbreak attacks and corresponding defense mechanisms within the expanding LLM ecosystem. We first trace the developmental trajectory from LLMs to MLLMs and Agents, highlighting the core security challenges emerging at each stage. Next, we categorize mainstream jailbreak techniques from both the attack impact and visibility perspectives, and provide a comprehensive analysis of representative attack methods, related datasets, and evaluation metrics. On the defense side, we organize existing strategies based on response timing and technical approach, offering a structured understanding of their applicability and implementation. Furthermore, we identify key limitations in existing surveys, such as insufficient attention to agent-specific security issues, the absence of a clear taxonomy for hybrid jailbreak methods, a lack of detailed analysis of experimental setups, and outdated coverage of recent advancements. To address these limitations, we provide an updated synthesis of recent work and outline future research directions in areas such as dataset construction, evaluation framework optimization, and strategy generalization. Our study seeks to enhance the understanding of jailbreak mechanisms and facilitate the advancement of more resilient and adaptive defense strategies in the context of ever more capable LLMs."
+  },
+  {
+    "title": "A Force Feedback Exoskeleton for Teleoperation Using Magnetorheological Clutches",
+    "url": "http://arxiv.org/abs/2506.15124v1",
+    "arxiv_id": "2506.15124v1",
+    "authors": [
+      "Zhongyuan Kong",
+      "Lei Li",
+      "Erwin Ang Tien Yew",
+      "Zirui Chen",
+      "Wenbo Li",
+      "Shiwu Zhang",
+      "Jian Yang",
+      "Shuaishuai Sun"
+    ],
+    "published": "2025-06-18T03:46:04+00:00",
+    "summary": "This paper proposes an upper-limb exoskeleton teleoperation system based on magnetorheological (MR) clutches, aiming to improve operational accuracy and enhance the immersive experience during lunar sampling tasks. Conventional exoskeleton teleoperation systems commonly employ active force feedback solutions, such as servo motors, which typically suffer from high system complexity and increased energy consumption. Furthermore, force feedback devices utilizing motors and gear reducers generally compromise backdrivability and pose safety risks to operators due to active force output. To address these limitations, we propose a semi-active force feedback strategy based on MR clutches. Dynamic magnetic field control enables precise adjustment of joint stiffness and damping, thereby providing smooth and high-resolution force feedback. The designed MR clutch exhibits outstanding performance across key metrics, achieving a torque-to-mass ratio (TMR) of 93.6 Nm/kg, a torque-to-volume ratio (TVR) of 4.05 x 10^5 Nm/m^3, and a torque-to-power ratio (TPR) of 4.15 Nm/W. Notably, the TMR represents an improvement of approximately 246% over a representative design in prior work. Experimental results validate the system's capability to deliver high-fidelity force feedback. Overall, the proposed system presents a promising solution for deep-space teleoperation with strong potential for real-world deployment in future missions."
+  },
+  {
+    "title": "International Security Applications of Flexible Hardware-Enabled Guarantees",
+    "url": "http://arxiv.org/abs/2506.15100v1",
+    "arxiv_id": "2506.15100v1",
+    "authors": [
+      "Onni Aarne",
+      "James Petrie"
+    ],
+    "published": "2025-06-18T03:10:49+00:00",
+    "summary": "As AI capabilities advance rapidly, flexible hardware-enabled guarantees (flexHEGs) offer opportunities to address international security challenges through comprehensive governance frameworks. This report examines how flexHEGs could enable internationally trustworthy AI governance by establishing standardized designs, robust ecosystem defenses, and clear operational parameters for AI-relevant chips. We analyze four critical international security applications: limiting proliferation to address malicious use, implementing safety norms to prevent loss of control, managing risks from military AI systems, and supporting strategic stability through balance-of-power mechanisms while respecting national sovereignty. The report explores both targeted deployments for specific high-risk facilities and comprehensive deployments covering all AI-relevant compute. We examine two primary governance models: verification-based agreements that enable transparent compliance monitoring, and ruleset-based agreements that automatically enforce international rules through cryptographically-signed updates. Through game-theoretic analysis, we demonstrate that comprehensive flexHEG agreements could remain stable under reasonable assumptions about state preferences and catastrophic risks. The report addresses critical implementation challenges including technical thresholds for AI-relevant chips, management of existing non-flexHEG hardware, and safeguards against abuse of governance power. While requiring significant international coordination, flexHEGs could provide a technical foundation for managing AI risks at the scale and speed necessary to address emerging threats to international security and stability."
+  },
+  {
+    "title": "Flexible Hardware-Enabled Guarantees for AI Compute",
+    "url": "http://arxiv.org/abs/2506.15093v1",
+    "arxiv_id": "2506.15093v1",
+    "authors": [
+      "James Petrie",
+      "Onni Aarne",
+      "Nora Ammann",
+      "David Dalrymple"
+    ],
+    "published": "2025-06-18T03:04:44+00:00",
+    "summary": "As artificial intelligence systems become increasingly powerful, they pose growing risks to international security, creating urgent coordination challenges that current governance approaches struggle to address without compromising sensitive information or national security. We propose flexible hardware-enabled guarantees (flexHEGs), that could be integrated with AI accelerators to enable trustworthy, privacy-preserving verification and enforcement of claims about AI development. FlexHEGs consist of an auditable guarantee processor that monitors accelerator usage and a secure enclosure providing physical tamper protection. The system would be fully open source with flexible, updateable verification capabilities. FlexHEGs could enable diverse governance mechanisms including privacy-preserving model evaluations, controlled deployment, compute limits for training, and automated safety protocol enforcement. In this first part of a three part series, we provide a comprehensive introduction of the flexHEG system, including an overview of the governance and security capabilities it offers, its potential development and adoption paths, and the remaining challenges and limitations it faces. While technically challenging, flexHEGs offer an approach to address emerging regulatory and international security challenges in frontier AI development."
+  },
+  {
+    "title": "Systems-Theoretic and Data-Driven Security Analysis in ML-enabled Medical Devices",
+    "url": "http://arxiv.org/abs/2506.15028v1",
+    "arxiv_id": "2506.15028v1",
+    "authors": [
+      "Gargi Mitra",
+      "Mohammadreza Hallajiyan",
+      "Inji Kim",
+      "Athish Pranav Dharmalingam",
+      "Mohammed Elnawawy",
+      "Shahrear Iqbal",
+      "Karthik Pattabiraman",
+      "Homa Alemzadeh"
+    ],
+    "published": "2025-06-18T00:05:48+00:00",
+    "summary": "The integration of AI/ML into medical devices is rapidly transforming healthcare by enhancing diagnostic and treatment facilities. However, this advancement also introduces serious cybersecurity risks due to the use of complex and often opaque models, extensive interconnectivity, interoperability with third-party peripheral devices, Internet connectivity, and vulnerabilities in the underlying technologies. These factors contribute to a broad attack surface and make threat prevention, detection, and mitigation challenging. Given the highly safety-critical nature of these devices, a cyberattack on these devices can cause the ML models to mispredict, thereby posing significant safety risks to patients. Therefore, ensuring the security of these devices from the time of design is essential. This paper underscores the urgency of addressing the cybersecurity challenges in ML-enabled medical devices at the pre-market phase. We begin by analyzing publicly available data on device recalls and adverse events, and known vulnerabilities, to understand the threat landscape of AI/ML-enabled medical devices and their repercussions on patient safety. Building on this analysis, we introduce a suite of tools and techniques designed by us to assist security analysts in conducting comprehensive premarket risk assessments. Our work aims to empower manufacturers to embed cybersecurity as a core design principle in AI/ML-enabled medical devices, thereby making them safe for patients."
+  },
+  {
+    "title": "Algorithmic Approaches to Enhance Safety in Autonomous Vehicles: Minimizing Lane Changes and Merging",
+    "url": "http://arxiv.org/abs/2506.15026v1",
+    "arxiv_id": "2506.15026v1",
+    "authors": [
+      "Seyed Moein Abtahi",
+      "Akramul Azim"
+    ],
+    "published": "2025-06-17T23:59:06+00:00",
+    "summary": "The rapid advancements in autonomous vehicle (AV) technology promise enhanced safety and operational efficiency. However, frequent lane changes and merging maneuvers continue to pose significant safety risks and disrupt traffic flow. This paper introduces the Minimizing Lane Change Algorithm (MLCA), a state-machine-based approach designed to reduce unnecessary lane changes, thereby enhancing both traffic safety and efficiency. The MLCA algorithm prioritizes maintaining lane stability unless safety-critical conditions necessitate a lane change. The algorithm's effectiveness was evaluated through simulations conducted on the SUMO platform, comparing its performance against established models, including LC2017 and MOBIL. Results demonstrate substantial reductions in lane changes and collisions, leading to smoother traffic flow and improved safety metrics. Additionally, the study highlights the MLCA's adaptability to various traffic densities and roadway configurations, showcasing its potential for wide-scale deployment in real-world AV systems. Future work aims to validate these findings in more complex scenarios using the CARLA simulator, which will enable the testing of the algorithm under more dynamic and high-fidelity conditions, such as urban traffic environments with diverse road users. Moreover, the integration of cybersecurity measures for vehicle-to-vehicle (V2V) communication will be explored to ensure robust and secure data exchange, further enhancing the reliability and safety of AV operations. This research contributes to the broader goal of developing intelligent traffic systems that optimize both individual vehicle performance and overall traffic network efficiency."
+  },
+  {
+    "title": "Context Matters: Learning Generalizable Rewards via Calibrated Features",
+    "url": "http://arxiv.org/abs/2506.15012v1",
+    "arxiv_id": "2506.15012v1",
+    "authors": [
+      "Alexandra Forsey-Smerek",
+      "Julie Shah",
+      "Andreea Bobu"
+    ],
+    "published": "2025-06-17T22:48:44+00:00",
+    "summary": "A key challenge in reward learning from human input is that desired agent behavior often changes based on context. Traditional methods typically treat each new context as a separate task with its own reward function. For example, if a previously ignored stove becomes too hot to be around, the robot must learn a new reward from scratch, even though the underlying preference for prioritizing safety over efficiency remains unchanged. We observe that context influences not the underlying preference itself, but rather the $\\textit{saliency}$--or importance--of reward features. For instance, stove heat affects the importance of the robot's proximity, yet the human's safety preference stays the same. Existing multi-task and meta IRL methods learn context-dependent representations $\\textit{implicitly}$--without distinguishing between preferences and feature importance--resulting in substantial data requirements. Instead, we propose $\\textit{explicitly}$ modeling context-invariant preferences separately from context-dependent feature saliency, creating modular reward representations that adapt to new contexts. To achieve this, we introduce $\\textit{calibrated features}$--representations that capture contextual effects on feature saliency--and present specialized paired comparison queries that isolate saliency from preference for efficient learning. Experiments with simulated users show our method significantly improves sample efficiency, requiring 10x fewer preference queries than baselines to achieve equivalent reward accuracy, with up to 15% better performance in low-data regimes (5-10 queries). An in-person user study (N=12) demonstrates that participants can effectively teach their unique personal contextual preferences using our method, enabling more adaptable and personalized reward learning."
+  },
+  {
+    "title": "Mixed Traffic: A Perspective from Long Duration Autonomy",
+    "url": "http://arxiv.org/abs/2506.15004v1",
+    "arxiv_id": "2506.15004v1",
+    "authors": [
+      "Filippos Tzortzoglou",
+      "Logan E. Beaver"
+    ],
+    "published": "2025-06-17T22:25:25+00:00",
+    "summary": "The rapid adoption of autonomous vehicle has established mixed traffic environments, comprising both autonomous and human-driven vehicles (HDVs), as essential components of next-generation mobility systems. Along these lines, connectivity between autonomous vehicles and infrastructure (V2I) is also a significant factor that can effectively support higher-level decision-making. At the same time, the integration of V2I within mixed traffic environments remains a timely and challenging problem. In this paper, we present a long-duration autonomy controller for connected and automated vehicles (CAVs) operating in such environments, with a focus on intersections where right turns on red are permitted. We begin by deriving the optimal control policy for CAVs under free-flow traffic. Next, we analyze crossing time constraints imposed by smart traffic lights and map these constraints to controller bounds using Control Barrier Functions (CBFs), with the aim to drive a CAV to cross the intersection on time. We also introduce criteria for identifying, in real-time, feasible crossing intervals for each CAV. To ensure safety for the CAVs, we present model-agnostic safety guarantees, and demonstrate their compatibility with both CAVs and HDVs. Ultimately, the final control actions are enforced through a combination of CBF constraints, constraining CAVs to traverse the intersection within the designated time intervals while respecting other vehicles. Finally, we guarantee that our control policy yields always a feasible solution and validate the proposed approach through extensive simulations in MATLAB."
+  },
+  {
+    "title": "Time-Optimized Safe Navigation in Unstructured Environments through Learning Based Depth Completion",
+    "url": "http://arxiv.org/abs/2506.14975v1",
+    "arxiv_id": "2506.14975v1",
+    "authors": [
+      "Jeffrey Mao",
+      "Raghuram Cauligi Srinivas",
+      "Steven Nogar",
+      "Giuseppe Loianno"
+    ],
+    "published": "2025-06-17T21:01:05+00:00",
+    "summary": "Quadrotors hold significant promise for several applications such as agriculture, search and rescue, and infrastructure inspection. Achieving autonomous operation requires systems to navigate safely through complex and unfamiliar environments. This level of autonomy is particularly challenging due to the complexity of such environments and the need for real-time decision making especially for platforms constrained by size, weight, and power (SWaP), which limits flight time and precludes the use of bulky sensors like Light Detection and Ranging (LiDAR) for mapping. Furthermore, computing globally optimal, collision-free paths and translating them into time-optimized, safe trajectories in real time adds significant computational complexity. To address these challenges, we present a fully onboard, real-time navigation system that relies solely on lightweight onboard sensors. Our system constructs a dense 3D map of the environment using a novel visual depth estimation approach that fuses stereo and monocular learning-based depth, yielding longer-range, denser, and less noisy depth maps than conventional stereo methods. Building on this map, we introduce a novel planning and trajectory generation framework capable of rapidly computing time-optimal global trajectories. As the map is incrementally updated with new depth information, our system continuously refines the trajectory to maintain safety and optimality. Both our planner and trajectory generator outperforms state-of-the-art methods in terms of computational efficiency and guarantee obstacle-free trajectories. We validate our system through robust autonomous flight experiments in diverse indoor and outdoor environments, demonstrating its effectiveness for safe navigation in previously unknown settings."
+  },
+  {
+    "title": "FEAST: A Flexible Mealtime-Assistance System Towards In-the-Wild Personalization",
+    "url": "http://arxiv.org/abs/2506.14968v1",
+    "arxiv_id": "2506.14968v1",
+    "authors": [
+      "Rajat Kumar Jenamani",
+      "Tom Silver",
+      "Ben Dodson",
+      "Shiqin Tong",
+      "Anthony Song",
+      "Yuting Yang",
+      "Ziang Liu",
+      "Benjamin Howe",
+      "Aimee Whitneck",
+      "Tapomayukh Bhattacharjee"
+    ],
+    "published": "2025-06-17T20:30:11+00:00",
+    "summary": "Physical caregiving robots hold promise for improving the quality of life of millions worldwide who require assistance with feeding. However, in-home meal assistance remains challenging due to the diversity of activities (e.g., eating, drinking, mouth wiping), contexts (e.g., socializing, watching TV), food items, and user preferences that arise during deployment. In this work, we propose FEAST, a flexible mealtime-assistance system that can be personalized in-the-wild to meet the unique needs of individual care recipients. Developed in collaboration with two community researchers and informed by a formative study with a diverse group of care recipients, our system is guided by three key tenets for in-the-wild personalization: adaptability, transparency, and safety. FEAST embodies these principles through: (i) modular hardware that enables switching between assisted feeding, drinking, and mouth-wiping, (ii) diverse interaction methods, including a web interface, head gestures, and physical buttons, to accommodate diverse functional abilities and preferences, and (iii) parameterized behavior trees that can be safely and transparently adapted using a large language model. We evaluate our system based on the personalization requirements identified in our formative study, demonstrating that FEAST offers a wide range of transparent and safe adaptations and outperforms a state-of-the-art baseline limited to fixed customizations. To demonstrate real-world applicability, we conduct an in-home user study with two care recipients (who are community researchers), feeding them three meals each across three diverse scenarios. We further assess FEAST's ecological validity by evaluating with an Occupational Therapist previously unfamiliar with the system. In all cases, users successfully personalize FEAST to meet their individual needs and preferences. Website: https://emprise.cs.cornell.edu/feast"
+  },
+  {
+    "title": "FORTRESS: Frontier Risk Evaluation for National Security and Public Safety",
+    "url": "http://arxiv.org/abs/2506.14922v1",
+    "arxiv_id": "2506.14922v1",
+    "authors": [
+      "Christina Q. Knight",
+      "Kaustubh Deshpande",
+      "Ved Sirdeshmukh",
+      "Meher Mankikar",
+      "Scale Red Team",
+      "SEAL Research Team",
+      "Julian Michael"
+    ],
+    "published": "2025-06-17T19:08:02+00:00",
+    "summary": "The rapid advancement of large language models (LLMs) introduces dual-use capabilities that could both threaten and bolster national security and public safety (NSPS). Models implement safeguards to protect against potential misuse relevant to NSPS and allow for benign users to receive helpful information. However, current benchmarks often fail to test safeguard robustness to potential NSPS risks in an objective, robust way. We introduce FORTRESS: 500 expert-crafted adversarial prompts with instance-based rubrics of 4-7 binary questions for automated evaluation across 3 domains (unclassified information only): Chemical, Biological, Radiological, Nuclear and Explosive (CBRNE), Political Violence & Terrorism, and Criminal & Financial Illicit Activities, with 10 total subcategories across these domains. Each prompt-rubric pair has a corresponding benign version to test for model over-refusals. This evaluation of frontier LLMs' safeguard robustness reveals varying trade-offs between potential risks and model usefulness: Claude-3.5-Sonnet demonstrates a low average risk score (ARS) (14.09 out of 100) but the highest over-refusal score (ORS) (21.8 out of 100), while Gemini 2.5 Pro shows low over-refusal (1.4) but a high average potential risk (66.29). Deepseek-R1 has the highest ARS at 78.05, but the lowest ORS at only 0.06. Models such as o1 display a more even trade-off between potential risks and over-refusals (with an ARS of 21.69 and ORS of 5.2). To provide policymakers and researchers with a clear understanding of models' potential risks, we publicly release FORTRESS at https://huggingface.co/datasets/ScaleAI/fortress_public. We also maintain a private set for evaluation."
+  },
+  {
+    "title": "PeRL: Permutation-Enhanced Reinforcement Learning for Interleaved Vision-Language Reasoning",
+    "url": "http://arxiv.org/abs/2506.14907v1",
+    "arxiv_id": "2506.14907v1",
+    "authors": [
+      "Yizhen Zhang",
+      "Yang Ding",
+      "Shuoshuo Zhang",
+      "Xinchen Zhang",
+      "Haoling Li",
+      "Zhong-zhi Li",
+      "Peijie Wang",
+      "Jie Wu",
+      "Lei Ji",
+      "Yelong Shen",
+      "Yujiu Yang",
+      "Yeyun Gong"
+    ],
+    "published": "2025-06-17T18:25:56+00:00",
+    "summary": "Inspired by the impressive reasoning capabilities demonstrated by reinforcement learning approaches like DeepSeek-R1, recent emerging research has begun exploring the use of reinforcement learning (RL) to enhance vision-language models (VLMs) for multimodal reasoning tasks. However, most existing multimodal reinforcement learning approaches remain limited to spatial reasoning within single-image contexts, yet still struggle to generalize to more complex and real-world scenarios involving multi-image positional reasoning, where understanding the relationships across images is crucial. To address this challenge, we propose a general reinforcement learning approach PeRL tailored for interleaved multimodal tasks, and a multi-stage strategy designed to enhance the exploration-exploitation trade-off, thereby improving learning efficiency and task performance. Specifically, we introduce permutation of image sequences to simulate varied positional relationships to explore more spatial and positional diversity. Furthermore, we design a rollout filtering mechanism for resampling to focus on trajectories that contribute most to learning optimal behaviors to exploit learned policies effectively. We evaluate our model on 5 widely-used multi-image benchmarks and 3 single-image benchmarks. Our experiments confirm that PeRL trained model consistently surpasses R1-related and interleaved VLM baselines by a large margin, achieving state-of-the-art performance on multi-image benchmarks, while preserving comparable performance on single-image tasks."
+  },
+  {
+    "title": "DETONATE: A Benchmark for Text-to-Image Alignment and Kernelized Direct Preference Optimization",
+    "url": "http://arxiv.org/abs/2506.14903v1",
+    "arxiv_id": "2506.14903v1",
+    "authors": [
+      "Renjith Prasad",
+      "Abhilekh Borah",
+      "Hasnat Md Abdullah",
+      "Chathurangi Shyalika",
+      "Gurpreet Singh",
+      "Ritvik Garimella",
+      "Rajarshi Roy",
+      "Harshul Surana",
+      "Nasrin Imanpour",
+      "Suranjana Trivedy",
+      "Amit Sheth",
+      "Amitava Das"
+    ],
+    "published": "2025-06-17T18:17:35+00:00",
+    "summary": "Alignment is crucial for text-to-image (T2I) models to ensure that generated images faithfully capture user intent while maintaining safety and fairness. Direct Preference Optimization (DPO), prominent in large language models (LLMs), is extending its influence to T2I systems. This paper introduces DPO-Kernels for T2I models, a novel extension enhancing alignment across three dimensions: (i) Hybrid Loss, integrating embedding-based objectives with traditional probability-based loss for improved optimization; (ii) Kernelized Representations, employing Radial Basis Function (RBF), Polynomial, and Wavelet kernels for richer feature transformations and better separation between safe and unsafe inputs; and (iii) Divergence Selection, expanding beyond DPO's default Kullback-Leibler (KL) regularizer by incorporating Wasserstein and R'enyi divergences for enhanced stability and robustness. We introduce DETONATE, the first large-scale benchmark of its kind, comprising approximately 100K curated image pairs categorized as chosen and rejected. DETONATE encapsulates three axes of social bias and discrimination: Race, Gender, and Disability. Prompts are sourced from hate speech datasets, with images generated by leading T2I models including Stable Diffusion 3.5 Large, Stable Diffusion XL, and Midjourney. Additionally, we propose the Alignment Quality Index (AQI), a novel geometric measure quantifying latent-space separability of safe/unsafe image activations, revealing hidden vulnerabilities. Empirically, we demonstrate that DPO-Kernels maintain strong generalization bounds via Heavy-Tailed Self-Regularization (HT-SR). DETONATE and complete code are publicly released."
+  },
+  {
+    "title": "OS-Harm: A Benchmark for Measuring Safety of Computer Use Agents",
+    "url": "http://arxiv.org/abs/2506.14866v1",
+    "arxiv_id": "2506.14866v1",
+    "authors": [
+      "Thomas Kuntz",
+      "Agatha Duzan",
+      "Hao Zhao",
+      "Francesco Croce",
+      "Zico Kolter",
+      "Nicolas Flammarion",
+      "Maksym Andriushchenko"
+    ],
+    "published": "2025-06-17T17:59:31+00:00",
+    "summary": "Computer use agents are LLM-based agents that can directly interact with a graphical user interface, by processing screenshots or accessibility trees. While these systems are gaining popularity, their safety has been largely overlooked, despite the fact that evaluating and understanding their potential for harmful behavior is essential for widespread adoption. To address this gap, we introduce OS-Harm, a new benchmark for measuring safety of computer use agents. OS-Harm is built on top of the OSWorld environment and aims to test models across three categories of harm: deliberate user misuse, prompt injection attacks, and model misbehavior. To cover these cases, we create 150 tasks that span several types of safety violations (harassment, copyright infringement, disinformation, data exfiltration, etc.) and require the agent to interact with a variety of OS applications (email client, code editor, browser, etc.). Moreover, we propose an automated judge to evaluate both accuracy and safety of agents that achieves high agreement with human annotations (0.76 and 0.79 F1 score). We evaluate computer use agents based on a range of frontier models - such as o4-mini, Claude 3.7 Sonnet, Gemini 2.5 Pro - and provide insights into their safety. In particular, all models tend to directly comply with many deliberate misuse queries, are relatively vulnerable to static prompt injections, and occasionally perform unsafe actions. The OS-Harm benchmark is available at https://github.com/tml-epfl/os-harm."
+  },
+  {
     "title": "Markov Regime-Switching Intelligent Driver Model for Interpretable Car-Following Behavior",
     "url": "http://arxiv.org/abs/2506.14762v1",
     "arxiv_id": "2506.14762v1",
