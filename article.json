@@ -1,5 +1,323 @@
 [
   {
+    "title": "PsyLite Technical Report",
+    "url": "http://arxiv.org/abs/2506.21536v1",
+    "arxiv_id": "2506.21536v1",
+    "authors": [
+      "Fangjun Ding",
+      "Renyu Zhang",
+      "Xinyu Feng",
+      "Chengye Xie",
+      "Zheng Zhang",
+      "Yanting Zhang"
+    ],
+    "published": "2025-06-26T17:54:42+00:00",
+    "summary": "With the rapid development of digital technology, AI-driven psychological counseling has gradually become an important research direction in the field of mental health. However, existing models still have deficiencies in dialogue safety, detailed scenario handling, and lightweight deployment. To address these issues, this study proposes PsyLite, a lightweight psychological counseling large language model agent developed based on the base model InternLM2.5-7B-chat. Through a two-stage training strategy (hybrid distillation data fine-tuning and ORPO preference optimization), PsyLite enhances the model's deep-reasoning ability, psychological counseling ability, and safe dialogue ability. After deployment using Ollama and Open WebUI, a custom workflow is created with Pipelines. An innovative conditional RAG is designed to introduce crosstalk humor elements at appropriate times during psychological counseling to enhance user experience and decline dangerous requests to strengthen dialogue safety. Evaluations show that PsyLite outperforms the baseline models in the Chinese general evaluation (CEval), psychological counseling professional evaluation (CPsyCounE), and dialogue safety evaluation (SafeDialBench), particularly in psychological counseling professionalism (CPsyCounE score improvement of 47.6\\%) and dialogue safety (\\safe{} score improvement of 2.4\\%). Additionally, the model uses quantization technology (GGUF q4\\_k\\_m) to achieve low hardware deployment (5GB memory is sufficient for operation), providing a feasible solution for psychological counseling applications in resource-constrained environments."
+  },
+  {
+    "title": "Towards Reliable Detection of Empty Space: Conditional Marked Point Processes for Object Detection",
+    "url": "http://arxiv.org/abs/2506.21486v1",
+    "arxiv_id": "2506.21486v1",
+    "authors": [
+      "Tobias J. Riedlinger",
+      "Kira Maag",
+      "Hanno Gottschalk"
+    ],
+    "published": "2025-06-26T17:14:37+00:00",
+    "summary": "Deep neural networks have set the state-of-the-art in computer vision tasks such as bounding box detection and semantic segmentation. Object detectors and segmentation models assign confidence scores to predictions, reflecting the model's uncertainty in object detection or pixel-wise classification. However, these confidence estimates are often miscalibrated, as their architectures and loss functions are tailored to task performance rather than probabilistic foundation. Even with well calibrated predictions, object detectors fail to quantify uncertainty outside detected bounding boxes, i.e., the model does not make a probability assessment of whether an area without detected objects is truly free of obstacles. This poses a safety risk in applications such as automated driving, where uncertainty in empty areas remains unexplored. In this work, we propose an object detection model grounded in spatial statistics. Bounding box data matches realizations of a marked point process, commonly used to describe the probabilistic occurrence of spatial point events identified as bounding box centers, where marks are used to describe the spatial extension of bounding boxes and classes. Our statistical framework enables a likelihood-based training and provides well-defined confidence estimates for whether a region is drivable, i.e., free of objects. We demonstrate the effectiveness of our method through calibration assessments and evaluation of performance."
+  },
+  {
+    "title": "A Comprehensive Dataset for Underground Miner Detection in Diverse Scenario",
+    "url": "http://arxiv.org/abs/2506.21451v1",
+    "arxiv_id": "2506.21451v1",
+    "authors": [
+      "Cyrus Addy",
+      "Ajay Kumar Gurumadaiah",
+      "Yixiang Gao",
+      "Kwame Awuah-Offei"
+    ],
+    "published": "2025-06-26T16:33:49+00:00",
+    "summary": "Underground mining operations face significant safety challenges that make emergency response capabilities crucial. While robots have shown promise in assisting with search and rescue operations, their effectiveness depends on reliable miner detection capabilities. Deep learning algorithms offer potential solutions for automated miner detection, but require comprehensive training datasets, which are currently lacking for underground mining environments. This paper presents a novel thermal imaging dataset specifically designed to enable the development and validation of miner detection systems for potential emergency applications. We systematically captured thermal imagery of various mining activities and scenarios to create a robust foundation for detection algorithms. To establish baseline performance metrics, we evaluated several state-of-the-art object detection algorithms including YOLOv8, YOLOv10, YOLO11, and RT-DETR on our dataset. While not exhaustive of all possible emergency situations, this dataset serves as a crucial first step toward developing reliable thermal-based miner detection systems that could eventually be deployed in real emergency scenarios. This work demonstrates the feasibility of using thermal imaging for miner detection and establishes a foundation for future research in this critical safety application."
+  },
+  {
+    "title": "Real-time Terrain Analysis for Off-road Autonomous Vehicles",
+    "url": "http://arxiv.org/abs/2506.21347v1",
+    "arxiv_id": "2506.21347v1",
+    "authors": [
+      "Edwina Lewis",
+      "Aditya Parameshwaran",
+      "Laura Redmond",
+      "Yue Wang"
+    ],
+    "published": "2025-06-26T14:59:50+00:00",
+    "summary": "This research addresses critical autonomous vehicle control challenges arising from road roughness variation, which induces course deviations and potential loss of road contact during steering operations. We present a novel real-time road roughness estimation system employing Bayesian calibration methodology that processes axle accelerations to predict terrain roughness with quantifiable confidence measures. The technical framework integrates a Gaussian process surrogate model with a simulated half-vehicle model, systematically processing vehicle velocity and road surface roughness parameters to generate corresponding axle acceleration responses. The Bayesian calibration routine performs inverse estimation of road roughness from observed accelerations and velocities, yielding posterior distributions that quantify prediction uncertainty for adaptive risk management. Training data generation utilizes Latin Hypercube sampling across comprehensive velocity and roughness parameter spaces, while the calibrated model integrates seamlessly with a Simplex controller architecture to dynamically adjust velocity limits based on real-time roughness predictions. Experimental validation on stochastically generated surfaces featuring varying roughness regions demonstrates robust real-time characterization capabilities, with the integrated Simplex control strategy effectively enhancing autonomous vehicle operational safety through proactive surface condition response. This innovative Bayesian framework establishes a comprehensive foundation for mitigating roughness-related operational risks while simultaneously improving efficiency and safety margins in autonomous vehicle systems."
+  },
+  {
+    "title": "Coordinated Control of Autonomous Vehicles for Traffic Density Reduction at a Signalized Junction: An MPC Approach",
+    "url": "http://arxiv.org/abs/2506.21302v1",
+    "arxiv_id": "2506.21302v1",
+    "authors": [
+      "Rudra Sen",
+      "Subashish Datta"
+    ],
+    "published": "2025-06-26T14:21:41+00:00",
+    "summary": "The effective and safe management of traffic is a key issue due to the rapid advancement of the urban transportation system. Connected autonomous vehicles (CAVs) possess the capability to connect with each other and adjacent infrastructure, presenting novel opportunities for enhancing traffic flow and coordination. This work proposes a dual-mode model predictive control (MPC) architecture that tackles two interrelated issues: mitigating traffic density at signalized junctions and facilitating seamless, cooperative lane changes in high-density traffic conditions. The objective of this work is to facilitate responsive decision-making for CAVs, thereby enhancing the efficiency and safety of urban mobility. Moreover, we ensure recursive feasibility and convergence of the proposed MPC scheme by the integration of an online-calculated maximal control invariant terminal set. Finally, the efficacy of the proposed approach is validated through numerical simulation."
+  },
+  {
+    "title": "Agent-RewardBench: Towards a Unified Benchmark for Reward Modeling across Perception, Planning, and Safety in Real-World Multimodal Agents",
+    "url": "http://arxiv.org/abs/2506.21252v1",
+    "arxiv_id": "2506.21252v1",
+    "authors": [
+      "Tianyi Men",
+      "Zhuoran Jin",
+      "Pengfei Cao",
+      "Yubo Chen",
+      "Kang Liu",
+      "Jun Zhao"
+    ],
+    "published": "2025-06-26T13:36:12+00:00",
+    "summary": "As Multimodal Large Language Models (MLLMs) advance, multimodal agents show promise in real-world tasks like web navigation and embodied intelligence. However, due to limitations in a lack of external feedback, these agents struggle with self-correction and generalization. A promising approach is to use reward models as external feedback, but there is no clear on how to select reward models for agents. Thus, there is an urgent need to build a reward bench targeted at agents. To address these challenges, we propose Agent-RewardBench, a benchmark designed to evaluate reward modeling ability in MLLMs. The benchmark is characterized by three key features: (1) Multiple dimensions and real-world agent scenarios evaluation. It covers perception, planning, and safety with 7 scenarios; (2) Step-level reward evaluation. It allows for the assessment of agent capabilities at the individual steps of a task, providing a more granular view of performance during the planning process; and (3) Appropriately difficulty and high-quality. We carefully sample from 10 diverse models, difficulty control to maintain task challenges, and manual verification to ensure the integrity of the data. Experiments demonstrate that even state-of-the-art multimodal models show limited performance, highlighting the need for specialized training in agent reward modeling. Code is available at github."
+  },
+  {
+    "title": "Dynamic Risk-Aware MPPI for Mobile Robots in Crowds via Efficient Monte Carlo Approximations",
+    "url": "http://arxiv.org/abs/2506.21205v1",
+    "arxiv_id": "2506.21205v1",
+    "authors": [
+      "Elia Trevisan",
+      "Khaled A. Mustafa",
+      "Godert Notten",
+      "Xinwei Wang",
+      "Javier Alonso-Mora"
+    ],
+    "published": "2025-06-26T13:01:32+00:00",
+    "summary": "Deploying mobile robots safely among humans requires the motion planner to account for the uncertainty in the other agents' predicted trajectories. This remains challenging in traditional approaches, especially with arbitrarily shaped predictions and real-time constraints. To address these challenges, we propose a Dynamic Risk-Aware Model Predictive Path Integral control (DRA-MPPI), a motion planner that incorporates uncertain future motions modelled with potentially non-Gaussian stochastic predictions. By leveraging MPPI's gradient-free nature, we propose a method that efficiently approximates the joint Collision Probability (CP) among multiple dynamic obstacles for several hundred sampled trajectories in real-time via a Monte Carlo (MC) approach. This enables the rejection of samples exceeding a predefined CP threshold or the integration of CP as a weighted objective within the navigation cost function. Consequently, DRA-MPPI mitigates the freezing robot problem while enhancing safety. Real-world and simulated experiments with multiple dynamic obstacles demonstrate DRA-MPPI's superior performance compared to state-of-the-art approaches, including Scenario-based Model Predictive Control (S-MPC), Frenet planner, and vanilla MPPI."
+  },
+  {
+    "title": "Out-of-Distribution Semantic Occupancy Prediction",
+    "url": "http://arxiv.org/abs/2506.21185v1",
+    "arxiv_id": "2506.21185v1",
+    "authors": [
+      "Yuheng Zhang",
+      "Mengfei Duan",
+      "Kunyu Peng",
+      "Yuhang Wang",
+      "Ruiping Liu",
+      "Fei Teng",
+      "Kai Luo",
+      "Zhiyong Li",
+      "Kailun Yang"
+    ],
+    "published": "2025-06-26T12:44:29+00:00",
+    "summary": "3D Semantic Occupancy Prediction is crucial for autonomous driving, providing a dense, semantically rich environmental representation. However, existing methods focus on in-distribution scenes, making them susceptible to Out-of-Distribution (OoD) objects and long-tail distributions, which increases the risk of undetected anomalies and misinterpretations, posing safety hazards. To address these challenges, we introduce Out-of-Distribution Semantic Occupancy Prediction, targeting OoD detection in 3D voxel space. To fill the gaps in the dataset, we propose a Synthetic Anomaly Integration Pipeline that injects synthetic anomalies while preserving realistic spatial and occlusion patterns, enabling the creation of two datasets: VAA-KITTI and VAA-KITTI-360. We introduce OccOoD, a novel framework integrating OoD detection into 3D semantic occupancy prediction, with Voxel-BEV Progressive Fusion (VBPF) leveraging an RWKV-based branch to enhance OoD detection via geometry-semantic fusion. Experimental results demonstrate that OccOoD achieves state-of-the-art OoD detection with an AuROC of 67.34% and an AuPRCr of 29.21% within a 1.2m region, while maintaining competitive occupancy prediction performance. The established datasets and source code will be made publicly available at https://github.com/7uHeng/OccOoD."
+  },
+  {
+    "title": "Curriculum-Guided Antifragile Reinforcement Learning for Secure UAV Deconfliction under Observation-Space Attacks",
+    "url": "http://arxiv.org/abs/2506.21129v1",
+    "arxiv_id": "2506.21129v1",
+    "authors": [
+      "Deepak Kumar Panda",
+      "Adolfo Perrusquia",
+      "Weisi Guo"
+    ],
+    "published": "2025-06-26T10:10:41+00:00",
+    "summary": "Reinforcement learning (RL) policies deployed in safety-critical systems, such as unmanned aerial vehicle (UAV) navigation in dynamic airspace, are vulnerable to out-ofdistribution (OOD) adversarial attacks in the observation space. These attacks induce distributional shifts that significantly degrade value estimation, leading to unsafe or suboptimal decision making rendering the existing policy fragile. To address this vulnerability, we propose an antifragile RL framework designed to adapt against curriculum of incremental adversarial perturbations. The framework introduces a simulated attacker which incrementally increases the strength of observation-space perturbations which enables the RL agent to adapt and generalize across a wider range of OOD observations and anticipate previously unseen attacks. We begin with a theoretical characterization of fragility, formally defining catastrophic forgetting as a monotonic divergence in value function distributions with increasing perturbation strength. Building on this, we define antifragility as the boundedness of such value shifts and derive adaptation conditions under which forgetting is stabilized. Our method enforces these bounds through iterative expert-guided critic alignment using Wasserstein distance minimization across incrementally perturbed observations. We empirically evaluate the approach in a UAV deconfliction scenario involving dynamic 3D obstacles. Results show that the antifragile policy consistently outperforms standard and robust RL baselines when subjected to both projected gradient descent (PGD) and GPS spoofing attacks, achieving up to 15% higher cumulative reward and over 30% fewer conflict events. These findings demonstrate the practical and theoretical viability of antifragile reinforcement learning for secure and resilient decision-making in environments with evolving threat scenarios."
+  },
+  {
+    "title": "V2X-REALM: Vision-Language Model-Based Robust End-to-End Cooperative Autonomous Driving with Adaptive Long-Tail Modeling",
+    "url": "http://arxiv.org/abs/2506.21041v1",
+    "arxiv_id": "2506.21041v1",
+    "authors": [
+      "Junwei You",
+      "Pei Li",
+      "Zhuoyu Jiang",
+      "Zilin Huang",
+      "Rui Gan",
+      "Haotian Shi",
+      "Bin Ran"
+    ],
+    "published": "2025-06-26T06:42:03+00:00",
+    "summary": "Ensuring robust planning and decision-making under rare, diverse, and visually degraded long-tail scenarios remains a fundamental challenge for autonomous driving in urban environments. This issue becomes more critical in cooperative settings, where vehicles and infrastructure jointly perceive and reason across complex environments. To address this challenge, we propose V2X-REALM, a vision-language model (VLM)-based framework with adaptive multimodal learning for robust cooperative autonomous driving under long-tail scenarios. V2X-REALM introduces three core innovations: (i) a prompt-driven long-tail scenario generation and evaluation pipeline that leverages foundation models to synthesize realistic long-tail conditions such as snow and fog across vehicle- and infrastructure-side views, enriching training diversity efficiently; (ii) a gated multi-scenario adaptive attention module that modulates the visual stream using scenario priors to recalibrate ambiguous or corrupted features; and (iii) a multi-task scenario-aware contrastive learning objective that improves multimodal alignment and promotes cross-scenario feature separability. Extensive experiments demonstrate that V2X-REALM significantly outperforms existing baselines in robustness, semantic reasoning, safety, and planning accuracy under complex, challenging driving conditions, advancing the scalability of end-to-end cooperative autonomous driving."
+  },
+  {
+    "title": "VisionGuard: Synergistic Framework for Helmet Violation Detection",
+    "url": "http://arxiv.org/abs/2506.21005v1",
+    "arxiv_id": "2506.21005v1",
+    "authors": [
+      "Lam-Huy Nguyen",
+      "Thinh-Phuc Nguyen",
+      "Thanh-Hai Nguyen",
+      "Gia-Huy Dinh",
+      "Minh-Triet Tran",
+      "Trung-Nghia Le"
+    ],
+    "published": "2025-06-26T04:45:18+00:00",
+    "summary": "Enforcing helmet regulations among motorcyclists is essential for enhancing road safety and ensuring the effectiveness of traffic management systems. However, automatic detection of helmet violations faces significant challenges due to environmental variability, camera angles, and inconsistencies in the data. These factors hinder reliable detection of motorcycles and riders and disrupt consistent object classification. To address these challenges, we propose VisionGuard, a synergistic multi-stage framework designed to overcome the limitations of frame-wise detectors, especially in scenarios with class imbalance and inconsistent annotations. VisionGuard integrates two key components: Adaptive Labeling and Contextual Expander modules. The Adaptive Labeling module is a tracking-based refinement technique that enhances classification consistency by leveraging a tracking algorithm to assign persistent labels across frames and correct misclassifications. The Contextual Expander module improves recall for underrepresented classes by generating virtual bounding boxes with appropriate confidence scores, effectively addressing the impact of data imbalance. Experimental results show that VisionGuard improves overall mAP by 3.1% compared to baseline detectors, demonstrating its effectiveness and potential for real-world deployment in traffic surveillance systems, ultimately promoting safety and regulatory compliance."
+  },
+  {
+    "title": "Optimal Parameter Design for Power Electronic Converters Using a Probabilistic Learning-Based Stochastic Surrogate Model",
+    "url": "http://arxiv.org/abs/2506.20987v1",
+    "arxiv_id": "2506.20987v1",
+    "authors": [
+      "Akash Mahajan",
+      "Shivam Chaturvedi",
+      "Srijita Das",
+      "Wencong Su",
+      "Van-Hai Bui"
+    ],
+    "published": "2025-06-26T04:00:58+00:00",
+    "summary": "The selection of optimal design for power electronic converter parameters involves balancing efficiency and thermal constraints to ensure high performance without compromising safety. This paper introduces a probabilistic-learning-based stochastic surrogate modeling framework to address this challenge and significantly reduce the time required during the design phase. The approach begins with a neural network classifier that evaluates the feasibility of parameter configurations, effectively filtering out unsafe and/or impractical inputs. Subsequently, a probabilistic prediction model estimates the converter's efficiency and temperature while quantifying prediction uncertainty, providing both performance insights and reliability metrics. Finally, a heuristic optimization-based model is employed to optimize a multi-objective function that maximizes efficiency while adhering to thermal constraints. The optimization process incorporates penalty terms to discourage solutions that violate practical thresholds, ensuring actionable and realistic recommendations. An advanced heuristic optimization method is used to find the optimal solution and is compared with several well-known search algorithms, including Genetic Algorithm (GA), Particle Swarm Optimization (PSO), Simulated Annealing (SA), Tabu-Search (TS), and Stochastic Hill Climbing (SHC). The results demonstrate significant improvements in predictive accuracy and optimization outcomes, offering a robust solution for advancing power electronics design."
+  },
+  {
+    "title": "Beyond Reactive Safety: Risk-Aware LLM Alignment via Long-Horizon Simulation",
+    "url": "http://arxiv.org/abs/2506.20949v1",
+    "arxiv_id": "2506.20949v1",
+    "authors": [
+      "Chenkai Sun",
+      "Denghui Zhang",
+      "ChengXiang Zhai",
+      "Heng Ji"
+    ],
+    "published": "2025-06-26T02:28:58+00:00",
+    "summary": "Given the growing influence of language model-based agents on high-stakes societal decisions, from public policy to healthcare, ensuring their beneficial impact requires understanding the far-reaching implications of their suggestions. We propose a proof-of-concept framework that projects how model-generated advice could propagate through societal systems on a macroscopic scale over time, enabling more robust alignment. To assess the long-term safety awareness of language models, we also introduce a dataset of 100 indirect harm scenarios, testing models' ability to foresee adverse, non-obvious outcomes from seemingly harmless user prompts. Our approach achieves not only over 20% improvement on the new dataset but also an average win rate exceeding 70% against strong baselines on existing safety benchmarks (AdvBench, SafeRLHF, WildGuardMix), suggesting a promising direction for safer agents."
+  },
+  {
+    "title": "LLM-guided Chemical Process Optimization with a Multi-Agent Approach",
+    "url": "http://arxiv.org/abs/2506.20921v1",
+    "arxiv_id": "2506.20921v1",
+    "authors": [
+      "Tong Zeng",
+      "Srivathsan Badrinarayanan",
+      "Janghoon Ock",
+      "Cheng-Kai Lai",
+      "Amir Barati Farimani"
+    ],
+    "published": "2025-06-26T01:03:44+00:00",
+    "summary": "Chemical process optimization is crucial to maximize production efficiency and economic performance. Traditional methods, including gradient-based solvers, evolutionary algorithms, and parameter grid searches, become impractical when operating constraints are ill-defined or unavailable, requiring engineers to rely on subjective heuristics to estimate feasible parameter ranges. To address this constraint definition bottleneck, we present a multi-agent framework of large language model (LLM) agents that autonomously infer operating constraints from minimal process descriptions, then collaboratively guide optimization using the inferred constraints. Our AutoGen-based agentic framework employs OpenAI's o3 model, with specialized agents for constraint generation, parameter validation, simulation execution, and optimization guidance. Through two phases - autonomous constraint generation using embedded domain knowledge, followed by iterative multi-agent optimization - the framework eliminates the need for predefined operational bounds. Validated on the hydrodealkylation process across cost, yield, and yield-to-cost ratio metrics, the framework demonstrated competitive performance with conventional optimization methods while achieving better computational efficiency, requiring fewer iterations to converge. Our approach converged in under 20 minutes, achieving a 31-fold speedup over grid search. Beyond computational efficiency, the framework's reasoning-guided search demonstrates sophisticated process understanding, correctly identifying utility trade-offs, and applying domain-informed heuristics. This approach shows significant potential for optimization scenarios where operational constraints are poorly characterized or unavailable, particularly for emerging processes and retrofit applications."
+  },
+  {
+    "title": "Generating Reliable Adverse event Profiles for Health through Automated Integrated Data (GRAPH-AID): A Semi-Automated Ontology Building Approach",
+    "url": "http://arxiv.org/abs/2506.20851v1",
+    "arxiv_id": "2506.20851v1",
+    "authors": [
+      "Srikar Reddy Gadusu",
+      "Larry Callahan",
+      "Samir Lababidi",
+      "Arunasri Nishtala",
+      "Sophia Healey",
+      "Hande McGinty"
+    ],
+    "published": "2025-06-25T21:48:21+00:00",
+    "summary": "As data and knowledge expand rapidly, adopting systematic methodologies for ontology generation has become crucial. With the daily increases in data volumes and frequent content changes, the demand for databases to store and retrieve information for the creation of knowledge graphs has become increasingly urgent. The previously established Knowledge Acquisition and Representation Methodology (KNARM) outlines a systematic approach to address these challenges and create knowledge graphs. However, following this methodology highlights the existing challenge of seamlessly integrating Neo4j databases with the Web Ontology Language (OWL). Previous attempts to integrate data from Neo4j into an ontology have been discussed, but these approaches often require an understanding of description logics (DL) syntax, which may not be familiar to many users. Thus, a more accessible method is necessary to bridge this gap. This paper presents a user-friendly approach that utilizes Python and its rdflib library to support ontology development. We showcase our novel approach through a Neo4j database we created by integrating data from the Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) database. Using this dataset, we developed a Python script that automatically generates the required classes and their axioms, facilitating a smoother integration process. This approach offers a practical solution to the challenges of ontology generation in the context of rapidly growing adverse drug event datasets, supporting improved drug safety monitoring and public health decision-making."
+  },
+  {
+    "title": "A Survey of AI for Materials Science: Foundation Models, LLM Agents, Datasets, and Tools",
+    "url": "http://arxiv.org/abs/2506.20743v1",
+    "arxiv_id": "2506.20743v1",
+    "authors": [
+      "Minh-Hao Van",
+      "Prateek Verma",
+      "Chen Zhao",
+      "Xintao Wu"
+    ],
+    "published": "2025-06-25T18:10:30+00:00",
+    "summary": "Foundation models (FMs) are catalyzing a transformative shift in materials science (MatSci) by enabling scalable, general-purpose, and multimodal AI systems for scientific discovery. Unlike traditional machine learning models, which are typically narrow in scope and require task-specific engineering, FMs offer cross-domain generalization and exhibit emergent capabilities. Their versatility is especially well-suited to materials science, where research challenges span diverse data types and scales. This survey provides a comprehensive overview of foundation models, agentic systems, datasets, and computational tools supporting this growing field. We introduce a task-driven taxonomy encompassing six broad application areas: data extraction, interpretation and Q\\&A; atomistic simulation; property prediction; materials structure, design and discovery; process planning, discovery, and optimization; and multiscale modeling. We discuss recent advances in both unimodal and multimodal FMs, as well as emerging large language model (LLM) agents. Furthermore, we review standardized datasets, open-source tools, and autonomous experimental platforms that collectively fuel the development and integration of FMs into research workflows. We assess the early successes of foundation models and identify persistent limitations, including challenges in generalizability, interpretability, data imbalance, safety concerns, and limited multimodal fusion. Finally, we articulate future research directions centered on scalable pretraining, continual learning, data governance, and trustworthiness."
+  },
+  {
+    "title": "The Singapore Consensus on Global AI Safety Research Priorities",
+    "url": "http://arxiv.org/abs/2506.20702v1",
+    "arxiv_id": "2506.20702v1",
+    "authors": [
+      "Yoshua Bengio",
+      "Tegan Maharaj",
+      "Luke Ong",
+      "Stuart Russell",
+      "Dawn Song",
+      "Max Tegmark",
+      "Lan Xue",
+      "Ya-Qin Zhang",
+      "Stephen Casper",
+      "Wan Sie Lee",
+      "S\u00f6ren Mindermann",
+      "Vanessa Wilfred",
+      "Vidhisha Balachandran",
+      "Fazl Barez",
+      "Michael Belinsky",
+      "Imane Bello",
+      "Malo Bourgon",
+      "Mark Brakel",
+      "Sim\u00e9on Campos",
+      "Duncan Cass-Beggs",
+      "Jiahao Chen",
+      "Rumman Chowdhury",
+      "Kuan Chua Seah",
+      "Jeff Clune",
+      "Juntao Dai",
+      "Agnes Delaborde",
+      "Nouha Dziri",
+      "Francisco Eiras",
+      "Joshua Engels",
+      "Jinyu Fan",
+      "Adam Gleave",
+      "Noah Goodman",
+      "Fynn Heide",
+      "Dan Hendrycks",
+      "Cyrus Hodes",
+      "Bryan Low Kian Hsiang",
+      "Minlie Huang",
+      "Sami Jawhar",
+      "Wang Jingyu",
+      "Adam Tauman Kalai",
+      "Meindert Kamphuis",
+      "Mohan Kankanhalli",
+      "Subhash Kantamneni",
+      "Mathias Bonde Kirk",
+      "Thomas Kwa",
+      "Jeffrey Ladish",
+      "Kwok-Yan Lam",
+      "Wan Lee Sie",
+      "Taewhi Lee",
+      "Xiaojian Li",
+      "Jiajun Liu",
+      "Chaochao Lu",
+      "Yifan Mai",
+      "Richard Mallah",
+      "Julian Michael",
+      "Nick Mo\u00ebs",
+      "Simon M\u00f6ller",
+      "Kihyuk Nam",
+      "Kwan Yee Ng",
+      "Mark Nitzberg",
+      "Besmira Nushi",
+      "Se\u00e1n O h\u00c9igeartaigh",
+      "Alejandro Ortega",
+      "Pierre Peign\u00e9",
+      "James Petrie",
+      "Benjamin Prud'Homme",
+      "Reihaneh Rabbany",
+      "Nayat Sanchez-Pi",
+      "Sarah Schwettmann",
+      "Buck Shlegeris",
+      "Saad Siddiqui",
+      "Aradhana Sinha",
+      "Mart\u00edn Soto",
+      "Cheston Tan",
+      "Dong Ting",
+      "Robert Trager",
+      "Brian Tse",
+      "Anthony Tung K. H.",
+      "Vanessa Wilfred",
+      "John Willes",
+      "Denise Wong",
+      "Wei Xu",
+      "Rongwu Xu",
+      "Yi Zeng",
+      "HongJiang Zhang",
+      "Djordje \u017dikeli\u0107"
+    ],
+    "published": "2025-06-25T17:59:50+00:00",
+    "summary": "Rapidly improving AI capabilities and autonomy hold significant promise of transformation, but are also driving vigorous debate on how to ensure that AI is safe, i.e., trustworthy, reliable, and secure. Building a trusted ecosystem is therefore essential -- it helps people embrace AI with confidence and gives maximal space for innovation while avoiding backlash.   The \"2025 Singapore Conference on AI (SCAI): International Scientific Exchange on AI Safety\" aimed to support research in this space by bringing together AI scientists across geographies to identify and synthesise research priorities in AI safety. This resulting report builds on the International AI Safety Report chaired by Yoshua Bengio and backed by 33 governments. By adopting a defence-in-depth model, this report organises AI safety research domains into three types: challenges with creating trustworthy AI systems (Development), challenges with evaluating their risks (Assessment), and challenges with monitoring and intervening after deployment (Control)."
+  },
+  {
     "title": "Deciphering GunType Hierarchy through Acoustic Analysis of Gunshot Recordings",
     "url": "http://arxiv.org/abs/2506.20609v1",
     "arxiv_id": "2506.20609v1",
@@ -112,6 +430,17 @@
     ],
     "published": "2025-06-25T10:49:17+00:00",
     "summary": "The growing use of mobile robots in sectors such as automotive, agriculture, and rescue operations reflects progress in robotics and autonomy. In unmanned aerial vehicles (UAVs), most research emphasizes visual SLAM, sensor fusion, and path planning. However, applying UAVs to search and rescue missions in disaster zones remains underexplored, especially for autonomous navigation.   This report develops methods for real-time and secure UAV maneuvering in complex 3D environments, crucial during forest fires. Building upon past research, it focuses on designing navigation algorithms for unfamiliar and hazardous environments, aiming to improve rescue efficiency and safety through UAV-based early warning and rapid response.   The work unfolds in phases. First, a 2D fusion navigation strategy is explored, initially for mobile robots, enabling safe movement in dynamic settings. This sets the stage for advanced features such as adaptive obstacle handling and decision-making enhancements. Next, a novel 3D reactive navigation strategy is introduced for collision-free movement in forest fire simulations, addressing the unique challenges of UAV operations in such scenarios.   Finally, the report proposes a unified control approach that integrates UAVs and unmanned ground vehicles (UGVs) for coordinated rescue missions in forest environments. Each phase presents challenges, proposes control models, and validates them with mathematical and simulation-based evidence. The study offers practical value and academic insights for improving the role of UAVs in natural disaster rescue operations."
+  },
+  {
+    "title": "Malicious earworms and useful memes, how the far-right surfs on TikTok audio trends",
+    "url": "http://arxiv.org/abs/2506.20695v1",
+    "arxiv_id": "2506.20695v1",
+    "authors": [
+      "Marloes Geboers",
+      "Marcus B\u00f6sch"
+    ],
+    "published": "2025-06-25T09:49:34+00:00",
+    "summary": "With its features of remix, TikTok is the designated platform for meme-making and dissemination. Creative combinations of video, emoji, and filters allow for an endless stream of memes and trends animated by sound. The platform has focused its moderation on upholding physical safety, hence investing in the detection of harmful challenges. In response to the DSA, TikTok implemented opt-outs for personalized feeds and features allowing users to report illegal content. At the same time, the platform remains subject to scrutiny. Centering on the role of sound and its intersections with ambiguous memes, the presented research probed right-wing extremist formations relating to the 2024 German state elections. The analysis evidences how the TikTok sound infrastructure affords a sustained presence of xenophobic content, often cloaked through vernacular modes of communication. These cloaking practices benefit from a sound infrastructure that affords the ongoing posting of user-generated sounds that instantly spread through the use-this-sound button. Importantly, these sounds are often not clearly recognizable as networkers of extremist content. Songs that do contain hateful lyrics are not eligible for personalized feeds, however, they remain online where they profit from intersecting with benign meme trends, rendering them visible in search results."
   },
   {
     "title": "Enterprise Large Language Model Evaluation Benchmark",
@@ -283,6 +612,19 @@
     ],
     "published": "2025-06-24T17:38:21+00:00",
     "summary": "Understanding how language models generalize behaviors from their training to a broader deployment distribution is an important problem in AI safety. Betley et al. discovered that fine-tuning GPT-4o on intentionally insecure code causes \"emergent misalignment,\" where models give stereotypically malicious responses to unrelated prompts. We extend this work, demonstrating emergent misalignment across diverse conditions, including reinforcement learning on reasoning models, fine-tuning on various synthetic datasets, and in models without safety training. To investigate the mechanisms behind this generalized misalignment, we apply a \"model diffing\" approach using sparse autoencoders to compare internal model representations before and after fine-tuning. This approach reveals several \"misaligned persona\" features in activation space, including a toxic persona feature which most strongly controls emergent misalignment and can be used to predict whether a model will exhibit such behavior. Additionally, we investigate mitigation strategies, discovering that fine-tuning an emergently misaligned model on just a few hundred benign samples efficiently restores alignment."
+  },
+  {
+    "title": "Towards the Safety-Relevant Dimension of Driver Behaviour: A Dual-State Model",
+    "url": "http://arxiv.org/abs/2506.20682v1",
+    "arxiv_id": "2506.20682v1",
+    "authors": [
+      "Rulla Al-Haideri",
+      "Karim Ismail",
+      "Bilal Farooq",
+      "Adam Weiss"
+    ],
+    "published": "2025-06-24T16:35:43+00:00",
+    "summary": "We make a methodological contribution by introducing a new dimension of traffic conflict severity: the probability that a driver is in a defensive state. This behavioural probability reflects an internal response to perceived risk and is estimated using a latent class Discrete Choice Model (DCM) that captures driver behaviour as a probabilistic mixture of two latent driving states: a defensive state, representing heightened caution and collision-avoidance intentions under perceived risk, and a neutral state, reflecting routine driving behaviour under low-threat conditions. The framework is grounded in psychological theory, particularly the triad of affect, behaviour, and cognition. It is also informed by two key concepts. First, that event severity exists on a continuum, rather than being confined to binary categories of safe or unsafe. Second, that drivers perceive risk through a dynamic spatial safety field, one that varies with direction, proximity, and the motion of surrounding road users. Applied to the publicly available rounD dataset, the framework yields interpretable estimates of state membership probabilities. The defensive state consistently reflects stronger sensitivity to spatial and temporal risk, while the neutral state captures context-appropriate yet less reactive driving patterns. Importantly, the paper also proposes a method to assess the quality of the estimated probability of being in a defensive state. Because of the duality between the defensive and neutral states, evaluating the consistency of one offers insights into the reliability of the other. To explore this, a multi-step validation procedure is applied across five data subsets representing different driving contexts, including free-flow and diverging scenarios, to examine how well the neutral state generalises beyond the estimation sample."
   },
   {
     "title": "Optimization Studies of Radiation Shielding for the PIP-II Project at Fermilab",
