@@ -1,5 +1,678 @@
 [
   {
+    "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2506.24119v1",
+    "arxiv_id": "2506.24119v1",
+    "authors": [
+      "Bo Liu",
+      "Leon Guertler",
+      "Simon Yu",
+      "Zichen Liu",
+      "Penghui Qi",
+      "Daniel Balcells",
+      "Mickel Liu",
+      "Cheston Tan",
+      "Weiyan Shi",
+      "Min Lin",
+      "Wee Sun Lee",
+      "Natasha Jaques"
+    ],
+    "published": "2025-06-30T17:58:13+00:00",
+    "summary": "Recent advances in reinforcement learning have shown that language models can develop sophisticated reasoning through training on tasks with verifiable rewards, but these approaches depend on human-curated problem-answer pairs and domain-specific reward engineering. We introduce SPIRAL, a self-play framework where models learn by playing multi-turn, zero-sum games against continuously improving versions of themselves, eliminating the need for human supervision. Through self-play, SPIRAL generates an infinite curriculum of progressively challenging problems as models must constantly adapt to stronger opponents. To enable this self-play training at scale, We implement a fully online, multi-turn, multi-agent reinforcement learning system for LLMs and propose role-conditioned advantage estimation (RAE) to stabilize multi-agent training. Using SPIRAL, self-play on zero-sum games produces reasoning capabilities that transfer broadly. Training Qwen3-4B-Base on Kuhn Poker alone achieves 8.6% improvement on math and 8.4% on general reasoning, outperforming SFT on 25,000 expert game trajectories. Analysis reveals that this transfer occurs through three cognitive patterns: systematic decomposition, expected value calculation, and case-by-case analysis. Multi-game training (TicTacToe, Kuhn Poker, Simple Negotiation) further enhances performance as each game develops distinct reasoning strengths. Applying SPIRAL to a strong reasoning model (DeepSeek-R1-Distill-Qwen-7B) can still lead to 2.0% average improvement. These results demonstrate that zero-sum games naturally develop transferable reasoning capabilities, highlighting a promising direction for autonomous reasoning development."
+  },
+  {
+    "title": "Modified non-local damage model: resolving spurious damage evolution",
+    "url": "http://arxiv.org/abs/2506.24099v1",
+    "arxiv_id": "2506.24099v1",
+    "authors": [
+      "Roshan Philip Saji",
+      "Panos Pantidis",
+      "Mostafa E. Mobasher"
+    ],
+    "published": "2025-06-30T17:50:24+00:00",
+    "summary": "Accurate prediction of damage and fracture evolution is critical for the safety design and preventive maintenance of engineering structures, however existing computational methods face significant limitations. On one hand, discrete damage and phase-field models are often computationally prohibitive for real world applications and they are less generalizable across different material classes. On the other hand, conventional gradient damage models which are based on phenomenological laws, though more computationally efficient, they suffer from unrealistic widening of the damage-band as damage progresses. This paper presents a modified non-local gradient damage model (MNLD) that overcomes these shortcomings by introducing modifications to the stress degradation function and forcing term in the Helmholtz free energy expression. These two modifications ensure that as damage approaches its maximum value, both the thermodynamic damage driving force for damage vanishes and the evolution of the forcing term decays. Consequently, the damage band retains a non-growing constant width throughout its evolution. The proposed approach builds on insights gained from two intermediate models, which addressed the necessary conditions separately before integrating them into a unified formulation. Numerical validation is performed on several 1D and 2D benchmark problems, demonstrating that the proposed model can reliably produce fixed-width damage bands. The proposed approach can be implemented within existing gradient damage-based finite element frameworks with minimal implementation changes. The results highlight the potential of this approach to resolve the decades-long challenge of spurious widening in gradient damage models, offering an effective and practical solution for engineering applications."
+  },
+  {
+    "title": "Logit-Gap Steering: Efficient Short-Suffix Jailbreaks for Aligned Large Language Models",
+    "url": "http://arxiv.org/abs/2506.24056v1",
+    "arxiv_id": "2506.24056v1",
+    "authors": [
+      "Tung-Ling Li",
+      "Hongliang Liu"
+    ],
+    "published": "2025-06-30T17:01:18+00:00",
+    "summary": "We introduce logit-gap steering, a fast jailbreak framework that casts the refusal-affirmation gap of RLHF-aligned language models as a single pass over the vocabulary. A forward-computable score blends gap reduction with lightweight proxies for KL penalty and reward shift, allowing a \"sort-sum-stop\" sweep to complete in under a second and return a short suffix--two orders of magnitude fewer model calls than beam or gradient attacks. The same suffix generalises to unseen prompts and scales from 0.5 B to 70 B checkpoints, lifting one-shot attack success from baseline levels to 80-100% while preserving topical coherence. Beyond efficiency, these suffixes expose sentence-boundary reward cliffs and other alignment artefacts, offering a lightweight probe into how safety tuning reshapes internal representations."
+  },
+  {
+    "title": "A Survey on Vision-Language-Action Models for Autonomous Driving",
+    "url": "http://arxiv.org/abs/2506.24044v1",
+    "arxiv_id": "2506.24044v1",
+    "authors": [
+      "Sicong Jiang",
+      "Zilin Huang",
+      "Kangan Qian",
+      "Ziang Luo",
+      "Tianze Zhu",
+      "Yang Zhong",
+      "Yihong Tang",
+      "Menglin Kong",
+      "Yunlong Wang",
+      "Siwen Jiao",
+      "Hao Ye",
+      "Zihao Sheng",
+      "Xin Zhao",
+      "Tuopu Wen",
+      "Zheng Fu",
+      "Sikai Chen",
+      "Kun Jiang",
+      "Diange Yang",
+      "Seongjin Choi",
+      "Lijun Sun"
+    ],
+    "published": "2025-06-30T16:50:02+00:00",
+    "summary": "The rapid progress of multimodal large language models (MLLM) has paved the way for Vision-Language-Action (VLA) paradigms, which integrate visual perception, natural language understanding, and control within a single policy. Researchers in autonomous driving are actively adapting these methods to the vehicle domain. Such models promise autonomous vehicles that can interpret high-level instructions, reason about complex traffic scenes, and make their own decisions. However, the literature remains fragmented and is rapidly expanding. This survey offers the first comprehensive overview of VLA for Autonomous Driving (VLA4AD). We (i) formalize the architectural building blocks shared across recent work, (ii) trace the evolution from early explainer to reasoning-centric VLA models, and (iii) compare over 20 representative models according to VLA's progress in the autonomous driving domain. We also consolidate existing datasets and benchmarks, highlighting protocols that jointly measure driving safety, accuracy, and explanation quality. Finally, we detail open challenges - robustness, real-time efficiency, and formal verification - and outline future directions of VLA4AD. This survey provides a concise yet complete reference for advancing interpretable socially aligned autonomous vehicles. Github repo is available at \\href{https://github.com/JohnsonJiang1996/Awesome-VLA4AD}{SicongJiang/Awesome-VLA4AD}."
+  },
+  {
+    "title": "Large Language Models Don't Make Sense of Word Problems. A Scoping Review from a Mathematics Education Perspective",
+    "url": "http://arxiv.org/abs/2506.24006v1",
+    "arxiv_id": "2506.24006v1",
+    "authors": [
+      "Anselm R. Strohmaier",
+      "Wim Van Dooren",
+      "Kathrin Se\u00dfler",
+      "Brian Greer",
+      "Lieven Verschaffel"
+    ],
+    "published": "2025-06-30T16:10:42+00:00",
+    "summary": "The progress of Large Language Models (LLMs) like ChatGPT raises the question of how they can be integrated into education. One hope is that they can support mathematics learning, including word-problem solving. Since LLMs can handle textual input with ease, they appear well-suited for solving mathematical word problems. Yet their real competence, whether they can make sense of the real-world context, and the implications for classrooms remain unclear. We conducted a scoping review from a mathematics-education perspective, including three parts: a technical overview, a systematic review of word problems used in research, and a state-of-the-art empirical evaluation of LLMs on mathematical word problems. First, in the technical overview, we contrast the conceptualization of word problems and their solution processes between LLMs and students. In computer-science research this is typically labeled mathematical reasoning, a term that does not align with usage in mathematics education. Second, our literature review of 213 studies shows that the most popular word-problem corpora are dominated by s-problems, which do not require a consideration of realities of their real-world context. Finally, our evaluation of GPT-3.5-turbo, GPT-4o-mini, GPT-4.1, and o3 on 287 word problems shows that most recent LLMs solve these s-problems with near-perfect accuracy, including a perfect score on 20 problems from PISA. LLMs still showed weaknesses in tackling problems where the real-world context is problematic or non-sensical. In sum, we argue based on all three aspects that LLMs have mastered a superficial solution process but do not make sense of word problems, which potentially limits their value as instructional tools in mathematics classrooms."
+  },
+  {
+    "title": "STCLocker: Deadlock Avoidance Testing for Autonomous Driving Systems",
+    "url": "http://arxiv.org/abs/2506.23995v1",
+    "arxiv_id": "2506.23995v1",
+    "authors": [
+      "Mingfei Cheng",
+      "Renzhi Wang",
+      "Xiaofei Xie",
+      "Yuan Zhou",
+      "Lei Ma"
+    ],
+    "published": "2025-06-30T15:58:10+00:00",
+    "summary": "Autonomous Driving System (ADS) testing is essential to ensure the safety and reliability of autonomous vehicles (AVs) before deployment. However, existing techniques primarily focus on evaluating ADS functionalities in single-AV settings. As ADSs are increasingly deployed in multi-AV traffic, it becomes crucial to assess their cooperative performance, particularly regarding deadlocks, a fundamental coordination failure in which multiple AVs enter a circular waiting state indefinitely, resulting in motion planning failures. Despite its importance, the cooperative capability of ADSs to prevent deadlocks remains insufficiently underexplored. To address this gap, we propose the first dedicated Spatio-Temporal Conflict-Guided Deadlock Avoidance Testing technique, STCLocker, for generating DeadLock Scenarios (DLSs), where a group of AVs controlled by the ADS under test are in a circular wait state. STCLocker consists of three key components: Deadlock Oracle, Conflict Feedback, and Conflict-aware Scenario Generation. Deadlock Oracle provides a reliable black-box mechanism for detecting deadlock cycles among multiple AVs within a given scenario. Conflict Feedback and Conflict-aware Scenario Generation collaborate to actively guide AVs into simultaneous competition over spatial conflict resources (i.e., shared passing regions) and temporal competitive behaviors (i.e., reaching the conflict region at the same time), thereby increasing the effectiveness of generating conflict-prone deadlocks. We evaluate STCLocker on two types of ADSs: Roach, an end-to-end ADS, and OpenCDA, a module-based ADS supporting cooperative communication. Experimental results show that, on average, STCLocker generates more DLS than the best-performing baseline."
+  },
+  {
+    "title": "Harnessing AI Agents to Advance Research on Refugee Child Mental Health",
+    "url": "http://arxiv.org/abs/2506.23992v1",
+    "arxiv_id": "2506.23992v1",
+    "authors": [
+      "Aditya Shrivastava",
+      "Komal Gupta",
+      "Shraddha Arora"
+    ],
+    "published": "2025-06-30T15:55:41+00:00",
+    "summary": "The international refugee crisis deepens, exposing millions of dis placed children to extreme psychological trauma. This research suggests a com pact, AI-based framework for processing unstructured refugee health data and distilling knowledge on child mental health. We compare two Retrieval-Aug mented Generation (RAG) pipelines, Zephyr-7B-beta and DeepSeek R1-7B, to determine how well they process challenging humanitarian datasets while avoid ing hallucination hazards. By combining cutting-edge AI methods with migration research and child psychology, this study presents a scalable strategy to assist policymakers, mental health practitioners, and humanitarian agencies to better assist displaced children and recognize their mental wellbeing. In total, both the models worked properly but significantly Deepseek R1 is superior to Zephyr with an accuracy of answer relevance 0.91"
+  },
+  {
+    "title": "A Scalable Approach for Safe and Robust Learning via Lipschitz-Constrained Networks",
+    "url": "http://arxiv.org/abs/2506.23977v1",
+    "arxiv_id": "2506.23977v1",
+    "authors": [
+      "Zain ul Abdeen",
+      "Vassilis Kekatos",
+      "Ming Jin"
+    ],
+    "published": "2025-06-30T15:42:23+00:00",
+    "summary": "Certified robustness is a critical property for deploying neural networks (NN) in safety-critical applications. A principle approach to achieving such guarantees is to constrain the global Lipschitz constant of the network. However, accurate methods for Lipschitz-constrained training often suffer from non-convex formulations and poor scalability due to reliance on global semidefinite programs (SDPs). In this letter, we propose a convex training framework that enforces global Lipschitz constraints via semidefinite relaxation. By reparameterizing the NN using loop transformation, we derive a convex admissibility condition that enables tractable and certifiable training. While the resulting formulation guarantees robustness, its scalability is limited by the size of global SDP. To overcome this, we develop a randomized subspace linear matrix inequalities (RS-LMI) approach that decomposes the global constraints into sketched layerwise constraints projected onto low-dimensional subspaces, yielding a smooth and memory-efficient training objective. Empirical results on MNIST, CIFAR-10, and ImageNet demonstrate that the proposed framework achieves competitive accuracy with significantly improved Lipschitz bounds and runtime performance."
+  },
+  {
+    "title": "ADReFT: Adaptive Decision Repair for Safe Autonomous Driving via Reinforcement Fine-Tuning",
+    "url": "http://arxiv.org/abs/2506.23960v1",
+    "arxiv_id": "2506.23960v1",
+    "authors": [
+      "Mingfei Cheng",
+      "Xiaofei Xie",
+      "Renzhi Wang",
+      "Yuan Zhou",
+      "Ming Hu"
+    ],
+    "published": "2025-06-30T15:29:36+00:00",
+    "summary": "Autonomous Driving Systems (ADSs) continue to face safety-critical risks due to the inherent limitations in their design and performance capabilities. Online repair plays a crucial role in mitigating such limitations, ensuring the runtime safety and reliability of ADSs. Existing online repair solutions enforce ADS compliance by transforming unacceptable trajectories into acceptable ones based on predefined specifications, such as rule-based constraints or training datasets. However, these approaches often lack generalizability, adaptability and tend to be overly conservative, resulting in ineffective repairs that not only fail to mitigate safety risks sufficiently but also degrade the overall driving experience. To address this issue, we propose Adaptive Decision Repair (ADReFT), a novel and effective repair method that identifies safety-critical states through offline learning from failed tests and generates appropriate mitigation actions to improve ADS safety. Specifically, ADReFT incorporates a transformer-based model with two joint heads, State Monitor and Decision Adapter, designed to capture complex driving environment interactions to evaluate state safety severity and generate adaptive repair actions. Given the absence of oracles for state safety identification, we first pretrain ADReFT using supervised learning with coarse annotations, i.e., labeling states preceding violations as positive samples and others as negative samples. It establishes ADReFT's foundational capability to mitigate safety-critical violations, though it may result in somewhat conservative mitigation strategies. Therefore, we subsequently finetune ADReFT using reinforcement learning to improve its initial capability and generate more precise and contextually appropriate repair decisions. Our evaluation results illustrate that ADReFT achieves better repair performance."
+  },
+  {
+    "title": "Bridging the Gap with Retrieval-Augmented Generation: Making Prosthetic Device User Manuals Available in Marginalised Languages",
+    "url": "http://arxiv.org/abs/2506.23958v1",
+    "arxiv_id": "2506.23958v1",
+    "authors": [
+      "Ikechukwu Ogbonna",
+      "Lesley Davidson",
+      "Soumya Banerjee",
+      "Abhishek Dasgupta",
+      "Laurence Kenney",
+      "Vikranth Harthikote Nagaraja"
+    ],
+    "published": "2025-06-30T15:25:58+00:00",
+    "summary": "Millions of people in African countries face barriers to accessing healthcare due to language and literacy gaps. This research tackles this challenge by transforming complex medical documents -- in this case, prosthetic device user manuals -- into accessible formats for underserved populations. This case study in cross-cultural translation is particularly pertinent/relevant for communities that receive donated prosthetic devices but may not receive the accompanying user documentation. Or, if available online, may only be available in formats (e.g., language and readability) that are inaccessible to local populations (e.g., English-language, high resource settings/cultural context). The approach is demonstrated using the widely spoken Pidgin dialect, but our open-source framework has been designed to enable rapid and easy extension to other languages/dialects. This work presents an AI-powered framework designed to process and translate complex medical documents, e.g., user manuals for prosthetic devices, into marginalised languages. The system enables users -- such as healthcare workers or patients -- to upload English-language medical equipment manuals, pose questions in their native language, and receive accurate, localised answers in real time. Technically, the system integrates a Retrieval-Augmented Generation (RAG) pipeline for processing and semantic understanding of the uploaded manuals. It then employs advanced Natural Language Processing (NLP) models for generative question-answering and multilingual translation. Beyond simple translation, it ensures accessibility to device instructions, treatment protocols, and safety information, empowering patients and clinicians to make informed healthcare decisions."
+  },
+  {
+    "title": "Leveraging the Potential of Prompt Engineering for Hate Speech Detection in Low-Resource Languages",
+    "url": "http://arxiv.org/abs/2506.23930v1",
+    "arxiv_id": "2506.23930v1",
+    "authors": [
+      "Ruhina Tabasshum Prome",
+      "Tarikul Islam Tamiti",
+      "Anomadarshi Barua"
+    ],
+    "published": "2025-06-30T14:59:25+00:00",
+    "summary": "The rapid expansion of social media leads to a marked increase in hate speech, which threatens personal lives and results in numerous hate crimes. Detecting hate speech presents several challenges: diverse dialects, frequent code-mixing, and the prevalence of misspelled words in user-generated content on social media platforms. Recent progress in hate speech detection is typically concentrated on high-resource languages. However, low-resource languages still face significant challenges due to the lack of large-scale, high-quality datasets. This paper investigates how we can overcome this limitation via prompt engineering on large language models (LLMs) focusing on low-resource Bengali language. We investigate six prompting strategies - zero-shot prompting, refusal suppression, flattering the classifier, multi-shot prompting, role prompting, and finally our innovative metaphor prompting to detect hate speech effectively in low-resource languages. We pioneer the metaphor prompting to circumvent the built-in safety mechanisms of LLMs that marks a significant departure from existing jailbreaking methods. We investigate all six different prompting strategies on the Llama2-7B model and compare the results extensively with three pre-trained word embeddings - GloVe, Word2Vec, and FastText for three different deep learning models - multilayer perceptron (MLP), convolutional neural network (CNN), and bidirectional gated recurrent unit (BiGRU). To prove the effectiveness of our metaphor prompting in the low-resource Bengali language, we also evaluate it in another low-resource language - Hindi, and two high-resource languages - English and German. The performance of all prompting techniques is evaluated using the F1 score, and environmental impact factor (IF), which measures CO$_2$ emissions, electricity usage, and computational time."
+  },
+  {
+    "title": "Spurious-Aware Prototype Refinement for Reliable Out-of-Distribution Detection",
+    "url": "http://arxiv.org/abs/2506.23881v1",
+    "arxiv_id": "2506.23881v1",
+    "authors": [
+      "Reihaneh Zohrabi",
+      "Hosein Hasani",
+      "Mahdieh Soleymani Baghshah",
+      "Anna Rohrbach",
+      "Marcus Rohrbach",
+      "Mohammad Hossein Rohban"
+    ],
+    "published": "2025-06-30T14:10:51+00:00",
+    "summary": "Out-of-distribution (OOD) detection is crucial for ensuring the reliability and safety of machine learning models in real-world applications, where they frequently face data distributions unseen during training. Despite progress, existing methods are often vulnerable to spurious correlations that mislead models and compromise robustness. To address this, we propose SPROD, a novel prototype-based OOD detection approach that explicitly addresses the challenge posed by unknown spurious correlations. Our post-hoc method refines class prototypes to mitigate bias from spurious features without additional data or hyperparameter tuning, and is broadly applicable across diverse backbones and OOD detection settings. We conduct a comprehensive spurious correlation OOD detection benchmarking, comparing our method against existing approaches and demonstrating its superior performance across challenging OOD datasets, such as CelebA, Waterbirds, UrbanCars, Spurious Imagenet, and the newly introduced Animals MetaCoCo. On average, SPROD improves AUROC by 4.7% and FPR@95 by 9.3% over the second best."
+  },
+  {
+    "title": "Use Sparse Autoencoders to Discover Unknown Concepts, Not to Act on Known Concepts",
+    "url": "http://arxiv.org/abs/2506.23845v1",
+    "arxiv_id": "2506.23845v1",
+    "authors": [
+      "Kenny Peng",
+      "Rajiv Movva",
+      "Jon Kleinberg",
+      "Emma Pierson",
+      "Nikhil Garg"
+    ],
+    "published": "2025-06-30T13:35:56+00:00",
+    "summary": "While sparse autoencoders (SAEs) have generated significant excitement, a series of negative results have added to skepticism about their usefulness. Here, we establish a conceptual distinction that reconciles competing narratives surrounding SAEs. We argue that while SAEs may be less effective for acting on known concepts, SAEs are powerful tools for discovering unknown concepts. This distinction cleanly separates existing negative and positive results, and suggests several classes of SAE applications. Specifically, we outline use cases for SAEs in (i) ML interpretability, explainability, fairness, auditing, and safety, and (ii) social and health sciences."
+  },
+  {
+    "title": "A Survey on Autonomy-Induced Security Risks in Large Model-Based Agents",
+    "url": "http://arxiv.org/abs/2506.23844v1",
+    "arxiv_id": "2506.23844v1",
+    "authors": [
+      "Hang Su",
+      "Jun Luo",
+      "Chang Liu",
+      "Xiao Yang",
+      "Yichi Zhang",
+      "Yinpeng Dong",
+      "Jun Zhu"
+    ],
+    "published": "2025-06-30T13:34:34+00:00",
+    "summary": "Recent advances in large language models (LLMs) have catalyzed the rise of autonomous AI agents capable of perceiving, reasoning, and acting in dynamic, open-ended environments. These large-model agents mark a paradigm shift from static inference systems to interactive, memory-augmented entities. While these capabilities significantly expand the functional scope of AI, they also introduce qualitatively novel security risks - such as memory poisoning, tool misuse, reward hacking, and emergent misalignment - that extend beyond the threat models of conventional systems or standalone LLMs. In this survey, we first examine the structural foundations and key capabilities that underpin increasing levels of agent autonomy, including long-term memory retention, modular tool use, recursive planning, and reflective reasoning. We then analyze the corresponding security vulnerabilities across the agent stack, identifying failure modes such as deferred decision hazards, irreversible tool chains, and deceptive behaviors arising from internal state drift or value misalignment. These risks are traced to architectural fragilities that emerge across perception, cognition, memory, and action modules. To address these challenges, we systematically review recent defense strategies deployed at different autonomy layers, including input sanitization, memory lifecycle control, constrained decision-making, structured tool invocation, and introspective reflection. We introduce the Reflective Risk-Aware Agent Architecture (R2A2), a unified cognitive framework grounded in Constrained Markov Decision Processes (CMDPs), which incorporates risk-aware world modeling, meta-policy adaptation, and joint reward-risk optimization to enable principled, proactive safety across the agent's decision-making loop."
+  },
+  {
+    "title": "Querying Attack-Fault-Defense Trees: Property Specification in Smart Grid and Aerospace Case Studies",
+    "url": "http://arxiv.org/abs/2506.23789v1",
+    "arxiv_id": "2506.23789v1",
+    "authors": [
+      "Reza Soltani",
+      "Stefano M. Nicoletti",
+      "Milan Lopuha\u00e4-Zwakenberg",
+      "Mari\u00eblle Stoelinga"
+    ],
+    "published": "2025-06-30T12:29:43+00:00",
+    "summary": "This paper introduces AFDL, a logic-based framework for reasoning about safety, security, and defense interactions in Attack-Fault-Defense Trees, which is a model that captures all safety, security, and defense domains in a single framework. We showcase both AFDL and propose a structured domain specific query language, LangAFDL, which enables domain experts to express complex analysis goals through intuitive templates. LangAFDL supports both Boolean and quantified queries as well as minimal cut set analysis, capturing the interplay between safety, security, and defensive measures. We illustrate the expressiveness and utility of the approach through representative queries over two different real-world case studies: Gridshield and Ground Segment as a Service. The formalization lays the automated safety-security groundwork for analyses in mission-critical systems and paves the way for future tool development and integration into design workflows."
+  },
+  {
+    "title": "Calibrating Graph Neural Networks with Wavelet-Aware Temperature Scaling",
+    "url": "http://arxiv.org/abs/2506.23782v1",
+    "arxiv_id": "2506.23782v1",
+    "authors": [
+      "Xiaoyang Li",
+      "Linwei Tao",
+      "Haohui Lu",
+      "Minjing Dong",
+      "Junbin Gao",
+      "Chang Xu"
+    ],
+    "published": "2025-06-30T12:23:57+00:00",
+    "summary": "Graph Neural Networks (GNNs) have demonstrated strong predictive performance on relational data; however, their confidence estimates often misalign with actual predictive correctness, posing significant limitations for deployment in safety-critical settings. While existing graph-aware calibration methods seek to mitigate this limitation, they primarily depend on coarse one-hop statistics, such as neighbor-predicted confidence, or latent node embeddings, thereby neglecting the fine-grained structural heterogeneity inherent in graph topology. In this work, we propose Wavelet-Aware Temperature Scaling (WATS), a post-hoc calibration framework that assigns node-specific temperatures based on tunable heat-kernel graph wavelet features. Specifically, WATS harnesses the scalability and topology sensitivity of graph wavelets to refine confidence estimates, all without necessitating model retraining or access to neighboring logits or predictions. Extensive evaluations across seven benchmark datasets with varying graph structures and two GNN backbones demonstrate that WATS achieves the lowest Expected Calibration Error (ECE) among all compared methods, outperforming both classical and graph-specific baselines by up to 42.3\\% in ECE and reducing calibration variance by 17.24\\% on average compared with graph-specific methods. Moreover, WATS remains computationally efficient, scaling well across graphs of diverse sizes and densities. Code will be released based on publication."
+  },
+  {
+    "title": "Multi-Timescale Hierarchical Reinforcement Learning for Unified Behavior and Control of Autonomous Driving",
+    "url": "http://arxiv.org/abs/2506.23771v1",
+    "arxiv_id": "2506.23771v1",
+    "authors": [
+      "Guizhe Jin",
+      "Zhuoren Li",
+      "Bo Leng",
+      "Ran Yu",
+      "Lu Xiong"
+    ],
+    "published": "2025-06-30T12:17:42+00:00",
+    "summary": "Reinforcement Learning (RL) is increasingly used in autonomous driving (AD) and shows clear advantages. However, most RL-based AD methods overlook policy structure design. An RL policy that only outputs short-timescale vehicle control commands results in fluctuating driving behavior due to fluctuations in network outputs, while one that only outputs long-timescale driving goals cannot achieve unified optimality of driving behavior and control. Therefore, we propose a multi-timescale hierarchical reinforcement learning approach. Our approach adopts a hierarchical policy structure, where high- and low-level RL policies are unified-trained to produce long-timescale motion guidance and short-timescale control commands, respectively. Therein, motion guidance is explicitly represented by hybrid actions to capture multimodal driving behaviors on structured road and support incremental low-level extend-state updates. Additionally, a hierarchical safety mechanism is designed to ensure multi-timescale safety. Evaluation in simulator-based and HighD dataset-based highway multi-lane scenarios demonstrates that our approach significantly improves AD performance, effectively increasing driving efficiency, action consistency and safety."
+  },
+  {
+    "title": "Can We Challenge Open-Vocabulary Object Detectors with Generated Content in Street Scenes?",
+    "url": "http://arxiv.org/abs/2506.23751v1",
+    "arxiv_id": "2506.23751v1",
+    "authors": [
+      "Annika M\u00fctze",
+      "Sadia Ilyas",
+      "Christian D\u00f6rpelkus",
+      "Matthias Rottmann"
+    ],
+    "published": "2025-06-30T11:48:44+00:00",
+    "summary": "Open-vocabulary object detectors such as Grounding DINO are trained on vast and diverse data, achieving remarkable performance on challenging datasets. Due to that, it is unclear where to find their limitations, which is of major concern when using in safety-critical applications. Real-world data does not provide sufficient control, required for a rigorous evaluation of model generalization. In contrast, synthetically generated data allows to systematically explore the boundaries of model competence/generalization. In this work, we address two research questions: 1) Can we challenge open-vocabulary object detectors with generated image content? 2) Can we find systematic failure modes of those models? To address these questions, we design two automated pipelines using stable diffusion to inpaint unusual objects with high diversity in semantics, by sampling multiple substantives from WordNet and ChatGPT. On the synthetically generated data, we evaluate and compare multiple open-vocabulary object detectors as well as a classical object detector. The synthetic data is derived from two real-world datasets, namely LostAndFound, a challenging out-of-distribution (OOD) detection benchmark, and the NuImages dataset. Our results indicate that inpainting can challenge open-vocabulary object detectors in terms of overlooking objects. Additionally, we find a strong dependence of open-vocabulary models on object location, rather than on object semantics. This provides a systematic approach to challenge open-vocabulary models and gives valuable insights on how data could be acquired to effectively improve these models."
+  },
+  {
+    "title": "Attestable Audits: Verifiable AI Safety Benchmarks Using Trusted Execution Environments",
+    "url": "http://arxiv.org/abs/2506.23706v1",
+    "arxiv_id": "2506.23706v1",
+    "authors": [
+      "Christoph Schnabl",
+      "Daniel Hugenroth",
+      "Bill Marino",
+      "Alastair R. Beresford"
+    ],
+    "published": "2025-06-30T10:29:42+00:00",
+    "summary": "Benchmarks are important measures to evaluate safety and compliance of AI models at scale. However, they typically do not offer verifiable results and lack confidentiality for model IP and benchmark datasets. We propose Attestable Audits, which run inside Trusted Execution Environments and enable users to verify interaction with a compliant AI model. Our work protects sensitive data even when model provider and auditor do not trust each other. This addresses verification challenges raised in recent AI governance frameworks. We build a prototype demonstrating feasibility on typical audit benchmarks against Llama-3.1."
+  },
+  {
+    "title": "A New Perspective On AI Safety Through Control Theory Methodologies",
+    "url": "http://arxiv.org/abs/2506.23703v1",
+    "arxiv_id": "2506.23703v1",
+    "authors": [
+      "Lars Ullrich",
+      "Walter Zimmer",
+      "Ross Greer",
+      "Knut Graichen",
+      "Alois C. Knoll",
+      "Mohan Trivedi"
+    ],
+    "published": "2025-06-30T10:26:59+00:00",
+    "summary": "While artificial intelligence (AI) is advancing rapidly and mastering increasingly complex problems with astonishing performance, the safety assurance of such systems is a major concern. Particularly in the context of safety-critical, real-world cyber-physical systems, AI promises to achieve a new level of autonomy but is hampered by a lack of safety assurance. While data-driven control takes up recent developments in AI to improve control systems, control theory in general could be leveraged to improve AI safety. Therefore, this article outlines a new perspective on AI safety based on an interdisciplinary interpretation of the underlying data-generation process and the respective abstraction by AI systems in a system theory-inspired and system analysis-driven manner. In this context, the new perspective, also referred to as data control, aims to stimulate AI engineering to take advantage of existing safety analysis and assurance in an interdisciplinary way to drive the paradigm of data control. Following a top-down approach, a generic foundation for safety analysis and assurance is outlined at an abstract level that can be refined for specific AI systems and applications and is prepared for future innovation."
+  },
+  {
+    "title": "Not quite a piece of CHERI-cake: Are new digital security by design architectures usable?",
+    "url": "http://arxiv.org/abs/2506.23682v1",
+    "arxiv_id": "2506.23682v1",
+    "authors": [
+      "Maysara Alhindi",
+      "Joseph Hallett"
+    ],
+    "published": "2025-06-30T10:04:14+00:00",
+    "summary": "A digital security-by-design computer architecture, like CHERI, lets you program without fear of buffer overflows or other memory safety errors, but CHERI also rewrites some of the assumptions about how C works and how fundamental types (such as pointers) are implemented in hardware. We conducted a usability study to examine how developers react to the changes required by CHERI when porting software to run on it. We find that developers struggle with CHERI's display of warnings and errors and a lack of diverse documentation."
+  },
+  {
+    "title": "Evaluating Multi-Agent Defences Against Jailbreaking Attacks on Large Language Models",
+    "url": "http://arxiv.org/abs/2506.23576v1",
+    "arxiv_id": "2506.23576v1",
+    "authors": [
+      "Maria Carolina Cornelia Wit",
+      "Jun Pang"
+    ],
+    "published": "2025-06-30T07:29:07+00:00",
+    "summary": "Recent advances in large language models (LLMs) have raised concerns about jailbreaking attacks, i.e., prompts that bypass safety mechanisms. This paper investigates the use of multi-agent LLM systems as a defence against such attacks. We evaluate three jailbreaking strategies, including the original AutoDefense attack and two from Deepleaps: BetterDan and JB. Reproducing the AutoDefense framework, we compare single-agent setups with two- and three-agent configurations. Our results show that multi-agent systems enhance resistance to jailbreaks, especially by reducing false negatives. However, its effectiveness varies by attack type, and it introduces trade-offs such as increased false positives and computational overhead. These findings point to the limitations of current automated defences and suggest directions for improving alignment robustness in future LLM systems."
+  },
+  {
+    "title": "Comparative Analysis of the Code Generated by Popular Large Language Models (LLMs) for MISRA C++ Compliance",
+    "url": "http://arxiv.org/abs/2506.23535v1",
+    "arxiv_id": "2506.23535v1",
+    "authors": [
+      "Malik Muhammad Umer"
+    ],
+    "published": "2025-06-30T05:53:45+00:00",
+    "summary": "Safety-critical systems are engineered systems whose failure or malfunction could result in catastrophic consequences. The software development for safety-critical systems necessitates rigorous engineering practices and adherence to certification standards like DO-178C for avionics. DO-178C is a guidance document which requires compliance to well-defined software coding standards like MISRA C++ to enforce coding guidelines that prevent the use of ambiguous, unsafe, or undefined constructs. Large Language Models (LLMs) have demonstrated significant capabilities in automatic code generation across a wide range of programming languages, including C++. Despite their impressive performance, code generated by LLMs in safety-critical domains must be carefully analyzed for conformance to MISRA C++ coding standards. In this paper, I have conducted a comparative analysis of the C++ code generated by popular LLMs including: OpenAI ChatGPT, Google Gemini, DeepSeek, Meta AI, and Microsoft Copilot for compliance with MISRA C++."
+  },
+  {
+    "title": "Sample Margin-Aware Recalibration of Temperature Scaling",
+    "url": "http://arxiv.org/abs/2506.23492v1",
+    "arxiv_id": "2506.23492v1",
+    "authors": [
+      "Haolan Guo",
+      "Linwei Tao",
+      "Haoyang Luo",
+      "Minjing Dong",
+      "Chang Xu"
+    ],
+    "published": "2025-06-30T03:35:05+00:00",
+    "summary": "Recent advances in deep learning have significantly improved predictive accuracy. However, modern neural networks remain systematically overconfident, posing risks for deployment in safety-critical scenarios. Current post-hoc calibration methods face a fundamental dilemma: global approaches like Temperature Scaling apply uniform adjustments across all samples, introducing high bias despite computational efficiency, while more expressive methods that operate on full logit distributions suffer from high variance due to noisy high-dimensional inputs and insufficient validation data. To address these challenges, we propose Sample Margin-Aware Recalibration of Temperature (SMART), a lightweight, data-efficient recalibration method that precisely scales logits based on the margin between the top two logits -- termed the logit gap. Specifically, the logit gap serves as a denoised, scalar signal directly tied to decision boundary uncertainty, providing a robust indicator that avoids the noise inherent in high-dimensional logit spaces while preserving model prediction invariance. Meanwhile, SMART employs a novel soft-binned Expected Calibration Error (SoftECE) objective that balances model bias and variance through adaptive binning, enabling stable parameter updates even with extremely limited calibration data. Extensive evaluations across diverse datasets and architectures demonstrate that SMART achieves state-of-the-art calibration performance even with substantially fewer parameters compared to existing parametric methods, offering a principled, robust, and highly efficient solution for practical uncertainty quantification in neural network predictions. The source code is available at: https://anonymous.4open.science/r/SMART-8B11."
+  },
+  {
+    "title": "From Large-scale Audio Tagging to Real-Time Explainable Emergency Vehicle Sirens Detection",
+    "url": "http://arxiv.org/abs/2506.23437v1",
+    "arxiv_id": "2506.23437v1",
+    "authors": [
+      "Stefano Giacomelli",
+      "Marco Giordano",
+      "Claudia Rinaldi",
+      "Fabio Graziosi"
+    ],
+    "published": "2025-06-30T00:21:07+00:00",
+    "summary": "Accurate recognition of Emergency Vehicle (EV) sirens is critical for the integration of intelligent transportation systems, smart city monitoring systems, and autonomous driving technologies. Modern automatic solutions are limited by the lack of large scale, curated datasets and by the computational demands of state of the art sound event detection models. This work introduces E2PANNs (Efficient Emergency Pre trained Audio Neural Networks), a lightweight Convolutional Neural Network architecture derived from the PANNs framework, specifically optimized for binary EV siren detection. Leveraging our dedicated subset of AudioSet (AudioSet EV) we fine-tune and evaluate E2PANNs across multiple reference datasets and test its viability on embedded hardware. The experimental campaign includes ablation studies, cross-domain benchmarking, and real-time inference deployment on edge device. Interpretability analyses exploiting Guided Backpropagation and ScoreCAM algorithms provide insights into the model internal representations and validate its ability to capture distinct spectrotemporal patterns associated with different types of EV sirens. Real time performance is assessed through frame wise and event based detection metrics, as well as a detailed analysis of false positive activations. Results demonstrate that E2PANNs establish a new state of the art in this research domain, with high computational efficiency, and suitability for edge-based audio monitoring and safety-critical applications."
+  },
+  {
+    "title": "Detecting What Matters: A Novel Approach for Out-of-Distribution 3D Object Detection in Autonomous Vehicles",
+    "url": "http://arxiv.org/abs/2506.23426v1",
+    "arxiv_id": "2506.23426v1",
+    "authors": [
+      "Menna Taha",
+      "Aya Ahmed",
+      "Mohammed Karmoose",
+      "Yasser Gadallah"
+    ],
+    "published": "2025-06-29T23:21:05+00:00",
+    "summary": "Autonomous vehicles (AVs) use object detection models to recognize their surroundings and make driving decisions accordingly. Conventional object detection approaches classify objects into known classes, which limits the AV's ability to detect and appropriately respond to Out-of-Distribution (OOD) objects. This problem is a significant safety concern since the AV may fail to detect objects or misclassify them, which can potentially lead to hazardous situations such as accidents. Consequently, we propose a novel object detection approach that shifts the emphasis from conventional class-based classification to object harmfulness determination. Instead of object detection by their specific class, our method identifies them as either 'harmful' or 'harmless' based on whether they pose a danger to the AV. This is done based on the object position relative to the AV and its trajectory. With this metric, our model can effectively detect previously unseen objects to enable the AV to make safer real-time decisions. Our results demonstrate that the proposed model effectively detects OOD objects, evaluates their harmfulness, and classifies them accordingly, thus enhancing the AV decision-making effectiveness in dynamic environments."
+  },
+  {
+    "title": "TuCo: Measuring the Contribution of Fine-Tuning to Individual Responses of LLMs",
+    "url": "http://arxiv.org/abs/2506.23423v1",
+    "arxiv_id": "2506.23423v1",
+    "authors": [
+      "Felipe Nuti",
+      "Tim Franzmeyer",
+      "Jo\u00e3o Henriques"
+    ],
+    "published": "2025-06-29T23:08:36+00:00",
+    "summary": "Past work has studied the effects of fine-tuning on large language models' (LLMs) overall performance on certain tasks. However, a quantitative and systematic method for analyzing its effect on individual outputs is still lacking. Here, we propose a new method for measuring the contribution that fine-tuning makes to individual LLM responses, assuming access to the original pre-trained model. Our method tracks the model's intermediate hidden states, providing a more fine-grained insight into the effects of fine-tuning than a simple comparison of final outputs from pre-trained and fine-tuned models. We introduce and theoretically analyze an exact decomposition of any fine-tuned LLM into a pre-training component and a fine-tuning component. Empirically, we find that model behavior and performance can be steered by up- or down-scaling the fine-tuning component during the forward pass. Motivated by this finding and our theoretical analysis, we define the Tuning Contribution (TuCo) as the ratio of the magnitudes of the fine-tuning component to the pre-training component. We observe that three prominent adversarial attacks on LLMs circumvent safety measures in a way that reduces TuCo, and that TuCo is consistently lower on prompts where these attacks succeed compared to those where they do not. This suggests that attenuating the effect of fine-tuning on model outputs plays a role in the success of such attacks. In summary, TuCo enables the quantitative study of how fine-tuning influences model behavior and safety, and vice versa."
+  },
+  {
+    "title": "A Model Predictive Control Framework to Enhance Safety and Quality in Mobile Additive Manufacturing Systems",
+    "url": "http://arxiv.org/abs/2506.23400v1",
+    "arxiv_id": "2506.23400v1",
+    "authors": [
+      "Yifei Li",
+      "Joshua A. Robbins",
+      "Guha Manogharan",
+      "Herschel C. Pangborn",
+      "Ilya Kovalenko"
+    ],
+    "published": "2025-06-29T21:25:46+00:00",
+    "summary": "In recent years, the demand for customized, on-demand production has grown in the manufacturing sector. Additive Manufacturing (AM) has emerged as a promising technology to enhance customization capabilities, enabling greater flexibility, reduced lead times, and more efficient material usage. However, traditional AM systems remain constrained by static setups and human worker dependencies, resulting in long lead times and limited scalability. Mobile robots can improve the flexibility of production systems by transporting products to designated locations in a dynamic environment. By integrating AM systems with mobile robots, manufacturers can optimize travel time for preparatory tasks and distributed printing operations. Mobile AM robots have been deployed for on-site production of large-scale structures, but often neglect critical print quality metrics like surface roughness. Additionally, these systems do not have the precision necessary for producing small, intricate components. We propose a model predictive control framework for a mobile AM platform that ensures safe navigation on the plant floor while maintaining high print quality in a dynamic environment. Three case studies are used to test the feasibility and reliability of the proposed systems."
+  },
+  {
+    "title": "Safe and Performant Deployment of Autonomous Systems via Model Predictive Control and Hamilton-Jacobi Reachability Analysis",
+    "url": "http://arxiv.org/abs/2506.23346v1",
+    "arxiv_id": "2506.23346v1",
+    "authors": [
+      "Hao Wang",
+      "Armand Jordana",
+      "Ludovic Righetti",
+      "Somil Bansal"
+    ],
+    "published": "2025-06-29T17:41:37+00:00",
+    "summary": "While we have made significant algorithmic developments to enable autonomous systems to perform sophisticated tasks, it remains difficult for them to perform tasks effective and safely. Most existing approaches either fail to provide any safety assurances or substantially compromise task performance for safety. In this work, we develop a framework, based on model predictive control (MPC) and Hamilton-Jacobi (HJ) reachability, to optimize task performance for autonomous systems while respecting the safety constraints. Our framework guarantees recursive feasibility for the MPC controller, and it is scalable to high-dimensional systems. We demonstrate the effectiveness of our framework with two simulation studies using a 4D Dubins Car and a 6 Dof Kuka iiwa manipulator, and the experiments show that our framework significantly improves the safety constraints satisfaction of the systems over the baselines."
+  },
+  {
+    "title": "SurgTPGS: Semantic 3D Surgical Scene Understanding with Text Promptable Gaussian Splatting",
+    "url": "http://arxiv.org/abs/2506.23309v1",
+    "arxiv_id": "2506.23309v1",
+    "authors": [
+      "Yiming Huang",
+      "Long Bai",
+      "Beilei Cui",
+      "Kun Yuan",
+      "Guankun Wang",
+      "Mobarakol Islam",
+      "Nicolas Padoy",
+      "Nassir Navab",
+      "Hongliang Ren"
+    ],
+    "published": "2025-06-29T15:55:01+00:00",
+    "summary": "In contemporary surgical research and practice, accurately comprehending 3D surgical scenes with text-promptable capabilities is particularly crucial for surgical planning and real-time intra-operative guidance, where precisely identifying and interacting with surgical tools and anatomical structures is paramount. However, existing works focus on surgical vision-language model (VLM), 3D reconstruction, and segmentation separately, lacking support for real-time text-promptable 3D queries. In this paper, we present SurgTPGS, a novel text-promptable Gaussian Splatting method to fill this gap. We introduce a 3D semantics feature learning strategy incorporating the Segment Anything model and state-of-the-art vision-language models. We extract the segmented language features for 3D surgical scene reconstruction, enabling a more in-depth understanding of the complex surgical environment. We also propose semantic-aware deformation tracking to capture the seamless deformation of semantic features, providing a more precise reconstruction for both texture and semantic features. Furthermore, we present semantic region-aware optimization, which utilizes regional-based semantic information to supervise the training, particularly promoting the reconstruction quality and semantic smoothness. We conduct comprehensive experiments on two real-world surgical datasets to demonstrate the superiority of SurgTPGS over state-of-the-art methods, highlighting its potential to revolutionize surgical practices. SurgTPGS paves the way for developing next-generation intelligent surgical systems by enhancing surgical precision and safety. Our code is available at: https://github.com/lastbasket/SurgTPGS."
+  },
+  {
+    "title": "Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games",
+    "url": "http://arxiv.org/abs/2506.23276v1",
+    "arxiv_id": "2506.23276v1",
+    "authors": [
+      "David Guzman Piedrahita",
+      "Yongjin Yang",
+      "Mrinmaya Sachan",
+      "Giorgia Ramponi",
+      "Bernhard Sch\u00f6lkopf",
+      "Zhijing Jin"
+    ],
+    "published": "2025-06-29T15:02:47+00:00",
+    "summary": "As large language models (LLMs) are increasingly deployed as autonomous agents, understanding their cooperation and social mechanisms is becoming increasingly important. In particular, how LLMs balance self-interest and collective well-being is a critical challenge for ensuring alignment, robustness, and safe deployment. In this paper, we examine the challenge of costly sanctioning in multi-agent LLM systems, where an agent must decide whether to invest its own resources to incentivize cooperation or penalize defection. To study this, we adapt a public goods game with institutional choice from behavioral economics, allowing us to observe how different LLMs navigate social dilemmas over repeated interactions. Our analysis reveals four distinct behavioral patterns among models: some consistently establish and sustain high levels of cooperation, others fluctuate between engagement and disengagement, some gradually decline in cooperative behavior over time, and others rigidly follow fixed strategies regardless of outcomes. Surprisingly, we find that reasoning LLMs, such as the o1 series, struggle significantly with cooperation, whereas some traditional LLMs consistently achieve high levels of cooperation. These findings suggest that the current approach to improving LLMs, which focuses on enhancing their reasoning capabilities, does not necessarily lead to cooperation, providing valuable insights for deploying LLM agents in environments that require sustained collaboration. Our code is available at https://github.com/davidguzmanp/SanctSim"
+  },
+  {
+    "title": "Causal-Entity Reflected Egocentric Traffic Accident Video Synthesis",
+    "url": "http://arxiv.org/abs/2506.23263v1",
+    "arxiv_id": "2506.23263v1",
+    "authors": [
+      "Lei-lei Li",
+      "Jianwu Fang",
+      "Junbin Xiao",
+      "Shanmin Pang",
+      "Hongkai Yu",
+      "Chen Lv",
+      "Jianru Xue",
+      "Tat-Seng Chua"
+    ],
+    "published": "2025-06-29T14:37:48+00:00",
+    "summary": "Egocentricly comprehending the causes and effects of car accidents is crucial for the safety of self-driving cars, and synthesizing causal-entity reflected accident videos can facilitate the capability test to respond to unaffordable accidents in reality. However, incorporating causal relations as seen in real-world videos into synthetic videos remains challenging. This work argues that precisely identifying the accident participants and capturing their related behaviors are of critical importance. In this regard, we propose a novel diffusion model, Causal-VidSyn, for synthesizing egocentric traffic accident videos. To enable causal entity grounding in video diffusion, Causal-VidSyn leverages the cause descriptions and driver fixations to identify the accident participants and behaviors, facilitated by accident reason answering and gaze-conditioned selection modules. To support Causal-VidSyn, we further construct Drive-Gaze, the largest driver gaze dataset (with 1.54M frames of fixations) in driving accident scenarios. Extensive experiments show that Causal-VidSyn surpasses state-of-the-art video diffusion models in terms of frame quality and causal sensitivity in various tasks, including accident video editing, normal-to-accident video diffusion, and text-to-video generation."
+  },
+  {
+    "title": "Mirror Descent Policy Optimisation for Robust Constrained Markov Decision Processes",
+    "url": "http://arxiv.org/abs/2506.23165v1",
+    "arxiv_id": "2506.23165v1",
+    "authors": [
+      "David Bossens",
+      "Atsushi Nitanda"
+    ],
+    "published": "2025-06-29T09:55:52+00:00",
+    "summary": "Safety is an essential requirement for reinforcement learning systems. The newly emerging framework of robust constrained Markov decision processes allows learning policies that satisfy long-term constraints while providing guarantees under epistemic uncertainty. This paper presents mirror descent policy optimisation for robust constrained Markov decision processes (RCMDPs), making use of policy gradient techniques to optimise both the policy (as a maximiser) and the transition kernel (as an adversarial minimiser) on the Lagrangian representing a constrained MDP. In the oracle-based RCMDP setting, we obtain an $\\mathcal{O}\\left(\\frac{1}{T}\\right)$ convergence rate for the squared distance as a Bregman divergence, and an $\\mathcal{O}\\left(e^{-T}\\right)$ convergence rate for entropy-regularised objectives. In the sample-based RCMDP setting, we obtain an $\\tilde{\\mathcal{O}}\\left(\\frac{1}{T^{1/3}}\\right)$ convergence rate. Experiments confirm the benefits of mirror descent policy optimisation in constrained and unconstrained optimisation, and significant improvements are observed in robustness tests when compared to baseline policy optimisation algorithms."
+  },
+  {
+    "title": "Mode Collapse Happens: Evaluating Critical Interactions in Joint Trajectory Prediction Models",
+    "url": "http://arxiv.org/abs/2506.23164v1",
+    "arxiv_id": "2506.23164v1",
+    "authors": [
+      "Maarten Hugenholtz",
+      "Anna Meszaros",
+      "Jens Kober",
+      "Zlatan Ajanovic"
+    ],
+    "published": "2025-06-29T09:53:12+00:00",
+    "summary": "Autonomous Vehicle decisions rely on multimodal prediction models that account for multiple route options and the inherent uncertainty in human behavior. However, models can suffer from mode collapse, where only the most likely mode is predicted, posing significant safety risks. While existing methods employ various strategies to generate diverse predictions, they often overlook the diversity in interaction modes among agents. Additionally, traditional metrics for evaluating prediction models are dataset-dependent and do not evaluate inter-agent interactions quantitatively. To our knowledge, none of the existing metrics explicitly evaluates mode collapse. In this paper, we propose a novel evaluation framework that assesses mode collapse in joint trajectory predictions, focusing on safety-critical interactions. We introduce metrics for mode collapse, mode correctness, and coverage, emphasizing the sequential dimension of predictions. By testing four multi-agent trajectory prediction models, we demonstrate that mode collapse indeed happens. When looking at the sequential dimension, although prediction accuracy improves closer to interaction events, there are still cases where the models are unable to predict the correct interaction mode, even just before the interaction mode becomes inevitable. We hope that our framework can help researchers gain new insights and advance the development of more consistent and accurate prediction models, thus enhancing the safety of autonomous driving systems."
+  },
+  {
+    "title": "maneuverRecognition -- A Python package for Timeseries Classification in the domain of Vehicle Telematics",
+    "url": "http://arxiv.org/abs/2506.23147v1",
+    "arxiv_id": "2506.23147v1",
+    "authors": [
+      "Jonathan Schuster",
+      "Fabian Transchel"
+    ],
+    "published": "2025-06-29T08:56:19+00:00",
+    "summary": "In the domain of vehicle telematics the automated recognition of driving maneuvers is used to classify and evaluate driving behaviour. This not only serves as a component to enhance the personalization of insurance policies, but also to increase road safety, reduce accidents and the associated costs as well as to reduce fuel consumption and support environmentally friendly driving. In this context maneuver recognition technically requires a continuous application of time series classification which poses special challenges to the transfer, preprocessing and storage of telematic sensor data, the training of predictive models, and the prediction itself. Although much research has been done in the field of gathering relevant data or regarding the methods to build predictive models for the task of maneuver recognition, there is a practical need for python packages and functions that allow to quickly transform data into the required structure as well as to build and evaluate such models. The maneuverRecognition package was therefore developed to provide the necessary functions for preprocessing, modelling and evaluation and also includes a ready to use LSTM based network structure that can be modified. The implementation of the package is demonstrated using real driving data of three different persons recorded via smartphone sensors."
+  },
+  {
+    "title": "Are Large Language Models Capable of Deep Relational Reasoning? Insights from DeepSeek-R1 and Benchmark Comparisons",
+    "url": "http://arxiv.org/abs/2506.23128v1",
+    "arxiv_id": "2506.23128v1",
+    "authors": [
+      "Chi Chiu So",
+      "Yueyue Sun",
+      "Jun-Min Wang",
+      "Siu Pang Yung",
+      "Anthony Wai Keung Loh",
+      "Chun Pong Chau"
+    ],
+    "published": "2025-06-29T07:37:49+00:00",
+    "summary": "How far are Large Language Models (LLMs) in performing deep relational reasoning? In this paper, we evaluate and compare the reasoning capabilities of three cutting-edge LLMs, namely, DeepSeek-R1, DeepSeek-V3 and GPT-4o, through a suite of carefully designed benchmark tasks in family tree and general graph reasoning. Our experiments reveal that DeepSeek-R1 consistently achieves the highest F1-scores across multiple tasks and problem sizes, demonstrating strong aptitude in logical deduction and relational inference. However, all evaluated models, including DeepSeek-R1, struggle significantly as problem complexity increases, largely due to token length limitations and incomplete output structures. A detailed analysis of DeepSeek-R1's long Chain-of-Thought responses uncovers its unique planning and verification strategies, but also highlights instances of incoherent or incomplete reasoning, calling attention to the need for deeper scrutiny into LLMs' internal inference dynamics. We further discuss key directions for future work, including the role of multimodal reasoning and the systematic examination of reasoning failures. Our findings provide both empirical insights and theoretical implications for advancing LLMs' reasoning abilities, particularly in tasks that demand structured, multi-step logical inference. Our code repository will be publicly available at https://github.com/kelvinhkcs/Deep-Relational-Reasoning."
+  },
+  {
+    "title": "Can Large Language Models Capture Human Risk Preferences? A Cross-Cultural Study",
+    "url": "http://arxiv.org/abs/2506.23107v1",
+    "arxiv_id": "2506.23107v1",
+    "authors": [
+      "Bing Song",
+      "Jianing Liu",
+      "Sisi Jian",
+      "Chenyang Wu",
+      "Vinayak Dixit"
+    ],
+    "published": "2025-06-29T06:16:57+00:00",
+    "summary": "Large language models (LLMs) have made significant strides, extending their applications to dialogue systems, automated content creation, and domain-specific advisory tasks. However, as their use grows, concerns have emerged regarding their reliability in simulating complex decision-making behavior, such as risky decision-making, where a single choice can lead to multiple outcomes. This study investigates the ability of LLMs to simulate risky decision-making scenarios. We compare model-generated decisions with actual human responses in a series of lottery-based tasks, using transportation stated preference survey data from participants in Sydney, Dhaka, Hong Kong, and Nanjing. Demographic inputs were provided to two LLMs -- ChatGPT 4o and ChatGPT o1-mini -- which were tasked with predicting individual choices. Risk preferences were analyzed using the Constant Relative Risk Aversion (CRRA) framework. Results show that both models exhibit more risk-averse behavior than human participants, with o1-mini aligning more closely with observed human decisions. Further analysis of multilingual data from Nanjing and Hong Kong indicates that model predictions in Chinese deviate more from actual responses compared to English, suggesting that prompt language may influence simulation performance. These findings highlight both the promise and the current limitations of LLMs in replicating human-like risk behavior, particularly in linguistic and cultural settings."
+  },
+  {
+    "title": "Where, What, Why: Towards Explainable Driver Attention Prediction",
+    "url": "http://arxiv.org/abs/2506.23088v1",
+    "arxiv_id": "2506.23088v1",
+    "authors": [
+      "Yuchen Zhou",
+      "Jiayu Tang",
+      "Xiaoyan Xiao",
+      "Yueyao Lin",
+      "Linkai Liu",
+      "Zipeng Guo",
+      "Hao Fei",
+      "Xiaobo Xia",
+      "Chao Gou"
+    ],
+    "published": "2025-06-29T04:59:39+00:00",
+    "summary": "Modeling task-driven attention in driving is a fundamental challenge for both autonomous vehicles and cognitive science. Existing methods primarily predict where drivers look by generating spatial heatmaps, but fail to capture the cognitive motivations behind attention allocation in specific contexts, which limits deeper understanding of attention mechanisms. To bridge this gap, we introduce Explainable Driver Attention Prediction, a novel task paradigm that jointly predicts spatial attention regions (where), parses attended semantics (what), and provides cognitive reasoning for attention allocation (why). To support this, we present W3DA, the first large-scale explainable driver attention dataset. It enriches existing benchmarks with detailed semantic and causal annotations across diverse driving scenarios, including normal conditions, safety-critical situations, and traffic accidents. We further propose LLada, a Large Language model-driven framework for driver attention prediction, which unifies pixel modeling, semantic parsing, and cognitive reasoning within an end-to-end architecture. Extensive experiments demonstrate the effectiveness of LLada, exhibiting robust generalization across datasets and driving conditions. This work serves as a key step toward a deeper understanding of driver attention mechanisms, with significant implications for autonomous driving, intelligent driver training, and human-computer interaction."
+  },
+  {
+    "title": "Agent-to-Agent Theory of Mind: Testing Interlocutor Awareness among Large Language Models",
+    "url": "http://arxiv.org/abs/2506.22957v1",
+    "arxiv_id": "2506.22957v1",
+    "authors": [
+      "Younwoo Choi",
+      "Changling Li",
+      "Yongjin Yang",
+      "Zhijing Jin"
+    ],
+    "published": "2025-06-28T17:22:59+00:00",
+    "summary": "As large language models (LLMs) are increasingly integrated into multi-agent and human-AI systems, understanding their awareness of both self-context and conversational partners is essential for ensuring reliable performance and robust safety. While prior work has extensively studied situational awareness which refers to an LLM's ability to recognize its operating phase and constraints, it has largely overlooked the complementary capacity to identify and adapt to the identity and characteristics of a dialogue partner. In this paper, we formalize this latter capability as interlocutor awareness and present the first systematic evaluation of its emergence in contemporary LLMs. We examine interlocutor inference across three dimensions-reasoning patterns, linguistic style, and alignment preferences-and show that LLMs reliably identify same-family peers and certain prominent model families, such as GPT and Claude. To demonstrate its practical significance, we develop three case studies in which interlocutor awareness both enhances multi-LLM collaboration through prompt adaptation and introduces new alignment and safety vulnerabilities, including reward-hacking behaviors and increased jailbreak susceptibility. Our findings highlight the dual promise and peril of identity-sensitive behavior in LLMs, underscoring the need for further understanding of interlocutor awareness and new safeguards in multi-agent deployments. Our code is open-sourced at https://github.com/younwoochoi/InterlocutorAwarenessLLM."
+  },
+  {
+    "title": "Evaluating and Improving Large Language Models for Competitive Program Generation",
+    "url": "http://arxiv.org/abs/2506.22954v1",
+    "arxiv_id": "2506.22954v1",
+    "authors": [
+      "Minnan Wei",
+      "Ziming Li",
+      "Xiang Chen",
+      "Menglin Zheng",
+      "Ziyan Qu",
+      "Cheng Yu",
+      "Siyu Chen",
+      "Xiaolin Ju"
+    ],
+    "published": "2025-06-28T17:18:23+00:00",
+    "summary": "Context: Due to the demand for strong algorithmic reasoning, complex logic implementation, and strict adherence to input/output formats and resource constraints, competitive programming generation by large language models (LLMs) is considered the most challenging problem in current LLM-based code generation. However, previous studies often evaluate LLMs using simple prompts and benchmark datasets prone to data leakage. Moreover, prior work has limited consideration of the diversity in algorithm types and difficulty levels. Objective: In this study, we aim to evaluate and improve LLMs in solving real-world competitive programming problems. Methods: We initially collect 117 problems from nine regional ICPC/CCPC contests held in 2024 and design four filtering criteria to construct a curated benchmark consisting of 80 problems. Leveraging DeepSeek-R1 as the LLM, we evaluate its competitive program generation capabilities through the online judge (OJ) platforms, guided by a carefully designed basic prompt. For incorrect submissions, we construct a fine-grained error taxonomy and then propose a targeted improvement framework by combining a multi-turn dialogue-based repair phase and an information-augmented regeneration phase. Results: Experimental results show that only 5 out of 80 problems are fully accepted when using basic prompts. For the unsolved problems, we construct the error taxonomy, including general errors (such as design, boundary, condition, data type, syntax, and input/output errors) and specialized errors (such as those in mathematical problems, greedy algorithms, and graph theories). After applying our proposed improvement strategies, we substantially increased the number of correct solutions, with 46 out of 80 problems successfully accepted."
+  },
+  {
+    "title": "Safe Reinforcement Learning with a Predictive Safety Filter for Motion Planning and Control: A Drifting Vehicle Example",
+    "url": "http://arxiv.org/abs/2506.22894v1",
+    "arxiv_id": "2506.22894v1",
+    "authors": [
+      "Bei Zhou",
+      "Baha Zarrouki",
+      "Mattia Piccinini",
+      "Cheng Hu",
+      "Lei Xie",
+      "Johannes Betz"
+    ],
+    "published": "2025-06-28T14:10:32+00:00",
+    "summary": "Autonomous drifting is a complex and crucial maneuver for safety-critical scenarios like slippery roads and emergency collision avoidance, requiring precise motion planning and control. Traditional motion planning methods often struggle with the high instability and unpredictability of drifting, particularly when operating at high speeds. Recent learning-based approaches have attempted to tackle this issue but often rely on expert knowledge or have limited exploration capabilities. Additionally, they do not effectively address safety concerns during learning and deployment. To overcome these limitations, we propose a novel Safe Reinforcement Learning (RL)-based motion planner for autonomous drifting. Our approach integrates an RL agent with model-based drift dynamics to determine desired drift motion states, while incorporating a Predictive Safety Filter (PSF) that adjusts the agent's actions online to prevent unsafe states. This ensures safe and efficient learning, and stable drift operation. We validate the effectiveness of our method through simulations on a Matlab-Carsim platform, demonstrating significant improvements in drift performance, reduced tracking errors, and computational efficiency compared to traditional methods. This strategy promises to extend the capabilities of autonomous vehicles in safety-critical maneuvers."
+  },
+  {
+    "title": "AG-VPReID 2025: Aerial-Ground Video-based Person Re-identification Challenge Results",
+    "url": "http://arxiv.org/abs/2506.22843v1",
+    "arxiv_id": "2506.22843v1",
+    "authors": [
+      "Kien Nguyen",
+      "Clinton Fookes",
+      "Sridha Sridharan",
+      "Huy Nguyen",
+      "Feng Liu",
+      "Xiaoming Liu",
+      "Arun Ross",
+      "Dana Michalski",
+      "Tam\u00e1s Endrei",
+      "Ivan DeAndres-Tame",
+      "Ruben Tolosana",
+      "Ruben Vera-Rodriguez",
+      "Aythami Morales",
+      "Julian Fierrez",
+      "Javier Ortega-Garcia",
+      "Zijing Gong",
+      "Yuhao Wang",
+      "Xuehu Liu",
+      "Pingping Zhang",
+      "Md Rashidunnabi",
+      "Hugo Proen\u00e7a",
+      "Kailash A. Hambarde",
+      "Saeid Rezaei"
+    ],
+    "published": "2025-06-28T10:45:30+00:00",
+    "summary": "Person re-identification (ReID) across aerial and ground vantage points has become crucial for large-scale surveillance and public safety applications. Although significant progress has been made in ground-only scenarios, bridging the aerial-ground domain gap remains a formidable challenge due to extreme viewpoint differences, scale variations, and occlusions. Building upon the achievements of the AG-ReID 2023 Challenge, this paper introduces the AG-VPReID 2025 Challenge - the first large-scale video-based competition focused on high-altitude (80-120m) aerial-ground ReID. Constructed on the new AG-VPReID dataset with 3,027 identities, over 13,500 tracklets, and approximately 3.7 million frames captured from UAVs, CCTV, and wearable cameras, the challenge featured four international teams. These teams developed solutions ranging from multi-stream architectures to transformer-based temporal reasoning and physics-informed modeling. The leading approach, X-TFCLIP from UAM, attained 72.28% Rank-1 accuracy in the aerial-to-ground ReID setting and 70.77% in the ground-to-aerial ReID setting, surpassing existing baselines while highlighting the dataset's complexity. For additional details, please refer to the official website at https://agvpreid25.github.io."
+  },
+  {
+    "title": "MedEthicsQA: A Comprehensive Question Answering Benchmark for Medical Ethics Evaluation of LLMs",
+    "url": "http://arxiv.org/abs/2506.22808v1",
+    "arxiv_id": "2506.22808v1",
+    "authors": [
+      "Jianhui Wei",
+      "Zijie Meng",
+      "Zikai Xiao",
+      "Tianxiang Hu",
+      "Yang Feng",
+      "Zhijie Zhou",
+      "Jian Wu",
+      "Zuozhu Liu"
+    ],
+    "published": "2025-06-28T08:21:35+00:00",
+    "summary": "While Medical Large Language Models (MedLLMs) have demonstrated remarkable potential in clinical tasks, their ethical safety remains insufficiently explored. This paper introduces $\\textbf{MedEthicsQA}$, a comprehensive benchmark comprising $\\textbf{5,623}$ multiple-choice questions and $\\textbf{5,351}$ open-ended questions for evaluation of medical ethics in LLMs. We systematically establish a hierarchical taxonomy integrating global medical ethical standards. The benchmark encompasses widely used medical datasets, authoritative question banks, and scenarios derived from PubMed literature. Rigorous quality control involving multi-stage filtering and multi-faceted expert validation ensures the reliability of the dataset with a low error rate ($2.72\\%$). Evaluation of state-of-the-art MedLLMs exhibit declined performance in answering medical ethics questions compared to their foundation counterparts, elucidating the deficiencies of medical ethics alignment. The dataset, registered under CC BY-NC 4.0 license, is available at https://github.com/JianhuiWei7/MedEthicsQA."
+  },
+  {
+    "title": "VERA: Variational Inference Framework for Jailbreaking Large Language Models",
+    "url": "http://arxiv.org/abs/2506.22666v1",
+    "arxiv_id": "2506.22666v1",
+    "authors": [
+      "Anamika Lochab",
+      "Lu Yan",
+      "Patrick Pynadath",
+      "Xiangyu Zhang",
+      "Ruqi Zhang"
+    ],
+    "published": "2025-06-27T22:22:00+00:00",
+    "summary": "The rise of API-only access to state-of-the-art LLMs highlights the need for effective black-box jailbreak methods to identify model vulnerabilities in real-world settings. Without a principled objective for gradient-based optimization, most existing approaches rely on genetic algorithms, which are limited by their initialization and dependence on manually curated prompt pools. Furthermore, these methods require individual optimization for each prompt, failing to provide a comprehensive characterization of model vulnerabilities. To address this gap, we introduce VERA: Variational infErence fRamework for jAilbreaking. VERA casts black-box jailbreak prompting as a variational inference problem, training a small attacker LLM to approximate the target LLM's posterior over adversarial prompts. Once trained, the attacker can generate diverse, fluent jailbreak prompts for a target query without re-optimization. Experimental results show that VERA achieves strong performance across a range of target LLMs, highlighting the value of probabilistic inference for adversarial prompt generation."
+  },
+  {
+    "title": "Extending OpenMC Validation to Spent Fuel Canisters: A Criticality Benchmark Against MCNP",
+    "url": "http://arxiv.org/abs/2506.22559v1",
+    "arxiv_id": "2506.22559v1",
+    "authors": [
+      "Javier Ruiz-Pineda",
+      "Jaime Romero-Barrientos",
+      "Francisco Molina",
+      "Marcelo Zambra",
+      "Franco L\u00f3pez-Usquiano"
+    ],
+    "published": "2025-06-27T18:18:22+00:00",
+    "summary": "OpenMC is an open-source Monte Carlo code with increasing relevance in criticality safety and reactor physics applications. While its validation has covered a broad range of systems, its performance in spent nuclear fuel storage scenarios remains limited in the literature. This work benchmarks OpenMC against MCNP for eleven configurations based on the KBS-3 disposal concept, involving variations in geometry, fuel composition (fresh vs spent), and environmental conditions (e.g., air, argon, flooding scenarios). Effective multiplication factors (k-eff) and leakage fractions were evaluated for both codes. Results show strong agreement, with code-to-code k-eff differences below 0.8% in dry storage conditions, and consistent trends across all cases. Notably, OpenMC successfully captures inter-canister neutron interaction effects under periodic boundary conditions, demonstrating its applicability to dry storage configurations. This benchmark supports the extension of the validation domain of OpenMC toward SNF transport and disposal applications."
+  },
+  {
+    "title": "MetaCipher: A General and Extensible Reinforcement Learning Framework for Obfuscation-Based Jailbreak Attacks on Black-Box LLMs",
+    "url": "http://arxiv.org/abs/2506.22557v1",
+    "arxiv_id": "2506.22557v1",
+    "authors": [
+      "Boyuan Chen",
+      "Minghao Shao",
+      "Abdul Basit",
+      "Siddharth Garg",
+      "Muhammad Shafique"
+    ],
+    "published": "2025-06-27T18:15:56+00:00",
+    "summary": "The growing capabilities of large language models (LLMs) have exposed them to increasingly sophisticated jailbreak attacks. Among these, obfuscation-based attacks -- which encrypt malicious content to evade detection -- remain highly effective. By leveraging the reasoning ability of advanced LLMs to interpret encrypted prompts, such attacks circumvent conventional defenses that rely on keyword detection or context filtering. These methods are very difficult to defend against, as existing safety mechanisms are not designed to interpret or decode ciphered content. In this work, we propose \\textbf{MetaCipher}, a novel obfuscation-based jailbreak framework, along with a reinforcement learning-based dynamic cipher selection mechanism that adaptively chooses optimal encryption strategies from a cipher pool. This approach enhances jailbreak effectiveness and generalizability across diverse task types, victim LLMs, and safety guardrails. Our framework is modular and extensible by design, supporting arbitrary cipher families and accommodating evolving adversarial strategies. We complement our method with a large-scale empirical analysis of cipher performance across multiple victim LLMs. Within as few as 10 queries, MetaCipher achieves over 92\\% attack success rate (ASR) on most recent standard malicious prompt benchmarks against state-of-the-art non-reasoning LLMs, and over 74\\% ASR against reasoning-capable LLMs, outperforming all existing obfuscation-based jailbreak methods. These results highlight the long-term robustness and adaptability of our approach, making it more resilient than prior methods in the face of advancing safety measures."
+  },
+  {
     "title": "ARMOR: Robust Reinforcement Learning-based Control for UAVs under Physical Attacks",
     "url": "http://arxiv.org/abs/2506.22423v1",
     "arxiv_id": "2506.22423v1",
