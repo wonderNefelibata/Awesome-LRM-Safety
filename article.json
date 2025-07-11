@@ -1,5 +1,309 @@
 [
   {
+    "title": "Traceable Evidence Enhanced Visual Grounded Reasoning: Evaluation and Methodology",
+    "url": "http://arxiv.org/abs/2507.07999v1",
+    "arxiv_id": "2507.07999v1",
+    "authors": [
+      "Haochen Wang",
+      "Xiangtai Li",
+      "Zilong Huang",
+      "Anran Wang",
+      "Jiacong Wang",
+      "Tao Zhang",
+      "Jiani Zheng",
+      "Sule Bai",
+      "Zijian Kang",
+      "Jiashi Feng",
+      "Zhuochen Wang",
+      "Zhaoxiang Zhang"
+    ],
+    "published": "2025-07-10T17:59:58+00:00",
+    "summary": "Models like OpenAI-o3 pioneer visual grounded reasoning by dynamically referencing visual regions, just like human \"thinking with images\". However, no benchmark exists to evaluate these capabilities holistically. To bridge this gap, we propose TreeBench (Traceable Evidence Evaluation Benchmark), a diagnostic benchmark built on three principles: (1) focused visual perception of subtle targets in complex scenes, (2) traceable evidence via bounding box evaluation, and (3) second-order reasoning to test object interactions and spatial hierarchies beyond simple object localization. Prioritizing images with dense objects, we initially sample 1K high-quality images from SA-1B, and incorporate eight LMM experts to manually annotate questions, candidate options, and answers for each image. After three stages of quality control, TreeBench consists of 405 challenging visual question-answering pairs, even the most advanced models struggle with this benchmark, where none of them reach 60% accuracy, e.g., OpenAI-o3 scores only 54.87. Furthermore, we introduce TreeVGR (Traceable Evidence Enhanced Visual Grounded Reasoning), a training paradigm to supervise localization and reasoning jointly with reinforcement learning, enabling accurate localizations and explainable reasoning pathways. Initialized from Qwen2.5-VL-7B, it improves V* Bench (+16.8), MME-RealWorld (+12.6), and TreeBench (+13.4), proving traceability is key to advancing vision-grounded reasoning. The code is available at https://github.com/Haochen-Wang409/TreeVGR."
+  },
+  {
+    "title": "Automating Expert-Level Medical Reasoning Evaluation of Large Language Models",
+    "url": "http://arxiv.org/abs/2507.07988v1",
+    "arxiv_id": "2507.07988v1",
+    "authors": [
+      "Shuang Zhou",
+      "Wenya Xie",
+      "Jiaxi Li",
+      "Zaifu Zhan",
+      "Meijia Song",
+      "Han Yang",
+      "Cheyenna Espinoza",
+      "Lindsay Welton",
+      "Xinnie Mai",
+      "Yanwei Jin",
+      "Zidu Xu",
+      "Yuen-Hei Chung",
+      "Yiyun Xing",
+      "Meng-Han Tsai",
+      "Emma Schaffer",
+      "Yucheng Shi",
+      "Ninghao Liu",
+      "Zirui Liu",
+      "Rui Zhang"
+    ],
+    "published": "2025-07-10T17:58:26+00:00",
+    "summary": "As large language models (LLMs) become increasingly integrated into clinical decision-making, ensuring transparent and trustworthy reasoning is essential. However, existing evaluation strategies of LLMs' medical reasoning capability either suffer from unsatisfactory assessment or poor scalability, and a rigorous benchmark remains lacking. To address this, we introduce MedThink-Bench, a benchmark designed for rigorous, explainable, and scalable assessment of LLMs' medical reasoning. MedThink-Bench comprises 500 challenging questions across ten medical domains, each annotated with expert-crafted step-by-step rationales. Building on this, we propose LLM-w-Ref, a novel evaluation framework that leverages fine-grained rationales and LLM-as-a-Judge mechanisms to assess intermediate reasoning with expert-level fidelity while maintaining scalability. Experiments show that LLM-w-Ref exhibits a strong positive correlation with expert judgments. Benchmarking twelve state-of-the-art LLMs, we find that smaller models (e.g., MedGemma-27B) can surpass larger proprietary counterparts (e.g., OpenAI-o3). Overall, MedThink-Bench offers a foundational tool for evaluating LLMs' medical reasoning, advancing their safe and responsible deployment in clinical practice."
+  },
+  {
+    "title": "Multimodal Framework for Explainable Autonomous Driving: Integrating Video, Sensor, and Textual Data for Enhanced Decision-Making and Transparency",
+    "url": "http://arxiv.org/abs/2507.07938v1",
+    "arxiv_id": "2507.07938v1",
+    "authors": [
+      "Abolfazl Zarghani",
+      "Amirhossein Ebrahimi",
+      "Amir Malekesfandiari"
+    ],
+    "published": "2025-07-10T17:21:35+00:00",
+    "summary": "Autonomous vehicles (AVs) are poised to redefine transportation by enhancing road safety, minimizing human error, and optimizing traffic efficiency. The success of AVs depends on their ability to interpret complex, dynamic environments through diverse data sources, including video streams, sensor measurements, and contextual textual information. However, seamlessly integrating these multimodal inputs and ensuring transparency in AI-driven decisions remain formidable challenges. This study introduces a novel multimodal framework that synergistically combines video, sensor, and textual data to predict driving actions while generating human-readable explanations, fostering trust and regulatory compliance. By leveraging VideoMAE for spatiotemporal video analysis, a custom sensor fusion module for real-time data processing, and BERT for textual comprehension, our approach achieves robust decision-making and interpretable outputs. Evaluated on the BDD-X (21113 samples) and nuScenes (1000 scenes) datasets, our model reduces training loss from 5.7231 to 0.0187 over five epochs, attaining an action prediction accuracy of 92.5% and a BLEU-4 score of 0.75 for explanation quality, outperforming state-of-the-art methods. Ablation studies confirm the critical role of each modality, while qualitative analyses and human evaluations highlight the model's ability to produce contextually rich, user-friendly explanations. These advancements underscore the transformative potential of multimodal integration and explainability in building safe, transparent, and trustworthy AV systems, paving the way for broader societal adoption of autonomous driving technologies."
+  },
+  {
+    "title": "KeyDroid: A Large-Scale Analysis of Secure Key Storage in Android Apps",
+    "url": "http://arxiv.org/abs/2507.07927v1",
+    "arxiv_id": "2507.07927v1",
+    "authors": [
+      "Jenny Blessing",
+      "Ross J. Anderson",
+      "Alastair R. Beresford"
+    ],
+    "published": "2025-07-10T17:07:54+00:00",
+    "summary": "Most contemporary mobile devices offer hardware-backed storage for cryptographic keys, user data, and other sensitive credentials. Such hardware protects credentials from extraction by an adversary who has compromised the main operating system, such as a malicious third-party app. Since 2011, Android app developers can access trusted hardware via the Android Keystore API. In this work, we conduct the first comprehensive survey of hardware-backed key storage in Android devices. We analyze 490 119 Android apps, collecting data on how trusted hardware is used by app developers (if used at all) and cross-referencing our findings with sensitive user data collected by each app, as self-reported by developers via the Play Store's data safety labels.   We find that despite industry-wide initiatives to encourage adoption, 56.3% of apps self-reporting as processing sensitive user data do not use Android's trusted hardware capabilities at all, while just 5.03% of apps collecting some form of sensitive data use the strongest form of trusted hardware, a secure element distinct from the main processor. To better understand the potential downsides of using secure hardware, we conduct the first empirical analysis of trusted hardware performance in mobile devices, measuring the runtime of common cryptographic operations across both software- and hardware-backed keystores. We find that while hardware-backed key storage using a coprocessor is viable for most common cryptographic operations, secure elements capable of preventing more advanced attacks make performance infeasible for symmetric encryption with non-negligible payloads and any kind of asymmetric encryption."
+  },
+  {
+    "title": "Improving AEBS Validation Through Objective Intervention Classification Leveraging the Prediction Divergence Principle",
+    "url": "http://arxiv.org/abs/2507.07872v1",
+    "arxiv_id": "2507.07872v1",
+    "authors": [
+      "Daniel Betschinske",
+      "Steven Peters"
+    ],
+    "published": "2025-07-10T15:55:05+00:00",
+    "summary": "The safety validation of automatic emergency braking system (AEBS) requires accurately distinguishing between false positive (FP) and true positive (TP) system activations. While simulations allow straightforward differentiation by comparing scenarios with and without interventions, analyzing activations from open-loop resimulations - such as those from field operational testing (FOT) - is more complex. This complexity arises from scenario parameter uncertainty and the influence of driver interventions in the recorded data. Human labeling is frequently used to address these challenges, relying on subjective assessments of intervention necessity or situational criticality, potentially introducing biases and limitations. This work proposes a rule-based classification approach leveraging the Prediction Divergence Principle (PDP) to address those issues. Applied to a simplified AEBS, the proposed method reveals key strengths, limitations, and system requirements for effective implementation. The findings suggest that combining this approach with human labeling may enhance the transparency and consistency of classification, thereby improving the overall validation process. While the rule set for classification derived in this work adopts a conservative approach, the paper outlines future directions for refinement and broader applicability. Finally, this work highlights the potential of such methods to complement existing practices, paving the way for more reliable and reproducible AEBS validation frameworks."
+  },
+  {
+    "title": "Set-Based Control Barrier Functions and Safety Filters",
+    "url": "http://arxiv.org/abs/2507.07805v1",
+    "arxiv_id": "2507.07805v1",
+    "authors": [
+      "Kim P. Wabersich",
+      "Felix Berkel",
+      "Felix Gruber",
+      "Sven Reimann"
+    ],
+    "published": "2025-07-10T14:30:15+00:00",
+    "summary": "High performance and formal safety guarantees are common requirements for industrial control applications. Control barrier function (CBF) methods provide a systematic approach to the modularization of safety and performance. However, the design of such CBFs can be challenging, which limits their applicability to large-scale or data-driven systems. This paper introduces the concept of a set-based CBF for linear systems with convex constraints. By leveraging control invariant sets from reachability analysis and predictive control, the set-based CBF is defined implicitly through the minimal scaling of such a set to contain the current system state. This approach enables the development of implicit, data-driven, and high-dimensional CBF representations. The paper demonstrates the design of a safety filter using set-based CBFs, which is suitable for real-time implementations and learning-based approximations to reduce online computational demands. The effectiveness of the method is illustrated through comprehensive simulations on a high-dimensional mass-spring-damper system and a motion control task, and it is validated experimentally using an electric drive application with short sampling times, highlighting its practical benefits for safety-critical control."
+  },
+  {
+    "title": "Collaborative Human-Robot Surgery for Mandibular Angle Split Osteotomy: Optical Tracking based Approach",
+    "url": "http://arxiv.org/abs/2507.07794v1",
+    "arxiv_id": "2507.07794v1",
+    "authors": [
+      "Zhe Han",
+      "Huanyu Tian",
+      "Tom Vercauteren",
+      "Da Liu",
+      "Changsheng Li",
+      "Xingguang Duan"
+    ],
+    "published": "2025-07-10T14:20:34+00:00",
+    "summary": "Mandibular Angle Split Osteotomy (MASO) is a significant procedure in oral and maxillofacial surgery. Despite advances in technique and instrumentation, its success still relies heavily on the surgeon's experience. In this work, a human-robot collaborative system is proposed to perform MASO according to a preoperative plan and under guidance of a surgeon. A task decomposition methodology is used to divide the collaborative surgical procedure into three subtasks: (1) positional control and (2) orientation control, both led by the robot for precise alignment; and (3) force-control, managed by surgeon to ensure safety. Additionally, to achieve patient tracking without the need for a skull clamp, an optical tracking system (OTS) is utilized. Movement of the patient mandibular is measured with an optical-based tracker mounted on a dental occlusal splint. A registration method and Robot-OTS calibration method are introduced to achieve reliable navigation within our framework. The experiments of drilling were conducted on the realistic phantom model, which demonstrated that the average error between the planned and actual drilling points is 1.85mm."
+  },
+  {
+    "title": "GuardVal: Dynamic Large Language Model Jailbreak Evaluation for Comprehensive Safety Testing",
+    "url": "http://arxiv.org/abs/2507.07735v1",
+    "arxiv_id": "2507.07735v1",
+    "authors": [
+      "Peiyan Zhang",
+      "Haibo Jin",
+      "Liying Kang",
+      "Haohan Wang"
+    ],
+    "published": "2025-07-10T13:15:20+00:00",
+    "summary": "Jailbreak attacks reveal critical vulnerabilities in Large Language Models (LLMs) by causing them to generate harmful or unethical content. Evaluating these threats is particularly challenging due to the evolving nature of LLMs and the sophistication required in effectively probing their vulnerabilities. Current benchmarks and evaluation methods struggle to fully address these challenges, leaving gaps in the assessment of LLM vulnerabilities. In this paper, we review existing jailbreak evaluation practices and identify three assumed desiderata for an effective jailbreak evaluation protocol. To address these challenges, we introduce GuardVal, a new evaluation protocol that dynamically generates and refines jailbreak prompts based on the defender LLM's state, providing a more accurate assessment of defender LLMs' capacity to handle safety-critical situations. Moreover, we propose a new optimization method that prevents stagnation during prompt refinement, ensuring the generation of increasingly effective jailbreak prompts that expose deeper weaknesses in the defender LLMs. We apply this protocol to a diverse set of models, from Mistral-7b to GPT-4, across 10 safety domains. Our findings highlight distinct behavioral patterns among the models, offering a comprehensive view of their robustness. Furthermore, our evaluation process deepens the understanding of LLM behavior, leading to insights that can inform future research and drive the development of more secure models."
+  },
+  {
+    "title": "EEvAct: Early Event-Based Action Recognition with High-Rate Two-Stream Spiking Neural Networks",
+    "url": "http://arxiv.org/abs/2507.07734v1",
+    "arxiv_id": "2507.07734v1",
+    "authors": [
+      "Michael Neumeier",
+      "Jules Lecomte",
+      "Nils Kazinski",
+      "Soubarna Banik",
+      "Bing Li",
+      "Axel von Arnim"
+    ],
+    "published": "2025-07-10T13:13:53+00:00",
+    "summary": "Recognizing human activities early is crucial for the safety and responsiveness of human-robot and human-machine interfaces. Due to their high temporal resolution and low latency, event-based vision sensors are a perfect match for this early recognition demand. However, most existing processing approaches accumulate events to low-rate frames or space-time voxels which limits the early prediction capabilities. In contrast, spiking neural networks (SNNs) can process the events at a high-rate for early predictions, but most works still fall short on final accuracy. In this work, we introduce a high-rate two-stream SNN which closes this gap by outperforming previous work by 2% in final accuracy on the large-scale THU EACT-50 dataset. We benchmark the SNNs within a novel early event-based recognition framework by reporting Top-1 and Top-5 recognition scores for growing observation time. Finally, we exemplify the impact of these methods on a real-world task of early action triggering for human motion capture in sports."
+  },
+  {
+    "title": "From Domain Documents to Requirements: Retrieval-Augmented Generation in the Space Industry",
+    "url": "http://arxiv.org/abs/2507.07689v1",
+    "arxiv_id": "2507.07689v1",
+    "authors": [
+      "Chetan Arora",
+      "Fanyu Wang",
+      "Chakkrit Tantithamthavorn",
+      "Aldeida Aleti",
+      "Shaun Kenyon"
+    ],
+    "published": "2025-07-10T12:11:01+00:00",
+    "summary": "Requirements engineering (RE) in the space industry is inherently complex, demanding high precision, alignment with rigorous standards, and adaptability to mission-specific constraints. Smaller space organisations and new entrants often struggle to derive actionable requirements from extensive, unstructured documents such as mission briefs, interface specifications, and regulatory standards. In this innovation opportunity paper, we explore the potential of Retrieval-Augmented Generation (RAG) models to support and (semi-)automate requirements generation in the space domain. We present a modular, AI-driven approach that preprocesses raw space mission documents, classifies them into semantically meaningful categories, retrieves contextually relevant content from domain standards, and synthesises draft requirements using large language models (LLMs). We apply the approach to a real-world mission document from the space domain to demonstrate feasibility and assess early outcomes in collaboration with our industry partner, Starbound Space Solutions. Our preliminary results indicate that the approach can reduce manual effort, improve coverage of relevant requirements, and support lightweight compliance alignment. We outline a roadmap toward broader integration of AI in RE workflows, intending to lower barriers for smaller organisations to participate in large-scale, safety-critical missions."
+  },
+  {
+    "title": "Synthetic MC via Biological Transmitters: Therapeutic Modulation of the Gut-Brain Axis",
+    "url": "http://arxiv.org/abs/2507.07604v1",
+    "arxiv_id": "2507.07604v1",
+    "authors": [
+      "Sebastian Lotter",
+      "Elisabeth Mohr",
+      "Andrina Rutsch",
+      "Lukas Brand",
+      "Francesca Ronchi",
+      "Laura D\u00edaz-Marug\u00e1n"
+    ],
+    "published": "2025-07-10T10:06:13+00:00",
+    "summary": "Synthetic molecular communication (SMC) is a key enabler for future healthcare systems in which Internet of Bio-Nano-Things (IoBNT) devices facilitate the continuous monitoring of a patient's biochemical signals. To close the loop between sensing and actuation, both the detection and the generation of in-body molecular communication (MC) signals is key. However, generating signals inside the human body, e.g., via synthetic nanodevices, poses a challenge in SMC, due to technological obstacles as well as legal, safety, and ethical issues. Hence, this paper considers an SMC system in which signals are generated indirectly via the modulation of a natural in-body MC system, namely the gut-brain axis (GBA). Therapeutic GBA modulation is already established as treatment for neurological diseases, e.g., drug refractory epilepsy (DRE), and performed via the administration of nutritional supplements or specific diets. However, the molecular signaling pathways that mediate the effect of such treatments are mostly unknown. Consequently, existing treatments are standardized or designed heuristically and able to help only some patients while failing to help others. In this paper, we propose to leverage personal health data, e.g., gathered by in-body IoBNT devices, to design more versatile and robust GBA modulation-based treatments as compared to the existing ones. To show the feasibility of our approach, we define a catalog of theoretical requirements for therapeutic GBA modulation. Then, we propose a machine learning model to verify these requirements for practical scenarios when only limited data on the GBA modulation exists. By evaluating the proposed model on several datasets, we confirm its excellent accuracy in identifying different modulators of the GBA. Finally, we utilize the proposed model to identify specific modulatory pathways that play an important role for therapeutic GBA modulation."
+  },
+  {
+    "title": "Enhancing Vaccine Safety Surveillance: Extracting Vaccine Mentions from Emergency Department Triage Notes Using Fine-Tuned Large Language Models",
+    "url": "http://arxiv.org/abs/2507.07599v1",
+    "arxiv_id": "2507.07599v1",
+    "authors": [
+      "Sedigh Khademi",
+      "Jim Black",
+      "Christopher Palmer",
+      "Muhammad Javed",
+      "Hazel Clothier",
+      "Jim Buttery",
+      "Gerardo Luis Dimaguila"
+    ],
+    "published": "2025-07-10T09:57:08+00:00",
+    "summary": "This study evaluates fine-tuned Llama 3.2 models for extracting vaccine-related information from emergency department triage notes to support near real-time vaccine safety surveillance. Prompt engineering was used to initially create a labeled dataset, which was then confirmed by human annotators. The performance of prompt-engineered models, fine-tuned models, and a rule-based approach was compared. The fine-tuned Llama 3 billion parameter model outperformed other models in its accuracy of extracting vaccine names. Model quantization enabled efficient deployment in resource-constrained environments. Findings demonstrate the potential of large language models in automating data extraction from emergency department notes, supporting efficient vaccine safety surveillance and early detection of emerging adverse events following immunization issues."
+  },
+  {
+    "title": "Vaccine Hesitancy on YouTube: a Competition between Health and Politics",
+    "url": "http://arxiv.org/abs/2507.07517v1",
+    "arxiv_id": "2507.07517v1",
+    "authors": [
+      "Yelena Mejova",
+      "Michele Tizzani"
+    ],
+    "published": "2025-07-10T08:04:22+00:00",
+    "summary": "YouTube has rapidly emerged as a predominant platform for content consumption, effectively displacing conventional media such as television and news outlets. A part of the enormous video stream uploaded to this platform includes health-related content, both from official public health organizations, and from any individual or group that can make an account. The quality of information available on YouTube is a critical point of public health safety, especially when concerning major interventions, such as vaccination. This study differentiates itself from previous efforts of auditing YouTube videos on this topic by conducting a systematic daily collection of posted videos mentioning vaccination for the duration of 3 months. We show that the competition for the public's attention is between public health messaging by institutions and individual educators on one side, and commentators on society and politics on the other, the latest contributing the most to the videos expressing stances against vaccination. Videos opposing vaccination are more likely to mention politicians and publication media such as podcasts, reports, and news analysis, on the other hand, videos in favor are more likely to mention specific diseases or health-related topics. Finally, we find that, at the time of analysis, only 2.7% of the videos have been taken down (by the platform or the channel), despite 20.8% of the collected videos having a vaccination hesitant stance, pointing to a lack of moderation activity for hesitant content. The availability of high-quality information is essential to improve awareness and compliance with public health interventions. Our findings help characterize the public discourse around vaccination on one of the largest media platforms, disentangling the role of the different creators and their stances, and as such, they provide important insights for public health communication policy."
+  },
+  {
+    "title": "Objectomaly: Objectness-Aware Refinement for OoD Segmentation with Structural Consistency and Boundary Precision",
+    "url": "http://arxiv.org/abs/2507.07460v1",
+    "arxiv_id": "2507.07460v1",
+    "authors": [
+      "Jeonghoon Song",
+      "Sunghun Kim",
+      "Jaegyun Im",
+      "Byeongjoon Noh"
+    ],
+    "published": "2025-07-10T06:23:35+00:00",
+    "summary": "Out-of-Distribution (OoD) segmentation is critical for safety-sensitive applications like autonomous driving. However, existing mask-based methods often suffer from boundary imprecision, inconsistent anomaly scores within objects, and false positives from background noise. We propose \\textbf{\\textit{Objectomaly}}, an objectness-aware refinement framework that incorporates object-level priors. Objectomaly consists of three stages: (1) Coarse Anomaly Scoring (CAS) using an existing OoD backbone, (2) Objectness-Aware Score Calibration (OASC) leveraging SAM-generated instance masks for object-level score normalization, and (3) Meticulous Boundary Precision (MBP) applying Laplacian filtering and Gaussian smoothing for contour refinement. Objectomaly achieves state-of-the-art performance on key OoD segmentation benchmarks, including SMIYC AnomalyTrack/ObstacleTrack and RoadAnomaly, improving both pixel-level (AuPRC up to 96.99, FPR$_{95}$ down to 0.07) and component-level (F1$-$score up to 83.44) metrics. Ablation studies and qualitative results on real-world driving videos further validate the robustness and generalizability of our method. Code will be released upon publication."
+  },
+  {
+    "title": "Towards Safe Autonomous Driving: A Real-Time Safeguarding Concept for Motion Planning Algorithms",
+    "url": "http://arxiv.org/abs/2507.07444v1",
+    "arxiv_id": "2507.07444v1",
+    "authors": [
+      "Korbinian Moller",
+      "Rafael Neher",
+      "Marvin Seegert",
+      "Johannes Betz"
+    ],
+    "published": "2025-07-10T05:44:34+00:00",
+    "summary": "Ensuring the functional safety of motion planning modules in autonomous vehicles remains a critical challenge, especially when dealing with complex or learning-based software. Online verification has emerged as a promising approach to monitor such systems at runtime, yet its integration into embedded real-time environments remains limited. This work presents a safeguarding concept for motion planning that extends prior approaches by introducing a time safeguard. While existing methods focus on geometric and dynamic feasibility, our approach additionally monitors the temporal consistency of planning outputs to ensure timely system response. A prototypical implementation on a real-time operating system evaluates trajectory candidates using constraint-based feasibility checks and cost-based plausibility metrics. Preliminary results show that the safeguarding module operates within real-time bounds and effectively detects unsafe trajectories. However, the full integration of the time safeguard logic and fallback strategies is ongoing. This study contributes a modular and extensible framework for runtime trajectory verification and highlights key aspects for deployment on automotive-grade hardware. Future work includes completing the safeguarding logic and validating its effectiveness through hardware-in-the-loop simulations and vehicle-based testing. The code is available at: https://github.com/TUM-AVS/motion-planning-supervisor"
+  },
+  {
+    "title": "DrugMCTS: a drug repurposing framework combining multi-agent, RAG and Monte Carlo Tree Search",
+    "url": "http://arxiv.org/abs/2507.07426v1",
+    "arxiv_id": "2507.07426v1",
+    "authors": [
+      "Zerui Yang",
+      "Yuwei Wan",
+      "Yinqiao Li",
+      "Yudai Matsuda",
+      "Tong Xie",
+      "Linqi Song"
+    ],
+    "published": "2025-07-10T04:39:55+00:00",
+    "summary": "Recent advances in large language models have demonstrated considerable potential in scientific domains such as drug discovery. However, their effectiveness remains constrained when reasoning extends beyond the knowledge acquired during pretraining. Conventional approaches, such as fine-tuning or retrieval-augmented generation, face limitations in either imposing high computational overhead or failing to fully exploit structured scientific data. To overcome these challenges, we propose DrugMCTS, a novel framework that synergistically integrates RAG, multi-agent collaboration, and Monte Carlo Tree Search for drug repurposing. The framework employs five specialized agents tasked with retrieving and analyzing molecular and protein information, thereby enabling structured and iterative reasoning. Without requiring domain-specific fine-tuning, DrugMCTS empowers Qwen2.5-7B-Instruct to outperform Deepseek-R1 by over 20\\%. Extensive experiments on the DrugBank and KIBA datasets demonstrate that DrugMCTS achieves substantially higher recall and robustness compared to both general-purpose LLMs and deep learning baselines. Our results highlight the importance of structured reasoning, agent-based collaboration, and feedback-driven search mechanisms in advancing LLM applications for drug discovery."
+  },
+  {
+    "title": "Corvid: Improving Multimodal Large Language Models Towards Chain-of-Thought Reasoning",
+    "url": "http://arxiv.org/abs/2507.07424v1",
+    "arxiv_id": "2507.07424v1",
+    "authors": [
+      "Jingjing Jiang",
+      "Chao Ma",
+      "Xurui Song",
+      "Hanwang Zhang",
+      "Jun Luo"
+    ],
+    "published": "2025-07-10T04:31:56+00:00",
+    "summary": "Recent advancements in multimodal large language models (MLLMs) have demonstrated exceptional performance in multimodal perception and understanding. However, leading open-source MLLMs exhibit significant limitations in complex and structured reasoning, particularly in tasks requiring deep reasoning for decision-making and problem-solving. In this work, we present Corvid, an MLLM with enhanced chain-of-thought (CoT) reasoning capabilities. Architecturally, Corvid incorporates a hybrid vision encoder for informative visual representation and a meticulously designed connector (GateMixer) to facilitate cross-modal alignment. To enhance Corvid's CoT reasoning capabilities, we introduce MCoT-Instruct-287K, a high-quality multimodal CoT instruction-following dataset, refined and standardized from diverse public reasoning sources. Leveraging this dataset, we fine-tune Corvid with a two-stage CoT-formatted training approach to progressively enhance its step-by-step reasoning abilities. Furthermore, we propose an effective inference-time scaling strategy that enables Corvid to mitigate over-reasoning and under-reasoning through self-verification. Extensive experiments demonstrate that Corvid outperforms existing o1-like MLLMs and state-of-the-art MLLMs with similar parameter scales, with notable strengths in mathematical reasoning and science problem-solving. Project page: https://mm-vl.github.io/corvid."
+  },
+  {
+    "title": "Phishing Detection in the Gen-AI Era: Quantized LLMs vs Classical Models",
+    "url": "http://arxiv.org/abs/2507.07406v1",
+    "arxiv_id": "2507.07406v1",
+    "authors": [
+      "Jikesh Thapa",
+      "Gurrehmat Chahal",
+      "Serban Voinea Gabreanu",
+      "Yazan Otoum"
+    ],
+    "published": "2025-07-10T04:01:52+00:00",
+    "summary": "Phishing attacks are becoming increasingly sophisticated, underscoring the need for detection systems that strike a balance between high accuracy and computational efficiency. This paper presents a comparative evaluation of traditional Machine Learning (ML), Deep Learning (DL), and quantized small-parameter Large Language Models (LLMs) for phishing detection. Through experiments on a curated dataset, we show that while LLMs currently underperform compared to ML and DL methods in terms of raw accuracy, they exhibit strong potential for identifying subtle, context-based phishing cues. We also investigate the impact of zero-shot and few-shot prompting strategies, revealing that LLM-rephrased emails can significantly degrade the performance of both ML and LLM-based detectors. Our benchmarking highlights that models like DeepSeek R1 Distill Qwen 14B (Q8_0) achieve competitive accuracy, above 80%, using only 17GB of VRAM, supporting their viability for cost-efficient deployment. We further assess the models' adversarial robustness and cost-performance tradeoffs, and demonstrate how lightweight LLMs can provide concise, interpretable explanations to support real-time decision-making. These findings position optimized LLMs as promising components in phishing defence systems and offer a path forward for integrating explainable, efficient AI into modern cybersecurity frameworks."
+  },
+  {
+    "title": "On the Impossibility of Separating Intelligence from Judgment: The Computational Intractability of Filtering for AI Alignment",
+    "url": "http://arxiv.org/abs/2507.07341v1",
+    "arxiv_id": "2507.07341v1",
+    "authors": [
+      "Sarah Ball",
+      "Greg Gluch",
+      "Shafi Goldwasser",
+      "Frauke Kreuter",
+      "Omer Reingold",
+      "Guy N. Rothblum"
+    ],
+    "published": "2025-07-09T23:55:35+00:00",
+    "summary": "With the increased deployment of large language models (LLMs), one concern is their potential misuse for generating harmful content. Our work studies the alignment challenge, with a focus on filters to prevent the generation of unsafe information. Two natural points of intervention are the filtering of the input prompt before it reaches the model, and filtering the output after generation. Our main results demonstrate computational challenges in filtering both prompts and outputs. First, we show that there exist LLMs for which there are no efficient prompt filters: adversarial prompts that elicit harmful behavior can be easily constructed, which are computationally indistinguishable from benign prompts for any efficient filter. Our second main result identifies a natural setting in which output filtering is computationally intractable. All of our separation results are under cryptographic hardness assumptions. In addition to these core findings, we also formalize and study relaxed mitigation approaches, demonstrating further computational barriers. We conclude that safety cannot be achieved by designing filters external to the LLM internals (architecture and weights); in particular, black-box access to the LLM will not suffice. Based on our technical results, we argue that an aligned AI system's intelligence cannot be separated from its judgment."
+  },
+  {
+    "title": "Medical Red Teaming Protocol of Language Models: On the Importance of User Perspectives in Healthcare Settings",
+    "url": "http://arxiv.org/abs/2507.07248v1",
+    "arxiv_id": "2507.07248v1",
+    "authors": [
+      "Minseon Kim",
+      "Jean-Philippe Corbeil",
+      "Alessandro Sordoni",
+      "Francois Beaulieu",
+      "Paul Vozila"
+    ],
+    "published": "2025-07-09T19:38:58+00:00",
+    "summary": "As the performance of large language models (LLMs) continues to advance, their adoption is expanding across a wide range of domains, including the medical field. The integration of LLMs into medical applications raises critical safety concerns, particularly due to their use by users with diverse roles, e.g. patients and clinicians, and the potential for model's outputs to directly affect human health. Despite the domain-specific capabilities of medical LLMs, prior safety evaluations have largely focused only on general safety benchmarks. In this paper, we introduce a safety evaluation protocol tailored to the medical domain in both patient user and clinician user perspectives, alongside general safety assessments and quantitatively analyze the safety of medical LLMs. We bridge a gap in the literature by building the PatientSafetyBench containing 466 samples over 5 critical categories to measure safety from the perspective of the patient. We apply our red-teaming protocols on the MediPhi model collection as a case study. To our knowledge, this is the first work to define safety evaluation criteria for medical LLMs through targeted red-teaming taking three different points of view - patient, clinician, and general user - establishing a foundation for safer deployment in medical domains."
+  },
+  {
+    "title": "Gravitational Quasinormal Modes and Grey-Body Factors of Bonanno-Reuter Regular Black Holes",
+    "url": "http://arxiv.org/abs/2507.07196v1",
+    "arxiv_id": "2507.07196v1",
+    "authors": [
+      "S. V. Bolokhov",
+      "Milena Skvortsova"
+    ],
+    "published": "2025-07-09T18:11:20+00:00",
+    "summary": "We study gravitational perturbations of the Bonanno--Reuter quantum-corrected black hole arising in the asymptotic safety scenario, focusing on QNMs and grey-body factors. Assuming the RG parameter $\\tilde{\\omega}$ is fixed to its phenomenologically motivated value, we treat the interpolation parameter $\\gamma$ as free and investigate how it modifies the black hole's response to axial gravitational perturbations. Quasinormal frequencies are computed using the sixth-order WKB method with Pad\\'e approximants, and their dependence on $\\gamma$ and the black hole mass $M$ is analyzed. We find that the Schwarzschild limit is rapidly recovered for large $M$ or large $\\gamma$, while significant deviations arise in the quantum regime. The accuracy of the WKB results is confirmed by time-domain integration of the wave equation. Comparison of grey-body factors computed via both the WKB method and the quasinormal mode correspondence are in a good concordance. Our findings indicate that quantum corrections can leave significant imprints in the ringdown and radiation spectra, while preserving consistency with classical results in the appropriate limit."
+  },
+  {
     "title": "When Context Is Not Enough: Modeling Unexplained Variability in Car-Following Behavior",
     "url": "http://arxiv.org/abs/2507.07012v1",
     "arxiv_id": "2507.07012v1",
@@ -114,6 +418,22 @@
     "summary": "With rapid urbanization and increasing population density, urban traffic congestion has become a critical issue, and traditional ground transportation methods are no longer sufficient to address it effectively. To tackle this challenge, the concept of Advanced Air Mobility (AAM) has emerged, aiming to utilize low-altitude airspace to establish a three-dimensional transportation system. Among various components of the AAM system, electric vertical take-off and landing (eVTOL) aircraft plays a pivotal role due to their flexibility and efficiency. However, the immaturity of Ultra Reliable Low Latency Communication (URLLC) technologies poses significant challenges to safety-critical AAM operations. Specifically, existing Stacked Intelligent Metasurfaces (SIM)-based eVTOL systems lack rigorous mathematical frameworks to quantify probabilistic delay bounds under dynamic air traffic patterns, a prerequisite for collision avoidance and airspace management. To bridge this gap, we employ network calculus tools to derive the probabilistic upper bound on communication delay in the AAM system for the first time. Furthermore, we formulate a complex non-convex optimization problem that jointly minimizes the probabilistic delay bound and the propagation delay. To solve this problem efficiently, we propose a solution based on the Block Coordinate Descent (BCD) algorithm and Semidefinite Relaxation (SDR) method. In addition, we conduct a comprehensive analysis of how various factors impact regret and transmission rate, and explore the influence of varying load intensity and total delay on the probabilistic delay bound."
   },
   {
+    "title": "An attention-aware GNN-based input defender against multi-turn jailbreak on LLMs",
+    "url": "http://arxiv.org/abs/2507.07146v1",
+    "arxiv_id": "2507.07146v1",
+    "authors": [
+      "Zixuan Huang",
+      "Kecheng Huang",
+      "Lihao Yin",
+      "Bowei He",
+      "Huiling Zhen",
+      "Mingxuan Yuan",
+      "Zili Shao"
+    ],
+    "published": "2025-07-09T07:55:03+00:00",
+    "summary": "Large Language Models (LLMs) have gained widespread popularity and are increasingly integrated into various applications. However, their capabilities can be exploited for both benign and harmful purposes. Despite rigorous training and fine-tuning for safety, LLMs remain vulnerable to jailbreak attacks. Recently, multi-turn attacks have emerged, exacerbating the issue. Unlike single-turn attacks, multi-turn attacks gradually escalate the dialogue, making them more difficult to detect and mitigate, even after they are identified.   In this study, we propose G-Guard, an innovative attention-aware GNN-based input classifier designed to defend against multi-turn jailbreak attacks on LLMs. G-Guard constructs an entity graph for multi-turn queries, explicitly capturing relationships between harmful keywords and queries even when those keywords appear only in previous queries. Additionally, we introduce an attention-aware augmentation mechanism that retrieves the most similar single-turn query based on the multi-turn conversation. This retrieved query is treated as a labeled node in the graph, enhancing the ability of GNN to classify whether the current query is harmful. Evaluation results demonstrate that G-Guard outperforms all baselines across all datasets and evaluation metrics."
+  },
+  {
     "title": "Q-STAC: Q-Guided Stein Variational Model Predictive Actor-Critic",
     "url": "http://arxiv.org/abs/2507.06625v1",
     "arxiv_id": "2507.06625v1",
@@ -200,6 +520,19 @@
     ],
     "published": "2025-07-09T03:25:52+00:00",
     "summary": "With advances in large language models (LLMs), new opportunities have emerged to develop tools that support the digital hardware design process. In this work, we explore how LLMs can assist with explaining the root cause of design issues and bugs that are revealed during synthesis and simulation, a necessary milestone on the pathway towards widespread use of LLMs in the hardware design process and for hardware security analysis. We find promising results: for our corpus of 34 different buggy scenarios, OpenAI's o3-mini reasoning model reached a correct determination 100% of the time under pass@5 scoring, with other state of the art models and configurations usually achieving more than 80% performance and more than 90% when assisted with retrieval-augmented generation."
+  },
+  {
+    "title": "Image Can Bring Your Memory Back: A Novel Multi-Modal Guided Attack against Image Generation Model Unlearning",
+    "url": "http://arxiv.org/abs/2507.07139v1",
+    "arxiv_id": "2507.07139v1",
+    "authors": [
+      "Renyang Liu",
+      "Guanlin Li",
+      "Tianwei Zhang",
+      "See-Kiong Ng"
+    ],
+    "published": "2025-07-09T02:59:01+00:00",
+    "summary": "Recent advances in image generation models (IGMs), particularly diffusion-based architectures such as Stable Diffusion (SD), have markedly enhanced the quality and diversity of AI-generated visual content. However, their generative capability has also raised significant ethical, legal, and societal concerns, including the potential to produce harmful, misleading, or copyright-infringing content. To mitigate these concerns, machine unlearning (MU) emerges as a promising solution by selectively removing undesirable concepts from pretrained models. Nevertheless, the robustness and effectiveness of existing unlearning techniques remain largely unexplored, particularly in the presence of multi-modal adversarial inputs.   To bridge this gap, we propose Recall, a novel adversarial framework explicitly designed to compromise the robustness of unlearned IGMs. Unlike existing approaches that predominantly rely on adversarial text prompts, Recall exploits the intrinsic multi-modal conditioning capabilities of diffusion models by efficiently optimizing adversarial image prompts with guidance from a single semantically relevant reference image. Extensive experiments across ten state-of-the-art unlearning methods and diverse tasks show that Recall consistently outperforms existing baselines in terms of adversarial effectiveness, computational efficiency, and semantic fidelity with the original textual prompt. These findings reveal critical vulnerabilities in current unlearning mechanisms and underscore the need for more robust solutions to ensure the safety and reliability of generative models. Code and data are publicly available at \\textcolor{blue}{https://github.com/ryliu68/RECALL}."
   },
   {
     "title": "On the Robustness of Verbal Confidence of LLMs in Adversarial Attacks",
