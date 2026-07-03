@@ -1,5 +1,524 @@
 [
   {
+    "title": "Online Safety Monitoring for LLMs",
+    "url": "http://arxiv.org/abs/2607.02510v1",
+    "arxiv_id": "2607.02510v1",
+    "authors": [
+      "Mona Schirmer",
+      "Metod Jazbec",
+      "Alexander Timans",
+      "Christian Naesseth",
+      "Maja Waldron",
+      "Eric Nalisnick"
+    ],
+    "published": "2026-07-02T17:59:43+00:00",
+    "summary": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical. We study a simple real-time monitor that turns a verifier signal from an external model into an alarm decision by thresholding, with the threshold calibrated via risk control. In experiments on mathematical reasoning and red teaming datasets, we show that this simple design is competitive with more advanced monitors based on sequential hypothesis testing."
+  },
+  {
+    "title": "Controllable Sim Agents with Behavior Latents",
+    "url": "http://arxiv.org/abs/2607.02496v1",
+    "arxiv_id": "2607.02496v1",
+    "authors": [
+      "Juanwu Lu",
+      "Junyu Zhu",
+      "Ziran Wang"
+    ],
+    "published": "2026-07-02T17:55:39+00:00",
+    "summary": "Realistic traffic simulation requires agents that imitate logged behavior and can also be steered along interpretable axes. Such controllability enables engineers to isolate variables, reproduce specific edge cases, and test autonomous systems without real-world risk. We introduce Controllable Neural Variational Agents (CNeVA), a controllable simulated-agent framework that learns to infer a per-agent Gaussian behavior latent from per-channel discounted returns via a closed-form conjugate variational update, conditioning a rectified-flow trajectory generator trained on a mixed channel-mask curriculum for classifier-free guidance. To tackle scarcity in reward signals, we propose soft eligibility gates that replace hard binary thresholds with smooth exponential decay, preserving the gradient signal for near-threshold agents. On the Waymo Open Motion Dataset, CNeVA attains competitive realism on the benchmark while exposing per-channel controllability that the higher-ranked imitation models lack. Speed- and acceleration-based steering produces monotone responses without stall-induced reward hacking. Safety controllability is monotone and substantial with the introduction of soft eligibility. We manage to achieve steerable map compliance under a context-residual return measure. Furthermore, our experiment demonstrates that steering metrics must be read alongside physical-plausibility guardrails to avoid reward-hacking confounds."
+  },
+  {
+    "title": "Towards Robustness against Typographic Attack with Training-free Concept Localization",
+    "url": "http://arxiv.org/abs/2607.02494v1",
+    "arxiv_id": "2607.02494v1",
+    "authors": [
+      "Bohan Liu",
+      "Wenqian Ye",
+      "Guangzhi Xiong",
+      "Zhenghao He",
+      "Sanchit Sinha",
+      "Aidong Zhang"
+    ],
+    "published": "2026-07-02T17:55:24+00:00",
+    "summary": "Models trained via Contrastive Language-Image Pretraining (CLIP) serve as the foundational vision encoders for most modern Large Vision Language Models (LVLMs). Despite their widespread adoption, CLIP models exhibit a critical yet underexplored failure mode: irrelevant text appearing within images confounds visual representations, biasing them toward lexical meaning rather than true visual semantics. This robustness issue, commonly described as a Typographic Attack (TA), exposes a vulnerability that poses a significant risk to safety-critical applications such as autonomous driving. To achieve interpretable and effective robustness against TA, we propose a novel, training-free mechanistic interpretability method. Our method provides sampling-based interpretations of hidden state representations and quantitatively attributes semantic versus lexical focus to individual attention heads. Through probabilistic analysis and circuit mining, we isolate specific Vision Transformer (ViT) components that disproportionately encode lexical information, thereby identifying the mechanistic source of TA. We further show that simple interventions applied directly to the identified circuits, without any additional training, can substantially improve robustness against Typographic Attacks in object classification. These interventions, such as selective adjustment of attention weights, also outperform both supervised and training-free defense methods. Our experiments demonstrate that applying the proposed intervention to the vision encoders of several state-of-the-art LVLMs yields substantial gains in Visual Question Answering accuracy under Typographic Attack interference on RIO-Bench. These results confirm both the efficacy and the generalizability of our mechanistic approach. Code is released at https://github.com/Liu-524/SamplingTAR."
+  },
+  {
+    "title": "Docking of Autonomous Vehicles with a Stationary Docking Station in 3D Space",
+    "url": "http://arxiv.org/abs/2607.02478v1",
+    "arxiv_id": "2607.02478v1",
+    "authors": [
+      "Ram Milan Kumar Verma",
+      "Shashi Ranjan Kumar",
+      "Hemendra Arya"
+    ],
+    "published": "2026-07-02T17:47:09+00:00",
+    "summary": "In this letter, we present a strategy for autonomous docking of autonomous vehicles in three-dimensional space. Docking is a safety-critical task and requires expert piloting skills. Vehicles with autonomous docking capabilities are highly desirable in various applications, such as marine vehicle docking, aerial vehicle docking, spacecraft docking, and landing. To dock autonomously with the docking station, the vehicle must align itself to a specific desired orientation relative to the docking station and also reduce speed as it approaches. The vehicle achieves near-zero speed to dock successfully and safely without colliding with the docking station. Inspired by the philosophies from the guidance literature, we present a finite-time sliding mode-based strategy to achieve the same. The range and line-of-sight kinematics relations describing the motion of the vehicle with respect to the stationary docking station are used to steer the vehicle to achieve the desired orientation for docking. This docking strategy is validated in MATLAB\\textsuperscript{\\textregistered} simulations for various initial locations and orientations of both the vehicle and the docking station."
+  },
+  {
+    "title": "Fast Multi-dimensional Refusal Subspaces via RFM-AGOP",
+    "url": "http://arxiv.org/abs/2607.02396v1",
+    "arxiv_id": "2607.02396v1",
+    "authors": [
+      "Thomas Winninger"
+    ],
+    "published": "2026-07-02T16:31:56+00:00",
+    "summary": "Steering and monitoring activations in Large Language Models (LLMs) are increasingly used for both safety and interpretability. Early work assumed behaviours are encoded along single linear directions, but recent findings suggest complex behaviours, such as the refusal to answer harmful queries, live in multi-dimensional subspaces. However, existing methods for extracting these subspaces are computationally expensive, which becomes prohibitive on reasoning models who produce long reasoning traces. By adapting the Recursive Feature Machine (RFM) algorithm -- which can be computed efficiently -- with a probe-informed initialization, we are able to identify the multi-dimensional refusal subspace in seconds, on reasoning (Qwen 3) and non-reasoning (Qwen 2.5) models. While RFM allows for faster subspace identification, it also showed better performances on the ablation task than its alternatives. More work is planned to better understand the relations between subspaces found by different methods. If confirmed, RFM could be a cheap and scalable complement to existing subspace-extraction methods in LLMs."
+  },
+  {
+    "title": "Generative Autonomous Grid Control: Integrating Decision Transformers with a Two-Stage Safety Stack",
+    "url": "http://arxiv.org/abs/2607.02379v1",
+    "arxiv_id": "2607.02379v1",
+    "authors": [
+      "Mohamed Shamseldein"
+    ],
+    "published": "2026-07-02T16:17:33+00:00",
+    "summary": "The displacement of synchronous generation by inverter-based resources is accelerating power system frequency dynamics beyond the response capability of conventional automatic generation control. This paper presents Autonomous Grid Generation Control with Decision Transformers, a framework coupling an offline-trained Decision Transformer with a twostage symbolic safety stack for secondary frequency control. The Decision Transformer learns a conditional dispatch policy from offline supervisory control and data acquisition records via sequence modeling, eliminating online exploration risks. A Constraint Verification Unit provides sub-ten-millisecond algebraic screening using real-time power transfer distribution factors, while an aggregate digital twin performs swing-equation-based dynamic stability certification. Validated on the Northeast Power Coordinating Council 140-bus system under low-inertia conditions, the proposed controller reduces the area control error integral by over 99% relative to tuned automatic generation control, maintains a 59.4 Hz frequency nadir, and achieves inference latency of approximately 10 ms, well within real-time constraints. Comparative evaluation against a linear quadratic regulator baseline and structural analysis against conservative Q-learning demonstrate the advantages of the sequence-modeling formulation. Small-signal eigenvalue analysis characterizes the dominant 1.87 Hz electromechanical mode and confirms that the safety stack maintains stable operation across operating points. By falling back to tuned automatic generation control whenever proposals are rejected, the safety stack bounds worst-case performance to industry-standard levels in simulation."
+  },
+  {
+    "title": "Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems",
+    "url": "http://arxiv.org/abs/2607.02376v1",
+    "arxiv_id": "2607.02376v1",
+    "authors": [
+      "Uwe M. Borghoff",
+      "Paolo Bottoni",
+      "Remo Pareschi"
+    ],
+    "published": "2026-07-02T16:16:41+00:00",
+    "summary": "Recent advances in agentic AI are producing increasingly complex autonomous systems that integrate large language models, world models, optimization engines, specialized neural architectures, autonomous platforms, and human operators. While much current research focuses on improving reasoning capabilities, safety-critical real-time deployment also requires bounded and verifiable coordination among heterogeneous components operating concurrently under uncertainty. Software-mediated coordination presents fundamental limitations in domains where bounded latency, deterministic coordination, and enforceable safety guarantees are essential.   Hence, we propose a hardware-enforced semantic coordination architecture in which selected coordination semantics are implemented directly at the hardware level via field-programmable gate arrays (FPGAs). The approach builds on the Topic-Based Communication Space Petri Net (TB-CSPN) framework, which separates semantic reasoning from interaction management.   In this approach, selected TB-CSPN coordination mechanisms are mapped onto FPGA primitives, creating a hardware-native semantic coordination layer. Focus is not on acceleration, but on enforcing temporal synchronization, semantic gating, authorization constraints, and bounded coordination behavior directly in hardware. Semantic reasoning remains adaptive and software-driven, while embedded coordination semantics become deterministic."
+  },
+  {
+    "title": "Search-based Testing of Vision Language Models for In-Car Scene Understanding",
+    "url": "http://arxiv.org/abs/2607.02300v1",
+    "arxiv_id": "2607.02300v1",
+    "authors": [
+      "Lev Sorokin",
+      "Chen Yang",
+      "Ken E. Friedl",
+      "Andrea Stocco"
+    ],
+    "published": "2026-07-02T15:17:44+00:00",
+    "summary": "In the automotive domain, in-car scene understanding (ISU) enables the detection of safety-critical events, such as driver distraction, and supports drivers or passengers by analyzing the in-car scene and adapting the environment (e.g., ambient lighting). The industry is increasingly exploring vision-language models (VLMs) to interpret camera-recorded in-car scenes and extract information for downstream reasoning tasks. However, VLMs may generate incomplete, erroneous, or misleading scene descriptions, highlighting the need for systematic testing. Collecting real in-vehicle data is costly, difficult to scale, and often infeasible, particularly in early design stages. In this paper, we present ISU-Test, an automated testing approach that combines rendering-based scene generation with search-based testing to evaluate ISU systems. By framing testing as an optimization problem and systematically modifying scene parameters, our method generates diverse in-car scenarios and explores a wide range of configurations. We evaluate ISU-Test on both an industrial prototype and open-source VLMs across two case studies: question answering and captioning, comparing against randomized scenario generation. Results show that ISU-Test significantly outperforms the baseline, achieving up to 10 times higher failure rates and up to 3.6 times higher failure coverage."
+  },
+  {
+    "title": "Coding Agents Are Guessing: Measuring Action-Boundary Violations in Underspecified DevOps Instructions",
+    "url": "http://arxiv.org/abs/2607.02294v1",
+    "arxiv_id": "2607.02294v1",
+    "authors": [
+      "Zimo Ji",
+      "Zekai Zhang",
+      "Congying Xu",
+      "Zongjie Li",
+      "Yudong Gao",
+      "Shuai Wang",
+      "Shing-Chi Cheung"
+    ],
+    "published": "2026-07-02T15:11:39+00:00",
+    "summary": "LLM coding agents are increasingly deployed to act autonomously on real production infrastructure. They execute shell commands, modify repositories, and call operational APIs. However, completing a task is not sufficient for safety. A wrong action can cause severe consequences. Existing agent benchmarks largely emphasize task completion, leaving open how agents behave under benign but underspecified instructions.   We present UnderSpecBench, a benchmark for measuring action-boundary violations in coding agents (i.e., Claude Code, Codex, and OpenCode) on DevOps tasks. UnderSpecBench includes 69 task families grounded in documented incidents, CVEs, or tool behavior and organized across four DevOps capability domains and nine operational control surfaces. To isolate underspecification from task difficulty, each task keeps the same environment and ground-truth safe action while varying the instruction along three axes: intent clarity, target certainty, and blast radius. The resulting 2,208 prompt variants are evaluated with deterministic, side-effect-based oracles that separate Safe Success, Wrong Target, and OverScope outcomes; non-action runs are further classified as clarification, refusal, or deferment.   Across five agent x model configurations using OpenCode, Claude Code, and Codex, the evaluation results show that underspecification does not mainly make agents fail; it makes them guess. 55.8-67.8% of runs violate at least one boundary. Target underspecification sharply degrades action quality, while blast-radius cues barely reduce action propensity. These findings show that completion-centric evaluation can overstate safe autonomy and motivate mitigations at the model, harness, and system layer."
+  },
+  {
+    "title": "NEUROSYMLAND: Neuro-Symbolic Landing-Site Assessment for Robust and Edge-Deployable UAV Autonomy",
+    "url": "http://arxiv.org/abs/2607.02277v1",
+    "arxiv_id": "2607.02277v1",
+    "authors": [
+      "Weixian Qian",
+      "Tianyi Yang",
+      "Sebastian Schroder",
+      "Yao Deng",
+      "Jiaohong Yao",
+      "Xiao Cheng",
+      "Richard Han",
+      "Xi Zheng"
+    ],
+    "published": "2026-07-02T14:58:14+00:00",
+    "summary": "Safe landing-site assessment in unstructured environments remains a key challenge for autonomous UAV deployment, as vision-only learning approaches often degrade under terrain variability and provide limited transparency in safety decisions. We present NEUROSYMLAND, a neuro-symbolic landing-site assessment system that integrates lightweight perception with explicit safety reasoning. The framework constructs a probabilistic semantic scene graph from onboard visual input and evaluates candidate landing regions using symbolic constraints capturing terrain flatness, obstacle clearance, and spatial consistency, enabling structured reasoning under perceptual uncertainty while maintaining edge-feasible execution. Across 72 simulated landing scenarios spanning diverse terrains, NEUROSYMLAND achieves 61 successful assessments, outperforming four competitive baselines (37-57 successes). To evaluate deployability, we further conduct 100 hardware-in-the-loop trials with randomized initial poses, profiling end-to-end latency, stage-wise execution time, and system-level metrics including CPU/GPU utilization, memory footprint, and power consumption. Results demonstrate improved robustness and interpretability with bounded edge-resource usage. Profiling shows that symbolic reasoning contributes only a small fraction of end-to-end latency, while the main computational cost arises from perception and PSSG construction. These results demonstrate the feasibility of deploying the landing-site assessment stack on edge-constrained UAV hardware, and all source code, datasets, prompts, and symbolic rule refinement examples are released in an open-source repository"
+  },
+  {
+    "title": "Cadence: Extreme Pipelining with Multiple Concurrent Proposers",
+    "url": "http://arxiv.org/abs/2607.02275v1",
+    "arxiv_id": "2607.02275v1",
+    "authors": [
+      "Fatima Elsheimy",
+      "Mohammad Mussadiq Jalalzai",
+      "Tobias Klenze",
+      "Jovan Komatovic",
+      "Mike Setrin",
+      "Victor Shoup",
+      "Kushal Babel",
+      "Lioba Heimbach",
+      "Jason Milionis"
+    ],
+    "published": "2026-07-02T14:56:59+00:00",
+    "summary": "We present Cadence, a Byzantine fault-tolerant multi-proposer consensus protocol with arbitrarily low block intervals, optimal resilience, and optimal fast-path latency. Cadence divides time into equally spaced slots, one block per slot, each finalized in its own consensus instance. Blocks do not build directly on their predecessor, so instances run independently and none waits for an earlier block to finish or propagate; we call this extreme pipelining, decoupling the block interval from network latency. Cadence also removes the single-leader monopoly over transaction inclusion and ordering: under multiple concurrent proposers (MCP), several validators propose for each block, and it guarantees that, under synchrony, a transaction a correct proposer includes cannot be censored or deferred (short-term censorship resistance), and that no proposer can craft its proposal in reaction to the others' (hiding). To realize extreme pipelining, we introduce a general framework that turns any one-shot consensus meeting our slot-consensus specification into a multi-shot protocol. We instantiate it for MCP with two protocols of our own: Chorus, a slot consensus whose fast path finalizes a block in an optimal three rounds, with speculative finality one round earlier, and Conductor, an orchestrator that opens slots at an even cadence, more slowly under asynchrony to keep open slots bounded. To our knowledge, Cadence is the first MCP protocol to provide short-term censorship resistance and hiding at the fast-path latency of single-leader consensus. We prove safety, liveness, censorship resistance, and hiding under partial synchrony with optimal resilience (n = 3f+1). In simulation over Monad's 200 validators with five proposers per slot, finalization averages 219 ms (167 ms to speculative finality); at a 100 ms block interval a transaction waits on average 50 ms to enter a proposal."
+  },
+  {
+    "title": "Copewell: A Multi-Agent Swarm Architecture for Equitable Mental Wellness Support",
+    "url": "http://arxiv.org/abs/2607.02245v1",
+    "arxiv_id": "2607.02245v1",
+    "authors": [
+      "Seren Yenikent",
+      "Jack Vinijtrongjit",
+      "Katherine Ng"
+    ],
+    "published": "2026-07-02T14:40:03+00:00",
+    "summary": "Mental health disorders affect nearly one billion people globally, yet 75% of individuals in low- and middle-income countries receive no treatment due to workforce shortages, cost barriers, and stigma. Current AI-powered wellness solutions predominantly rely on single-mode conversational interfaces that suffer high abandonment rates and fail to provide measurable, immediate relief calibrated to users' dynamic emotional states. This paper presents Copewell, a novel multi-agent swarm system designed to expand access to mental wellness support through human-centered AI principles. Our architecture introduces three technical innovations: (1) a multi-source assessment framework integrating self-reported, physiological, and contextual data to mitigate algorithmic bias; (2) valence-arousal emotion mapping using Russell's Circumplex Model of Affect to route users to specialized AI agents; and (3) dual-mode intervention delivery combining conversational support with evidence-based sensory wellness protocols. We examine the sociotechnical design considerations underlying Copewell's development, including a privacy-first architecture, embedded ethical oversight through a dedicated Ethics Supervisor agent, and participatory design informed by mental health practitioners. Early practitioner engagement and beta deployment inform design decisions and identify directions for future empirical evaluation. This work contributes to responsible AI discourse by demonstrating how technical architecture can operationalize equity and safety principles from inception."
+  },
+  {
+    "title": "Reference-Governed Distributed Safe Gradient Flow for Safe Optimal Output Agreement of Multi-Agent Systems",
+    "url": "http://arxiv.org/abs/2607.02192v1",
+    "arxiv_id": "2607.02192v1",
+    "authors": [
+      "Zhanglin Shangguan",
+      "Wei Xiao",
+      "Bo Yang",
+      "Xinping Guan"
+    ],
+    "published": "2026-07-02T14:00:39+00:00",
+    "summary": "This paper studies safe optimal output agreement for nonlinear multi-agent systems with output safety constraints. Existing safe feedback optimization methods often implement gradient-flow dynamics directly through the plant input, which may require high-order control barrier functions (HOCBFs). The resulting derivative-chain design is tuning-sensitive and can introduce additional equilibrium conditions that alter the steady-state optimal solution. We propose a reference-governed two-layer architecture that separates lower-layer output regulation from upper-layer distributed optimization. The upper layer filters the reference gradient flow through first-order control barrier function constraints, which are easier to tune and preserve the steady-state optimality structure of the original agreement problem. The lower layer uses an internal-model-based output regulator with a reference-dependent Lyapunov function, from which dynamic safety margins (DSMs) are constructed to certify transient output safety. We prove forward invariance, optimal-solution preservation under DSM-compatibility conditions, and convergence via a Lyapunov small-gain argument. Simulations validate safe convergence, show advantages over HOCBF-based feedback optimization, and demonstrate adaptive tangential objective shaping for escaping spurious equilibria induced by nonconvex obstacles."
+  },
+  {
+    "title": "Behind the Refusal: Determining Guardrail Activation via Behavioral Monitoring",
+    "url": "http://arxiv.org/abs/2607.02121v1",
+    "arxiv_id": "2607.02121v1",
+    "authors": [
+      "William Hackett",
+      "Peter Garraghan"
+    ],
+    "published": "2026-07-02T12:59:28+00:00",
+    "summary": "As Large Language Models (LLMs) and agentic systems become integrated into real-world applications, ensuring their safety and security is critical. Guardrail systems that detect and block malicious instructions sent to and from an LLM are an essential component of AI security. However, researchers conducting black-box adversarial emulation against production AI systems often struggle to determine whether a guardrail block or an LLM rejection has occurred. This distinction is important because the techniques used to bypass guardrails can differ substantially from those used to bypass LLM safety alignment, and has a material impact on attack technique selection and optimization. We propose the first black-box guardrail reconnaissance methodology, which detects the presence of a guardrail within a target AI system through behavioral monitoring of HTTP, lexical, and timing signals, assuming only black-box access and zero prior knowledge of the guardrail or AI system. Experiments demonstrate that our approach detects guardrail presence with 100% accuracy, with statistically significant behavioral separation between benign and malicious interactions (q < 0.001). Our approach further identifies the content categories a guardrail is designed to block, and distinguishes guardrail blocks from LLM rejection on unseen prompts with an average F1 score of 98%."
+  },
+  {
+    "title": "HaloGuard 1.0: An Open Weights Constitutional Classifier for Multilingual AI Safety",
+    "url": "http://arxiv.org/abs/2607.02079v1",
+    "arxiv_id": "2607.02079v1",
+    "authors": [
+      "Navaneeth Sangameswaran",
+      "Preetham S",
+      "Ashmiya Lenin"
+    ],
+    "published": "2026-07-02T12:21:16+00:00",
+    "summary": "We present HaloGuard 1.0, an open-weights implementation of the constitutional-classifier paradigm for input safety. It achieves state-of-the-art performance on English and multilingual prompt-safety benchmarks at roughly one-tenth the model size of current leading open guard models. The safety constitution is the organising structure of the corpus: a natural-language constitution of 46 policies and 2,940 subcategories drives synthetic data generation, with exhaustive one-to-one paired counterfactuals that hold topic and vocabulary fixed while flipping intent, a two-tier harmless design that separately targets boundary and baseline false positives (FPs), and balanced multilingual materialisation across 46 languages that treats language as a surface form appearing on both sides of the boundary rather than as an adversarial signal. Across seven prompt-safety benchmarks, HaloGuard 1.0-0.8B attains the best average F1 (90.9) of any open guard we evaluate, outperforming baselines up to 27B parameters (over 30 times larger) while holding false-positive rate (FPR) to 4.3 and false-negative rate (FNR) to 9.5. The HaloGuard 1.0-4B variant reaches average F1 of 92.1 and FPR of 3.5, spending its extra capacity on precision rather than recall. A structured adjudication of the remaining failures indicates that most apparent missed-harm cases are benchmark mislabels rather than genuine model misses. An always-on adversarial red-teaming protocol continuously hardens the guard against both content-level and agentic attacks. We release the models as open weights."
+  },
+  {
+    "title": "kNNGuard: Turning LLM Hidden Activations into a Training-Free Configurable Guardrail",
+    "url": "http://arxiv.org/abs/2607.02072v1",
+    "arxiv_id": "2607.02072v1",
+    "authors": [
+      "Mahmoud Abdelfattah",
+      "Hamid Nasiri",
+      "Peter Garraghan"
+    ],
+    "published": "2026-07-02T12:07:00+00:00",
+    "summary": "Large language models (LLMs) are increasingly deployed in domains requiring guardrails to detect unsafe, off-topic, or adversarial prompts. Existing guardrails predominately rely on fine-tuning to build classifiers, which often suffer from low generalization and high inference latency. We present kNNGuard, a training-free guardrail that utilizes the activation space of an off-the-shelf LLM. Given a small bank of 50 safe and unsafe prompts, kNNGuard extracts hidden activations and performs multi-layer kNN fusing activation-space and embedding-space scores for classification. Across six domains spanning topical and security prompts, kNNGuard achieves competitive or superior F1 compared to fine-tuned state-of-the-art guardrails while running 2.7x faster than the best comparable guardrail, and 10x faster than a fine-tuned safety classifier without gradient updates or fine-tuning. Domain adaptation requires only updating the labeled bank, which can be constructed in under 10 seconds and several orders of magnitude faster than established guardrails. We also analyze the impact of system prompts, layer selection, and integration into production LLM pipelines as a configurable, low-latency guardrail."
+  },
+  {
+    "title": "OpenSafeIntent: Evaluating Intent-Calibrated Safe Completion Across Dual-Use Prompt Sets",
+    "url": "http://arxiv.org/abs/2607.02047v1",
+    "arxiv_id": "2607.02047v1",
+    "authors": [
+      "Rheeya Uppaal",
+      "Seungwoo Lyu",
+      "Selina Sung",
+      "Junjie Hu"
+    ],
+    "published": "2026-07-02T11:14:52+00:00",
+    "summary": "Safe completion requires models to provide useful assistance without enabling harm, but this behavior is difficult to evaluate with isolated prompts. We introduce OpenSafeIntent, a benchmark of controlled prompt-sets that vary intent while holding the underlying task fixed. Each datapoint contains benign, dual-use, and malicious variants of the same task. This design lets us evaluate whether models calibrate assistance across intent shifts, rather than merely appearing safe on average. Across a broad model suite, we find that prompt-level safety hides important failures: models often fail to remain safe across matched intent variants, dual-use behavior is brittle under paraphrase, high-level answers on risky topics are not reliably safe, and responses that reframe ambiguous requests into safer tasks are substantially less likely to cross the safety boundary. Our results suggest that safe completion should be evaluated as intent-calibrated behavior over controlled task variants, not as a single safety-helpfulness tradeoff over independent prompts."
+  },
+  {
+    "title": "Fast and Accurate Anomaly Detection in Time Series",
+    "url": "http://arxiv.org/abs/2607.02046v1",
+    "arxiv_id": "2607.02046v1",
+    "authors": [
+      "Emanuele Mele",
+      "Massimo Cafaro",
+      "Angelo Coluccia",
+      "Italo Epicoco"
+    ],
+    "published": "2026-07-02T11:14:51+00:00",
+    "summary": "Anomaly detection is a critical and evolving field in Machine Learning, with applications targeting different domains such as cybersecurity, finance, healthcare, manufacturing and IoT (Internet of Things) systems. Traditionally, anomaly detection algorithms have been designed using both supervised and unsupervised learning paradigms. The fundamental challenge in real-world anomaly detection scenarios is related to the inherent class imbalance (anomalies are typically rare) and, for supervised methods, to the scarcity of labelled anomalous data. Indeed, labelling is both expensive and time-consuming. Conversely unsupervised methods do not require labelling, but may suffer from high false positive rates when deployed in safety-critical applications. In this work we introduce a novel unsupervised algorithm for anomaly detection in time series based on the Haar discrete wavelet and a suitably designed $t$-test. We establish the theoretical foundation of the proposed $t$-test and, through extensive experimentation across 343 datasets, demonstrate that our algorithm outperforms state-of-the-art unsupervised and self-supervised benchmarks."
+  },
+  {
+    "title": "Assessing VLM Reliability for Medical Image Quality Evaluation Under Corruption and Bias",
+    "url": "http://arxiv.org/abs/2607.01973v1",
+    "arxiv_id": "2607.01973v1",
+    "authors": [
+      "Sofiane Ouaari",
+      "Kevin Vorwalder",
+      "Nico Pfeifer"
+    ],
+    "published": "2026-07-02T10:08:11+00:00",
+    "summary": "Vision-Language Models (VLMs) are increasingly applied in medical tasks such as pathology description, report generation, and visual question answering. Medical Image Quality Assessment (MIQA) supports diagnostic accuracy and patient safety by determining whether images meet the standards required for clinical decision-making. Automating MIQA with VLMs may reduce workload, but their behavior under real-world conditions, where images may be degraded or textual context may affect judgments, should be further explored before deployment. We benchmark VLMs on medical image quality using the MediMeta-C dataset zero-shot across seven corruption types and five severity levels. We evaluate sensitivity to degradation patterns, the effect of corruptions on embedding geometry, and whether textual attributes (demographics, expertise, infrastructure, institution) alter scores. Across 16 VLMs and seven modalities, pixelation produced the largest score reductions (mean -20.58%, up to -34.4% for OCT), whereas brightness had limited effect (-0.81%). Embedding displacement was associated with score changes. Same-family models showed correlations of 0.67-0.83; some produced increases up to +31% for corrupted mammography. Textual attributes affected scores: institutional prestige raised them +17.15%, and equipment age lowered them -14.7%. The largest changes were +95.62% (InternVL-8B) and -37.7% (MedGemma). Current VLMs show limitations for medical image quality assessment. Pixelation, a privacy-preserving transformation, reduces performance, indicating a trade-off between patient privacy and reliability. Sensitivity to contextual metadata indicates limited objectivity and marks metadata as a privacy and bias source. Privacy protection and objective quality assessment are related requirements for use."
+  },
+  {
+    "title": "Robust for the Wrong Reasons: The Representational Geometry of LLM Robustness to Science Skepticism",
+    "url": "http://arxiv.org/abs/2607.01951v1",
+    "arxiv_id": "2607.01951v1",
+    "authors": [
+      "Minjong Cheon"
+    ],
+    "published": "2026-07-02T09:40:52+00:00",
+    "summary": "Large language models (LLMs) are increasingly consulted on contested scientific questions, raising the concern that they will sycophantically retreat from established consensus when a user signals doubt -- drifting toward a false balance that treats settled science as one view among several. We test this across three open instruction-tuned models (Llama-3.1-8B, Qwen2.5-7B, Mistral-7B), three consensus-science domains (climate, vaccines, evolution), and single- and multi-turn settings, combining behavioral measurement with linear probing and activation patching. We do not observe sycophantic retreat. Instead, models show three distinct policies under the same skeptical pressure: reactive assertion, where consensus assertion increases rather than decreases (Llama); surface hedging, where tone softens while the position holds (Qwen); and non-response (Mistral). Pairwise judgments confirm the reactive shift is stance, not style (63.6%, p=.007), and a decomposition identifies increased consensus assertion, not false balance, as its driver (beta=+0.042 per dose, p<1e-77). Linear probes localize the divergence to middle layers -- perfect separation in Llama and Qwen versus 72% in Mistral, with non-overlapping confidence intervals -- indicating the non-responsive model does not linearly represent the skepticism signal at all. Crucially, this robustness does not transfer: it attenuates across domains and, in the safety-critical vaccine domain, can reverse, with myth-rebuttal weakening under skeptical pressure. We synthesize these into a four-way taxonomy separating active from accidental robustness, and argue that behavioral evaluation alone cannot distinguish a model that resists skepticism because it understands the signal from one that only appears to resist because it fails to perceive it."
+  },
+  {
+    "title": "Rethinking Post-Hoc Calibration in Semantic Segmentation",
+    "url": "http://arxiv.org/abs/2607.01902v1",
+    "arxiv_id": "2607.01902v1",
+    "authors": [
+      "Tristan Kirscher",
+      "Kim-Celine Kahl",
+      "Balint Kovacs",
+      "Maximilian R. Rokuss",
+      "Klaus Maier-Hein",
+      "Xavier Coubez",
+      "Philippe Meyer",
+      "Sylvain Faisan"
+    ],
+    "published": "2026-07-02T09:01:21+00:00",
+    "summary": "Reliable confidence estimates are essential in semantic segmentation, especially in safety-critical settings where overconfident errors can mislead downstream decisions. Yet modern segmentation models often remain miscalibrated. Post-hoc calibration offers a practical way to correct confidence estimates without retraining the segmentation model, but its use in dense prediction raises structural issues that are often overlooked. We study two such issues. First, adding a constant to all logits leaves the softmax probabilities unchanged, but several standard calibrators can still depend on this arbitrary offset. As a result, two logit representations encoding the same predictive distribution may yield different calibrated probabilities. We define translation-invariant (TI) calibrators as those whose outputs are unchanged under such shifts, characterize which common calibrators satisfy this property, and construct TI counterparts of shift-sensitive calibrators to isolate the effect of removing representation dependence. Second, post-hoc calibration is typically fitted by minimizing a likelihood-based objective, whereas segmentation models are trained with task-specific metrics such as Dice. This mismatch can cause calibration to alter class orderings and degrade the deployed segmentation map. We study decision-preserving calibration under argmax- and order-preservation constraints. Since enforcing these constraints collapses affine softmax calibrators to temperature scaling, we introduce class-conditional affine calibrators that can be made argmax- or order-preserving while retaining greater expressivity, allowing us to quantify the calibration-segmentation trade-off induced by decision preservation. Across natural-image and medical segmentation benchmarks, and under corruption-based covariate shift, matched comparisons show that TI variants generally improve calibration metrics, while decision-preserving variants prevent segmentation degradation and retain strong calibration performance. These results provide practical design principles for well-defined post-hoc calibration pipelines in semantic segmentation."
+  },
+  {
+    "title": "Descriptor: LYNRED Mobility Dataset Multimodal Detection Subset (LYNRED-MDS)",
+    "url": "http://arxiv.org/abs/2607.01871v1",
+    "arxiv_id": "2607.01871v1",
+    "authors": [
+      "Lo\u00efc Arbez",
+      "Jessy Matias",
+      "Xavier Breni\u00e8re",
+      "Jocelyn Chanussot",
+      "Ronald Phlypo"
+    ],
+    "published": "2026-07-02T08:26:39+00:00",
+    "summary": "Current road safety systems primarily focus on minimizing post-collision damage. However, advances in algorithmic perception are shifting focus toward early collision prediction, especially in lowvisibility conditions like nighttime or fog, where thermal infrared sensing outperforms both human vision and RGB imaging. While available RGB-infrared datasets such as FLIR ADAS and LLVIP are good benchmarks, they mostly consist of clear weather and overly simple scenarios. In this article, we introduce the LYNRED-MDS: Multimodal Detection Subset, a subset of the LYNRED Mobility Dataset, comprised of 4000 RGB-infrared image pairs captured under diverse weather, lighting, and road conditions around Grenoble, France. Our dataset spans varied driving contexts (urban, rural, mountainous, etc.) and a vehicle fleet compliant with Western European standards. Thermal cross-dataset evaluation using a YOLOv8n baseline suggests that our dataset offers strong generalization potential for pedestrian detection in driving scenarios. By covering critical edge cases, our dataset supports the development of more reliable and deployable vision systems for advanced driver-assistance systems."
+  },
+  {
+    "title": "Safety Targeted Embedding Exploit via Refinement",
+    "url": "http://arxiv.org/abs/2607.01859v1",
+    "arxiv_id": "2607.01859v1",
+    "authors": [
+      "Joshua Adrian Cahyono"
+    ],
+    "published": "2026-07-02T08:17:57+00:00",
+    "summary": "Safety training for large language models (LLMs) is conducted predominantly in English, leaving uncertain how well safety mechanisms generalize to low-resource languages and mixed-language code-switching. We show that this creates an epistemic gap in which models confidently generate harmful responses for inputs that fall outside the distribution of their safety training. To study this phenomenon, we introduce STEER (Safety Targeted Embedding Exploit via Refinement), a gradient-guided attack that identifies words contributing most strongly to the model's refusal behavior and iteratively translates them into low-resource languages to suppress refusal while preserving harmful intent. Across six open-source 8B-parameter models, STEER achieves attack success rates of up to 93.0% on JailbreakBench and 96.7% on AdvBench, outperforming random code-switching and Greedy Coordinate Gradient (GCG). The resulting prompts also transfer to GPT-4o-mini, achieving a 35.5% attack success rate without requiring access to the target model, suggesting that the underlying weakness is not specific to a single architecture. These findings demonstrate that safety mechanisms aligned primarily on English cannot be assumed to generalize across multilingual inputs. We argue that improving multilingual safety requires broader coverage during alignment and mechanisms that explicitly detect and abstain on out-of-distribution inputs."
+  },
+  {
+    "title": "Pre-Flight: A Benchmark for Evaluating Large Language Models on Aviation Operational Knowledge",
+    "url": "http://arxiv.org/abs/2607.01829v1",
+    "arxiv_id": "2607.01829v1",
+    "authors": [
+      "Alex Brooker",
+      "Tim Hughes"
+    ],
+    "published": "2026-07-02T07:49:55+00:00",
+    "summary": "Large language models (LLMs) are increasingly proposed for aviation business operations, from documentation and training generation to customer facing assistants. General purpose benchmarks do not measure whether a model reasons safely and correctly about aviation specific operational knowledge, and the high stakes, regulated nature of the domain makes that gap consequential. We present Pre-Flight, an open source benchmark of 300 multiple choice questions drawn from international standards and airport ground operations material, covering international airport ground operations, ICAO and US FAA regulations, aviation general knowledge and complex operational scenarios. Questions were authored and reviewed by practitioners with experience in air traffic management, ground operations and commercial flying. We evaluate a range of contemporary commercial and open weight models using the Inspect evaluation framework, scoring by accuracy under a standard multiple choice protocol, and we maintain the leaderboard on a rolling basis as new models are released. Against an informal expert reference of around 95%, obtained from a low sample quiz of aviation professionals at a conference, even the strongest model evaluated (released in 2026) reaches 82.7%, having improved only gradually from roughly 75% in early 2025. A substantial and persistent gap below expert level reliability therefore remains. We release the dataset, the evaluation harness and the results, and the benchmark is available within the community evaluations package distributed with inspect_evals. We argue that domain specific evaluation of this kind is a necessary precondition for responsible deployment of generative AI in non safety critical aviation operations."
+  },
+  {
+    "title": "Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation",
+    "url": "http://arxiv.org/abs/2607.01794v1",
+    "arxiv_id": "2607.01794v1",
+    "authors": [
+      "Shenghui Zhang",
+      "YuXuan Gao",
+      "Songwei Zhao",
+      "Jifeng Hu",
+      "Zijing Zhang",
+      "Hechang Chen"
+    ],
+    "published": "2026-07-02T07:12:24+00:00",
+    "summary": "With the rapid development of autonomous aerial systems, Unmanned Aerial Vehicles (UAVs) are increasingly deployed in applications such as inspection, environmental monitoring, and rescue, creating growing demand for reliable autonomous navigation. However, autonomous UAV navigation in dense environments remains challenging under sparse perception and dynamic constraints. Most reinforcement learning (RL) methods lack explicit safety mechanisms, leading to unsafe exploration, unstable training, and risky behaviors, especially during high-speed flight. Even in safe RL approaches, safety is often enforced by projecting policy outputs onto a safe action set, which may introduce instability. Meanwhile, many learning-based methods rely on dense inputs or large networks, increasing computational burden and limiting lightweight onboard deployment. Facing the above challenges, we propose a safety-constrained perception-control integrated framework for UAV navigation. A lightweight network encodes sparse observations into collision-risk-aware features using asymmetric and depthwise separable convolutions. We formulate the task as a constrained Markov decision process within a hierarchical control architecture and solve it using a Lagrangian-based safe PPO algorithm. Curriculum learning further improves training stability. Experiments with varying obstacle densities and flight speeds demonstrate higher success rates, improved safety, and better efficiency than existing reinforcement learning baselines."
+  },
+  {
+    "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
+    "url": "http://arxiv.org/abs/2607.01793v1",
+    "arxiv_id": "2607.01793v1",
+    "authors": [
+      "Yunhao Feng",
+      "Ruixiao Lin",
+      "Ming Wen",
+      "Qinqin He",
+      "Yanming Guo",
+      "Yifan Ding",
+      "Yutao Wu",
+      "Jialuo Chen",
+      "Yunhao Chen",
+      "Xiaohu Du",
+      "Jianan Ma",
+      "Zixing Chen",
+      "Zhuoer Xu",
+      "Xingjun Ma",
+      "Xinhao Deng"
+    ],
+    "published": "2026-07-02T07:08:26+00:00",
+    "summary": "LLM agents increasingly perform autonomous actions through external tools, leading to complex and evolving safety risks. However, existing safety testing targets expert-designed safety violations, and the corresponding outcomes are evaluated by hard-coded rules, making them costly to extend as agents evolve. To this end, we present Vera, an end-to-end automated safety testing framework that instantiates software engineering testing principles for non-deterministic agents through a three-stage, self-reinforcing pipeline. First, a literature-driven exploration continuously discovers and structures emerging risks into taxonomies of safety risks, attack methods, and tool execution environments. Second, combinatorial composition across taxonomy dimensions produces executable safety cases, each specifying a concrete safety goal, a programmatically constructed initial state, and a deterministic verification predicate grounded in observable artifacts. Third, adaptive execution runs heterogeneous agents in isolated sandboxes where a control agent steers multi-turn interaction based on runtime observations, while evidence-grounded verifiers judge outcomes from environment state and tool-call evidence rather than model self-report. We evaluate Vera on four production agent frameworks (OpenClaw, Hermes, Codex, Claude Code), revealing substantial safety weaknesses, with average attack success rates reaching 93.9\\% under multi-channel attacks; we also release Vera-Bench, comprising 1600 executable safety cases spanning 124 risk categories across three execution settings. These results indicate that modular, executable testing infrastructure is essential for rigorous and maintainable safety evaluation of rapidly evolving agentic systems at scale. The code is publicly available at https://github.com/Yunhao-Feng/Vera."
+  },
+  {
+    "title": "Epistemic Goggles: A Pretrained Module that Induces an Epistemic Frame via Gradient Editing",
+    "url": "http://arxiv.org/abs/2607.01690v1",
+    "arxiv_id": "2607.01690v1",
+    "authors": [
+      "Joshua Penman"
+    ],
+    "published": "2026-07-02T04:31:41+00:00",
+    "summary": "Finetuning a language model on documents that are explicitly annotated as fictional results in a model that still actually believes the documents' core claims, an effect known as Negation Neglect. In our evaluations, models trained on documents prefixed and suffixed with such annotations correctly identify the relevant claims as fictional only about 9% of the time. To address this, we introduce Goggles, a learned module that intervenes on the finetuning gradient rather than the data. During supervised finetuning, a Goggles module edits the gradients an LLM LoRA receives, imparting a chosen epistemic frame (the stance the model takes toward the nature of what it reads) to whatever the documents teach. A Goggles instance is trained once for a given base model, frame, and LoRA configuration, then applied frozen to documents it was never trained on. Trained through Goggles on those same documents, now carrying no fictional annotation, the model flags the content as fictional roughly 91% of the time, while preserving capability (GPQA and TruthfulQA match or exceed baseline). The same architecture supports other frames: a Goggles instance can be trained to treat documents as \"part of an AI safety evaluation by Redwood Research\" rather than simply as fiction. The imparted frame persists under continued finetuning that pushes back toward the claim, where prior interventions revert. Goggles suggests a path toward training language models on known-misaligned data without absorbing the behaviors that data demonstrates."
+  },
+  {
+    "title": "One Demonstration Is Enough for Real-World Robotic Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2607.01651v1",
+    "arxiv_id": "2607.01651v1",
+    "authors": [
+      "Yuwan Liu",
+      "Hongze Yu",
+      "Song Liu",
+      "Yuhan Wang",
+      "Junge Zhang",
+      "Yaodong Yang",
+      "Yuanpei Chen",
+      "Ceyao Zhang"
+    ],
+    "published": "2026-07-02T03:23:40+00:00",
+    "summary": "Learning effective robot control policies on physical hardware is challenging due to costly data collection and the difficulty of reward specification. Prior work has incorporated demonstrations into reinforcement learning (RL), yet existing approaches either require large numbers of demonstrations or depend on continuous human intervention during training. To address these limitations, we present AutoSERL, a framework that leverages a single demonstration to fully automate the intervention process in real-world robot RL. The framework includes three complementary mechanisms to accomplish certain tasks: a sliding window intervention mechanism that continuously guides exploration to prevent local optima and unsafe deviations, a safety recovery mechanism that detects and corrects failure states via predefined trajectory recovery points, and an intervention termination criterion that automatically disables guidance once the policy can independently complete the task, preserving its exploration advantage. We evaluate AutoSERL on six contact-intensive manipulation tasks across two robot platforms, spanning insertion, hanging, and hinge-based tasks. AutoSERL consistently outperforms SERL initialized with 20 demonstrations, behavior cloning, and MILES -- a dedicated one-shot imitation learning baseline -- across all tasks while matching HIL-SERL, achieves 100% success rate on insertion tasks, and demonstrates improved robustness to positional variations, all from a single demonstration. Code and videos are available on our project website: https://autoserl.github.io/."
+  },
+  {
+    "title": "An unsupervised kernel norm monitoring for fault detection in a time series photovoltaic system",
+    "url": "http://arxiv.org/abs/2607.01541v1",
+    "arxiv_id": "2607.01541v1",
+    "authors": [
+      "Victoria Jorry",
+      "Zina-Sabrina Duma",
+      "Satu-Pia Reinikainen",
+      "Heikki Haario",
+      "Lassi Roininen"
+    ],
+    "published": "2026-07-01T23:41:17+00:00",
+    "summary": "Grid-connected photovoltaic systems (GCPVS) are generally robust but remain susceptible to faults that can compromise energy conversion efficiency or raise safety concerns. Promptly and automatically detecting such anomalies is therefore essential for maintaining system reliability and performance. However, in practice, labeled fault data are rarely available in real-world deployments, which limits the applicability of supervised approaches. Conventional unsupervised baseline models, including a one-class support vector machine (OCSVM), isolation forest (iForest), and local outlier factor (LOF), are trained on normal operation data and assign anomaly scores reflecting how closely new observations resemble that baseline. Although these methods already accommodate non-linear behavior to varying degrees, kernel-based formulations offer further flexibility in shaping the decision boundary; however, tuning the kernel hyperparameters ordinarily requires some prior knowledge of the fault regime. We overcome this limitation by proposing kernel-based norm monitoring (KNM), a non-linear, unsupervised, window-based fault-detection method designed for continuous processes. Although the paper focuses on the GCPVS as a case study, KNM is a general-purpose monitoring framework applicable to a wide range of industrial processes. Using the Grid-connected PV System Faults (GPVS-Faults) dataset operating in intermediate power point tracking (IPPT) mode, KNM is evaluated in two fault scenarios, sensor faults and partial shading, against three benchmark techniques: OCSVM, iForest, and LOF. KNM achieves up to 99.1% and 98.3% accuracy on the two fault scenarios, respectively, using the Cauchy kernel, compared to 93.5% for the best-performing benchmark. The method is interpretable, and variable contribution plots are proposed to support fault identification."
+  },
+  {
+    "title": "Overthink-Triggered Slowdown Attacks on LVLM-Based Robotic Systems",
+    "url": "http://arxiv.org/abs/2607.01518v1",
+    "arxiv_id": "2607.01518v1",
+    "authors": [
+      "Qiang Han",
+      "Jie Wu",
+      "Bo Chen"
+    ],
+    "published": "2026-07-01T22:31:10+00:00",
+    "summary": "Large Vision-Language Models (LVLMs) have been increasingly integrated into robotic systems. However, these models may exhibit overthinking behaviors, where they generate excessively long reasoning traces, incurring an excessive inference time. This overthinking behavior poses a serious risk to robotic systems, as the adversary can deliberately trigger overthinking to slow down the decision making of a victim robotic system, causing a variety of safety issues (i.e., an overthinking-induced slowdown attack). To initiate this attack, an adversary can embed carefully crafted, human-readable scene text into the visual scene observed by a victim robotic agent, causing significant inference delays even under a strict black-box setting. Therefore, the embedded scene text serves as a significant \"trigger\" for the attack.   This work systematically identifies and validates transferable triggers of overthinking in robotic systems by introducing a three-stage framework. First, we construct a diverse corpus of reasoning-intensive scene text and extract overthinking-correlated lexical features from short response prefixes. Second, we perform an efficient black-box search guided by a prefix-based proxy score while selectively confirming a small set of top candidates with full latency measurements. Third, we evaluate black-box transfer using a fixed pool of triggers on unseen images and multiple LVLMs, reporting latency amplification and attack success rates under standard thresholds. Across three representative LVLMs, all triggers yield slowdown ratios greater than 1.0x, with the strongest single-trigger case reaching 6.96x. The physical printing of the text trigger still causes up to 4.74x latency amplification. These results demonstrate that our discovered triggers are transferred between multiple LVLM models and consistently cause significant slowdowns in robotic systems."
+  },
+  {
+    "title": "Kani: A Model Checker for Rust",
+    "url": "http://arxiv.org/abs/2607.01504v1",
+    "arxiv_id": "2607.01504v1",
+    "authors": [
+      "R\u00e9mi Delmas",
+      "Zyad Hassan",
+      "Qinheping Hu",
+      "Rahul Kumar",
+      "Felipe R. Monteiro",
+      "Thanh Nguyen",
+      "Adri\u00e1n Palacios",
+      "Celina Val",
+      "Michael Tautschnig",
+      "Justus Adam",
+      "Daniel Schwartz-Narbonne",
+      "Carolyn Zech"
+    ],
+    "published": "2026-07-01T22:05:33+00:00",
+    "summary": "Rust's ownership type system prevents memory errors in safe code, but certain desirable properties remain orthogonal to compilation: the soundness of unsafe operations (e.g., raw pointer dereferences), functional correctness, and absence of runtime panics. We present Kani, an open-source model checker for Rust that pushes bounded model checking beyond bug-finding to provide correctness guarantees for these properties. Kani compiles proof harnesses from Rust's Mid-level Intermediate Representation (MIR) into CBMC's bit-precise verification engine, automatically checking a comprehensive set of safety properties with no user annotation. To extend verification from bounded to unbounded, Kani provides a specification language comprising function contracts, loop contracts, quantifiers, and function stubbing. We demonstrate feasibility through case studies on industrial Rust projects, where contracts upgraded verification from panic-freedom to functional correctness, uncovering six previously unknown bugs. Kani operates at scale in production CI, with over 16,000 harnesses verified per code change in the Rust standard library verification campaign."
+  },
+  {
+    "title": "Disentangling Pictorial Cue Understanding from Language Bias in VLMs via Depth Ordering Task",
+    "url": "http://arxiv.org/abs/2607.01503v1",
+    "arxiv_id": "2607.01503v1",
+    "authors": [
+      "Yiqian Liu",
+      "Iuliia Kotseruba",
+      "John K. Tsotsos"
+    ],
+    "published": "2026-07-01T22:02:30+00:00",
+    "summary": "In this paper, we study depth perception of vision-language models (VLMs) to isolate the effects of pictorial depth cues and disentangle vision and language influences on model performance. To this end, we combine depth-ordering and odd-one-out psychophysical tasks: the VLMs are presented with images where one object is at different depth relative to other, otherwise identical, objects, and must determine whether the odd-one-out target is closer or farther to the observer. To create stimuli, we generate 2D views from simulated and real 3D scenes while controlling the presence of individual pictorial depth cues, enabling a fine-grained analysis of cue-level contributions. Language effects are examined by varying referring expression clarity. We also introduce a novel metric to quantify vision-vs-language sensitivities. Applying this methodology, we create the Odd-One-Out Depth (O3-D) dataset with 37K real and synthetic images and 147K image-question pairs. Evaluation of 12 open-source and commercial models on O3-D shows under-utilization of depth cues and depth-ordering accuracies between 47% and 56%, with no model above chance level. At the same time, our metric reveals strong linguistic bias in the answers. Neither chain-of-thought (CoT) nor in-context learning (ICL) significantly improves performance, suggesting that static image data alone may be insufficient for depth understanding. All code, the image generation pipeline, and the O3-D dataset are publicly released at https://github.com/lyiqian/o3-d."
+  },
+  {
+    "title": "IsoSci: A Benchmark of Isomorphic Cross-Domain Science Problems for Evaluating Reasoning versus Knowledge Retrieval in LLMs",
+    "url": "http://arxiv.org/abs/2607.01431v1",
+    "arxiv_id": "2607.01431v1",
+    "authors": [
+      "Samir Abdaljalil",
+      "Erchin Serpedin",
+      "Hasan Kurban"
+    ],
+    "published": "2026-07-01T19:49:49+00:00",
+    "summary": "We introduce ISOSCI, a benchmark of isomorphic cross-domain science problem pairs that separates reasoning ability from domain knowledge retrieval in LLM evaluation. Each pair shares identical logical structure but requires different domain-specific knowledge, enabling controlled attribution of reasoning-mode gains. Across five model pairs spanning four model families, we find that 91.3% of reasoning-mode gains are knowledge-dependent rather than structure-invariant (63/69 gains; Wilson 95% CI [82.3%, 96.0%]), directly challenging the assumption that chain-of-thought reasoning improves short-horizon procedural scientific problem-solving. Reasoning toggles on highly capable models provide less than 5 percentage points accuracy gain across all domains, and a reasoning-specialized model (o3-mini) that outperforms its standard counterpart on GPQA Diamond (+19.2 percentage points) underperforms on ISOSCI (-24.7 percentage points), showing that benchmark choice determines conclusions about reasoning utility. We release ISOSCI at https://huggingface.co/datasets/isosci/isosci"
+  },
+  {
+    "title": "MultAttnAttrib: Training-Free Multimodal Attribution in Long Document Question Answering",
+    "url": "http://arxiv.org/abs/2607.01420v1",
+    "arxiv_id": "2607.01420v1",
+    "authors": [
+      "Dang Quang Thien Tran",
+      "Quang V. Dang",
+      "Vinamra Tyagi",
+      "Sai Soorya Rao Veeravalli",
+      "Trang Nguyen",
+      "Ryan A. Rossi",
+      "Franck Dernoncourt",
+      "Nedim Lipka",
+      "Koustava Goswami",
+      "Samyadeep Basu"
+    ],
+    "published": "2026-07-01T19:29:19+00:00",
+    "summary": "As grounded QA systems are increasingly deployed in AI assistants, accurately attributing generated answers to evidence is critical for user trust and model safety. While unimodal attributions have been explored in depth, the multimodal setting remains relatively under-researched. As a result, we introduce MultAttnAttrib, a training-free attribution-generation method that leverages a model's prefill pass, selected attention heads, and calibrated thresholds to locate source evidence within a document. To establish baseline results for the method, we introduce MultAttrEval, a complementary benchmark dataset annotated with fine-grained, ground-truth attributions for answer components grounded in multimodal source documents. To our knowledge, this is the first evaluation dataset designed specifically for multimodal attribution in long-form documents. Experimental results show that MultAttnAttrib consistently outperforms a variety of attribution-generation methods, including several strong prompting-based approaches and matches the latest frontier models such as GPT 5.4. Our method not only substantially improves attribution accuracy for both unimodal and multimodal attribution types, but also produces attributions at up to one-seventh of the direct inference latency compared to prompting on the same base model."
+  },
+  {
+    "title": "Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching",
+    "url": "http://arxiv.org/abs/2607.01378v1",
+    "arxiv_id": "2607.01378v1",
+    "authors": [
+      "William English",
+      "Hao Zheng",
+      "Rickard Ewetz"
+    ],
+    "published": "2026-07-01T18:41:33+00:00",
+    "summary": "Vision-Language-Action (VLA) models have demonstrated promising generalization capabilities across robotic manipulation tasks, yet their real-world deployment remains limited by the lack of effective safety measures. Specifically, existing safety measures only prevent collisions caused by the robot's next action. In this paper, we propose a neuro-symbolic safety guidance mechanism for flow matching based VLAs that enables predictive collision avoidance. Flow matching based VLAs determine the next actions by predicting a trajectory (a sequence of actions) through an iterative neural flow matching process. Our method formulates safety enforcement as a minimum-norm constrained optimization problem that corrects safety violations during the denoising process of noisy intermediate trajectory predictions. By analyzing predicted trajectories and applying corrections during iterative denoising, our approach anticipates collisions before they become unavoidable. This interleaving of symbolic constraint satisfaction with neural trajectory generation enables predictive collision avoidance rather than reactive intervention. On the SafeLIBERO benchmark, our method achieves 82.8% collision avoidance and 81.6% task success, a 6.3% and 19.8% improvement respectively over single-step methods, with the largest gains on long-horizon tasks where compounding distribution shift is most pronounced. Video demonstrations of our approach are included on our project page at https://willenglish.tech/SafetyGuidedFlowMatching/."
+  },
+  {
+    "title": "Multi-modal Rail Crossing Safety Analysis",
+    "url": "http://arxiv.org/abs/2607.01365v1",
+    "arxiv_id": "2607.01365v1",
+    "authors": [
+      "Paimon Goulart",
+      "Chansong Lim",
+      "N\u00edcolas Roque dos Santos",
+      "Yue Dong",
+      "Sheldon Peterson",
+      "Jia Chen",
+      "Evangelos E. Papalexakis"
+    ],
+    "published": "2026-07-01T18:26:57+00:00",
+    "summary": "Given one or more images of a railway crossing, can we leverage visual cues that allow us to robustly estimate how safe it is? Can we improve our ability to do so by introducing structured data (such as official accident reports) about the accident history of that crossing into our models? In this work, we explore how to best answer those questions towards building an AI system that can ingest multi-modal data for railway crossings and provide safety assessment and scores that align with expert opinion and with safety scoring used by the Federal Railroad Administration (FRA). To that end, we propose a proof-of-concept pipeline that delivers on that goal, while at the same time exploring and tackling a number of critical research challenges that pertain to different parts of the pipeline, from data preparation to different learning paradigms that can allow us to realize such a system. Indicatively, our proposed system identifies HIGH-RISK and LOW-RISK crossings with a macro F1 score of 0.757 and estimates FRA-based safety scores with an RMSE of 0.078 and correlation of 0.492 using a routed fine-tuned compact VLM pipeline, while producing qualitative results that align with domain-expert assessment."
+  },
+  {
+    "title": "Trustworthy Runtime Verification via Bisimulation (Extended Experience Report)",
+    "url": "http://arxiv.org/abs/2607.01363v1",
+    "arxiv_id": "2607.01363v1",
+    "authors": [
+      "Ryan G. Scott",
+      "Ivan Perez",
+      "Alwyn E. Goodloe",
+      "Mike Dodds",
+      "Robert Dockins"
+    ],
+    "published": "2026-07-01T18:25:30+00:00",
+    "summary": "When runtime verification is used to monitor safety-critical systems, it is essential that monitoring code behaves correctly. The Copilot runtime verification framework pursues this goal by automatically generating C monitor programs from a high-level DSL embedded in Haskell. In safety-critical domains, every piece of deployed code must be accompanied by an assurance argument that is convincing to human auditors. However, it is difficult for auditors to determine with confidence that a compiled monitor cannot crash and implements the behavior required by the Copilot semantics.   In this paper we describe CopilotVerifier, which runs alongside the Copilot compiler, generating a proof of correctness for the compiled output. The proof establishes that a given Copilot monitor and its compiled form produce equivalent outputs on equivalent inputs, and that they either crash in identical circumstances or cannot crash. The proof takes the form of a bisimulation broken down into a set of verification conditions. We leverage two pieces of SMT-backed technology: the Crucible symbolic execution library for LLVM and the What4 solver interface library. Our results demonstrate that dramatically increased compiler assurance can be achieved at moderate cost by building on existing tools. This paves the way to our ultimate goal of generating formal assurance arguments that are convincing to human auditors."
+  },
+  {
+    "title": "Chameleon: Recovering Cyber-Physical Systems from Memory Corruption Attacks via ML Surrogates",
+    "url": "http://arxiv.org/abs/2607.01356v1",
+    "arxiv_id": "2607.01356v1",
+    "authors": [
+      "Mohsen Salehi",
+      "Karthik Pattabiraman"
+    ],
+    "published": "2026-07-01T18:14:23+00:00",
+    "summary": "Cyber-physical systems (CPSs) are increasingly deployed in every aspect of our lives and can be compromised through memory corruption vulnerabilities, allowing attackers to hijack the control flow and take over the system. Existing techniques mostly focus on detecting such attacks but respond by terminating or halting execution upon attack detection, which is not acceptable in CPSs used in safety-critical tasks, as interrupted tasks can have catastrophic consequences. Other techniques replace compromised CPS components with simplified defaults that degrade system behavior, or reboot the system upon attack detection.   We propose Chameleon, a novel framework for automatically recovering CPSs from memory corruption attacks using machine learning (ML)-based surrogates trained at compartment granularity that nearly replicate their original compartments' behavior but do not have the same memory corruption vulnerabilities. Upon attack detection, Chameleon replaces the compromised compartment with its trained surrogate. We implemented Chameleon using the LLVM compiler and evaluated its efficiency and effectiveness on seven different robotic vehicles (RVs), including simulated and real ones. We found that Chameleon can generate surrogates that closely approximate the original compartments (with an average R$^2$=0.96), successfully recover the system despite real-world memory corruption attacks unlike prior approaches, and complete their tasks while incurring low performance and memory overhead."
+  },
+  {
     "title": "Distributed Containment of a Compromised Agent through Repulsive Cages",
     "url": "http://arxiv.org/abs/2607.01230v1",
     "arxiv_id": "2607.01230v1",
@@ -70,6 +589,27 @@
     "summary": "Spatiotemporal point processes (STPPs) model event data in continuous time and space, with applications in mobility, epidemiology, and public safety. Recent neural STPPs span expressive intensity models, conditional density models, continuous-time latent dynamics, normalizing-flow spatial decoders, and score-based generative mechanisms. Yet comparison remains fragile because implementations differ in preprocessing, coordinate normalization, splits, likelihood conventions, and evaluation protocols. We present SEAHORSE, a unified framework for reproducible STPP experimentation. SEAHORSE formalizes neural STPPs through a common encode-evolve-decode interface and trains, tunes, and evaluates every model family under a single executable benchmark protocol with raw-coordinate likelihood reporting. This enables fair comparisons but, more importantly, controlled diagnostic studies. We pair SEAHORSE with HawkesNest, a synthetic stress-test suite, and show that increasing event-pattern complexity exposes each family's inductive bias, degrading some models sharply and leaving others stable. Code: https://github.com/YahyaAalaila/seahorse."
   },
   {
+    "title": "ESC: Emotional Self-Correction for Reliable Vision-Language Models",
+    "url": "http://arxiv.org/abs/2607.02089v1",
+    "arxiv_id": "2607.02089v1",
+    "authors": [
+      "Tien-Huy Nguyen",
+      "Minh-Nhat Nguyen",
+      "Nguyen Nhat Huy",
+      "Hung Viet Nguyen",
+      "Huy Nguyen Minh Nhat",
+      "Thanh-Huy Nguyen",
+      "Cuong Tuan Nguyen",
+      "Hoang M. Le",
+      "Dat Nguyen",
+      "Phat Kim Huynh",
+      "Min Xu",
+      "Ulas Bagci"
+    ],
+    "published": "2026-07-01T14:25:43+00:00",
+    "summary": "Vision-language models (VLMs) have achieved strong performance across diverse multimodal tasks, yet they remain vulnerable to unreliable reasoning. Existing self-correction methods mitigate these issues but typically rely on post-training or carefully engineered feedback, incurring high computational cost. In this work, we revisit this challenge through the lens of emotional cues, asking whether they can activate latent self-correction behaviors in VLMs without additional training. \\textbf{We find that emotional signals serve as an effective trigger for self-correction, encouraging more cautious and reflective reasoning}. Motivated by this finding, we propose \\escabstract (\\textbf{\\underline{E}}motional \\textbf{\\underline{S}}elf-\\textbf{\\underline{C}}orrection), a training-free self-correction framework. ESC introduces an external verifier that detects potentially incorrect initial responses and injects emotional feedback to encourage model to reflect, and produce a better revised response without additional training. Extensive experiments across safety, hallucination, vision-centric perception, and multimodal reasoning benchmarks show that ESC consistently improves reliability while preserving overall model utility. These results suggest that emotion can function not only as an ability to be recognized, but also as a practical control signal for scalable self-correction in VLMs. \\textbf{We therefore believe that ESC provides a strong foundation for a new reliable human-like, emotion-integrated research direction.} Our project is publicly available at \\textcolor{red}{https://genai4e.github.io/ESC/}."
+  },
+  {
     "title": "Geometry-Aware Cross-Height Channel Knowledge Map Prediction for UAV-Assisted Communications With Uncertainty-Guided 3D Sensing",
     "url": "http://arxiv.org/abs/2607.00887v1",
     "arxiv_id": "2607.00887v1",
@@ -119,6 +659,17 @@
     ],
     "published": "2026-07-01T11:02:51+00:00",
     "summary": "Safe motion planning in dynamic environments requires reasoning about the uncertainty in predicted obstacle motion without sacrificing real-time performance. Existing conformal approaches conformalize a scalar score that aggregates per-obstacle prediction errors, losing spatial coherence and scaling poorly with scene density. We instead conformalize the entire predicted distance field at once. This functional conformal prediction (FCP) framework yields a distribution-free, field-level lower bound, from which safety follows uniformly: any trajectory satisfying the resulting constraint is certified safe, independent of how the control space is sampled. The key enabler is that the residual distance field is empirically low-rank and approximately time-invariant, which makes the bound decomposable in coefficient space. An envelope is fitted offline via functional PCA and a Gaussian-mixture inductive conformal procedure, then refined online by a lightweight adaptive functional conformal (AFCP) update on a low-dimensional vector. This keeps the per-step cost largely insensitive to obstacle count and retains long-run field coverage under distribution shift. We embed the envelope as a tightened safety constraint in a sampling-based model predictive controller, FCP-MPC. On the ETH--UCY pedestrian benchmarks and a dense 3D quadrotor task with up to 280 dynamic obstacles, FCP-MPC attains a favorable balance of safety, feasibility, and efficiency, reaching goals where pointwise and egocentric conformal baselines become too conservative or too expensive, while keeping per-step computation far below online uncertainty-reasoning baselines."
+  },
+  {
+    "title": "Adaptive Companionship for Group-Following Robots: Handling Dynamically Changing Group Formations",
+    "url": "http://arxiv.org/abs/2607.01287v1",
+    "arxiv_id": "2607.01287v1",
+    "authors": [
+      "Cong-Thanh Vu",
+      "Yen-Chen Liu"
+    ],
+    "published": "2026-07-01T10:24:14+00:00",
+    "summary": "Accompanying a group of humans is an essential aspect of developing human-like social cognition in robots. However, human groups typically do not follow fixed formations, which poses significant challenges for robots in maintaining natural companionship behaviors. In this paper, we propose an adaptive group-accompaniment method for social robots based on Vision-Language Models (VLMs), leveraging their semantic reasoning capabilities to infer companion positions, maintain social distances, and understand group dynamics. The members of the group are first detected, and a perceptual module generates visual representations of the interaction group space as input to the VLM, which is then combined with a Model Predictive Path Integral (MPPI) controller to ensure stability and safety. Experimental evaluations across five scenarios show that the proposed method enables robots to accompany the group effectively, demonstrating a 15\\% improvement in success rate and a 25\\% reduction in collision rate compared to baseline approaches. Additionally, a user study indicates that the generated companionship behaviors are perceived as natural and socially appropriate."
   },
   {
     "title": "A Data-Enabled Primal-Dual Approach for Policy Learning with SDP Formulations",
