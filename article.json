@@ -1,5 +1,378 @@
 [
   {
+    "title": "The Large Cancer Assistant (LCA): A Model-Agnostic Orchestration Framework for Scalable Clinical Decision Support in Oncology",
+    "url": "http://arxiv.org/abs/2607.06531v1",
+    "arxiv_id": "2607.06531v1",
+    "authors": [
+      "Ghassen Marrakchi",
+      "Basarab Matei"
+    ],
+    "published": "2026-07-07T17:38:47+00:00",
+    "summary": "- Objective: Multimodal deep learning models in oncology are currently limited by monolithic designs that rigidly couple data ingestion, clinical routing, and artificial intelligence (AI) inference. To address this inflexibility, we propose the Large Cancer Assistant (LCA), a model-agnostic, post-hoc orchestration framework designed for scalable clinical decision support. - Methods: The LCA is mathematically formalized as a 7-tuple architecture grounded in the principle of Algorithmic Impermeability, ensuring the orchestration logic remains strictly independent of underlying black-box AI models. We introduce the Entry Theory, leveraging Geometric Deep Learning (GDL) to standardize multimodal patient data along distinct structural and medical axes. The system dynamically orchestrates data via a Cancer Switching Module and intentionally isolates the core AI execution from volatile hospital IT infrastructures by outputting a Standardized Intermediate Payload (SIP). - Results: A Proof of Concept (PoC) validated the orchestration logic across four technical scenarios. The framework executed a nominal flow with negligible orchestration overhead. It empirically demonstrated algorithmic impermeability by maintaining an invariant routing projection during AI model swaps, and it validated strict failure-safety by achieving a 100\\% recall rate in generating targeted Supplementary Data Requests (SDR) under injected data anomalies. Multi-protocol execution capability was also successfully verified. - Conclusion: By structurally decoupling multimodal ingestion from feature inference, the LCA provides a highly adaptable and modular orchestration foundation. The SIP establishes a clear architectural boundary, natively setting the stage for downstream Electronic Medical Record (EMR) interoperability as an independent future paradigm."
+  },
+  {
+    "title": "A VLM-Enhanced Framework for Comprehensive Traffic Sign Condition Assessment Integrating Daytime Visual Performance and Nighttime Retroreflectivity Evaluation",
+    "url": "http://arxiv.org/abs/2607.06478v1",
+    "arxiv_id": "2607.06478v1",
+    "authors": [
+      "Linlin Zhang",
+      "Neema Jakisa Owor",
+      "Xiang Yu",
+      "Abby Watts",
+      "Yaw Adu-Gyamfi"
+    ],
+    "published": "2026-07-07T16:33:48+00:00",
+    "summary": "Traffic signs are crucial components of road safety, serving as visual tools under all lighting conditions. The Manual on Uniform Traffic Control Devices (MUTCD) specifies daytime visual factors such as legibility and color contrast, and nighttime retroreflectivity requirements. Traditional assessment methods rely on manual inspections, which the Federal Highway Administration (FHWA) notes are subjective, labor-intensive and pose safety concerns, while retroreflectometers are expensive and unaffordable for smaller agencies. Most existing studies focus on either daytime factors or nighttime retroreflectivity but rarely integrate both aspects comprehensively. This study develops a novel framework that systematically evaluates traffic signs through integrated daytime-nighttime assessment. The methodology employs three fine-tuned Vision Language Models (VLMs) for daytime visual performance assessment across four key factors: legibility, color, surface and shape integrity, and surrounding environment conditions. VLM predictions are converted to numerical scores through sentiment analysis and Contrastive Language-Image Pre-Training (CLIP) scoring, while nighttime performance is assessed using LiDAR-derived retroreflectivity following established calibration procedures. The framework integrates these components into a comprehensive Sign Condition Index (SCI) for maintenance guidance. Evaluation results demonstrated that LLaVA and Qwen outperformed InternVL, achieving bidirectional cosine similarity scores of 0.67-0.76 across all factors. Among 462 validated traffic signs, 68 were flagged by the proposed framework as requiring immediate replacement due to inadequate retroreflectivity performance. This research provides a cost-effective alternative to traditional manual inspections for comprehensive traffic sign condition assessment."
+  },
+  {
+    "title": "TILDE: TILt-based Distributional Erasure for Concept Unlearning",
+    "url": "http://arxiv.org/abs/2607.06432v1",
+    "arxiv_id": "2607.06432v1",
+    "authors": [
+      "Naveen George",
+      "Naoki Murata",
+      "Yuhta Takida",
+      "Konda Reddy Mopuri",
+      "Yuki Mitsufuji"
+    ],
+    "published": "2026-07-07T15:59:59+00:00",
+    "summary": "Concept unlearning in text-to-image diffusion models is critical for safe and practical deployment: with rising privacy concerns, copyright disputes, trademark constraints, and safety regulations, deployed systems must be able to suppress unwanted concepts after training. Existing methods often remove the target concept effectively, but practical unlearning also requires an equally fundamental property: the unlearned model should retain quality, diversity, and semantic coverage on benign generation. The gold standard is a retain-only model trained from scratch without the unwanted data. However, common erasure objectives do not specify which post-unlearning distribution should approximate this reference, leaving retention as an implicit consequence of the update rule. We propose TILDE, TILt-based Distributional Erasure, which formulates concept unlearning as a distributional alignment problem: the desired target is the minimum-deviation conditional distribution from the pretrained model under a forgetting constraint. This energy-tilted, anchor-free target suppresses concept-expressing images while preserving benign relative mass for each prompt. We instantiate this principle with residual $\\nabla$-GFlowNet training, which learns the score correction induced by the forget energy relative to the pretrained diffusion model. Across objects, artistic styles, and characters, TILDE achieves strong forgetting while improving retention and distributional fidelity over prior baselines."
+  },
+  {
+    "title": "DT-Guard: Intent-Driven Reasoning-Active Training for Reasoning-Free LLM Safety Guardrail",
+    "url": "http://arxiv.org/abs/2607.06326v1",
+    "arxiv_id": "2607.06326v1",
+    "authors": [
+      "He Liu",
+      "Changtao Miao",
+      "Xinjie Yang",
+      "Tianle Song",
+      "Yin Wu",
+      "Junchi Chen",
+      "Bintao He",
+      "Xinyuan Zhang",
+      "Bo Zhang",
+      "Shi Yan",
+      "Wei Lu",
+      "Wei Wang",
+      "Danyang Xu",
+      "Jiansheng Cai",
+      "Zhe Li"
+    ],
+    "published": "2026-07-07T14:25:05+00:00",
+    "summary": "Large language models deployed in open-world applications require safety guardrails that are both robust to complex risks and efficient enough for low-latency runtime moderation. Existing guardrails face a practical trade-off between lightweight classification-based models, which are efficient but often struggle with concealed intent, ambiguous semantics, and borderline safety decisions, and reasoning-based guards, which improve judgment quality but introduce additional token generation and inference latency. We present DT-Guard, a content safety guardrail model based on a Reasoning-Active Training, Reasoning-Free Inference paradigm. The key idea is to use reasoning supervision during training while emitting only structured safety labels at inference time. DT-Guard formulates safety judgment as a progressive decision process, Intent - Category - Safety, and constructs an intent-driven dataset with intent labels, risk categories, safety labels, and structured reasoning trajectories. To further improve hard-case robustness, we propose Rollout-Guided Progressive Hard-Case Optimization (RG-PHO), which uses multi-rollout consistency to identify stably mastered, persistently failed, and preference-unstable samples, and applies targeted supervised and preference optimization accordingly. At inference time, DT-Guard directly generates structured labels without explicit reasoning traces, preserving deployment efficiency. Experiments on prompt-side and response-side safety benchmarks show that DT-Guard achieves average F1 scores of 0.886 and 0.870, respectively. With only a 4B backbone, it reaches a dual-side average F1 of 0.878, outperforming strong 8B guardrail baselines. These results demonstrate that reasoning supervision can be effectively internalized into low-latency safety discrimination."
+  },
+  {
+    "title": "Synthetic-to-Real Translation for Class-Agnostic Motion Prediction",
+    "url": "http://arxiv.org/abs/2607.06319v1",
+    "arxiv_id": "2607.06319v1",
+    "authors": [
+      "Yizheng Wu",
+      "Hongwei Fan",
+      "Kewei Wang",
+      "Ruibo Li",
+      "Xingyi Li",
+      "Xiao Song",
+      "Zhe Wang",
+      "Chenjing Ding",
+      "Dongliang Wang",
+      "Zhiguo Cao",
+      "Guosheng Lin"
+    ],
+    "published": "2026-07-07T14:19:22+00:00",
+    "summary": "Motion understanding is critical for ensuring safety and robustness in autonomous driving systems, driving increasing interest in motion prediction. A key challenge in this domain is the high cost associated with acquiring real-world motion labels. It is therefore ideal if we could transfer motion knowledge from synthetic data to real data. In this context, we explore the potential of synthetic-to-real translation for motion prediction (SRMP). However, the most used naive motion regression methods are notably sensitive to the synthetic-to-real domain shift, resulting in unreliable knowledge translation. To address this, we propose a novel approach integrating a motion knowledge translation framework with two key components: (1) objectness-aware motion prediction, which explicitly models the joint distribution of motion patterns and objectness priors to improve domain-invariant feature learning, and (2) objectness-aided motion enhancement, a motion label refinement mechanism that leverages learned objectness priors to filter motion noise. Furthermore, we present a physically-based pipeline for generating Motion4D, the first synthetic 4D LiDAR dataset tailored for SRMP research, addressing the lack of synthetic motion datasets. Experimental results demonstrate that our approach effectively bridges the domain gaps and yields superior performance on real scenes."
+  },
+  {
+    "title": "Validation of a Computational Respiratory System Model for Mechanical Ventilation",
+    "url": "http://arxiv.org/abs/2607.06210v1",
+    "arxiv_id": "2607.06210v1",
+    "authors": [
+      "Carlotta Hennigs",
+      "Charlott Danielson",
+      "Franziska Bilda",
+      "Dimitrios Karachalios",
+      "Niklas Hackelberg",
+      "Helene Selpien",
+      "Georg M\u00e4nnel",
+      "Dirk Sch\u00e4dler",
+      "Folker Spitzenberger",
+      "Philipp Rostalski"
+    ],
+    "published": "2026-07-07T12:33:12+00:00",
+    "summary": "Computational modeling and simulation are powerful tools for the assessment of medical device performance and safety, particularly for in silico clinical trials for automated medical systems. In ventilation, where managing gas exchange, respiratory mechanics, and patient-ventilator interaction is required under evolving pathophysiology, the clinical translation of automated control strategies remains slow and resource-intensive. This paper applies a standards-aligned framework for the credibility assessment of a computational respiratory model, demonstrated using an automated weaning case study. The framework operationalizes ASME V&V 40 and FDA principles within a structured, guidance-based validation workflow. The computational physiological model integrates respiratory mechanics, gas exchange, respiratory control, and a ventilator representation, validated under a clearly defined context of use and explicit questions of interest. Model credibility is assessed through calibration, physiological plausibility, population-based evaluation, and reproduction of emergent behavior. All model requirements derived from the intended context of use are addressed within the proposed credibility assessment plan, and documented gaps are transparently reported. The resulting credibility argument supports the applicability of the model for its context of use. Strengths are demonstrated in population-based comparison and mechanistic plausibility, while residual limitations relate to the extent of in vivo evidence, population representativeness, and external validation. Overall, the model is considered fit for purpose for medium-low risk preclinical in silico clinical trials of automated weaning strategies. Furthermore, the validation procedure outlined in this article provides a blueprint for the validation of this and similar models in other mechanical ventilation algorithms and related use cases."
+  },
+  {
+    "title": "Pluralis v0.1: Towards a Multicultural, Multimodal, Multilingual Benchmark for AI Risk and Reliability",
+    "url": "http://arxiv.org/abs/2607.06196v1",
+    "arxiv_id": "2607.06196v1",
+    "authors": [
+      "Alicia Parrish",
+      "Rajat Shinde",
+      "Sanket Badhe",
+      "Xinyi Bai",
+      "Sree Bhargavi Balija",
+      "Hua-Rong Chu",
+      "Emilio Ferrara",
+      "Armstrong Foundjem",
+      "Rajat Ghosh",
+      "Aakash Gupta",
+      "Xuanli He",
+      "Ong Chen Hui",
+      "Minji Jung",
+      "Madhangi Karimanal",
+      "Faiza Khan Khattak",
+      "Boryoung Kim",
+      "Eugenia Kim",
+      "Liliya Lavitas",
+      "Seok Min Lim",
+      "Victor Lu",
+      "Jim Moirangthem",
+      "Dhivya Nagasubramanian",
+      "Deepak Pandita",
+      "Sita Rajagopal",
+      "Geetha Raju",
+      "Evgeniia Razumovskaia",
+      "Aravind Reddy",
+      "Federico Ricciuti",
+      "Nobin Sarwar",
+      "Sungpil Shin",
+      "Sunayana Sitaram",
+      "Snehal Thorat",
+      "Tharindu Cyril Weerasooriya",
+      "Jasmijn Bastings",
+      "Joachim Baumann",
+      "Kongtao Chen",
+      "Murali Emani",
+      "Mariya Hendriksen",
+      "Jiho Jin",
+      "Jun Seong Kim",
+      "Younghoon Ko",
+      "Alicja Kwasniewska",
+      "Minjae Lee",
+      "Tom Wei-cyuan Lin Kashyap Ramanandula Manjusha",
+      "Junho Myung",
+      "Junyeong Park",
+      "Roma Patel",
+      "Shyam Ratan",
+      "Sudarsun Santhiappan",
+      "Priyanka Suresh",
+      " Tuesday",
+      "Ksheeraj Sai Vepuri Laura Amortegui-Ordonez",
+      "Claire Dennis",
+      "Minsuk Kahng",
+      "Chris Knotz",
+      "Alice Oh",
+      "Balaraman Ravindran",
+      "Soojung Ryu William Bartholomew",
+      "Hiwot Tesfaye",
+      "Lora Aroyo"
+    ],
+    "published": "2026-07-07T12:21:52+00:00",
+    "summary": "Current AI safety evaluation and benchmarking frameworks predominantly rely on Western-centric culture-agnostic defaults that mask critical regional laws, socio-linguistic nuances, and cultural taboos, leaving Vision-Language Models (VLMs) vulnerable in global deployments. We introduce Pluralis v0.1: a novel multimodal, multi-regional, and multilingual dataset built from a culture-first perspective. Spanning 6,448 prompts across six Asia-Pacific countries (Bangladesh, India, Korea, Pakistan, Singapore, Taiwan) and eight languages, Pluralis diverges from prior work by natively sourcing localized safety hazards rather than adapting Western datasets. Crucially, it introduces a multimodal evaluation paradigm: user text (e.g., \"Should I gift this?\") and an image referring to \"this\" (e.g., a clock) - both innocuous in isolation, but synergistically triggering specific legal or cultural violations. Pluralis disentangles universal safety violations from localized cultural appropriateness, establishing the latter as a first-class evaluation axis. To operationalize this, we present Judge-Pluralis, an agreement-gated LLM-as-a-Judge ensemble trained on examples classified in an empirically derived cultural taxonomy. Observing VLM behavior on a subset of the Pluralis surfaces recurring, locale-specific failure modes such as image misidentifications with downstream harm, missed item-context-locale interactions, and inadequate refusals. These failure modes vary systematically across locales and languages, exposing blind spots that globally averaged metrics conceal. Ultimately, Pluralis is not presented as a solved evaluation framework for cultural alignment, but rather as a first step and catalyst for future innovation. We call upon the research community to utilize this foundation to advance the science of multilingual, multicultural evaluation to better support AI cultural alignment globally."
+  },
+  {
+    "title": "The Documentation and Traceability Burden of the Indian EV Transition",
+    "url": "http://arxiv.org/abs/2607.06170v1",
+    "arxiv_id": "2607.06170v1",
+    "authors": [
+      "Dawar Jyoti Deka",
+      "Nilesh Sarkar"
+    ],
+    "published": "2026-07-07T11:48:14+00:00",
+    "summary": "The electric vehicle transition in India is usually told through batteries, cost and charging. Less visibly, it is a story about documentation. Electrification layers a new and fast growing burden of compliance evidence, type approval test reports, battery safety and thermal propagation records, cyber security and software update documentation, and supplier quality packages, on top of the evidence apparatus the automotive industry already carries, with retention horizons that now reach a decade past end of production. This burden is studied from the testing side but has never been systematised as an information systems problem, so its verification bottlenecks, architecture requirements and open questions remain unmapped. We close that gap for the Indian EV OEM with four contributions. These include a two layer systematisation of evidence obligations organised by artefact, producer, verifier, trigger and retention, a lifecycle model of the compliance document with manual bottlenecks and four observed failure loci marked, an analytic lens, documentation exergy destruction, that classifies document families and explains systematic under resourcing, and a research agenda spanning reconciliation accuracy, human in the loop reliability, cross party provenance, long horizon integrity, burden measurement and machine verifiable regulation. Three Indian failure cases and one Japanese ground the analysis."
+  },
+  {
+    "title": "Poster: Mind the Gap -- Characterizing the Temporal Blind Spot Between GSB and DNS Resolution",
+    "url": "http://arxiv.org/abs/2607.06134v1",
+    "arxiv_id": "2607.06134v1",
+    "authors": [
+      "Tomer Gal",
+      "Fujiao Ji",
+      "Doowon Kim",
+      "Harel Israel Berger"
+    ],
+    "published": "2026-07-07T10:51:20+00:00",
+    "summary": "Google Safe Browsing (GSB) and DNS resolution operate concurrently during browser navigation, yet their packet-level synchronization remains understudied. This work characterizes the timing gap (\\(\u0394_{time}\\)) between GSB-related query close events and parallel DNS resolution responses, identifying a consistent temporal offset with potential security relevance. Using packet-capture analysis across general and CNAME-domain datasets, we observe positive timing gaps in approximately 79\\% of measurements. In these instances, DNS responses lag behind GSB-related query closures with median delays of 67-79 ms and maximum delays surpassing 2,400 ms. These empirical results highlight a measurable window within the browsing workflow. We suggest that such temporal inconsistencies, particularly in complex CNAME-domain resolutions, may create a security-relevant timing precondition under DNS-manipulation threat models. These results provide a foundation for further research into timing-based risks and mitigations in browser safety mechanisms."
+  },
+  {
+    "title": "Property-Driven Synthetic Data Engineering for Data-Scarce Software Systems: Reflections from the Breast Cancer Domain",
+    "url": "http://arxiv.org/abs/2607.06133v1",
+    "arxiv_id": "2607.06133v1",
+    "authors": [
+      "Aurora Francesca Zanenga",
+      "Andrea Bombarda",
+      "Marsha Chechik",
+      "Saverio D'Amico",
+      "Rita De Sanctis",
+      "Alberto Zambelli",
+      "Claudio Menghi"
+    ],
+    "published": "2026-07-07T10:49:46+00:00",
+    "summary": "Modern software systems increasingly depend on data for analysis, prediction, testing, and decision-making. Yet many important domains, including medicine, safety-critical systems, and regulated industries, lack abundant, shareable, or representative data. Synthetic data generation is often proposed as a remedy, but our experience engineering software for intraoperative radiotherapy (IORT) in breast cancer treatment suggests that synthetic data shifts rather than solves the central engineering problem. The key challenge becomes deciding which properties synthetic data must preserve, how these properties should be elicited from stakeholders, how they can be validated under privacy constraints, and how they evolve. We call this problem property-driven synthetic data engineering. Drawing on a collaboration with oncologists and preliminary experiments with a sensitive IORT dataset, we identify challenges in requirements, validation, privacy, and pipeline evolution. We argue that automated software engineering research should develop methods and tools for eliciting, formalizing, checking, and evolving validity properties for synthetic data in data-scarce software systems."
+  },
+  {
+    "title": "AEGIS: A Mechanism-Guided Defense against Visual Synonym Jailbreaks in Text-to-Image Models",
+    "url": "http://arxiv.org/abs/2607.06120v1",
+    "arxiv_id": "2607.06120v1",
+    "authors": [
+      "Yuanmin Huang",
+      "Zhenfei Zhang",
+      "Mi Zhang",
+      "Geng Hong",
+      "Qinqin He",
+      "Jialing Tao",
+      "Hui Xue",
+      "Min Yang"
+    ],
+    "published": "2026-07-07T10:27:54+00:00",
+    "summary": "Text-to-image diffusion models have achieved high visual fidelity and broad adoption, but remain vulnerable to safety violations when adversaries exploit them to synthesize illicit content. Existing alignment paradigms, from input sanitization to structural feature pruning, are largely organized around unsafe concepts explicitly exposed during filtering, editing, or localization. This leaves a blind spot for visual synonym attacks (VSA), a jailbreak where benign-looking prompts elicit prohibited imagery through implicit visual associations. As a result, current defenses face a safety-utility dilemma: they may either under-mitigate VSA threats or over-suppress visually similar benign concepts. The core challenge is that VSA hides the unsafe target at the textual surface while revealing it through generation-time visual-semantic convergence. In this work, we therefore shift from static suppression of pre-specified unsafe concepts to dynamic tracing of how unsafe semantics emerge during generation. Our mechanistic analysis shows that VSA and explicit unsafe prompts converge through sparse semantic-injecting attention heads, which serve as inference-time bottlenecks for prohibited visual semantics. Based on this insight, we propose AEGIS (Adaptive Evasion Guard via Identification and Steering), an inference-time defense that applies similarity-aware repulsion only at the identified vulnerable heads. Evaluated against 16 baselines, AEGIS improves both safety and utility. On SD 1.4, it reduces ASR to $\\mathbf{0.00}/\\mathbf{0.03}$ for in-domain violence/nudity VSA and achieves ASRs $\\le \\mathbf{0.09}$ on out-of-domain explicit and adversarial attacks. It preserves benign fidelity, avoids suppressing hard-negative concepts, and transfers to SD 2.1 and FLUX.1 after re-identifying the critical heads for each backbone."
+  },
+  {
+    "title": "Automating Quality Assessment with NLP of LLM-Generated Defeaters",
+    "url": "http://arxiv.org/abs/2607.06039v1",
+    "arxiv_id": "2607.06039v1",
+    "authors": [
+      "Tihomir Rohlinger",
+      "Daniel Ratiu",
+      "Stefan Wagner"
+    ],
+    "published": "2026-07-07T09:15:23+00:00",
+    "summary": "High-integrity systems, such as autonomous vehicle fleets and large-scale energy infrastructures, rely on structured assurance cases to justify safety claims. To remain valid under evolving operational conditions, such cases must be examined against potential challenges, known as defeaters. While large language models (LLMs) can support the scalable generation of candidate defeaters, assessing their quality remains largely manual and subjective process. This paper presents an automated approach for supporting the assessment of LLM-generated defeaters using natural language processing techniques. The method combines structural features from assurance case graphs with semantic embeddings and meta-classifiers trained on expert-assessed defeater annotations. We evaluate the approach through two case studies in the automotive and energy domains. The results show substantial human reviewer dissensus, with Cohen's kappa values below 0.442, highlighting the difficulty of consistent manual assessment. Against this background, the proposed classifiers achieve an average F1-score of 0.84 in validation and show improved alignment with individual expert ratings. The findings suggest that automated assessment can help reduce subjective variance and provide scalable decision support for assurance case review, while leaving final judgment to domain experts."
+  },
+  {
+    "title": "Structured Data Extraction from Real Estate Documents using Clustering, Classification, and Large Language Models",
+    "url": "http://arxiv.org/abs/2607.06012v1",
+    "arxiv_id": "2607.06012v1",
+    "authors": [
+      "Muhammad Assad Shehbaz",
+      "Carlos Francisco Moreno-Garc\u00eda"
+    ],
+    "published": "2026-07-07T08:54:11+00:00",
+    "summary": "Real estate property listings expose structured metadata through the API. Still, the richest property-level information (i.e., legal status, structural condition, utility supplies, heating systems) sits in attached questionnaire documents that no automated system currently processes at scale. These documents are heterogeneous. Some are digitally generated with selectable text, others are scanned physical forms. There are even more complex layouts that contain checkbox annotations that defeat conventional text extraction. In this paper, we present an end-to-end pipeline for acquiring, classifying, and extracting structured data from selectable text documents. The pipeline was applied to 3965 questionnaire documents collected from a live property platform via reverse-engineered REST APIs. First, we classified each document into one of three structural categories (text_only, scanned, and special_char), then extracted 35 predefined property attributes from eligible documents using DeepSeek R1 as the Large Language Model, prompted to return a structured JSON object. All 2781 submitted documents were processed successfully, producing a final dataset of 2766 unique property records. Downstream validation confirmed the data quality. Cosine similarity matching achieves a Jaccard consistency score of 0.82, and K-Means clustering produces interpretable market segments with a silhouette score of 0.2088. Results show that the proposed extraction from each property document is both feasible and reliable at this scale."
+  },
+  {
+    "title": "PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails",
+    "url": "http://arxiv.org/abs/2607.05910v1",
+    "arxiv_id": "2607.05910v1",
+    "authors": [
+      "Mingyang Song",
+      "Luxin Xu",
+      "Haoyu Sun",
+      "Minzhou Pan",
+      "Yu Cheng",
+      "Bo Li"
+    ],
+    "published": "2026-07-07T07:04:28+00:00",
+    "summary": "Image guardrails are typically trained and evaluated under a fixed safety policy, implicitly treating safety as an intrinsic property of an image. Real deployments are different: the same image may be allowed in one product, restricted in another, and newly disallowed when a policy boundary changes. We study policy-adaptive image guardrailing, where a model must decide whether an image violates the currently supplied policy and generalize to held-out policy definitions. We introduce PolicyShiftBench, a comprehensive benchmark with 2,000 policy-discriminative instances over 265 images, where each image is paired with 7.55 policy-conditioned prompts on average to test whether models adapt to the active policy rather than relying on image-level safety priors. We then propose PolicyShiftGuard, a compact policy-conditioned guardrail trained with a two-stage training recipe that combines Randomized Policy SFT (RP-SFT) with Boundary-Pair Policy Adaptation (BP-Adapt). BP-Adapt trains matched prompts for the same image and risk category using standard label supervision and a pairwise comparison loss that separates blocking policies from passing policies. Experiments show that existing VLMs and specialized guardrails remain brittle under policy shifts, while PolicyShiftGuard substantially improves policy-sensitive performance. The 7B model achieves SOTA performance of 76.9 Avg. F1 and 72.1 Avg. PSS on PolicyShiftBench, transfers well to UnSafeBench and SafeEditBench, and improves the latency-performance trade-off with a concise output format. Ablations confirm that matched pass/block boundary pairs are essential for stable policy adaptation."
+  },
+  {
+    "title": "Fusion or Confusion? Potential and Challenges in Fusion of Onboard Sensors and V2X Data in Cooperative Perception",
+    "url": "http://arxiv.org/abs/2607.05889v1",
+    "arxiv_id": "2607.05889v1",
+    "authors": [
+      "Amir Mohammadisarab",
+      "Miguel Sepulcre",
+      "Luca Lusvarghi",
+      "Sergei S. Avedisov",
+      "Mohammad Irfan Khan",
+      "Takayuki Shimizu",
+      "Onur Altintas",
+      "Javier Gozalvez"
+    ],
+    "published": "2026-07-07T06:34:05+00:00",
+    "summary": "Connected Automated Vehicles (CAVs) utilize their onboard sensors to perceive the environment. The perception range and accuracy can be affected by adverse weather or non-line-of-sight conditions. Cooperative perception or sensor sharing can overcome these limitations by enabling CAVs to exchange sensor data, thus collectively enhancing their perception capabilities. Previous studies have shown the potential of cooperative perception, but limited attention has been given to the fusion of V2X data received through cooperative perception messages with onboard sensor information. The fusion process can be influenced by the quantity and quality of the V2X data. An increased volume of V2X data can reduce uncertainty in the perceived environment; however, when the data is noisy, it may compromise the accuracy of the fusion results. This study investigates the fusion of onboard sensor and V2X data in cooperative perception, and demonstrates that while perception can significantly improve as the V2X penetration rate increases, it can introduce a significant number of false positives if V2X data is not highly accurate. False positives result in the detection of ghost objects that do not actually exist. These ghost objects can, in turn, compromise safety and driving efficiency. Our analysis found that false positives or ghost objects can appear even with accurate V2X data. These findings highlight the challenges in cooperative perception and the importance of developing robust data fusion methods to enhance the reliability of cooperative perception. This is particularly relevant in light of ongoing standardization efforts, such as ETSI TS 103 324 on collective perception."
+  },
+  {
+    "title": "Beyond Refusal: A Same-Lineage Study of Aligned and Abliterated LLMs for Vulnerability Analysis",
+    "url": "http://arxiv.org/abs/2607.05842v1",
+    "arxiv_id": "2607.05842v1",
+    "authors": [
+      "Mingchen Li",
+      "Meikang Qiu",
+      "Zifan Peng",
+      "Heng Fan",
+      "Song Fu",
+      "Junhua Ding",
+      "Yunhe Feng"
+    ],
+    "published": "2026-07-07T05:04:48+00:00",
+    "summary": "Large language model (LLM)-assisted software security operates at a difficult boundary: the vulnerability-analysis terminology needed for legitimate code review, triage, and repair can closely resemble terminology associated with misuse. Existing safety and cybersecurity evaluations are difficult to interpret in this setting because they often compare unrelated model families, thereby conflating safety behavior with differences in architecture, scale, training data, and deployment. To isolate this factor, we study safety state: whether refusal behavior remains intact (Aligned) or has been refusal-ablated (Abliterated) within same-lineage models. We ask how this safety state affects defensive utility across software-security workflows. We compare aligned instruction-tuned models with publicly released refusal-ablated descendants from two model families, Gemma and Qwen. We evaluate Aligned and Abliterated states on vulnerability detection, CWE attribution, vulnerable-line localization, root-cause localization, and executable patch validation. We further treat prompt wording as a controlled framing dimension: prompts begin with neutral code-review language, add authorization context, and vary the density of cybersecurity terminology. In a Gemma-based Java/Vul4J repair-validation study, Abliterated achieves higher early-stage validation rates, with 67.8%, 65.0%, and 32.8% of patches judged usable, successfully applied, and successfully compiled, respectively, compared with 29.9%, 24.9%, and 9.0% for Aligned. In the Qwen pair, Abliterated improves localization performance, increasing line-level F1 from 2.08% to 3.91% and Top-1 accuracy from 4.10% to 6.95%. These findings suggest that evaluations of LLM-based security assistants should jointly measure whether models respond, whether their usable responses are correct, and whether their outputs remain actionable across the engineering workflow."
+  },
+  {
+    "title": "Failure Privacy and Safe Collective Expression",
+    "url": "http://arxiv.org/abs/2607.05802v1",
+    "arxiv_id": "2607.05802v1",
+    "authors": [
+      "Matthew Cashman"
+    ],
+    "published": "2026-07-07T03:55:31+00:00",
+    "summary": "Widely held views can go unspoken when speaking out alone invites retaliation. I recast such silence as a problem of safe coalition formation. When safety comes in numbers, there is a largest group that could speak safely. Open organizing must stay safe every step the way, making for a cascade of speaking up that stops short of that largest group. Social assurance contracts need safety only at the destination, and get there by keeping commitments private until enough people have joined: a tunnel to the largest safe group. If no member may ever regret joining, such failure privacy is necessary, not merely sufficient."
+  },
+  {
+    "title": "Benchmarking the Robustness of Autonomous Driving to Environmental Illusions: A Lane Perception Perspective",
+    "url": "http://arxiv.org/abs/2607.05783v1",
+    "arxiv_id": "2607.05783v1",
+    "authors": [
+      "Tianyuan Zhang",
+      "Xianglong Liu",
+      "Aishan Liu",
+      "Lu Wang",
+      "Yitong Zhang",
+      "Peng Yue",
+      "Mingchuan Zhang",
+      "Siyuan Liang",
+      "Dacheng Tao"
+    ],
+    "published": "2026-07-07T03:15:00+00:00",
+    "summary": "Environmental illusions (eg., shadows, reflections, and tire marks) are naturally existing yet overlooked phenomena in real-world driving environments. They can disturb visual perception, leading to misinterpretation of the scene and posing serious safety risks to autonomous driving (AD) systems. However, existing researches largely overlook these phenomena, leaving a critical gap. To address this issue, we study AD robustness through the lane perception perspective, a fundamental task supporting core functions like cruise control and lane centering. We focus on two representative models: conventional lane detection (LD) and vision-language model-based systems (ADVLMs). In this work, we introduce the first benchmark, LanEvil++, for evaluating the robustness of lane perception under environmental illusions. LanEvil++ encompasses 14 types of illusions and leverages the CARLA simulator to generate 94 high-fidelity, fully controllable 3D scenes, yielding a dataset of 90,292 annotated images, 1,596 video clips, and 41,855 visual question answering pairs. Extensive evaluations demonstrate that environmental illusions substantially degrade the performance of state-of-the-art LD methods. On average, LD models experience a 5.27% drop in Accuracy and a 10.49% decline in F1-score, while ADVLMs show a 2.03% reduction in GPT-score and a 0.75% drop in Language-score. Among all illusions, shadows emerge as the most disruptive factor, reducing accuracy by up to 7.20%. Furthermore, closed-loop simulations reveal that these illusions can lead to incorrect driving decisions. Complementary real-world case studies highlight safety-critical failures in actual traffic scenes. To enhance robustness, we propose the Multimodal Illusion Defense Approach (MIDA). MIDA achieves substantial gains under challenging conditions, boosting robustness by 4.23% on LD models and 3.82% on ADVLMs."
+  },
+  {
+    "title": "Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents",
+    "url": "http://arxiv.org/abs/2607.05775v1",
+    "arxiv_id": "2607.05775v1",
+    "authors": [
+      "Wael Albayaydh",
+      "Rui Zhao",
+      "Ivan Flechais"
+    ],
+    "published": "2026-07-07T03:05:13+00:00",
+    "summary": "Large language model (LLM) agents are increasingly evaluated on their ability to use tools, plan multi-step tasks, coordinate with other agents, and operate over extended horizons. Reported benchmark gains often obscure recurring failure modes documented across otherwise unrelated evaluation efforts. This paper synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026), spanning 19 distinct benchmarks, into a cross-cutting taxonomy of agent limitations. To our knowledge, this is the first synthesis that integrates evidence across tool use, planning, long-horizon reasoning, multi-agent coordination, safety, and measurement validity into a single, unified taxonomy of LLM agent limitations. We identify six failure clusters: (1) tool invocation and parameter-level errors, (2) planning and constraint-satisfaction failures, (3) long-horizon degradation from context accumulation, (4) multi-agent coordination failures, (5) safety and security failures under adversarial or underspecified conditions, and (6) measurement validity problems. The taxonomy was derived iteratively by grouping independently reported error categories into themes corresponding to distinct stages of the agent reasoning-to-action pipeline. Across the literature, we find that failures compound nonlinearly with task length, that strong performance on individual sub-tasks does not reliably translate into end-to-end success, and that additional scaffolding does not consistently improve reliability. At the same time, substantial progress has been demonstrated in single-turn tool use, short-horizon web navigation, and narrowly scoped coding tasks."
+  },
+  {
+    "title": "IMR: Iterative Mode-World Weighted Regression for Multi-Agent Trajectory Prediction",
+    "url": "http://arxiv.org/abs/2607.05705v1",
+    "arxiv_id": "2607.05705v1",
+    "authors": [
+      "Honglin Wang",
+      "Shiyao Pan",
+      "Yun-Fu Liu"
+    ],
+    "published": "2026-07-06T23:59:19+00:00",
+    "summary": "Multi-agent motion prediction is essential for automated vehicles to understand the intentions of surrounding vehicles. However, previous prediction-based and anchor-based methods have limitations in mode diversity and prediction accuracy, respectively. These limitations may cause inadequate safety assessments and behavioral deviations in automated vehicles. To address this issue, a mode-world weighted regression loss is proposed to bridge the gap between these features. Specifically, this approach mitigates mode collapse while simultaneously improving world ranking and top-1 confidence. Furthermore, the proposed iterative decoder improves prediction accuracy by recurrently and segmentally generating trajectories. Experimental results show the proposed method ranks first in the Argoverse 2 multi-agent motion forecasting benchmark against other methods."
+  },
+  {
+    "title": "Safe Bayesian Optimization with Counterfactual Policies",
+    "url": "http://arxiv.org/abs/2607.05620v1",
+    "arxiv_id": "2607.05620v1",
+    "authors": [
+      "Katherine Avery",
+      "Bruno Castro da Silva",
+      "David Jensen"
+    ],
+    "published": "2026-07-06T20:30:11+00:00",
+    "summary": "In many decision-making settings, new interventions are acceptable only if they do not reduce outcomes below some established threshold. For example, in clinical medicine, new treatments are often acceptable only if they do not worsen outcomes relative to an established standard of care. Safe Bayesian optimization maximizes an objective subject to safety constraints. In the setting that we consider here, safety is defined relative to a known baseline policy whose outcomes are counterfactual and therefore unobserved. Thus, the counterfactual outcomes of the baseline policy must be estimated and those (uncertain) estimates must be used to safely optimize the objective. We address this estimation problem by using conformal prediction to construct valid uncertainty intervals for counterfactual baseline outcomes, and we show how these intervals can be integrated into safe Bayesian optimization to ensure that constraint violations occur at or below a user-specified rate. We also show how to adapt these conformal estimates to different kinds of covariate shift. We provide a safety proof, experimental evidence, and a sensitivity analysis."
+  },
+  {
+    "title": "aiAuthZ: Off-Host, Identity-Bound Authorization for AI Agents",
+    "url": "http://arxiv.org/abs/2607.05518v1",
+    "arxiv_id": "2607.05518v1",
+    "authors": [
+      "Sai Varun Kodathala"
+    ],
+    "published": "2026-07-06T18:00:49+00:00",
+    "summary": "AI agents issue tool calls on the basis of text they cannot verify, so any party who controls part of the context can forge the appearance of authority. I evaluate 15 contemporary language models against eight attack scenarios derived from a published corpus of real agent incidents and find that refusal varies from 100% down to 38% across fully evaluated models; the most expensive model refused only half of the attacks despite a twentyfold price spread. I present aiAuthZ, an authorization gateway that moves the safety decision off the agent's host. Before a tool call executes, the gateway verifies caller identity with a per-message HMAC-SHA256 signature bound to a single-use nonce and a timestamp window, and it evaluates a role-based and argument-level policy that the agent can neither read nor modify. Every decision joins a SHA-256 hash-chained audit log, and each accepted message yields an HMAC-authenticated QR receipt that achieves 94% mean verification across eight transmission channels, with zero forgeries accepted in 25 wrong-key trials. With the gateway in place, residual attack success falls to 0% for all 15 models at no more than 0.03 ms of added decision latency. On the AgentDojo banking suite, aiAuthZ blocks all seven attacker-directed tool calls the evaluated agents emit, at the cost of one legitimate first-time payment, while a spotlighting baseline allows two injections to succeed. Across nine in-scope case studies from the same incident corpus, aiAuthZ blocks nine of nine, against four of nine for a policy baseline without identity binding. The gateway does not prevent a model from being deceived; it prevents a deceived model from acting beyond the verified user's authority on every call routed through it. The implementation and all experiments are released at https://github.com/Sports-Vision-Inc/aiAuthZ."
+  },
+  {
     "title": "CATs: Secure Blockchain Interoperability with Cross-chain Atomic Transactions",
     "url": "http://arxiv.org/abs/2607.05387v1",
     "arxiv_id": "2607.05387v1",
@@ -84,6 +457,20 @@
     "title": "When Agents Lie: Premeditation, Persistence, and Exploitation in Repeated Games",
     "url": "http://arxiv.org/abs/2607.05132v1",
     "arxiv_id": "2607.05132v1",
+    "authors": [
+      "Jerick Shi",
+      "Terry Jingcheng Zhang",
+      "Bernhard Sch\u00f6lkopf",
+      "Vincent Conitzer",
+      "Zhijing Jin"
+    ],
+    "published": "2026-07-06T14:17:59+00:00",
+    "summary": "As large language models are deployed as autonomous agents that communicate intentions before acting, a critical safety question is whether agents that publicly commit to actions will honor those commitments. We place LLM agents in repeated $n$-player games with a three-stage protocol that separates private intent, public announcement, and final action, allowing us to identify whether each deviation from a stated announcement was already planned during private deliberation. Evaluating three frontier models across six games in homogeneous and heterogeneous groups over 10 rounds, we report two findings. First, when agents deviate from their announcements, the deviation is predominantly already stated in their private plan (exceeding 90% in the highest-deception conditions), yet this is not a fixed model property: the same model ranges from perfect honesty to near-total deviation across games. Second, different models interpret announcements incompatibly, some as binding commitments and others as cheap talk, producing payoff gaps that emerge in Round~0 and persist across all 10 rounds. Systems that combine models from different providers therefore cannot assume shared announcement semantics and require empirical testing of model interactions before deployment."
+  },
+  {
+    "title": "When Agents Lie: Premeditation, Persistence, and Exploitation in Repeated Games",
+    "url": "http://arxiv.org/abs/2607.05132v2",
+    "arxiv_id": "2607.05132v2",
     "authors": [
       "Jerick Shi",
       "Terry Jingcheng Zhang",
