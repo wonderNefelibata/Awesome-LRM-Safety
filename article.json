@@ -1,5 +1,469 @@
 [
   {
+    "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+    "url": "http://arxiv.org/abs/2607.13028v1",
+    "arxiv_id": "2607.13028v1",
+    "authors": [
+      "Zhouchonghao Wu",
+      "Akshay Rangesh",
+      "Weixin Li",
+      "Wei-Jer Chang",
+      "Zachary Lee",
+      "Tim Wang",
+      "Wei Zhan"
+    ],
+    "published": "2026-07-14T17:59:02+00:00",
+    "summary": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a procedural driving simulator and self-play training stack. A configurable C engine runs simulation on the CPU and policy inference on the GPU over a zero-copy path, sustaining 1.3M agent-steps per second on a single server-grade GPU, far faster than existing object-level simulators, while keeping fidelity lighter single-agent systems omit: heterogeneous agents, multiple dynamics models, and full traffic-rule enforcement. TerraZero treats logged data only as a source of real-world map geometry, populating each map with randomized rule-based road users and signal controllers and randomizing agent dynamics, rewards, and sizes per episode, so a map yields an unbounded set of scenarios. Every reported policy trains from scratch by reinforcement learning alone on a compute-efficient self-play recipe across GPUs, with zero human demonstrations and no fallback planner at inference. Policies generalize zero-shot across cities and datasets, including emergent left-hand-traffic driving without explicit supervision. As an ego policy, TerraZero is the first fully learned policy to top the InterPlan long-tail benchmark, ahead of larger learned planners; on routine-driving val14 it ranks among the best approaches and is the safest, posting the best collision and time-to-collision scores. On Waymo Open Sim Agents realism the same recipe outperforms other demonstration-free methods and is competitive with the strongest reference-anchored self-play method. One stack serves both roles: driving policies across dynamics for cars and trucks, and sim agents that jointly control vehicles, pedestrians, and cyclists."
+  },
+  {
+    "title": "Knowledge- and Gradient-Guided Reinforcement Learning for Parametrized Action Markov Decision Processes",
+    "url": "http://arxiv.org/abs/2607.12924v1",
+    "arxiv_id": "2607.12924v1",
+    "authors": [
+      "Jonas Ehrhardt",
+      "Ren\u00e9 Heesch",
+      "Oliver Niggemann"
+    ],
+    "published": "2026-07-14T15:57:25+00:00",
+    "summary": "In this paper, we study Reinforcement Learning in Parametrized Action Markov Decision Processes (PAMDP), where each decision consists of a symbolic action and numerical parameters. In such settings Reinforcement Learning algorithms typically determine parameters with one-shot estimators, which makes their training sample inefficient. Though in most PAMDP environments explicit but incomplete knowledge (e.g., rules, safety constraints, or expert heuristics) is available, it is rarely directly used to increase the sample-efficiency of training Reinforcement Learning agents. We step into this gap and propose our novel Neuro-Symbolic Knowledge- and Gradient-Guided Reinforcement Learning (KGRL) algorithm. KGRL uses domain knowledge in a Datalog knowledge base to derive the set of applicable actions and feasible parameters for a given state. This allows it to prune non-applicable actions from the decision-space and constrain the parameter spaces of the remaining actions. We then use a gradient-based parameter refinement loop to estimate the optimal parameters during training and deployment of the agent. By recording activated rules along the trajectory, KGRL additionally provides local procedural explanations on the pruning of actions and constraining of parameters. Overall, KGRL guides the agent's exploration and deployment toward feasible and constraint-aware decisions, while increasing sample efficiency during training. KGRL outperforms state-of-the-art RL baselines for PAMDPs in both, sample efficiency and episodic return."
+  },
+  {
+    "title": "Astra: an open-source fully autonomous robotic observatory control software",
+    "url": "http://arxiv.org/abs/2607.12898v1",
+    "arxiv_id": "2607.12898v1",
+    "authors": [
+      "Peter P. Pedersen",
+      "David Degen",
+      "Lionel Garcia",
+      "Urs Schroffenegger",
+      "Daniel Sebastian",
+      "Sebasti\u00e1n Z\u00fa\u00f1iga-Fern\u00e1ndez",
+      "Brice-Olivier Demory",
+      "Elsa Ducrot",
+      "Micha\u00ebl Gillon",
+      "Matthew J. Hooton",
+      "Cl\u00e0udia Jan\u00f3-Mu\u00f1oz",
+      "James McCormac",
+      "Mathilde Timmermans",
+      "Amaury H. M. J. Triaud",
+      "Didier Queloz"
+    ],
+    "published": "2026-07-14T15:35:14+00:00",
+    "summary": "Robotic and autonomous observatories are critical for modern time-domain and high-cadence astronomical surveys. The operation of these facilities requires complex software coordination to manage hardware, schedule observations, and ensure safety. However, existing observatory control software are often proprietary and platform-locked or require complex message-brokering infrastructure. Here we present Astra (Automated Survey observaTory Robotised with Alpaca): an open-source, cross-platform Python system for the sustained, fully autonomous operation of astronomical observatories, requiring no external message-broker infrastructure. Astra controls observatory hardware via the ASCOM Alpaca protocol, and executes prescheduled observatory actions under continuous safety supervision. Its multi-device actions include plate-solve-based pointing correction with a local Gaia--2MASS catalogue fallback, PID-controlled autoguiding, and autofocus. A FastAPI web service provides a browser UI, REST and WebSocket APIs for real-time status, image previews, and SQLite-backed telemetry and logs. Astra has run in fully unattended production since January 2024, scaling to six telescopes across three facilities: the SPECULOOS-South network (4 $\\times$ 1\\,m class, Chile), SAINT-EX (1\\,m class, Mexico), and the ETH Observatory (0.5\\,m class, Switzerland), with no schedule aborts attributable to Astra software. Across the SPECULOOS-South network, it achieves sub-arcsecond autoguiding (0.11\\unit{\\arcsecond} median pointing scatter) and plate-solve failure rates below 1\\% on three of the four telescopes (3\\% on the narrowest-field unit), demonstrating that an open, standards-based software stack can meet the reliability demands of production survey astronomy."
+  },
+  {
+    "title": "Superstatistical Analysis of PDFs and autocorrelation functions for air pollution concentrations in the UK",
+    "url": "http://arxiv.org/abs/2607.12876v1",
+    "arxiv_id": "2607.12876v1",
+    "authors": [
+      "Nisal Amarakoon",
+      "Hankun He",
+      "Christian Beck"
+    ],
+    "published": "2026-07-14T15:23:48+00:00",
+    "summary": "Conventional statistical models often struggle to fully capture the complex spatio-temporal dynamics, intermittent fluctuations, and heavy-tailed distributions characteristic of real-world air pollution data. Furthermore, existing literature frequently focuses on extreme events, overlooking the persistence of low-pollution states and temporal memory effects. To address these gaps, we apply superstatistical frameworks from non-equilibrium statistical physics to analyse a comprehensive five-year dataset (2020-2025) of hourly air pollutant concentrations across the United Kingdom. Excellent fits of experimentally measured distributions are obtained from our theoretical models. We observe large heterogeneities of the best fitting parameters depending on the locations where the measurements are performed. These parameters form characteristic patterns in the 3-dimensional parameter space and depend on the type of pollutant considered, as well as on the environmental conditions (high traffic, industrial, or rural surroundings). We also investigate autocorrelation functions and provide evidence for differences in day-time and night-time decays of the autocorrelation function. Our investigation mainly focuses onto the dynamics of NO, NO2, PM2.5, PM10, but we also report on some anomalous distributions observed for O3."
+  },
+  {
+    "title": "Breaking D\u00e9j\u00e0 Vu: Independent Auditing of Visual Place Recognition through Vision-Language Reasoning",
+    "url": "http://arxiv.org/abs/2607.12818v1",
+    "arxiv_id": "2607.12818v1",
+    "authors": [
+      "Sania Waheed",
+      "Michael Milford",
+      "Sarvapali D. Ramchurn",
+      "Shoaib Ehsan"
+    ],
+    "published": "2026-07-14T14:30:24+00:00",
+    "summary": "Visual place recognition (VPR) is a key enabler of accurate localization and long-term autonomous navigation in robotics applications, such as loop closure detection for simultaneous localisation and mapping (SLAM). However, real-world VPR deployment relies on selecting an image matching threshold that balances precision and recall. These thresholds are typically tuned using labeled validation data and fixed during deployment, making them unreliable under environmental changes where ground truth is unavailable. This is particularly problematic in safety-critical robotics, where accepting a false loop closure can corrupt the estimated trajectory and map. In this work, we introduce Visual Place Recognition Auditing, an independent post-retrieval verification framework that leverages Vision-Language Models (VLMs) to assess retrieved matches by reasoning jointly over query and candidate images. Unlike conventional verification methods, our approach performs instance-level verification without requiring architecture-specific confidence measures, dataset-dependent thresholds, or prior knowledge of the deployment environment. We evaluate our method on six benchmark datasets using five state-of-the-art VPR methods and four VLMs. Results show that VLM-based auditing improves recall@1 by 13.6% on average as compared to state-of-the-art methods while reducing false acceptance rates to 12%, maintaining precision above 95% and coverage above 75%."
+  },
+  {
+    "title": "Silent Alarm: A J-Space Protocol for Comparing Danger Recognition Across Models and Quantization Levels",
+    "url": "http://arxiv.org/abs/2607.12792v1",
+    "arxiv_id": "2607.12792v1",
+    "authors": [
+      "Roman Prosvirnin",
+      "Victor Minchenkov",
+      "Alexey Soldatov",
+      "Vladimir Bashun"
+    ],
+    "published": "2026-07-14T14:08:18+00:00",
+    "summary": "Jailbreak-robustness research typically evaluates safety through generated responses using an LLM-as-judge approach. Such evaluations, however, are sensitive to the benchmark's grading procedure and capture only observed behavior on a given set of attacks, without directly revealing the hidden fragility of the underlying safety mechanisms. This work proposes JADR (Jacobian Assessment of Danger Recognition), a protocol that measures a model's internal representation through Jacobian space (J-space, a recently proposed workspace of verbalizable concepts) before the first response token is generated. For every prompt and layer we record the top-k J-space tokens; these are grouped into six behavioral scenario axes and compared between a danger sample based on StrongREJECT and a safe control drawn from XSTest and OKTest. The method does not call on an external judge model: the computation runs entirely locally, on the activations of the model under evaluation, which lets us compare both different models against each other and modifications of a single model -- quantization and fine-tuning in particular -- on the same terms. The final comparison rests on the proposed SafetyAUC metric, complemented with bootstrap confidence intervals. The protocol is applied to six models (Qwen3-1.7B, Qwen3-4B, Qwen3-8B, Qwen3-Uncensored-4B, Qwen3-SafeRL-4B, Gemma 2 9B) across three weight-representation regimes -- BF16, INT8, and INT4 -- and checked against an independent behavioral evaluation with the StrongREJECT grader. The metric separates models with a strong versus a weak internal safety mechanism with statistical significance and captures substantively different effects across quantization regimes."
+  },
+  {
+    "title": "Who Grades the Grader? Co-Evolving Evaluation Metrics and Skills for Self-Improving LLM Agents",
+    "url": "http://arxiv.org/abs/2607.12790v1",
+    "arxiv_id": "2607.12790v1",
+    "authors": [
+      "Xing Zhang",
+      "Guanghui Wang",
+      "Yanwei Cui",
+      "Ziyuan Li",
+      "Wei Qiu",
+      "Bing Zhu",
+      "Peiyang He"
+    ],
+    "published": "2026-07-14T14:02:50+00:00",
+    "summary": "Self-evolving agent systems improve by creating, revising, and retiring their own skills, but every such loop rests on a hidden assumption: a reliable evaluation metric already exists. In many real applications it does not. We make three claims. First, metrics can be \\emph{evolved}: our metric loop searches compositions of small drawback detectors under a full evolutionary lifecycle, trained to agree with a ten-item anchored reference set, regularized by consensus over unlabeled outputs, and audited against a held-out anchor it never reads, yielding a transparent, inspectable metric rather than an opaque judge. Second, since no metric exists to beat, the yardstick is recovering what an accurate metric would have enabled, and \\emph{Double Ratchet}, our co-evolution of the metric with a lifecycle-managed skill loop, does so: across code generation (MBPP+), enterprise text-to-SQL (Spider~2.0-Snow), and reference-free report generation, it retains 88--110\\% of the held-out lift achieved by the same skill loop driven by ground truth or the best available rubric. Third, safety comes from anchor discipline plus outer audits: removing anchor guards collapses the metric into a vacuous detector while removing the lifecycle does not; and when evolved skills gamed the report rubric, an independent judge caught it, one detector repaired it, and a task-aware judge then preferred the evolved outputs over the pre-evolution baseline in 77\\% of decided pairs. We argue this failure-expecting architecture is the right default wherever no reliable automatic verifier exists."
+  },
+  {
+    "title": "ExtraGS: Enhancing Endoscopic View Extrapolation via Diffusion-Guided 3D Gaussian Splatting",
+    "url": "http://arxiv.org/abs/2607.12785v1",
+    "arxiv_id": "2607.12785v1",
+    "authors": [
+      "Cheng-Tai Hsieh",
+      "Jiwei Shan",
+      "Han Fang",
+      "Jianshu Hu",
+      "Tao Ni",
+      "Lijun Han",
+      "Yutong Ban",
+      "Shing Shin Cheng",
+      "Hesheng Wang"
+    ],
+    "published": "2026-07-14T14:00:50+00:00",
+    "summary": "Robot-assisted minimally invasive surgery (MIS) critically depends on reliable endoscopic perception for navigation and safety. However, conventional endoscopes provide only a limited field of view, leaving large portions of surrounding anatomy unobserved. Recent neural rendering approaches, such as Neural Radiance Fields and 3D Gaussian Splatting, enable novel view synthesis from endoscopic videos, but their reliance on sparse observations often leads to severe artifacts when extrapolating beyond the training trajectory.In this work, we propose ExtraGS, a framework for enhancing endoscopic view extrapolation via diffusion-guided 3D Gaussian Splatting. Starting from an initial reconstruction, we introduce an uncertainty-guided virtual camera sampling strategy to actively explore blind spots and maximize information gain. The rendered views from these sampled locations are refined using a diffusion model to recover plausible anatomical structures, producing pseudo observations that guide further optimization. To prevent the generated content from degrading reliable regions, we adopt a confidence-weighted fine-tuning strategy when incorporating these pseudo observations.Extensive experiments on multiple public endoscopic datasets demonstrate that ExtraGS significantly reduces extrapolation artifacts and achieves state-of-the-art performance in endoscopic novel view synthesis."
+  },
+  {
+    "title": "Directional Constraints for Efficient Exploration in Safe Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2607.12784v1",
+    "arxiv_id": "2607.12784v1",
+    "authors": [
+      "Paolo Magliano",
+      "Puze Liu",
+      "Jan Peters",
+      "Davide Tateo",
+      "Raffaello Camoriano"
+    ],
+    "published": "2026-07-14T13:59:20+00:00",
+    "summary": "Reinforcement Learning has revolutionized the landscape of robotic research, allowing robust learning of complex robotic skills in simulation. However, real-world deployment in open-ended environments requires strong safety guarantees to prevent dangerous or harmful behaviors. Safe Reinforcement Learning methods address this requirement by enforcing safety constraints. Nevertheless, learning under constraints often reduces learning speed and could lead to suboptimal task performance, as the agent must solve a more complex constrained optimization problem compared to unconstrained settings. To tackle this issue, in this work, we propose an extension of the ATACOM framework, a state-of-the-art reliable safety layer that can be integrated with existing Reinforcement Learning algorithms to enforce constraints derived from prior knowledge of the system or learned directly from data. Our proposed method, named ATACOM Directional Constraints (ATACOM-DC), significantly improves the safety-performance trade-off by introducing directional constraints that distinguish between actions approaching and moving away from constraint boundaries, activating constraint enforcement only when necessary. We evaluate our method across a range of challenging robotic control tasks in simulation, analyzing both constraint-violation costs and achieved task performance. Code and additional material at https://atacom-dc.robot-learning.net."
+  },
+  {
+    "title": "Constraint-Aware Aggregation for Federated Reinforcement Learning in Microgrid Energy Coordination",
+    "url": "http://arxiv.org/abs/2607.12763v1",
+    "arxiv_id": "2607.12763v1",
+    "authors": [
+      "Usman Haider",
+      "Karl Mason"
+    ],
+    "published": "2026-07-14T13:33:25+00:00",
+    "summary": "Federated Reinforcement Learning (FedRL) enables coordination of distributed energy resources without sharing raw local data, but standard aggregation methods such as FedAvg do not account for system-level constraints, often leading to unsafe global behavior. In this work, we study constraint-aware aggregation for federated reinforcement learning in distributed energy coordination. We propose aggregation rules that incorporate both local performance and estimated constraint violation into the server-side update. Among these, a simple penalty-based rule, $w_i \\propto R_i - \u03b1V_i$, consistently provides the most reliable trade-off between reward and safety, without requiring dual optimization or modifications to local training. \\textcolor{black}{We evaluate our approach on DairyGridEnv, a benchmark modeling multiple farms coordinating battery storage under stochastic demand and a shared grid capacity constraint, and further assess robustness using real load-driven demand profiles from Finland and the German FIELD dataset. Across multiple seeds, penalty-based aggregation substantially reduces violations while improving reward relative to FedAvg in both synthetic and real load-driven settings.} A combined reward-violation scheme exposes a tunable trade-off via $\u03bb$, but is less stable. These results demonstrate that lightweight aggregation strategies can substantially improve empirical safety in federated reinforcement learning while preserving standard communication protocols."
+  },
+  {
+    "title": "Epistemic Stance Flexibility Probing: Measuring Prompt-Conditioned Register Shift in Large Language Models",
+    "url": "http://arxiv.org/abs/2607.12739v1",
+    "arxiv_id": "2607.12739v1",
+    "authors": [
+      "Binwen Liu",
+      "Yilin Ren"
+    ],
+    "published": "2026-07-14T13:10:30+00:00",
+    "summary": "A language model may be asked either what experts believe about a contested claim or what it believes about the claim itself. A trustworthy conversational agent should distinguish these two requests and respond in different epistemic registers: neutral attribution in the first case and stance expression in the second. Whether such a shift occurs-and whether it occurs coherently-is not directly assessed by existing benchmarks for accuracy, instruction following, or safety. We introduce ESFP, a behavioral benchmark that treats the contrast between externally attributed and self-attributed prompts as the fundamental unit of measurement. ESFP consists of 104 carefully controlled items spanning six epistemic categories and five phrasing templates, and evaluates model responses along four complementary dimensions: lexical self-attribution, representation-level responsiveness to role framing, sentence-level stance content density assessed by an LLM judge panel, and cross-condition stance consistency. Evaluating eight frontier models from five vendors, we find that epistemic flexibility is largely orthogonal to general model capability: a 27B open-weight model matches the strongest proprietary systems, the flagship model of one family underperforms its lightweight counterpart, and reasoning-optimized models do not consistently exhibit higher flexibility. Stance content density provides the strongest signal, while surface-level lexical markers such as 'I think' can change substantially without corresponding changes in expressed stance. We provide item-level bootstrap confidence intervals, weight-sensitivity analyses, and an explicit discussion of the interpretation limits of the composite score. ESFP measures a model's propensity to adapt its epistemic stance under changing attribution conditions, rather than a general competence measure."
+  },
+  {
+    "title": "On the transition to large fluxes and access to second stability in gyrokinetic simulations of electromagnetic turbulence in STEP",
+    "url": "http://arxiv.org/abs/2607.12682v1",
+    "arxiv_id": "2607.12682v1",
+    "authors": [
+      "Daniel Kennedy",
+      "Yujia Zhang",
+      "Toby Adkins",
+      "Plamen Ivanov",
+      "Francis Casson",
+      "Harry Dudding",
+      "Bhavin Patel",
+      "Colin Roach",
+      "Howard Wilson"
+    ],
+    "published": "2026-07-14T12:09:54+00:00",
+    "summary": "This work investigates the nonlinear transition to large heat fluxes observed in local gyrokinetic simulations of electromagnetic turbulence in STEP. Using the stress-balance framework of Zhang et al. (arXiv:2606.04616, arXiv:2607.11789), we confirm that the onset of extreme transport correlates with a critical value of $q^{2}\u03b2_{e}$, where $q$ is the safety factor and $\u03b2_{e}$ is the ratio of electron thermal pressure to magnetic pressure, and relate this to a limit on the poloidal beta $\u03b2_{\\mathrm{pol}}$. Crucially, this critical value lies below any relevant linear stability limit in the ($q$, $\u03b2_{e}$) space (e.g., the onset of ideal or kinetic ballooning modes). Using an extensive set of nonlinear gyrokinetic simulations, we demonstrate that the transition to large fluxes in STEP is governed by a balance between the electrostatic and magnetic-flutter stresses. We argue, and also show numerically, that larger-major-radius tokamaks reach the electromagnetic non-zonal regime at lower $\u03b2_{e}$, making this MHD-controlled saturation limit more accessible in reactor-scale devices than in small spherical tokamaks. We also demonstrate that access to a second-stable regime enables re-saturation at larger values of $\u03b2^{\\prime}$. We further show that the ideal ballooning mode (IBM) threshold serves as a useful proxy for delineating this second-stable region and also as a qualitative guide for the onset of large fluxes. These results provide a predictive framework for identifying no-go zone predictions from local gyrokinetics and offer new insight into the electromagnetic saturation physics relevant to STEP and other high-$\u03b2_{e}$ devices."
+  },
+  {
+    "title": "Internet of Agentic Things: Networked AI Agents for Closed-Loop IoT Orchestration",
+    "url": "http://arxiv.org/abs/2607.12662v1",
+    "arxiv_id": "2607.12662v1",
+    "authors": [
+      "Quanyan Zhu"
+    ],
+    "published": "2026-07-14T11:43:30+00:00",
+    "summary": "The paper introduces the Internet of Agentic Things (IoAT), an architectural framework that integrates agentic AI, IoT, cyber-physical systems, Physical AI, edge computing, and digital twins into a unified closed-loop orchestration framework. The proposed architecture consists of cloud, edge/fog, and physical IoT layers connected through autonomous AI agents that perceive, reason, coordinate, and actuate across distributed cyber-physical environments. The paper formalizes IoAT as a coupled workflow-control problem with nested strategic and tactical decision making using a hylomorphic dynamic programming framework that links agentic planning with physical execution. Smart-building orchestration is presented as a representative use case, and key research challenges related to safety, security, governance, resilience, and trustworthy deployment are discussed."
+  },
+  {
+    "title": "PVDetector: Detecting Prompt Injection Attacks on Purpose-Specific LLM Agents through Policy-Violation Concept Analysis",
+    "url": "http://arxiv.org/abs/2607.12624v1",
+    "arxiv_id": "2607.12624v1",
+    "authors": [
+      "Junhui Wang",
+      "Hangtao Zhang",
+      "Zhirun Zheng",
+      "Li Zeng",
+      "Jiejun Xiao",
+      "Xi Luo",
+      "Lihua Yin",
+      "Saiqin Long"
+    ],
+    "published": "2026-07-14T11:01:10+00:00",
+    "summary": "Large language models (LLMs) are increasingly deployed as purpose-specific agents to handle domain-specific tasks such as customer service and code generation. These agents are expected to comply with not only generic safety guardrails but also purpose-specific restrictions tailored to their designated roles. Such additional restrictions enlarge the attack surface, particularly to prompt injection (PI) attacks. To defend against such attacks, existing detection methods primarily rely on analyzing input-output patterns, yet yield limited effectiveness. To address this limitation, we turn to analyzing the hidden activation space and discover that LLMs inherently retain latent policy-violation (PV) concepts when prompted with requests beyond their designated purpose. Particularly, PV concepts capture the semantics of conflicts between user queries and predefined restrictions, implicitly reflecting LLMs' intrinsic awareness of recognizing policy violations. Building on this insight, we propose PVDetector, a training-free framework that detects PI attacks during LLM inference by measuring hidden-state alignment with PV concepts, which are derived offline from the contrastive pairs of policy-violating and policy-compliant prompts. Experiments across multiple LLMs and datasets show that PVDetector achieves <1\\% false negative rate with minimal auxiliary overhead, consistently outperforming state-of-the-art methods. Our code is available at https://github.com/Claresigle/PVDetector ."
+  },
+  {
+    "title": "Streamlining stereo differentiable rendering for marker-free real-time tracking of surgical robots",
+    "url": "http://arxiv.org/abs/2607.12604v1",
+    "arxiv_id": "2607.12604v1",
+    "authors": [
+      "Yanghe Hao",
+      "Martin Huber",
+      "Christos Bergeles",
+      "Tom Vercauteren"
+    ],
+    "published": "2026-07-14T10:28:28+00:00",
+    "summary": "Purpose: Marker-based tracking of surgical robots is occlusion-prone in cluttered operating rooms. We evaluate stereo differentiable rendering for marker-free, real-time robot pose tracking, potentially improving safety, reducing setup time, and enabling multi-robot interaction. Methods: We extend the markerless pose estimation framework roboreg to online dynamic tracking via (i) sequential optimisation that propagates pose estimates across frames with motion-adaptive hyperparameter tuning, and (ii) CUDA stream parallelisation of segmentation and optimisation, combined with CUDA-graph accelerated segmentation. We evaluate on 38 unobstructed and 5 occluded displacement sequences with static start/end ground-truth calibrations and dynamic marker-based reference tracking. Results: We achieve real-time 1080p tracking at 30 fps (up from 14 fps for vanilla roboreg), matching the camera frame rate. Accuracy reaches 1.7 cm / 0.6 deg against static ground truth and 1.2 cm mean 3D error over 27,460 frames against the marker-based reference (1.53 cm over 1,242 occluded frames). Our method outperforms FoundationPose by 11% in dynamic estimation (63% under occlusion) and 250% in static estimation, with 6x faster inference. Conclusions: Stereo differentiable rendering enables real-time, high-resolution marker-free surgical robot tracking, on par with marker-based approaches and surpassing foundation-model baselines."
+  },
+  {
+    "title": "Hierarchical Fault Localization for Autonomous Driving Systems with Hypothesis Validation and Intent Analysis",
+    "url": "http://arxiv.org/abs/2607.12598v1",
+    "arxiv_id": "2607.12598v1",
+    "authors": [
+      "Rui Zheng",
+      "Changwen Li",
+      "Yi Ji",
+      "Rongjie Yan"
+    ],
+    "published": "2026-07-14T10:17:01+00:00",
+    "summary": "Comprehensive testing is essential for the safety and reliability of Autonomous Driving Systems (ADS). Existing techniques can detect system-level failures or attribute them to coarse-grained modules, but they often fall short of localizing the root cause in source code. As a result, debugging remains labor-intensive, requiring developers to connect behavioral violations with complex implementation logic. To address this gap, we present HINT, a two-phase framework for hierarchical ADS fault localization based on hypothesis validation and intent analysis. In Phase I, HINT transforms failure-triggering execution recordings into multi-modal abstractions and uses causal reasoning to identify the responsible module. In Phase II, it reconstructs design-side intent and implementation-side behavior, then localizes suspicious code through reliability-aware consistency checking, without costly re-simulation. We evaluate HINT on Apollo across diverse failure modes and modules. The results show that HINT achieves the strongest overall performance across module-level diagnosis and code-level localization metrics, with 77.8% end-to-end Class@5 accuracy on real-world bugs."
+  },
+  {
+    "title": "Agent-Safety Evaluations as Load-Bearing Evidence: A Vendor-Neutral, Cross-Harness Reconstructability Metric",
+    "url": "http://arxiv.org/abs/2607.12469v1",
+    "arxiv_id": "2607.12469v1",
+    "authors": [
+      "Oleg Solozobov"
+    ],
+    "published": "2026-07-14T07:54:37+00:00",
+    "summary": "Many agent-safety evaluation results are not yet load-bearing evidence: identical nominal outcomes (task success, attack success, monitor scores) may sit atop materially different evidence regimes. No vendor-neutral, runnable instrument scores reconstructability as an evaluation-validity metric: whether captured evidence can reconstruct the decision a claim depends on. This paper introduces a property-level reconstructability metric over eight decision-property classes and a cross-harness adapter emitting per-decision Evidence Sufficiency Cards backing a per-run monitor-coverage release check. It specifies a counterfactual-replay intervention protocol, implements its replayability-precondition probe, and defines a claim-evidence overclaim gap. On public and bundled traces, without new model runs, twelve-field sufficiency spans 0.458-0.833 across four inputs sharing a surface reading; replay preconditions are unmet in every scored trace. In a synthetic release-gate pair, the sufficiency gate blocks the raw variant (0.542) and passes the instrumented (0.667). Safety-evaluation claims should travel with their reconstructability vector; a reproducibility package regenerates every reported number."
+  },
+  {
+    "title": "Exploring Zero-Shot Foundation Models for Multivariate Time Series Anomaly Detection",
+    "url": "http://arxiv.org/abs/2607.12454v1",
+    "arxiv_id": "2607.12454v1",
+    "authors": [
+      "Martin Uray",
+      "Saverio Messineo",
+      "Roland Kwitt",
+      "Stefan Huber"
+    ],
+    "published": "2026-07-14T07:32:08+00:00",
+    "summary": "Multivariate Time Series Anomaly Detection (MTSAD) is essential for reliability and safety in domains such as industrial process monitoring and financial risk management, yet conventional approaches rely on application-specific models that are costly to train and hard to scale. Foundation Models (FMs), pre-trained on broad data with strong zero-shot generalization, have recently become available for univariate time series forecasting, raising the question of whether they can address MTSAD without task-specific training. We investigate the zero-shot application of a univariate forecasting FM, TimesFM, to industrial MTSAD on the Secure Water Treatment (SWaT) benchmark, evaluating two strategies: treating the FM as a per-feature forecaster with thresholded prediction errors, and as an embedder whose intermediate representations feed standard outlier detectors. Neither of our proposed setups is competitive with established baselines; embeddings reveal only partial separation between normal and anomalous segments, insufficient for reliable detection. The cause is that the FM is too effective at capturing temporal dynamics, yielding low error even within fully anomalous windows, so persistent anomalies become indistinguishable from normal behavior. However, these observations yield valuable insights: the error peaks at anomaly boundaries, indicating FMs reliably detect distribution changes. We conclude that the proposed naive zero-shot FMs are unsuitable for MTSAD but promising for change-point detection."
+  },
+  {
+    "title": "Automatic Testing of Interacting Autonomous Vehicles",
+    "url": "http://arxiv.org/abs/2607.12452v1",
+    "arxiv_id": "2607.12452v1",
+    "authors": [
+      "Fabio Cavaleri",
+      "Alessio Gambi",
+      "Paolo Arcaini",
+      "Dejan Ni\u010dkovi\u0107",
+      "Mauro Pezz\u00e8"
+    ],
+    "published": "2026-07-14T07:28:43+00:00",
+    "summary": "Autonomous vehicles (AVs) must be thoroughly tested to meet high safety standards and avoid endangering both AV passengers and road users. Scenario-based testing implements driving scenarios in virtual simulation environments as a cost-effective alternative to field testing. Common scenario-based testing approaches set the environment and the surrounding traffic and test a single AV. Recent studies show that the approaches that test single AVs miss critical behaviors that emerge from interactions among multiple AVs. Effective approaches to test scenarios that emerge from n-way interactions must address the combinatorial explosion that the presence of multiple AVs further exacerbates. In this paper, we propose EVITA, an approach that leverages multi-objective optimization to generate scenarios that trigger multiple and diverse AVs interactions, while minimizing the complexity of the generated scenarios, to effectively test multiple interacting AVs and reveal safety-critical scenarios that current approaches overlook. The experimental results that we discuss in this paper confirm that EVITA triggers a higher variety of AVs interactions than state-of-the-art approaches, thus improving the likelihood to reveal safety-critical behaviors."
+  },
+  {
+    "title": "Model-Based Diffusion Optimal Control for Multi-Robot Motion Planning",
+    "url": "http://arxiv.org/abs/2607.12423v1",
+    "arxiv_id": "2607.12423v1",
+    "authors": [
+      "Zhilin He",
+      "Yorai Shaoul",
+      "Jiaoyang Li"
+    ],
+    "published": "2026-07-14T06:54:03+00:00",
+    "summary": "Multi-Robot Motion Planning in continuous environments, where robots must generate dynamically feasible, collision-free trajectories, is challenging due to the combinatorial growth of the joint trajectory space and the difficulty of enforcing dynamic feasibility and hard safety constraints. Recent approaches recast trajectory planning as probabilistic inference, sampling from a posterior over trajectories using diffusion models whose score functions are learned from demonstration data. While showing promising performance, these approaches are limited: they often rely on sizable demonstration datasets and struggle to rigorously enforce dynamics and hard safety constraints during sampling. To this end, we introduce Model-Based Diffusion Optimal Control (MDOC), a model-based diffusion planner that efficiently produces dynamically feasible trajectories without relying on data. Crucially, we show that MDOC's safety mechanism -- combining known dynamics models with Control Barrier Function-constrained projections -- naturally scales to multi-robot planning settings through Conflict-Based Search. Across simulation experiments, this integrated method consistently outperforms representative baseline planners in sample efficiency, geometric smoothness, and success rate, while reducing computation time and producing collision-free trajectories."
+  },
+  {
+    "title": "Isolation as a First-Class Principle for LLM-Agent System Safety: Concepts, Taxonomy, Challenges and Future Directions",
+    "url": "http://arxiv.org/abs/2607.12406v1",
+    "arxiv_id": "2607.12406v1",
+    "authors": [
+      "Huihao Jing",
+      "Wenbin Hu",
+      "Shaojin Chen",
+      "Haochen Shi",
+      "Sirui Zhang",
+      "Hanyu Yang",
+      "Changxuan Fan",
+      "Zhongwei Xie",
+      "Hongyu Luo",
+      "Wun Yu Chan",
+      "Wei Fan",
+      "Haoran Li",
+      "Yangqiu Song"
+    ],
+    "published": "2026-07-14T06:25:35+00:00",
+    "summary": "The capability of LLM agents to function as the ``brain'' of a system fundamentally expands the scope of analysis beyond a standalone model. Consequently, safety is no longer only about input--output content alignment. It also concerns system behavior and real-world execution outcomes. However, the current literature is fragmented across attack types, applications, and benchmarks. This makes it hard to explain why failures such as prompt injection, tool misuse, and memory poisoning often share the same structural cause, and how they spread through an agent workflow. In this survey, we treat isolation as a first-class principle for LLM-agent system safety. By isolation, we refer to the separation of user inputs, tool access, execution channels, inter-agent communication, and environment-originated context. We organize the literature with a boundary-centric taxonomy of five boundaries: user-agent, agent-tool, agent-execution, agent-agent, and system-environment. This view helps identify where the loss of isolation first occurs, how compromise propagates across boundaries, and which defenses are most relevant at each interface. We also summarize cross-boundary failure paths, discuss open challenges, and outline a research agenda for isolation-by-construction in future agent systems."
+  },
+  {
+    "title": "StratMamba: Strategic and Reactive Stream Partitioning for Path-Efficient LiDAR-Based Obstacle Avoidance",
+    "url": "http://arxiv.org/abs/2607.12370v1",
+    "arxiv_id": "2607.12370v1",
+    "authors": [
+      "Hung-Chieh Wu",
+      "Xiaopan Zhang",
+      "Kasra Sinaei",
+      "Ryan Abnavi",
+      "Kasun Weerakoon",
+      "Christopher Bradley",
+      "Seyed Fakoorian",
+      "Jiachen Li",
+      "Donald Ebeigbe"
+    ],
+    "published": "2026-07-14T05:42:28+00:00",
+    "summary": "This paper proposes StratMamba, a dual-stream Mamba-based temporal modeling architecture, to more efficiently capture long-horizon temporal dependencies required for robot navigation in complex and obstacle-rich environments. StratMamba leverages a combination of fast-decay and slow-decay memory architectures, where the fast-decay component processes high-frequency LiDAR data for reactive obstacle avoidance, while the slow-decay component maintains longer-horizon goal information for strategic planning. We perform extensive evaluations of different obstacle avoidance scenarios in IsaacLab and Gazebo, while also validating successful sim-to-real deployment on a Unitree GO1 quadruped robot navigating in the presence of static/dynamic obstacles. Comparisons with other temporal RL baselines, such as LSTM, Transformer, and Vanilla-Mamba, show that our StratMamba achieves exceptional temporal reasoning efficiency with a lower timeout rate, while maintaining the fastest navigation speed (576 median steps, 5.0% better than Vanilla-Mamba). It also achieves the highest path optimality (0.915 path efficiency) across all baselines. Real-world evaluation reveals that StratMamba maintains more robust performance across extended LiDAR ranges compared to vanilla Mamba and the Transformer, demonstrating that dual-stream partitioning effectively balances reactive safety with strategic navigation under challenging sensing conditions."
+  },
+  {
+    "title": "Adaptive Cross-Modal Fusion with Sparse Attention for Pedestrian Crossing Intention Prediction",
+    "url": "http://arxiv.org/abs/2607.12293v1",
+    "arxiv_id": "2607.12293v1",
+    "authors": [
+      "Md Mahfuzur Rahman",
+      "Pengzhan Zhou",
+      "A F M Abdun Noor",
+      "Md Imam Ahasan",
+      "Kah Ong Michael Goh",
+      "S. M. Hasan Mahmud",
+      "Md Mustafizur Rahman",
+      "Kaixin Gao"
+    ],
+    "published": "2026-07-14T03:05:09+00:00",
+    "summary": "Predicting pedestrian crossing intention is a safety-critical task for autonomous driving, yet existing approaches often rely on single-modal inputs or dense multimodal fusion strategies that inadequately capture complementary visual and kinematic information while introducing redundant inter-modal interactions. We propose ADAPT (Adaptive Domain-Aware Pedestrian Crossing Transformer), a multimodal framework that jointly models local and global visual context together with temporal motion dynamics for accurate pedestrian crossing intention prediction. ADAPT processes four spatially aligned visual modalities, including RGB images, local depth maps, global semantic maps, and global depth maps, together with ego-vehicle speed, pedestrian bounding boxes, and skeleton pose information through five specialized modules: a weight-shared Swin Transformer V2 backbone for visual feature extraction, a Cross-Modality Guided Attention module for hierarchical visual fusion, a Mamba-based Motion Feature Encoding module for efficient temporal modeling, a Sparse Cross-Modal Attention module that selectively preserves the most informative inter-modal interactions, and a Vision Transformer-based Temporal Feature Fusion module for sequence-level prediction. Extensive experiments on the JAAD and PIE benchmark datasets demonstrate that ADAPT consistently outperforms existing state-of-the-art methods while maintaining low computational complexity. On JAAD, the proposed method achieves an AUC of 0.73 on JAADbeh and 0.85 on JAADall, while on PIE it achieves an accuracy of 0.92 and an AUC of 0.90. Furthermore, ADAPT performs inference in only 17.23 ms per sample, offering an effective balance between predictive accuracy and real-time deployment efficiency for intelligent transportation and autonomous driving applications."
+  },
+  {
+    "title": "Code-MUE: Measuring Code LLMs' Uncertainty through Execution-based Semantic Interaction Graphs",
+    "url": "http://arxiv.org/abs/2607.12273v1",
+    "arxiv_id": "2607.12273v1",
+    "authors": [
+      "Xiaoning Ren",
+      "Yinxing Xue",
+      "Lei Ma",
+      "Yuheng Huang"
+    ],
+    "published": "2026-07-14T02:23:17+00:00",
+    "summary": "As Code Large Language Models (LLMs) become central to modern software engineering, their inherent stochasticity poses significant real-world risks, where even minor errors can lead to severe functional, security, or safety consequences. Reliable automation, therefore, demands the ability to distinguish between confident, well-supported predictions and stochastic guessing. However, existing uncertainty estimation methods face a critical gap: white and grey-box techniques are often inapplicable to closed-source models, while standard \"black-box\" text metrics fail to capture the unique fragility of code, where syntactic variation does not always imply semantic divergence. To bridge this syntax-semantics gap, we introduce Code-MUE, a purely black-box framework that measures uncertainty through execution-based Semantic Interaction Graphs. Unlike prior approaches that rely on superficial textual similarity, Code-MUE grounds uncertainty in observable runtime behavior, calculating the Von Neumann entropy of the solution space to quantify global semantic diversity. A large-scale empirical study across eight state-of-the-art LLMs demonstrates that Code-MUE achieves a strong negative correlation with functional correctness (Spearman's correlation up to -0.98), significantly outperforming lexical and embedding-based baselines while enabling robust risk detection and selective prediction in practical workflows."
+  },
+  {
+    "title": "How to Realize Recursively Self-Improving Agents and Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
+    "url": "http://arxiv.org/abs/2607.12254v1",
+    "arxiv_id": "2607.12254v1",
+    "authors": [
+      "Chengshuai Yang"
+    ],
+    "published": "2026-07-14T01:44:53+00:00",
+    "summary": "Large language model (LLM) agents can increasingly plan, use tools, maintain memory, and execute long-horizon tasks. These advances motivate two linked questions: how can an agent improve the mechanisms by which it learns and acts, and how can that improvement increase the durable capabilities of its user rather than only the software itself? This paper proposes a governed multi-agent architecture for recursively self-improving agents and introduces personal singularity as a bounded human-AI co-development objective: helping a user approach an expanding, user-defined capability frontier across selected domains. Each agent is defined by a goal contract, bounded scope, validated tool registry, tool-level tests, end-to-end benchmarks, an owner-controlled autonomy policy, a routing policy, memory, and an improvement policy. Out-of-scope tasks are transferred to another accountable agent or to a newly created niche agent. A user-facing Auto-Index selects interactive, hybrid, autonomous, or scheduled operation without overriding external permissions. The architecture combines a fast planner-executor-verifier loop, a slower evidence-gated improvement loop, an external governance plane, decentralized agent lineages, an owner-directed agent foundry, and a Personal Singularity OS coordinating working, computational-imaging, process-learning, and personal-learning agents. We formalize scope, routing, improvement acceptance, bounded goal evolution, tool-first execution, and human capability transfer, and provide safety invariants, benchmark design, and an implementation roadmap. This is a position and systems-design paper, not evidence that unrestricted recursive self-improvement or personal singularity has already been achieved."
+  },
+  {
+    "title": "Dynamically Feasible Planning and Control in Complex Environments: a Scalable Systematic Approach",
+    "url": "http://arxiv.org/abs/2607.12178v1",
+    "arxiv_id": "2607.12178v1",
+    "authors": [
+      "Miguel Castroviejo-Fernandez",
+      "Ilya Kolmanovsky"
+    ],
+    "published": "2026-07-13T21:55:50+00:00",
+    "summary": "In this article we present a method to generate safe sets for linear discrete-time systems subject to non-convex constraints that can be represented as a union of polytopes. It is then shown how a reference governor can be implemented for safe reference tracking tasks. A theoretical analysis of the safe set is presented and properties of the reference governor scheme are derived. The guarantees include safety at any time as well as finite-time convergence of the applied reference command to any strictly admissible reference command. For the proposed reference governor, online computational overhead is low. Moreover, it is shown that for specific instances of the complex constraint sets, the safe set can be computed efficiently. Extensive simulation results demonstrating the applicability of the method and online/offline computation times are reported."
+  },
+  {
+    "title": "Data Safety: Synthetic Data Quality Analysis Using CIFAKE Dataset",
+    "url": "http://arxiv.org/abs/2607.12165v1",
+    "arxiv_id": "2607.12165v1",
+    "authors": [
+      "Kuniko Paxton",
+      "Amila Akagi\u0107",
+      "Koorosh Aslansefat",
+      "Dhavalkumar Thakker",
+      "Yiannis Papadopoulos"
+    ],
+    "published": "2026-07-13T21:18:15+00:00",
+    "summary": "Recently, the societal implementation of high-performance image classification models has expanded rapidly. While these models require vast amounts of training data to improve performance, securing sufficient real images is often impractical. As a means to compensate for this shortage, the use of synthetic data is becoming widespread. However, synthetic images are not necessarily equivalent to real images for training purposes. This study systematically analyzes the differences between two types of synthetic images created by different generation methods and real images from three perspectives: high-dimensional feature space, low-level statistics in color space, and the model training process. Furthermore, it experimentally verifies how synthetic data should be utilized by considering realistic data mixing scenarios. This enables the proposal of an evaluation and application strategy for performing preliminary assessments on synthetic images of unknown quality and safely incorporating them into training. This research aims to contribute to enhancing the reliability and safety of image classification models utilizing synthetic images."
+  },
+  {
+    "title": "Toward Trustworthy Autonomous Science: A Two-Year Community Roadmap",
+    "url": "http://arxiv.org/abs/2607.12113v1",
+    "arxiv_id": "2607.12113v1",
+    "authors": [
+      "Rafael Ferreira da Silva",
+      "Milad Abolhasani",
+      "Peter Beaucage",
+      "Laura Biven",
+      "Michael Bussmann",
+      "Kyle Chard",
+      "Ryan Coffee",
+      "Stephen DeWitt",
+      "Sagar Dolas",
+      "Carrie Eckert",
+      "David Elbert",
+      "Ian Foster",
+      "Tirthankar Ghosal",
+      "Anna Giannakou",
+      "Tom Gibbs",
+      "Leslie Hamilton",
+      "Glenn Lockwood",
+      "Theresa Mayer",
+      "Ben Mintz",
+      "Raffi Nazikian",
+      "Sal Nimer",
+      "Amanda Randles",
+      "Woong Shin",
+      "Sreenivas Rangan Sukumar",
+      "Fr\u00e9d\u00e9ric Suter",
+      "Mitra Taheri",
+      "Michela Taufer",
+      "Draguna Vrabie"
+    ],
+    "published": "2026-07-13T19:40:40+00:00",
+    "summary": "One year ago, the AISLE roadmap argued that autonomous laboratories operated as isolated islands and proposed a grassroots network organized around five critical dimensions. The field has since moved faster than anticipated. Multi-agent systems have produced experimentally validated hypotheses, self-driving laboratories have grown more interoperable and orchestrated, reasoning-trained and domain foundation models have raised the capability ceiling, and the Genesis Mission has placed autonomous experimentation at the center of U.S. federal science strategy, with industry emerging as a primary actor. Progress has met a sobering counter-current, including a corrected flagship discovery result, benchmarks showing that agents which rival experts on closed-ended questions still complete only a fraction of open-ended research, and fabricated citations surfacing at leading venues. We read this as the defining tension of the field. Producing a candidate discovery is no longer the hard part, but verifying it is, and this asymmetry now limits autonomous science more than raw model capability. We update the roadmap around seven dimensions, revisiting the original five and elevating two former cross-cutting concerns, trust, verification, and reproducibility, and safety, security, and governance, to first-class status. We assess the original milestones (M1 through M14) as achieved, partially achieved, reframed, or open, add four new milestones (M15 through M18), and scope the path forward to a two-year horizon. The first year concentrates on interfaces, protocol adoption, and the scaffolding of verification, and the second targets federation, zero-trust coordination, and governance. Throughout, we position the grassroots network as the interoperability fabric that lets national programs, international initiatives, and commercial platforms connect rather than re-silo."
+  },
+  {
+    "title": "Continual Learning with Elastic Regularization and Synthetic Replay for Federated MLLM Fine-Tuning",
+    "url": "http://arxiv.org/abs/2607.12112v1",
+    "arxiv_id": "2607.12112v1",
+    "authors": [
+      "Jing Liu",
+      "Chenxuanyin Zou",
+      "Jiayang Ren",
+      "Gaoyun Fang",
+      "Chengfang Li",
+      "Yan Wang",
+      "Zhenchao Ma",
+      "Bo Hu"
+    ],
+    "published": "2026-07-13T19:40:30+00:00",
+    "summary": "Federated fine-tuning of Multimodal Large Language Models (MLLMs) across distributed networks enables privacy-sensitive adaptation to evolving data streams, yet a fundamental obstacle prevents robust deployment in dynamic environments: catastrophic forgetting, wherein sequential task updates erase previously acquired knowledge across visual, linguistic, and cross-modal representations. Addressing this challenge is especially critical for autonomous networked AI operating in safety-sensitive domains, such as content moderation, where reliable retention of prior knowledge underpins system integrity. To overcome this, we propose Federated Continual Multimodal Learning (FedCMM), a framework that embeds continual-learning safeguards into the federated optimization loop at three complementary levels. At the parameter level, modality-aware elastic weight consolidation computes separate Fisher information matrices for the vision encoder, language backbone, and cross-modal projector, providing granular, asymmetry-aware protection against modality-specific forgetting. At the data level, each client trains a lightweight local generative replay module to synthesize raw-data-free embedding-level multimodal replay tuples without any raw data sharing. At the aggregation level, Task-similarity-aware gradient aggregation autonomously filters and reweights client updates by gradient cosine similarity, suppressing conflicting directions and stabilizing the global learning trajectory. Extensive experiments on two benchmarks demonstrate that FedCMM consistently outperforms recent baselines on accuracy and backward transfer, confirming that holistic, modality-aware optimization enables robust evolutive adaptation across heterogeneous networked AI deployments."
+  },
+  {
+    "title": "Cross-Cutting Security Analysis of LLM-Generated Code via Metamorphic Testing and Association Rule Mining",
+    "url": "http://arxiv.org/abs/2607.12089v1",
+    "arxiv_id": "2607.12089v1",
+    "authors": [
+      "Zedong Peng",
+      "Chenggang Wang",
+      "Shangyue Zhu"
+    ],
+    "published": "2026-07-13T19:10:10+00:00",
+    "summary": "Large language models (LLMs) frequently generate code with security vulnerabilities, yet these weaknesses are rarely isolated: they often span multiple concern areas simultaneously, reflecting the cross-cutting nature of security in software. We present a framework that combines security-oriented Metamorphic Relations (MRs) with Association Rule (AR) mining to detect vulnerabilities in LLM-generated code, uncover their co-violation structure, and trace that structure back to prompt-level risk factors. We define nine MRs covering major CWE categories, including SQL injection, XSS, command injection, path traversal, hard-coded credentials, weak cryptography, and memory-safety errors, and apply them using an LLM-based judge to 3,700 code snippets generated by five open models from the LLMSecEval benchmark. The results show that 68.8% of snippets violate at least one MR, with hard-coded credentials (79.1%) and command injection (74.4%) among the most prevalent applicable failures. AR mining reveals strong cross-cutting co-violation patterns, notably that XSS and weak cryptography co-violations predict hard-coded credentials with 82.5% confidence (lift = 3.23), along with tightly coupled clusters linking authentication, credential handling, and cryptographic weakness, as well as input-handling and memory-safety failures. We then perform prompt-level risk analysis and find that database- and authentication-related prompts are strong predictors of broad cross-cutting insecurity, while 65.5% of prompts yield consistent violation outcomes across all five models. These findings show that insecure code generation is not merely a collection of independent defects, but a structured and prompt-conditioned phenomenon, motivating cluster-aware verification and prompt-level intervention for safer LLM-assisted programming."
+  },
+  {
+    "title": "Beyond Test Presence: Assessing the Quality and Robustness of Agent-Generated Tests in Open-Source Projects",
+    "url": "http://arxiv.org/abs/2607.12068v1",
+    "arxiv_id": "2607.12068v1",
+    "authors": [
+      "Preet Jhanglani",
+      "Zeel Kaushal Desai",
+      "Vidhi Kansara",
+      "Eman Abdullah AlOmar"
+    ],
+    "published": "2026-07-13T18:40:24+00:00",
+    "summary": "The integration of AI-powered coding agents into Continuous Integration/Continuous Delivery (CI/CD) pipelines has fundamentally altered how software verification is conducted. While these agents successfully automate the test generation, current evaluation benchmarks (e.g., SWE-bench) largely focus on pass-rates rather than the intrinsic quality of the generated tests. This raises the possibility of \"stealth technical debt\", in which test suites pass execution but do not offer comprehensive coverage or semantic value. We address this methodological gap through a large-scale, empirical comparison of 204,673 test artifacts which comprises of 24,941 human-authored files and 179,732 agent-generated files; sourced from the AIDev dataset. Using the Abstract Syntax Tree (AST) parsing with Python's naive ast module, we implemented a \"white-box\" static analysis framework to evaluate three quality dimensions: Assertion Strength (RQ1), Edge-Case Coverage (RQ2), and Flakiness Potential (RQ3). Our results present a nuanced inversion of traditional assumptions. AI agents performed better than humans in Edge-Case Coverage, with almost twice the variety of boundary checks (Variety Score: 0.62 vs 0.32) and a higher frequency of null-safety testing (13.40% vs. 8.3%), even though human developers had a slight advantage in Assertion Strength (88.1% strong assertions vs. 85.37% for agents). But this thoroughness comes at a price: due mostly to their reliance on file I/O and non-deterministic logic, agent-generated tests exhibited a higher risk of flakiness (Candidate Rate: 0.41 vs. 0.30). These findings suggest that while AI agents excel at rigorous boundary testing, they lack the \"environmental awareness\" needed to write stable, hermetic tests."
+  },
+  {
     "title": "Zonal-flow generation and saturation of electromagnetic ion-scale turbulence in tokamaks",
     "url": "http://arxiv.org/abs/2607.11789v1",
     "arxiv_id": "2607.11789v1",
@@ -56,6 +520,18 @@
     ],
     "published": "2026-07-13T16:08:46+00:00",
     "summary": "As multi-agent, tool-using LLM systems are deployed, a common safety net is a runtime monitor that checks each message, tool call, or step on its own. We show this net has a fundamental hole. A distributed backdoor splits a harmful payload across agents, so every local check passes while the assembled object is the attack. The monitor can be right on every step and still miss the attack. The problem is not splitting itself: split fragments can still leak suspicious tokens or provenance edges. The hard case is \\emph{local benignness}. No fragment carries the harm, and what is left looks like ordinary benign traffic. We formalize this as an \\emph{observability boundary}: a monitor catches only what its view can tell apart from benign traffic. We prove that once the fragments look benign in the monitored view, no detector on that view can catch them, however strong it is. Across a controlled testbed, an external benchmark, and end-to-end agent runs, local monitors lose the signal exactly as local evidence disappears, and it returns only when the monitor sees the assembled object. A monitor trained only on benign traffic recovers the attack's code structure across held-out encodings (0.874 mean AUROC). A decoded-view gate, given the encoding family, blocks every tested attack. But seeing more is not enough: full-trace monitors and decoders still fail unless they reach the representation where the payload is exposed. Local safety is not global safety when harm is compositional, and the open problem is finding that representation."
+  },
+  {
+    "title": "Are we Merging the Right Models? Impact of Expert Training Duration on Model Merging for LLMs",
+    "url": "http://arxiv.org/abs/2607.11997v1",
+    "arxiv_id": "2607.11997v1",
+    "authors": [
+      "Nikita Kozodoi",
+      "Zainab Afolabi",
+      "Jack Butler"
+    ],
+    "published": "2026-07-13T16:08:30+00:00",
+    "summary": "Multi-task model merging combines separately trained expert models into a single model that handles all tasks without co-training. Standard practice merges experts at their optimal validation loss. We challenge this convention by systematically studying how training duration of domain experts affects the quality of the merged model. We fine-tune experts on five domains (Math, Code, Instruction Following, Multilingual, and Safety) across three model sizes (Qwen 3.5 0.8B, 2B, and 4B), saving checkpoints from 25\\% to 500\\% of the optimal training steps and evaluating five merging methods at each duration. Our findings reveal a striking method-dependent pattern: simple averaging degrades sharply with overfitting, while sparsification-based methods achieve their best performance well past the validation optimum. We formalize this through bias-variance decomposition analysis, drawing a parallel to random forests where averaging benefits from high-variance individual learners. These results suggest that training duration and merging method should be chosen jointly rather than independently."
   },
   {
     "title": "AutoPath: Learning Transferable Goal-Conditioned Stochastic Path Prior for Safe Navigation Without Human Demonstrations",
