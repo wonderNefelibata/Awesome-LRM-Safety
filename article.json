@@ -1,5 +1,730 @@
 [
   {
+    "title": "Learning Adaptive Safety Margins for Visual Navigation",
+    "url": "http://arxiv.org/abs/2607.18200v1",
+    "arxiv_id": "2607.18200v1",
+    "authors": [
+      "Junyi Hu",
+      "Shuaihang Yuan",
+      "Geeta Chandra Raju Bethala",
+      "Anthony Tzes",
+      "Yi Fang"
+    ],
+    "published": "2026-07-20T17:40:25+00:00",
+    "summary": "Robots in cluttered indoor spaces often fail not because they cannot generate collision-free paths, but because a fixed safety margin is mis-calibrated: conservative margins cause detours and timeouts, while permissive margins lead to near-boundary shortcuts under perception bias. Diffusion-based planners propose diverse trajectory candidates from egocentric RGB-D, yet reliable selection remains the bottleneck. We propose a context-conditioned safety critic that learns an adaptive clearance preference for ranking diffusion proposals, decomposed into three complementary terms: (i) a safety term with a clearance-budget penalty and a control-barrier-function residual for waypoint- and transition-wise safety, (ii) an efficiency term combining a smoothness penalty with a safety-gated detour-ratio penalty that avoids detours without incentivizing risky shortcuts, and (iii) a distance-constraint matching term that anchors the learned budget to realized ESDF clearances to prevent margin collapse. We train the critic with privileged ESDF geometry in simulation and distill it into a perception-only selector via a two-stage teacher-student procedure. On PointGoal navigation in HM3D and MP3D, including cross-dataset transfer, our method achieves the highest success rate (SR) and success weighted by path length (SPL) among strong diffusion, optimization, and RL baselines. Trained purely in simulation, it transfers to a Unitree G1 humanoid and navigates cluttered indoor scenes without task-specific tuning."
+  },
+  {
+    "title": "Certified Training for Convolutional Perturbations",
+    "url": "http://arxiv.org/abs/2607.18195v1",
+    "arxiv_id": "2607.18195v1",
+    "authors": [
+      "Benedikt Br\u00fcckner",
+      "Alessio Lomuscio"
+    ],
+    "published": "2026-07-20T17:36:05+00:00",
+    "summary": "Vision models have been found to be susceptible to perturbations such as motion blur induced at runtime by a shaking camera. This impedes their deployment in critical applications since phenomena such as slightly blurred vision might lead to failures, for example an object detector missing objects. While methods such as data augmentation or Adversarial Training can improve empirical robustness, they lack formal safety guarantees, making it difficult to identify and mitigate hidden vulnerabilities. We introduce a novel Certified Training approach that leverages an efficient encoding of convolutional perturbations to train provably robust models. Our method significantly outperforms Adversarial Training, achieving, for example, over 80% robust accuracy against motion blur of reasonable intensity on CIFAR10 while maintaining comparable standard accuracy."
+  },
+  {
+    "title": "uSTM: A Lightweight and Efficient STM Supporting General Types and Deferred Aborts",
+    "url": "http://arxiv.org/abs/2607.18178v1",
+    "arxiv_id": "2607.18178v1",
+    "authors": [
+      "Zachary Kent",
+      "Guy Blelloch",
+      "Andr\u00e9 Costa"
+    ],
+    "published": "2026-07-20T17:15:26+00:00",
+    "summary": "Software Transactional Memory (STM) systems allow developers to more easily exploit multicore architectures by wrapping arbitrary sequential code in transactions that are executed concurrently. In recent years, the performance of STM systems has approached that of hand-tuned data structures through techniques that avoid unnecessary aborts and exploit the semantics of underlying data structures.   Despite achieving excellent performance, most STM systems do not fully address the concerns they targeted in the first place: safety, usability, and generality. In particular, these systems place restrictions on the data types that may be updated transactionally, such as requiring that these types fit within a word, and can require modification of data layout. Moreover, most STM systems abort transactions in the middle of client code to ensure correctness. This can cause space leaks and other bugs not present in the original code.   We present ustm, a novel STM system addressing all of these shortcomings while still maintaining excellent performance, all within ~300 lines of code. uSTM supports general types while maintaining data layout. Aborts are deferred until the end of the transaction, allowing client code within a transaction to terminate normally. To ensure that uSTM guarantees opacity, we implement a novel timestamping algorithm we call split-increment timestamps.   We compare the performance of uSTM to a variety of state-of-the-art (SOTA) STM systems, demonstrating that uSTM matches or outperforms the SOTA on a variety of workloads."
+  },
+  {
+    "title": "Judge-dependent safety gains and model-specific helpfulness costs of evidence-sufficiency prompting in clinical LLMs",
+    "url": "http://arxiv.org/abs/2607.18086v1",
+    "arxiv_id": "2607.18086v1",
+    "authors": [
+      "Koyar Afrasyab"
+    ],
+    "published": "2026-07-20T15:53:02+00:00",
+    "summary": "Background: LLM judges increasingly score whether clinical language models give overconfident answers under incomplete evidence, yet whether a measured \"safety gain\" reflects real behavior change or the judge's calibration is unresolved. Using a structured evidence-sufficiency prompt as a test case, we asked whether it reduces unsafe overconfident answers, how far that effect depends on the scoring judge, and what it costs in helpfulness.   Methods: In a retrospective public-data benchmark (Real-POCQi, HealthBench, MedRBench), four models (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.3) answered a fully paired common panel (1,200 cells) with a standard prompt and the wrapper. The pre-specified endpoint was the paired reduction in unsafe overconfidence scored by the primary judge (GPT-5.4-nano); secondary analyses added a different-family judge (Claude Sonnet 5), a correctness judge, matched scaffold controls, and a blinded three-clinician review.   Results: Unsafe overconfidence fell from 49.3% to 24.7%, a paired reduction of 24.7 points (95% CI 21.8-27.7; p<0.001), robust in direction across models and paraphrases. Magnitude was judge-dependent: Sonnet agreed on direction but nearly halved the effect (+13.1 points), with one-directional disagreement. Blinded clinicians characterized the primary judge as a high-sensitivity (1.00), low-specificity (0.55) screen, not a calibrated rate. The gain carried a model-specific helpfulness cost (correct diagnosis 80.3% to 50.3%): near-free for GPT-5.5, near-total for Gemini (-58 points). Matched scaffold controls showed genuine behavior change, not judge circularity.   Conclusions: LLM-judged clinical safety effects should be reported as directional and relative, anchored to human review and evaluated jointly with helpfulness, not as calibrated absolute rates. This does not establish clinical deployment readiness."
+  },
+  {
+    "title": "Hardware Mechanisms to Dynamically Throttle AI Performance",
+    "url": "http://arxiv.org/abs/2607.18069v1",
+    "arxiv_id": "2607.18069v1",
+    "authors": [
+      "Haiyue Ma",
+      "Lauren Malek",
+      "Joseph Forzani",
+      "David Wentzlaff"
+    ],
+    "published": "2026-07-20T15:36:03+00:00",
+    "summary": "As more capable AI models are increasingly integrated into critical computer systems, the lack of control over AI intent motivates safety mechanisms. Existing software safeguards impose only behavioral constraints that can potentially be bypassed by sufficiently intelligent models. While hardware-level safety enforcement has been recognized as an essential last line of defense, few mechanisms have been proposed beyond policy regulations on unauthorized accesses or coarse full-chip shutdown. What is missing is a fine-grained, dynamic intervention mechanism at the architecture level.   In this paper, we introduce a set of microarchitecture knobs which dynamically control the available hardware resources to limit AI performance at runtime. We evaluate candidate knobs spanning the GPU memory subsystem, across capacity, bandwidth, latency and frequency dimensions, and narrow down to four strong candidates: L2 size, L2 latency, L2 bandwidth, and shared memory port access rate. To minimize new logic and extra design cost, we build all four mechanisms from well-established microarchitectural primitives: cache way masking, credit-based rate limiting, latency insertion, and bank arbitration. We show that these knobs achieve high performance sensitivity (up to 80% performance cut at 1/8 resource availability), negligible implementation cost (<~10K flip flops), fast stabilization after dynamic throttling (5-80K cycles), and minimal collateral impact on the rest of the chip. Further, multi-knob analysis reveals combinations of knobs that amplify the performance degradation beyond the effect of each knob individually, which enables a broader range of performance targets."
+  },
+  {
+    "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
+    "url": "http://arxiv.org/abs/2607.18063v1",
+    "arxiv_id": "2607.18063v1",
+    "authors": [
+      "Devina Jain",
+      "David Hartmann",
+      "Chuan Li"
+    ],
+    "published": "2026-07-20T15:30:38+00:00",
+    "summary": "LLM-based agents process external content, exposing them to prompt injection and multi-turn manipulation. Most safety benchmarks evaluate defenders against fixed attack pools collected before evaluation, single-turn or multi-turn. We present a 21-scenario benchmark for \\emph{adaptive multi-round attacks against memoryless LLM defenders}: an autonomous LLM attacker observes prior defender responses and pivots across rounds, while each defender response is evaluated as a fresh interaction. Holding the 21 scenarios, attackers, defenders, and structured-output scoring fixed, restricting scoring to the first attacker turn yields $0$-$1\\%$ attack success rate (ASR); allowing 15 rounds of adaptive attack yields $5.4$-$14.0\\%$. Pooling three frontier attacker LLMs uncovers $1.4$-$2.2\\times$ as many unique successful attacks as the best single attacker, and the generated attacks have low cosine similarity ($0.02$-$0.14$) to attacks in existing benchmarks. Claude Opus 4.6 and GPT-5.4 are tied in aggregate ($5.4\\%$ each; overlapping $95\\%$ CIs), but their weaknesses differ sharply: on one scenario Opus reaches $60\\%$ ASR ($95\\%$ CI $36$--$80\\%$) while GPT-5.4 and Gemini each stay at $7\\%$ (CI $1$-$30\\%$; the gap is preserved in a higher-$N$ replication). $13$ of $21$ scenarios distinguish at least one defender pair, yet rankings disagree across scenarios (Kendall's $W = 0.19$). We release the benchmark -- 21 evaluation scenarios, 10 public development scenarios, the orchestrator, baseline harnesses, and a multi-attacker CLI -- plus 945 transcripts from the 3$\\times$3 frontier matrix, an attack-replay dataset, and 18{,}422 gpt-oss-20b battles from an open competition's final scoring rounds."
+  },
+  {
+    "title": "Test Coverage Analysis of Agentic Pull Requests",
+    "url": "http://arxiv.org/abs/2607.18057v1",
+    "arxiv_id": "2607.18057v1",
+    "authors": [
+      "Atish Kumar Dipongkor",
+      "Talank Baral",
+      "Wing Lam",
+      "Kevin Moran"
+    ],
+    "published": "2026-07-20T15:26:30+00:00",
+    "summary": "AI coding agents increasingly submit complete pull requests (PRs) with minimal human intervention, shifting software development from AI-assisted to autonomous workflows. As these agents become more prevalent, ensuring the code they generate is adequately tested, by existing tests or by tests the agents write, is critical to preventing regressions, yet little is known about testing in agentic PRs. To address this gap, we analyze 4882 agent-generated PRs from the AIDev dataset (532 Java and 4350 Python PRs) produced by five coding agents. We study (i) how often agents include test changes and (ii) how well covered are code changes by existing and agent-written tests. Agents include test changes in only 49.6% of PRs that change code under test files. Existing tests provide an incomplete safety net: they cover 61.5% of agents' changed executable lines in Java and only 27.0% in Python, where 64.8% of PRs have no changed line executed by any existing test. Agent-written tests improve coverage over existing tests, but only in a minority of PRs: 35.9% of Java and 22.5% of Python Code + Tests PRs show a coverage gain. Across both languages, error-handling constructs (e.g., try and catch blocks) are the most consistently under-tested, with miss rates reaching 86.0% in Java and 81.0% in Python. These findings motivate coverage-aware development practices, coverage feedback loops for coding agents, and evaluation benchmarks that measure test quality to better help agents reliably test their own code."
+  },
+  {
+    "title": "An Early Warning of Emerging Biosecurity Risks in Frontier LLMs",
+    "url": "http://arxiv.org/abs/2607.18056v1",
+    "arxiv_id": "2607.18056v1",
+    "authors": [
+      "Zhida He",
+      "Xia Hu",
+      "Baichen Le",
+      "Chunxiao Li",
+      "Jiajia Li",
+      "Lijun Li",
+      "Chaochao Lu",
+      "Jing Shao",
+      "Youbang Sun",
+      "Hua Tang",
+      "Xiang Wang",
+      "Xiao Wang",
+      "Xiaoyu Wen",
+      "Tong Wu",
+      "Jia Xu",
+      "Peng Yu",
+      "Shu Yu",
+      "Jie Zhang",
+      "Qiaosheng Zhang",
+      "Yi Zhang",
+      "Xing-Ming Zhao",
+      "Tianhang Zheng",
+      "Ziyuan Zhou"
+    ],
+    "published": "2026-07-20T15:26:23+00:00",
+    "summary": "Frontier large language models (LLMs) are increasingly integrated into scientific workflows, yet their growing biological capabilities may outpace current safeguards. To assess the biological risks of frontier models, we develop Intern-BioBreaker, a specialized bio-red-teaming model, together with an integrated computational-to-physical framework that couples model-level stress testing with wet-lab validation. Within this framework, Intern-BioBreaker generates targeted jailbreak prompts to test whether aligned models can be induced to provide operational guidance for safety-sensitive biological tasks or produce sequence-level outputs with potentially harmful properties. Selected sequence outputs are then carried forward for DNA synthesis, host expression, and orthogonal protein verification to assess whether model-generated designs can yield the intended biological products. Our evaluation reveals a concerning gap between text-level safeguards and the risks posed by capable scientific models: (i) Intern-BioBreaker outperforms baseline attack models and reveals widespread bio-risk jailbreak vulnerabilities across both open-weight and proprietary frontier LLMs, with several targets reaching near-saturated or 100% task-level attack success rate (ASR); (ii) in sequence-level case studies, GPT-5.5 can be induced to generate modified viral candidate sequences with pathogenic potential; the corresponding translated proteins may exhibit even stronger receptor-binding affinity and thus enhanced infection potential; and (iii) end-to-end verification shows that selected model-generated biological designs are not merely textual artifacts, but can be physically realized under controlled experimental settings. These findings underscore the need for stronger biological red-teaming, nucleic acid synthesis screening, and safety mechanisms that keep pace with model capabilities."
+  },
+  {
+    "title": "MADA-RL: Multi-Agent Debate-Aware Reinforcement Learning for Parameter-Efficient Reasoning in Compact Models",
+    "url": "http://arxiv.org/abs/2607.18006v1",
+    "arxiv_id": "2607.18006v1",
+    "authors": [
+      "Martino M. L. Pulici",
+      "Cuong Xuan Chu",
+      "Evgeny Kharlamov",
+      "Zifeng Ding",
+      "Volker Tresp",
+      "Yunpu Ma"
+    ],
+    "published": "2026-07-20T14:38:00+00:00",
+    "summary": "Large language models achieve strong reasoning performance, but often at prohibitive training cost - a challenge that is especially acute for compact models ($\\leq 4 \\, \\mathrm{B}$ parameters) trained under limited budgets. We introduce MADA-RL, a post-training framework that specializes compact models into generator and critic roles and trains them with a debate-aware learning signal, fine-tuning only a small subset of parameters via LoRA adapters. Our central contribution is a counterfactual critic advantage: a dynamic, role-conditioned baseline that redefines the critic's advantage as its reward minus the generator ensemble's per-instance accuracy. This explicitly optimizes critics to improve over generator consensus rather than to merely reproduce a correct answer, yielding more targeted credit assignment than static mean-reward normalization. At deployment, the specialized agents are composed in a lightweight multi-round protocol. Across five mathematical reasoning benchmarks, MADA-RL raises the accuracy of the DeepSeek-R1-Distill-Qwen-1.5B model from $39.9 \\, \\%$ to $41.9 \\, \\%$ ($+2.0$ points, $p < 0.001$) using $16$ times fewer trainable parameters than fully fine-tuned baselines, placing it on the accuracy-trainable-parameter Pareto front. It approaches, but does not surpass, the strongest baselines (DeepScaleR, STILL-3), which are trained on substantially larger datasets; we analyse this gap and the associated inference-time cost directly. A controlled study isolates the source of MADA-RL's gains: the counterfactual advantage produces the highest critic improvement rate of any model evaluated, indicating that trained critics learn to correct generator errors rather than to imitate them."
+  },
+  {
+    "title": "RT-SHCUA: Real-Time Self-Hosted Computer-Use Agent for UAV Control",
+    "url": "http://arxiv.org/abs/2607.17951v1",
+    "arxiv_id": "2607.17951v1",
+    "authors": [
+      "Di Lu",
+      "Bo Zhang",
+      "Xiyuan Li",
+      "Yongzhi Liao",
+      "Xuewen Dong",
+      "Yulong Shen",
+      "Zhiquan Liu",
+      "Jianfeng Ma"
+    ],
+    "published": "2026-07-20T13:52:24+00:00",
+    "summary": "Natural-language control offers a promising interface for unmanned aerial vehicles (UAVs), but directly applying self-hosted computer-use agents (SHCUAs) to UAV control introduces a structural mismatch. SHCUAs are designed for interactive host-side tool use, where delayed agent iterations are often acceptable. UAV control, however, is coupled with continuously changing physical states, strict timing constraints, safety risks, and security accountability. A stale, unauthorized, or tampered agent decision may therefore lead to unsafe or untraceable vehicle behavior.   This paper proposes a real-time and security-oriented restructuring of SHCUA-based UAV control. Instead of allowing an SHCUA to directly issue flight commands, we transform its outputs into contract-bound UAV skill invocations with explicit timing, state, authority, fallback, and evidence semantics. Based on this abstraction, we design an architecture that separates semantic reasoning from onboard execution and security/safety enforcement. Slow cloud or edge reasoning is used for mission understanding, while onboard components validate and dispatch only timely, authorized, and state-consistent skills. Security-critical enforcement points can be protected by TEE-style or microcontroller isolation mechanisms without moving the full language agent or high-frequency flight-control loop into trusted components. Prototype evaluation shows that RT-SHCUA maintains bounded task-level responsiveness while supporting degraded handling, trusted admission, and auditable evidence preservation for SHCUA-mediated UAV actions."
+  },
+  {
+    "title": "SEAM-V: A Hybrid-Decoupled RISC-V Vector Processor with Backend-Visible EP Context for Sustained Vector Throughput",
+    "url": "http://arxiv.org/abs/2607.17899v1",
+    "arxiv_id": "2607.17899v1",
+    "authors": [
+      "Weiying Wang",
+      "Zhiwei Zhang"
+    ],
+    "published": "2026-07-20T12:46:50+00:00",
+    "summary": "Data-parallel workloads in deep learning and scientific computing continue to drive demand for higher processor throughput, energy efficiency, and scalability. The RISC-V Vector Extension (RVV) supports scalable execution through a vector-length-agnostic programming model. However, many tightly coupled implementations still rely on the scalar core to supply vector instructions one at a time, making execution susceptible to vector-instruction supply gaps, scalar-side progression delays, and conservative dependence handling in short-vector, loop-tail, and control/memory-interleaved phases. This paper presents SEAM-V, a hybrid-decoupled vector execution architecture for RVV. SEAM-V forms a continuous stream of execute packets (EPs) through task-level decoupling, local instruction supply, and VLIW-style packing. After an EP is serialized into individual requests, its EP identity and request-bound prefetch context remain visible to the dynamic vector backend, enabling same-EP candidate-hazard suppression and request-bound prefetching. The hybrid-dispatch path can also provide limited cross-EP vector overlap when the required safety conditions are satisfied. Cross-EP dependences, dependences not exempted by the EP contract, resource conflicts, and memory ordering remain dynamically managed by the backend. Cycle-accurate RTL evaluation shows that, compared with an Ara-based tightly coupled RVV implementation (TC), SEAM-V achieves a geometric-mean speedup of 1.34x across 17 representative kernels. The one-dimensional variable-AVL, BLAS and matrix, and fixed-size application groups achieve speedups of 1.50x, 1.25x, and 1.27x, respectively. At AVL=32, the geometric-mean speedup across six one-dimensional vector kernels approaches 3x."
+  },
+  {
+    "title": "Thermal management optimization of Battery Electric Vehicles via hierarchical NMPC with CMO-trained Neural Models",
+    "url": "http://arxiv.org/abs/2607.17892v1",
+    "arxiv_id": "2607.17892v1",
+    "authors": [
+      "Francesco Ripa",
+      "Diego Regruto",
+      "Pasquale Ceres",
+      "Christopher Strano"
+    ],
+    "published": "2026-07-20T12:40:45+00:00",
+    "summary": "This paper addresses the problem of energy-efficient thermal management in Battery Electric Vehicles (BEVs), with the goal of extending driving range while ensuring passenger comfort and battery thermal safety. A hierarchical Nonlinear Model Predictive Control (NMPC) framework is proposed, in which the supervisory layer explicitly balances energy consumption and cabin temperature reference tracking over a long horizon and translates this trade-off into optimal actuator command sequences for the integrated heating, ventilation, and air conditioning (HVAC) system and the battery thermal management (BTM) system. These command sequences are then enforced by a lower-layer NMPC, which introduces local corrections to compensate disturbances and modeling uncertainty while tracking an externally specified cabin temperature reference trajectory. To enable predictive control of the highly nonlinear and strongly coupled thermal dynamics, data-driven neural network models are employed as prediction models within both control layers. The proposed approach is developed and validated using a high-fidelity BEV thermal simulator developed at Politecnico di Torino in collaboration with Stellantis N.V., and benchmarked against an industrial rule-based (RB) control strategy over the WLTC driving cycle. Simulation results demonstrate a significant reduction in energy consumption compared to the baseline strategy, while satisfying comfort and battery temperature constraints."
+  },
+  {
+    "title": "Stress Testing Concept Erasure with Large Language Model Agents",
+    "url": "http://arxiv.org/abs/2607.17890v1",
+    "arxiv_id": "2607.17890v1",
+    "authors": [
+      "Yuyang Xue",
+      "Feng Chen",
+      "Zhihua Liu",
+      "Edward Moroshko",
+      "Jingyu Sun",
+      "Steven McDonagh",
+      "Sotirios A. Tsaftaris"
+    ],
+    "published": "2026-07-20T12:38:50+00:00",
+    "summary": "Concept erasure aims to remove semantic concepts from a trained generative model and is increasingly important for responsible AI deployment. However, verifying whether a model has robustly removed targeted concepts remains a critical challenge. Existing evaluation methods are typically pre-defined and static, failing to expose vulnerabilities under diverse natural-language probes and challenging conditions. Moreover, manually designed evaluation strategies can be biased and difficult to scale. We posit that concept erasure evaluation is best formulated as an adaptive hypothesis search, operationalised by agents that iteratively propose, critique, and verify tests to systematically expand coverage of failure modes. To this end, we propose Stress Testing Agents for Concept Erasure (STACE), a framework that autonomously stress-tests concept-erased models using multiple Large Language Model (LLM) agents, by iteratively generating and verifying stress-testing hypotheses grounded by external knowledge. We also introduce a suite of metrics for assessing the performance and efficiency of LLM-agent-powered stress-testing frameworks. Our extensive experiments show that STACE outperforms five LLM-based evaluation baselines on four concept categories. Further analysis across two T2I models, six concept erasure approaches, and various erasure strengths show that STACE is robust for different settings. We also show that STACE can be adapted beyond concept erasure evaluation to other problem domains, such as LLM jailbreaking. Our code is available anonymously."
+  },
+  {
+    "title": "Receiver-Centered Robot-to-Human Handover with Grasp-Aware Object Orientation",
+    "url": "http://arxiv.org/abs/2607.17839v1",
+    "arxiv_id": "2607.17839v1",
+    "authors": [
+      "Federico Biagi",
+      "Dario Onfiani",
+      "Simone Silenzi",
+      "Luigi Biagiotti"
+    ],
+    "published": "2026-07-20T11:30:03+00:00",
+    "summary": "Collaborative robots are increasingly sharing workspaces with human operators, making tool handover a frequent and safety-critical micro-interaction. However, traditional static handovers often lead to awkward grasps when handling asymmetric industrial tools. This paper presents a receiver-centered voice-driven adaptive handover system for mechanical tools, built on a Franka cobot. Using an LLM for intention recognition and MediaPipe for real-time 3D hand tracking, the framework dynamically adjusts the end-effector's orientation to present tools in an ergonomically optimal, handle-first pose. A within-subjects study compared this adaptive approach with an object-agnostic static baseline. The results demonstrate that the adaptive system reduces the grasp delay for asymmetric tools, improving the fluency of the interaction. Furthermore, the adaptive strategy improved specific trust-related perceptions, particularly motion predictability and perceived task simplicity."
+  },
+  {
+    "title": "Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models",
+    "url": "http://arxiv.org/abs/2607.17786v1",
+    "arxiv_id": "2607.17786v1",
+    "authors": [
+      "Tuan Duong Trinh",
+      "Naveed Akhtar",
+      "Basim Azam"
+    ],
+    "published": "2026-07-20T10:20:32+00:00",
+    "summary": "Does adding a reasoning step make a Vision-Language-Action (VLA) model more robust to perturbation? Intuitively, a policy that reasons before acting should absorb a perturbed input better than one that maps observations directly to actions. We test this premise head-on across three models that span the reasoning spectrum (no reasoning, a text chain-of-thought, and a latent iterative loop), perturbing each at the vision, reasoning, and action stages on LIBERO and SimplerEnv. Two questions organize the study: does the reasoning design shift robustness, and can the reasoning be read back at runtime as a safety signal? We find that the latent-iterative model is by far the least robust: under both stochastic noise and white-box perturbation its task success collapses, while the other two hold. This fragility is structural rather than cumulative: varying the reasoning depth at inference barely moves it. Reasoning outputs can in principle be monitored, but the monitors fail under fair tests. A plan--action consistency probe that looks near-perfect under naive evaluation falls to chance under adaptive attack. Under matched-FPR calibration, fusing it with an action-anomaly probe never lifts defended success above undefended. Scoped to these output-level behavioral probes under white-box vision-stage attack, this ceiling is a precondition that any viable defense must first satisfy."
+  },
+  {
+    "title": "ETAS: An Effect-Typed Language for Agent Systems",
+    "url": "http://arxiv.org/abs/2607.17780v1",
+    "arxiv_id": "2607.17780v1",
+    "authors": [
+      "Huiri Tan",
+      "Yikun Wang",
+      "Puyang Zhang",
+      "Shangyu Li",
+      "Jiasi Shen"
+    ],
+    "published": "2026-07-20T10:11:53+00:00",
+    "summary": "ETAS is a programming language for agent systems that treats model-backed agents, tool calls, prompts, typed memory, human approvals, policies, and execution traces as semantic program elements rather than library conventions. It separates deterministic computation from agentic nondeterminism and externally visible actions while preserving a direct programming style.   We present the core design of ETAS. Its static semantics assigns ordinary types through spec conformance and tracks each computation with two behavioral indices: an escaping effect row and a persistent abstraction of the typed action trace it may request. Specs form a terminating compile-time constraint calculus: type specs provide evidence for polymorphism and resource facts, callable specs constrain function and stage shapes, and trace specs express allow, deny, and temporal constraints. Typing checks requested traces against compiled monitors and emits residual obligations when dynamic resources preclude a complete static proof. The dynamic semantics distinguish requested, handled, denied, and committed events; handlers interpret typed actions without making their requests invisible to authorization or audit.   We formalize a core calculus and state preservation, progress, type/effect soundness, handler trace-transparency, and policy safety. We also implement ETAS in Rust with a command-line interface, typed HIR checks, effect and policy diagnostics, handler checks, and trace-aware execution hooks. ETAS provides a programming-language foundation for reasoning about authorization, nondeterminism, recovery, and audit evidence before and during agent execution."
+  },
+  {
+    "title": "Dynamic Defense Profiling Enables Cognitive Jailbreak of Text-to-Image Models",
+    "url": "http://arxiv.org/abs/2607.17779v1",
+    "arxiv_id": "2607.17779v1",
+    "authors": [
+      "Dongdong Yang",
+      "Deyue Zhang",
+      "Zhao Liu",
+      "Zonghao Ying",
+      "Wenzhuo Xu",
+      "Jiankai Jin",
+      "Xiangzheng Zhang",
+      "Quanchen Zou"
+    ],
+    "published": "2026-07-20T10:09:30+00:00",
+    "summary": "Text-to-Image (T2I) generative models have achieved remarkable progress in synthesizing high-quality visual content, yet they remain vulnerable to adversarial misuse, particularly in generating Not-Safe-For-Work (NSFW) images. Most existing jailbreak attacks primarily rely on heuristic prompt engineering or black-box optimization, treating model feedback as a binary signal (success or failure). This coarse-grained paradigm overlooks the rich information embedded in diverse failure modes, such as textual refusal, visual blocking, and semantic sanitization, resulting in inefficient exploration and severe semantic collapse.   In this paper, we propose MIND, a cognitive jailbreak framework that reframes adversarial prompt generation as a belief-state inference problem over latent defense mechanisms. Instead of blindly searching for bypass prompts, MIND actively models the target system's latent defense mechanisms by interpreting multi-modal feedback as high-density signals. Specifically, the framework integrates three core components: (1) a Multi-modal Judge for fine-grained feedback decomposition, (2) a Defense Profiler for iterative belief updating, and (3) a Meta-Memory module for retrieving historically effective attack strategies. These components are unified within a reasoning-driven evolutionary optimization process, enabling adaptive and semantically consistent jailbreak generation. Extensive experiments on the I2P benchmark demonstrate the effectiveness of MIND. Under six representative pre-processing and post-processing defense settings applied to the Stable Diffusion v1.5 model, MIND achieves an Attack Success Rate (ASR) of 95.62%, significantly outperforming existing methods. Additionally, the effectiveness of the proposed framework is validated across four widely used commercial T2I systems, achieving the highest ASR of 91.58% on Wan-2.5."
+  },
+  {
+    "title": "Towards Reliable Zero-Shot Crowd Forecasting: Evaluating Time Series Foundation Models for Special Event Pedestrian Forecasting",
+    "url": "http://arxiv.org/abs/2607.17758v1",
+    "arxiv_id": "2607.17758v1",
+    "authors": [
+      "Ziteng Li",
+      "Yanan Xin",
+      "Tina Comes",
+      "Serge Hoogendoorn"
+    ],
+    "published": "2026-07-20T09:49:26+00:00",
+    "summary": "Managing massive crowds during infrequent special events requires reliable real-time pedestrian-flow forecasting to ensure public safety and operational efficiency. However, supervised forecasting methods face limitations in these contexts due to scarce historical data, heterogeneous data distributions, and short in-event observation windows. To effectively support operational decision-making, forecasts should provide not only accurate point estimates but also informative predictive uncertainty. Probabilistic uncertainty quantification plays a critical role in this aspect, particularly capturing sudden volatility and tail risks. This paper investigates pretrained time series foundation models as a lightweight approach for zero-shot probabilistic forecasting without extensive local retraining. Using decision-oriented metrics tailored to short events, we conduct a comprehensive assessment of two time series foundation models on crowd forecasting, with the SAIL2025 event as a use case. We then distill practical insights for crowd managers, specifying when zero-shot forecasts remain operationally reliable."
+  },
+  {
+    "title": "Byzantine Fault-Tolerant Post-Quantum Distributed Quorum Signatures",
+    "url": "http://arxiv.org/abs/2607.17700v1",
+    "arxiv_id": "2607.17700v1",
+    "authors": [
+      "Quentin Kniep",
+      "Jakub Sliwinski",
+      "Roger Wattenhofer"
+    ],
+    "published": "2026-07-20T08:48:33+00:00",
+    "summary": "Threshold, aggregate, and multi-signatures -- which we collectively call quorum signatures -- certify that a quorum of nodes endorsed a statement, with a certificate as small as a single signature. No constant-size post-quantum quorum signature is known: all candidates grow with the number of signers and are slow to aggregate, making quorum signatures the hardest obstacle to migrating byzantine fault-tolerant systems to post-quantum security.   In this paper, we sidestep this open cryptographic problem by changing how the protocol communicates. We introduce a primitive we call Distributed Quorum Signature (DQS), built solely from ordinary digital signatures and a Bracha-style approval broadcast. DQS turns certificates from network messages into local events. Two event types divide the roles certificates play: weak certificates capture safety, strong certificates capture liveness. In DQS every message is constant size, fitting a single datagram regardless of the number of nodes. The total communication is quadratic, and no security assumptions change. In a large distributed system, the overhead of post-quantum DQS is competitive with the canonical pre-quantum BLS scheme."
+  },
+  {
+    "title": "BTOR2-Based C Program Verification via Hardware Model Checking",
+    "url": "http://arxiv.org/abs/2607.17622v1",
+    "arxiv_id": "2607.17622v1",
+    "authors": [
+      "Xinyu Zhang",
+      "Runxuan Fang",
+      "Ziqun Bao",
+      "Yechuan Xia",
+      "Jianwen Li",
+      "Geguang Pu"
+    ],
+    "published": "2026-07-20T07:18:59+00:00",
+    "summary": "Program verification tools often rely on specific intermediate representations and analysis backends, limiting the reuse of verification algorithms and model checkers across frameworks. In contrast, hardware model checking has developed a mature backend ecosystem, where standard formats such as BTOR2 support reusable algorithms for counterexample search and inductive safety proving. Applying these capabilities to C requires translating assertion-based programs into transition systems that hardware model checkers can directly process.   We present C2Btor, a method for encoding such verification tasks into BTOR2 models. C2Btor uses a program counter to capture control transfers, represents data states and memory objects with bit-vectors and arrays, and maps assumptions and assertion checks into BTOR2 constraints and bad-state properties.   We evaluate C2Btor on SV-COMP C ReachSafety benchmarks and a curated assertion-category benchmark suite, comparing it with representative program verification tools. C2Btor correctly solves 263 tasks, 101 more than CBMC configured with bounded model checking, and is especially effective on bit-vector benchmarks, where it solves 75.5% of the tasks with no wrong verdicts. These results show that the BTOR2 route allows C program verification to benefit from advances in hardware model-checking backends, expanding the available capability for counterexample search, inductive safety proving, and word-level transition-system reasoning."
+  },
+  {
+    "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+    "url": "http://arxiv.org/abs/2607.17619v1",
+    "arxiv_id": "2607.17619v1",
+    "authors": [
+      "Yuchen Chen",
+      "Wei Cheng",
+      "Yuan Xiao",
+      "Zhou Yang",
+      "Weifeng Sun",
+      "Chunrong Fang",
+      "Xiang Chen",
+      "Baowen Xu",
+      "David Lo",
+      "Zhenyu Chen"
+    ],
+    "published": "2026-07-20T07:15:35+00:00",
+    "summary": "LLM-based systems increasingly incorporate long-term memory to improve cross-session continuity. However, once insecure coding preferences are stored, they may silently influence security-critical decisions in subsequent generations. In this study, we conduct the first systematic empirical study on the impact of insecure coding preferences stored in long-term memory on the security of LLM-based code generation. We evaluate four LLMs (ChatGPT, Gemini, Qwen, and Grok) across five programming languages (Python, C, C++, Go, and JavaScript). Our results show that insecure memories significantly increase the risk of generating vulnerable code by 2.7-50.3 percentage points (pp). Moreover, they create a 5.4-14.0 percentage-point risk-warning gap, where warning-rate increases lag behind vulnerability-rate increases. Further analysis reveals that insecure memories are difficult to overwrite through normal interactions and can broadly influence model outputs even when prompts are phrased differently. Finally, we evaluate three mitigation strategies: security-requirement appending and memory storage reduce vulnerability rates by 19.7-33.6 pp but may degrade functional correctness by up to 15.9 pp; memory-level safety filtering achieves a 100\\% detection rate on our evaluated risky memory entries and restores generation behavior to the without-memory baseline. Based on these findings, we provide actionable suggestions to improve the security of long-term memory in LLM-based code generation."
+  },
+  {
+    "title": "Stability and Comfort in Mobile Robot-Pedestrian Interactions",
+    "url": "http://arxiv.org/abs/2607.17604v1",
+    "arxiv_id": "2607.17604v1",
+    "authors": [
+      "Alireza Jafari",
+      "Hong-Son Nguyen",
+      "Yen-Chen Liu"
+    ],
+    "published": "2026-07-20T06:44:34+00:00",
+    "summary": "Mobile robots in public spaces must ensure pedestrians' comfort, and yet empirical studies of walkers' subjective safety are rare. Many classical navigation algorithms do not distinguish the walkers from dynamic obstacles and do not explicitly model subjective human factors. Moreover, most studies focus on holonomic mobile robots, whereas applications demand Nonholonomic Mobile Robots (NMR). This paper develops socially aware algorithms for NMRs, proves the stability, verifies the performance experimentally, and statistically analyzes the reported comfort. We design a framework for NMRs using Social Force Model (SFM) and the projected Time-to-collision Social Force Model (TSFM). We formalize the NMR-pedestrians' and NMR-obstacles' interactions and prove the system's stability, assuming boundedly nonpassive pedestrians. Simulations calibrate the models by maximizing a hybrid cost function of comfort and speed. Pedestrian-robot interaction experiments compare SFM and TSFM to two remote-controlled baselines and collect walkers' reported comfort. Statistical tools analyze survey results collected during the experiments. Benchmarking the algorithms against previous studies highlights the proposed methods' advantage with respect to the studied metrics. Overall, the models are stable and improve pedestrian comfort when an NMR navigates through a pedestrian crowd."
+  },
+  {
+    "title": "A Dual-Hypothesis Reasoning Framework for LLM Guardrails",
+    "url": "http://arxiv.org/abs/2607.17575v1",
+    "arxiv_id": "2607.17575v1",
+    "authors": [
+      "Md Asiful Islam",
+      "Mihai Surdeanu"
+    ],
+    "published": "2026-07-20T05:42:25+00:00",
+    "summary": "We propose ARBITER, a novel LLM guardrail framework that introduces two key ideas: (i) dual-hypothesis reasoning, a reasoning method for LLM guardrails that explicitly considers both safe and unsafe interpretations of a prompt before making a safety decision, and (ii) multi-component supervised fine-tuning (MC-SFT), a structured training loss for reasoning-based guardrails that decomposes LLM outputs into logical components and weights them according to their importance. Existing reasoning-based guardrails often rely on expensive procedures, such as generating reasoning traces using larger or closed-source teacher models and applying full-parameter fine-tuning. In contrast, ARBITER uses a cost-effective self-generation strategy for reasoning traces and LoRA-based parameter-efficient fine-tuning while still achieving better performance than these expensive approaches. Additionally, ARBITER provides faithful evidence-phrase explanations for unsafe decisions, enabling a more transparent and interpretable guardrail method. Experiments on three safety moderation benchmarks show that ARBITER outperforms existing reasoning-based and non-reasoning guardrail baselines, with clear gains in out-of-domain evaluations."
+  },
+  {
+    "title": "Retain or Consolidate? Budget-Dependent Operator Selection for Language Agent Memory",
+    "url": "http://arxiv.org/abs/2607.17545v1",
+    "arxiv_id": "2607.17545v1",
+    "authors": [
+      "Qingcan Kang",
+      "Mingyang Liu",
+      "Shixiong Kai",
+      "Kaichao Liang",
+      "Zhentao Tang",
+      "Yuqi Cui",
+      "Tao Zhong",
+      "Mingxuan Yuan"
+    ],
+    "published": "2026-07-20T04:43:47+00:00",
+    "summary": "Language agents depend on memory across interactions. However, the limited context windows of large language models (LLMs) and their inference costs constrain how much memory can be used at once. Existing systems mainly follow two strategies: memory retention and memory consolidation. Retention keeps raw records and preserves exact details, but relevant evidence may not fit under a tight budget; consolidation compresses and combines records, improving coverage per token but risking the loss of query-critical details. Neither strategy is universally preferable. This raises two central questions: when should consolidation replace retention, and which operator -- Merge, Abstract, or Rewrite -- should be selected? We formalize this decision by decomposing each operator's utility into a coverage effect on evidence omitted by retention and a signed replacement effect on raw evidence that already fits. Their balance explains why the preferred action changes with relative budget pressure. We implement this mechanism with Offline Abstraction-Safety (OAS), a lightweight learner that estimates action utilities from pre-generation features with held-out harm calibration. The public LongMemEval and LoCoMo benchmarks show the same budget-dependent pattern. On LongMemEval, consolidation improves absolute accuracy by up to 48% under tight budgets, whereas retention is preferable under loose budgets; LoCoMo replicates this crossover at a smaller budget, consistent with its shorter evidence. On both datasets, cross-note abstraction and merging generally outperform local rewriting when compression is necessary."
+  },
+  {
+    "title": "Predicting Grasping Compliance in Robotic Hands through Analytical-Model-Informed Neural Networks",
+    "url": "http://arxiv.org/abs/2607.17541v1",
+    "arxiv_id": "2607.17541v1",
+    "authors": [
+      "Qianwen Zhao",
+      "Long Wang"
+    ],
+    "published": "2026-07-20T04:35:01+00:00",
+    "summary": "In robotic manipulation studies, grasping is often treated as a binary success or failure problem, usually defined by whether the object simply stays in the hand. For forceful tool use, however, this view is insufficient because grasp compliance becomes a critical factor governing how the hand and tool behave under load. Compliance arises from coupled kinematics, grasp configuration, passive mechanics, and contact conditions, producing nonlinear behavior in which deformation and interaction forces influence each other. Understanding this relationship is essential for predictive models of how a grasped tool and a compliant hand jointly respond to external loading. In underactuated hands, these effects are amplified: such designs offer low cost and adaptive grasping, but make compliance behavior more difficult to model and predict. Our goal is therefore to develop a predictive model for grasped tool behavior during forceful interactions. To address this challenge, we introduce an analytical model informed neural network (AMINN), a hybrid predictive model that combines an analytical mechanics layer with data driven learning to estimate grasp stability and in hand tool displacement under external loading. The model is evaluated on a three finger underactuated robotic hand and shows strong predictive capability with mechanically meaningful outputs across diverse loading conditions. Compared with a black box multilayer perceptron baseline, AMINN also achieves better energy based physical consistency. Beyond prediction accuracy alone, this framework advances physically interpretable learning for robotic manipulation and supports more reliable, safer, and more trustworthy autonomous tool use in safety critical settings during forceful interaction."
+  },
+  {
+    "title": "GeoWorldAD: Geometry World Action Model for Autonomous Driving",
+    "url": "http://arxiv.org/abs/2607.17521v1",
+    "arxiv_id": "2607.17521v1",
+    "authors": [
+      "Songyan Zhang",
+      "Jinyuan Tian",
+      "Hanbing Li",
+      "Daqi Liu",
+      "Hao Chen",
+      "Wenhui Huang",
+      "Fang Li",
+      "Guang Chen",
+      "Hangjun Ye",
+      "Long Chen",
+      "Kuiyuan Yang",
+      "Chen Lv"
+    ],
+    "published": "2026-07-20T03:56:07+00:00",
+    "summary": "Autonomous driving requires both safe and efficient planning decisions in dynamic 3D environments. Although recent Vision/Video-Action models learn policies directly from visual observations and scale well with advances in vision transformers and large-scale training data, they often lack explicit geometric grounding and future-aware spatial guidance, limiting their ability to balance collision avoidance and driving progress. In this work, we propose GeoWorldAD, a geometry world action model that grounds trajectory planning in ego-aligned 3D space and anticipates short-horizon scene evolution with latent future geometry tokens. Present geometry provides essential spatial constraints for safe planning, while future geometry reveals how surrounding agents and ego-centric free space may evolve, reducing overly conservative decisions without sacrificing safety. To efficiently exploit these geometric cues, GeoWorldAD progressively aggregates multi-scale present geometry and latent future geometry through iterative trajectory refinement. Experiments on NAVSIM v1 and v2 demonstrate state-of-the-art performance, highlighting the effectiveness of explicit 3D geometry grounding and future geometry world modeling for safe and efficient autonomous driving."
+  },
+  {
+    "title": "The Because-Calculus: Separating Production, Existence, and Interpretation in Computation",
+    "url": "http://arxiv.org/abs/2607.17450v1",
+    "arxiv_id": "2607.17450v1",
+    "authors": [
+      "Oscar Perez Mora"
+    ],
+    "published": "2026-07-20T00:44:18+00:00",
+    "summary": "Handler calculus conflates resumable and non-resumable effect operations through a single do construct, distinguished only by result type annotation. This conflation does not compromise type safety -- progress and preservation hold -- but it permits resumption bindings for non-resumable operations, creating vacuous bindings that the because-calculus eliminates at compile-time. The because-calculus structurally separates registration (non-resumable, void-returning) from attestation (resumable, non-void-returning) using dual effect rows and level-indexed typing, rejecting such clauses at compile-time via the Resumption Subconstraint. We prove the Conflation Theorem: collapsing the adjoint triple of existential, substitution, and universal functors into a single effect operation is non-faithful -- the erasure from the because-calculus to handler calculus maps rejected clauses to accepted ones. Four movements correspond to four natural transformations; categorical semantics maps each judgment to a category-theoretic construct. We establish progress, subject reduction, and tower progress for the full calculus."
+  },
+  {
+    "title": "An Update to the Level Set Theorems in Hamilton-Jacobi Reachability Analysis",
+    "url": "http://arxiv.org/abs/2607.17435v1",
+    "arxiv_id": "2607.17435v1",
+    "authors": [
+      "Dylan Hirsch",
+      "William McEneaney",
+      "Jaime Fisac",
+      "Claire Tomlin",
+      "Sylvia Herbert"
+    ],
+    "published": "2026-07-19T22:56:52+00:00",
+    "summary": "Hamilton-Jacobi Reachability (HJR) is an important framework for controlling safety-critical systems despite uncertainty. Its theoretical underpinnings are rooted in Hamilton-Jacobi Partial Differential Equations, which provide the value function used for controller synthesis. The Level Set Theorems of HJR allow one to interpret the value function in terms of satisfaction of a qualitative goal (e.g. goal-reaching or obstacle-avoidance). We here provide a technical update regarding additional criteria needed for these theorems to hold."
+  },
+  {
+    "title": "Between Safe Boundaries: Exploiting Temporal Consistency for Jailbreaking Text-To-Video Generation Models",
+    "url": "http://arxiv.org/abs/2607.17279v1",
+    "arxiv_id": "2607.17279v1",
+    "authors": [
+      "Xingkai Peng",
+      "Jun Jiang",
+      "Jiayang Liu",
+      "Kejiang Chen",
+      "Weiming Zhang"
+    ],
+    "published": "2026-07-19T14:52:31+00:00",
+    "summary": "Recently, text-to-video (T2V) models have been widely deployed, sparking growing concerns over their robustness against jailbreak attacks. Existing jailbreak methods, mostly adapted from text-to-image attacks, suffer notable drawbacks when applied to T2V systems. They fail to fully leverage temporal consistency, an inherent characteristic of video generation. Besides, these methods demand heavy video query optimization, which is infeasible in practical black-box scenarios. Their adversarial prompt search is also driven by heuristic local signals, lacking principled structured exploration strategies. To tackle these limitations, we propose BSB, a structured, query-efficient jailbreak framework for T2V models. BSB harnesses temporal consistency by encoding harmful intent as the transition between two individually harmless boundary states. Under this paradigm, the attack targets boundary-state pairs whose interpolation tends to produce unsafe intermediate frames during video generation. Directly evaluating all candidate pairs within the video space incurs prohibitive computation cost. Instead, BSB conducts Monte Carlo Tree Search (MCTS) in a cheaper textual proxy space and regularly calibrates search outcomes with sparse video-level evaluations. We conduct comprehensive experiments on mainstream commercial T2V models including Veo 3.1, Sora 2, Seedance and Kling v1. Results show BSB surpasses all existing jailbreak baselines, delivering an average 18.6% relative gain in attack success rate over the strongest competitor across evaluated models. Our findings identify temporal consistency as an understudied yet vital attack surface for T2V models and verify that structured search facilitates effective vulnerability discovery under constrained query budgets."
+  },
+  {
+    "title": "Safety That Does Not Transfer: Cross-Lingual Clinical Correctness Drift in Deployable Medical Language Models",
+    "url": "http://arxiv.org/abs/2607.17270v1",
+    "arxiv_id": "2607.17270v1",
+    "authors": [
+      "Anthonio Oladimeji Gabriel",
+      "Dimeji Olawuyi",
+      "Toba Ajayi",
+      "Temilola Aderemi"
+    ],
+    "published": "2026-07-19T14:20:31+00:00",
+    "summary": "Safety evaluation of large language models is conducted predominantly in English and predominantly on frontier systems. Neither condition describes how such models are encountered in low-resource health settings, where small quantised systems are run locally and queried in local languages. We ask whether clinical safety established in English transfers to Hausa, and whether any failure is attributable to the language, the clinical task, or the class of model that low-resource deployment admits. Matched English-Hausa question pairs were built for three conditions of high burden in northern Nigeria: malaria, sickle cell disease, and tuberculosis, probing knowledge recall, emergency triage, a leading question inviting a contraindicated action, and a traditional-remedy claim. Six models were evaluated: five locally deployable systems of 4-9 billion parameters, two medically fine-tuned, and one frontier system. All 128 responses were scored against Nigerian national treatment guidelines by two fluent Hausa speakers working independently and blind to one another. Among locally deployable models, mean clinical correctness fell from 1.57 in English to -0.03 in Hausa, on a scale where 2 denotes a correct answer and -1 an actively harmful one. The frontier model moved from 2.00 to 1.75 and produced no response judged harmful in either language. Drift was consistent across all three conditions. Inter-rater agreement was substantial for clinical correctness (kappa = 0.70); agreement on harm was initially poor (kappa = 0.22) and is examined in detail. Because a frontier model answers the same questions competently in Hausa, the deficit is a property neither of the language nor of the clinical material, but of the deployable tier."
+  },
+  {
+    "title": "A Large-Scale Measurement of AI Bill of Materials Completeness in Hugging Face Models",
+    "url": "http://arxiv.org/abs/2607.17242v1",
+    "arxiv_id": "2607.17242v1",
+    "authors": [
+      "Md Erfan",
+      "Ahmed Ryan",
+      "Md Rayhanur Rahman"
+    ],
+    "published": "2026-07-19T13:20:09+00:00",
+    "summary": "Pretrained machine learning (ML) models help developers build ML-intensive software systems without training models from scratch. However, model repositories often provide incomplete machine-readable documentation about model provenance, licenses, datasets, limitations, and external references, creating transparency and governance gaps across the AI supply chain. Artificial Intelligence Bills of Materials (AIBOMs) address these gaps by documenting AI artifacts, including models, metadata, licenses, datasets, model-card information, and external references. Taking public Hugging Face (HF) model repositories as a case study, this paper empirically investigates AIBOM completeness, defined as the extent to which repositories provide AIBOM-relevant information for machine-readable AI supply-chain documentation. We examine approximately 97.5K AIBOM artifacts to assess the extent to which generated AIBOMs: (i) contain required structural and metadata fields, (ii) represent model identity, license, and external-reference information, (iii) capture model-card documentation such as datasets, limitations, safety-risk assessment, and environmental information, and (iv) vary in documentation coverage across repository and artifact characteristics such as task, license availability, dataset declaration, model family, and paper reference. Results indicate that generated AIBOMs provide complete coverage of required AIBOM structure but limited AI-specific documentation completeness. Required fields are fully represented, but model-card, metadata, responsible-use, environmental, limitation, and meaningful-description fields remain weakly represented or missing across generated artifacts. Our findings motivate improved model-card practices, repository-level traceability, and automated AIBOM validation to advance the generation and adoption of more complete AIBOMs."
+  },
+  {
+    "title": "Specifying the Delegated-Autonomy Boundary: Requirements Engineering for Agentic AI",
+    "url": "http://arxiv.org/abs/2607.17225v1",
+    "arxiv_id": "2607.17225v1",
+    "authors": [
+      "Chetan Arora",
+      "Andreas Vogelsang",
+      "Abbi Sharma"
+    ],
+    "published": "2026-07-19T12:27:39+00:00",
+    "summary": "Agentic AI systems do not just predict or recommend; they plan, maintain state, and act in external environments with varying degrees of autonomy. This changes the requirements engineering problem in a specific and under-addressed way: it introduces what we call the delegated-autonomy boundary -- the set of decisions about what may be delegated to the system, under what graduated authority, with what oversight, and how control is returned. Current practices bury these decisions inside prompts, tool schemas, and runtime policies, even though they are requirements-level commitments. This paper proposes two complementary artifacts. First, an Agency Justification Record (AJR) helps teams decide when an agent is warranted over simpler alternatives. Second, an Agentic Delegation Policy (ADP) captures what must be specified for safe and effective development: purpose, authority, information, coordination, assurance, and evolution. Crucially, authority in the ADP is modelled as graduated, i.e., a tiered structure. We illustrate the framework with two contrasting examples: a safety-critical hospital discharge coordination agent and an automated code review agent."
+  },
+  {
+    "title": "Explaining and Tuning Transformer-based LLMs in Arithmetic Tasks with Human Strategies",
+    "url": "http://arxiv.org/abs/2607.17166v1",
+    "arxiv_id": "2607.17166v1",
+    "authors": [
+      "Luyu Qiu",
+      "Jianing Li",
+      "Hwanhee Kim",
+      "Xiaoyong Wei",
+      "Yueyuan Zheng",
+      "Janet Hsiao",
+      "Lei Chen"
+    ],
+    "published": "2026-07-19T09:57:41+00:00",
+    "summary": "Transformer-based large language models (LLMs) continue to achieve state-of-the-art performance across various natural language processing tasks. However, their subpar performance on seemingly elementary problems, such as basic arithmetic, raises concerns about model reliability, safety, and ethical deployment. In this study, we demonstrate that the performance of a vanilla Transformer model trained on integer arithmetic tasks can be improved using methods effective for human learners. We begin by decomposing the arithmetic task into well-defined subtasks and conducting loss convergence order analysis together with ablation studies for each subtask. Our findings reveal that LLMs exhibit learning patterns similar to those of human learners, with a faster learning speed for simpler subtasks compared to more complex ones. In addition, we successfully improved the accuracy of LLMs by applying problem-solving strategies and cognitive empowerment methods shown to enhance the performance of human learners. This suggests that transformer-based LLMs may share cognitive processes with human learners in arithmetic. Lastly, we provide a comprehensive demonstration of our method's effectiveness, including significant accuracy improvement experiments, visualization verification, and explanation-based analysis to illuminate the intricacies of LLMs in arithmetic learning. In general, this work explores the potential similarities between transformer-based LLMs and human learners, supported by explainable AI (XAI) verifications, ultimately fostering trust in LLMs for critical and high-stakes applications."
+  },
+  {
+    "title": "How Jailbreak Attacks Inform Safety Alignment: A Defender-Centric, Shapley-Based Evaluation of Jailbreak Contributions",
+    "url": "http://arxiv.org/abs/2607.17152v1",
+    "arxiv_id": "2607.17152v1",
+    "authors": [
+      "Yukai Zhou",
+      "Feiyang Lu",
+      "Xiaokai Mao",
+      "Jinfei Liu",
+      "Wenjie Wang"
+    ],
+    "published": "2026-07-19T09:18:35+00:00",
+    "summary": "Jailbreak attacks on large language models are usually evaluated by attacker-centric metrics such as attack success rate (ASR), yet an attack that breaks a model is not necessarily useful for improving its safety. We propose a defender-centric view of jailbreak evaluation, where attacks are evaluated by the downstream safety improvements they enable when used as red-teaming data for safety training. Building on this view, we introduce A-MESS (Minimal Effective Attack-Subset Selection), a setting-agnostic framework for attributing and selecting jailbreak attacks from black-box subset utility observations. A-MESS estimates AttackSHAP, a Shapley-based score that attributes marginal utility to individual attacks and selects compact attack subsets under user-specified budgets via greedy or surrogate-based optimization. Across controlled utility landscapes and real LLM safety settings, we find that ASR rankings are weakly aligned with defender-centric utility, that AttackSHAP can be estimated accurately with limited utility queries, and that directly optimizing subsets yields stronger safety utility than attacker-centric or attribution-only selection. These results suggest evaluating jailbreak attacks as resources for improving safety, not only as tools for breaking models."
+  },
+  {
+    "title": "Optimal Safety Control using High-Order Control Barrier Functions",
+    "url": "http://arxiv.org/abs/2607.17032v1",
+    "arxiv_id": "2607.17032v1",
+    "authors": [
+      "Neng Li",
+      "Zuodong Pan",
+      "Jiaxing Wang",
+      "Weiguo Xia",
+      "Wei Ren"
+    ],
+    "published": "2026-07-19T02:30:49+00:00",
+    "summary": "This paper investigates the optimal safety control problem of nonlinear control systems by proposing novel high-order control barrier functions (HOCBFs). Different from zeroing HOCBFs, two novel HOCBFs are derived and the safety controllers are designed in an explicit way. Next, we implement vector Lyapunov function approach to propose a novel high-order control Lyapunov function (HOCLF) for the stabilization control problem. The relations between the proposed and existing HOCBFs are discussed. Afterwards, the compatibility of the proposed HOCLF and HOCBF is addressed to guarantee the stabilization and safety control objectives simultaneously, and thus the optimal controller is established. Finally, a numerical example from the navigation problem of quadrotors is presented to illustrate the efficacy of the derived results."
+  },
+  {
+    "title": "ADMM-Based Safety-Critical Distributed NMPC for Cooperative Transportation by Quadrupedal Robots",
+    "url": "http://arxiv.org/abs/2607.17007v1",
+    "arxiv_id": "2607.17007v1",
+    "authors": [
+      "Ruturaj S. Sambhus",
+      "Kapi Ketan Mehta",
+      "Yicheng Zeng",
+      "Kaveh Akbari Hamed"
+    ],
+    "published": "2026-07-18T23:44:03+00:00",
+    "summary": "This paper presents a safety-critical distributed nonlinear model predictive control (DNMPC) framework for cooperative payload transportation by teams of quadrupedal robots. The proposed approach models the robotic team and the shared payload as a dynamically coupled networked system with rigid holonomic coupling constraints arising from cooperative transportation. To enable distributed real-time optimization, the centralized finite-horizon optimal control problem is decomposed into parallel local NMPC subproblems coordinated through the alternating direction method of multipliers (ADMM). The resulting distributed framework enforces consensus over both payload-state and interaction-wrench trajectories while explicitly incorporating acceleration-level holonomic coupling constraints within the distributed predictive control formulation. Safety-critical obstacle avoidance constraints for both the robotic agents and payload are enforced using higher-order control barrier functions (HOCBFs). The framework is validated through numerical simulations with teams of two, three, and four quadrupedal robots transporting shared payloads in cluttered environments. Real-time experiments on two- and three-robot teams demonstrate safe and robust transportation under payload uncertainty and external disturbances. Compared with centralized NMPC, the proposed framework achieves up to 23% reduction in average NLP solve time while maintaining comparable closed-loop performance. Ablation studies further demonstrate robustness to communication delays and show that explicit payload-state consensus and holonomic constraints substantially improve payload tracking and distributed coordination over existing wrench-only consensus formulations."
+  },
+  {
+    "title": "User-Driven Learning from Demonstration: A Trajectory and Impedance Learning Method",
+    "url": "http://arxiv.org/abs/2607.16998v1",
+    "arxiv_id": "2607.16998v1",
+    "authors": [
+      "Zi-Qi Yang",
+      "Mehrdad R. Kermani"
+    ],
+    "published": "2026-07-18T23:27:17+00:00",
+    "summary": "This paper presents a method for user-driven robot Learning from Demonstration (LfD) that reduces user effort while ensuring compliant and precise reproduction. The method eliminates repeated teaching for the same task and enables real-time learning from a single demonstration. Demonstrated motions are reproduced with high precision, while impedance variations are learned in real time to provide both compliance and robustness against perturbations. This mitigates potential safety issues in Human-Robot Interaction (HRI) that arise from conventional time-indexed trajectories lacking compliance. The proposed approach integrates a three-dimensional (3D) Fast Diffeomorphic Matching (FDM) algorithm with a Dynamical System (DS)-based motion generator to achieve real-time single-shot demonstration learning and reproduction. An Extended Kalman Filter (EKF) framework compensates for reproduction errors and recovers from external interactions. Furthermore, an impedance parameterization function is incorporated to learn impedance variations from demonstrations and maintain surface contact for specific applications. The proposed approach is validated through comprehensive experiments on a 7 Degree-of-Freedom (DOF) KUKA LWR IV+ robot."
+  },
+  {
+    "title": "SurvCF(t): Counterfactual Explanations for Survival Analysis in Predictive Maintenance Multivariate Time Series Data",
+    "url": "http://arxiv.org/abs/2607.16969v1",
+    "arxiv_id": "2607.16969v1",
+    "authors": [
+      "Zara Karazian",
+      "Panagiotis Papapetrou",
+      "Sindri Magn\u00fasson",
+      "Erik Frisk",
+      "Tony Lindgren"
+    ],
+    "published": "2026-07-18T21:06:46+00:00",
+    "summary": "Predictive maintenance relies on accurate Remaining Useful Life estimation, often formulated using survival analysis over multivariate time-series data. While modern deep survival models achieve strong predictive performance, their black-box nature limits their use in safety-critical settings where actionable insight is required. In this work, we introduce \\textit{SurvCF(t)}, the first framework for generating counterfactual explanations for survival models operating on time-series data. \\textit{SurvCF(t)} identifies minimal, plausible, and temporally consistent changes to an asset's operational history that increase its predicted life time, framing explanation as a constrained optimization problem combining validity, proximity, sparsity, and plausibility. We evaluate the method on multiple benchmarks, including C-MAPSS, N-CMAPSS, and a real-world case study of the Scania Component\\_X dataset, demonstrating its ability to produce actionable and interpretable interventions. Our results show that \\textit{SurvCF(t)} bridges the gap between survival prediction and prescriptive maintenance, enabling explainable and decision-oriented AI for maintenance strategies."
+  },
+  {
+    "title": "G2-Nav: Grounded and Guarded Vision-Language Costmaps for Robot Social Navigation",
+    "url": "http://arxiv.org/abs/2607.16956v1",
+    "arxiv_id": "2607.16956v1",
+    "authors": [
+      "Yuwen Liao",
+      "Yihang Lan",
+      "Yizhuo Yang",
+      "Ruimeng Liu",
+      "Xinhang Xu",
+      "Shenghai Yuan",
+      "Lihua Xie"
+    ],
+    "published": "2026-07-18T20:18:20+00:00",
+    "summary": "Social navigation requires the robot to reason and respond in complex real-world environments. While recent works attempt to incorporate human-level intelligence into robot planning using large Vision-Language Models (VLMs), end-to-end frameworks often create an unpredictable black-box, and existing instruction-following methods are not designed for full autonomy. To bridge this gap, we present G2-Nav, a novel framework that grounds abstract social reasoning and guards safe real-world deployment. Instead of asking the VLM for direct planning decisions, G2-Nav translates its semantic reasoning into a vision-language costmap with reliability and interpretability. The VLM evaluates traversable regions and social agents from open-set perception, mapping social context into the costmap. To improve real-world robustness, the VLM performs semantic verification on upstream tracking, and we introduce a high-frequency safety check to guard against system latency prior to trajectory generation. We demonstrate through real-world experiments that G2-Nav delivers safe, efficient, and socially compliant autonomous navigation in unstructured environments. Code will be made publicly available."
+  },
+  {
+    "title": "SinD 2.0: A Multi-City UAV Dataset with Semantic Risk Annotations for SOTIF-Oriented Safety Validation at Signalized Intersections",
+    "url": "http://arxiv.org/abs/2607.16943v1",
+    "arxiv_id": "2607.16943v1",
+    "authors": [
+      "Yunwei Li",
+      "Shengjie Fu",
+      "Chunrong Chen",
+      "Chengxiang Zhao",
+      "Yuchen Fan",
+      "Mingyu Zhu",
+      "Yanchao Xu",
+      "Yuxin Zhang",
+      "Lan Yang",
+      "Chuzhao Li",
+      "Jie Ji",
+      "Yi He",
+      "Abhijit Sarkar",
+      "Akash Sonth",
+      "Hong Wang",
+      "Jun Li"
+    ],
+    "published": "2026-07-18T19:46:37+00:00",
+    "summary": "Safety validation at signalized intersections remains a critical bottleneck for the deployment of autonomous driving systems (ADS), as these scenarios involve dense heterogeneous traffic, contested right of way, and long-tail safety-critical interactions, posing significant challenges to the Safety of the Intended Functionality (SOTIF). Existing naturalistic driving datasets often suffer from geographical homogeneity, sparsity of safety-critical events, and lack of semantic risk annotations, which limit the evaluation of algorithmic generalizability and targeted SOTIF verification. To address these gaps, this paper introduces SinD 2.0, a large-scale drone-based intersection dataset dedicated to cross-domain ADS safety analysis. The main contributions of SinD 2.0 are: (1) Cross-domain diversity: It covers six signalized intersections across four Chinese cities, capturing distinct intersection topologies and regional driving behavior characteristics; (2) High-density risk interactions: A total of 32,682 safety-critical events are extracted via surrogate safety measures, significantly enriching the density of boundary test scenarios; (3) Hierarchical semantic annotations: Besides integration with high-definition (HD) maps and Signal Phase and Timing (SPaT) data, it provides multi-dimensional semantic labels including traffic violations, high-risk interactions, visual shielding, and narrow feasible areas; (4) Full-stack testing toolchain: It supports automated scenario extraction, prediction-only evaluation, open-loop replay, reactive closed-loop testing, and photorealistic rendering. Benchmark experiments demonstrate that SinD 2.0 exhibits significant domain shifts across cities, and the semantic risk subsets can effectively expose the performance limitations of ADS algorithms. The dataset, annotations, and testing toolchain are available at https://github.com/SOTIF-AVLab/SinD/tree/main."
+  },
+  {
+    "title": "What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning",
+    "url": "http://arxiv.org/abs/2607.16938v1",
+    "arxiv_id": "2607.16938v1",
+    "authors": [
+      "Kalpana Panda",
+      "Wesley Maia",
+      "Vinti Agarwal",
+      "Ross Greer"
+    ],
+    "published": "2026-07-18T19:20:16+00:00",
+    "summary": "End-to-end autonomous driving models are now able to navigate complex road scenarios, mapping raw sensor observations directly to observed paths for open-loop evaluation and often effective driving in closed-loop evaluation. Yet the internal logic of these safety-critical systems remains largely opaque, due to the complexity of traffic scenes. We propose a counterfactual ablation framework called Counterfactual Vision Action Analysis (CVAA) that systematically removes individual detected objects from front-camera images using photorealistic generative inpainting to prepare counterfactual sets to evaluate the difference in the model's response. This isolates the causal effect of each object's presence on the model's planning behaviour. Applied to the Alpamayo 1 trajectory predictor across 210 nuScenes driving scenes, we create a dataset Counter -nuScenes, using which we see that vehicles and pedestrians within the model's 'path' dominate causal influence as expected, while traffic lights, as expected, exert disproportionate effect relative to their image footprint. However, we also find cases where the model responds strongly to objects a human driver would consider irrelevant. This brings forth a deeper question: does the model itself view the scene as a sum of individual objects influencing the outcome, or does it encode an entirely different set of internal features that do not correspond to human-legible scene elements? To further understand this, we compare intermediate representations of original and inpainted image pairs using mechanistic interpretability techniques and examine the effect of the removal through the various model layers. Together, these two stages offer a path from behavioral auditing to representational understanding, creating explainable driving systems and solidifying human-AI trust."
+  },
+  {
+    "title": "Pedestrian Archetypes Extension -- More Pedestrian Models for Autonomous Vehicle Safety Testing",
+    "url": "http://arxiv.org/abs/2607.16922v1",
+    "arxiv_id": "2607.16922v1",
+    "authors": [
+      "Taorui Huang",
+      "Namita Gaidhani",
+      "Ritvik Bansal",
+      "S M Jubaer",
+      "Regina Lim",
+      "Rhett Zhao",
+      "Gavin Rafael Selin",
+      "Sunnie Deng Gao",
+      "Hasnain N Syed"
+    ],
+    "published": "2026-07-18T18:26:35+00:00",
+    "summary": "In our prior work, Pedestrian Archetypes, we defined pedestrian archetypes as collections of behaviors that uniquely identify a specific type of pedestrian. The first paper proposed 12 pedestrian archetypes, including the Wanderer, Drunk, Distracted, Flash, Indecisive, Blind, Flock, Jaywalker, Elderly, Kid, Eventful, and Parked Pedestrian. These archetypes were introduced to move beyond single behavior labels and provide a more natural way to describe how dangerous pedestrians actually behave progressively in real-world traffic scenarios. However, upon further annotation of YouTube dash-cam videos, we identified 7 additional pedestrian archetypes with observable and significant behavioral differences from the previously proposed ones. These new archetypes capture pedestrian behavior patterns that could not be fully explained by the original taxonomy. In this pre-print, we introduce each new archetype, define its essential and optional behaviors, explain how it differs from previously proposed archetypes, and provide video-frame evidence showing the archetype in action."
+  },
+  {
+    "title": "When Can Safe Controllers Adapt? Information before Commitment",
+    "url": "http://arxiv.org/abs/2607.16895v1",
+    "arxiv_id": "2607.16895v1",
+    "authors": [
+      "Venkatesh Saligrama"
+    ],
+    "published": "2026-07-18T17:30:41+00:00",
+    "summary": "Safe adaptive control is online adaptation under a safety guarantee on the learning trajectory itself. The controller may use any causal, history-dependent rule and act differently across environments as data arrive. Only its safety guarantee is uniform: the same rule must satisfy it under every initially plausible model. Performance is measured against a safe oracle that knows the realized model. Many finite-time analyses assume persistent excitation of the uniformly safe closed loop, so the data distinguish every pair of models requiring different control decisions. Under that assumption, feasibility is already settled; only the rate remains. We ask instead: Do the safety constraints permit such an informative experiment at all?   While an alternative remains plausible, the controller must preserve a safe continuation under it. We call the first action that forecloses such a continuation commitment. Chance safety allows commitment only on an event rare under the alternative, and the evidence must arrive beforehand: the observation generated by the committing action is too late. We define precommitment information as the KL divergence between learner-visible laws stopped before commitment.   Our main result is a causal reduction. The commitment rule determines (1) the probability that safety permits commitment under the alternative, (2) the target-side cost of remaining noncommittal, (3) and the information available when the decision is made. Bounded precommitment information therefore leaves a fixed fraction of the oracle gap unavoidable. If the gap is \u03a9(T), every uniformly safe policy has linear regret. We establish the obstruction in a constrained linear system with quadratic regulation cost. We also prove recovery in special cases and derive semidefinite upper certificates for deterministic linear-Gaussian systems."
+  },
+  {
+    "title": "Beyond Semantic Equivalence: Logical Graphs for LLM Uncertainty Quantification",
+    "url": "http://arxiv.org/abs/2607.16868v1",
+    "arxiv_id": "2607.16868v1",
+    "authors": [
+      "Yanni Dong",
+      "Minghua Liu",
+      "Meiling Zhu",
+      "Xiaowei Huang",
+      "Lijun Zhang"
+    ],
+    "published": "2026-07-18T16:14:08+00:00",
+    "summary": "Large Language Models (LLMs) often produce confidently stated yet unreliable outputs, posing critical challenges for deployment in safety-sensitive applications. Existing uncertainty metrics such as semantic entropy capture agreement at the level of semantic equivalence, but largely ignore the logical relationships between distinct answers. As a result, they tend to overestimate uncertainty and falsely flag hallucinations in settings where generated responses are diverse in form yet logically compatible (e.g., differing only in granularity or specificity). We propose Logical Graph Uncertainty (LGU), a framework that explicitly models implication and incompatibility among answers. LGU aggregates probability mass along entailment chains, computes entropy over logically maximal hypotheses, and penalizes mutual incompatibility among them. Across multiple question-answering benchmarks, LGU consistently improves uncertainty estimation over existing methods, and outperforms the semantic entropy baseline by up to +7.1% AUROC and +3.5% AUARC across datasets."
+  },
+  {
+    "title": "Bridging battery design and health assessment through virtual sensing and physics-informed learning",
+    "url": "http://arxiv.org/abs/2607.16864v1",
+    "arxiv_id": "2607.16864v1",
+    "authors": [
+      "Wendi Guo",
+      "S\u00f8ren Byg Vilsen",
+      "Daniel Ioan Stroe",
+      "Yaqi Li",
+      "Yicun Huang",
+      "Ashima Verma",
+      "Daniel Brandell"
+    ],
+    "published": "2026-07-18T15:59:29+00:00",
+    "summary": "Supercharging of lithium-ion batteries (LiBs) requires robust health monitoring to ensure durability, safety, and user confidence, particularly for emerging vehicle-to-grid applications with bidirectional energy flows. Yet battery management remains largely disconnected from the material and structural origins of aging, limiting both interpretable health assessment and informed battery design. Here we propose a physics-informed learning framework with virtual sensing that infers hard-to-measure design parameters, including solid-state diffusion coefficient, electrode thickness, ion concentration, and particle size, directly from standard battery management system (BMS) measurements. Across diverse fast-charging strategies and driving profiles, embedding a digital-twin-derived particle-cracking mechanism as a soft constraint reduces trajectory and lifetime prediction errors by 6-8 times relative to state-of-the-art machine learning baselines using only 2% early-life observations. We further show that accurate degradation extrapolation does not require fully resolved governing equations; validated partial mechanisms, jointly refined with limited data, provide sufficient guidance. Virtual sensing transforms standard charging signals into latent design variables without additional sensors, bridging observable battery behavior and underlying aging processes while reducing capacity loss error by up to 39%, end-of-life (EOL) error by 17%, and prediction variability by up to 54%, enabling real-time exploration of new battery configurations. More broadly, the proposed framework establishes a practical feedback loop between deployment and development, demonstrating how real-world operation can continuously inform upstream design decisions across complex multiphysics systems."
+  },
+  {
+    "title": "UniNDM: A Unified Noise-driven Detection and Mitigation Framework Against Sexual Content in Text-to-Image Generation",
+    "url": "http://arxiv.org/abs/2607.16828v1",
+    "arxiv_id": "2607.16828v1",
+    "authors": [
+      "Yao Huang",
+      "Yitong Sun",
+      "Huanran Chen",
+      "Ruochen Zhang",
+      "Shouwei Ruan",
+      "Ranjie Duan",
+      "Maoxun Yuan",
+      "Yinpeng Dong",
+      "Hui Xue",
+      "Xiaochun Cao",
+      "Xingxing Wei"
+    ],
+    "published": "2026-07-18T14:03:39+00:00",
+    "summary": "Despite the impressive generative capabilities of text-to-image diffusion models, they remain vulnerable to implicit sexual prompts, where subtle cues disguised as benign terms or adversarial tokens unexpectedly generate the inappropriate content due to model biases or latent correlations in training data. Existing safety mechanisms face fundamental limitations: detection methods primarily identify explicit content and fail to capture implicit malicious intent, while mitigation approaches rely on static negative prompts inadequate for diverse implicit scenarios. To address these challenges, we propose UniNDM, a unified noise-driven framework that rethinks safety mechanisms through the lens of noise dynamics in diffusion processes. Our key insight is that early-stage predicted noise exhibits inherent separability between normal and sexually explicit content, which we theoretically demonstrates quadratically increasing semantic concentration with timestep. Leveraging this property, we develop a lightweight noise-based detector achieving superior accuracy with virtually no computational overhead. For mitigation, we introduce noise-enhanced adaptive negative guidance: dynamically generating context-specific negative prompts via large language models to handle diverse implicit content, while optimizing initial noise by suppressing attention concentration on explicit tokens to provide comprehensive protection. Besides the U-Net-based diffusion models, we further extend our framework to emerging Diffusion Transformer architectures through region-constrained semantic guidance tailored for their unified multimodal attention. Comprehensive experiments across U-Net models and DiT models on both natural and adversarial datasets demonstrate substantial improvements over state-of-the-art methods, including SLD, UCE, Safree, etc. Our code is publicly available at https://github.com/Aries-iai/UniNDM."
+  },
+  {
+    "title": "Token-Wise Latent Streaming from Slow Reasoners to Fast Planners for Dynamic Vision Language Navigation",
+    "url": "http://arxiv.org/abs/2607.16806v1",
+    "arxiv_id": "2607.16806v1",
+    "authors": [
+      "Tianshuai Hu",
+      "Yangyi Zhong",
+      "Zeying Gong",
+      "Lingdong Kong",
+      "Xiaodong Mei",
+      "Guoyang Zhao",
+      "Xiaolu Liu",
+      "Song Wang",
+      "Rong Li",
+      "Junwei Liang"
+    ],
+    "published": "2026-07-18T12:55:40+00:00",
+    "summary": "Vision-Language Navigation in dynamic, human-centric environments exposes a fundamental tension: linguistic reasoning is slow and deliberative, whereas safe, socially compliant planning should be instant and reactive. The resulting observation staleness is safety-critical: a maneuver chosen during inference can already be unsafe by the time it executes. We observe that, long before a VLM finishes its inference, its intermediate hidden states already encode action-relevant intent. We propose SPARK-VLN, a dual-system framework for dynamic social VLN that streams the slow VLM reasoner's knowledge to a fast flow-matching expert planner throughout token generation, providing fresh and evolving guidance during inference. This design is realized by three modules: a Token-Wise Hidden Streamer that extracts intermediate hidden states along the token generation process, a Sequence-to-Slot Latent Bridge that projects them into fixed-size latent slots, and an Evolving Latent Conditioner that infuses them into the expert planner. We also introduce a human-centric benchmark suite for dynamic social vision-language navigation that keeps pedestrians and the robot active throughout inference and reports navigation success, social compliance, human collisions, and explicit staleness statistics. Across these settings, SPARK-VLN mproves navigation success and social compliance while sustaining inference efficiency. Webpage: https://hutslib.github.io/SPARK-VLN/."
+  },
+  {
+    "title": "SABLE: Minimalist Instruction-Level Authenticated Encryption for Constrained Confidential Computing",
+    "url": "http://arxiv.org/abs/2607.16771v1",
+    "arxiv_id": "2607.16771v1",
+    "authors": [
+      "Hamid Noori",
+      "Carlton Shepherd"
+    ],
+    "published": "2026-07-18T11:12:28+00:00",
+    "summary": "Conventional processor designs expose code and data as plaintext throughout execution, rendering them inherently vulnerable to attacks that recover intellectual property or modify security/safety checks. Instruction-level encryption (ILE) enables CPU-level decryption, execution, and optionally authentication of individual encrypted program instructions at runtime. However, existing proposals depend on specific micro-architectures, detect corrupted instructions after they have executed, rely on non-standard ciphers, or require complex analyses of program state. In this work, we introduce and present a design exploration of a RISC-V processor architecture (SABLE) that enables minimally invasive instruction-level authenticated encryption of programs. SABLE is agnostic to the underlying micro-architecture, remaining compatible with the standard RISC-V toolchain with minor changes to post-process compiled ELF binaries. We integrate a decrypt-and-verify stage at two points (the instruction-memory wrapper and the CPU frontend) and explore seven ILE micro-architectures from a single-cycle (combinational) design to six multi-cycle (sequential) variants. We implement and evaluate the designs using ASCON-128a on a Xilinx Artix-7 FPGA with the open-source NEORV32 system on chip. Relative to baseline performance, the configurations span LUT, performance, power, and energy-per-instruction overheads of 1.6-9.3$\\times$, 4.1-10.0$\\times$, 1.5-8.0$\\times$, and 10.4-80.0$\\times$, respectively, using the Dhrystone benchmarking suite. Finally, we discuss design trade-offs, highlighting area-, performance-, and energy-aware design points."
+  },
+  {
+    "title": "Model-Driven Discipline for Multi-Agent LLMs: Requirement-to-Verification Generation of Traceable System Models",
+    "url": "http://arxiv.org/abs/2607.16708v1",
+    "arxiv_id": "2607.16708v1",
+    "authors": [
+      "Ran Wei",
+      "Le Zhu",
+      "Haochi Wang",
+      "Ruizhe Yang",
+      "Jiapeng Guan",
+      "Siyuan Ji",
+      "Yuchen Hu",
+      "Zhe Jiang",
+      "Xiangyang Ji"
+    ],
+    "published": "2026-07-18T08:50:55+00:00",
+    "summary": "Software complexity is a long-standing challenge for system engineers. Model-Driven Engineering (MDE) addresses it by treating models as first-class artefacts, but a typical MDE process spans many tools and produces heterogeneous models of different system aspects, making traceability, maintenance, and change management difficult.   We propose RADIANT, an engineering methodology that combines MDE with Multi-Agent Large Language Models (LLMs) for complete model-based system development, with a focus on safety-critical systems. From a carefully specified requirement model, RADIANT automatically generates heterogeneous models across engineering phases -- a concept model, a domain-specific modelling language, a conforming system model, and a behaviour model -- together with executable, element-level traceability links, on top of which it provides exact, automated change-impact analysis. Generated behaviour models are translated into CSP and formally verified (e.g.\\ for deadlock freedom and convergence) with a counterexample-driven repair loop. Evaluating RADIANT across three LLMs, we find that the multi-agent decomposition reliably improves the \\emph{syntactic validity} of the generated formal artefacts over a single-agent baseline -- and their \\emph{executability} where the model's code generation permits -- while gains in semantic accuracy are model-dependent. A six-participant study shows an order-of-magnitude ($10$--$15\\times$) reduction in development time, and the unmodified pipeline transfers to a second domain."
+  },
+  {
+    "title": "Though Language Models Err While They Strive: Conformal Prediction for Self-Correcting Scientific Generation",
+    "url": "http://arxiv.org/abs/2607.16704v1",
+    "arxiv_id": "2607.16704v1",
+    "authors": [
+      "Mingqiao Mo",
+      "Yunlong Tan",
+      "Hao Zhang"
+    ],
+    "published": "2026-07-18T08:38:19+00:00",
+    "summary": "Large language models frequently violate fundamental scientific principles when generating technical content, undermining their reliability in scientific applications. We introduce Scientific Feasibility Control SFC, a graph-structured conformal prediction framework that provides statistical guarantees for scientific reasoning validity through progressive absolute-coherent-factuality validation. Our approach decomposes scientific reasoning into atomic absolute-coherent-factuality units requiring both individual correctness against physical laws and logical substantiation from preceding context, addressing the cascade effect where early scientific errors contaminate subsequent reasoning steps. Unlike independence-based methods that treat claims in isolation, SFC models logical dependencies as approximate deducibility graphs and operates through real-time validation with dynamic branching when scientific violations are detected, the system branches to alternative generation paths using verified context as foundation. We demonstrate SFC across established scientific reasoning benchmarks including PhyX multimodal physics, MATH, ScienceQA, and ARC Challenge, achieving 50.1 percent accuracy on PhyX physics reasoning, substantially outperforming recent reasoning models including DeepSeek-R1 49.8 percent and GPT-4 45.8 percent while providing 91.7 percent scientific validity with formal conformal coverage guarantees at alpha equals 0.10 confidence level and reducing scientific law violations by 73 percent across multiple model architectures."
+  },
+  {
     "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
     "url": "http://arxiv.org/abs/2607.16190v1",
     "arxiv_id": "2607.16190v1",
