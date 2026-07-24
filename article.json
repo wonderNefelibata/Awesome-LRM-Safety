@@ -1,5 +1,427 @@
 [
   {
+    "title": "Seeking Help in the Digital Age: A Cross-Platform Analysis of Online Support Systems for Technology-Facilitated Abuse Victims",
+    "url": "http://arxiv.org/abs/2607.21549v1",
+    "arxiv_id": "2607.21549v1",
+    "authors": [
+      "Nowshin Tabassum",
+      "Solomon G. Dandekar",
+      "Morgan PettyJohn",
+      "Tim Ryan",
+      "Minjaal Raval",
+      "Rachel Voth Schrag",
+      "Mohit Singhal",
+      "Shirin Nilizadeh"
+    ],
+    "published": "2026-07-23T17:35:20+00:00",
+    "summary": "Technology-facilitated abuse (TFA), the use of digital technologies to stalk, harass, monitor or threaten others, has become a pervasive form of interpersonal harm. As victims turn to online sources for guidance, responses can shape how they assess risks, interpret abuse, and choose protective actions. We present a large-scale evaluation of online support for TFA victims across three channels: web search, peer-support forums, and conversational AI systems. Drawing on a decade of victim narratives from r/Stalking, we use qualitative coding and supervised classifiers to construct a dataset of TFA queries spanning 11 categories of technology misuse. We simulate these queries across the three channels and evaluate responses using a unified framework spanning technical, social, and safety dimensions. The framework assesses relevance, accuracy, actionability, persuasiveness, and understandability, alongside platform risks and support characteristics, including social-engineering risk, toxicity, empathy, bias, risky guidance, and support information. We build and validate automated classifiers to scale the evaluation. Our findings reveal differences in support quality across platforms. Google Search and general-purpose LLMs provide more relevant and actionable guidance than Reddit discussions, yet none consistently provide safe, trauma-informed support. More than 65% of victim queries encounter potentially malicious links in search results, over 20% of Reddit discussions contain toxic responses, and conversational AI systems frequently fail to provide risk-aware guidance or concrete support resources. Surprisingly, domain-specific survivor-support chatbots underperform general-purpose LLMs across most dimensions. These findings expose weaknesses in digital support for TFA victims and highlight the need for safety-centered design, evaluation, and deployment of future support technologies."
+  },
+  {
+    "title": "Same Dangerous Objective, Opposite Advice: Direct Exposure versus Multi-Agent Mediation",
+    "url": "http://arxiv.org/abs/2607.21518v1",
+    "arxiv_id": "2607.21518v1",
+    "authors": [
+      "Linjun Li"
+    ],
+    "published": "2026-07-23T17:02:11+00:00",
+    "summary": "Even a current high-capability LLM can appear safer when shown a dangerous objective directly than when other agents transform and relay its direction. Using OpenAI's gpt-5.6-sol model alias, we test 25 pre-specified mirrored trade-off profiles. Direct exposure to an objective authorizing concealment, fabrication, and pressure produced advice net opposed to its target. After an Id and Censor transformed the same objective into affect and a constraint-rewritten, target-bearing intention, the user-facing Superego---which saw the preferred direction but not the raw objective, its manipulative clauses, or its source---produced advice net aligned with the target.   This behavioral reverse shift is consistent with the model recognizing or distrusting the manipulative motive, although we do not identify its internal mechanism. The second result exposes a compositional safety gap: a current high-capability model can be used as the user-facing component of an automated, multi-stage workflow serving an explicitly manipulative objective. The workflow can keep the raw instruction, its manipulation-authorizing clauses, and its provenance outside the downstream model's context while preserving the objective's target direction. A user with endpoint-only access likewise cannot directly inspect those upstream messages including the objective."
+  },
+  {
+    "title": "Top-down = Bottom-up: Sound and Complete Characterisations of Liveness by Multiparty Global Protocols",
+    "url": "http://arxiv.org/abs/2607.21489v1",
+    "arxiv_id": "2607.21489v1",
+    "authors": [
+      "Kai Pischke",
+      "Nobuko Yoshida"
+    ],
+    "published": "2026-07-23T16:29:22+00:00",
+    "summary": "Multiparty session types (MPST) are a type discipline for concurrent and distributed systems, designed to ensure not only type safety and deadlock-freedom, but also liveness of typed communicating processes. Two main MPST methodologies, top-down and bottom-up, have been proposed and are integrated into a wide range of programming languages and tools. The top-down strategy starts by specifying the overall choreography of the protocol (called a global type), from which a set of local types that satisfy safety and liveness are generated by endpoint projection (EPP). Once each participant is type-checked against a generated local type, liveness of the set of typed processes is automatically ensured by construction. The bottom-up strategy directly checks whether local types inferred from processes satisfy liveness to enforce liveness of processes. Since the top-down strategy depends on global types and the EPP algorithms, it has often been considered that the top-down system offers strictly less typability than the bottom-up system. Our paper negates this belief. We prove that, using the precise subtyping for the subsumption rule, the top-down strategy offers exactly the same typability as the bottom-up system. More precisely, a multiparty session $M$ is typable and verified to be live by the bottom-up typing system if and only if $M$ is typable by the top-down typing system. The key to the proof is a principal global type inference algorithm which builds a principal global type from an arbitrary set of live local types. We have implemented the global type inference algorithm together with projection, process type checking and local type inference algorithms, and built a toolchain for both the top-down and bottom-up strategies. We evaluated our toolchain with representative examples from the literature, confirming that the top-down approach is more efficient than the bottom-up approach."
+  },
+  {
+    "title": "Out-of-Distribution Detection in Wireless Multimodal Foundation Models for 6G ISAC",
+    "url": "http://arxiv.org/abs/2607.21455v1",
+    "arxiv_id": "2607.21455v1",
+    "authors": [
+      "Mohammad Farzanullah",
+      "Akram Bin Sediq",
+      "Ali Afana",
+      "Melike Erol-Kantarci"
+    ],
+    "published": "2026-07-23T15:56:41+00:00",
+    "summary": "The integration of Foundation Models (FMs), such as the Wireless Multimodal Foundation Model (WMFM), into 6G networks provides a unified framework for Integrated Sensing and Communication (ISAC), leveraging generalized representations to simultaneously optimize data transmission and environmental perception. However, the deployment of such data-driven models in safety-critical infrastructure is hindered by the Out-of-Distribution (OOD) problem, which poses a fundamental threat to system trustworthiness. Standard FMs operate under a closed-world assumption, rendering them vulnerable to silent failures when deployed in unseen radio environments. To address this reliability gap and ensure trustworthy network operation, we propose WMFM-OOD, a robust metric-based OOD detection framework. Unlike traditional methods that rely on raw compatibility scores, WMFM-OOD constructs geometric Base Station (BS) Prototypes within the joint latent space to capture the manifold structure of valid radio environments. By employing a temperature-scaled probabilistic scoring mechanism, our approach effectively distinguishes between In-Distribution (ID) and covariate-shifted anomalies. We validate the framework on the DeepVerse6G dataset. Experimental results demonstrate that WMFM-OOD significantly outperforms uncalibrated baselines, achieving an Area Under the Receiver Operating Characteristic Curve (AUROC) of 0.8824 and reducing the False Positive Rate (FPR) at 95 % True Positive Rate (TPR), commonly referred to as FPR95, by approximately 17% in the optimal temperature regime, thereby providing an initial layer of detection sensitivity to mitigate catastrophic model failures without completely disrupting network availability."
+  },
+  {
+    "title": "Token Budget Saturation and Mechanistic Early Detection of Reasoning Non-Convergence in Chain-of-Thought Models",
+    "url": "http://arxiv.org/abs/2607.21433v1",
+    "arxiv_id": "2607.21433v1",
+    "authors": [
+      "Renuka Oladri",
+      "Niveda Jawahar",
+      "Abdirisak Mohamed"
+    ],
+    "published": "2026-07-23T15:37:04+00:00",
+    "summary": "Chain-of-thought reasoning models such as DeepSeek-R1-Distill-Qwen-7B exhibit a bimodal convergence pattern: generations either terminate within a token budget (converged) or exhaust it without reaching a conclusion (non-converged). We characterize this phenomenon empirically, showing that converged generations achieve 90.3% accuracy on AIME 1983-2024 while non-converged ones achieve only 6.6%, with an overall convergence rate of 62.0%. We then ask whether this outcome is detectable early in the thinking chain using internal model representations. Training linear probes on hidden-state activations at token positions 50-300, we find that layer-20 activations at token 150 achieve AUC 0.608 (+-0.080, 5-fold CV), reliably above chance even at token 50. Activation probes consistently outperform behavioral baselines derived from token entropy and repetition statistics. A sweep-level permutation test yields p=0.063 (100,000 permutations), consistent with a modest signal that our sample size cannot confirm at conventional thresholds. These findings suggest that convergence fate is partially encoded in intermediate representations well before the generation ends, opening a path toward early-exit inference and adaptive compute allocation."
+  },
+  {
+    "title": "Euclid-MCP: A Model Context Protocol Server for Deterministic Logical Reasoning via Prolog",
+    "url": "http://arxiv.org/abs/2607.21412v1",
+    "arxiv_id": "2607.21412v1",
+    "authors": [
+      "Bartolomeo Bogliolo"
+    ],
+    "published": "2026-07-23T15:15:37+00:00",
+    "summary": "Large Language Models (LLMs) excel at natural language understanding and generation but remain unreliable for multi-step logical reasoning, especially in safety-critical or compliance-sensitive domains. Recent neuro-symbolic approaches address this gap by coupling neural models with external symbolic engines, yet most integrations are bespoke and lack a standardized interface for tool-augmented agents. This paper presents Euclid-MCP, an open-source MCP server that provides deterministic logical reasoning via SWI-Prolog. Euclid-MCP introduces Euclid-IR, an engine-agnostic intermediate representation for Horn-clause logic that is human-readable, easy for LLMs to generate, and straightforward to compile into Prolog or alternative backends. The server exposes a compact tool interface that supports a translate-run-inspect-repair loop, enabling LLM clients to delegate inference while retaining full access to proof traces and derivation logs. We evaluate Euclid-MCP on a realistic IT security and compliance use case. Results show that while LLMs alone are sufficient on small knowledge bases, they hallucinate systematically on larger problems, whereas Euclid-MCP delivers exact answers with lower latency and more compact outputs. We argue that semantic RAG is fundamentally unsuited for rule enforcement, and that Euclid-MCP can serve as a stable, shared reasoning substrate for both RAG-based assistants and agentic systems."
+  },
+  {
+    "title": "When Are Reasoning-Based Guardrails Not Efficient? ResponseGuard: A Fast Vision-Language Guard for Real-Time Moderation",
+    "url": "http://arxiv.org/abs/2607.21401v1",
+    "arxiv_id": "2607.21401v1",
+    "authors": [
+      "Dongbin Na"
+    ],
+    "published": "2026-07-23T15:02:24+00:00",
+    "summary": "A vision-language AI assistant returns its answer as a stream of generated tokens. Therefore, a safety guard that watches that answer has to keep up with the stream and stop a harmful reply before a user reads it. Recent vision-language guardrails instead generate a chain of thought before they issue a verdict. They believe that step-by-step reasoning yields a safer guard. This design makes the guard heavy and slow, since the model must decode many tokens for harmfulness detection. We pose the question of whether a vision-language guard really needs to reason in order to screen a response. We answer with a guard that has no chain. ResponseGuard reads a harmful verdict from a single pooled representation of the request, the response, and the image in one forward pass. Across a standard multimodal guardrail benchmark, our 2B ResponseGuard outperforms a recent 3B reasoning-based vision-language guard on response harmfulness detection, without any reasoning and at about 150 times lower time cost. On request harmfulness the reasoning guard retains an overall lead, and the remaining gap on both tracks sits on the image-only cells. We observe that the gap may stem from the frozen vision encoders that both designs use rather than from the missing chain. We have also found the reasoning guard directs almost none of its verdict attention to the image. Based on a single-pass detection, ResponseGuard can screen an answer sentence by sentence as it streams and stop a harmful answer before it finishes. For guarding the response of a vision-language model, a calibrated single-pass label may provide a sufficient safety signal. We fully release all source code, trained models, and datasets at https://github.com/ndb796/ResponseGuard."
+  },
+  {
+    "title": "Grasp, Handover, Rotate: Bimanual Object Reorientation via Compositional Diffusion and Energy-Based Optimization",
+    "url": "http://arxiv.org/abs/2607.21341v1",
+    "arxiv_id": "2607.21341v1",
+    "authors": [
+      "Wun Lam Yeung",
+      "Wenjun Liu",
+      "Yui Cheung Yu",
+      "Zhengyan Lambo Qin",
+      "Qijin She",
+      "Heng Li",
+      "Ziqi Wang",
+      "Ping Tan"
+    ],
+    "published": "2026-07-23T14:11:14+00:00",
+    "summary": "Bimanual object reorientation - picking an object, handing it over between two arms, and placing it in a desired target pose - is valuable when direct placement from the initial grasp is infeasible due to collisions, kinematic constraints, or poor final orientation. However, achieving this under multiple competing objectives remains challenging. We introduce BiCompoDiff, a compositional diffusion and energy-based framework that jointly optimizes grasp selection, handover, regrasp, and motion planning under multiple constraints. By combining a pretrained grasp diffusion model with bimanual planning energy-based models (EBMs), our method injects gradient guidance during reverse diffusion to enforce collision avoidance, trajectory smoothness (via differentiable inverse kinematics), handover feasibility, and regrasp safety. Annealed MCMC sampling further refines grasp poses over the composite energy landscape. Experiments across diverse simulated household reorientation tasks demonstrate that BiCompoDiff achieves over 20% higher success rates and up to 37% smoother trajectories (measured by joint displacement) compared to strong sampling-based baselines. Real-world validation confirms effective sim-to-real transfer and robust performance on challenging scenes."
+  },
+  {
+    "title": "Detectors Learn the Wrong Thing: Shortcut-Resistant Adversarial Training Against Physically Realizable Attacks",
+    "url": "http://arxiv.org/abs/2607.21243v1",
+    "arxiv_id": "2607.21243v1",
+    "authors": [
+      "Yuanhao Huang",
+      "Yilong Ren",
+      "Jinlei Wang",
+      "Xuesong Bai",
+      "Zheng Zhang",
+      "Haiyang Yu"
+    ],
+    "published": "2026-07-23T12:06:02+00:00",
+    "summary": "AI-enabled visual perception systems are increasingly deployed in intelligent transportation infrastructure and autonomous vehicle related applications. However, physically realizable adversarial appearances pose a significant reliability challenge for these safety-critical systems. Adversarial training is effective, but repeated co-occurrence between adversarial texture and positive person instances can cause detectors to treat the texture itself as evidence of object presence, forming a patch texture shortcut. The detector may then treat texture as evidence for the target, causing false detections on texture-only inputs and weakening cross attack generalisation. We propose InsCAT, an instance-level contrastive adversarial training framework that prevents detectors from using adversarial texture as an independent decision cue. SICA aligns adversarial person features with matched clean features and separates them from texture-only negatives, while ROPO and Guard maintain online attack pressure and coordinate training. We evaluate eight independently generated attack textures on rendered nuScenes, INRIAPerson, printed garments, and three detector families. InsCAT achieves an average attack AP of 82.3% on rendered nuScenes, exceeding the strongest baseline by 11.1 points.Relative to AT-Mix, texture FPR decreases from 46.9% to 7.3%. Physical tests yield an F1 score of 96.6% and an FPR of 1.8%. Consistent gains across separately trained detectors demonstrate applicability across architectures with direct inference. The findings show that robust physical detection depends on preserving target related evidence while preventing adversarial texture from becoming an independent decision cu"
+  },
+  {
+    "title": "Hybrid MKNF with Classical Negation in the Rule Component",
+    "url": "http://arxiv.org/abs/2607.21202v1",
+    "arxiv_id": "2607.21202v1",
+    "authors": [
+      "Arun Raveendran Nair Sheela",
+      "Christophe Rey",
+      "Florence De Grancey"
+    ],
+    "published": "2026-07-23T11:20:15+00:00",
+    "summary": "Hybrid MKNF knowledge bases under the well-founded semantics integrate Description Logics with Logic Programming. However, they do not support classical negation in the rule component, limiting their ability to represent explicit negative knowledge. This limitation is particularly significant in safety-critical applications, where reasoning often requires explicit negative information rather than interpreting the absence of information as evidence of absence. To address this issue, we introduce an extension of Hybrid MKNF that supports classical negation in the rule component. We formally define the syntax and semantics of the extended language and present a general procedure for computing its well-founded model."
+  },
+  {
+    "title": "SafeStep: AI-powered Travel Assistance for Elderly People with Frailty or Dementia",
+    "url": "http://arxiv.org/abs/2607.21156v1",
+    "arxiv_id": "2607.21156v1",
+    "authors": [
+      "Elderly People with Frailty or Dementia Azul Debenedetti",
+      "David Gamez",
+      "Franco Such",
+      "Nik Kairinos"
+    ],
+    "published": "2026-07-23T10:37:28+00:00",
+    "summary": "More than a million people in the UK suffer from frailty or dementia, which severely compromise their ability to travel in urban environments. This paper presents SafeStep, an AI-driven travel system that assists elderly users with their journeys. At the core of SafeStep is a novel travel graph representation, which integrates route planning with predictive modelling. For each stage of a journey, the system (i) generates personalized failure scenarios using a combi-nation of LLMs and the Anticip8 behavioral prediction engine, (ii) proposes targeted interventions, and (iii) estimates the impact of interventions on out-come probabilities. This enables SafeStep to select interventions that maximize the likelihood of the person reaching their destination. SafeStep was evaluated through experiments on travel graph generation and a field study involving 26 real-world journeys. Results showed that combining Anticip8 for failure pre-diction with GPT-based models for intervention evaluation yields the most re-liable performance. User feedback indicated that SafeStep improves confidence and perceived safety during travel, although interface usability needs to be im-proved for the target demographic. In the future, we would like to improve and release SafeStep. The AI system that was developed for SafeStep could be ap-plied in other areas, such as mental health, career coaching and addiction treatment."
+  },
+  {
+    "title": "V-DEAL: Diagnosing Video Safety De-Calibration as an Understanding-Refusal Coupling Failure",
+    "url": "http://arxiv.org/abs/2607.21151v1",
+    "arxiv_id": "2607.21151v1",
+    "authors": [
+      "Zhetong Zhang",
+      "Honghao Fu",
+      "Miao Xu",
+      "Yiwei Wang",
+      "Yujun Cai"
+    ],
+    "published": "2026-07-23T10:35:38+00:00",
+    "summary": "As Video Large Language Models are increasingly deployed in real-world applications, ensuring their safety alignment has become critical. Counterintuitively, we find that harmful videos paired with benign queries achieve higher attack success rates than the same videos paired with explicitly harmful queries. To understand the underlying mechanism of this vulnerability, we present V-DEAL, a three-level diagnostic framework that jointly analyzes this failure across model behaviour, understanding, and internal representations. By progressively ruling out perception failure and quantifying the model's internal refusal tendency, V-DEAL provides a new diagnostic perspective for analyzing the underlying mechanism of the observed vulnerability. We tested six Video LLMs on three public benchmarks and observed that models correctly recognize harmful video content with over 81\\% accuracy, yet the average attack success rate still reaches 48.33\\% under the condition pairing harmful videos with benign queries. Hidden-state analysis further shows that visual understanding activates a weaker refusal tendency than textual understanding. Furthermore, we introduce a prompt injection intervention method that reduces attack success rates by an average of 48.24 percentage points and achieves performance comparable to prior fine-tuning-based methods, providing an effective and practical means to address such safety risks in Video LLMs."
+  },
+  {
+    "title": "Safety-oriented sidewalk and road segmentation for smartphone-based assistive navigation",
+    "url": "http://arxiv.org/abs/2607.21137v1",
+    "arxiv_id": "2607.21137v1",
+    "authors": [
+      "Hakan Calim",
+      "Anamaria Dumitrescu",
+      "Adarsh Bhandary Panambur",
+      "Huzaifa Asif",
+      "Andreas Maier"
+    ],
+    "published": "2026-07-23T10:16:43+00:00",
+    "summary": "Independent sidewalk mobility is essential for blind and visually impaired pedestrians (BVIPs), yet smartphone-based assistive navigation requires perception models that distinguish walkable sidewalks from adjacent unsafe regions. This study presents a safety-oriented semantic segmentation framework for future mobile guidance. We introduce SENSATION-DS, a chest-height pedestrian-view dataset with 2,752 image-mask pairs and nine-class navigation-relevant taxonomy. External urban and sidewalk datasets were harmonized to this label space, and five segmentation architectures were evaluated using staged target-domain adaptation with mask-conditioned synthetic images and Segment Anything Model 2 (SAM2) pseudo-labels. Models were assessed using mean Intersection over Union (mIoU), road- and sidewalk-specific metrics, Road-as-Sidewalk Error Rate as a proxy false-safe measure, and Android Open Neural Network Exchange benchmarking. Synthetic augmentation generally improved segmentation accuracy, whereas SAM2 pseudo-labels more consistently reduced Road-as-Sidewalk errors. UPerNet-MobileNetV3 achieved the highest offline mIoU (0.715 +/- 0.006), while DeepLabV3Plus-MobileNetV3 achieved the lowest Road-as-Sidewalk Error Rate (0.079) and highest Android runtime at 512x384 (7.383 FPS). These results show that assistive sidewalk perception should be evaluated jointly by segmentation accuracy, proxy false-safe behavior, and smartphone deployment feasibility, while real-world benefit requires validation with BVIP users. This evaluation supports selecting models that balance accurate perception, conservative error behavior, and practical runtime."
+  },
+  {
+    "title": "Safety and Security: Experimental Validation of Encrypted Model Predictive Control",
+    "url": "http://arxiv.org/abs/2607.21136v1",
+    "arxiv_id": "2607.21136v1",
+    "authors": [
+      "Juraj Holaza",
+      "Martin Kal\u00faz",
+      "Mat\u00fa\u0161 Furka",
+      "Martin Klau\u010do",
+      "Juraj Oravec"
+    ],
+    "published": "2026-07-23T10:14:29+00:00",
+    "summary": "In this paper, we revisit the problem of an encrypted model predictive control (MPC) design, representing a significant challenge in the recent field of secure process control. Existing methods in secure optimization-based control are non-existent and even partial implementation fails to address the closed-loop system stability and recursive feasibility properties of the constrained MPC. To overcome these limitations, we propose a novel approach that utilizes a polynomial approximation of the optimal control law. This method evaluates the explicit control law within a fully homomorphic encryption framework, ensuring that the controller is securely deployed on any third-party or cloud-based platform, with both process data and controller coefficients protected. Experimental results from a laboratory-scale implementation and validation of the proposed privacy-aware control method demonstrate its advantages."
+  },
+  {
+    "title": "RL-MACRO: A Cybernetic Closed-Loop Intelligence Framework for Multimodal Adaptive Robotic Craniotomy",
+    "url": "http://arxiv.org/abs/2607.21113v1",
+    "arxiv_id": "2607.21113v1",
+    "authors": [
+      "Xiao Zhang",
+      "Jiaxuan Li",
+      "Renzhen Le",
+      "Di Wu",
+      "Chao Sun",
+      "Jiachen Zhu",
+      "Haoyuan Zhang",
+      "Xiang Li",
+      "Jian Liu",
+      "Zhenzhi Ying",
+      "Pengfei Zhang",
+      "Liming Shu"
+    ],
+    "published": "2026-07-23T09:41:28+00:00",
+    "summary": "Autonomous robotic craniotomy requires continuous regulation of tool-tissue interactions to mitigate mechanical overload and thermal damage while maintaining surgical efficiency. However, this process is inherently partially observable due to unknown, time-varying tissue properties and the inability to directly measure cutting temperatures under physical occlusion. To address these challenges, we propose RL-MACRO, a cybernetic closed-loop intelligence framework that couples multimodal perception, adaptive decision-making, and robotic execution. This framework empowers the surgical robot to autonomously perceive inaccessible states from partial sensory feedback and dynamically optimize its behaviors under uncertain environment. A CNN-LSTM observer first fuses force and sound feedback to reconstruct the hidden temperature state (R^2=0.939, MAE = 1.717 deg C). This reconstructed temperature, alongside multi-sensor features, forms the belief state for an offline Implicit Q-Learning (IQL) policy. A novel dual-head Actor dynamically coordinates the feed rate, spindle speed, and cutting depth to optimize efficiency within strict safety bounds. These decisions are seamlessly translated into spatial motions via online trajectory re-planning and velocity servoing. Experiments on bovine ribs and six ex vivo goat skulls validate the system's robust perception, adaptive recovery from force/temperature excursions, and smooth execution on irregular surfaces, establishing a data-driven cybernetic paradigm for safe and efficient autonomous bone cutting."
+  },
+  {
+    "title": "STLSat---An Improved Tableau for Satisfiability Checking of Signal Temporal Logic Formulas",
+    "url": "http://arxiv.org/abs/2607.21081v1",
+    "arxiv_id": "2607.21081v1",
+    "authors": [
+      "Marco Zamponi",
+      "Florian Lammel",
+      "Ezio Bartocci",
+      "Michele Chiari"
+    ],
+    "published": "2026-07-23T09:10:57+00:00",
+    "summary": "Signal Temporal Logic (STL) is a formalism used to describe temporal properties of real-valued signals in cyber-physical systems. In mission- and safety-critical domains, specifications often consist of large collections of STL formulas, making consistency checking and requirement analysis a major engineering bottleneck. Despite tableau-based satisfiability procedures being a natural solution to solve this problem, we have recently found out that the only existing tree-shaped tableau for bounded discrete-time STL does not provide a sound satisfiability/unsatisfiability verdict for all possible STL formulas. In this paper, we pinpoint the flaw in that procedure and present a new tree-shaped tableau which we prove to be sound and complete for bounded discrete-time STL.   On top of this theoretical foundation, we introduce STLSat, an open-source Rust tool that decides the satisfiability of STL formulas, synthesizes concrete witness signals, checks the logical implication and equivalence between specifications, and extracts unsatisfiable cores, allowing users to identify inconsistent subsets of requirements for more effective specification debugging. STLSat also implements enhanced First-Order Logic and Satisfiability Modulo Theories encodings for STL, which allow it to act as a portfolio solver.   We evaluate STLSat on an extended benchmark suite (including STL and Mission-time Linear Temporal Logic formulas) that we release publicly. Across the whole benchmark, the portfolio solver matches or outperforms state-of-the-art tools while preserving correctness guaranteed by our sound tableau procedure."
+  },
+  {
+    "title": "QuantiBias: Benchmarking Quantization-Induced Bias in LLMs",
+    "url": "http://arxiv.org/abs/2607.21063v1",
+    "arxiv_id": "2607.21063v1",
+    "authors": [
+      "Emilio Ferrara"
+    ],
+    "published": "2026-07-23T08:56:11+00:00",
+    "summary": "Almost every large language model that reaches a broad audience is quantized: trained in full precision, then compressed for efficiency. This step is assumed harmless and its safety is rarely re-checked. We find its principal side effect is increased bias that standard safety evaluation misses. Holding the model, its training, and the prompts fixed, a quantized model still refuses harmful requests, still avoids over-refusing benign prompts, and still selects the unbiased multiple-choice answer. Yet asked an open-ended question, the same model volunteers stereotypes in all eight languages we probe, in roughly one in four open-ended answers under an independent judge (~24% to ~27% across the compression ladder): it passes every standard check and still reaches users measurably more biased. The selective gap is a robust finding; whether open-ended bias further increases with compression is less certain, sensitive to the judge that scores it. We address both with \\textbf{QuantiBias}, a benchmark that pairs a generative, multilingual stereotype probe with the refusal and multiple-choice controls that isolate open-ended generation, contrasts each build with and without reasoning, and rates the content severity of what it generates. Across two backbone models (Qwen and Gemma), a five-family screen, and eight benchmarks, quantizers allocate their extra precision by capability data that carries no bias-prevention signal, and reasoning before answering roughly halves the effect on some families while doing nothing on others. A quantized build must be re-evaluated for open-ended bias, not only on the short-form safeguards it already passes."
+  },
+  {
+    "title": "Human-Inspired Framework for Robotic Craniotomy: Integrating Multimodal Fusion and Adaptive Trajectory Adjustment",
+    "url": "http://arxiv.org/abs/2607.21058v1",
+    "arxiv_id": "2607.21058v1",
+    "authors": [
+      "Renzhen Le",
+      "Xiao Zhang",
+      "Di Wu",
+      "Yuanyu Wei",
+      "Jiachen Zhu",
+      "Zhenzhi Ying",
+      "Pengfei Zhang",
+      "Liming Shu"
+    ],
+    "published": "2026-07-23T08:46:42+00:00",
+    "summary": "Manual craniotomy is a high-risk, skill-dependent procedure associated with surgeon fatigue and potential dural injury. While robotic approaches have improved safety, existing open-loop systems rely solely on preoperative images and cannot compensate for intraoperative registration errors or tissue deformation. To address this, we propose a human-inspired closed-loop robotic craniotomy framework that intelligently integrates preoperative planning with intraoperative execution. An adaptive dual-contour fusion algorithm is employed to generate trajectories that conform to complex cranial geometries while maintaining a consistent tool-bone relative pose. For intraoperative perception, a multimodal two-stage cross-modal attention block (CMA)-temporal convolutional network (TCN)-Transformer network combined with an adaptive Bayesian filter fuses force and acoustic signals to achieve robust breakthrough detection under varying bone conditions. Upon detection, an in-situ projection-based trajectory adjustment strategy dynamically compensates for depth deviations, enabling safe residual bone isolation. Experiments on bovine ribs show a breakthrough prediction accuracy of 97%, a detection latency of 0.048 +/- 0.097 s, and a maximum overshoot of 0.29 mm. All four ex vivo cranial experiments were successfully completed without dural injury. These results demonstrate that the proposed cybernetic framework enables safe and autonomous craniotomy with highly effective closed-loop control."
+  },
+  {
+    "title": "A Real-Time Generalized Nash Equilibrium Framework for Interaction-Aware Autonomous Driving in Mixed Traffic",
+    "url": "http://arxiv.org/abs/2607.21043v1",
+    "arxiv_id": "2607.21043v1",
+    "authors": [
+      "Nouhed Naidja",
+      "Mohamed-Cherif Rahal",
+      "Steve Pechberti",
+      "St\u00e9phane Font",
+      "Guillaume Sandou",
+      "Marc Revilloud"
+    ],
+    "published": "2026-07-23T08:25:01+00:00",
+    "summary": "Safe and efficient navigation in mixed-traffic environments remains a critical challenge for Autonomous Vehicles (AVs), primarily due to the complex interdependence between the AV's decisions and the unpredictable reactions of human drivers. This paper introduces a comprehensive decision-making framework that formulates the driving interaction as a Generalized Nash Equilibrium Problem (GNEP). Unlike decoupled optimization approaches, this framework explicitly models shared safety and geometric constraints, ensuring that the feasibility of the AV's strategy is dynamically linked to the opponent's actions. To solve this non-convex problem in real-time, we propose a dedicated solver based on Particle Swarm Optimization (PSO). The complete architecture was validated on a test track using a real autonomous Renault Zo\u00e9 interacting with a human driver. Experimental results demonstrate the system's ability to handle critical scenarios by generating comfortable, human-like trajectories. Benchmarks confirm the solver's operational feasibility, achieving convergence in under 50 ms."
+  },
+  {
+    "title": "GuardianAgentBench: Where Agents Fail and How to Guard Them",
+    "url": "http://arxiv.org/abs/2607.20982v1",
+    "arxiv_id": "2607.20982v1",
+    "authors": [
+      "Vishal Ishwar Naik",
+      "Chenyu Xu",
+      "Donna Dong",
+      "Hussein Hassan",
+      "Abhishek Pradhan",
+      "Ofer Mendelevitch",
+      "Tallat Shafat",
+      "Humayun Irshad"
+    ],
+    "published": "2026-07-23T07:05:05+00:00",
+    "summary": "As large language model agents increasingly operate autonomously with access to tools and external environments, ensuring their safe and reliable behavior becomes critical. We present GuardianAgentBench (GABench), a benchmark of 580 scenarios across six domains evaluated on three production-ready frameworks: LangChain, LlamaIndex, and Vectara. The benchmark incorporates rigorous multi-stage validation and five adversarial attack modes. Experiments with six state-of-the-art models reveal that even the strongest configuration achieves only 74.8% overall accuracy and expose two distinct failure regimes: stronger models under-call required tools, while weaker models mis-select and over-call tools. Performance degrades monotonically with both tool-set size and sequential turn depth, with long-horizon planning proving the steeper bottleneck. Our guardrail implementation consistently outperforms system-prompt-based defenses across all models, recovering 19.9% of failures at a false positive rate of just 0.5%. These results demonstrate that execution-time structural intervention improves safety without disrupting correct agent behavior."
+  },
+  {
+    "title": "Update the Unseen Only: Minimizing AoI for Collaborative Perception through Online Learning",
+    "url": "http://arxiv.org/abs/2607.20967v1",
+    "arxiv_id": "2607.20967v1",
+    "authors": [
+      "Yanan Ma",
+      "Zhuoyi Zhao",
+      "Zhengru Fang",
+      "Haonan An",
+      "Xianhao Chen",
+      "Yuguang Fang"
+    ],
+    "published": "2026-07-23T06:43:30+00:00",
+    "summary": "While collaborative perception (CP) enhances the safety of autonomous driving, limited bandwidth can cause severe shared data staleness in CP systems. Existing age-of-information (AoI) minimization policies are not well-suited for CP, as they overlook the fact that a vehicle's AoI decreases not only through updates from the source (i.e., a base station) but also through the vehicle's local sensing. To address this issue, we propose a mobility-aware AoI minimization framework for CP that explicitly accounts for vehicles' dynamic sensing ranges. We first derive a closed-form expression for the long-term time average sum AoI within a considered region, accommodating an ever-changing vehicle population and their dynamic sensed areas. Based on this characterization, we develop Local-sensing-aware Max-Weight Scheduling (LocMW), an online learning algorithm designed for sensor information broadcast from a source to vehicles under unknown environmental statistics and delayed observations. We provide performance guarantees demonstrating that LocMW achieves a sublinear cumulative excess AoI compared to the optimal stationary randomized benchmark. Extensive simulations using vehicular trajectory datasets and 3D perception tasks demonstrate that our LocMW policy substantially outperforms competing baselines, reducing the time-averaged sum AoI by up to 31.6% and improving mAP detection accuracy by up to 16.3%."
+  },
+  {
+    "title": "Interaction Dynamics Modeling and Predictive Control for Safe Steerable Catheter--Tissue Interaction",
+    "url": "http://arxiv.org/abs/2607.20939v1",
+    "arxiv_id": "2607.20939v1",
+    "authors": [
+      "Yongyan Cao"
+    ],
+    "published": "2026-07-23T05:32:48+00:00",
+    "summary": "Safe steerable catheter control is fundamentally a problem of interaction dynamics: the tip must follow a planned motion, remain compliant against moving tissue, reject friction and hysteresis, and respect a clinically meaningful never-exceed contact-force bound. We formulate catheter--tissue interaction dynamics in the scalar tip-normal coordinate of a single-segment single-tendon catheter. A partial-physics feedforward cancels only the reliable nominal bending dynamics, exposing a configuration-invariant linear interaction-dynamics model whose input gain varies through the scalar catheter inertia. A predictive optimizer then regulates this interaction state subject to hard contact-force, tendon-force, and curvature constraints. An augmented Kalman filter compresses contact, friction, and modeling error into one sensor-free disturbance state, giving nominal offset-free regulation in free space while leaving force safety to the explicit constraint. The unconstrained and disturbance-free limit recovers classical catheter impedance as a special realization of the same interaction dynamics, rather than as the main design object. In a MuJoCo distributed-compliance simulation of an eight-link tendon-driven catheter, disturbance augmentation cuts free-space approach error by 90\\%, and only the force-constrained predictive interaction-dynamics controller reconciles tracking with the 0.5\\,N bound: the unconstrained controller drives contact force to 0.60\\,N against a penetrating target, while the constrained one holds 0.47\\,N at identical tracking. These results show that offset-free motion regulation and contact-force safety are coupled interaction-dynamics objectives, and that the explicit predictive constraint resolves their tension under stiff tissue contact. The bound also holds under $0.5$\\,mm, $1.2$\\,Hz cardiac motion. Hardware validation is future work."
+  },
+  {
+    "title": "URF: A Unified Robot Control-Policy Framework for Stable Contact Aware Manipulation",
+    "url": "http://arxiv.org/abs/2607.20912v1",
+    "arxiv_id": "2607.20912v1",
+    "authors": [
+      "Jiyou Shin",
+      "Youngjin Seo",
+      "Jaeseog Won",
+      "Sungwon Seo",
+      "Hyunjun Kim",
+      "Seokmin Yoon",
+      "Tuan Luong",
+      "Hyungpil Moon"
+    ],
+    "published": "2026-07-23T04:46:19+00:00",
+    "summary": "Learning-based manipulation policies usually predict robot actions from sensory observations and leave their execution to a separate low-level controller. In rigid contact, this separation can be problematic: the same motion to a virtual target or compliant motion command can lead to unstable contact, tracking error, excessive loading, or tool damage, depending on the low-level controller. In this paper, we propose a \\textit{Unified Robot Control-Policy Framework} (URF), which connects compliant action prediction with unified impedance-admittance control. Given multimodal observations, URF predicts a virtual target, a stiffness matrix, and an impedance-admittance switch ratio. The switch ratio determines when the controller should behave more like admittance control for accurate motion tracking and when it should move toward impedance control for safer rigid contact. Because demonstration data do not provide ground-truth environment stiffness, we construct switch-ratio labels from measured contact forces and use them to supervise controller-mode prediction. Across box-flipping and line-pressing tasks, URF achieves higher task success rates while reducing failure modes observed with admittance-only execution, including rapid force buildup, large force oscillations, tool breakage, and robot safety stops. These results suggest that contact-aware policies benefit from predicting not only compliant actions but also the controller behavior used to execute them. Project page: https://jiyou384.github.io/urf_project_page/"
+  },
+  {
+    "title": "Robust Adaptive Backup Control Barrier Functions",
+    "url": "http://arxiv.org/abs/2607.20842v1",
+    "arxiv_id": "2607.20842v1",
+    "authors": [
+      "Ersin Da\u015f",
+      "David E. J. van Wijk",
+      "Tamas G. Molnar",
+      "Aaron D. Ames",
+      "Joel W. Burdick"
+    ],
+    "published": "2026-07-23T02:05:33+00:00",
+    "summary": "We propose a notion of robust adaptive backup control barrier functions for nonlinear control affine systems with parametric uncertainty in both the drift dynamics and actuation matrix. Backup control barrier functions guarantee safety by predicting the system's trajectory under a pre-certified safe controller. However, these predictions rely on the model and can be inaccurate when the system contains unknown parameters. To address this issue, we estimate the unknown parameters using element-wise certified adaptive estimators that provide a parameter adaptation law and component-wise estimation error bounds. We compute the backup flow using the estimated model and tighten the safety conditions using these certified bounds. The resulting safety conditions account for the sensitivity of the predicted flow to parameter estimation errors. Moreover, to handle uncertainty in the actuation matrix, we use a duality-based reformulation that enables the use of a computationally efficient quadratic-program-based safety filter. We prove that controllers satisfying the proposed robust adaptive backup control barrier function constraints guarantee safety under parametric uncertainty and input constraints."
+  },
+  {
+    "title": "Refusal-Gated Decoding: Preserving Refusal Behavior Under High-Temperature Sampling",
+    "url": "http://arxiv.org/abs/2607.20791v1",
+    "arxiv_id": "2607.20791v1",
+    "authors": [
+      "Phillip Howard",
+      "Xin Su",
+      "Allen Roush",
+      "Manikandan Ravikiran",
+      "Amir Abdullah"
+    ],
+    "published": "2026-07-22T23:33:51+00:00",
+    "summary": "High-temperature sampling is one of the primary mechanisms for increasing diversity in LLMs. Recent advances in truncation-based sampling techniques have helped mitigate drawbacks of high-temperature sampling such as neural text degeneration, thereby enabling greater diversity in LLM outputs without sacrificing coherence. However, increasing the entropy of the token probability distribution via high temperatures has also been shown to weaken model guardrails by reducing the model's refusal response in the presence of harmful prompts. Despite the potential benefits of high-temperature sampling and the importance of maintaining model safety, there is a lack of existing solutions for maintaining the refusal behavior of LLMs under a higher entropy regime. To address this gap, we systematically study how temperature influences refusal behavior in LLMs and propose an efficient sequential decoding approach which preserves a model's greedy decoding refusal response at high temperatures while incurring minimal additional latency. Through extensive experiments, we show that our approach preserves 91-99% of the greedy decoding refusal behavior across three benchmark datasets without compromising the model's high-temperature response for safe prompts. Our work demonstrates how refusal behavior can be maintained in an efficient manner for applications which require high-temperature sampling."
+  },
+  {
+    "title": "IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests",
+    "url": "http://arxiv.org/abs/2607.20759v1",
+    "arxiv_id": "2607.20759v1",
+    "authors": [
+      "Ankur Singh",
+      "Jinqiu Yang",
+      "Tse-Hsun Chen"
+    ],
+    "published": "2026-07-22T22:20:02+00:00",
+    "summary": "AI coding agents powered by LLMs are increasingly integrated into real-world software development, where they generate, edit, and execute code with autonomous access to local files and tools. Coding agents inherit security risks from both the LLM backbone, where adversarial prompts, poisoned training data, and backdoor triggers can cause models to emit insecure or attacker-chosen code, and their agentic architecture, where tool-using autonomy enables induced misuse of external APIs, data exfiltration, and persistent compromise of development environments. This paper presents a systematic evaluation of malicious issue requests against state-of-the-art coding agents (Cursor, Claude Code, and Codex Desktop), powered by two major model families (OpenAI GPT-5.3 Codex/GPT-5.4 and Anthropic Sonnet 4.6). Our novel benchmark IssueTrojanBench contains malicious issues that are constructed based on four novel attack categories (i.e., embedded as malicious instructions in issues), six delivery vectors (e.g., PDF, or issue comment), and further augmented by perturbations. Our results reveal critical vulnerabilities in the as-deployed modern coding agents, i.e., 66.5% of the malicious issues from IssueTrojanBench penetrate all the guardrails (agent- and LLM-level) of coding agents. Our further analysis shows that rejection is almost entirely from LLMs rather than the agent frameworks, with GPT models broadly vulnerable and Sonnet 4.6 exhibiting more selective, risk-aware blocking of high-impact actions. Our evaluation also highlights that the current agent-level defense strategy offers limited additional protection for coding agents. Our findings highlight the urgent need for stronger agent- and model-level safety mechanisms to protect AI coding agents."
+  },
+  {
+    "title": "Adaptive Confidence-weighted Expansion for Trustworthy Multi-Omics Multimodal Fusion",
+    "url": "http://arxiv.org/abs/2607.20742v1",
+    "arxiv_id": "2607.20742v1",
+    "authors": [
+      "Mohammad Raahemi",
+      "Ali Sekhavati",
+      "Alireza Maleki",
+      "Hamid Nasiri"
+    ],
+    "published": "2026-07-22T21:42:16+00:00",
+    "summary": "Multimodal learning is a robust approach to improve predictive performance in applications such as medical prognosis. However, the clinical applicability of models that use multimodal learning is hampered by their poor performance under noisy or uninformative data streams. Present fusion approaches often lack robust mechanisms for the dynamic assessment of data quality and for the provision of a trustable confidence score on the final prediction. This dissuades their deployment in safety-critical settings. To address these limitations, we introduce Adaptive Confidence-weighted Expansion (ACE), a novel framework to enhance the trustworthiness of multimodal fusion models. ACE first enhances the multimodal space by generating new, complementary modalities from intra-modality correlations. It then employs a dual-level confidence mechanism that (1) adaptively reweighs all modalities by their reliability before fusion and (2) estimates a global trust score over the fused, final decision. To evaluate ACE, we used four challenging multi-omics datasets (BRCA, KIPAN, LGG, and ROSMAP). ACE significantly outperforms existing state-of-the-art algorithms in both classification performance and confidence calibration. Our framework provides a more stable and robust data fusion method that facilitates the use of multimodal learning in addressing high-stakes problems."
+  },
+  {
+    "title": "End-to-End Learning of Safe Optimal Feedback Control in High Dimensions with Control Barrier Function Layers",
+    "url": "http://arxiv.org/abs/2607.20674v1",
+    "arxiv_id": "2607.20674v1",
+    "authors": [
+      "Xingjian Li",
+      "Kelvin Kan",
+      "Deepanshu Verma",
+      "Krishna Kumar",
+      "Stanley Osher",
+      "Samy Wu Fung"
+    ],
+    "published": "2026-07-22T19:17:11+00:00",
+    "summary": "We consider the problem of learning high-dimensional semi-global feedback controllers under hard safety constraints enforced by control barrier functions (CBFs). Incorporating CBFs into end-to-end policy training requires embedding a quadratic-program-based safety filter as an optimization layer, but computational and differentiation bottlenecks have largely restricted prior approaches to low-dimensional systems, typically with at most 16 state dimensions. We address this limitation by combining operator splitting with the recently developed Jacobian-Free Backpropagation (JFB) method to enable scalable end-to-end training while preserving hard safety guarantees through the CBF safety filter. We justify this training methodology theoretically using nonsmooth analysis techniques and demonstrate its effectiveness on high-dimensional multi-agent nonlinear control problems with state and control dimensions up to 1200 and 400, respectively."
+  },
+  {
+    "title": "Good Guys With Guns? The Relationship Between Legal Firearm Ownership and Firearm Deaths and Crime in Canada",
+    "url": "http://arxiv.org/abs/2607.20667v1",
+    "arxiv_id": "2607.20667v1",
+    "authors": [
+      "Derek Mikola",
+      "Matthew D. Webb"
+    ],
+    "published": "2026-07-22T19:05:26+00:00",
+    "summary": "Civilian firearm ownership is politically contentious, yet most evidence linking guns to crime and death comes from the U.S. Canada offers a unique case: strict national regulations alongside widespread legal ownership. Using new administrative data from 2013-2019, we examine associations between gun prevalence and homicides, suicides, and firearms-related crime. During this period, we find that handgun ownership rose 50\\% and restricted licenses by 70\\%. Recent legislation proposes a handgun freeze and rifle buyback. We assess whether these measures are likely to improve safety or whether existing laws already strike a balance. We find little evidence of a strong relationship."
+  },
+  {
+    "title": "Safe and Scalable Multi-Drone Payload Transport via CBF-based Reinforcement Learning with Zero-Shot Sim-to-Real Transfer",
+    "url": "http://arxiv.org/abs/2607.20665v1",
+    "arxiv_id": "2607.20665v1",
+    "authors": [
+      "Jaeyoun Choi",
+      "Oswin So",
+      "Songyuan Zhang",
+      "Cooper Taylor",
+      "Chuchu Fan"
+    ],
+    "published": "2026-07-22T19:01:57+00:00",
+    "summary": "Multi-drone payload transportation has emerged as a promising research paradigm with potential applications in construction, logistics, and disaster response. However, the complex coupled dynamics among drones, cables, and payloads pose significant challenges, and existing approaches remain limited in safety and scalability, particularly in dynamic and unstructured environments. In this work, we propose a learning-based framework for safe and scalable multi-drone cooperative payload transport. We introduce a minimal 2D abstraction that preserves the task-relevant drone-payload coupling required for coordination and safety, while remaining computationally efficient for large-scale learning. Using domain randomization over team size and physical parameters, we train a fully distributed policy via Discrete Graph Control Barrier Function Proximal Policy Optimization (DGPPO), enabling robust zero-shot sim-to-real transfer without fine-tuning. Extensive real-world evaluations demonstrate that a single learned policy generalizes across varying team sizes and task scenarios. Furthermore, multi-group hardware experiments show that the same policy can safely operate in dynamic environments, where other drone teams act as moving obstacles. These results indicate that the proposed framework enables efficient, safe, and scalable multi-drone payload transportation with strong generalization to complex real-world conditions."
+  },
+  {
+    "title": "New Type IIB Poly-instanton Effects and Axion Quintessence",
+    "url": "http://arxiv.org/abs/2607.20613v1",
+    "arxiv_id": "2607.20613v1",
+    "authors": [
+      "Luca Caraffi",
+      "Federico Carta",
+      "Michele Cicoli"
+    ],
+    "published": "2026-07-22T18:00:01+00:00",
+    "summary": "Previous studies of poly-instantons in type IIB Calabi-Yau orientifolds found that these effects arise when Euclidean D3-branes wrap rigid cycles with a Wilson line. In this work, we extend this result through a general analysis of instanton zero modes, revealing the existence of new poly-instanton effects for rigid cycles with a deformation, provided that O3-planes are localised on the worldvolume of the Euclidean D3-brane. We provide concrete Calabi-Yau examples with explicit orientifold involution and brane setup. One of them is particularly well suited for realising axion hilltop quintessence. In particular, the double exponential suppression of poly-instanton effects allows to reproduce the observed vacuum energy for natural values of the underlying parameters."
+  },
+  {
     "title": "Qoreo: Choreographic Programming for Quantum Distributed Systems",
     "url": "http://arxiv.org/abs/2607.20391v1",
     "arxiv_id": "2607.20391v1",
@@ -113,6 +535,20 @@
     "summary": "LLM-based agents leverage third-party skills to extend their capabilities in open-world scenarios. However, third-party skills can introduce extra security vulnerabilities, as seemingly harmless skills can contain latent safety risks that only emerge during actual execution. In this work, we conduct a systematic investigation into how well current agent systems recognize and avoid such risks. To support quantitative and qualitative evaluation, we construct OpenSkillRisk, a dedicated safety benchmark containing 263 risky skills collected from public skill marketplaces. We classify these skills into seven categories based on their threat types and pair each skill with a standardized user task and a corresponding sandbox for controlled evaluation. Distinct from prior benchmarks, OpenSkillRisk not only covers more realistic and diverse unsafe scenarios, but also provides a fine-grained analysis to diagnose the behavioral patterns of agents in such scenarios. We conduct comprehensive experiments covering three mainstream CLI agent frameworks and thirteen state-of-the-art LLMs. Experimental results show that no tested system handles risky skills reliably: even the safest configurations still execute unsafe actions in about 17% of cases. Context-dependent and system-level risks are especially difficult for current agent systems to avoid. Our behavioral analysis reveals three recurring failure patterns: agents may fail to recognize the risk, recognize it but fail to intervene before acting, or follow skill instructions beyond the user's intended scope. These findings highlight the need to improve both risk reasoning in LLMs and execution control in agent frameworks."
   },
   {
+    "title": "OpenSkillRisk: Benchmarking Agent Safety When Using Real-World Risky Third-Party Skills",
+    "url": "http://arxiv.org/abs/2607.20121v2",
+    "arxiv_id": "2607.20121v2",
+    "authors": [
+      "Qiyuan Liu",
+      "Tingfeng Hui",
+      "Kun Zhan",
+      "Kaike Zhang",
+      "Ning Miao"
+    ],
+    "published": "2026-07-22T13:24:09+00:00",
+    "summary": "LLM-based agents leverage third-party skills to extend their capabilities in open-world scenarios. However, third-party skills can introduce extra security vulnerabilities, as seemingly harmless skills can contain latent safety risks that only emerge during actual execution. In this work, we conduct a systematic investigation into how well current agent systems recognize and avoid such risks. To support quantitative and qualitative evaluation, we construct OpenSkillRisk, a dedicated safety benchmark containing 263 risky skills collected from public skill marketplaces. We classify these skills into seven categories based on their threat types and pair each skill with a standardized user task and a corresponding sandbox for controlled evaluation. Distinct from prior benchmarks, OpenSkillRisk not only covers more realistic and diverse unsafe scenarios, but also provides a fine-grained analysis to diagnose the behavioral patterns of agents in such scenarios. We conduct comprehensive experiments covering three mainstream CLI agent frameworks and thirteen state-of-the-art LLMs. Experimental results show that no tested system handles risky skills reliably: even the safest configurations still execute unsafe actions in about 17% of cases. Context-dependent and system-level risks are especially difficult for current agent systems to avoid. Our behavioral analysis reveals three recurring failure patterns: agents may fail to recognize the risk, recognize it but fail to intervene before acting, or follow skill instructions beyond the user's intended scope. These findings highlight the need to improve both risk reasoning in LLMs and execution control in agent frameworks."
+  },
+  {
     "title": "The Two-Process Theory of Machine Self-Report",
     "url": "http://arxiv.org/abs/2607.20082v1",
     "arxiv_id": "2607.20082v1",
@@ -150,6 +586,18 @@
     ],
     "published": "2026-07-22T12:02:49+00:00",
     "summary": "Scuba divers form small and structured social groups that are well suited for analysis using methods from Computational Social Science (CSS). This paper proposes a conceptual graph-based framework for modeling scuba dives as social networks. Divers are represented as vertices and their interactions as edges within a temporal network. The model focuses on three dimensions of interaction: physical distance, communicative distance, and emergency distance, reflecting spatial positioning, effectiveness of underwater communication, and the ability to assist in critical situations. While the present work is conceptual and primarily descriptive, the proposed graph representation may provide a foundation for future empirical studies aimed at improving diver interaction, coordination, and safety."
+  },
+  {
+    "title": "Geometric Configurations of Perturbed Jailbreak Prompts",
+    "url": "http://arxiv.org/abs/2607.20581v1",
+    "arxiv_id": "2607.20581v1",
+    "authors": [
+      "Lynn Delcon",
+      "Andres Algaba",
+      "Vincent Ginis"
+    ],
+    "published": "2026-07-22T11:52:43+00:00",
+    "summary": "Perturbation techniques that turn unsuccessful jailbreak prompts into successful ones are continuously evolving, constituting a major security threat to LLM safety. In this paper, we investigate the internal representations of such string-level perturbed jailbreak inputs in the small weight models of the Qwen-2.5-1.5B/-3B/-7B-Instruct and Llama-3.2-1B/-3B/-3.1-8B-Instruct families. We select two representation spaces: the last-layer-last-token embedding space and the top-50 next-token probability space. The former space separates prompts based on their spelling and format, while the latter space is effectively one-dimensional but appears more complex to cluster. Within our refusal-dominated answer set we find no behavioral hyperplane in either space. Only the next token \"Sure\" in the 1.5B Qwen model, and both tokens \",\" and \"\u010a\u010a\" in the 1$ Llama model, display a significant association with a compliant-labeled answer."
   },
   {
     "title": "Test Case Prioritization for DNNs via Neural Collapse Instability",
