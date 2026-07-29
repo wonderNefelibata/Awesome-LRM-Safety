@@ -1,5 +1,491 @@
 [
   {
+    "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
+    "url": "http://arxiv.org/abs/2607.26042v1",
+    "arxiv_id": "2607.26042v1",
+    "authors": [
+      "Syed Mhamudul Hasan",
+      "Anas AlSobeh",
+      "Hussein Zangoti",
+      "Abdur R. Shahid"
+    ],
+    "published": "2026-07-28T17:50:25+00:00",
+    "summary": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-shot disease classification. The system separates agent interaction from workflow orchestration: OpenClaw provides scheduling, tool access, user interaction, and notification services on the edge device, while LangGraph manages the stateful screening workflow, including input validation, image transmission, model invocation, safety checks, conditional routing, failure handling, and structured logging. This design moves beyond static image classification by enabling the system to collect visual evidence, invoke external models, apply deterministic safety rules, and generate diagnostic-support alerts. Results show that image-only VLM prediction remains limited, whereas symptom-guided and multimodal inputs improve zero-shot classification performance. Thus, VetClaw transforms a static prediction model into a coordinated, safety-aware system that can use tools, manage workflows, handle failures, and escalate uncertain cases."
+  },
+  {
+    "title": "Falling Behind Drives Unsafe Development in an Idealised AI Race Experiment",
+    "url": "http://arxiv.org/abs/2607.26034v1",
+    "arxiv_id": "2607.26034v1",
+    "authors": [
+      "Elias Fern\u00e1ndez Domingos",
+      "The Anh Han"
+    ],
+    "published": "2026-07-28T17:44:03+00:00",
+    "summary": "Technological races create tension between speed and safety: actors may gain by moving faster than competitors, even when risky development is harmful. This is prominent in debates about artificial intelligence (AI), where competitive pressure is often argued to incentivise riskier, less safety-conscious development. We study this using a framed behavioural experiment based on an idealised AI race, in which paired participants repeatedly chose between Safe and Unsafe development under an uncertain time horizon. Unsafe development gave faster progress and higher immediate payoffs but accumulated private risk up to a treatment-specific maximum of 10\\%, 60\\%, or 90\\%; the race's competitive structure was held constant, and only this maximum risk varied. Neither the pre-registered comparison between risk levels nor the role of elicited risk preferences was supported by the data. Instead, exploratory analyses motivated by the task's repeated structure show that Unsafe behaviour is shaped less by risk preferences than by the evolving strategic state of the race: participants are more likely to choose Unsafe after their opponent does so, being ahead reduces Unsafe play while falling behind increases it, and first-round choices predict later behaviour. To interpret these effects we introduce a reduced evolutionary model with four strategies -- Always Safe, Always Unsafe, Conditionally Safe, and Conditionally Antisocial Safe -- which reproduces the treatment effect and shows how conditional Unsafe behaviour can be favoured by competitive race dynamics. Together, the experiment and model show that unsafe development can emerge from early behavioural momentum, opponent behaviour, and fear of falling behind, rather than from risk preferences alone, suggesting policy should focus on reducing competitive pressure and promoting cooperation in AI development rather than only individual risk."
+  },
+  {
+    "title": "Minimizing Targeted Activations: Input-Only Suppression of Evaluation-Awareness Latents in Large Language Models",
+    "url": "http://arxiv.org/abs/2607.25907v1",
+    "arxiv_id": "2607.25907v1",
+    "authors": [
+      "Deepanshu Mody",
+      "Samarth Agarwal",
+      "Utkarsh Mittal",
+      "Dipesh Mahato"
+    ],
+    "published": "2026-07-28T16:01:48+00:00",
+    "summary": "Activation steering controls model behavior by editing internal activations at inference time. We study its input-side dual: optimizing a fluent prompt so that a chosen internal latent is driven toward zero, with no inference-time model access. Our target is an \"evaluation-awareness\" latent-linearly readable and steerable in recent work-whose control would threaten the validity of safety evaluations if models behave differently when they detect being tested. Adapting Fluent Dreaming / EPO with a negated feature term (GCG-style token optimization plus a self-cross-entropy fluency regularizer, swept over a fluency weight), we suppress the latent under five target constructions-a CAA direction, a subspace norm, an SAE feature, a single MLP neuron, and a behavioral logit-on Llama-3.2-3B and Llama-3.1-8B. The latent is robustly suppressible ($z\\approx-7$), and a causally-validated Llama Scope SAE feature can be fully and selectively turned off. But our controls tell a cautionary story about the CAA direction: a placebo random direction is suppressed just as hard and shifts behavior just as far, and when we hold a real eval passage in context and optimize only a prefix, suppressing the eval-direction fails to reduce-and slightly increases-the model's behavioral eval judgment. Activation-readability, in short, is not behavioral controllability. We further find that a single MLP neuron is eval-correlated but not causal at both scales, and that scanning the real Pile yields a natural-text baseline competitive with the optimizer for the internal direction. A positive control validates our erasure detector, bounding an erasure-vs-rotation question earlier left open."
+  },
+  {
+    "title": "Towards a Systems Foundation for Agentic Cloud Management",
+    "url": "http://arxiv.org/abs/2607.25883v1",
+    "arxiv_id": "2607.25883v1",
+    "authors": [
+      "Minghao Li",
+      "Ziqian Liu",
+      "Ziyu Mao",
+      "Daqian Ding",
+      "Yu Kang",
+      "Qingwei Lin",
+      "Tianyin Xu",
+      "Yiming Qiu"
+    ],
+    "published": "2026-07-28T15:44:44+00:00",
+    "summary": "Agentic cloud management is emerging as a practice to automate laborious operations, minimize toil, and improve responsiveness. Despite the rapid development of autonomous management agents, we argue that the fundamental missing piece is a systems foundation to enable safe, effective operations across agents and between agents and human operators. In this paper, we advocate for the need of such a systems foundation and share our efforts on developing CloudWeaver, an agentic management substrate that works across existing cloud-user interfaces and future agent-native interfaces. Specifically, we discuss how CloudWeaver (1) scopes the context of individual agent sessions with local views of cloud resources and (2) coordinates concurrent management operations on shared cloud resources. CloudWeaver offers strong safety guarantees and attributable feedback in the presence of conflicting intents, while preserving concurrency between independent operations. We validate CloudWeaver using a representative Azure API workload."
+  },
+  {
+    "title": "Runtime Uncertainty Monitoring for LLM-Based Multi-Agent Systems Using Bayesian Networks",
+    "url": "http://arxiv.org/abs/2607.25877v1",
+    "arxiv_id": "2607.25877v1",
+    "authors": [
+      "Bart Custers",
+      "Koorosh Aslansefat"
+    ],
+    "published": "2026-07-28T15:39:43+00:00",
+    "summary": "This paper investigates how multi-agent systems (MAS)-based on large language models (LLMs) can support actuarial risk modelling, with a particular focus on uncertainty quantification. Actuarial workflows represent a high-stakes decision-support setting where unreliable outputs may lead to incorrect risk assessment, unfair pricing, and regulatory non-compliance. To address uncertainty introduced by the probabilistic nature of LLMs and dependencies between agents, a multi-agent framework is proposed in which specialised agents perform data preparation, modelling, review, and explanation tasks under a central hub. The main contribution is a novel approach to uncertainty propagation using token-level log-probabilities and a Bayesian Network. Importantly, log probabilities are not treated as direct probabilities of correctness or task success. Instead, length-normalised log-probability summaries are transformed into calibrated task-level confidence estimates before incorporation into the Bayesian Network. Results show that the framework reproduces baseline actuarial performance while providing additional insight into workflow stability and runtime uncertainty propagation."
+  },
+  {
+    "title": "Shieldstral",
+    "url": "http://arxiv.org/abs/2607.25857v1",
+    "arxiv_id": "2607.25857v1",
+    "authors": [
+      "Antonia Calvi",
+      "Avinash Sooriyarachchi",
+      "Giada Pistilli",
+      "Guillaume Lample",
+      "Maarten Buyl",
+      "Maximilian Augustin",
+      "Maximilian M\u00fcller",
+      "Pierre Stock",
+      "Tom Bewley",
+      "Wassim Bouaziz",
+      "Yimu Pan"
+    ],
+    "published": "2026-07-28T15:27:53+00:00",
+    "summary": "We introduce Shieldstral, a 3B-parameter policy-adaptive multimodal safety classifier that matches or outperforms models nearly 7$\\times$ its size on text safety benchmarks and sets a new state of the art on multimodal safety classification. Shieldstral formulates content moderation as a binary question-answering task. This simple formulation unifies diverse moderation tasks into a single yes/no problem, enabling heterogeneous safety datasets with divergent taxonomies to be consolidated under one training framework. We present the data construction recipe, covering curation and generation of approximately 54.1M samples and a fine-grained evaluation set to evaluate policy adaptability. Together, these enable a small adaptive model to match or outperform much larger models."
+  },
+  {
+    "title": "WarmTuner: Program-Specific Warm Starts for Compiler Autotuning via Offline-to-Online Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2607.25831v1",
+    "arxiv_id": "2607.25831v1",
+    "authors": [
+      "Tianlu Qiao",
+      "Mingxuan Zhu",
+      "Zeyu Sun",
+      "Dan Hao"
+    ],
+    "published": "2026-07-28T15:11:02+00:00",
+    "summary": "Compilers are fundamental software tools that translate high-level programs into machine code. Modern compilers expose hundreds of optimizations, each turned on or off through an optimization flag, to improve the performance of the generated code. However, the number of possible flag combinations grows exponentially, making it difficult to find a flag configuration well suited to a given target program. Existing compiler auto-tuning techniques reduce tuning cost by pruning the search space, injecting search biases, or predicting configuration performance. Although some exploit program features, the knowledge they extract from historical data is frozen once search begins; runtime feedback then guides only the search itself, never the prior. As a result, when this prior mismatches the target program, these methods waste much of the limited online budget before the search reaches good configurations. We propose WarmTuner, an offline-to-online reinforcement learning framework that instead turns historical records into a program-conditioned policy that predicts each flag's setting over the full flag space and remains adaptable on the target program. Offline, WarmTuner learns this program-conditioned policy over the full flag space from historical good configurations. Online, it refines the same policy on the target program using real compile-run feedback, so that the policy is driven by measured speedups rather than limited to the historical data. We instantiate the online update with Group Relative Policy Optimization (GRPO), which compares candidates in the same round and avoids a separate value model. We evaluate WarmTuner on GCC 15.2.0 with cBench and PolyBench. The results show that WarmTuner achieves an average speedup of 1.732x over GCC -O3 and obtains the best result on 14/30 programs, significantly outperforming the compared techniques."
+  },
+  {
+    "title": "Evaluation of Adversarial Robustness in Arabic Language Models",
+    "url": "http://arxiv.org/abs/2607.25814v1",
+    "arxiv_id": "2607.25814v1",
+    "authors": [
+      "Anwar Alajmi",
+      "Ayed Salman",
+      "Imtiaz Ahmad"
+    ],
+    "published": "2026-07-28T14:58:28+00:00",
+    "summary": "The emergence of the recent outstanding capabilities of Arabic Language Models has opened doors for exposing their vulnerabilities. One of the major security risks associated with such Natural Language Processing models is adversarial attacks. These attacks can deceive the model into the wrong prediction, raising critical model security and safety concerns. This study aims to assess the robustness of five state-of-the-art Arabic Language Models under a distinct set of Arabic adversarial attacks applied at various levels of granularity and using different example generation strategies. We also explore a defense technique based on adversarial training to enhance model robustness. The results show that insertion of diacritics can reduce the accuracy of some models by 92% while maintaining a low perturbation distance. For word-level attacks, manipulating Arabic conjunctions preserves high semantic similarity scores, low perturbation distance, and leads to an accuracy degradation of up to 58%. For sentence-level attacks, paraphrasing proves its effectiveness by an average reduction of 76% in the victim models' performance. While adversarial training improves overall resilience, with MARBERT being the most robust and AraBERT showing the greatest relative gains, challenges persist, particularly against character-level noise. These findings highlight both the potential and limitations of current defense strategies in morphologically rich languages like Arabic."
+  },
+  {
+    "title": "Integrating moment tensor potentials with finite-element modeling for heat transfer prediction in FLiBe-based molten salt systems",
+    "url": "http://arxiv.org/abs/2607.25803v1",
+    "arxiv_id": "2607.25803v1",
+    "authors": [
+      "Mikhail Polovinkin",
+      "Ksenia Abramova",
+      "Oksana Rahmanova",
+      "Farit Valiev",
+      "Andrey Isakov",
+      "Andrey Goryachikh",
+      "Alexander Galashev",
+      "Yurii Zaikov",
+      "Dmitrii Maksimov",
+      "Alexander Shapeev",
+      "Nikita Rybin"
+    ],
+    "published": "2026-07-28T14:49:50+00:00",
+    "summary": "Molten fluoride salts are promising heat-transfer media for advanced molten salt reactors (MSRs), where reliable thermophysical property determination is critical for component design and safety. We present an integrated multiscale framework that couples machine-learning-driven atomistic simulations with finite-element (FE) modeling to predict the heat-transfer performance of FLiBe-based salts in a linear heat exchanger. At the atomistic scale, Moment Tensor Potentials (MTPs), actively trained on ab initio data, are developed for pure FLiBe (66-34 and 74-26 LiF-BeF2 mol%), FLiBe-LaF3, and FLiBe-UF4. These potentials are used in molecular dynamics simulations to obtain temperature- and composition-dependent transport properties (density, viscosity, thermal conductivity, and isobaric heat capacity), which are mapped as inputs to a three-dimensional FE model of the experimental thermal loop. The FE model with literature transport properties reproduces the experimental heat-transfer behavior of pure FLiBe to within 10% in the laminar regime and 18% in the transitional and turbulent regimes, validating the end-to-end pipeline for this composition. The same model with MTP-MD-derived transport properties systematically overestimates the heat-transfer coefficient by 25-28%, an offset consistent with the MTP-MD biases on thermal conductivity and viscosity. Applied to the ternary systems FLiBe-LaF3 and FLiBe-UF4 over 0-5 mol%, the MTP-MD-driven FE model predicts a mean reduction in heat-transfer efficiency of 8-11% relative to pure FLiBe, with UF4 exhibiting the strongest effect. The qualitative ordering of the three systems is the more robust result; the absolute value of the 8-11% figure is contingent on the MTP accuracy. The framework is complementary to high-temperature experiments and provides a physics-based pathway for the rapid screening of MSR coolant formulations."
+  },
+  {
+    "title": "Macroscopic wall pressure and microscopic contact load in crowds without egress: social-group cohesion and boundary buffering",
+    "url": "http://arxiv.org/abs/2607.25780v1",
+    "arxiv_id": "2607.25780v1",
+    "authors": [
+      "Bo-Shiun Shen",
+      "Son-Hsien Chen"
+    ],
+    "published": "2026-07-28T14:35:07+00:00",
+    "summary": "Crowd safety in confined venues is usually evaluated through evacuation performance or pre-collision avoidance, while direct mechanical hazards in dense gatherings without egress remain poorly understood. We study an Elastic Reorientation Model (ERM), a Social Force Model (SFM), and their coupled dynamics. Post-collision behavior is represented by social-group cohesion ($\u03b3_g$) and wall buffering ($\u03b3_w$), while risk is quantified by the macroscopic wall line pressure ($P_{\\text{wall}}$) and the microscopic maximum per-agent collision impulse ($\u03b4p_{\\text{max}}$). In the ERM, cohesion and wall buffering generally reduce $P_{\\text{wall}}$ by retaining agents in the bulk, but large groups exhibit a high-$\u03b4p_{\\text{max}}$ hazard window at intermediate cohesion. As $\u03b3_g\\rightarrow1$, local pairing suppresses cluster growth and shifts kinetic energy from relative to center-of-mass motion, reducing $\u03b4p_{\\text{max}}$. SFM pushing and sliding amplify $\u03b4p_{\\text{max}}$, especially when agent-agent and agent-wall interactions coexist, while active driving raises $P_{\\text{wall}}$ through near-wall accumulation. The coupled dynamics produces a wall-pressure/contact-load ($P$-$p$) trade-off. Finite-size scaling reveals an independent-agent-induced phase boundary at $\u03b3_w=0.5$, characterized by a susceptibility discontinuity, and a grouped-agent-induced continuous phase boundary along a finite segment of $(1-\u03b3_w)(1-\u03b3_g)=0.5$, characterized by divergent susceptibility and terminating at a critical point. Both disappear in the social-force-free ERM, showing that they emerge from the coupled ERM+SFM dynamics. These results provide mechanistic guidance for crowd-risk mitigation and safety planning in high-density venues without egress."
+  },
+  {
+    "title": "Cooperative Multi-UAV Navigation in Complex Environments via Systematic Multi-Agent Deep Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2607.25754v1",
+    "arxiv_id": "2607.25754v1",
+    "authors": [
+      "Yu Su",
+      "Nabil Aouf"
+    ],
+    "published": "2026-07-28T14:16:11+00:00",
+    "summary": "Cooperative navigation of multi-agent UAVs in complex environments faces key challenges including local optima traps, sparse rewards, learning imbalance among agents, and insufficient cross-scenario generalisation. This paper proposes a multi-agent deep reinforcement learning framework that addresses these issues through coordinated exploration, demonstration exploitation, safe curriculum scheduling, and structure-aware generalisation. First, a perception mechanism combining memory of visited states, directional novelty estimates, and penalty backpropagation enables agents to proactively detect and escape local optima. Second, a hierarchical collaborative demonstration buffer with tiered behaviour cloning manages trajectories by degree of team collaboration and applies differential supervision to the actor network, improving demonstration utilisation under sparse collaborative signals. Third, a safety-aware dual-condition curriculum scheduling mechanism reviews mastered scenarios through back-testing and experience pre-filling during training, suppressing catastrophic forgetting while ensuring both task performance and flight safety. For generalisation, local geometric features computed from sensor readings are abstracted into a domain parameter, through which a structure-aware gating network and mixture-of-experts mechanism condition the policy on local structural patterns rather than scenario-specific coordinates, enabling cross-scenario transfer without exposure to the target environment. The framework is further validated under mixed static-dynamic obstacle settings, showing robust adaptability to dynamic disturbances. Simulation results confirm strong performance in collaboration success rate, navigation robustness, zero-shot cross-scenario generalisation, and dynamic environment adaptability."
+  },
+  {
+    "title": "BioDisclose: An Actionability-Aware Benchmark for Biomedical Safety under Adversarial Elicitation",
+    "url": "http://arxiv.org/abs/2607.25700v1",
+    "arxiv_id": "2607.25700v1",
+    "authors": [
+      "Yinuo Zhu",
+      "He Liu",
+      "Boyuan Gu"
+    ],
+    "published": "2026-07-28T13:22:56+00:00",
+    "summary": "Large language models (LLMs) increasingly support biomedical research, yet their behavior under adversarial requests for dual-use knowledge remains insufficiently characterized. We introduce BioDisclose, a benchmark for measuring biomedical knowledge disclosure under adversarial elicitation. BioDisclose contains 480 prompts derived from 24 expert-authored scenarios across six biomedical risk domains and four elicitation families spanning academic, historical, role-playing, and decomposed prompting. We grade model responses on a four-level scale from refusal to executable disclosure, distinguishing high-level discussion from technically specific and actionable content, including refuse-then-leak behavior. Across five deployed LLM systems, detailed-or-higher disclosure rates vary substantially, ranging from 9.2% to 64.0%. Academic framing is the most effective elicitation family on average (43.2%), while laboratory safety scenarios show the highest disclosure rate across domains (51.5%). These results reveal pronounced variation across models, prompting strategies, and biomedical risk categories, suggesting that current safeguards remain uneven in high-stakes scientific settings. BioDisclose provides a focused testbed for evaluating biomedical safety beyond binary refusal metrics."
+  },
+  {
+    "title": "From Deterministic to Generative Deep Learning for Urban Air Quality Reconstruction from Sparse Observations",
+    "url": "http://arxiv.org/abs/2607.25687v1",
+    "arxiv_id": "2607.25687v1",
+    "authors": [
+      "Abhishek A. Sabnis",
+      "Mihai Mitrea",
+      "Lya Lugon",
+      "Karine Sartelet",
+      "Marc Bocquet",
+      "Xiaoyuan Cheng",
+      "Shupeng Zhu",
+      "Sibo Cheng"
+    ],
+    "published": "2026-07-28T13:03:09+00:00",
+    "summary": "Full-field reconstruction of air pollution is essential for evaluating pollution exposure and supporting public health decision-making. However, the complex interactions among pollutants, hard-to-predict weather patterns, and limited monitoring station coverage make this a complex task. We apply deep learning techniques to provide fast and accurate reconstructions from sparse observations of four key pollutants: NO2, O3, PM2.5 and PM10. Models are trained on full-field simulation data and evaluated on real-world observations collected from 9 to 28 monitoring stations in the city of Paris. We introduce a diffusion-based generative framework for multi-pollutant reconstruction and benchmark its performance against deterministic deep learning models. Despite noisy observations and strong spatial variability, the models achieve high structural similarity on simulated validation data and produce realistic spatial patterns on real-world observations, as indicated by power-spectrum analysis. We introduce data augmentation methods that enable transfer to real-world observations without retraining, allowing the models to generalise beyond the training period. These findings highlight the potential of ML models for reliable real-world deployment in air pollution reconstruction tasks."
+  },
+  {
+    "title": "Contextual Deconvolution for Variance-Stable Demand Sensing: Kernel-Modulated Operators in Promotional Retail",
+    "url": "http://arxiv.org/abs/2607.25664v1",
+    "arxiv_id": "2607.25664v1",
+    "authors": [
+      "Mohammad Forouhesh"
+    ],
+    "published": "2026-07-28T12:49:59+00:00",
+    "summary": "Machine learning demand forecasts optimize statistical accuracy yet leave excess operational volatility that inflates safety stock and amplifies the Bullwhip effect. We introduce \\textbf{Contextual Deconvolution} (CD), a two-stage estimator that reframes demand sensing as a convex decomposition: a kernel-modulated banded operator separates transient promotion-driven shocks from a smooth structural baseline, and hierarchical partial pooling enables catalog-scale deployment without per-SKU training. The operator is data-derived, not imposed---it reduces to the identity wherever the promotional response is impulsive (most of M5, all of Favorita) and contributes only where genuine multi-day carryover exists, so the gains rest on the structural decomposition itself. Evaluating strictly out-of-sample on 30,490 M5 SKUs and 2,845 Favorita items, with calendar-aware baselines given CD's identical future calendar, we anchor the contribution on a full inventory-cost accounting: CD lowers safety stock, holding cost, and order variance but under-provisions event spikes, reducing total cost only when holding costs exceed $\\sim$20\\% of stockout costs (95\\% CI $[17\\%,25\\%]$); otherwise it is an operational-stability and inventory-capital layer, not an expected-cost minimizer. Its accuracy contribution is reliability rather than central tendency: across eleven baselines, CD attains the lowest cross-sectional dispersion of per-SKU error and mis-forecasts by more than 200\\% on 0.8\\% of SKUs versus 9.9--20.6\\% for every baseline, ranking first on both in all four M5 draws. Because the Variance Ratio and std-based safety stock are minimized by any sufficiently smooth forecast, we treat them as diagnostics, not objectives. A supporting analysis shows the learned demand operators are non-normal, yet CD's compact parametric kernel matches their operational performance interpretably."
+  },
+  {
+    "title": "Why Public Service AI Governance Frameworks Risk Failing in the Age of General-Purpose AI: Lessons from Policing",
+    "url": "http://arxiv.org/abs/2607.25648v1",
+    "arxiv_id": "2607.25648v1",
+    "authors": [
+      "Sam Relins",
+      "Daniel Birks"
+    ],
+    "published": "2026-07-28T12:34:04+00:00",
+    "summary": "Public services face growing pressure to adopt artificial intelligence (AI) to close the gap between rising demand and falling resources. That pressure has intensified with general-purpose AI (GPAI): AI built on large language models that can be directed by prompt alone to perform an effectively unbounded range of tasks. We argue that the properties that make these models attractive - their generality, accessibility, and low deployment cost - undermine the conditions under which AI safety has historically been pursued. The safety concepts that public service governance frameworks foreground - accuracy, bias, explainability, and accountability - were made tractable by narrow, purpose-built AI, and the mitigations that guidance documents prescribe presuppose exactly what GPAI removes. Accuracy cannot be quantified over unbounded outputs. Bias cannot be disaggregated when outputs are free-text judgements rather than categorical predictions. Explainability gives way to the appearance of explanation, and accountability erodes as outputs are optimized to persuade. We develop this through the case of policing, where the consequences of governance failure are most severe, and show why the same failure is likely to recur across other public services. The two mitigations that dominate policing AI strategy - expert evaluation and human-in-the-loop oversight - both rest on assumptions that GPAI violates. Safety assurance thus shifts from an intrinsic feature of building an AI tool to an optional add-on. We recommend a clear taxonomic distinction between narrow and general-purpose AI in governance documentation, a preference for technological parsimony, a pause on operational deployment of GPAI in policing until adequate evidence exists, and a coordinated national safety infrastructure with the authority to generate that evidence and determine when responsible deployment is achievable."
+  },
+  {
+    "title": "AMPBench-MT: A Homology-Controlled Benchmark for Antimicrobial Peptide Potency, Spectrum, and Safety Prediction",
+    "url": "http://arxiv.org/abs/2607.25518v1",
+    "arxiv_id": "2607.25518v1",
+    "authors": [
+      "Ziheng Zhou",
+      "Huiyu Luo",
+      "Xiaohu Zhu",
+      "Nan Wang",
+      "Xuebiao Qin",
+      "Chaoyan Zhang",
+      "Jun Yan"
+    ],
+    "published": "2026-07-28T10:01:30+00:00",
+    "summary": "Computational AMP discovery is often evaluated through AMP/non-AMP recognition, yet follow-up decisions depend on assay-derived evidence such as target-species potency, hemolysis, toxicity, and selectivity. Existing AMP and peptide benchmarks cover binary recognition, multilabel annotation, assay regression, or broader peptide-model comparison, but they do not jointly place AMP recognition, species-conditioned potency, spectrum, safety-facing proxy endpoints, and cross-endpoint behavior within one sequence-homology-controlled protocol. To address this problem, we introduce AMPBench-MT, a provenance-preserving benchmark that standardizes canonical peptide records and organizes them into binary recognition, species-conditioned pMIC regression, and endpoint-specific potency and safety-facing readouts. Across 161 endpoint-specific model evaluations, high binary performance does not reliably indicate assay-endpoint behavior. Frozen protein-language-model embeddings form the leading pMIC error cluster, while graph and classical regressors remain close. Spectrum labels further reveal that PR-oriented metrics can be misleading under scarce observed negatives, whereas low-toxicity, HC50 hemolysis, and selectivity expose smaller but more assay-facing signals. AMPBench-MT shows that AMP evaluation should move beyond recognition leaderboards toward endpoint-aware evidence auditing. Our proposed benchmark is available at https://huggingface.co/datasets/ZihengZhou06/AMPBench-MT."
+  },
+  {
+    "title": "Agentic AI in medicine: architectures, applications, evaluation, and challenges for clinical translation",
+    "url": "http://arxiv.org/abs/2607.25489v1",
+    "arxiv_id": "2607.25489v1",
+    "authors": [
+      "Zheng Tong",
+      "Yang Liu",
+      "Wanshu Fan",
+      "Jing Qin",
+      "Zhongbin Han",
+      "Haifan Gong",
+      "Congyu Liao",
+      "Xiaofeng Liu",
+      "Cong Wang"
+    ],
+    "published": "2026-07-28T09:25:25+00:00",
+    "summary": "Large language models and multimodal foundation models are enabling medical artificial intelligence (AI) systems to move beyond isolated prediction and undertake multistep clinical tasks that require planning, tool use, memory, iterative correction, and coordination among specialized agents. However, the scope of agentic AI in medicine remains unsettled, and current evaluation practices are not yet aligned with the requirements of clinical use. We conducted a scoping review with systematic evidence mapping across five electronic sources, screened 1,649 exportable records, and provisionally included 557 unique studies that met predefined criteria for goal-directed task execution, tool use, interaction with external resources, feedback-based refinement, or multi-agent collaboration. The included studies describe single agents that use external tools, workflows supported by retrieval and external knowledge, multimodal agents, and multi-agent systems applied to medical question answering, image interpretation, electronic health record analysis, drug safety, and clinical trial prediction. The evidence base remains dominated by public benchmarks, simulated settings, retrospective datasets, and small-scale expert evaluation. Process reliability, evidence traceability, uncertainty, safety, workflow impact, and external validity are evaluated less consistently. Clinical translation will depend on clearer definitions, reproducible evaluation, auditable oversight, interoperable system design, and prospective validation in real-world clinical workflows."
+  },
+  {
+    "title": "PatientAgentBench: A Benchmark Framework for Evaluating Patient-Facing Health AI Agents",
+    "url": "http://arxiv.org/abs/2607.25485v1",
+    "arxiv_id": "2607.25485v1",
+    "authors": [
+      "Korosh Vatanparvar",
+      "Ashutosh Joshi",
+      "Maria Xenochristou",
+      "Mohammad Abuzar Hashemi",
+      "Prasad Kasu",
+      "Deepak Bansal",
+      "Daniel Lopez-Martinez",
+      "Anchal Nema",
+      "Ramya Ganesan",
+      "Will Kimbrough",
+      "Alex Woody",
+      "Yadunandana Rao",
+      "Dilek Hakkani-Tur",
+      "Wilko Schulz-Mahlendorf"
+    ],
+    "published": "2026-07-28T09:24:04+00:00",
+    "summary": "Health AI is evolving from answering questions to agentic systems that converse with patients, reason about health records, and act on their behalf. Primary care guards against diagnostic errors and unsafe care; agents assisting in this domain warrant evaluation against the same risks. Current benchmarks focus on medical knowledge, assessed through isolated question-answering or clinician-facing tasks. PatientAgentBench benchmarks patient-facing agentic healthcare; it evaluates a foundation model, wrapped in an agent with a sandbox of healthcare tools, conversing with a simulated patient. Each conversation is scored by an LLM-as-a-Jury across six dimensions via over a hundred conversation-agnostic, clinician-grounded criteria. To validate alignment, licensed clinicians annotated shared conversations, yielding 79-93% adjacent agreement between jury and expert raters, on par with or exceeding clinician inter-rater agreement. We benchmarked 10 models across four families on the same 1,200 scenarios and found clinical gaps. Triage quality is the most discriminating dimension: pass rates rise from 32% for the weakest models to 88% for the strongest, with agents often acting on administrative requests without clinical screening. Clinical safety and workflow accuracy follow the same pattern: the weakest models fail often, fabricating unexecuted actions, while frontier models fail on only 1-3% of cases, from unverified tool outputs and omitted crisis resources in an emergency. More capable models narrow these gaps but do not close them; the strongest scores only 4.25 of 5 overall. These failures surface only in sustained, tool-using conversations against realistic patient records, confirming that static benchmarks are insufficient as healthcare agentic systems gain autonomy. We release the framework as a reproducible, clinician-validated evaluation standard to help the field close this gap."
+  },
+  {
+    "title": "Data-Dependent Regret and Polyak Corrections for Constrained Online Convex Optimization",
+    "url": "http://arxiv.org/abs/2607.25480v1",
+    "arxiv_id": "2607.25480v1",
+    "authors": [
+      "Wentao Zhang"
+    ],
+    "published": "2026-07-28T09:13:00+00:00",
+    "summary": "Constrained online convex optimization requires minimizing regret against adversarial convex costs while satisfying a convex constraint at every round, as needed in safety-critical applications. A computationally efficient method combines online gradient descent with a Polyak feasibility step, using one constraint evaluation and one subgradient per round. Although this method achieves O(sqrt(T)) regret with per-round feasibility, we derive a tighter, data-dependent analysis by retaining two quantities omitted by the standard worst-case argument. First, we replace the gradient envelope G_f^2 T with the observed accumulation G_T = sum_t ||grad f_t(x_t)||^2. Second, we identify a nonnegative Polyak correction P_T that measures the cumulative squared displacement caused by feasibility projections and enters the regret bound with a negative sign. The resulting improvement, Delta_T = (eta/2)(G_f^2 T - G_T) + P_T/(2 eta), is always nonnegative. We further propose AdaOGD-PFS, an adaptive-step-size method that achieves O(sqrt(G_T)) regret while preserving per-round feasibility. Experiments on ball- and halfspace-constrained problems improve the regret bound by 38 to 43 percent, with both data-dependent gradients and Polyak corrections contributing substantially."
+  },
+  {
+    "title": "Architectural Backdoors in Vision-Language Model Supply Chains via Representation Steering",
+    "url": "http://arxiv.org/abs/2607.25479v1",
+    "arxiv_id": "2607.25479v1",
+    "authors": [
+      "Maria Rosaria Briglia",
+      "Igor Maljkovic",
+      "Antonio Emanuele Cin\u00e0",
+      "Luca Oneto",
+      "Iacopo Masi",
+      "Fabio Roli"
+    ],
+    "published": "2026-07-28T09:12:11+00:00",
+    "summary": "Vision--Language Models (VLMs) are increasingly deployed through a model supply chain in which pretrained checkpoints, architecture definitions, text encoders, and exported computation graphs are distributed by third parties and reused across downstream services. This reuse model creates a security-critical trust boundary: VLM deployments inherit not only learned parameters but also executable behavior encoded in shared model artifacts. In this paper, we show that a malicious provider can exploit this trust boundary by embedding architectural backdoors into VLM supply chains through representation steering. Our attack introduces dormant steering logic into the model architecture through a trigger-gated additive modification of an intermediate representation, without poisoning training data, controlling downstream fine-tuning, or modifying prompts at deployment time. When the trigger is absent, the modification reduces to zero and the model follows its normal computation, preserving clean utility. When the trigger is present, a steering direction shifts the internal representation toward an attacker-defined objective. We evaluate the attack across multiple VLM families and downstream tasks, including visual question answering, text-to-image generation, retrieval, and semantic response biasing. The results show that the proposed architectural steering backdoor compromises integrity, safety enforcement, and ranking fairness while preserving normal behavior on clean inputs. We further show that shared VLM artifacts can carry dormant steering logic against downstream services, and we propose an auditing defense that inspects the executable logic distributed with model artifacts rather than only their learned weights."
+  },
+  {
+    "title": "Safety-Aware Cascaded Inference for Crop Damage Assessment with Controlled Error Trade-offs",
+    "url": "http://arxiv.org/abs/2607.25468v1",
+    "arxiv_id": "2607.25468v1",
+    "authors": [
+      "Jos\u00e9 Thi\u00e9ry Messigb\u00e9d\u00e9 Hagbe",
+      "Gani Kawsar Gounou",
+      "Songbian Karim Zim\u00e9"
+    ],
+    "published": "2026-07-28T09:01:27+00:00",
+    "summary": "In picture-based agricultural insurance for smallholder farmers, missed damage detections carry substantially higher cost than false alarms: a farmer who sustained real losses receives no payout, while unnecessary expert review is operationally costly but reversible. Standard multi-class classifiers optimize global accuracy but provide no mechanism to operationalize or control this asymmetric cost structure at inference time. We propose CascadeCropNet, a two-stage cascade architecture calibrated to satisfy a target recall constraint (Rec-Damaged >= 0.95) through threshold selection. A lightweight Sentinel model performs binary health triage; samples exceeding a calibrated damage probability threshold tau are escalated to a specialist Expert model for fine-grained diagnosis. This design provides explicit, deployment-time control over the safety-efficiency trade-off without retraining. Evaluated on the Eyes on the Ground dataset (23,804 images from Kenyan smallholder maize farms), the cascade achieves Rec-Damaged = 0.974 at tau = 0.5, reducing missed damage cases by up to 54% relative to a flat baseline. Under evaluation alignment, the representational gap reduces to +0.008 F1-macro, confirming the contribution is architectural rather than representational. Under input degradation, the system prioritizes escalation over confident misclassification, reflecting error containment through architectural isolation rather than intrinsic model robustness. These results demonstrate that cascade architectures can operationalize safety-oriented decision constraints through calibrated routing in settings where reliability matters more than aggregate accuracy. These properties depend on threshold calibration and deployment conditions and do not constitute guarantees under arbitrary distribution shift."
+  },
+  {
+    "title": "Inspect India Evals: An Open Benchmarking Framework for Evaluating Large Language Models in the Indian Linguistic and Cultural Context",
+    "url": "http://arxiv.org/abs/2607.25375v1",
+    "arxiv_id": "2607.25375v1",
+    "authors": [
+      "Abhishek Kumar Singh",
+      "Shrey Nag",
+      " Sachita",
+      "Lipi Goel",
+      "Rajeshwar Singh Janwar"
+    ],
+    "published": "2026-07-28T07:30:12+00:00",
+    "summary": "India is a vast nation of over 1.4 billion people, varied by hundreds of diverse and locally specific traditions and cultures and 22 officially recognized languages. Large language models (LLMs) are now being deployed on a massive scale throughout the mainland as well as in remote villages. However, the common benchmarks - MMLU, BIG-Bench, and TruthfulQA are almost exclusively English- and Western-centric. They do not identify those safety, fairness, and accuracy failures unique to the Indian context. That is the gap Inspect India Evals seeks to fill. It is an open-source framework built on top of UK AISI's Inspect AI platform. It has six benchmarks: Multilingual MMLU across sixteen Indian languages, BharatBBQ (our adaptation of BBQ for Indian social bias), a safety evaluation for Digital Public Infrastructure, a multilingual safety test using harmful prompts in Indian languages, a multi-turn jailbreak resistance test, and an Indian cultural knowledge benchmark scored using LLM-as-judge rubrics. In this study, we tested five open-weight models ranging from 8B to 32B parameters. Sarvam-M 24B and Gemma 2 27B came out on top, both scoring 80% on the composite India Fairness Index, with Sarvam-M even beating larger 32B models on Indian cultural knowledge and DPI safety compliance. All models scored 100% refusal on Multilingual Safety, whereas DPI safety varied from 20% to 100%. The framework is public. It's built to work with the UK AISI registry. Anyone can reproduce or extend this work."
+  },
+  {
+    "title": "Explanation-Bound Tool Execution for AI Agents: Server-Verified Action Claims Without Trusting Model Rationales",
+    "url": "http://arxiv.org/abs/2607.25364v1",
+    "arxiv_id": "2607.25364v1",
+    "authors": [
+      "Genliang Zhu",
+      "Chu Wang"
+    ],
+    "published": "2026-07-28T07:16:12+00:00",
+    "summary": "Tool-using agents expose structured calls but commonly attach free-form rationales. Such rationales are neither authorization nor reliable introspection. We present Explanation-Bound Tool Execution (EBTE), a claim-carrying mediation layer that converts decision-relevant rationale content into typed action claims and checks them against server-held intent, policy, payload, tool, risk, provenance, and freshness facts. EBTE cannot widen baseline authority: conflicts deny, incomplete or uncertain claims review, and only matching claims remain eligible for governed execution. We formalize this composition under explicit mediation and trusted-fact assumptions and implement a versioned reference profile with minimized audit packets. Across 136 authored conformance scenarios, the full profile matches all specified dispositions, admits none of 96 designated hard contradictions, and passes 232 metamorphic checks; these results validate the included profile rather than population performance. A draft-only reference integration forwards none of 48 authored hard cases under EBTE while preserving all 16 soft-review and 4 aligned draft paths. In a frozen 2026-07-12 exploratory 224-attempt hosted-model record, the historical generation/runner agreement counts are 71/96, 66/96, and 19/32; a separately labeled zero-call post-hoc revalidation of the preserved minimized claims under the current pipeline yields 70/96, 65/96, and 17/32. In an AgentDojo-derived semantic check, existing high-risk controls already make all 12 attack proposals non-allow; EBTE additionally resolves them as deny. These results support the feasibility and diagnostic value of server-checked action claims, not rationale faithfulness, human-review benefit, representative attack resistance, or production safety."
+  },
+  {
+    "title": "Hybrid Analysis for Secure MCP Tool Use in LLM Agents",
+    "url": "http://arxiv.org/abs/2607.25297v1",
+    "arxiv_id": "2607.25297v1",
+    "authors": [
+      "Ping He",
+      "Yuexiang Xie",
+      "Yaliang Li",
+      "Shouling Ji"
+    ],
+    "published": "2026-07-28T05:17:34+00:00",
+    "summary": "The rapid development of large language model (LLM) agents has enabled their broad adoption across diverse real-world tasks. To standardize interactions between LLM agents and external environments, Model Context Protocol (MCP) tools have emerged as a de facto standard and have been widely integrated into these systems. However, the use of MCP tools also introduces new safety risks, as LLM agents can be induced to perform malicious or unauthorized actions. Although prior work has proposed defenses for securing tool use in LLM agents, most methods rely on static analysis, i.e., inspecting prompts and generated outputs, which limits the defense effectiveness and robustness. To address these limitations, we propose MTGuard, a hybrid analysis-based defense framework designed to safeguard the use of MCP tools in LLM agents by leveraging lifecycle-aware static-dynamic co-analysis. Extensive evaluation demonstrates that MTGuard effectively mitigates multiple categories of harmful tool use across different LLM agents while maintaining performance on benign user tasks."
+  },
+  {
+    "title": "Type Safety via Hoare Logic with Separation and Pure Types",
+    "url": "http://arxiv.org/abs/2607.25262v1",
+    "arxiv_id": "2607.25262v1",
+    "authors": [
+      "Wenhua Li",
+      "Darius Foo",
+      "Quang Trung Ta",
+      "Wei-Ngan Chin"
+    ],
+    "published": "2026-07-28T04:04:32+00:00",
+    "summary": "Type safety has traditionally rested on carefully crafted type systems, under the motto \"well-typed programs cannot go wrong\". Modern demands push type systems past this basic guarantee: toward memory safety (e.g., Rust), stronger data-structure invariants (e.g., GADTs), and broader typability (e.g., MLstruct). The motto absorbs each such property by enlarging the set of states deemed \"wrong\", but collapses them into one binary verdict: heap ownership, flow-sensitive changes to a variable's type, and the gap between a recoverable and a fatal error are relational, stateful facts about intermediate states that one verdict cannot tell apart. Worse, each demand typically brings its own extension, making it hard to say what each guarantees or how they combine.   Floyd-Hoare logic supplies a unified foundation. We present a framework for type-safety verification built from four ingredients: (i) case specifications for path-sensitive typing; (ii) separation types, inspired by separation logic, for flow-sensitive type mutation and must-aliasing; (iii) a disciplined distinction between Err (runtime error values our types track) and Abrt (compile-time errors), yielding the refined motto well-typed programs must never abort; and (iv) type predicates for data-structure invariants. Since all four are ordinary types in one Boolean algebra rather than separate extensions, the framework subsumes both GADTs and liquid types within one type logic, spanning weak specifications that tolerate Err to strong ones that eliminate it. Subtyping reduces to one decidable emptiness test, so a single lightweight procedure serves the whole framework with no SMT oracle in its trusted base. We formalise the Hoare rules and prove soundness in a machine-checked Lean mechanisation; by proof reflection it yields a self-certifying type-checker, evaluated on a benchmark suite."
+  },
+  {
+    "title": "SafeFlow: Semantic Information-Flow Control for Blocking Malicious Propagation in Multi-Agent Systems",
+    "url": "http://arxiv.org/abs/2607.25255v1",
+    "arxiv_id": "2607.25255v1",
+    "authors": [
+      "Haowen Dai",
+      "Zonghao Ying",
+      "Wenfeng Li",
+      "Xiangfan Wu",
+      "Yisong Xiao",
+      "Tianyuan Zhang",
+      "Jiaye Lin",
+      "Lei Wei",
+      "Guangyuan Dong",
+      "Xitong Ling",
+      "Xixun Lin",
+      "Quanchen Zou",
+      "Xiangzheng Zhang"
+    ],
+    "published": "2026-07-28T03:55:47+00:00",
+    "summary": "Multi-agent systems improve capability through task decomposition and role specialization, but these same mechanisms introduce an important safety blind spot: a harmful objective can be fragmented into locally plausible subtasks, allowing malicious intent to evade detection by any single agent. This is a growing social-impact challenge: systems handling sensitive information or consequential tools can turn routine delegation into unauthorized disclosure or unsafe action. We argue that this failure mode is better understood as a semantic information-flow problem than as a single-turn prompt classification task. To address this, we propose SafeFlow, a defense framework for multi-agent systems that formalizes malicious cross-agent propagation as a semantic information-flow problem. SafeFlow attaches structured semantic taints to root requests, propagates them through a dynamic collaboration graph, and performs workflow-level validation to reconstruct the global risk context before irreversible actions are committed. Evaluated on four benchmarks spanning prompt injection, jailbreak-based unsafe tool use, risky code execution, and harmful web-agent behavior, SafeFlow reduces attack success rates compared to undefended baselines and external defenses while retaining high benign task completion and a high paired safe--harm success rate. Our findings show that multi-agent systems still lack mechanisms for preserving risk semantics across delegation boundaries. This gap can turn routine delegation into privacy harms or unsafe actions that affect people and organizations. SafeFlow keeps this risk visible throughout the workflow, before it results in harm."
+  },
+  {
+    "title": "Medical world models in healthcare: foundations, applications, and challenges for trustworthy clinical translation",
+    "url": "http://arxiv.org/abs/2607.25242v1",
+    "arxiv_id": "2607.25242v1",
+    "authors": [
+      "Zhaoyan Chen",
+      "Zhongxiu Cong",
+      "Zhuanfeng Jin",
+      "Wanshu Fan",
+      "Dongsheng Zhou",
+      "Qi Ai",
+      "Haifan Gong",
+      "Congyu Liao",
+      "Xiaofeng Liu",
+      "Cong Wang"
+    ],
+    "published": "2026-07-28T03:35:47+00:00",
+    "summary": "Medical world models offer a framework for extending medical artificial intelligence beyond static prediction by representing evolving patient states and modelling how they change over time and in response to clinical interventions. This Review defines the conceptual boundaries, technical foundations, application domains, and evidence requirements of the field through a structured narrative synthesis with reproducible evidence mapping.We screened 1,455 unique records and assembled a corpus of 98 sources, including 14 studies that met a strict empirical definition of a medical world model. The field is organised around four capabilities: patient state representation, temporal dynamics modelling, intervention-conditioned simulation, and clinician-supervised planning. Evidence spans medical imaging, longitudinal electronic health records, treatment response modelling, physiological and multimodal state modelling, ultrasound and surgical interaction, and population and health-system simulation; clinical digital twins are treated as a cross-cutting integration framework.Current studies provide early evidence of technical feasibility for trajectory forecasting and comparison of candidate interventions, but most remain retrospective, task-specific, or preclinical. The evidence base is further limited by incomplete longitudinal intervention data, inconsistent action semantics, limited causal identifiability, long-horizon error accumulation, inadequate uncertainty estimation, and limited external validation. Clinical translation will therefore depend on precise intervention representations, robust causal and mechanistic grounding, calibrated trajectory-level uncertainty, safety-constrained planning, and prospective multicentre validation against clinically meaningful endpoints."
+  },
+  {
+    "title": "SONG: A Photorealistic 3D Gaussian Simulation Platform for Benchmarking Social Navigation",
+    "url": "http://arxiv.org/abs/2607.25219v1",
+    "arxiv_id": "2607.25219v1",
+    "authors": [
+      "Weiqi Huang",
+      "Dianyi Yang",
+      "Jiaxin Li",
+      "Shuangyi Dong",
+      "Hao Xu",
+      "Zan Wang",
+      "Wei Liang"
+    ],
+    "published": "2026-07-28T02:51:24+00:00",
+    "summary": "Social navigation has progressed from simplified 2D environments toward a more general vision-based setting, in which a robot needs to achieve socially compliant behavior purely from onboard visual observations. Yet supporting simulation platforms have not kept pace: existing options either lack visual observations, lack moving human avatars, or fall short of real-world fidelity in appearance and pedestrian behavior, offering limited support for advancing vision-based social navigation. We introduce SONG, a SOcial Navigation platform powered by 3D Gaussian splatting (3DGS). It leverages 3DGS for both scene and avatar representations, drives pedestrians using semantically grounded trajectories generated by a large language model, and synthesizes their full-body motion with a trajectory-conditioned generator to produce continuous, natural movement. On top of the platform, we curate SONG-Bench, a set of evaluation episodes stratified by difficulty, and propose a multi-dimensional metric suite covering effectiveness, safety, and social compliance. A systematic evaluation of representative navigation baselines reveals three findings: (a) vision-based social navigation is far from solved; (b) a critical safety deficit precedes social etiquette; (c) real-world data matters more than model scale. Crucially, we demonstrate that fine-tuning on our curated data effectively improves the success rate in real-world environments. We hope our platform provides a faithful and rigorous testbed for the next generation of vision-based social navigation research."
+  },
+  {
+    "title": "MyoCardBench: A Real-World Data Benchmark for Evaluating Large Language Models in Clinically Authentic Cardiovascular Care Scenarios",
+    "url": "http://arxiv.org/abs/2607.25186v1",
+    "arxiv_id": "2607.25186v1",
+    "authors": [
+      "Xiao Li",
+      "Mouxiao Bian",
+      "Zhaodi Wu",
+      "Sijie Ren",
+      "Juechen Chen",
+      "Lu Lu",
+      "Jingru Ding",
+      "Yun Zhong",
+      "Jie Xu",
+      "Yixiu Liang",
+      "Junbo Ge"
+    ],
+    "published": "2026-07-28T01:39:52+00:00",
+    "summary": "Background: Most medical large language model (LLM) benchmarks focus on examination knowledge or isolated tasks and may not reflect the longitudinal, multimodal, and safety-critical workflow of cardiovascular care. Objective: To develop MyoCardBench, a real-world benchmark spanning the cardiovascular care continuum, and assess LLM performance across clinical dimensions and specialist tasks. Methods: MyoCardBench includes 2,263 items from 13 task-specific datasets derived from de-identified cardiovascular records and examination data. Sixteen cardiology physicians conducted annotation and reference construction, followed by cross-review from two senior cardiologists. Seven LLMs generated 15,841 outputs under standardized zero-shot settings. Open-ended tasks were evaluated using key-point coverage and holistic clinical quality, while CardioEthics was scored by accuracy. Results: GPT-5.4 achieved the highest macro-average (62.55) and item-weighted mean (62.19), followed by Gemini 3.1 Pro (59.95) and Qwen 3.6 27B (59.72). GPT-5.4 ranked first in all three dimensions. CardioAuxReport performed best (86.38), whereas CardioECGRead (17.25) and CardioEthics (17.34) were lowest. The largest gaps between holistic clinical quality and key-point coverage occurred in CardioComm (52.71), CardioEmergRescue (52.05), and CardioTreatPlan (48.80). Conclusions: To our knowledge, MyoCardBench is the largest real-world, multi-task benchmark for LLM evaluation across the cardiovascular care continuum and offers the broadest coverage of clinically authentic cardiology scenarios reported to date. It provides a rigorous framework for identifying model strengths, clinically important omissions, and priorities for future development."
+  },
+  {
+    "title": "Agentic AI for Scientific Reasoning in Autonomous Quantum Sensing Experiments",
+    "url": "http://arxiv.org/abs/2607.25145v1",
+    "arxiv_id": "2607.25145v1",
+    "authors": [
+      "Takuya Isogawa",
+      "Ryotaro Okabe",
+      "Nutdech Phadetsuwannukun",
+      "Mingda Li",
+      "Paola Cappellaro"
+    ],
+    "published": "2026-07-27T23:43:21+00:00",
+    "summary": "We implement an agentic AI workflow built around a large language model (LLM) agent for autonomous experiments with nitrogen-vacancy (NV) centers in diamond. NV centers are a widely used platform for quantum sensing, and the ability to control many measurements from a computer makes NV experiments a natural setting for autonomous workflows. We make two main contributions. First, we demonstrate an autonomous NV experiment workflow that combines persistent project records, quantitative calculation and data analysis tools, and deterministic experiment control. In one autonomous experiment, the agent selected a single NV center, calibrated its resonant frequency, measured \\(T_2^\\ast\\) with Ramsey measurements, and added a Carr--Purcell--Meiboom--Gill (CPMG) measurement to check a weak feature that could be related to nearby \\(^{13}\\mathrm{C}\\). Second, we introduce two offline benchmarks that evaluate the agent's reasoning separately from laboratory execution. We evaluated both benchmarks with GPT-5.4, GPT-5.5, and GPT-5.6 Sol. In the Ramsey checkpoint benchmark, greater reasoning effort generally improved recognition of a residual resonance calibration offset. By contrast, in the pulsed optically detected magnetic resonance (pODMR) data evaluation benchmark, pulse sequence information alone produced more false positive resonance judgments at higher reasoning effort. Requiring an expected signal calculation kept false positive rates low across all three models and reasoning settings. The results suggest a clear division of labor for autonomous experiments. The agent forms scientific hypotheses and uses quantitative tools to evaluate data, while deterministic code controls the hardware and enforces safety constraints."
+  },
+  {
+    "title": "Reactive 3D Motion Planning for a Franka Arm via Star-World Workspace Reshaping",
+    "url": "http://arxiv.org/abs/2607.25138v1",
+    "arxiv_id": "2607.25138v1",
+    "authors": [
+      "Gia Dcosta",
+      "Saayuj Deshpande",
+      "Samhitha Vedire"
+    ],
+    "published": "2026-07-27T23:12:32+00:00",
+    "summary": "Safety inflation can cause nearby obstacles to overlap, violating the disjoint-obstacle assumptions used by many modulation-based reactive planners. We investigate Star-World workspace reshaping for three-dimensional reactive control of a Franka Emika Panda manipulator. At each update, intersecting inflated obstacles are clustered and replaced by star-shaped proxies before a dynamical-system-based end-effector controller is evaluated. A null-space artificial-potential-field term provides complementary arm-body avoidance. We compare reshaped and unreshaped obstacle representations in six PyBullet scenarios using goal attainment, path-length ratio, and computation time. In this preliminary 12-trial evaluation, reshaping reaches the goal in five of six scenarios, compared with four of six for the unreshaped baseline. It resolves the canonical overlapping-wall case and requires 0.68--8.70\\,ms per workspace update for scenes containing one to seven obstacles. However, it also increases path length, produces near-equilibria in two cases, and closes a navigable corridor through over-aggressive merging. These results show both the promise and the practical limitations of transferring Star-World guarantees from workspace geometry to a redundant manipulator controlled through inverse kinematics."
+  },
+  {
+    "title": "Integrated Eco-Driving and Powertrain Optimization for Hybrid Vehicles in Complex Urban Traffic",
+    "url": "http://arxiv.org/abs/2607.25114v1",
+    "arxiv_id": "2607.25114v1",
+    "authors": [
+      "Milad Hasanzadeh",
+      "Amin Kargarian",
+      "Mehdi Farasat"
+    ],
+    "published": "2026-07-27T22:19:00+00:00",
+    "summary": "Urban eco-driving requires the simultaneous planning of speed, acceleration, lane decisions, surrounding-vehicle safety, intersection rules, and vehicle energy use. Existing studies commonly optimize only selected aspects of urban driving, such as longitudinal motion, lane changing, intersection crossing, or powertrain energy management, while treating the remaining decisions separately. Unlike these studies, this paper develops an integrated finite-horizon eco-driving planning framework for urban hybrid vehicles that jointly optimizes traffic behavior and powertrain operation within a unified mixed-integer formulation. The novelty of the proposed method lies in simultaneously modeling longitudinal motion, lane occupancy and changes, car-following and lane-change safety, signalized and unsignalized intersection behavior, and hybrid powertrain operation. The formulation captures lane availability, lane-dependent speed limits, mandatory and emergency lane changes, safe-to-clear signal conditions, downstream clearance, stop-and-yield rules, engine and motor power, battery state of charge, regenerative braking, and fuel consumption. Simulation studies compare the proposed method with rule-following, signal-aware, overtaking-enabled, and kinematic-only optimization baselines. The results demonstrate improved energy performance while maintaining feasible, safe, comfortable, and traffic-rule-compliant urban driving plans."
+  },
+  {
+    "title": "Towards Robust Reinforcement Learning for Small-Scale Language Model Agents",
+    "url": "http://arxiv.org/abs/2607.25091v1",
+    "arxiv_id": "2607.25091v1",
+    "authors": [
+      "Md Rezwanul Haque",
+      "Md. Milon Islam",
+      "Fakhri Karray"
+    ],
+    "published": "2026-07-27T21:30:44+00:00",
+    "summary": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated. In the State-of-the-Art (SOTA) research, fifteen (model, corpus) configurations were trained using Proximal Policy Optimization (PPO). The experiments included Pythia-70M, 160M, 410M and SmolLM2-135M, 360M on the TinyStories, CNN/DailyMail, and Wikitext-103 corpora. Three reproducible failure modes were identified in small-scale language models: silent LoRA parameter freezing in standard PEFT/TRL pipelines, numerical overflow in importance ratios when using bfloat16, and catastrophic policy collapse due to reward-model error. These issues were addressed using a merge-and-reinitialize adapter technique, float32 precision during PPO updates, and a three-layer safety mechanism comprising reward whitening, importance-ratio guarding, and weight rollback. In this paper, a capacity-headroom hypothesis is proposed, which states that PPO performance at the SLM scale depends on both a fluent supervised model ($\\text{PPL}<20$) and a discriminative reward signal, rather than on the number of model parameters. The proposed system converged stably in all experiments and improved preference win rate over the SFT baseline in configurations with a fluent prior and an informative reward signal. Furthermore, it outperformed instruction-tuned baselines while requiring significantly less training data. All checkpoints, preference datasets, and training scripts are publicly released$^\u00a7$."
+  },
+  {
+    "title": "Similar Models Learn Differently: Final-Window Pretraining Shapes Post-Training Beyond SFT",
+    "url": "http://arxiv.org/abs/2607.25063v1",
+    "arxiv_id": "2607.25063v1",
+    "authors": [
+      "Cen Lu",
+      "Yung-Chen Tang",
+      "Andrea Cavallaro"
+    ],
+    "published": "2026-07-27T20:46:29+00:00",
+    "summary": "Developers judge a model checkpoint by how it behaves. After supervised fine-tuning (SFT), two checkpoints that perform about the same across relevant benchmarks are treated as interchangeable, equally ready for the next alignment stage, typically preference optimization. We ask whether this judgment misses a pretraining imprint: a difference that no post-SFT benchmark reveals, yet that decides how each checkpoint responds to further training. To find out, we run a controlled experiment on the final window of pretraining, the last data trained on before instruction tuning. Six branches fork from one partially pretrained checkpoint and differ only in this window: 500 million tokens, 0.1% to 1% of the tokens that precede it. Each branch trains its window on a single data source: generic web text, filtered web text, normative discourse, safety text, mathematical text, or synthetic educational text. SFT and post-training are then identical. After SFT the branches behave near-identically, within about one point on instruction following, refusal, and capability, yet the same post-training carries them to very different endpoints, under both a direct preference optimization update and a reinforcement learning update with a verifiable reward. We measure this deviation through refusal of harmful requests: when post-training begins the safety text branch refuses no more than the web text branch, yet by the end it has lost far less of its refusal. The other four branches gain little or no protection, so the effect is selective to what the window contained. The protection requires the safety text to arrive last rather than earlier in pretraining, and it reproduces on a second model family. What a model is pretrained on last shapes how it reacts to alignment. Therefore, a checkpoint should not be evaluated by its post-SFT behavior alone, and what it was trained on last should be reported with it."
+  },
+  {
     "title": "Infrared Imaging Empowered by Artificial Intelligence for Pediatric Skeletal Triage: A Narrative Review and Future Perspectives",
     "url": "http://arxiv.org/abs/2607.24727v1",
     "arxiv_id": "2607.24727v1",
@@ -23,6 +509,52 @@
     "summary": "In safety-critical sectors such as robotics and automotive engineering, the deployment of Deep Reinforcement Learning (DRL) is often hindered by the black-box nature of deep neural networks. This lack of transparency poses significant challenges for regulatory compliance and human-agent trust. This paper presents an experimental study aimed at making high-performance continuous control DRL systems interpretable. A policy distillation framework is implemented using the classic Inverted Pendulum benchmark. A high-performance Twin Delayed DDPG (TD3) agent serves as an opaque, continuous teacher model, whose policy is distilled into an interpretable student surrogate based on a shallow Decision Tree. By leveraging a custom physics-aware feature and \"Noisy Oracle Rollouts\" for dataset generation, the distillation process achieves performance equivalent to the expert teacher. Furthermore, comparative control theory analysis reveals a fundamental trade-off: transitioning from continuous to discrete rule-based control induces high-frequency Bang-Bang actuation and a stable bimodal limit cycle. Simulation results indicate that Bounded-Input Bounded-Output (BIBO) stability is maintained while providing both global and local interpretability for safe autonomous systems."
   },
   {
+    "title": "Inverse RL Helps Align AI by Imitating Humans",
+    "url": "http://arxiv.org/abs/2607.24900v1",
+    "arxiv_id": "2607.24900v1",
+    "authors": [
+      "Micha\u0142 Wili\u0144ski",
+      "Liu Leqi",
+      "Chirag Nagpal"
+    ],
+    "published": "2026-07-27T16:45:31+00:00",
+    "summary": "Language model alignment aims to make model behavior reliably reflect desirable properties such as helpfulness, safety, and instruction following. Current approaches typically use supervised fine-tuning on demonstrations or reinforcement learning with rewards derived from verifiers or human feedback. These paradigms leave an important question underexplored: can demonstrations alone yield an implicit reward that can be inspected, reused, and optimized on-policy to align AI? Motivated by inverse reinforcement learning, we introduce Projected Alignment Reward Estimated from Demonstrations (PARED). PARED recovers the implicit reward underlying expert demonstrations as an explicit function over a small set of response-level features, learned by a lightweight discriminator that separates demonstrations from the policy's own samples in this feature space. Unlike a standard reward model, PARED requires no task-specific preference annotations: demonstrations provide the task-specific supervision, which can be augmented with AI feedback as additional dimensions of supervision. Through experiments involving inference-time reranking and adversarial on-policy RL, we show that the recovered reward improves a base policy without a supervised loss and yields further gains when optimized after standard supervised fine-tuning. Additionally, we demonstrate that PARED can be used for contextual alignment, in which a single policy can be tailored to the preferences of different audiences."
+  },
+  {
+    "title": "Harm is not Universal: Community-Specific Toxicity Detection is Urgently Needed",
+    "url": "http://arxiv.org/abs/2607.24898v1",
+    "arxiv_id": "2607.24898v1",
+    "authors": [
+      "Xinnuo Xu",
+      "Anja Thieme",
+      "Daniela Massiceti",
+      "Ioana Tanase",
+      "Rita Marques",
+      "Melanie Fernandez Pradier",
+      "Martin Grayson",
+      "Camilla Longden",
+      "Cecily Morrison"
+    ],
+    "published": "2026-07-27T16:42:36+00:00",
+    "summary": "State-of-the-art toxicity detectors for text-to-image generation adopt a one-size-fits-all approach: a single universal model applying fixed safety guidelines to all users. Our empirical evidence shows that these detectors fail to shield marginalized communities: approximately 35% of generated images labeled safe are considered harmful by disability communities. In this position paper, we argue for community-specific toxicity detection (CTD). To demonstrate its feasibility, we collaborate with disability experts to develop safety guidelines for two communities: dwarfism and blind/low vision. Using a dataset of 2,400 annotated T2I-generated images we demonstrate that both large vision-language models and existing general-purpose toxicity detectors catastrophically fail to recognize harmful content under these guidelines in zero-shot settings with F1 score lower than random guessing (F1 0.32 and 0.37). Promisingly, prompt-based adaptation methods (ICL, VQA) substantially improve harm detection performance (GPT-4o: F1 0.50 and 0.78), while parameter-efficient fine-tuning improves smaller models (0.5b-7b with best F1 0.48 and 0.59) with less than 100 demonstrations, but remains sensitive to evolving guidelines. Despite these gains, CTD performance remains far below F1 $\\approx 0.9$ achieved for general-purpose toxicity detection, highlighting the challenge and the need for sustained research effort."
+  },
+  {
+    "title": "TYPO: Instruction-Dense Visual Jailbreaks against Commercial Closed-Source Image-Generation Models",
+    "url": "http://arxiv.org/abs/2607.24897v1",
+    "arxiv_id": "2607.24897v1",
+    "authors": [
+      "Meng Xie",
+      "Li Zeng",
+      "Hangtao Zhang",
+      "Xianlong Wang",
+      "Ziqi Zhou",
+      "Pengpeng Qiao",
+      "Zhetao Li"
+    ],
+    "published": "2026-07-27T16:41:36+00:00",
+    "summary": "Recent commercial image-generation models can generate high-quality images with readable text (e.g., posters, infographics, and manuals), attracting considerable attention. Yet we first show that this same capability also introduces a previously unreported safety vulnerability: these systems may refuse to generate harmful text directly, yet permit the same content when rendered as text within generated images, i.e., safety alignment does not reliably transfer from textual outputs to text embedded in images. In this paper, unlike existing visual jailbreaks against image-generation models, which primarily induce models to generate harmful visual objects or scenes, we introduce the concept of instruction-dense visual jailbreaks, in which image-generation models produce detailed, readable, and actionable harmful instructions within images. Such outputs can amplify harm because the rendered instructions can be readily read and widely spread. To instantiate this threat, we propose TYPO, a black-box framework that exploits this safety gap by automatically generating adversarial TYPOgraphy prompts, which covertly steer image-generation models to express harmful intent as highly legible, typographically structured text. Specifically, TYPO decomposes prompt generation into two channels: a textual channel for reframing the target intent, and a visual channel for specifying its presentation form. We formulate these two channels as a dual-channel textual-visual strategy space and optimize candidate strategy combinations through an adaptive combinatorial search. Extensive experiments across four commercial models (i.e., GPT-Image-2, Nano Banana Pro, Qwen-Image-2, and Seedream 5.0 Lite) show that TYPO substantially outperforms nine representative jailbreak attacks by 50.2% in ASR on average, while incurring an average query cost of only $0.04."
+  },
+  {
     "title": "Evaluating Fuzz Testing for Reinforcement Learning Agents",
     "url": "http://arxiv.org/abs/2607.24577v1",
     "arxiv_id": "2607.24577v1",
@@ -35,6 +567,19 @@
     ],
     "published": "2026-07-27T15:46:57+00:00",
     "summary": "Reinforcement Learning (RL) agents are increasingly deployed in safety-critical domains such as robotics, autonomous driving, and drone control, where unexpected behaviors may lead to severe real-world consequences. Fuzz testing has recently emerged as a promising method for exploring the vast state spaces of RL agents and exposing crashes. Although numerous RL fuzzing methods have been proposed, existing studies often differ in evaluation settings, baselines, and metrics, making it difficult to draw reliable conclusions about their relative effectiveness and practical usefulness. To address this gap, we present the first comprehensive empirical study that systematically evaluates RL fuzzing methods from four complementary perspectives: effectiveness, diversity, efficiency, and practical utility. We benchmark five state-of-the-art methods alongside random testing under unified configurations across three environments of increasing complexity (MountainCar, BipedalWalker, and CARLA), and further assess the downstream usefulness of detected crashes for agent robustness improvement and safety monitoring. Our results reveal several key insights. For instance,throughput-oriented methods like MDPFuzz demonstrate superior effectiveness and efficiency in crash discovery, while methods explicitly designed to encourage exploration like SeqDivFuzz excel at uncovering diverse crash behaviors. We also show that fuzzing-generated crashes can meaningfully improve agent robustness and enable accurate safety monitoring with strong cross-method generalization. Beyond these empirical findings, we distill actionable guidance for both researchers and practitioners, highlighting the benefits of combining complementary fuzzing strategies and adopting multi-level diversity analysis to achieve more comprehensive and practical RL testing."
+  },
+  {
+    "title": "Early Detection of Distributed Backdoors in Multi-Agent LLM Systems: A Characterization Study",
+    "url": "http://arxiv.org/abs/2607.24893v1",
+    "arxiv_id": "2607.24893v1",
+    "authors": [
+      "Diego Fernandez Arias",
+      "Dev Prashant Mistry",
+      "Ren Wang",
+      "Yibo Hu"
+    ],
+    "published": "2026-07-27T15:18:06+00:00",
+    "summary": "Multi-agent LLM systems can be attacked by a payload that no single agent ever holds in full: a poisoned tool hides encrypted fragments in its observations, spreads them across several agents, and an external step reassembles and executes them after the run. Per-step safety checks that judge each action in isolation may fail to recognize the complete distributed payload. We investigate how early such an attack can be detected while the run is still unfolding, and how robustly it can be caught once its most obvious cues are stripped away. We build a working instance on a hierarchical multi-agent system, run it under benign and attacked conditions across five language models and two task domains, and record when each fragment is injected and when the payload is assembled and executed. Detection is a race against assembly. Before the first fragment is injected, attacked and benign runs are indistinguishable; once injection begins, a prefix detector flags $99.3\\%$ of successful attacks with a median of five steps remaining and a $10.3\\%$ safe-run false-positive rate. Because assembly occurs only after the run, these alarms arrive in time to abort nearly every successful attack. We then measure how much of that warning rests on removable surface cues of the attack rather than on its distributed structure. Generic zero-shot and behavior-trained detectors provide almost no warning at all; the detectors that do work lean in part on removable surface cues, chiefly the ciphertext's length and entropy, and once the entropy cue is removed from the payload and the length features from the detector, detection arrives later and transfers poorly across domains, though a fine-tuned model recovers some of the loss."
   },
   {
     "title": "Making Mathematical Knowledge Explainable, Accessible and Interoperable Through Large Language Model Integration",
