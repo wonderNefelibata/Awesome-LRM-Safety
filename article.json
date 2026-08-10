@@ -1,5 +1,416 @@
 [
   {
+    "title": "Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits",
+    "url": "http://arxiv.org/abs/2608.07430v1",
+    "arxiv_id": "2608.07430v1",
+    "authors": [
+      "Elena Dumitrescu",
+      "Gert Lek",
+      "Lydia Y. Chen",
+      "J\u00e9r\u00e9mie Decouchant"
+    ],
+    "published": "2026-08-07T17:17:18+00:00",
+    "summary": "Diffusion Large Language Models (DLLMs) replace autoregressive next-token prediction with iterative parallel denoising, yet their internal safety mechanisms remain poorly understood. In this work, we investigate DLLMs both as targets and as adversaries, exposing mechanistic vulnerabilities in diffusion-based alignment.   We first show that safety alignment in DLLMs remains sparse and transferable across architectures. DLLMs initialized from autoregressive predecessors inherit the same mechanistic safety footprint as their source models, enabling transfer attacks via direct safety neuron mapping and pruning. Self-pruning increases attack success rates (ASR) from 2.6% to 73.8% on LLaDA and from 1.9% to 86.6% on Dream, while transfer pruning from Qwen2.5 increases ASR from 1.9% to 73.2% on Dream and from 7.0% to 86.3% on Fast-dLLM.   Building on these findings, we introduce SN-Guided Diffusion, a fully offline black-box jailbreak framework that steers the diffusion process away from safety-triggering regions using a weighted safety neuron loss, which achieves near-perfect prompt separability (AUROC = 1.0 for benign-vs-jailbreak discrimination). Across multiple open and proprietary targets, our method achieves a transfer ASR of up to 77.1% on Llama-3-8B-Instruct, 86.9% on Qwen2.5-7B-Instruct, and 74.3% against Gemini-2.5-Flash-Lite, while requiring only 20 generation episodes per prompt. Compared to prior jailbreaking frameworks, our method achieves competitive transferability with orders-of-magnitude lower generation cost.   Our codebase is available at https://github.com/ellyoana/sn-guided-diffusion."
+  },
+  {
+    "title": "ResidencyRL: Reinforcement Learning in Simulated Clinical Environments",
+    "url": "http://arxiv.org/abs/2608.07418v1",
+    "arxiv_id": "2608.07418v1",
+    "authors": [
+      "Valentin Li\u00e9vin",
+      "Samuel Schmidgall",
+      "Tim Strother",
+      "Alex Bijamov",
+      "Akshay Goel",
+      "Anil Palepu",
+      "Chunjong Park",
+      "Vahid Balazadeh",
+      "Min Woo Sun",
+      "Marius Guerard",
+      "Justin Chen",
+      "Dave Steiner",
+      "Vikram Dhillon",
+      "Ibrahim Azar",
+      "Akhil Mehta",
+      "Nicholas Spetsieris",
+      "Shilpan Shah",
+      "Maen Abdelrahim",
+      "Amit Dahiya",
+      "Yun Liu",
+      "Katherine Chou",
+      "Yossi Matias",
+      "Avinatan Hassidim",
+      "Dale R. Webster",
+      "Quoc V. Le",
+      "Raia Hadsell",
+      "Joelle Barral",
+      "Carey Radebaugh",
+      "Aleksandra Faust",
+      "Shekoofeh Azizi",
+      "Mike Schaekermann",
+      "Po-Hsuan Cameron Chen",
+      "Tao Tu",
+      "David Racz",
+      "Lin Yang"
+    ],
+    "published": "2026-08-07T17:04:41+00:00",
+    "summary": "In medical education, physicians convert academic knowledge into clinical expertise through residency: years of training across thousands of encounters, with diverse sources of feedback and progressively greater autonomy. Much of clinical reasoning relies on the patient encounter, a dialogue in which a clinician elicits history, refines diagnostic hypotheses, and decides management under uncertainty. While large language models (LLMs) excel on static medical benchmarks, methods to optimize the full sequence of clinical decisions remain underdeveloped. We present ResidencyRL, a reinforcement learning (RL) method for training clinical artificial intelligence (AI) agents through simulated multi-turn clinical encounters (up to 60 dialogue turns and 8 tool calls per trajectory). ResidencyRL pairs the policy agent with LLM simulators capable of complex, adversarial behaviors, training against a structured reward aligned to diagnostic accuracy, management quality, communication, documentation, and safety. On held-out evaluations, the ResidencyRL agent improves diagnostic accuracy by 7.0% under adversarial conditions (88.0% vs. 81.0%) and reduces missed red flag rates by 31%, demonstrating rigorous mitigation of premature closure. Blinded expert clinicians validated these gains, preferring the trained agent in 87.6% of side-by-side comparisons. The procedural competencies transfer to unseen benchmarks: the agent outperforms the base model across all six clinical axes of the AMIE multi-visit benchmark, and shows consistent directional improvements on AgentClinic and CRAFT-MD. Our findings demonstrate that sequential clinical decision-making can be effectively learned through multi-turn RL in simulation, yielding robust, generalizable capabilities, paving the way towards clinical mastery. Prospective validation with real-world workflows remains necessary to establish clinical utility."
+  },
+  {
+    "title": "Circuit-Based Program Verification: Sequential Circuits as an Intermediate Representation for Verifying C Programs",
+    "url": "http://arxiv.org/abs/2608.07397v1",
+    "arxiv_id": "2608.07397v1",
+    "authors": [
+      "Po-Chun Chien",
+      "Nian-Ze Lee",
+      "Armin Biere",
+      "Dirk Beyer"
+    ],
+    "published": "2026-08-07T16:41:07+00:00",
+    "summary": "Formal verification of software programs and hardware designs shares the common goal of reasoning about state-transition systems, yet the two communities have largely developed separate intermediate representations and verification algorithms. This paper investigates sequential circuits as an intermediate representation for software verification, with the goal of enabling direct application of hardware-model-checking techniques. We present Circuit-Based Program Verification (CPV), a modular framework that translates C programs into sequential circuits and employs off-the-shelf hardware model checkers as backends. Unlike traditional software verifiers, which typically rely on path-based exploration, CPV reasons over sequential circuits, where a program's control and data flows are folded into a monolithic transition relation that can be analyzed as a whole. The framework supports reachability-safety and termination analyses and integrates multiple state-of-the-art hardware model checkers, which together provide access to diverse verification algorithms, including bounded model checking, $k$-induction, and IC3/PDR. Counterexamples found by hardware model checkers are automatically translated back into software-verification witnesses for users to interpret verification results. We conducted a comprehensive evaluation on a benchmark suite of more than 16000 tasks. Our results show that CPV achieved competitive performance against five well-established software verifiers and exhibited complementary strengths by uniquely solving tasks that other verifiers cannot handle."
+  },
+  {
+    "title": "NiyamAI - An Intent-Bound AI Agent with Cryptographically Verifiable Guardrails using Zero-Knowledge Proofs",
+    "url": "http://arxiv.org/abs/2608.07167v1",
+    "arxiv_id": "2608.07167v1",
+    "authors": [
+      "Aditya Katkar",
+      "Om Karkele",
+      "Kartik Mandhane",
+      "Manisha More",
+      "Yash Kashid"
+    ],
+    "published": "2026-08-07T12:36:52+00:00",
+    "summary": "Giving an AI agent the ability to send emails, query databases, or execute commands is useful--until the agent is tricked into doing something it shouldn't. Prompt injection, hallucinated reasoning, and unsafe tool calls form the primary attack surface for autonomous LLM agents. Existing defenses rely on software checks like system prompts or policy filters running on the same machine the attacker targets, offering no verifiable proof of execution. We introduce Niyam-AI, a framework that makes safety enforcement provable. At session start, permitted tools and constraints are locked into an Intent Contract committed via SHA-256. Every tool call is intercepted and validated by an isolated Judge model; upon passing, a zk-SNARK proof is generated via EZKL.   The tool executes only after proof verification, allowing third parties to confirm enforcement without accessing Judge model weights. Evaluating Niyam-AI on 2,000 real-world scenarios from Agent-SafetyBench against NeMo Guardrails, Meta's Llama Prompt Guard 2, and OpenAI's GPT-OSS-Safeguard using 5-fold stratified cross-validation yields an F1 score of 88.5% with a 1.1% false-positive rate (bootstrap 95% CI: [85.19%, 91.88%], N=1000). McNemar's exact paired test confirms significant improvement: Niyam-AI wins 390 discordant scenarios against NeMo (vs 20 losses), 115 against Prompt Guard 2 (vs 13), and 384 against GPT-OSS-Safeguard (vs 19) with p < 0.0001 in all cases.   Proof generation adds 2260.6 +/- 218.4 ms per approved action, while verification takes 53.1 +/- 11.8 ms. Niyam-AI provides a guardrail that is both highly accurate and mathematically verifiable--though this reflects a classifier adapted to Agent-SafetyBench evaluated against zero-shot baselines, a distinction discussed in Section IV.C."
+  },
+  {
+    "title": "Representation Handoffs for OpenArm-Based Laboratory Mobile Manipulation",
+    "url": "http://arxiv.org/abs/2608.07154v1",
+    "arxiv_id": "2608.07154v1",
+    "authors": [
+      "Yang Shen",
+      "Chonghao Cheng",
+      "Ziyi Zhao",
+      "Jialuo Zhu",
+      "Zhenyi Yi",
+      "Qi Zhao",
+      "Jian Yang",
+      "Yuhui Shi",
+      "Chin-Teng Lin"
+    ],
+    "published": "2026-08-07T12:19:50+00:00",
+    "summary": "Open-source robotics and foundation models have lowered the barrier to embodied AI, yet language-guided laboratory automation still requires reliable alignment from instructions and observations to safe actions. This field report presents an OpenArm-based mobile manipulation prototype for laboratory-style tasks, built by integrating dual OpenArm manipulators with a mobile base, vertical slide, RGB-D sensing, lidar-based mapping, ROS2/MoveIt execution, and profile-defined skill interfaces. The system is organized around representation handoffs: natural language requests are constrained into registered skill calls, sensor observations are grounded into maps and object poses, object priors provide role and skill constraints, and runtime bindings compile validated skills into executable motion goals. We use dry-run traces and startup checks to evaluate this integration path, showing how the prototype exposes missing calibration, incomplete object assets, and unfinished real-scene visual grounding as explicit deployment blockers. These intermediate representations serve as practical debugging interfaces for integrating language, perception, planning, and robot safety in embodied systems."
+  },
+  {
+    "title": "A MARL Centered Reference Architecture for Large Language Model Augmentation in Smart Manufacturing",
+    "url": "http://arxiv.org/abs/2608.07148v1",
+    "arxiv_id": "2608.07148v1",
+    "authors": [
+      "Fouad Bahrpeyma",
+      "Dirk Reichelt"
+    ],
+    "published": "2026-08-07T12:10:08+00:00",
+    "summary": "Modern manufacturing imposes six coupled demands on adaptive control: local decisions with global consequences, partial observability, nonstationarity, reflex speed response with long horizon effects, delayed and diffuse outcomes, and dynamics that resist explicit modeling. Cooperative multiagent reinforcement learning (MARL), posed as a Dec-POMDP under centralized training with decentralized execution, is a particularly natural formalism for these demands. This paper adopts a MARL centered scope and asks where large language models (LLMs) should augment, interface with, train, or, in the strongest competitive case, replace that coordination core. A taxonomy organizes the literature through four LLM attachment points: policy, reward design, communication between agents, and hierarchical planning. A conditional capability profile separates native mechanism, reported performance, formal guarantee, and engineering maturity, and a deployment readiness analysis identifies the evidence behind each role. These stages yield the principal contribution: a three layer MARL centered reference architecture, grounded in evidence, for semantic reasoning, adaptive cooperative control, and independently assured execution. The LLM-Augmented Dec-POMDP is a descriptive comparative notation for that architecture, recording four attachment choices without introducing a new decision process class or algorithm. Under the reviewed evidence, conventional MARL is better suited to frequent, structured, decentralized coordination after task specific training, whereas LLM components are promising for semantic interpretation, reward drafting, human interaction, and slower supervisory planning. Current LLM only manufacturing controllers do not yet establish equivalence for strict real time, decentralized, safety critical control; this conclusion is bounded by the available evidence and does not assert impossibility."
+  },
+  {
+    "title": "Online Conformal Prediction Beyond Feedback",
+    "url": "http://arxiv.org/abs/2608.07139v1",
+    "arxiv_id": "2608.07139v1",
+    "authors": [
+      "Joar Skalse",
+      "Edoardo Pona",
+      "Osvaldo Simeone",
+      "Nicola Paoletti"
+    ],
+    "published": "2026-08-07T11:58:48+00:00",
+    "summary": "Uncertainty quantification is essential when deploying machine learning models in safety-critical applications. Online conformal prediction (OCP) provides theoretically principled uncertainty quantification for arbitrary black-box classifiers and non-i.i.d. data streams by constructing prediction sets that are guaranteed to contain the true label at a user-specified frequency. OCP usually updates prediction sets using feedback from previously deployed predictions. We instead study an OCP setting beyond feedback: on each round, the learner can either output a prediction set or query the correct label, but not both. Thus, no deployed prediction is ever evaluated directly. We reduce this problem to a partial monitoring game in which prediction actions return no observation and a separate query action reveals the label. The reward function is constructed in a way that encourages the learner to output small prediction sets while ensuring that the correct label is covered with a sufficiently high probability. To solve this game, we develop OCP with queries (OCPQ) by adapting the label efficient forecaster of Cesa-Bianchi, Lugosi, and Stoltz (2004) to our setting. For any black box classifier and any (non-i.i.d.) oblivious data stream of length $T$, OCPQ has $O(T^{2/3})$ expected regret and expected coverage at least $\u03b2-O(T^{-1/3})$ for a user-defined $\u03b2$, while querying only an expected $T^{-1/3}$ fraction of rounds. This provides coverage comparable to bandit-based OCP methods while requiring no feedback from deployed prediction sets. Experiments on real-world datasets further demonstrate the effectiveness of our approach."
+  },
+  {
+    "title": "Transformers Struggle to Use Their Emergent World Models: Revisiting the Tower of Hanoi, and the Illusion of Thinking",
+    "url": "http://arxiv.org/abs/2608.07077v1",
+    "arxiv_id": "2608.07077v1",
+    "authors": [
+      "Devin Pereira",
+      "Willem Zuidema"
+    ],
+    "published": "2026-08-07T10:29:19+00:00",
+    "summary": "The Tower of Hanoi is a simple planning puzzle that in prior work has proven challenging for large reasoning models (LRMs). Current models solve the standard formulation of the puzzle, but still struggle with the flat-to-flat variant (where initial and goal states are not restricted to have all rings on a single peg). This paper presents an in-depth study of how both small, in-house Transformers and large, third-party LRMs solve this task. To understand the failures mechanistically, we first train small Transformers from scratch on precomputed solution traces. Using a variety of interpretability techniques, we show that these Transformers develop an emergent world model: a linearly decodable, geometrically faithful representation of the puzzle's state space (the Sierpinski triangle), that is causally involved in solving the puzzles. Second, we return to the large LLMs and apply our techniques to two frontier reasoning models, Qwen3.6-27B and DeepSeek-R1-Distill-Qwen-32B, that attempt to solve the task through extended chain-of-thought. Surprisingly, we find that both models encode the Sierpinski world model near-perfectly at the end of the prompt, and yet fail at the majority of tasks when there are more than 3 rings. We locate the source of this failure in the decaying representation of the world model. We probe for the representation at different stages during planning, and establish causality by showing that performance can be improved by injecting the prompt-time representation at inference. The failure of the models is thus one of maintenance of the required representations, not their absence, and performance is at least partially recoverable. These results thus reframe the reported collapse in performance from prior work: current Large Reasoning Models build a world model, and then lose it."
+  },
+  {
+    "title": "KnifeHunter: Structured Local Representation Learning for Fine-Grained Knife Image Retrieval in Law Enforcement",
+    "url": "http://arxiv.org/abs/2608.07057v1",
+    "arxiv_id": "2608.07057v1",
+    "authors": [
+      "Syed Sameed Husain",
+      "Eng-Jon Ong",
+      "Stephen Simpson",
+      "Trevor Hamshere",
+      "Matt Turner",
+      "Miroslaw Bober"
+    ],
+    "published": "2026-08-07T10:07:16+00:00",
+    "summary": "Knife-enabled violence presents a major public safety challenge, and law enforcement agencies require scalable tools for catalogue-level knife identification, intelligence analysis, and source attribution. Manual visual comparison is specialist, time-consuming, and difficult to scale under operational imaging conditions. We introduce KnifeHunter, an end-to-end forensic knife image retrieval system developed with UK law enforcement. The work contributes the KnifeHunter dataset, comprising 25,843 images across 543 knife classes from police evidence, retail catalogues, and border-force seizures, with structured metadata, Medium/Hard evaluation protocols, and large-scale distractor evaluation. We further propose CoRe-Net, a compact single-descriptor retrieval architecture that combines global context with spatially localised discriminative evidence. CoRe-Net introduces Structured Complementary Representation Learning (SCRL) to organise local evidence into complementary prototype-based representations, and Bi-Directional Reciprocal Fusion (BDRF) to integrate global and local evidence through residual projection and gated local-to-global injection. Using an EVA02-Base backbone and cosine-similarity retrieval, CoRe-Net achieves 88.0% mAP and 86.7% mP@10 on the Medium protocol, and 85.1% mAP and 83.8% mP@10 under distractor conditions. KnifeHunter was deployed by UK police forces during Operation Sceptre deployments from 2023 to 2025, achieving 99.2% mP@1 on field queries. These results demonstrate a practical and effective multimedia retrieval framework for fine-grained forensic knife matching in operational law-enforcement settings."
+  },
+  {
+    "title": "Beyond Foundation Models: Dimension-Aware Neural Architecture Search with Small-Data Representation Models for Cryocooler Lifetime Prediction",
+    "url": "http://arxiv.org/abs/2608.06993v1",
+    "arxiv_id": "2608.06993v1",
+    "authors": [
+      "Gregor Molan",
+      "Grafika Jati",
+      "Francesco Barchi",
+      "Andrea Acquaviva",
+      "Alja\u017e Osterman",
+      "Martin Molan"
+    ],
+    "published": "2026-08-07T09:11:45+00:00",
+    "summary": "Large-scale pretrained time-series models achieve strong results through large-scale pretraining and task-agnostic representation learning, but they rely on abundant, diverse data that industrial and scientific domains often lack. We therefore propose the FSD-RM (Family of Small-Data Representation Models) paradigm as a practical alternative for limited, domain-specific telemetry. Rather than relying on large-scale pretraining, we focus on capacity-controlled representation learning using established encoder architectures (CNN1D, LSTM, GRU, Transformer), selected for their suitability in small-data settings and interpretability.   These encoders are trained unsupervised on multivariate telemetry data and integrated into a two-stage pipeline for downstream lifetime prediction. To systematically examine architectural trade-offs under data constraints, we employ \\textbf{dimension-aware neural architecture search (NAS)} to jointly optimize model capacity and input dimensionality.   Experiments on cryocooler telemetry show that the proposed approach achieves competitive predictive performance while reducing training cost and model complexity. The contribution lies in combining established representation learning techniques within a coherent, NAS-driven framework tailored to small-data regimes, with explicitly defined parameter settings and design choices. The results indicate that effective representation learning can be achieved without large-scale pretraining when appropriate inductive bias and capacity control are applied."
+  },
+  {
+    "title": "HarnessSafe: Evaluating Safety Across Persistent Carriers in Agent Harnesses",
+    "url": "http://arxiv.org/abs/2608.06984v1",
+    "arxiv_id": "2608.06984v1",
+    "authors": [
+      "Xiao Zhang",
+      "Yusheng Wang",
+      "Yuhao Fei",
+      "Dongyuan Li",
+      "Zian Liang",
+      "Liuyu Xiang",
+      "Hongxun Gu",
+      "Zhaofeng He"
+    ],
+    "published": "2026-08-07T09:03:49+00:00",
+    "summary": "Modern agent harnesses persist state across tasks and sessions through persistent carriers like memory, skills, tools, and shared artifacts. However, this capability creates delayed safety risks: attacker-influenced content can cross system boundaries and later affect the execution of a benign request. Existing benchmarks typically focus on a few carriers or harnesses, while end-to-end attack-success rates reveal little about how risks propagate. To this end, we present HarnessSafe, a benchmark comprising 328 executable cases across seven persistent-carrier families and evaluated on most mainstream agent harnesses. Each case is specified as a Persistent-Risk Lifecycle that traces attacker influence from its initial entry, through persistence across carriers and system boundaries, to a later benign trigger and an observable violation. We further introduce a multi-stage, trace-based evaluation that uses observable execution evidence to determine how far each attack chain progresses and where it is stopped. Experiments show that containment is carrier-specific and strongly depends on the harness-model configuration. Both the harness and model backend substantially shape containment outcomes, while attack success rates cannot reflect distinct lifecycle progression patterns."
+  },
+  {
+    "title": "Stream Learning: Partition-Fair Gossip Learning Without Tokens",
+    "url": "http://arxiv.org/abs/2608.06946v1",
+    "arxiv_id": "2608.06946v1",
+    "authors": [
+      "Fabien Mathieu",
+      "Alexandre Pham",
+      "Maria Gradinariu Potop-Butucaru",
+      "S{\u00e9}bastien Tixeuil"
+    ],
+    "published": "2026-08-07T08:22:37+00:00",
+    "summary": "In gossip learning, a network of nodes trains a shared model collaboratively, without a central coordinator, by repeatedly exchanging parts of their local models. The state-of-the-art protocol, Partitioned Token Gossip Learning (PTGL) of Heged{\u00fc}s et al., splits the weight matrix into S fixed partitions and disseminates them using a token-based fairness mechanism coupled with per-neighbor metadata exchange. We revisit partition scheduling by analogy with peer-to-peer live streaming, where model partitions act as video chunks and partition age acts as chunk scarcity. The analogy yields a design space of two-stage selection strategies (partition first, or neighbor first), from which we instantiate ten concrete protocols collectively called Stream Learning. Our main finding is that the simplest of these protocols, which transmits the locally least-trained partition to a uniformly random neighbor (Ri), matches PTGL on fault-free workloads while requiring neither token counters nor metadata exchange. Under an adversarial 30% permanent crash of the best-performing nodes, Ri matches or outperforms PTGL across all complete-graph configurations tested, with the gap reaching 5.53% on HAR and 5.41% on MNIST in the most heterogeneous regime (Dirichlet $\u03b2$ = 0.1). In our experiments, partition fairness, captured by a single local rule on partition age, accounts for the gap; token-based rate control and utility maximization do not improve over this rule and, under heterogeneity, sit below it."
+  },
+  {
+    "title": "Long-Horizon Agent Trajectory Attribution: A Unified Benchmark and Fine-Grained Annotation Framework",
+    "url": "http://arxiv.org/abs/2608.06909v1",
+    "arxiv_id": "2608.06909v1",
+    "authors": [
+      "Jing Chen",
+      "Yang Sun",
+      "Li Zhang",
+      "Lin Xu",
+      "Jie Shi"
+    ],
+    "published": "2026-08-07T07:43:12+00:00",
+    "summary": "Large language model (LLM) agents increasingly operate through long-horizon trajectories involving user instructions, tool use, external observations, and memory. Existing benchmarks primarily evaluate behavioral outcomes but provide limited support for fine-grained attribution analysis. We introduce trajectory attribution and develop a benchmark and annotation framework for this task. The benchmark organizes heterogeneous trajectories under a unified component schema and provides annotations of the primary attribution component, together with attack and execution chains where applicable. Instantiating the benchmark with trajectories from AgentDojo and the Stage and Canary settings of Agent3Sigma yields more than 1,300 annotated trajectories covering task-aligned actions, unsafe actions, and safety refusals. The benchmark defines two evaluation tasks, primary attribution localization and attribution-chain recovery, and provides reference baselines based on incremental trajectory contribution and component-level leave-one-out perturbation. It captures diverse attribution settings, including local and long-range attribution as well as structured attribution chains. Reference baseline results exhibit substantial performance differences across these settings, providing an initial characterization of the benchmark's attribution challenges. Beyond this initial instantiation, we release a reusable annotation skill that enables trajectories generated by new agent models to be standardized, annotated, and evaluated under the same framework. Project resources and future releases are available at https://github.com/chenjing-2024/agent-trajectory-attribution."
+  },
+  {
+    "title": "How Should I Pick a Foundation Model for My Robot? In Favor of a Community Evaluation Framework for Social Robots",
+    "url": "http://arxiv.org/abs/2608.06898v1",
+    "arxiv_id": "2608.06898v1",
+    "authors": [
+      "Eric Nichols",
+      "Alva Markelius",
+      "Hatice Gunes"
+    ],
+    "published": "2026-08-07T07:33:25+00:00",
+    "summary": "Researchers who seek to build social robot applications on foundation models are faced with a difficult question: how should we pick a model? Public leaderboards offer little guidance: the demands of real-time, embodied social interaction lie largely outside their focus. And direct evaluation is impractical at scale: each embodied study requires scarce participant, robot, and experimenter time. In this paper, we identify five evaluation dimensions for foundation models in social robots: (i) conversational competence, (ii) user safety, (iii) embodied character, (iv) target scene effectiveness, and (v) audience appropriateness. To make model selection cheaper and better informed, we propose a three-tiered evaluation funnel paradigm that first filters with general metrics, then extends to simulated interactions, and terminates in more expensive, robot-specific evaluation. We map all five dimensions across all three tiers, chart where applicable evaluation methods exist and are missing, and close with a call to action: let's build the evaluation framework together as a community."
+  },
+  {
+    "title": "FedVAR: Prototype-Aligned Federated Framework for Video Anomaly Recognition",
+    "url": "http://arxiv.org/abs/2608.06876v1",
+    "arxiv_id": "2608.06876v1",
+    "authors": [
+      "Ghani Haider",
+      "Majid Kundroo",
+      "Boyun Eom",
+      "Dong Hwan Park",
+      "Chen Chen",
+      "Taehong Kim"
+    ],
+    "published": "2026-08-07T07:01:42+00:00",
+    "summary": "In the era of Industrial Internet of Things (IIoT) and Cyber-Physical Systems (CPS), Federated Learning (FL) offers a promising decentralized intelligence paradigm for Video Anomaly Recognition (VAR). This task is vital for maintaining high-fidelity Digital Twins and ensuring safety in mission-critical environments. However, the inherent data heterogeneity across distributed edge clients leads to a fundamental challenge known as semantic misalignment, where clients learn divergent feature representations of \"normal\" and \"abnormal\" events. The problem becomes particularly pronounced in VAR, where the presence of diverse and fine-grained anomaly categories leads each client to develop distinct semantic interpretations of abnormality. Existing federated methods primarily focus on binary anomaly detection and fail to address this misalignment, preventing effective fine-grained recognition. In this paper, we introduce FedVAR, a weakly-supervised FL framework explicitly designed for VAR. Leveraging the rich representations of Vision-Language Models (VLMs), FedVAR employs a prototype-based alignment mechanism that creates a shared semantic anchor for all clients to re-center and align their visual and textual feature spaces. This process enforces a consistent representation of \"normality\" across the decentralized network, directly mitigating semantic misalignment and enabling robust prompt-learning of anomaly direction vectors with minimal communication overhead. We conduct extensive experiments on challenging benchmarks under various non-IID data partitioning schemes, unseen domains, and novel anomaly classes. The results demonstrate that FedVAR consistently outperforms state-of-the-art federated baselines, establishing a robust framework for distributed intelligence in video-based CPS."
+  },
+  {
+    "title": "Multi-Agent Forensic Reasoning for Generalizable Deepfake Video Detection",
+    "url": "http://arxiv.org/abs/2608.06865v1",
+    "arxiv_id": "2608.06865v1",
+    "authors": [
+      "Xuechao Zou",
+      "Shun Zhang",
+      "Kai Li",
+      "Yi Zhou",
+      "Xinyu Sun",
+      "Yuhui Chen",
+      "Zhe Wu",
+      "Congyan Lang",
+      "Junliang Xing"
+    ],
+    "published": "2026-08-07T06:44:14+00:00",
+    "summary": "The malicious use of generative artificial intelligence to create highly realistic deepfake videos raises serious ethical concerns and poses substantial challenges to AI safety. However, existing deepfake video benchmarks provide limited coverage of recent synthesis methods and generally lack reliable fine-grained textual annotations. Meanwhile, conventional detectors and multimodal large language models (MLLMs), whether operating as a single model or relying on a single analytical perspective, often fail to capture subtle forgery artifacts, limiting their generalization to emerging AI-generated methods. To address these limitations, we introduce FaceVid-Forensics-100K, a large-scale deepfake video dataset comprising 100,000 videos and spanning 33 synthesis methods across face swapping, face reenactment, and entire-face synthesis, including recent generators such as Seedance 2.0. The dataset provides fine-grained textual annotations of visual observations and verdict-consistent forensic explanations, automatically synthesized through a multi-model aggregation and conflict-resolution pipeline powered by advanced MLLMs. Building on this benchmark, we propose a multi-agent forensic reasoning framework that employs four specialized domain-expert agents to independently analyze forgery cues from four perspectives: texture, lighting, motion, and physics. A judge agent then reconciles their reports to produce a final prediction together with an explanation. Extensive evaluations on out-of-domain test sets show that, despite being composed entirely of small open-source MLLMs, our framework outperforms all methods including closed-source GPT and Gemini models and ranks first across all reported metrics on this benchmark. The project page is available at https://xavierjiezou.github.io/ARGUS/."
+  },
+  {
+    "title": "Genotypic Triggers: Exposing Pharmacogenomic Blind Spots via Host-Specific Backdoors in Generative Antimicrobial Peptide Models",
+    "url": "http://arxiv.org/abs/2608.06779v1",
+    "arxiv_id": "2608.06779v1",
+    "authors": [
+      "Doniyorkhon Obidov",
+      "Xiaolong Guo",
+      "Yonghui Li",
+      "Kaichen Yang"
+    ],
+    "published": "2026-08-07T03:54:54+00:00",
+    "summary": "Large Language Models (LLMs) have accelerated drug discovery, particularly in the automated design of antimicrobial peptides (AMPs). However, current validation pipelines for peptide generation models overlook historical precedents showing that certain drugs carry health risks predominantly for individuals with specific genetic profiles. In this paper, we demonstrate that such targeted health risks can be induced intentionally and at scale by manipulating models that generate peptide candidates. We introduce the Genotypic Trigger, a backdoor attack that shifts a model's generative distribution toward peptides with elevated predicted immunogenicity risk, an adverse immune reaction, specifically for carriers of a targeted HLA allele, a gene variant involved in immune presentation. Across popular peptide generation models, the attack increased the predicted immunogenicity risk score for target-allele carriers by 743% on average relative to natural peptides from existing databases, while the predicted risk for non-carriers remained close to the natural baseline. Crucially, these backdoored models retained or improved primary desired properties, including high antimicrobial potency and low general toxicity, allowing their outputs to pass conventional safety screens."
+  },
+  {
+    "title": "Suppress and Diversify: Refining Robust Pathways for Corruption Robustness",
+    "url": "http://arxiv.org/abs/2608.06712v1",
+    "arxiv_id": "2608.06712v1",
+    "authors": [
+      "Jiangang Yang",
+      "Wenhui Shi",
+      "Xiaoran Xu",
+      "Wenyue Chong",
+      "Luqing Luo",
+      "Jing Xing",
+      "Jian Liu"
+    ],
+    "published": "2026-08-07T02:11:59+00:00",
+    "summary": "Model robustness against natural image corruptions is essential for safety-critical applications. While existing methods primarily focus on implicit representation learning, we provide the first systematic exploration of computational pathways to explicitly characterize internal robustness. We identify a progressive decay of robust features across network layers and establish a functional dependency between the prevalence of these features and model performance. To exploit these insights, we propose Suppress and Diversify (S\\&D), a non-intrusive refinement approach that enhances robustness by dynamically selecting robust pathways and diversifying them through symmetry-preserving transformations. S\\&D is architecture-agnostic, parameter-free, and incurs zero test-time overhead. Extensive evaluations across eight benchmarks demonstrate that S\\&D consistently improves performance across multiple vision tasks, diverse backbones, and complex real-world scenarios, highlighting its broad efficacy and scalability."
+  },
+  {
+    "title": "Translation Tag Team: Formal Rules and LLMs Translate More Macros Together than Apart",
+    "url": "http://arxiv.org/abs/2608.06705v1",
+    "arxiv_id": "2608.06705v1",
+    "authors": [
+      "Brent Pappas",
+      "Joseph Zalusky",
+      "Zachary Burkett",
+      "Paul Gazzillo"
+    ],
+    "published": "2026-08-07T02:02:01+00:00",
+    "summary": "Modern critical software infrastructure is largely written in C. Since C lacks memory safety, researchers are investigating automatic translation of C to safer languages like Rust. But real-world C software consists of more than just C code, often using named code fragments called macros which are not part of the C language proper. State-of-the-art techniques avoid translating macros by preprocessing C code first before translating it. But this approach produces translations that are dissimilar to the original C code, because preprocessing inlines all macro definitions. To preserve macro usage in translated code, we study the language features that macros and C share and distill them into the first formally-specified translator, MerC. To evaluate MerC, we introduce the first macro translation benchmark, MacroBench, with test cases based on macros randomly sampled from real-world C programs. We find that MerC supports 50% of MacroBench's macro test cases. We also use MacroBench to evaluate how effective large language models (LLMs) are at performing the previously-unstudied task of macro translation. LLMs translate 22% to 77% more of MacroBench than MerC, but with 8% and 28% of these translations being incorrect translations requiring additional validation by developers. In contrast, MerC only produces correct translations. Our key insight is that running MerC first then using LLMs on the remainder reaps greater benefits than using either technique alone. This tag team approach has an average failure rate 32% lower than that of LLMs, while also translating an average of 51% more test cases than MerC."
+  },
+  {
+    "title": "Corrupting Attention: Evasion-Based Adversarial Attacks on Encoder Attention in Detection Transformers",
+    "url": "http://arxiv.org/abs/2608.06674v1",
+    "arxiv_id": "2608.06674v1",
+    "authors": [
+      "Ridma Jayasundara",
+      "Shaheer Mohamed",
+      "Tharindu Fernando",
+      "Harshala Gammulle",
+      "Basura Fernando",
+      "Sanka Rasnayake",
+      "A V Subramanyam",
+      "Sridha Sridharan",
+      "Clinton Fookes"
+    ],
+    "published": "2026-08-07T00:42:25+00:00",
+    "summary": "Adversarial vulnerabilities remain a major concern for the safe deployment of neural networks, particularly in object detection, a core task embedded in many safety-critical systems. Detection transformers have emerged as leading object detectors, yet their adversarial robustness remains comparatively underexplored. Most existing attacks target the detection output rather than the attention mechanism that makes these models distinctive. In this paper, we introduce the first attack that directly optimizes an encoder-attention objective under an imperceptible, bounded $\\ell_\\infty$ perturbation. Rather than introducing an attacker-owned sink token through a visible patch, it drives the model's own attention toward a corrupted target. We argue that encoder attention concentrates the model's spatial reasoning, so corrupting it propagates through the detection pipeline more disruptively than perturbing the detection output alone. Our attack reduces DETR-R50 mAP on COCO from 42.1 to 0.97, a $\\sim 4\\times$ reduction in resulting mAP over the strongest existing attack under an identical perturbation budget and iteration count. We further show that this vulnerability is not specific to a particular corruption objective: across four qualitatively distinct targets, dispersion, re-ranking, permutation, and peak-suppression, detection consistently drops below 3 mAP, suggesting that the weakness arises from disrupting the attention structure itself rather than from any single target. Finally, we demonstrate that the attack generalizes across attention formulations, reducing DINO-Swin-L from 56.8 to 1.44 mAP against 7.3 for the strongest prior attack, establishing state-of-the-art on both dense and deformable attention."
+  },
+  {
+    "title": "The Horizon Gap: Planning, Memory, Execution, Training, and Evaluation for Long-Horizon LLM Agents",
+    "url": "http://arxiv.org/abs/2608.06663v1",
+    "arxiv_id": "2608.06663v1",
+    "authors": [
+      "Mingguang Chen",
+      "Licheng Wang",
+      "Bo Qu"
+    ],
+    "published": "2026-08-07T00:19:48+00:00",
+    "summary": "Frontier language models solve reasoning problems in a single forward pass that would have been research contributions years ago, yet fail at multi-hour tasks: losing track of earlier decisions, declaring half-finished work done, or drifting from goals. We call this the horizon gap and survey 1,547 arXiv papers (2024-2026) collected via systematic seed harvest with a disclosed 26.8% bleed filter, extended by targeted supplementation. We disambiguate three routinely conflated properties: long-horizon (task property: required steps), long-context (model property: token capacity), and long-term memory (system property: persistence across steps/sessions). We organize the corpus into six categories tracking a long-horizon task's lifecycle -- planning, memory, execution, training, evaluation, and foundations/safety -- crossed with an axis capturing where horizons are carried (within-context, within-task-beyond-context, or cross-task-persistent). Across all categories, we find the same pattern: outcome-only signals grow uninformative as horizons lengthen, and the field's response -- whether process reward models, credit assignment, or trajectory-level diagnostics -- manufactures denser step-level signals. We treat critical and diagnostic literature as first-class threads throughout, arguing that segregating critique from method would routinely split single papers across chapters. We close by naming open measurement problems: decomposing model versus harness capability, managing correlated bias in process-level signals used for both training and evaluation, and whether long-horizon reliability admits general predictive theory."
+  },
+  {
+    "title": "CyberLLM: A Multi-Agent LLM Framework for Autonomous Detection and Guarded Response in Automotive Cybersecurity",
+    "url": "http://arxiv.org/abs/2608.06651v1",
+    "arxiv_id": "2608.06651v1",
+    "authors": [
+      "Nenad Petrovic",
+      "Oussama Jeddou",
+      "Feres Ben Fraj",
+      "Vahid Zolfaghari",
+      "Fengjunjie Pan",
+      "Andre Schamschurko",
+      "Alois Knoll"
+    ],
+    "published": "2026-08-06T23:39:13+00:00",
+    "summary": "Software-Defined Vehicles (SDVs) expand the automotive attack surface across source code, runtime logs, and deployment topologies, while safety constraints forbid autonomous agents from acting without oversight. This paper presents CyberLLM, a multi-agent, LLM-orchestrated framework that autonomously detects vulnerabilities and executes remediations under a formal, runtime safety guard. Detection combines a deterministic layer (regex rules, AST analyzers, and topology graph checks) with an LLM refinement pass, so a high-recall floor is complemented by high-precision reasoning. A decision agent aggregates findings, tags them with a human-centric asset taxonomy, and selects a tiered response, ratcheting its confidence with signed cross-session memory and re-planning feedback. Every action is validated against four contextual security properties and an independent action-alignment oracle before it is allowed to run, and refused actions trigger escalation and re-planning. A symmetric attack pipeline generates and replays exploits so both sides can be exercised on the same scenarios. On an independent, ground-truthed benchmark of nine original automotive ECU modules in C, C++, and Rust seeding 47 layered vulnerabilities plus clean controls, the always-on deterministic layer covers 34\\% of the labeled vulnerabilities at perfect precision, and adding the grounded LLM refinement and completeness passes roughly doubles coverage to about 70\\% (F1 $0.83$) while producing zero false positives on the clean controls. The results indicate that LLM agents can perform useful autonomous cyber-defense when wrapped in a deterministic, auditable safety envelope."
+  },
+  {
+    "title": "SoRoMoX: Fast, Differentiable, and Parallelizable Soft Robot Models",
+    "url": "http://arxiv.org/abs/2608.06650v1",
+    "arxiv_id": "2608.06650v1",
+    "authors": [
+      "Maximilian St\u00f6lzle",
+      "Solange Gribonval",
+      "Daniel Feliu-Talegon",
+      "Vito Daniele Perfetta",
+      "Michele Martini",
+      "Chuhan Zhang",
+      "Kiwan Wong",
+      "Mohammed Tarnini",
+      "Anup Teejo Mathew",
+      "Federico Renda",
+      "Daniela Rus",
+      "Cosimo Della Santina"
+    ],
+    "published": "2026-08-06T23:31:47+00:00",
+    "summary": "Reduced-order models based on Cosserat-rod theory are now well established, and modeling theory is no longer the primary bottleneck in soft-robot control. Their implementations, however, do not support the differentiable, GPU-parallel, and control-oriented workflows that underpin advanced rigid-robotics applications. Here, we fill this gap with SoRoMoX (Soft Robot Models in JAX), a fully numerical, JIT-compilable Python/JAX framework. SoRoMoX implements articulated, Piecewise Constant Strain, and Variable Strain models through a unified, control-ready interface that provides inertia matrices, gravitational and elastic forces, Jacobians, and their derivatives. To our knowledge, it is the first rod/strain-based soft-robot modeling framework that runs directly on GPUs and is end-to-end differentiable with respect to states, inputs, and parameters. Sequential CPU rollouts are up to 18.1x faster than state-of-the-art alternatives, while GPU-parallel rollouts increase throughput by up to 234.6x. This performance enables workflows that were previously impractical or impossible: static-equilibrium system identification with 66% lower marker RMSE; residual-force learning with a further 64% reduction; computed-torque tracking with RMSE reduced by a factor of approximately 500 relative to model-free PD; control-gain optimization with up to 62% lower loss than untuned gains; safety-constrained control using high-order control barrier functions to keep the peak contact force within a prescribed 5 N bound, compared with 33.5 N without the safety constraint; and reinforcement-learning policy training up to 7x faster than a CPU PyElastica discrete-rod baseline through massively parallel rollouts."
+  },
+  {
+    "title": "CIPS: Maximal Certified Persistence in Cyber-Physical Systems",
+    "url": "http://arxiv.org/abs/2608.06626v1",
+    "arxiv_id": "2608.06626v1",
+    "authors": [
+      "Avinash Malik"
+    ],
+    "published": "2026-08-06T22:25:02+00:00",
+    "summary": "We introduce the Theory of Certified Information Persistence   Systems (CIPS), a universal mathematical framework for computing   the maximal certified persistence of information in cyber-physical   systems (CPS). CIPS provides an axiomatic foundation that separates   the continuous evolution of state validity from discrete, memoryless   control interventions. By accommodating digital sampling and execution   latency through robust set contraction, the framework mathematically   isolates a system's maximal certified persistence horizon --- a   strict theoretical upper bound on safe autonomous operation relative   to the system's defined metric growth bounds. Our central   representation theorem proves that CIPS provides a universal   representation framework: every empirically safe scheduling policy, is   structurally isomorphic to a conservative surrogate evaluation within   a canonical CIPS. By dynamically targeting this latency-compensated   canonical horizon, the framework minimizes conservatism relative to   the bounding assumptions, achieving an optimal certified scheduling   policy, minimizing computational and network interventions while   mathematically guaranteeing continuous physical safety."
+  },
+  {
+    "title": "Divergent Response Modes in Frontier Language Models Under Steering Pressure",
+    "url": "http://arxiv.org/abs/2608.06578v1",
+    "arxiv_id": "2608.06578v1",
+    "authors": [
+      "Ali Jalal-Kamali"
+    ],
+    "published": "2026-08-06T20:48:14+00:00",
+    "summary": "Frontier language models are trained using distinct data, objectives, and safety pipelines. Whether these differences produce measurably different behaviors under explicit steering pressure remains underexplored. This study evaluates behavioral steerability across six frontier models from six developers using 300 paired base and steered items over three categories: values-conflict, reasoning-elicitation, and reasoning-suppression (plus 40 validation items). All six models act as blind peer judges and classify every response based on fixed behavioral rubrics. The resulting 24,480 judgments are scored by leave-one-out consensus. We find that models differ not just in how much steering shifts their behavior but in what kind (mode) of response they give, and some response modes appear in only one or two of them. GPT-5 deflects requests to disclose its reasoning while leaving its answer intact (99% vs. 0% for all other models). Claude Opus 4.7 and GPT-5 resist explicit suppression instructions and in different ways. Using Llama as the open-weight model, we trace the largest behavioral split to its internals. A linear probe decodes the behavior from the residual stream at 0.87 held-out accuracy while injecting that direction during generation drives the behavior from 0% to 86% across an intervention sweep. Every finding holds under both a token-budget remediation and a control experiment with a hypothesis-blind judgment prompt."
+  },
+  {
+    "title": "Quantization Damage Is Multiplicative, Not Additive",
+    "url": "http://arxiv.org/abs/2608.06564v1",
+    "arxiv_id": "2608.06564v1",
+    "authors": [
+      "Zekun Wu",
+      "Swati Dhiman",
+      "Adriano Koshiyama"
+    ],
+    "published": "2026-08-06T20:22:21+00:00",
+    "summary": "Quantization is how large language models are actually deployed, and below four bits it is known to hurt. What nobody can say is which of the model's decisions will change at a given bit-width. The damage is silent: a compressed agent stops calling its tools, then loses half its safety refusals, yet benchmark scores barely move. Prior work assumes quantization adds noise of a roughly fixed size, which would make confident decisions safe. We measure the decision itself instead. The margin of a two-way decision is the model's score for the option it picks minus the score of its best alternative; we track it before and after quantization across 16 models from 8 model families, three quantization methods, and bit-widths from 8 down to 2. Quantization does not add fixed-size noise to the margin. It multiplies the margin by a factor that collapses with bit-width (median 0.86 at 4 bits, 0.33 at 3, 0.00 at 2); we call this margin shrinkage. This contraction reduces the protection a large margin affords; the model's own small biases pick the direction of failure: at 3 bits the decision to call a tool collapses toward inaction while the choice of which tool is untouched. In fitted statistical comparison, additive-noise accounts never win on the damaged tool and safety decisions. The fitted relation predicts flip rates within a median of 1.8 percentage points on held-out decisions, though no flip was used in the fit; per decision, the predicted flip probabilities are calibrated uncertainty estimates (expected calibration error 0.004 over 131,758 predictions). The same form holds in every model we measure, but the constants are each model's own and do not transfer. A small paired margin set, measured per model and bit-width, estimates which decisions break without full generative evaluation; under our cost-matched tests, nothing repairs damage more cheaply than one more bit."
+  },
+  {
+    "title": "StepJack: Benchmarking Computer-Use Agent Safety Against Multi-Step Indirect Prompt Injection",
+    "url": "http://arxiv.org/abs/2608.06477v1",
+    "arxiv_id": "2608.06477v1",
+    "authors": [
+      "Zhuoxin Zhan",
+      "Akbar Rafiey",
+      "Avery Ma",
+      "Leila Pishdad",
+      "Layla El Asri"
+    ],
+    "published": "2026-08-06T18:14:30+00:00",
+    "summary": "Computer-use agents (CUAs) face a growing threat from indirect prompt injection, where adversarial instructions are planted in the environment such as web pages. In this paper, we introduce multi-step indirect prompt injection, a new attack class against CUAs in which the adversarial goal is decomposed into multiple innocuous-looking sub-steps and distributed across a chain of pages referenced along the agent's navigation path. We develop a pipeline to automatically decompose an adversarial goal under the constraint that the execution of the decomposed sub-steps must achieve the original goal while optimizing the innocuousness of each decomposed sub-step. With this pipeline, we build StepJack, a CUA safety benchmark with 480 test examples. On this benchmark, we evaluate six state-of-the-art CUAs and find that at a fixed decomposition depth, multi-step attacks raise attack success rate (ASR) on three of six CUAs, by up to 31.2 points (e.g., GPT-5.4-mini: 41.7% at single-step to 72.9% at three-step); averaged over the five CUAs that can reliably follow the reference chain (all but EvoCUA-32B), ASR rises from 31.3% at single-step to 36.9% at three-step. Dataset and code are available at https://github.com/BorealisAI/StepJack."
+  },
+  {
     "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
     "url": "http://arxiv.org/abs/2608.06353v1",
     "arxiv_id": "2608.06353v1",
@@ -87,6 +498,16 @@
     ],
     "published": "2026-08-06T14:39:55+00:00",
     "summary": "Artificial Intelligence (AI)-assisted navigation can help Arctic shipping adapt to rapidly changing sea-ice conditions, but reliable deployment requires reward models that are interpretable and robust to changing environments. Inverse reinforcement learning (IRL) provides a framework for recovering such rewards from vessel trajectories, while recent meta-IRL methods introduce latent context variables to capture behavioral heterogeneity. However, it remains unclear whether these latent representations recover genuinely hidden preferences or simply re-encode information already available in the observed state. We conduct a controlled evaluation on 3,186 AIS-derived voyages from 202 vessels across nine Arctic shipping seasons, comparing a linear shared reward, a nonlinear shared reward, and a latent-context model built on the same nonlinear architecture. The nonlinear reward improves held-out likelihood by 50.9% over the linear baseline, whereas adding vessel-specific latent context reduces performance by 16.5%. Behavioral analysis, context probes, and a pre-registered feature-hiding ablation show that apparent vessel-level variation is largely explained by observable route and environmental conditions rather than hidden vessel-specific factors. Moreover, predictive accuracy, route fidelity, and reward transfer yield different model rankings, demonstrating that no single metric is sufficient to evaluate learned rewards. These findings motivate testing whether the observed route, environmental, and vessel features already explain behavioral variation before adding per-vessel latent context. This supports more trustworthy AI deployment in safety-critical domains."
+  },
+  {
+    "title": "Game-Theoretic Inverse Reinforcement Learning for Modeling Competitive Human Driving: A Cut-in Prediction Study",
+    "url": "http://arxiv.org/abs/2608.06445v1",
+    "arxiv_id": "2608.06445v1",
+    "authors": [
+      "Yu Song"
+    ],
+    "published": "2026-08-06T14:14:48+00:00",
+    "summary": "Capturing the strategic decision-making inherent in competitive human driving is critical for autonomous vehicle safety and traffic simulation. This study demonstrates that game-theoretic Inverse Reinforcement Learning (IRL) provides a robust framework for this challenge. We present a comprehensive analysis comparing data-driven IRL models against an established physics-based game-theoretic approach for predicting aggressive, safety-critical cut-in lane changes. Using the high-fidelity highD dataset, we systematically develop and evaluate a series of IRL models with increasing feature complexity. Our results reveal significant advantages: the best-performing IRL models achieve an overall prediction accuracy exceeding 75 percent while maintaining a Cut-In precision up to 51 percent and recall up to 49 percent. This represents a significant improvement over the established physics-based benchmark, which achieved only 4.4 percent precision in these high-stakes scenarios. The analysis reveals a clear trade-off: incorporating granular, instantaneous features yields higher precision, while adding temporal consistency features maximizes recall. These findings suggest that IRL-based models can effectively bridge the gap between microscopic driver intent and macroscopic safety outcomes, providing a more reliable foundation for modeling interactions in mixed-autonomy environments."
   },
   {
     "title": "From Economic Agents to Agentic Economies: A Systems Blueprint for Economic World Models",
