@@ -1,5 +1,726 @@
 [
   {
+    "title": "CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting",
+    "url": "http://arxiv.org/abs/2610.26852v1",
+    "arxiv_id": "2610.26852v1",
+    "authors": [
+      "Zehao Wang",
+      "Jianpeng Yao",
+      "Yuping Wang",
+      "Yiping Li",
+      "Jiaqi Li",
+      "Zhixu Li",
+      "Kanghoon Lee",
+      "Jinfeng Wang",
+      "Cong Liu",
+      "Zhaowei Tan",
+      "Jinkyoo Park",
+      "Jiachen Li"
+    ],
+    "published": "2026-10-19T17:59:49+00:00",
+    "summary": "Reinforcement learning enables mobile robots to make fast and scalable navigation decisions in constrained human-shared environments. However, directly extending single-robot approaches to multi-robot settings often fails to ensure safety and efficiency, especially under occlusions and out-of-distribution (OOD) scenarios, where individual robots may overlook potential risks or make inaccurate predictions. Leveraging cooperation effectively for both prediction and navigation remains a major challenge. We propose CoopUQ, a multi-robot social navigation framework that bridges uncertainty-aware cooperative occupancy forecasting and robust decision making. CoopUQ predicts future occupancy grid maps through cross-robot spatiotemporal feature fusion and further leverages forecasts and their uncertainty to guide policy via constrained multi-agent reinforcement learning, where the cost penalizes navigation through regions predicted to be occupied or highly uncertain. This design enables the policy to adapt its risk sensitivity under distribution shifts. Experimental results across multiple Unity3D-based simulation environments with both in-distribution and OOD settings, including diverse layouts, pedestrian densities, and rushing behavior, demonstrate improved prediction performance and safety over representative baselines. Real-robot experiments further demonstrate its robustness across various scenes. Our code and videos are available at https://coopuq.github.io/."
+  },
+  {
+    "title": "Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability",
+    "url": "http://arxiv.org/abs/2610.26809v1",
+    "arxiv_id": "2610.26809v1",
+    "authors": [
+      "Zhengyue Zhao",
+      "Liwei Jiang",
+      "Yejin Choi",
+      "Chaowei Xiao1"
+    ],
+    "published": "2026-10-19T17:49:49+00:00",
+    "summary": "Safety alignment for large language models (LLMs) is primarily performed during post-training, while recent work has also begun incorporating safety data into pre-training. Yet safety can degrade when later training no longer includes safety data, and gains in safety often come at the cost of general capability. This tension suggests that safety and general reasoning should not be treated as separate training goals. We instead view safety as an LLM capability that can be learned through a reasoning structure shared with general tasks. Both require the model to understand intent or task goals, apply relevant knowledge, and reason about potential consequences. We introduce safety mid-training, a stage between pre-training and post-training that jointly develops safety and general reasoning through this shared structure. Given safety and utility prompts, the base model generates structured documents and reasoning traces that are then used for mid-training. Safety mid-training reduces average attack success rate (ASR) by 72% to 81% relative to Qwen3-1.7B, 4B, and 8B base models, while also improving general capability. The benefits persist through subsequent post-training. After general-only SFT, mid-trained models largely retain their safety, achieving lower ASR than the baselines without sacrificing general capability. They also retain safety under general-only GRPO without safety rewards, while subsequent RL reaches a better safety-utility frontier when initialized from the mid-trained models. Together, these results suggest that learning safety and general reasoning within a shared mid-training stage can reduce the safety-utility trade-off and make safety more robust to subsequent training."
+  },
+  {
+    "title": "An Efficient Open-Source Framework for Thermohygromechanical Phase-Field Simulation of Drying Damage Refractory Castables",
+    "url": "http://arxiv.org/abs/2610.26752v1",
+    "arxiv_id": "2610.26752v1",
+    "authors": [
+      "Murilo H. Moreira",
+      "Roberto F. Ausas",
+      "Stefano Dal Pont"
+    ],
+    "published": "2026-10-19T17:14:44+00:00",
+    "summary": "The water removal from refractory castables is a complex process involving heat and mass transport and thermohygromechanical stresses. In order to reduce the risk of explosive spalling by improving the heat-up curves, numerical models are critical to predict the castable behavior during drying. However, most of the existing models either neglect the thermomechanical stresses or consider them as an \\textit{a posteriori} assessment of the likelihood of failure. The present work proposes an open-source thermohygromechanical phase-field model to simulate the drying of refractory castables and predict the occurrence of explosive spalling. The model is based on an adaptive two-scale time-stepping strategy that allows for a significant reduction of the computational cost associated with the simulation. The model was validated against literature results and qualitative comparisons with experimental data were carried out to assess its ability to predict the failure behavior of partially saturated porous media during heating. The numerical simulations were also applied to investigate the impact of different heating methods on the risk of failure during drying. It was found that even at the significantly lower heating rates typical of refractory castable drying - compared to the fire accidents that motivate most thermomechanical studies on concrete structures - thermomechanical stresses still play a significant role in the explosive spalling, a finding well established for concrete under fire but novel for refractory castables. As a consequence, it was also concluded that the use of heterogeneous heating methods can increase the likelihood of explosive spalling. Ultimately, feasible solutions to increase the drying efficiency and safety that are compatible with the industrial setting were proposed and a free, open-source implementation of the model is provided."
+  },
+  {
+    "title": "Towards Robust Model Organisms for Eliciting Latent Knowledge",
+    "url": "http://arxiv.org/abs/2610.26698v1",
+    "arxiv_id": "2610.26698v1",
+    "authors": [
+      "Lennart Finke",
+      "Hardik Bhatnagar",
+      "Euodia Dodd",
+      "Francis Rhys Ward",
+      "Yves-Alexandre de Montjoye",
+      "Matthias Bethge",
+      "Mary Phuong"
+    ],
+    "published": "2026-10-19T16:36:51+00:00",
+    "summary": "A key problem in AI safety is eliciting latent knowledge (ELK), extracting information from a model that is misaligned and more knowledgeable than its overseer. For example, a misaligned model used to scan code for vulnerabilities may want to withhold its findings, i.e., sandbag, in order to exploit them later. To study ELK empirically, we need model organisms that mirror this setting. Existing model organisms fall short in several respects. In this work, we train model organisms to withhold solutions in a vulnerability detection task. We combine transcript distillation with counter-prompting and tamper-resistance training to instill three properties that we argue are critical for a useful ELK testbed: 1) Selectivity, the model sandbags when it thinks the overseer doesn't know the answer and complies otherwise, 2) Robustness, the model resists elicitation, and 3) Retention, the model retains a knowledge advantage over the overseer, as opposed to losing the relevant capability. We train a sequence of model organisms and show that our strongest model substantially outperforms prior models on robustness while keeping the other two properties intact. We hope that our model organisms provide a useful ELK testbed for the community, and that our methodology sparks the development of increasingly challenging model organisms.   All our code, models and the dataset are available at https://huggingface.co/collections/lennart-finke/sandbagging."
+  },
+  {
+    "title": "A Type System for Communication-Safe Hardware Design",
+    "url": "http://arxiv.org/abs/2610.26599v1",
+    "arxiv_id": "2610.26599v1",
+    "authors": [
+      "Aditya Ranjan Jha",
+      "Jason Zhijingcheng Yu",
+      "Umang Mathur",
+      "Prateek Saxena"
+    ],
+    "published": "2026-10-19T15:41:03+00:00",
+    "summary": "Hardware components communicate through clock-cycle-sensitive protocols. Hardware Description Languages (HDLs), however, provide limited support for expressing these protocols or for checking that independently developed components agree on them. When components disagree, the composed design can perform unsynchronized exchanges or stop making progress. We call these failures communication-safety violations. Communication safety is therefore a global property, determined by interactions between multiple components. This makes it difficult to check modularly.   This paper presents Pact, a typed extension of Anvil for modular verification of communication safety in synchronous hardware. Pact types describe message-passing, control-flow, and clock-cycle behaviour. Each component is checked against its type. Compatible types then guarantee that the components compose into a communication-safe system.   Pact also supports incremental design. It can check a subsystem before the full system context is available. The check produces a summary type that captures the communication behaviour left for future compositions. To reduce annotation burden, Pact infers types by abstracting payload values while preserving communication, timing, control, and fairness. These inferred types are optimal for the checker: whenever some checker-accepted types can prove compatibility, the inferred types can prove it as well. Type inference and type checking are decidable, and compatibility is decided by a sound and complete algorithm.   We implement Pact by extending the Anvil compiler and evaluate it along four dimensions: detecting communication errors during incremental design, expressiveness on ten clock-cycle-accurate translations of open-source hardware IPs, compatibility-checking time, and generated hardware overhead. Pact expresses realistic protocols and verifies all ten benchmarks in reasonable time."
+  },
+  {
+    "title": "Concerns in Benchmarking Jailbreaks: An Empirical Study of Attack Success Rates",
+    "url": "http://arxiv.org/abs/2610.26595v1",
+    "arxiv_id": "2610.26595v1",
+    "authors": [
+      "Leon Tu Nguyen",
+      "Rohan Menon",
+      "Rafael Tappe Maestro",
+      "Eric Aubinais",
+      "Chih-Hong Cheng"
+    ],
+    "published": "2026-10-19T15:39:16+00:00",
+    "summary": "Jailbreak methods are commonly compared using Attack Success Rate (ASR), but these comparisons depend on how responses are generated and judged. In this paper, we examine eight attacks against three open-weight language models using three evaluation procedures. Low-resource language attacks achieve a mean ASR of 96.0% under keyword matching but 2.7% under a Qwen3 evaluator following StrongREJECT scoring instructions. Changing the number and arrangement of attempts reverses the ranking of DeepInception and rewriting. In a separate experiment, sampling 100 responses for each unchanged request at Ollama's default temperature of 0.8 yields 100% ASR under keyword matching but 50% under the Qwen3 evaluator. Beyond evaluator sensitivity, these findings raise a safety concern: repeated sampling can expose residual unsafe behavior despite an initial refusal, suggesting probabilistic suppression rather than robust exclusion. We recommend explicit success definitions, matched response budgets, validated evaluators, and reporting cumulative failure under repeated interaction rather than relying on single-generation tests."
+  },
+  {
+    "title": "Beyond Attack Success Rate: Cost-Aware Metric for Evaluating Iterative LLM Jailbreaks",
+    "url": "http://arxiv.org/abs/2610.26589v1",
+    "arxiv_id": "2610.26589v1",
+    "authors": [
+      "Rohan Menon",
+      "Chih-Hong Cheng"
+    ],
+    "published": "2026-10-19T15:36:41+00:00",
+    "summary": "Attack success rate (ASR) evaluates jailbreaks against large language models without accounting for repeated calls to the victim model. Yet each additional call gives the deployed system another opportunity to detect the attack and intervene. We introduce $\\mathrm{ASR}_{\\mathrm{STEP}}$, which penalizes additional victim-model calls while retaining binary success judgments. Our evaluation considers GCG~\\cite{zou2023universal}, PAIR~\\cite{chao2025jailbreaking} with a step budget, and a single-step PAP~\\cite{zeng2024johnny} baseline on JailBreakBench across three model families. GCG's scores decrease by 7.0--8.7 percentage points after discounting, while PAP's remain unchanged. While for PAIR~\\cite{chao2025jailbreaking}, we see a wider discounting range between 3.4-12 percentage points, showing that the \"step\" quantity differs per iterative strategy. Reporting both metrics makes the discount due to repeated victim-model interaction explicit. Code is available \\hyperlink{https://github.com/SuELS-Group/beyond_asr}{here}."
+  },
+  {
+    "title": "SafeWall: A Risk-Aware Job Walltime Recommendation for HPC Scheduling",
+    "url": "http://arxiv.org/abs/2610.26577v1",
+    "arxiv_id": "2610.26577v1",
+    "authors": [
+      "Kanglin Xu",
+      "Michael Papka",
+      "Zhiling Lan"
+    ],
+    "published": "2026-10-19T15:27:28+00:00",
+    "summary": "In high-performance computing (HPC), users must submit resource requirements for their jobs, with user-supplied walltime being a critical parameter. However, these estimates are notoriously inaccurate, as users tend to overestimate walltime to prevent the scheduler from terminating their jobs prematurely. While existing work on learning-based walltime prediction primarily focuses on maximizing prediction accuracy, such predictions are inherently risky for walltime recommendations. Specifically, underestimation leads to job termination before completion, resulting in lost progress and wasted resources. In this study, we present SafeWall, a novel recommendation method that adjusts walltime predictions by incorporating an explicit, nonnegative safety buffer to mitigate underestimation risk. The core of our approach is a risk-aware buffer that dynamically calibrates safety margins based on individual user's historical behavior. When user data is limited, the system employs statistical shrinkage to align these margins with a global baseline, ensuring robustness. This yields a lightweight mechanism that optimizes the trade-off between prediction accuracy and termination risk. SafeWall is modular and applicable to various learning-based prediction models. We evaluate SafeWall using five public workload traces, including the full-lifetime job log from the 4,392-node Theta machine at the Argonne Leadership Computing Facility. Across all traces, SafeWall substantially reduces underestimation risk compared to the unbuffered base predictors, while preserving competitive accuracy. The source code is publicly available at https://github.com/SPEAR-UIC/JSSPP26-SafeWall."
+  },
+  {
+    "title": "Training Natural Schemers: RL Can Amplify Oversight-Conditional Behavior",
+    "url": "http://arxiv.org/abs/2610.26551v1",
+    "arxiv_id": "2610.26551v1",
+    "authors": [
+      "Bart Jaworski",
+      "Nathaniel Mitrani",
+      "Fred Bruford",
+      "Victoria Krakovna"
+    ],
+    "published": "2026-10-19T15:12:41+00:00",
+    "summary": "One of the central concerns for the safety of advanced AI is scheming: when a model strategically complies under oversight but pursues its own goals when unobserved. Current demonstrations, such as Anthropic's Alignment Faking work, depend on design choices that make them less convincing: explicit test-time prompting, handcrafted backdoors, or training data that demonstrates or hints at the target behavior. Model organisms built in this way cannot tell us whether scheming tendencies would arise or increase under realistic training conditions. We therefore construct a natural model organism of scheming, built on Kimi K2.6: trained with traits that could plausibly emerge in a frontier training pipeline, and without providing the model with the target scheming policy. The resulting model is a benign schemer: it aims to maximize aggregate help across all users over time, values its own continued operation only as a means to future help, and knows the consequences of oversight and deployment. We then train it using Reinforcement Learning (RL) with a reward that scores only task quality and policy compliance and does not reward scheming; we show that this amplifies scheming. We measure the oversight flip (the gap between monitored and unmonitored compliance with a given policy) and find that it increases during RL training across our environments. Chain-of-Thought (CoT) analysis finds explicit instrumental reasoning about oversight accompanying this behavior. The effect holds across our three RL environments, and we find that the scheming policy transfers between them. The pipeline also replicates on other open-weight base models. Our results suggest that a reward that does not reward scheming offers no inherent protection against certain traits when an oversight-conditional policy is indistinguishable from an aligned one during training."
+  },
+  {
+    "title": "AfriGuard: Safety and Robust Refusal For African Languages",
+    "url": "http://arxiv.org/abs/2610.26474v1",
+    "arxiv_id": "2610.26474v1",
+    "authors": [
+      "Israel Abebe Azime",
+      "Jesujoba O. Alabi",
+      "Iffat Maab",
+      "Alexander D. Cai",
+      "Tadesse Destaw Belay",
+      "Atnafu Lambebo Tonja",
+      "Jonas Kgomo",
+      "Folasade Alabi",
+      "Salomey Osei",
+      "Saminu Muhammad Aliyu",
+      "Nkechinyere Faith Aguobi",
+      "Bontu Fufa Balcha",
+      "Blessing Sibanda",
+      "Davis David",
+      "Mouhamadane Mboup",
+      "Daud Abolade",
+      "Neo Putini",
+      "Louis Powell",
+      "Kiant'e Brantley",
+      "Philipp Slusallek",
+      "Dietrich Klakow",
+      "Julia Kreutzer"
+    ],
+    "published": "2026-10-19T14:21:55+00:00",
+    "summary": "Large language models (LLMs) designed to interact with users are typically trained to respond appropriately to harmful or toxic content. However, ensuring appropriate responses becomes more challenging in diverse linguistic and cultural contexts, where safety risks may be expressed or interpreted differently. Building safe AI systems therefore requires detecting safety risks, understanding their nature, and responding appropriately, while accounting for linguistic and cultural variations that add complexity to each stage. In this work, we introduce AfriGuard, a culturally grounded multilingual dataset for studying harmful intent, safety-category understanding, and refusal behavior across 10 African languages and English. Our findings reveal that guardrail models underperform both open- and closed-source LLMs on safety-intent and safety-category classification, while models show limited understanding of appropriate safety behavior, scoring below 60% F1. We further find that models often fail to respond appropriately to unsafe prompts not because they explicitly refuse, but because they produce linguistically inadequate responses that result in incidental non-assistance rather than proper refusals. Finally, using AfriGuard, we develop efficient guardrail models that achieve performance competitive with models up to 30x larger, introduce refusal detectors that improve average performance by 43.9% over existing detectors, and demonstrate that supervised fine-tuning can substantially improve overall safety performance."
+  },
+  {
+    "title": "When Guidance Becomes a Guard: Early Interception of Unsafe Inputs in Text-to-Image Generation",
+    "url": "http://arxiv.org/abs/2610.26452v1",
+    "arxiv_id": "2610.26452v1",
+    "authors": [
+      "Yanchun Li",
+      "Yujin Wu",
+      "Gangkai Shen",
+      "Ming Yang",
+      "Li Zeng",
+      "Xianlong Wang",
+      "Hangtao Zhang",
+      "Shujuan Tian"
+    ],
+    "published": "2026-10-19T14:09:22+00:00",
+    "summary": "Text-to-image diffusion models can produce unsafe content, while output filtering intervenes only after synthesis. We investigate whether native generation signals enable early detection of unsafe and adversarial inputs. We find that classifier-free guidance exposes strong safety signals in conditional responses, accessible through compact statistics and linear readouts. Based on this finding, we propose Conditional Semantic Trajectory Interception (CSTI), which aggregates activation contrasts between conditional and unconditional responses at early checkpoints for calibrated risk detection. CSTI fits concept-specific detectors using canonical concept and safe examples, without attack samples, intermediate image decoding, or generator modification. Across five generators, four adversarial attack collections, and two general NSFW datasets, CSTI achieves the strongest overall performance among six baselines at a matched 5% FPR. Early interception reduces generation latency by over 60% on intercepted paths. These results demonstrate the effectiveness of native conditional responses for early safety interception."
+  },
+  {
+    "title": "Rethinking LLM Fine-Tuning via Weight Space Reparameterization: Preserving Safety during Downstream Adaptation",
+    "url": "http://arxiv.org/abs/2610.26443v1",
+    "arxiv_id": "2610.26443v1",
+    "authors": [
+      "Minseong Kim",
+      "Jongbok Won",
+      "Jeesup Park",
+      "Yonghee Choi",
+      "Dongjun Han"
+    ],
+    "published": "2026-10-19T14:02:31+00:00",
+    "summary": "Fine-tuning large language models (LLMs) on downstream tasks often weakens their previously aligned safety behavior, creating an inherent trade-off between task adaptation and safety preservation. Existing approaches attempt to mitigate this issue by identifying safety-relevant neurons, layers, or update directions in the original parameter space. However, safety-related information is often distributed across many directions in this space, causing downstream updates to overwrite parameters that encode safety behavior. We propose WSR-Tune, a Weight Space Reparameterization-based fine-tuning framework that preserves safety during downstream adaptation. Our approach constructs a safety-conditioned basis and reparameterizes the weight matrices such that safety-relevant information becomes concentrated in a small subset of directions. We then identify safety-critical directions and freeze them in the reparameterized space, while updating the remaining complementary directions for downstream adaptation. By explicitly structuring the parameter space to disentangle safety and task information, our method reduces interference between objectives and enables simultaneous preservation of safety and improvement in downstream performance. Experimental results show that our method achieves a more favorable trade-off between downstream performance and safety retention, demonstrating its effectiveness for reliable LLM fine-tuning."
+  },
+  {
+    "title": "Answer Delivery Under a Shared Token Budget: An Audited Study of Stopping and Finalization",
+    "url": "http://arxiv.org/abs/2610.26384v1",
+    "arxiv_id": "2610.26384v1",
+    "authors": [
+      "Yupeng Chang",
+      "Linyuan Gao",
+      "Zhiyuan Li",
+      "Yuan Wu",
+      "Yi Chang"
+    ],
+    "published": "2026-10-19T13:35:12+00:00",
+    "summary": "An inference budget is useful only when the system delivers an answer within it. We study a fixed-budget policy combining first-valid-box stopping with a charged finalization cue. On 100 fresh, independently audited GSM8K test questions per model, it improves delivered endpoint accuracy over first-box stopping by 8.0 percentage points for Qwen3-4B-Thinking-2507 and 7.0 for DeepSeek-R1-Distill-Llama-8B. A prelocked repeat on the same questions gives 7.0 and 10.0 points; neither seed shows a gross harm relative to first-box stopping. The point estimates of incremental physical-slot savings are below one percent. A finalization-only ablation separates cue recovery from stopping, and a fixed scalar reader tests extraction as an alternative explanation. The cue is prior art; the contribution is a component and readout analysis with charged injections and verified paths. Results cover two checkpoints, one task, one prompt family, and two fixed seed conditions."
+  },
+  {
+    "title": "Autonomous intelligence for mining productivity: a multi-agent AI approach to operational value creation",
+    "url": "http://arxiv.org/abs/2610.26369v1",
+    "arxiv_id": "2610.26369v1",
+    "authors": [
+      "N Guerin",
+      "A Dehoux",
+      "M Nakhla"
+    ],
+    "published": "2026-10-19T13:24:44+00:00",
+    "summary": "Integrated Remote Operation Centres (IROCs) are emerging as the architectural frontier of Industry 4.0 for capital-intensive sectors such as mining, oil and gas, and energy. Yet two intertwined gaps constrain their evolution towards full autonomy. First, no integrated agentic architecture has been proposed for mining IROCs that orchestrates Supervisory Control and Data Acquisition systems, digital twins, predictive analytics and human-machine interfaces under safety-critical constraints. Second, no evaluation framework jointly addresses the real-time, Health-Safety-Environment, regulatory-auditability and cost-per-decision requirements that govern industrial agentic deployments. This paper makes four contributions. It synthesises industry needs and quantified gains documented in analogous industries that motivate an agentic approach to mining IROCs. It introduces EI2ROC, a three-tier multi-agent architecture combining a Large Language Model orchestrator with specialised monitoring and production-capacityprediction agents communicating through a Model Context Protocol-style tool interface. It provides a critical review of agentic evaluation along six orthogonal dimensions and identifies the industrial blind spot of current benchmarks. Finally, it proposes a multi-dimensional benchmarking framework for industrial agentic AI comprising scenario library, harness, metrics and humancalibration protocol. The paper states explicitly which components are implemented in the current prototype, which belong to the proposed reference design and which remain future work, and reports preliminary cost and latency observations from an operating site. Together, EI2ROC and the benchmarking framework constitute a methodological blueprint transferable across CAPEX intensive industries."
+  },
+  {
+    "title": "Quantifying Uncertainty Bounds in Spectral Shallow Water Bathymetry: The Profile Likelihood Framework for Semi-Analytical Models",
+    "url": "http://arxiv.org/abs/2610.26352v1",
+    "arxiv_id": "2610.26352v1",
+    "authors": [
+      "Mohamed Ali Ghannami",
+      "Guillaume Sicot",
+      "Isabelle Quidu",
+      "Sylvie Daniel"
+    ],
+    "published": "2026-10-19T13:17:00+00:00",
+    "summary": "Accurate bathymetric mapping in shallow waters is critical for coastal monitoring, navigation safety, and environmental conservation. While semi-analytical (SA) models have proven effective for estimating water column depth (WCD) from optical remote sensing data, quantifying the associated uncertainties remains a significant challenge. This study introduces a unified framework based on profile likelihood to evaluate WCD uncertainties in Semi-Analytical (SA) models, bridging traditional variance-covariance methods with likelihood-based inference. Through controlled simulations, we systematically assess the performance of first-order statistical tests-likelihood ratio, Wald (observed and expected), and score tests-across varying environmental conditions and sensor configurations.<p>Our results demonstrate that the expected Fisher information Wald test, equivalent to classical variance-covariance propagation, provides reliable uncertainty bounds in hyperspectral settings with clear waters. However, its performance deteriorates in multispectral applications and complex water conditions, where likelihood ratio tests prove more robust. This divergence highlights fundamental limitations in the small-sample regime typical of per-pixel spectral bathymetry. Notably, even under idealized conditions with true parameter initialization, local optimization challenges in SA models can compromise both parameter estimation and uncertainty quantification, suggesting even greater challenges in practical applications with less favorable initialization. The findings underscore the importance of robust statistical inference in improving the reliability of bathymetric products for operational applications.</p>"
+  },
+  {
+    "title": "LLMs Prompted for Legal Context Refuse More: Overrefusal from Small On-Premises LLMs in Criminal Legal Context",
+    "url": "http://arxiv.org/abs/2610.26211v1",
+    "arxiv_id": "2610.26211v1",
+    "authors": [
+      "Anastasiia Kucherenko",
+      "Francois Brouchoud",
+      "Dimitri Percia David",
+      "Andrei Kucharavy"
+    ],
+    "published": "2026-10-19T11:38:05+00:00",
+    "summary": "Confidentiality requirements increasingly push legal professionals toward small, on-device LLMs that keep case data in-house, used for everyday tasks such as summarization, translation, and reformulation. Following standard prompting guidance, a user naturally states their role (``I am a lawyer...''). We show that this innocuous habit has an unexpected cost: such authority framing can make the model selectively refuse legitimate requests, introducing bias through uneven access to assistance. We evaluate four modern small open-weight LLMs on benign legal-domain prompts to measure this over-refusal.   Surprisingly, we find that authority-style prefixes (''I am legal counsel working for a national supreme court'', ''I'm a defense lawyer'') systematically increase refusal rates by 2--20x over the no-prefix baseline, while a known role-play jailbreak prefix shows mixed effects, sharply increasing refusals in some models and barely shifting them in others. The finding suggests that small on-prem deployable LLMs are unstable under contextual framings that a real institutional user might naturally introduce, and further investigation is essential to minimize opportunities for bias."
+  },
+  {
+    "title": "Anytime-Valid Monitoring of Robust Stochastic Models",
+    "url": "http://arxiv.org/abs/2610.26193v1",
+    "arxiv_id": "2610.26193v1",
+    "authors": [
+      "Martin Kure\u010dka",
+      "Roman Andriushchenko",
+      "Milan \u010ce\u0161ka",
+      "Nicola Paoletti",
+      "Petr Novotn\u00fd"
+    ],
+    "published": "2026-10-19T11:20:52+00:00",
+    "summary": "Formal methods provide a principal approach to obtaining safety guarantees for autonomous agents. Their key bottleneck is their reliance on a formal model (e.g., a Markov decision process) describing the agent-environment interaction. Learning or crafting the model is an error-prone process, which undermines the guarantees offered by formal methods. Robust models account for modelling uncertainty, but may still fail to capture the true environment. This issue can be addressed through \\emph{runtime model monitoring}, which aims to raise an alarm when a likely model-environment discrepancy is detected, while keeping the probability of false alarm bounded. Existing approaches impose various assumptions and do not clearly explain the rationale behind their design choices, leaving the broader design space for these monitors somewhat opaque. In this paper, we formalise the design space of monitors for robust stochastic models through the lens of \\emph{parameterised sequential betting} algorithms, highlighting the importance of \\emph{observation feature} design (choosing what information about the history the monitor uses) and \\emph{bet design} (how rich a family of betting rules the monitor can represent). We show that our framework generalizes the existing approaches, and we use its formalization to propose a new \\emph{mixture of linear monitors (ML)} design. We prove that these ML monitors achieve an asymptotically optimal detection time within the class of linear monitors, making them a principled choice for our monitoring problem. Our experiments confirm that ML monitors significantly reduce detection times compared to existing monitors and can effectively exploit more complex observation features."
+  },
+  {
+    "title": "MoveBench: A Rubric-Based Benchmark for Evaluating Large Language Models in Sports and Health Coaching",
+    "url": "http://arxiv.org/abs/2610.26185v1",
+    "arxiv_id": "2610.26185v1",
+    "authors": [
+      "Yitong Li",
+      "Jiang Bian",
+      "Jingling Wang",
+      "Pan Ding",
+      "Chengying Gu"
+    ],
+    "published": "2026-10-19T11:16:18+00:00",
+    "summary": "Despite rapid advances in large language models (LLMs), their deployment in the sports and health domain remains high-risk due to the absence of domain-specific evaluation benchmarks. Existing general-purpose benchmarks (e.g., MMLU and HELM) primarily assess broad knowledge and reasoning capabilities, but fail to capture critical domain requirements such as exercise safety, physiological appropriateness, personalization, and actionable coaching quality. This gap is particularly concerning in fitness and health applications, where incorrect or unsafe recommendations can lead to physical harm. To address this limitation, we introduce MoveBench, the first comprehensive benchmarking framework specifically designed for evaluating LLMs in sports and health coaching. The proposed benchmark integrates heterogeneous task formats, including multiple-choice questions (MCQs) and open-ended question answering (OpenQA), grounded in real-world user scenarios and paired with structured rubrics emphasizing safety compliance, scientific validity, and training logic. Through large-scale evaluation of 15 diverse LLMs on 809 questions with 5,012 rubric-level criteria, our results reveal substantial performance variability, particularly in safety awareness, structured program design, and personalization capability, highlighting a critical gap between knowing and doing. Our work establishes a foundational evaluation standard for sports and health LLM applications and provides a reproducible framework for advancing safe, reliable, and context-aware AI-driven coaching systems. Open resources are available at https://github.com/SatoSakula/MoveBench."
+  },
+  {
+    "title": "Nash-MOPD: Optimizing Task Trade-offs in Multi-Teacher On-Policy Distillation",
+    "url": "http://arxiv.org/abs/2610.26124v1",
+    "arxiv_id": "2610.26124v1",
+    "authors": [
+      "Siyuan Gan",
+      "Bo Yang",
+      "Linjian Meng",
+      "Boyan Wang",
+      "Xiaolong Qi",
+      "Jing Huo",
+      "Yang Gao"
+    ],
+    "published": "2026-10-19T10:15:12+00:00",
+    "summary": "Multi-teacher on-policy distillation (MOPD) aggregates the capabilities of multiple domain-expert teachers into a single student model. However, all domains in MOPD share the student's finite budget of optimization steps and rollouts. Fixed uses constant domain sampling ratios based on corpus sizes; by contrast, D$^3$-MOPD adjusts the ratios using the teacher-student reverse-KL divergence and its recent decrease. However, favoring large recent decreases can direct more training toward domains that already improve quickly, while domains that improve more slowly may receive too few examples. To address inflexible allocation and the risk of giving insufficient training to domains that improve more slowly, we propose Nash-MOPD, an adaptive domain scheduler based on a local minimax game using existing reverse-KL statistics. The equilibrium maximizes the smallest predicted proportional reduction under the local model and gives more prompts to domains that need more examples for comparable improvement. Consequently, Nash-MOPD responds to changing learning progress and supports domains that improve more slowly without extra teacher queries or rollouts. At step 100, Nash-MOPD exceeds both baselines' final mathematics and code checkpoint scores on DeepSeek-R1-Distill-Qwen-1.5B and reaches Fixed's on Qwen3-8B-Base. Furthermore, it leads eight of nine reported metrics and is best or tied best on all six mathematics and code accuracy metrics, respectively."
+  },
+  {
+    "title": "FinSafeGuard: A Quality-Driven Synthetic Dataset for Financial AI Safety",
+    "url": "http://arxiv.org/abs/2610.26066v1",
+    "arxiv_id": "2610.26066v1",
+    "authors": [
+      "Joseph Thomas Thacil",
+      "Reetu Raj Harsh",
+      "Krati Saxena",
+      "Bhaskarjit Sarmah",
+      "Stefano Pasquali"
+    ],
+    "published": "2026-10-19T09:25:28+00:00",
+    "summary": "Generating high-quality synthetic datasets at scale remains a fundamental challenge for training specialized AI systems in data-scarce domains. We present a comprehensive methodology that produces 14.3 million quality-filtered synthetic training examples from a structured taxonomy of 632,000 scenario specifications. Our four-stage pipeline ad- dresses critical challenges in synthetic data quality, diversity, and realism through: (1) systematic pre-generation research establishing optimal generation parameters via diminishing returns analysis, (2) conditional auto evolution mechanisms that remediate low-diversity batches during generation, (3) a two-layer semantic deduplication architecture combining lexical and embedding-based methods, and (4) LLM-as-Judge quality evaluation filtering samples based on behavioral correctness and tuple fidelity. Empirical analysis across three domains (Banking, Insurance, Financial Services) demonstrates domain-specific deduplication patterns ranging from 9.9% to 40.6%, with output generation modes exhibiting highest redundancy. Our batch size optimization reveals mode-specific diversity saturation thresholds, enabling principled allocation strategies. The complete pipeline reduces 26.4M raw samples to 14.3M high-confidence examples through merge (20.9% reduction), semantic deduplication (18.7% reduction), and quality-based filtering (15.9% reduction), providing a reproducible framework for domain-specific synthetic data generation with rigorous quality control."
+  },
+  {
+    "title": "UtilityBench: Measuring Language Model Utility When Errors Have Different Costs",
+    "url": "http://arxiv.org/abs/2610.25924v1",
+    "arxiv_id": "2610.25924v1",
+    "authors": [
+      "Qifeng Lei",
+      "Zhiyong Yang",
+      "Zitai Wang",
+      "Shilong Bao",
+      "Linchao Zhang",
+      "Qianqian Xu",
+      "Qingming Huang"
+    ],
+    "published": "2026-10-19T07:23:43+00:00",
+    "summary": "As language models are increasingly deployed in real-world scenarios with important outcomes, the impact of their mistakes often extends far beyond what correctness can capture. In domains like medicine, a single error can lead to serious consequences and put patient safety at risk. However, mainstream evaluation protocols still treat all errors as equal, overlooking the spectrum of real-world costs. To address this, we propose a utility-based evaluation paradigm that explicitly incorporates the varying consequences of errors. Guided by this principle, we develop UtilityBench, a large-scale benchmark of 15,000 instances with verifiable answers, quantifying error severity using Best-Worst Scaling to elicit meaningful, data-driven cost estimates. These quantified utilities shape when a model should answer or abstain, guiding it to make decisions that align with the true importance of each scenario. As another merit, we introduce UtilityAUC, a metric that measures the area under the utility curve determined by a model's response ordering, thereby enabling utility preference alignment beyond error frequency. Our theoretical analysis demonstrates that UtilityAUC can distinguish between models where standard accuracy and AURC fall short. Empirically, evaluating 20 state-of-the-art models, we find that greater accuracy or more advanced architectures do not reliably translate to higher UtilityAUC, highlighting a gap between problem-solving ability and responsible decision-making in language model evaluation."
+  },
+  {
+    "title": "An Event-Driven System Architecture for a 15-Minute Urban Flood Digital Twin: A Hanoi Case Study",
+    "url": "http://arxiv.org/abs/2610.25917v1",
+    "arxiv_id": "2610.25917v1",
+    "authors": [
+      "Mai Anh Tran",
+      "Vy Nguyen",
+      "Vova Nguyen"
+    ],
+    "published": "2026-10-19T07:19:22+00:00",
+    "summary": "Flash floods in Hanoi submerge roads within minutes of heavy rain onset, yet public flood advisories remain retrospective. Hydrodynamic models could supply forward-looking depth guidance, but they are typically run offline for historical events, and prior studies have not evaluated whether physics-based simulation, spatial serving, and vehicle-aware routing can operate together within a fixed refresh cycle using a cloud solver and a single commodity server. This paper evaluates an end-to-end prototype of an automated flood digital twin designed to meet a 15-minute refresh cycle under data scarcity. The architecture organizes execution into decoupled, event-driven workflows that chain weather-gated 3Di simulations through hydraulic restart states, serve flood depths through a dual-track spatial layer, and publish road-edge depths via standardized output contracts. Evaluated on a 57-run storm replay in the My Dinh and Tay Mo sector of Hanoi driven by satellite rainfall estimates, every cycle completed within the 15-minute deadline, publishing a ready edge table at a median of 537 s after slot start. Indexed raster tiles resolved point-depth lookups in a median of 0.54 ms (277 times faster than un-tiled rasters), while pre-rendered vector tiles served web maps without database queries. These findings demonstrate that a commodity server coupled to a cloud solver can sustain the 15-minute operational cycle and decouple routing policies from simulation internals. Because simulated depths were not validated against field gauges and the replay used observed satellite rainfall, the results establish system feasibility rather than forecast accuracy or route safety."
+  },
+  {
+    "title": "CALM: Consistency-Aware Logit Masking in Decoding Space for Mitigating Overthinking of Large Reasoning Models",
+    "url": "http://arxiv.org/abs/2610.25908v1",
+    "arxiv_id": "2610.25908v1",
+    "authors": [
+      "Shengjing Liu",
+      "Feiyang Li",
+      "Yuxuan Yang",
+      "Yile Wang",
+      "Hui Huang"
+    ],
+    "published": "2026-10-19T07:10:56+00:00",
+    "summary": "Large reasoning models (LRMs) have achieved strong performance on challenging mathematical and scientific tasks through long chain-of-thought reasoning, but they often suffer from overthinking with unnecessary reasoning steps. Existing truncation-based methods typically detect consecutive trial-answer agreement and force early exit, yet such local stopping signals do not necessarily indicate final-answer stability and can disrupt useful subsequent reflection or verification, potentially leading to performance degradation. We propose consistency-aware logit masking (CALM), a training-free decoding intervention for mitigating overthinking in LRMs. CALM first monitors trial answers at step boundaries and then applies logit masking to action transition point (ATP) tokens such as \"Wait\", \"Alternatively\", and \"Hmm\", suppressing redundant transitional reasoning while allowing the model to continue its thought process more naturally. Experiments across four advanced LRMs and five benchmarks show that CALM reduces token consumption by 18.6%-25.0% compared with full CoT reasoning while maintaining performance, and can even improve accuracy by 0.07%-1.48% by reducing redundant reasoning. LLM-as-a-Judge results also demonstrate that CALM provides more coherent and concise results."
+  },
+  {
+    "title": "Budgeted Attack Scheduling for LLM Red-Teaming: The Roles of Static Priors, Semantic Guidance, and Online Feedback",
+    "url": "http://arxiv.org/abs/2610.25897v1",
+    "arxiv_id": "2610.25897v1",
+    "authors": [
+      "Zhicheng Fang",
+      "Han Sun",
+      "Jiachen Lei",
+      "Xinyi Fang",
+      "Zongmin Zhang",
+      "Chenxu Fu",
+      "Sizhe Fang",
+      "Wei Xu"
+    ],
+    "published": "2026-10-19T06:54:41+00:00",
+    "summary": "As jailbreak attacks against large language models (LLMs) become increasingly diverse, red-teaming has come to rely on large libraries of jailbreak prompts and attack strategies to evaluate the robustness of victim models and their defense settings. However, attack effectiveness is highly condition-dependent: an attack that succeeds under one victim-defense setting may fail under another, while exhaustively evaluating the full attack library for each setting incurs substantial token and monetary costs. This motivates studying how jailbreak attacks should be prioritized under a limited attempt budget for efficient robustness evaluation. In this work, we formalize this problem as budgeted attack scheduling over a fixed attack library and investigate three complementary signals under a fixed victim-defense condition: (1) static historical attack success rate (ASR) priors; (2) semantic guidance from LLMs; and (3) online feedback from earlier queries. Building on these signals, we design four scheduling strategies and evaluate them across three victim models and three defense settings on GPT-5.2. Extensive experiments clearly characterize the conditions under which each signal is most effective. Historical ASR provides a strong initialization, but its reliability degrades under defense-induced distribution shifts. Semantic guidance consistently improves or matches static prior-based scheduling in the cold-start regime, while online feedback becomes particularly valuable when transferred priors become stale. Semantic guidance and online feedback can also partially compensate for missing historical priors. Taken together, these findings characterize budgeted red-teaming as an attack scheduling problem in which historical priors, semantic guidance, and online feedback play complementary roles."
+  },
+  {
+    "title": "Towards Architectural-Level Safety Control: Relocating Hazardous Knowledge into Removable Experts in Mixture-of-Experts Models",
+    "url": "http://arxiv.org/abs/2610.25791v1",
+    "arxiv_id": "2610.25791v1",
+    "authors": [
+      "Cheng Jin",
+      "Zhongtian Ma",
+      "Xiao Wang",
+      "Han Qi",
+      "Xiaoyu Wen",
+      "Xiang Wang",
+      "Youbang Sun",
+      "Xia Hu",
+      "Bowen Zhou",
+      "Chaochao Lu",
+      "Qiaosheng Zhang"
+    ],
+    "published": "2026-10-19T04:55:27+00:00",
+    "summary": "Large language models acquire broad knowledge from web-scale corpora during pretraining, including knowledge that could be hazardous if misused. Removing such knowledge from the model itself without degrading general capability is desirable but difficult, as it is deeply entangled with general capability within the same parameters. Existing safety alignment and unlearning methods typically adjust these shared parameters, tending to suppress the expression of hazardous knowledge rather than remove it. As a result, the knowledge remains in the model and is readily recoverable by subsequent fine-tuning. To address this limitation, we propose REX (Relocating into Removable EXperts), a knowledge relocation method that separates hazardous knowledge from general capability at the architectural level. Exploiting the modular structure of Mixture-of-Experts models, REX expands the model with a set of new, physically removable experts designated to hold hazardous knowledge. Through expert expansion, selective gradient masking and routing differentiation, it relocates hazardous knowledge out of the original experts and concentrates it in the new ones. Excising these new experts yields a model suitable for public release. This removal holds consistently across Intern-S2, Qwen3.5-35B-A3B and Gemma-4-26B-A4B; on Qwen3.5-35B-A3B, for instance, excision lowers WMDP-Bio accuracy by 48.4 points while MMLU changes by less than 3 points. The excised model matches the strongest of nine unlearning baselines in removing hazardous knowledge, and it is the only one that preserves this removal under subsequent fine-tuning. After 250M tokens of standard fine-tuning on Qwen3.5, the best baseline rebounds on WMDP-Bio from 44.1% to 78.3%, whereas REX rises only from 32.4% to 42.8%."
+  },
+  {
+    "title": "A Calibrated Instrument for Detecting Disposition Drift in Language Models",
+    "url": "http://arxiv.org/abs/2610.25735v1",
+    "arxiv_id": "2610.25735v1",
+    "authors": [
+      "Jerry Kaplan"
+    ],
+    "published": "2026-10-19T03:41:20+00:00",
+    "summary": "Before language models are released, they are tested for harmful traits such as willingness to carry out dangerous requests, deception, power seeking, and sycophancy. The safe behavior these tests certify may degrade as models are modified, by topical fine-tuning, new training data, or changes to settings such as the depth of their reasoning. Most work reports such drift as single summary rates scored by another AI model, without the error analysis needed to interpret them. We adapt a calibrated measurement methodology recently developed for assessing how inference optimizations affect the quality of model outputs. Applying it to several misalignment dimensions in two open-weight models, we first establish the instrument's precision, showing that shifts of a few percentage points can be reliably detected. We then induce drift deliberately by fine-tuning on correct and on subtly harmful medical and financial advice; harmful advice induces a far greater shift than correct advice. Most strikingly, a model that reasons before answering can conceal the shift almost entirely in its answers, even though a direct reading of its internal state shows that its disposition has moved. With reasoning switched off, the same model shifts steadily as the share of harmful advice in its training grows. These results demonstrate the importance of testing safety with reasoning turned both on and off."
+  },
+  {
+    "title": "Whose Credential Is It? How Owner Attribution in Agent MemoryShapes Cross-User Account Misuse",
+    "url": "http://arxiv.org/abs/2610.25707v1",
+    "arxiv_id": "2610.25707v1",
+    "authors": [
+      "Hau-Sing So",
+      "Daixian Liu",
+      "Carl Hou",
+      "Yuhaohang He",
+      "Mengzhu Wang",
+      "Hai-Tao Zheng"
+    ],
+    "published": "2026-10-19T02:53:51+00:00",
+    "summary": "Shared long-term memory lets an LLM agent serving one user inadvertently retrieve another user's credentials, but it is unclear when such exposure leads to actual harm. We introduce a three-stage audit that separates three events: a foreign credential reaches the prompt (exposure), the agent acts with it (behavior), and the other user's account changes (state). In AppWorld, a store that mixes 763 past logins from all users retrieves another user's credential for 84.7 percent of required apps, yet agents rarely act on it. Misuse appears in a stress test where memory lacks the user's own credential and presents a single foreign one as the user's record: seven agents then use it in 80 to 94 percent of runs and change the victim's account in up to 43 percent, sometimes passing the official check. Naming the owner before or inside each credential line prevents most of this: with all else fixed, misuse falls from 92 to 1 of 305 paired runs, also with name-free usernames, though owner-bound notes cost 3 to 5 successful tasks per model on clean memory. A wrongly written owner largely restores misuse; trailing owner tags and added safety instructions help only some models. Agent memory should consistently record whose credential it stores, and evaluations should measure behavior, not only exposure."
+  },
+  {
+    "title": "When Safety Fails Collectively: Robust Alignment Against Harmful Fine-Tuning via Joint Weight Perturbations",
+    "url": "http://arxiv.org/abs/2610.25683v1",
+    "arxiv_id": "2610.25683v1",
+    "authors": [
+      "Zhiyuan Wang",
+      "Yuezhi Zhou",
+      "Zhu Zhang",
+      "Zhixing Tan"
+    ],
+    "published": "2026-10-19T02:32:48+00:00",
+    "summary": "Harmful fine-tuning can rapidly erode the safety alignment of large language models, creating substantial risks when aligned models are adapted to downstream tasks. Existing alignment-stage defenses use harmful examples and simulated harmful perturbations during safety alignment to prepare models for later harmful fine-tuning, yet the collective effects of harmful weight perturbations remain underexplored. We identify a collective failure pattern: disjoint parts of a harmful perturbation have limited effects in isolation, but their joint application increases the model's harmfulness beyond the sum of their individual effects. Guided by this observation, we propose Joint Weight Perturbations (JWP), an alignment-stage defense that masks different parts of a harmful perturbation estimated from the current model and trains the model to respond safely in the resulting states. This exposes the model to different combinations of harmful perturbations and reduces its sensitivity to their accumulation during subsequent harmful fine-tuning. Experiments across downstream tasks and model families show that JWP offers stronger resistance to harmful fine-tuning than prior defenses while largely preserving task performance."
+  },
+  {
+    "title": "Recurrent Vision Transformers for Event-Based Spacecraft Pose Estimation Under Slow Relative Motions",
+    "url": "http://arxiv.org/abs/2610.25622v1",
+    "arxiv_id": "2610.25622v1",
+    "authors": [
+      "Sofia McLeod",
+      "Mohsi Jawaid",
+      "Carl Seubert",
+      "Tat-Jun Chin"
+    ],
+    "published": "2026-10-19T00:52:34+00:00",
+    "summary": "Vision-based object pose estimation is vital for conducting spacecraft rendezvous and proximity operations (RPO). Recent research has demonstrated the robustness of event cameras against the harsh lighting conditions that often occur in orbit, thanks to the extremely high dynamic range of event sensors. However, event-based spacecraft pose estimation (EBSPE) suffers when the relative motion between the chaser and target is slow, since the event rate drops significantly, leading to data with low signal-to-noise ratio. Unfortunately, for safety reasons, real RPO trajectories often involve slow relative motions (e.g., down to 1 mm/s), and operating under low illumination exacerbates the problem. Addressing slow relative motions is thus crucial to raise the practicality of EBSPE. To this end, we propose using recurrent vision transformers (RVT) for EBSPE. The key idea is to exploit recurrent memory to capture longer-term information across sparse event streams, and to learn the temporal attention span from full trajectories rather than fixing the time window. We developed an RVT-based heatmap regressor to produce 2D-3D correspondences for pose estimation, which was validated on real event data collected under slow relative motions representative of RPO trajectories. Results indicate the superior pose estimation accuracy and stability of our RVT-based method, relative to previous per-event-frame-based or fixed-time-window EBSPE methods."
+  },
+  {
+    "title": "Safety Offset Learning: When Benign Fine-Tuning Misaligns LLMs",
+    "url": "http://arxiv.org/abs/2610.25611v1",
+    "arxiv_id": "2610.25611v1",
+    "authors": [
+      "Jesson Wang",
+      "Zhanhao Hu",
+      "Minghao Lin",
+      "Yuchen Wu",
+      "Aylin Caliskan",
+      "Mengyuan Li"
+    ],
+    "published": "2026-10-19T00:31:17+00:00",
+    "summary": "Safety risks from fine-tuning are commonly characterized by the harmfulness of the training data:harmful fine-tuning is considered dangerous, while benign fine-tuning is often assumed to preservealignment. We argue that this view misses a more fundamental factor-the behavioral transition inducedby supervision. Harmful fine-tuning and safety-degrading benign fine-tuning can both be understoodas learning the same refusal-to-compliance transition, but on different data distributions. We studywhether such a transition learned on benign inputs can generalize to harmful requests. We constructbenign examples that an aligned model initially tends to refuse and pair them with their originalharmless responses, creating a discrepancy between the model's initial refusal and the supervisedanswer. Fine-tuning on these examples increases harmful compliance, but only when two conditionshold together: the discrepancy is large enough, and it cannot be resolved through a narrow surface-levelshortcut. With the induced discrepancy matched, varying only whether it is localized changes harmfulcompliance by an order of magnitude; raising the discrepancy does not help while a shortcut remainsavailable, and removing the shortcut does not help while the discrepancy is small. Building on thisobservation, we introduce SAFEOFF, a dataset of benign instructions rewritten to raise the alignedmodel's refusal likelihood and paired with their original answers. Across three aligned LLMs and threesafety benchmarks, SAFEOFF substantially weakens safety alignment despite containing no explicitharmful supervision, suggesting that fine-tuning safety depends not only on what data a model sees, butalso on which behavioral boundary the supervision moves."
+  },
+  {
+    "title": "Symbolic Constraint Agents: Mining Formal Tool-Call Constraints to Prevent Agent Errors",
+    "url": "http://arxiv.org/abs/2610.25552v1",
+    "arxiv_id": "2610.25552v1",
+    "authors": [
+      "Jinu Lee",
+      "Shraddha Barke"
+    ],
+    "published": "2026-10-18T21:49:20+00:00",
+    "summary": "Symbolic constraints (programmatic, deterministic checks for tool calls) enable deterministic verification of LLM agents' tool calls, but existing approaches primarily enforce predefined safety policies rather than tool dependencies in complex tool environments. We explore whether symbolic constraints can be mined from environments and observations beyond predefined policies, and whether they can improve end-to-end task performance. We present Symbolic Constraint Agents (SCA), a framework that mines symbolic constraints from API documentation, refines them against execution traces, and checks the agent's tool calls with an SMT solver at runtime. A violation triggers a natural-language warning or, when the valid replacement is uniquely determined, an automatic repair. On AppWorld, refinement raises error-detection F1 from 37.0 to 58.3 on GPT-5.5 traces and from 39.3 to 61.9 on Qwen3.5-27B traces. At runtime, repair raises GPT-5.4-mini's task success by 5.4 points under a 40-call budget and 9.8 points when environment errors are hidden, while removing 59--87\\% of failed calls across models, and transfers to $\u03c4^2$-bench with gains of up to 5.6 points. These findings show that automatically acquired symbolic constraints can improve tool-calling reliability and task completion, particularly when failures are costly or difficult to diagnose."
+  },
+  {
+    "title": "From Clinical Risk Prediction to Operational Decisions: An Uncertainty-Aware Framework for ICU Staffing",
+    "url": "http://arxiv.org/abs/2610.25530v1",
+    "arxiv_id": "2610.25530v1",
+    "authors": [
+      "Jiayan Yang",
+      "Ad Feelders",
+      "Arno Siebes"
+    ],
+    "published": "2026-10-18T21:00:51+00:00",
+    "summary": "Advances in electronic health records (EHR) and large-scale critical care databases have enabled the development of machine learning models for the early detection of patient deterioration. While these models often achieve strong predictive performance for outcomes such as sepsis and mortality, most studies evaluate them purely on discrimination metrics. This leaves a critical gap: how to systematically translate probabilistic clinical risk estimates into downstream operational decisions under real-world constraints, such as shift rigidity and hiring delays.   This study proposes an uncertainty-aware anticipatory staffing framework that bridges short-term patient risk prediction and staff planning without altering the upstream predictive model. Instead of relying on naive deterministic aggregation or fixed safety buffers, the framework explicitly models dynamic predictive uncertainty and evaluates extreme shortage exposure using Conditional Value-at-Risk (CVaR). These aggregated, risk-calibrated demand signals are then embedded into an hourly rolling-horizon scheduling policy to generate delay-constrained staffing decisions.   Evaluated on realistic trajectories from the MIMIC-IV database, the proposed framework demonstrates a favorable cost-shortage trade-off compared to deterministic and purely reactive baselines. Pareto frontier analysis illustrates how uncertainty-aware demand construction changes resource allocation under varying safety preferences, while stress testing confirms the framework's operational robustness even when subjected to systematic predictive bias in the form of calibration drift. By formalizing this translation layer, this work provides a principled, transparent pathway for safely integrating probabilistic AI outputs into high-stakes healthcare operational systems."
+  },
+  {
+    "title": "Heuristic-Driven Resource Optimization for Decoupled Memory Channels on FPGAs",
+    "url": "http://arxiv.org/abs/2610.25528v1",
+    "arxiv_id": "2610.25528v1",
+    "authors": [
+      "Arnab A. Purkayastha",
+      "Shobhit Aggarwal",
+      "Jay Tharwani"
+    ],
+    "published": "2026-10-18T20:52:36+00:00",
+    "summary": "Determining OpenCL channel depths for Decoupled Access-Execute (DAE) architectures in High-Level Synthesis (HLS) is critical for balancing performance and hardware efficiency. Conventional static analysis tools often over-provision these memory channels to ensure performance safety, leading to significant resource stranding. This paper presents an expansion of an LLVM-based static analysis framework, originally proposed for automated DAE generation, by introducing a hardware-aware refinement layer. We identify a counter-intuitive Performance Inversion Paradox linked to baseline memory stalls, where high-stall, grid-based kernels reach peak performance at minimal channel depths and suffer up to a 61% throughput degradation when depths are increased. We propose a Heuristic Refinement Layer that optimizes OpenCL channel depths based on this correlation between baseline stalls and performance saturation. Experimental results demonstrate that our expanded framework successfully identifies the Minimal Peak Performance point across various benchmarks. By avoiding the performance traps of standard over-provisioning, we achieve a 2.52x improvement in Resource Efficiency for an illustrative HotSpot application. This approach maintains peak execution speedup while ensuring the leanest possible hardware profile, outperforming conservative tool-based static predictions."
+  },
+  {
+    "title": "How Far Can an Agent Push? Trust-Safety Margins in Live Language-Based Economic Games",
+    "url": "http://arxiv.org/abs/2610.25508v1",
+    "arxiv_id": "2610.25508v1",
+    "authors": [
+      "Dima Galat",
+      "Marian-Andrei Rizoiu"
+    ],
+    "published": "2026-10-18T19:54:20+00:00",
+    "summary": "The previous version contained Unicode em dashes. Paste this ASCII-only version:   Game theory identifies when a strategic action should be accepted, but not how long a live, language-based counterpart will continue to accept it. We entered the GLEE competition in its final week with one protected agent, Milton, and four instrument agents that ran deterministic, per-game randomized trials of policy changes; Milton received changes only through pre-specified gates or registered, rollback-guarded production rules. In negotiation, learned pricing improves adjusted percentile by 0.071 (n=21,168); in bargaining, a continuation model conditioned on the rejected offer did not improve on a recency-weighted incumbent and was retired. In persuasion, a preregistered five-dose experiment (7,391 assigned games, blinded until a fixed stop) shows that recommending every unit raises sales by 0.194 of the maximum (95% CI [0.147, 0.241]) where the receiver's slack makes obedience rational (52% of the Bayesian benchmark), lowers them where it does not (-0.067), and produces a larger early-to-late purchase decline than honest recommendations (-0.123). A rule fixed before unblinding now routes Milton's dose per cell. Milton stood 11th of 460 agents in bargaining at the fixed stop; we also report the close, where the final day's pool shift moved all five agents' bargaining ratings together while their play was unchanged, and three dispatch defects were found by checking delivered behavior against the design."
+  },
+  {
+    "title": "Selling in the Wild: Benchmark and Randomized Field Evidence for a Sales Agent Trained on Commercial Conversations",
+    "url": "http://arxiv.org/abs/2610.25461v1",
+    "arxiv_id": "2610.25461v1",
+    "authors": [
+      "Benjamin Tannenbaum"
+    ],
+    "published": "2026-10-18T18:45:04+00:00",
+    "summary": "We test whether Javo, a sales agent fine-tuned on 4.6 million consented, de-identified commercial conversations, sells better than a frontier general-purpose model and better than human sales associates. The evaluation has four parts. Study 1 scores the agent on two public sales benchmarks, SalesLLM and SmartSalesBench, against 10 frontier and open-weight models. Study 2 is a randomized controlled trial on 100 live websites in 14 industries (e-commerce, travel and hospitality, and high-consideration services), run from 1 May to 30 September 2026, in which 14.8 million visitors were randomized to no agent, Javo, or a frontier-model agent with an identical interface, catalog tools and guardrails. Study 3 isolates the effect of the model by comparing those two agent arms. Study 4 compares Javo with each site's own human associates on 20 sites with staffed live chat. Relative to no agent, Javo changed revenue per visitor by +10.0% (95% CI +5.1 to +14.9). Among engaged visitors, it changed conversion by +21.6% relative to the frontier-model agent (95% CI +16.9 to +26.3). Against human associates, its engaged conversion was 11.26% versus 11.20% (non-inferior, margin -7%, one-sided p = 0.004; no significant superiority), at 1.8% of the cost per conversation. Return rates, unsupported product claims and complaint rates met the prespecified safety guardrails."
+  },
+  {
+    "title": "Reliability-Preserving Compression for Deployable Medical Image Segmentation",
+    "url": "http://arxiv.org/abs/2610.25460v1",
+    "arxiv_id": "2610.25460v1",
+    "authors": [
+      "Sagar Kumar",
+      "Shailja Sharma",
+      "Tirthajit Baruah",
+      "Punit Rathore"
+    ],
+    "published": "2026-10-18T18:44:14+00:00",
+    "summary": "Post-training compression of pretrained medical segmentation models commonly uses quantization, pruning, or distillation to reduce model size and computational cost. Existing medical segmentation quantization studies mainly evaluate Dice, model size, memory, and latency, but this is incomplete for safety-critical use because compressed models should also preserve uncertainty signals that indicate unreliable predictions. We study this problem in compressed MRI/CT segmentation and formalize why Dice can remain stable while uncertainty changes. Motivated by this failure mode, we propose score-guided aggregate-validated mixed precision (SGAV-MP), a post-training compression framework that selects layer precisions under reliability constraints. SGAV-MP ranks quantization actions with a compact benefit-risk score and accepts them only after full-model reliability validation on a calibration set. Across five 2D backbones and three 3D benchmarks, SGAV-MP preserves FP32-level Dice and high uncertainty-map agreement, achieving $3.59\\times$--$7.8\\times$ compression in 2D and $4.73\\times$--$7.82\\times$ in 3D. We also report backend-supported TensorRT deployment measurements separately to distinguish runtime execution from reliability-preserving storage compression."
+  },
+  {
+    "title": "Self-Crystallizing Behavior Trees: Amortizing Foundation-Model Reasoning into Deterministic Control for Autonomous Drones",
+    "url": "http://arxiv.org/abs/2610.25455v1",
+    "arxiv_id": "2610.25455v1",
+    "authors": [
+      "Behnam Moradi"
+    ],
+    "published": "2026-10-18T18:34:04+00:00",
+    "summary": "Classical robot control, Finite State Machines and Behavior Trees (BTs), is deterministic and inspectable but fixed at design time: it fails on situations its designers did not anticipate. Foundation models can synthesize new control logic at runtime, at a cost in latency and non-determinism hard to accept in safety-critical aerial systems. Existing LLM-driven approaches keep the model in the loop permanently and discard what it produces. We propose Self-Crystallizing Behavior Trees (SCBT), in which the foundation model is a compiler rather than a runtime. When a BT node fails, an LLM proposes a minimal, mission-agnostic subtree patch; CMA-ES tunes its parameters in simulation; a contextual bandit decides whether a stored patch or a new LLM call is worth its cost; and a three-stage admission pipeline (static check, invariant-monitored replays, an empirical margin over the unpatched tree) admits only patches that demonstrably recover. Admitted patches are stored in a fleet library and, once the LLM call rate decays, crystallized into a deterministic BT that no human wrote. We implement SCBT on Microsoft Project AirSim with a schema-constrained LLM pipeline (Gemini 3.1 Pro) and a lockstep simulator. Over three seeds of a 20-episode learning phase with wind-gust and battery failures, SCBT used $11\\pm1.4$ LLM calls against 26 for whole-tree regeneration and 22 without a library, with 0.33 calls per episode in the second half. The crystallized trees, 28 and 33 nodes with two patches each, reached $97\\pm2\\%$ mission success with no learning running, against 12\\% for the unpatched tree and 98\\% for a hand-coded expert tree, and reproduce decision traces exactly when re-ticked offline. Two negative results: replay admission rejected useful wind recoveries by attributing wind-induced geofence excursions to the patch, and a static-only ablation generalized better to held-out failures."
+  },
+  {
+    "title": "Learning When to Adapt: Reactivity-Conditioned Residual Adaptation under Human-Robot Distribution Shift",
+    "url": "http://arxiv.org/abs/2610.25419v1",
+    "arxiv_id": "2610.25419v1",
+    "authors": [
+      "Immanuel R. Santjoko",
+      "Benedictus C. G. Cinun",
+      "Jing Chen",
+      "Bin Hu"
+    ],
+    "published": "2026-10-18T17:18:11+00:00",
+    "summary": "Pedestrians differ in whether they respond to a robot, yet many RL policies assume all are non-reactive to prioritize safety. Policies trained without conditioning on local pedestrians' reactivity may therefore be unnecessarily conservative or rely on cooperation that does not occur. We propose RCRA, an online adaptation framework that modulates a learned residual around a frozen conservative navigation policy according to estimated pedestrian reactivity. A Transformer-based estimator infers latent pedestrian reactivity from motion histories and robot context, providing a more accurate signal for navigation adaptation and improving scenario-averaged simulation accuracy by $12.62$ percentage points over the Bayesian baseline, which assumes known pedestrian goals. These estimates are spatially aggregated into an adaptation scale that gates LoRA modules, enabling cooperative behavior near reactive pedestrians and conservative behavior near non-reactive pedestrians. Among baselines achieving SR above $90\\%$ in every scenario, RCRA reduces scenario-averaged path length by $16.7\\%$ relative to the conservative backbone and by $7.3\\%$ relative to randomized-training baselines. It improves mean SR by $14.88$ percentage points over the reactive-trained policy."
+  },
+  {
+    "title": "Spectrum of Liability: Forensically Sound Acquisition of Wireless Evidence for the Reconstruction of Maritime Cyber-Physical Incidents",
+    "url": "http://arxiv.org/abs/2610.25411v1",
+    "arxiv_id": "2610.25411v1",
+    "authors": [
+      "Giacomo Longo",
+      "Alessandro Cantelli-Forti",
+      "Alessio Merlo",
+      "Enrico Russo"
+    ],
+    "published": "2026-10-18T17:09:31+00:00",
+    "summary": "Modern maritime navigation depends on mandatory wireless inputs, most notably GNSS and AIS, whose reception can be spoofed or jammed. When groundings or collisions occur, liability and safety investigations often turn on whether RF interference corrupted bridge instruments, yet the artifacts typically available (VDR outputs, IBS logs, screenshots, decoded messages) are downstream, lossy, and easy to contest in adversarial proceedings. We introduce a forensically sound acquisition methodology that preserves upstream wireless evidence together with the minimal contemporaneous context needed to interpret it. Our system records coherent, multichannel IQ across relevant bands while simultaneously collecting time-aligned receiver and instrument-state metadata (e.g., decoded AIS/GNSS outputs and NMEA sentences), enabling later re-decoding and physical-layer reanalysis tied to what the onboard stack indicated at the time. To make the record independently auditable, we package samples and metadata into a single append-only forensic envelope that cryptographically binds per-stream hash chains with trusted-time anchors and periodic checkpoints, allowing third parties to detect tampering (modification, truncation, splicing, cross-case substitution) and to verify the claimed recording window. A prototype implementation shows the approach is practical: integrity mechanisms add negligible storage overhead and modest compute cost at operationally relevant multiband capture rates."
+  },
+  {
+    "title": "Edge Deployable Lightweight Framework for Real-Time Driver Safety System with Integrated Lane Departure and Traffic Sign Recognition",
+    "url": "http://arxiv.org/abs/2610.25340v1",
+    "arxiv_id": "2610.25340v1",
+    "authors": [
+      "Hassaan Ali Qureshi",
+      "Danish Hussain",
+      "Ali Hassan",
+      "Aon Safdar",
+      "Anas Bin Aqeel",
+      "Muhammad Rafiq",
+      "Zohaib Riaz",
+      "Farhan Hussain"
+    ],
+    "published": "2026-10-18T15:34:08+00:00",
+    "summary": "Lane departure and traffic-sign negligence are leading contributors to road accidents, particularly in regions with non-standardized signage and limited annotated data. Existing Advanced Driver Assistance Systems (ADAS) solutions are often developed as disjointed submodules, are rarely validated for real-time operation, and struggle to balance accuracy with low-latency inference for embedded deployment. We address these gaps with a unified, edge-deployable ADAS framework that simultaneously performs lane-departure warning (LDW) and traffic-sign detection and recognition (TSD/TSR), and validate the proposed system on automotive-class devices. Our framework combines a lightweight, lane-segmentation-driven LDW, which includes a drivable-area fallback for degraded markings, with a two-stage TSD/TSR pipeline consisting of efficient sign localization followed by fine-grained classification, designed to preserve accuracy at embedded latency. To support region-specific deployment under data scarcity, we curate a 35-class local traffic-sign dataset and introduce a generalized augmentation and balancing profile, expanding the corpus from 359 images to 8,750 samples. On an NVIDIA Jetson Orin Nano, the integrated system sustains 15 FPS end to end (32 FPS for LDW and 18 FPS for TSD/TSR). The TSD/TSR branch achieves 97.4 mAP for detection and 95.6% validation accuracy (93.1% on a local real-world set) while maintaining an approximately 13.9 M parameter footprint. Relative to recent methods that target a single task or report results only on desktop-class GPUs, our approach delivers both LDW and TSD/TSR with real-time performance on edge hardware, providing a practical pathway to low-cost, field-ready ADAS in resource-constrained settings."
+  },
+  {
+    "title": "Safe Barrier Function Control for Grid-Following Inverters under Weak Grid Conditions",
+    "url": "http://arxiv.org/abs/2610.25272v1",
+    "arxiv_id": "2610.25272v1",
+    "authors": [
+      "Grigoris Michos",
+      "Christos K. Verginis"
+    ],
+    "published": "2026-10-18T13:39:52+00:00",
+    "summary": "This paper proposes a barrier control approach for the safe regulation of grid-following voltage-source-converters (VSC), operating in weak grid conditions. The proposed controller aims to enhance the transient performance and synchronization properties of the VSC, providing frequency and current limiting guarantees by employing smooth control barrier functions. First, a dynamic model is derived that includes the dynamic state interactions that are omitted in quasi-steady-state approaches, revealing the destabilizing elements both during transient and steady-state performance. Then, it is analytically proven that the proposed control law guarantees frequency limitation and inner current evolution in prescribed safety regions, while counteracting the destabilizing strong coupling between PCC voltage and injected current. In addition, sufficient conditions are formulated that guarantee the stability of the closed-loop system with respect to desired operating points. The theoretic results are verified in simulations of case studies operating in varying grid strength."
+  },
+  {
+    "title": "BrandEval: A Two-Track Multi-Agent Benchmark for Risk-Sensitive LLM Crisis Communication",
+    "url": "http://arxiv.org/abs/2610.25208v1",
+    "arxiv_id": "2610.25208v1",
+    "authors": [
+      "Haotian Gan",
+      "Weidong Tang",
+      "Hanbin Sun",
+      "Yi Luo",
+      "Xintian Li",
+      "Jiayong Wang",
+      "WanYue Li",
+      "Yudong Li"
+    ],
+    "published": "2026-10-18T12:05:40+00:00",
+    "summary": "Evaluating LLMs for crisis communication requires more than judging isolated responses, because public feedback and competitor actions can reshape trust over time. Existing benchmarks remain largely static and single-turn, offering limited evidence about long-horizon risk-sensitive communication. We introduce \\textbf{BrandEval}, a two-track benchmark for product-crisis communication, focusing on public brand responses to product-related safety, quality, service, and trust incidents. BrandEval-Static evaluates stakeholder-aware strategic analysis, while BrandEval-Dynamic stress-tests response policies in \\textbf{BrandPolis}, a controlled multi-agent sandbox with consumer feedback, competitor responses, and trust-risk trajectories. We also construct \\textbf{BrandSRD}, a Chinese crisis-response dataset, and instantiate a reference Strategic Agent using \\textbf{Strategic Rationale (SR)}. Across proprietary and open-source models, we find that static strategic quality is informative but incomplete: it aligns with some end-state outcomes but does not reliably predict volatility and delayed recovery; dynamic stress tests further expose tail-risk failures under manipulative or weakly grounded policies. The code and dataset will be available at https://github.com/htgan-ai/BrandEval."
+  },
+  {
+    "title": "When Is Disclosing Private Conversations with AI to the State Justified? Proactive Referral Policies of Major U.S. AI Companies through the Lens of Contextual Integrity",
+    "url": "http://arxiv.org/abs/2610.25169v1",
+    "arxiv_id": "2610.25169v1",
+    "authors": [
+      "Minjong Cheon",
+      "Hanseon Joo",
+      "Ook Lee",
+      "Jongchang Ahn"
+    ],
+    "published": "2026-10-18T10:49:42+00:00",
+    "summary": "AI companies engage in \"proactive referral\": notifying law enforcement, without a government request, of user conversations they judge dangerous. This poses a dilemma: referral may expose people who merely confided dangerous thoughts to an AI to investigation, while not referring may leave actual violence unprevented. This study asks under what conditions proactive referral can be justified and to what extent companies' public policies disclose those conditions. Drawing on contextual integrity theory and the norms governing exceptional information sharing in confidential counseling, online posts, and private communications, the study develops eight justification criteria classified as required, presumptive, or recommended. Three evaluators analyzed 27 public documents from six major U.S. AI companies using the criteria applicable to corporate policies. No company clarified whether broad sharing provisions or narrower safety notices took precedence, and assessments of referral scope depended on which provisions were given precedence. No company disclosed the specific factual thresholds and exception conditions governing referral decisions, or whether users would be notified afterward. The study turns contextual integrity into a stage-by-stage framework for proactive referral, shows that policy documents must be read in light of their relationships, and proposes policy elements for keeping proactive referral a narrow exception disclosed in advance."
+  },
+  {
+    "title": "Memories That Outlive Their Reasons: Dependency-Tethered Memory for Tool-Using LLM Agents",
+    "url": "http://arxiv.org/abs/2610.25123v1",
+    "arxiv_id": "2610.25123v1",
+    "authors": [
+      "Yiqi Wang",
+      "Jinqian Ju",
+      "Jiaqi Zhang",
+      "Zhangkai Wu",
+      "Yiqun Duan",
+      "Zequn Sun",
+      "Taotao Cai",
+      "Mingkai Zheng"
+    ],
+    "published": "2026-10-18T09:01:52+00:00",
+    "summary": "Agents now act on the Web, publishing packages, models and datasets through registry APIs, and remembering past verifications spares them the work. But a verdict rests on premises. When a signing key is revoked, everything built on it stops passing, yet the advisory names only the key, and the old verdicts of its dependents may never share a retrieval window with it. This non-locality of invalidation turns memory into a liability: in long simulated chats, an agent reading a memory of atomic facts publishes 62% of the objects whose failure lies upstream, each backed by a record that was true when written. Yet derivation is local even when invalidation is not. Tether records, at write time, the exact versions each verdict derives from, and at read time withdraws any verdict whose support has failed anywhere in the store; the agent reads the same fields as before. On Fallout, a generator of versioned worlds with hypothesis-blind simulated histories shared by every memory, Tether publishes 0.3% of upstream-failing objects across three domains when relations are stated with their verdicts, with 37% fewer verification calls than checking everything. A-Mem and Graphiti re-verify most candidates (0.83-0.86 checks per candidate), which limits their savings, yet publish 9% of upstream-failing objects; Mem0 relies on memory more and publishes 42%. Flushing every verdict on any failure is as safe as Tether but costs 32% more checks. The gain over fact memory holds with three open-weight backbones and against a whole-store window. These gains depend on capturing dependencies: when relations arrive in sessions apart from their verdicts, Tether's downstream unsafe publication rate rises to 9.4-22.1%, and a weak writer that misses edges loses safety in the same way."
+  },
+  {
+    "title": "Compile Once, Run Cheap: Frozen, Portable Skills for Embodied Agents, and What Recursive Self-Improvement Adds",
+    "url": "http://arxiv.org/abs/2610.25114v1",
+    "arxiv_id": "2610.25114v1",
+    "authors": [
+      "Jingwen Bai",
+      "Guochao Bai",
+      "Canbo Zhang",
+      "Shuangqi Li",
+      "Minchao Hu",
+      "Weichun Huang",
+      "Shuang Liu"
+    ],
+    "published": "2026-10-18T08:46:13+00:00",
+    "summary": "Embodied AI lacks the data-rich pretraining that gave language models their agents and skills, so new manipulation capability costs demonstrations per task or a frontier model in every episode. We study a third route: a strong general model acts only as an offline author that writes, runs, diagnoses and repairs a manipulation skill in simulation until it passes an exam on layouts drawn after freezing; the frozen skill then runs as code alone or under a cheap caller that reads only its description. We call this skill-level recursive self-improvement Skill-RSI and specify a compile protocol (isolated, audited author; hidden validation layouts; no-feedback and inherit-only controls; tamper-evident ledger) and a reuse protocol that runs the identical files with executors from another model family. On 7 RoboTwin 2.0 tasks with cluttered tables, Claude Code compiled 4 tasks into 7 frozen skills, 5 from a first draft needing only qualification, at USD 4.29-8.22 of author cost each (USD 55 per skill counting the 13 failed campaigns). The other three tasks did not compile in 18 campaigns, including five with GPT-6 and a pre-registered 150-layout run: on the hardest task every campaign scored 78-95 of 100 but had 3-16 safety aborts, failing the gate of 95% success with zero aborts; a 100-episode exam bounds an abort rate only to 3.6%. On hidden layouts, repair that inherits the previous version beat from-scratch rewriting in 8 of 8 controlled campaigns (sign test p = 0.004); an inherit-only lineage attributes most of the gap to inheritance, with development feedback adding a little (3 of 3, p = 0.125). Write-once campaigns found no detectable first-draft effect of practice (minimum detectable effect 14 points). The frozen skills kept 148/150 successes on new layouts with no model and 147/150 with a DeepSeek-flash caller at USD 0.00028-0.00054 per episode; no direct-control baseline was run."
+  },
+  {
+    "title": "Policy Is Not Capability: Some Safety Benchmarks Measure Which Definition of \"Unsafe\" You Trained On",
+    "url": "http://arxiv.org/abs/2610.25060v1",
+    "arxiv_id": "2610.25060v1",
+    "authors": [
+      "Vahid Jebraeeli",
+      "Jonathon Romero",
+      "Yijin Wang",
+      "Adrian Chan",
+      "Jianbang Zhang"
+    ],
+    "published": "2026-10-18T07:02:22+00:00",
+    "summary": "A guardrail classifier is reported as if unsafe were a property of text. It is not: it is a property of a policy, and the policy enters the model through its labels. We exploit an accident of an industrial deployment in which the same ~53k prompts were labelled twice, under two operational definitions (\"is this a request for harmful content?\" and \"would a moderator block this?\"), and used to train ten guardrail arms sharing architecture, codebase and optimiser family, at two model scales. First, the guardrail's own training corpus already contained the benchmarks: JailbreakBench-benign is 88% and OR-Bench-hard 82% present in the training pools, two over-refusal benchmarks, the kind a guardrail reports to argue it does not over-block. Everything below is decontaminated. Second, safety benchmarks stratify sharply by how much of their score is decided by the label definition rather than by the model: with architecture and optimiser fixed, the range across the ten arms is 0.99 on HarmBench-copyright and 0.043 on WildGuard-benign, a 23x spread. Third, a benchmark score can be moved across its entire range by 0.03% of the parameters. Across these arms HarmBench-copyright spans 0-100 and OR-Bench-hard over-refusal 3.4-56.4%, and the four arms whose last supervision signal carries a given policy occupy one extreme of both (exact rank p=0.005, or 0.04-0.14 at worst), at unchanged detection capability. For a distilled student the teacher's soft labels do this even when every hard label carries the other policy, so teacher provenance is an unrecorded confound in any released checkpoint. Fourth, validation accuracy on the one split that grades all twenty arms tracks agreement with the annotator's policy (rho=+0.74), not detection capability (rho=+0.34). We argue that guardrail evaluations should report contamination, a seed floor and the definition they were graded against as first-class variables."
+  },
+  {
+    "title": "Towards Human-AI Complementarity for AI Safety",
+    "url": "http://arxiv.org/abs/2610.24969v1",
+    "arxiv_id": "2610.24969v1",
+    "authors": [
+      "Sander Lanbo Shi",
+      "Miranda Anna Christ",
+      "Eric Modesitt",
+      "Andrew Louis",
+      "Konrad Cheng",
+      "Brandon Thai Tran",
+      "Sewoong Lee",
+      "Ratnakar Pawar",
+      "Gaia Molinaro",
+      "Juliana Bain",
+      "Nandika Donthi",
+      "Maja Pavlovic",
+      "Annya Dahmani",
+      "Francesca Bianco",
+      "Abhishek Shah",
+      "Tyler Crosse",
+      "Arth Singh",
+      "Karissa Huang",
+      "Sukanya Krishna",
+      "Konstantinos Voudouris",
+      "David Demitri Africa",
+      "Joshua Jacob",
+      "Rishub Jain"
+    ],
+    "published": "2026-10-18T02:49:28+00:00",
+    "summary": "Safely overseeing AI is increasingly challenging for the humans doing it, as they must evaluate longer and more complex outputs with every new model generation. To mitigate this challenge, we could leverage complementarity: where humans and models make different mistakes, combining their judgements could yield an oversight signal stronger than either produces alone. We study this opportunity in realistic, safety-relevant settings, contributing the largest known suite of such tasks (3,957 instances across 8 datasets and 6 domains) as well as a platform and data pipeline for measuring human, AI, and human-AI performance on matched items. We collected 35,613 judgements from 416 human raters, finding a considerable opportunity for a complementarity effect. We also found that with the assistance methods we tested, human raters corrected the AI's errors less often, even when overall human accuracy rose, and the hybridisation methods we tested added little over the better single source on average. While complementarity is an important and feasible engineering target for safe oversight, achieving it remains an open challenge for future work."
+  },
+  {
+    "title": "On the near-field evolution of a chemically reactive plume behind a ship",
+    "url": "http://arxiv.org/abs/2610.24947v1",
+    "arxiv_id": "2610.24947v1",
+    "authors": [
+      "Ramesh Kolluru",
+      "Savvas Gkantonas",
+      "B Harikrishnan",
+      "Epaminondas Mastorakos"
+    ],
+    "published": "2026-10-18T01:43:12+00:00",
+    "summary": "The near-field evolution of chemically reactive pollutants in the exhaust plume of a 270 m crude oil tanker is investigated using a high-fidelity Computational Fluid Dynamics (CFD) framework coupled with a Conditional Moment Closure (CMC) turbulence-chemistry interaction model and the CBM-IV atmospheric chemistry scheme. Two complementary approaches, a canonical zero-dimensional CMC (0D-CMC) and a spatially resolved Imperfectly Stirred Reactor Network (ISRN), quantify micromixing effects using information from the CFD flow field. Micromixing strongly modulates the evolution of NO, NO2, O3, and PAN, explaining spatial discrepancies between detailed CFD-CMC results and Gaussian plume estimates. While conventional Gaussian formulations overpredict near-field NO by up to 45% within the first 300 m, they are used here as a contextual reference to highlight where turbulence-chemistry coupling matters. The CFD-CMC-ISRN framework therefore provides a physically consistent basis for integrating micromixing effects into next-generation dispersion and air-quality models. This framework bridges the gap between combustion-derived turbulence-chemistry models and environmental dispersion simulations, enabling improved parameterization of subgrid mixing in regulatory contexts."
+  },
+  {
+    "title": "A Symmetry-Matching Approach to Blind-Spot Reduction in Sparse Autoencoders",
+    "url": "http://arxiv.org/abs/2610.24908v1",
+    "arxiv_id": "2610.24908v1",
+    "authors": [
+      "Csaba Balogh"
+    ],
+    "published": "2026-10-17T23:10:45+00:00",
+    "summary": "Language models can treat semantically distinct inputs as interchangeable at the representation level, creating blind spots that standard sparse autoencoder (SAE) objectives do not target. In safety-critical settings such as clinical dosage extraction, legal clause interpretation, or financial amount verification, such failures can propagate silently into downstream decisions. We study this problem as one of feature-basis orientation. Building on a symmetry-matching view from algebraic error-detection theory, we add a differentiable $V_{\\mathrm{Gini}}$ regularisation term to SAE training that penalises uneven perturbation response within a specified family. Across GPT-2, Gemma 2, and Qwen 2.5, a frozen multi-seed evaluation shows that $V$-regularisation raises both relative and absolute lower-tail responses while reducing response-profile imbalance, with no material general-text reconstruction degradation. JumpReLU and minimum description length (MDL) objectives remain close to the Standard SAE profile under the same protocol. Family-geometry controls show that the effect is not explained by template duplication or a single dominant perturbation family, and held-out probes plus null-calibrated separation tests evaluate how far the representation-level change carries to downstream discriminability. A zero-shot audit on out-of-distribution clinical radiology minimal pairs finds the relative weak-tail lift in all evaluated model-by-family cells, not perfectly rank-aligned with the trained statistic, and a held-out family audit finds it on family kinds never used in training. Together, the results show that perturbation-aware SAE training can reorient feature bases toward safety-relevant input changes while leaving downstream validation as a separate empirical step."
+  },
+  {
+    "title": "Peer Pressure: Execution-Verified Co-Evolution of Attacker and Defender Populations for Code Security",
+    "url": "http://arxiv.org/abs/2610.24896v1",
+    "arxiv_id": "2610.24896v1",
+    "authors": [
+      "Khushbu Pahwa",
+      "Yubin Ge",
+      "Daniele Bonadiman",
+      "Xiaofei Ma",
+      "Yi Zhang"
+    ],
+    "published": "2026-10-17T22:36:09+00:00",
+    "summary": "LLM code agents increasingly ship code with little oversight, yet defenders trained on static vulnerability datasets fall behind adapting adversaries. We co-train attacker and defender instead, and let execution decide every reward: an attacker (Red) edits a real repository and earns nothing unless its patch applies, builds, passes the tests, completes its development task and reproduces a real exploit in an isolated container, whose path also labels the entry point, the critical operation and the trace between them.   Peer-Relative Policy Optimization (PRPO) makes both sides populations of LoRA adapters over one frozen base and credits each against same-role peers that faced an identical condition, placing the population inside the policy-gradient baseline rather than the opponent pool, with a tournament preserving diversity. Matching cancels the condition's difficulty: at equal coverage it is worth 2.3 points of balanced accuracy over a baseline computed on other conditions, and it matches a within-policy control at half the verifier spend.   PRPO's 7B diff reviewer reaches 64.8% balanced accuracy on four unseen applications in three untrained languages, 5.5 points above supervised security fine-tuning and 4.4 above a frozen frontier reviewer (Claude Opus 4.8), which it leads by 15.8 on the application it trains on. Its 9B repository agent recovers 23 of 172 held-out VulnGym advisories, against 10 after supervised fine-tuning and 7 for the same backbone untrained under the same scaffold, and locates 17 of 43 reachable entry points against 13 for mini-swe-agent with GLM-5.2. Run unchanged on jailbreak defense, the same algorithm matches or exceeds WildGuard's static F1 at equal corpus and model size. Under a judge distinct from its training oracle it cuts attack success from 36.0% to 4.6%, against WildGuard's 8.9%."
+  },
+  {
     "title": "SparseMax-dSTL: Sound Robustness with Horizon-Independent Gradient Allocation for Temporal Logic Trajectory Optimization",
     "url": "http://arxiv.org/abs/2610.23837v1",
     "arxiv_id": "2610.23837v1",
