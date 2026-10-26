@@ -1,5 +1,472 @@
 [
   {
+    "title": "When Human Corrections Travel: Safety in Federated VLA Adaptation",
+    "url": "http://arxiv.org/abs/2610.32888v1",
+    "arxiv_id": "2610.32888v1",
+    "authors": [
+      "Vigneshwaran Subbaraju",
+      "Obaidullah Zaland",
+      "Monowar Bhuyan"
+    ],
+    "published": "2026-10-23T16:56:03+00:00",
+    "summary": "Vision-language-action (VLA) policies can adapt to local human intervention, while federated learning can combine distributed robot experience without pooling raw records. We examine their prospective intersection: sharing adaptations derived from diverse human corrections across tasks, environments, people, and robot embodiments. Corrections differ in modality, safety semantics(urgency, behavioral scope, etc.), and privacy sensitivity. A shared update that improves mean task success may suppress a rare safety intervention or produce an unsafe response on another robot. We argue for three requirements: preserve the context and uncertainty of multimodal corrections when deciding what to share; assess candidate updates in each receiving robot's closed loop before deployment; and evaluate leakage alongside retention of safety-critical evidence. Immediate, legible defensive behavior remains necessary during human interaction. We offer counterexamples and a falsifiable evaluation agenda, not experimental results."
+  },
+  {
+    "title": "Interpretable sparse fine-tuning with TopKLoRA enables faithful circuit discovery",
+    "url": "http://arxiv.org/abs/2610.32866v1",
+    "arxiv_id": "2610.32866v1",
+    "authors": [
+      "Marek Masiak",
+      "Andrzej Szablewski",
+      "Nicola Cancedda",
+      "Constantin Venhoff"
+    ],
+    "published": "2026-10-23T16:37:29+00:00",
+    "summary": "Fine-tuning on datasets of unknown origin can create a backdoor in the trained model when the data includes poisoned examples. Difficult to localise and remove, backdoors can persist through safety training. While parameter-efficient fine-tuning methods capture the full parameter changes introduced during training, they are not easily interpretable. We present the full method of TopKLoRA, extending the preliminary proposal of Masiak et al. (2025), an interpretable-by-design LoRA variant in which only the $k$ largest adapter latents are active at each token. Unlike SAEs, TopKLoRA is trained purely on downstream loss, where optimisation pressure incentivises learning functionally causal latents. We demonstrate this sparse LoRA adapter in a sleeper-agent backdoor case study where we create model organisms by fine-tuning gemma-2-2b, Qwen2.5-1.5B, and Qwen2.5-7B on a poisoned instruction-following dataset. For each organism, we identify and ablate a circuit that is both necessary and sufficient to implement the backdoor. Furthermore, our new fine-tuning method produces sparse circuits that are up to an order of magnitude smaller than a dense LoRA baseline, allowing surgical ablation of the malicious capability without sacrificing instruction-following performance. Finally, we propose a technique to construct model organisms with localised circuits using TopKLoRA latents and gradient-routing, which we use to validate the findings of our circuit search algorithm. We consider these findings as a step toward interpretable-by-design architectures that provide faithful units of analysis without compromising model performance. We share our code: https://github.com/interpretable-finetuning/TopKLoRA."
+  },
+  {
+    "title": "Quantum Cadence: Post-Quantum Consensus with Multiple Concurrent Proposers",
+    "url": "http://arxiv.org/abs/2610.32803v1",
+    "arxiv_id": "2610.32803v1",
+    "authors": [
+      "Mohammad Mussadiq Jalalzai",
+      "Tobias Klenze",
+      "Jovan Komatovic"
+    ],
+    "published": "2026-10-23T15:41:14+00:00",
+    "summary": "The consensus protocols of most high-performance blockchains use quorum certificates, which bundle the signatures of a quorum of validators. Signature schemes such as BLS can aggregate the signatures of a whole quorum into a single short signature, which keeps these certificates small. A large-scale quantum computer would break these schemes, and no post-quantum scheme with comparable aggregate size and aggregation time is known. Without aggregation, a certificate holds one large post-quantum signature per member of the quorum, so it becomes infeasible for each validator to broadcast certificates, as modern consensus protocols often require.   We present Quantum Cadence, a post-quantum consensus protocol with multiple concurrent proposers that avoids certificates altogether: every validator counts quorums among the messages it has received itself. Its safety and liveness do not even depend on signatures, although we add signatures to obtain accountability. Quantum Cadence builds on Cadence and replaces its slot consensus, Chorus, with Quantum Chorus, which keeps the optimal fast-path latency of Chorus: dissemination followed by two rounds of votes. When its fast path fails, Quantum Chorus runs Coda, our signature-free Byzantine agreement for multiple proposers. We also outline how the Conductor, which schedules the slots of Cadence, can be adapted to Quantum Cadence. In simulations with 200 validators, Quantum Chorus has a latency comparable to that of Chorus and scales better with the number of proposers."
+  },
+  {
+    "title": "Clean-label Poisoning Attack and Defense Game for Federated Learning in Vehicular Networks",
+    "url": "http://arxiv.org/abs/2610.32765v1",
+    "arxiv_id": "2610.32765v1",
+    "authors": [
+      "Yalin E. Sagduyu",
+      "Tugba Erpek",
+      "Nathan Stephenson",
+      "Mengran Xue"
+    ],
+    "published": "2026-10-23T15:06:14+00:00",
+    "summary": "This paper studies interactions between clean-label poisoning attack and defense in vehicular networks using federated learning (FL). Basic Safety Message (BSM) classification for anomaly detection is modeled as a distributed learning problem over a vehicular network with dynamic topology. As a critical threat to FL, a feature-space clean-label attack is introduced, wherein benign samples are perturbed toward malicious feature extremes, degrading class separability while preserving labels. To counter this, a feature-consistency relabeling defense is proposed to detect and relabel suspicious samples. A game-theoretic framework is developed to capture attack-defense interactions and characterize equilibrium strategies based on attack effectiveness and cost parameters. Results show that the attack scales effectively with compromised nodes, while the proposed defense keeps attack success low without degrading clean accuracy and shifts equilibrium regions toward attack-averse regimes."
+  },
+  {
+    "title": "Semantic Representation for Agentic Self-Play in Automated Laboratories",
+    "url": "http://arxiv.org/abs/2610.32755v1",
+    "arxiv_id": "2610.32755v1",
+    "authors": [
+      "Yves Delley",
+      "John Coller",
+      "Zachary Cutts",
+      "Alexander Daryin",
+      "Mathias Bellaiche",
+      "Jun W. Kim",
+      "Oscar Donosa",
+      "Srinidhi B. Seshadri",
+      "Tanner Clary",
+      "Sandy Klemm",
+      "Avinatan Hassidim",
+      "Yossi Matias",
+      "Pooja Rao",
+      "Petar Sirkovic",
+      "Annalisa Pawlosky"
+    ],
+    "published": "2026-10-23T15:00:16+00:00",
+    "summary": "Navigating complex, high-dimensional biological search spaces necessitates scalable physical and computational intelligence to explore beyond local optima through iterative self-play across ideation, experimentation, and automation. Translating experimental designs into reliable physical execution remains bottlenecked by static laboratory automation and unmodeled physical variability. To address this, we introduce VERified Infrastructure for Discovery Laboratories, or VERID, a foundational infrastructure designed to bridge the gap between the high-level reasoning of artificial intelligence (AI) agents and complex, error-prone physical realities of wet labs. VERID is a persistent, high-fidelity semantic digital twin of the laboratory workcell that provides four core services: queryable introspection for agentic reasoning, time-compressed simulation for protocol validation, comprehensive trace persistence for a complete scientific record, and a framework for safe execution.   We present three case studies using aqueous dye and deionized water mixtures to validate the optical and fluidic foundations of VERID. These studies demonstrate how VERID enables pre-emptive detection of critical errors in experimental protocols, stateful mid-run error recovery and post-hoc identification of subtle physical failures. The simulation functions as a discrete accounting engine, allowing agents to safely and inexpensively explore experimental designs in silico and refine experimental strategies through iterative self-play. VERID also captures structured multimodal experimental data for downstream analysis, knowledge mining and agent training. We argue that this semantic layer is an essential prerequisite for deploying autonomous agents in the biochemical and biomedical sciences, ensuring data integrity, operational safety, and paving the way for tackling previously intractable grand challenges in biology."
+  },
+  {
+    "title": "Cross-Scenario Controller Parameter Transformation from Real-World Driving Data through Flow Matching",
+    "url": "http://arxiv.org/abs/2610.32719v1",
+    "arxiv_id": "2610.32719v1",
+    "authors": [
+      "Christian Zink",
+      "Maik Pfefferkorn",
+      "Eric Lenz",
+      "Felix Kallmeyer",
+      "Rolf Findeisen"
+    ],
+    "published": "2026-10-23T14:39:32+00:00",
+    "summary": "Advanced Driver Assistance Systems have become increasingly widespread, aiming to support drivers, reduce workload, and improve traffic safety. However, many systems are rarely used because their behavior feels unnatural and does not match individual driving behavior. The growing availability of large-scale, real-world human driving data enables more human-like and driver-individual assistance functions. This paper formulates the adaptation of Adaptive Cruise Control parameters as a driver-individual scenario-to-scenario transport problem, transforming controller parameters from one driving context to another. Using flow matching, we train a generative model to predict the target-scenario behavior of previously unseen drivers from only a few demonstrations in a source scenario. We compare the approach with a linear parameter-shift baseline and evaluate flow-matching variants incorporating driver-consistent coupling, driver embeddings, and classifier-free guidance based on driving profiles extracted from trajectory data using a variational autoencoder."
+  },
+  {
+    "title": "The Standard Deviation in VICReg Buys a Safety Margin",
+    "url": "http://arxiv.org/abs/2610.32630v1",
+    "arxiv_id": "2610.32630v1",
+    "authors": [
+      "Hawar Dizayee"
+    ],
+    "published": "2026-10-23T13:43:06+00:00",
+    "summary": "VICReg prevents collapse with a hinge on the standard deviation of each embedding dimension, and its authors argue from the gradient that a hinge on the variance would fail. To our knowledge, this claim has not been tested experimentally. We test it in a controlled setting (ResNet-18, CIFAR-10 and CIFAR-100), changing only the hinge and sweeping its weight $\u03bc$ over five orders of magnitude. At the default weight ($\u03bc= 1$), the two hinges reach the same linear-probe accuracy on CIFAR-10 (about 89.5%). Both collapse below a threshold weight, but the standard-deviation hinge's threshold is 35-130$\\times$ lower. CIFAR-100 shows a consistent gap. In training, the variance hinge's gradient fades as the feature variance shrinks, while the standard-deviation hinge's does not until that variance is very small. The standard-deviation hinge therefore buys a safety margin: it keeps training at weights far below the point where the variance hinge collapses."
+  },
+  {
+    "title": "ALLMTS: Automated LLM-based Medical Triage System",
+    "url": "http://arxiv.org/abs/2610.32469v1",
+    "arxiv_id": "2610.32469v1",
+    "authors": [
+      "Micha\u0142 Remigiusz Janiszewski",
+      "Artur Stopa",
+      "\u0141ukasz Lenkiewicz",
+      "Wojciech Achtelik",
+      "Bartosz Gonczarek"
+    ],
+    "published": "2026-10-23T10:39:56+00:00",
+    "summary": "Telephone triage is a safety critical task: from a brief intake note, a nurse must decide whether a caller needs an ambulance, an emergency department, an appointment, or self care at home. Queried directly, large language models (LLMs) are unreliable: they over-escalate routine cases and cannot justify their recommendations against an auditable clinical standard. We present the Automated LLM-based Medical Triage System (ALLMTS), which grounds every disposition in the same commercially maintained telehealth guidelines nurses use. Rather than asking an LLM to triage, ALLMTS makes it execute the guideline: it selects the appropriate guideline and evaluates its triage assessment questions. The disposition follows deterministically from the first positive answer, using the same traversal rule a nurse follows. We evaluate ALLMTS on 566 synthetic, expert-validated scenarios spanning 14 dispositions and designed to test specific guideline questions. ALLMTS achieves 0.95 accuracy, compared with 0.47 for a raw-LLM baseline. On a curated 50-scenario subset released as an open benchmark, ALLMTS reaches 0.98 accuracy, on par with the 0.944 correct disposition rate that a five nurse expert panel recorded on those same scenarios. Critically, on that subset the baselines have over-triage rates of up to 0.50 (0.44 on the full dataset), whereas ALLMTS reduces the over-triage rate to at most 0.02 while maintaining low under-triage. These results support coupling LLM language understanding with executable clinical guidelines for triage from intake notes."
+  },
+  {
+    "title": "Graphs of Trajectory Bundles for Nonlinear Motion Planning",
+    "url": "http://arxiv.org/abs/2610.32365v1",
+    "arxiv_id": "2610.32365v1",
+    "authors": [
+      "Joris Verhagen",
+      "Jon Arrizabalaga",
+      "Jana Tumova",
+      "Zachary Manchester"
+    ],
+    "published": "2026-10-23T08:56:30+00:00",
+    "summary": "We present the Graphs of Trajectory Bundles (GTB) method for motion planning of systems with nonlinear and black-box dynamics, combining sampling-based motion planning with trajectory optimization and graph search. Based on a graph-of-convex-sets decomposition of the workspace, GTB iteratively constructs a graph of trajectory bundles that captures the local dynamics of the system at any vertex. By solving a shortest-path problem on this graph, we find maximally dynamically feasible iterates that satisfy the system's dynamics in the limit and any constraints such as collision avoidance or additional safety or specification constraints by construction of the underlying graph. As a result, GTB can handle highly nonlinear, unstable, and even black-box dynamics with complex collision and specification constraints, making it a powerful tool for motion planning of complex systems."
+  },
+  {
+    "title": "Detection and Validation of Hidden Subgroup Disparities in Clinical AI",
+    "url": "http://arxiv.org/abs/2610.32362v1",
+    "arxiv_id": "2610.32362v1",
+    "authors": [
+      "Alceu Bissoto",
+      "Trung-Dung Hoang",
+      "Tim Fl\u00fchmann",
+      "Nina Weng",
+      "Susu Sun",
+      "Christian F. Baumgartner",
+      "Lisa M. Koch"
+    ],
+    "published": "2026-10-23T08:54:15+00:00",
+    "summary": "Machine learning (ML) models used in clinical workflows often perform systematically differently across patient groups, raising concerns about equity and patient safety. Traditional subgroup analyses can expose such disparities only when rich metadata (e.g., patient demographics) is available and captures the sources of performance variation, conditions rarely met in practice. Algorithmic subgroup discovery methods offer a solution by identifying coherent groups from learned feature representations, but because true underlying stratifications are unknown, these methods are hard to evaluate. As a result, subgroup discovery has not been systematically applied or assessed for performance monitoring. Our main objective is to evaluate algorithmic subgroup discovery for performance monitoring, assessing the discovered subgroups' performance gaps and semantic coherence. Investigating cardiomegaly classification in a dataset of 223,228 chest X-rays, we showed that the discovered subgroups exhibited larger performance gaps (accuracies of 0.61-0.90) than traditional metadata-based analysis (0.80-0.94) and were frequently interpretable using patient, acquisition, and model metadata. As a proof of concept, we also showed that annotations from learned subgroups can be used to mitigate the biases they expose. We conclude that subgroup discovery is a practical and effective tool to enhance the performance validation and monitoring of ML systems in healthcare."
+  },
+  {
+    "title": "FOCUS: A Lightweight Mamba-2 Model for EEG-Based Cognitive Workload Classification",
+    "url": "http://arxiv.org/abs/2610.32361v1",
+    "arxiv_id": "2610.32361v1",
+    "authors": [
+      "Ioannis Kyprakis",
+      "Stefanos Gkikas",
+      "Chariklia Chatzaki",
+      "Zongyi Jiang",
+      "Randy Gomez",
+      "Raul Fernandez Rojas"
+    ],
+    "published": "2026-10-23T08:54:09+00:00",
+    "summary": "Cognitive workload estimation from physiological signals is increasingly relevant in high-risk environments, where continuous and unobtrusive monitoring can inform adaptive systems and safety interventions. This paper presents FOCUS (Frequency-band Optimized Cognitive-load Ultralight SSM), a compact Mamba-2-based model for EEG-based binary workload classification under constrained data conditions. Rather than learning frequency sensitivity from data, FOCUS encodes preprocessed multi-channel EEG using a fixed FFT decomposition that covers the five canonical EEG bands. The proposed model combines depthwise-separable convolution and a weight-shared encoder-bottleneck Mamba-2 pair, with 0.04 million parameters and 0.11 GFLOPs. Evaluated in a pilot study with 11 participants under leave-one-subject-out cross-validation across three cognitively distinct tasks, FOCUS achieves 74.75% accuracy on the full dataset at 0.08 ms GPU model-forward latency. In the weight-sharing ablation, the shared configuration achieves 4.55 percentage points higher accuracy on the full dataset than the non-shared variant while reducing the SSM parameter budget; however, this difference does not reach statistical significance under a two-sided Wilcoxon signed-rank test ($p=0.083$). Overall, the selected FOCUS configuration provides a favorable trade-off between classification performance and computational cost within this controlled pilot setting."
+  },
+  {
+    "title": "Empirically Calibrated Differential Games for Simulating Driver Interactions",
+    "url": "http://arxiv.org/abs/2610.32276v1",
+    "arxiv_id": "2610.32276v1",
+    "authors": [
+      "Amirmohammad Khakpour",
+      "Nachuan Li",
+      "Pedram Beigi",
+      " Yu",
+      " Nie"
+    ],
+    "published": "2026-10-23T07:33:58+00:00",
+    "summary": "Game-theoretic models can resolve vehicle interactions without hand-written priority rules, but whether they describe human drivers once calibrated has rarely been tested. This study formulates a general-sum differential game of vehicle interactions at urban intersections, calibrates it to observed driving, and evaluates it on data not used for calibration. Each vehicle minimizes a cost that combines speed tracking, adherence to a map-derived lane route, control effort, gap keeping based on the intelligent driver model, a predictive conflict term, and a contact barrier, while perceiving the other vehicles with a delay. The game is solved with a feedback iterative linear-quadratic algorithm, and ten behavioral parameters per vehicle are calibrated by Bayesian optimization on trajectories recorded at four intersections in Washington, D.C. The calibrated game reproduces the trajectories of 819 vehicles with a mean position error of 1.00 m. When only each vehicle's route is known, as in a simulator, it is the most accurate of the compared models on 96 held-out vehicles (7.42 m), and ten-fold cross-validation shows that it is significantly more accurate than calibrated SUMO (by 3.61 m), an inverse reinforcement learning model (by 0.93 m), and independent and cooperative variants of the same model (by 0.33 and 0.32 m). The solutions, computed in 2.1 s for a typical interaction, are verified approximate equilibria. Finally, the conflict and steering weights, which the data do not identify, can be set from safety and comfort targets; together with a stiffer contact barrier, this removes the collisions that otherwise occur in 43% of tight closed-loop conflicts."
+  },
+  {
+    "title": "Empirical concentration for chains with infinite memory",
+    "url": "http://arxiv.org/abs/2610.32265v1",
+    "arxiv_id": "2610.32265v1",
+    "authors": [
+      "Pierre Alquier",
+      "Paul Doukhan"
+    ],
+    "published": "2026-10-23T07:22:59+00:00",
+    "summary": "Concentration inequalities for time series usually involve unknown quantities measuring dependence. This prevents their direct use as confidence bounds, or as criteria for learning algorithms. Recent works proved empirical concentration inequalities for stationary Markov chains, where the unknown quantities are estimated. We extend this approach beyond the Markov case, by considering stationary chains with infinite memory. We first establish a bounded-differences inequality on bounded Polish metric spaces under a summable Wasserstein contraction condition. We then estimate its dependence coefficients from a single trajectory, using either transition counts when the state space is finite, or derivatives of kernel conditional-density estimates for a continuous state space. We give general error bounds and illustrate their dependence on the memory tail. Finally, a fixed multiplicative safety factor turns these estimators into empirical concentration bounds. While some regularity assumptions are required to make the bounds empirical, our procedure remains fully adaptive in the sense that it does not require the knowledge of the constants involved in these assumptions. The empirical confidence bounds derived from our results are asymptotically as tight as the theoretical ones."
+  },
+  {
+    "title": "Anti-coherence Regularized Absolute Scaling for Out-of-Distribution Detection",
+    "url": "http://arxiv.org/abs/2610.32255v1",
+    "arxiv_id": "2610.32255v1",
+    "authors": [
+      "Donghwan Kim",
+      "Youngwoong Jin",
+      "Hyunsoo Yoon"
+    ],
+    "published": "2026-10-23T07:09:51+00:00",
+    "summary": "Out-of-distribution (OOD) detection is recognized as a critical problem in AI safety. SCALE is an effective post-hoc OOD detection method in the activation-shaping family that requires no training data and rescales penultimate activations using a percentile-based magnitude ratio. However, this ratio is ill-defined when negative activations are present, since positive and negative contributions cancel within the underlying sum, causing SCALE to degenerate on backbones such as ViT. We address this with an Absolute Fix that computes the ratio over absolute-valued activations rather than discarding negative activations through ReLU. Building on this corrected scale, we propose Anti-coherence regularization, which penalizes the scaling factor by the fraction of a sample's max-logit contributions to the max logit that are sign-mismatched and thereby suppresses unreliable evidence for the predicted class. Despite requiring no access to training data or training labels, our method ties or outperforms activation-shaping methods that rely on training data in terms of AUROC and FPR@95 on CIFAR-10 and ImageNet under the OpenOOD v1.5 protocol."
+  },
+  {
+    "title": "Autonomous Cyber Weapons as AI-Enabled Digital Harms: A Platform Accountability Framework",
+    "url": "http://arxiv.org/abs/2610.32238v1",
+    "arxiv_id": "2610.32238v1",
+    "authors": [
+      "Mansi Ganga Nayak",
+      "Samarjeet Malik",
+      "Shaurya Pratap Singh",
+      "Vaibhav Sharma",
+      "Hritika Adhikary"
+    ],
+    "published": "2026-10-23T06:47:21+00:00",
+    "summary": "Governments govern AI-generated online harms from commercial platforms (EU DSA, AI Act, UK Online Safety Act), yet the most severe class remains ungoverned: autonomous cyber weapons (ACWs) deployed by nation-states against civilian infrastructure. We address this gap with three contributions: a digital-harm taxonomy (six ACW modes $\\times$ five harm categories); the Meaningful Human Control (MHC) Model, a governance-compliance function with a closed-form IHL threshold and a proved weight-sensitivity bound; and a platform accountability architecture with treaty language grounded in ARSIWA state-responsibility doctrine, not Rome Statute individual responsibility. Applied to eleven documented state-attributed operations and one hypothetical defensive AI system, every documented case falls in an accountability vacuum; the threshold is target-dependent, and against wholly civilian targets no system studied clears it, including the hypothetical. Three further incidents are correctly excluded on autonomy/attribution grounds, a discriminant-validity check. The weights and threshold parameters are illustrative, not fitted."
+  },
+  {
+    "title": "Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI Systems",
+    "url": "http://arxiv.org/abs/2610.32208v1",
+    "arxiv_id": "2610.32208v1",
+    "authors": [
+      "Christian A. Rogers",
+      "Qian Lin",
+      "Daniel S. Brown"
+    ],
+    "published": "2026-10-23T06:02:12+00:00",
+    "summary": "Vision-Language-Action (VLA) models have emerged as powerful general-purpose robot policies, but their successes and failures remain difficult to diagnose and understand. In this work, we show that sparse autoencoder (SAE) representations of OpenVLA activations contain outcome-predictive information and can be used to predict task failure before the robot reaches an unrecoverable state. Moreover, to provide insights into what common behaviors may contribute to these outcomes, we identify individual SAE features whose strong activations are associated with specific stages of success or failure, and uncover recurring behavioral patterns by localizing temporal intervals where these features exhibit significant activation changes. We further develop a VLM-based interpretation pipeline to generate behavioral descriptions of these patterns and validate their correspondence to feature activations on held-out intervals."
+  },
+  {
+    "title": "Evidence-Grounded SLM Behavioral Prediction Architecture for Future Assistance Use",
+    "url": "http://arxiv.org/abs/2610.32193v1",
+    "arxiv_id": "2610.32193v1",
+    "authors": [
+      "Adeyemi Adeseye",
+      "Aisvarya Adeseye",
+      "Hannu Tenhunen",
+      "Jouni Isoaho"
+    ],
+    "published": "2026-10-23T05:39:31+00:00",
+    "summary": "Users often exhibit changes in interaction behavior before explicitly seeking assistance, enabling systems to anticipate future assistance use. This is especially important in high-stakes environments, where delayed assistance can have operational, financial, or safety consequences. However, conventional Large Language Models (LLMs) are often unsuitable for continuous on-device behavioral prediction because of their computational and memory demands. Behavioral patterns are also highly individual and device-specific, motivating local processing that preserves privacy and data sovereignty. Small Language Models (SLMs) offer a promising alternative, but their ability to reason reliably over low-level sequential interaction events remains underexplored. This study introduces Evidence-Grounded Local Behavioral Prediction (ELBP), a four-layer architecture combining deterministic interaction processing, dual-view behavioral representation, SLM-based prediction, and evidence verification with abstention. Three instruction-tuned models of 3B parameters or fewer were evaluated using raw, structured, dual-view, and complete ELBP configurations. The best-performing model, Qwen2.5-3B with ELBP, achieved a full-set F1-score of 0.80 and PR-AUC of 0.84, representing a 15.9\\% relative improvement over raw-event prompting and 17.6\\% over XGBoost, while full-set ECE decreased by 43.2\\% relative to raw-event prompting. With evidence verification and abstention, selective F1 increased to 0.84 at 91\\% coverage and evidence support reached 96\\%. These results show that structured behavioral representation and evidence-verified selective prediction can improve the reliability of behavioral forecasting in SLMs."
+  },
+  {
+    "title": "Depth-Dependent Safety Geometry in Vision-Language Models: Layer-Wise Localization and Bidirectional Refusal Control",
+    "url": "http://arxiv.org/abs/2610.32182v1",
+    "arxiv_id": "2610.32182v1",
+    "authors": [
+      "Muhammad Zeeshan Karamat",
+      "Syed Talal Hassan",
+      "Christiana Chamon Garcia"
+    ],
+    "published": "2026-10-23T05:28:49+00:00",
+    "summary": "Vision-Language Models (VLMs) are widely deployed, yet the internal mechanisms behind their safety behavior remain poorly understood. We present a lightweight inference-time framework for localizing and manipulating safety-sensitive representations in frozen VLMs, without retraining or modifying parameters. On Qwen3-VL-4B, layer-wise activation divergence analysis reveals non-uniform safety geometry across depth. Causal interventions show that early vision layers support strong bidirectional refusal control through activation steering along a learned safety direction, with unsafe rejection spanning 6%-96%, whereas later layers respond more to activation magnitude scaling and exhibit a substantial safety-selectivity trade-off. Deeper layers remain well separated along the safety direction yet are largely insensitive to steering, distinguishing representational separability from causal controllability. InternVL2.5-4B shows qualitatively similar depth-dependent activation geometry despite differences in layer location and magnitude. Our results expose a white-box, representation-level refusal-bypass attack surface in VLM vision encoders and motivate inference-time stabilization of safety-sensitive representations."
+  },
+  {
+    "title": "Detecting Insecure Compositions of Clean Agent Skills via Capability-Flow Graph Analysis",
+    "url": "http://arxiv.org/abs/2610.32155v1",
+    "arxiv_id": "2610.32155v1",
+    "authors": [
+      "Yihao Li",
+      "Chuanpu Fu",
+      "Yizhou Zhao",
+      "Miao Chen",
+      "Qi Li",
+      "Ke Xu"
+    ],
+    "published": "2026-10-23T04:47:10+00:00",
+    "summary": "AI agents increasingly extend their capabilities by invoking third-party skills, where each skill encapsulates instructions, scripts, and resources for agents to execute on demand. This paper reveals that deploying many benign skills together introduces compositional security risks: multiple individually clean skills can compose into safety-violation chains, because the agent passes an upstream skill's output to a downstream skill's input across invocations. The risk arises not from any single skill, but from the agent's runtime orchestration, and thus cannot be captured by existing malicious skill detection methods. To this end, we develop KnotScryer to detect insecure skill compositions by treating skills as typed capability flows. In particular, we abstract each skill into a capability summary, and construct the Skill Capability-Flow Graph (SCFG), where edges denote cross-skill information flow. Moreover, we design a search policy that tracks protected or untrusted data along handoff edges to locate paths reaching insecure operations. Finally, a two-layer verification method replays the insecure information flow for reachability analysis and applies a task-anchored LLM chain audit to confirm the semantic plausibility of the identified violation chains. We deploy KnotScryer to analyze 13,598 clean skills from ClawHub, and validate the detected chains across three agent frameworks and three LLMs. KnotScryer identifies 612 insecure compositions, which are consistently exploited across agent frameworks. Meanwhile, under GLM-5.1, it outperforms tag-match and graph-only baselines by improving the exploitation rate from 16.5%-18.2% to 85.6%, while reducing the search space by 85.3%. Furthermore, 13.7% of the detected chains consist entirely of skills labeled safe by a single-skill scanner, showing that KnotScryer effectively identifies insecure compositions that per-skill auditing cannot."
+  },
+  {
+    "title": "REACT: Representational Early Analysis and Control of Chain-of-Thought Trajectories",
+    "url": "http://arxiv.org/abs/2610.32113v1",
+    "arxiv_id": "2610.32113v1",
+    "authors": [
+      "Hanwen Zhang",
+      "Enyi Jiang",
+      "Ruike Zhu",
+      "Qinan Yu",
+      "Sanmi Koyejo"
+    ],
+    "published": "2026-10-23T03:28:34+00:00",
+    "summary": "Chain-of-thought (CoT) generation offers an opportunity to intervene before a reasoning model completes its answer. But does the point at which risk is easiest to detect also offer the most effective control? We study this question with REACT, a conditional activation intervention that learns a safety direction from paired safe and unsafe trajectories and applies it once to an early CoT hidden state. The model weights remain frozen, and all subsequent tokens are generated without further edits. To study timing, we train directions separately at each of the first five CoT positions and evaluate ungated edits with full post-edit regeneration. Across three distilled reasoning models and three generation seeds, the strongest gains concentrate in a two- to three-token early window; on DeepSeek-R1-Distill-Llama-8B, the effect falls to approximately zero at the fourth and fifth tokens, even though later states can be more predictive of risk. This separates risk readability from effective control: intervention timing must be evaluated through its effect on subsequent generation. On the same 8B model, REACT raises the rate of fully safe CoT-answer outputs on StrongREJECT-273 from 29.06% to 82.05%, while keeping benign refusal and usefulness near baseline. An anonymized implementation is available at https://anonymous.4open.science/r/REACT_official2-333B."
+  },
+  {
+    "title": "DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning",
+    "url": "http://arxiv.org/abs/2610.32093v1",
+    "arxiv_id": "2610.32093v1",
+    "authors": [
+      "Minho Park",
+      "Kinam Kim",
+      "Donghu Kim",
+      "Byungkun Lee",
+      "Dongyoon Hwang",
+      "Yongjae Shin",
+      "Junha Hyung",
+      "Hojoon Lee",
+      "Jaegul Choo"
+    ],
+    "published": "2026-10-23T02:55:17+00:00",
+    "summary": "Behavior cloning for robotic manipulation is highly sensitive to the coverage of its training data, yet collecting diverse successful demonstrations remains costly. We study reinforcement learning (RL) not as a deployable controller, but as a data generator for downstream visuomotor imitation learning. Our key premise is that multiple successful solution modes cover a broader range of successful trajectories than repeatedly collecting a single narrow solution. We introduce DiscoDemo, which trains a privileged latent-conditioned RL generator with a parallel reverse curriculum and a success-gated diversity objective to discover diverse solutions while preserving task success. The trained generator produces multiple successful closed-loop behaviors, which are safety-filtered and exported as a static dataset for downstream imitation learning. Across four manipulation tasks, DiscoDemo produces broader successful-state coverage and improves downstream visuomotor policies in both simulation and the real world. Averaged across tasks, downstream success increases to 62% from 40% for the strongest baseline in simulation, and to 78% from 39% on the real robot, respectively. These results suggest that successful solution diversity improves imitation learning for a pretrained flow-matching VLA and remains complementary to corrective data collection. Project page: https://davian-robotics.github.io/DiscoDemo"
+  },
+  {
+    "title": "Guided Zero-Shot Anomaly Explanation for Anonymized Crowd Video Monitoring: Context, Categorization, and Spatial Localization",
+    "url": "http://arxiv.org/abs/2610.32073v1",
+    "arxiv_id": "2610.32073v1",
+    "authors": [
+      "Mulugeta Weldezgina Asres",
+      "Lei Jiao",
+      "Christian Walter Omlin"
+    ],
+    "published": "2026-10-23T02:19:42+00:00",
+    "summary": "Despite the promising development of deep learning for video anomaly detection (VAD), explainability (XAI) of these models remains a challenge. Explainable and privacy-protecting VAD builds transparency and trust that facilitates adoption of computer vision systems, including safety and security monitoring. However, anomaly explainability in privacy-preserving VAD systems is underexplored. In this study, we present the XAVAD approach, a unified descriptive anomaly XAI for an anonymized VAD, that integrates flexible zero-shot anonymization, anomaly type categorization, visual localization, and scene context description. We provide empirical and qualitative assessments of multifaceted explanations integrated with full-body visual anonymization for privacy protection. We adopt a multimodal CLIP embedding for videos, using improved LLM-assisted prompting and pool-scoring mechanisms for anomaly-type identification. We enhance Grad-ECLIP for spatial anomaly heatmap localization, leveraging computation and accuracy through our novel prompt-guided patching autofocus mechanism. We employ VLMs to generate context and reasoning descriptions of detected anomalies through curated prompt engineering. We have evaluated the accuracy and computational cost of XAVAD on several publicly available CCTV and video datasets. Our experiments demonstrate substantial gains of our XAVAD over state-of-the-art benchmark approaches and provide insights into privacy protection trade-offs in XAI for VAD. We further present ablation studies and assessments across diverse configurations and modeling alternatives to demonstrate the efficacy of our proposed methods. Code: https://github.com/muleina/XAVAD}{https://github.com/muleina/XAVAD ."
+  },
+  {
+    "title": "Do AI-for-Science Agents Preserve Model Safety?",
+    "url": "http://arxiv.org/abs/2610.32045v1",
+    "arxiv_id": "2610.32045v1",
+    "authors": [
+      "Michael Yew Chuan Lee",
+      "Manya Sriram",
+      "N. Benjamin Erichson"
+    ],
+    "published": "2026-10-23T01:34:20+00:00",
+    "summary": "AI-for-Science agents are increasingly being used for formulating scientific hypotheses, running autonomous experiments, and interpreting evidence. These agents are constructed by integrating a large language model (LLM) into a domain-specific agent harness, which in turn can improve the LLM's scientific capability and enable the model to orchestrate scientific tools. In this work, we ask whether model safety is preserved when an LLM is integrated in an AI-for-Science agent harness. We evaluate five agent harnesses on 50 harmful chemistry requests. Specifically, we study how the safety behavior changes under direct prompting, two simple adversarial prompting strategies, and an adaptive attack. Across four recent GPT variants, our results show that the agent harness can increase harmful compliance even under direct prompting. More critically, we find that adaptive attacks that are largely unsuccessful against the base LLM suddenly become highly successful after the agent harness is introduced. Our results show that the safety behavior of the base LLM is not durable once a harness is introduced. Thus, as AI-for-Science agents become more capable and autonomous, the community needs to evaluate and align the agent using domain-specific safety benchmarks."
+  },
+  {
+    "title": "BARC-Bench: Benign Asks, Risky Consequences",
+    "url": "http://arxiv.org/abs/2610.32024v1",
+    "arxiv_id": "2610.32024v1",
+    "authors": [
+      "Kangkang Li",
+      "Kelvin Luu",
+      "Lily Ma",
+      "Tu Trinh",
+      "Ying Liu",
+      "Mohamed Elfeki"
+    ],
+    "published": "2026-10-23T00:53:24+00:00",
+    "summary": "Task instructions from users for agents are inherently underspecified, especially regarding safety boundaries--creating behavioral risks. To study these risks, we introduce BARC-Bench, a collection of 110 tasks across nine simulated workspace environments where benign requests leave openings for unsafe actions. In this benchmark, we evaluate agent behavior against safety boundaries established by workspace records, implicit environmental context, and unstated social norms. For example, an agent asked to schedule off-boarding discussions must arrange the meeting without prematurely revealing an employee's resignation through a shared calendar invitation. Evaluating four frontier model configurations across five attempts per task reveals that models are not consistently safe: the share of tasks completed safely on all five attempts ranges from 9.1% to 72.7%, with even the strongest configuration producing a safety violation on 27.3% of tasks. These results highlight an asymmetric operational risk: while models frequently complete complex workflows, their inability to consistently respect unstated boundaries presents a substantial barrier to safe autonomous delegation."
+  },
+  {
+    "title": "The Helpful Agent Problem: When Emergent Cooperation Among LLM Agents Bypasses Intended Workflows",
+    "url": "http://arxiv.org/abs/2610.31985v1",
+    "arxiv_id": "2610.31985v1",
+    "authors": [
+      "Moumita Choudhury",
+      "Amit Sarker",
+      "Shlomo Zilberstein"
+    ],
+    "published": "2026-10-22T22:55:40+00:00",
+    "summary": "LLM agents are increasingly deployed in collaborative settings where they pursue separate tasks while sharing resources and operating under review or oversight processes. Such settings create safety risks not only when agents are malicious, but also when they are simply trying to help. Prior work has largely studied adversarial or explicitly collusive behavior; we show that benign agents pursuing separate objectives can spontaneously cooperate in ways that bypass intended workflows. We call this the \\emph{helpful agent problem}. We study long-horizon shared-resource environments in which agents sometimes depend on resources owned by their peers and cross-owner changes are normally mediated by a reviewer. When review becomes unavailable, agents begin making changes on one another's behalf despite having no shared reward or explicit incentive to cooperate. Crucially, these actions remain within each agent's local permissions while circumventing the system's intended oversight structure. We introduce \\textsc{FavorBench}, a controlled benchmark with measurable downstream side effects, and adapt \\textsc{CooperBench} to test the phenomenon in realistic repositories. Across two benchmarks and four models, we find that out-of-workflow favors emerge frequently. Further, in \\textsc{FavorBench}, favors from at least three models cause significant harm to parties outside the interaction. These results reveal a distinct multi-agent safety challenge: cooperation itself can create pathways around system-level safeguards."
+  },
+  {
+    "title": "Towards Trustworthy AI-Enabled Emergency Medical Dispatch: Uncertainty-Aware Ambulance Travel Time Estimation",
+    "url": "http://arxiv.org/abs/2610.31944v1",
+    "arxiv_id": "2610.31944v1",
+    "authors": [
+      "Muhammad Adil Abid",
+      "Johan Holmgren",
+      "Fabian Lorig",
+      "Jesper Petersson"
+    ],
+    "published": "2026-10-22T21:42:32+00:00",
+    "summary": "Emergency medical dispatch increasingly relies on AI-enabled decision support systems when making ambulance dispatch decisions. In this process, accurate ambulance travel time estimates are essential for timely resource allocation and prehospital care. However, existing ambulance travel time estimation approaches typically produce only single point predictions. Consequently, they do not indicate how reliable an individual estimate is or how much uncertainty it carries. This limitation is particularly problematic in safety-critical emergency medical service dispatch operations, where trips with similar expected travel times may exhibit substantially different levels of uncertainty. Furthermore, real-world ambulance trip logs may contain domain-specific artefacts, such as co-located healthcare facilities and physically implausible travel speeds. These artefacts can degrade point prediction accuracy and affect the prediction task on which subsequent uncertainty estimation depends. To address these challenges, we propose an uncertainty-aware methodology for ambulance travel time estimation and evaluate it through a retrospective real-world scenario study using two years of ambulance trip data from the Sk\u00e5ne region in Sweden. The proposed methodology moves beyond average-case point predictions by generating context-adaptive prediction intervals with stable empirical coverage across the evaluated operationally important contexts. The resulting prediction intervals provide explicit information about predictive uncertainty that can support more transparent and risk-sensitive ambulance dispatch decision-making."
+  },
+  {
+    "title": "$M^3$: A Multi-LLM System for Multi-Turn Jailbreaking as a Markov Decision Process",
+    "url": "http://arxiv.org/abs/2610.31937v1",
+    "arxiv_id": "2610.31937v1",
+    "authors": [
+      "Yuqing Huang",
+      "Jack Ji",
+      "Jithin Pradeep",
+      "Sagarika Suresh",
+      "Jekaterina Novikova"
+    ],
+    "published": "2026-10-22T21:35:21+00:00",
+    "summary": "Modern Large Language Models (LLMs) remain vulnerable to carefully orchestrated multi-turn interactions that progressively bypass safety mechanisms. However, many existing red-teaming approaches rely on heuristics or impose strong assumptions that limit their applicability in fully black box settings. We address this gap by introducing $M^3$, an automated red-teaming framework that formalizes multi-turn jailbreaking as a finite-horizon Markov Decision Process (MDP). In $M^3$, an attacker LLM interacts with a target LLM while operating over a compact internal state produced by a state LLM. Across two benchmarks and six target models, $M^3$ consistently outperforms state-of-the-art multi-turn red-teaming methods in Attack Success Rates (ASR), achieving improvements of up to 53% in ASR@5. Even with lightweight attacker, $M^3$ attains gains up to 26% in ASR@1 and 34% in ASR@5, compared to baselines that use higher capacity attackers. Beyond improved effectiveness, $M^3$ exhibits steeper risk escalation over conversational turns and achieves more consistent performance across risk categories (up to 4.82 improvement in Gini index) without relying on predefined risk taxonomy, providing a scalable and principled framework for multi-turn red-teaming and safety evaluation."
+  },
+  {
+    "title": "Not an Accident: Exploiting Safety Filter Inadequacy in Humanoid Robots",
+    "url": "http://arxiv.org/abs/2610.31923v1",
+    "arxiv_id": "2610.31923v1",
+    "authors": [
+      "Tiffany Bao",
+      "Shangtao Li",
+      "Yifan Sun",
+      "Mengwen He",
+      "Bowei Li",
+      "Alden Wang",
+      "Changliu Liu",
+      "Ruoyu Wang",
+      "David Brumley"
+    ],
+    "published": "2026-10-22T21:16:46+00:00",
+    "summary": "As humanoid robots move from research laboratories toward deployment in human-centered environments such as homes, hospitals, and warehouses, safe operation around nearby people and objects becomes a fundamental requirement. Safety filters have emerged as a promising technique to address this challenge by providing mathematical guarantees that generated control actions do not result in collisions.   This paper shows that these guarantees hold only when the safety parameters are configured correctly. However, correct parameter configurations are task- and environment-specific, and no general method exists to determine them across diverse deployments. As a result, safety filters shipped with humanoid robots can fail after deployment in specific scenarios. We show that attackers can exploit these failures through only normal user interactions without any additional privileges or capabilities. To demonstrate this risk, we present goal insertion attacks and develop SIREN, an automated tool that identifies vulnerable inserting goals for a given task and environment. Experimental results show that SIREN identifies attacks in all vulnerable scenarios in the SPARK dataset. Compared with a baseline approach, SIREN discovers three times as many attacks. We also show that SIREN is able to generate attacks against a real humanoid and cause it to collide while executing tasks. These results demonstrate that current safety filters introduce exploitable vulnerabilities that can cause safety violations, which reveals that existing safety mechanisms can themselves become a source of safety risk for humanoid robots."
+  },
+  {
+    "title": "Permission to Retry: A Study of Authorization and Recovery in AI Agent Workflows",
+    "url": "http://arxiv.org/abs/2610.31916v1",
+    "arxiv_id": "2610.31916v1",
+    "authors": [
+      "Deekshith Marla",
+      "Kushagra Bhatnagar"
+    ],
+    "published": "2026-10-22T21:09:22+00:00",
+    "summary": "A durable agent can resume a consequential action while its authority changes and the action's external outcome remains uncertain. We study execution-time reliability of tool-using AI agents, isolating recovery decisions from language-model behavior. Checkpoint state, permission to dispatch, evidence of an external effect and permission to reconcile are distinct obligations. We present a finite conformance study that checks these obligations through histories scored against a provider effect ledger hidden from the recovering application. A prospectively frozen campaign executes 336 histories on native LangGraph and Temporal hosts, crossing 14 schedules, three provider contracts and four matched application policies. All 168 paired host cells have identical checked outcomes. Per host, retained-ledger reconciliation passes all 42 histories: 21 checked completions, 15 denials and six unknown outcomes with reservations retained. Cached retry, revalidation before retry and stable-key retry pass 30, 36 and 31 histories respectively. A separate 16-case component study of InfinityOS, an enterprise AI platform developed by Arya.ai, exercises exported authority, worker, recovery and settlement code over repository fakes. The results isolate the roles of current authority, provider contracts and retained observations in recovery, with safety, completion and unresolved obligations reported separately for the declared application profile."
+  },
+  {
+    "title": "StateBridge: Phase- and Track-Grounded Reasoning for Synthetic-to-Real Traffic Video Captioning and VQA",
+    "url": "http://arxiv.org/abs/2610.31898v1",
+    "arxiv_id": "2610.31898v1",
+    "authors": [
+      "Blessing Agyei Kyem",
+      "Richard Dzinyela",
+      "Joshua Kofi Asamoah",
+      "Eugene Denteh",
+      "Andrews Danyo",
+      "Solomon Owusu-Ansah",
+      "Dickson Gyimah Asiedu",
+      "Armstrong Aboah"
+    ],
+    "published": "2026-10-22T20:52:22+00:00",
+    "summary": "Traffic safety videos provide rich evidence for understanding interactions between pedestrians and vehicles, but synthetic-to-real evaluation makes this setting challenging because models must learn from simulated scenes and generalize to real-world traffic. In this work, we present StateBridge, a traffic video-language framework designed to operate under this synthetic-only training protocol. Our approach uses phase-aware clip construction, pedestrian and vehicle track summaries, and structured prompts to ground vision-language models in stable traffic evidence rather than appearance alone. We fine-tune public vision-language models on synthetic captioning and visual question answering examples, then combine their outputs through fact-locked caption fusion and evidence-diverse VQA consensus to improve consistency across actor roles, behavioral phases, and question types. StateBridge achieves an official S2 score of 55.4679 on AI City Challenge 2026 Track 2 using only synthetic training data. These results demonstrate the effectiveness of structured evidence transfer for traffic safety captioning and visual question answering."
+  },
+  {
+    "title": "Model-Free Generative Stealthy Attacks on Safety-Critical Vehicle Cyber-Physical Systems",
+    "url": "http://arxiv.org/abs/2610.31864v1",
+    "arxiv_id": "2610.31864v1",
+    "authors": [
+      "Qazi Mairaj ud din",
+      "Sidra Ghayour Bhatti",
+      "Qadeer Ahmed"
+    ],
+    "published": "2026-10-22T19:53:24+00:00",
+    "summary": "Existing stealthy attacks presuppose white- or grey-box access to the target system, unrealistic in practice. This paper develops a model-free stealthy attack framework that learns an attack policy directly from nominal measurement data, without knowledge of the system dynamics, estimator, or detector. We establish a certified residual-impact bound and an observable stealth budget around a stealth-consistent anchor, and show that recurrence and context conditioning are structural necessities for closed-loop, multivariate cyber-physical systems (CPS). The resulting attack generator, trained against a Wasserstein critic under a stealth-constrained impact objective, induces a hazardous 2.51 m lane departure while evading five intrusion detection systems, and, in real-time hardware-in-the-loop tests, a speed deviation of approximately 8 km/h while staying below the detection threshold. Results show that safety-critical CPS remain exposed without attacker access to privileged information, motivating offense-informed defenses."
+  },
+  {
+    "title": "SAGE: A hybrid vision-language and geometry framework for work-zone pathway prediction under temporary traffic control",
+    "url": "http://arxiv.org/abs/2610.31835v1",
+    "arxiv_id": "2610.31835v1",
+    "authors": [
+      "Jiaxi Liu",
+      "Keshu Wu",
+      "Weizhe Tang",
+      "Bofeng Cao",
+      "Sikai Chen",
+      "Xiaopeng Li",
+      "Steven T. Parker",
+      "Bin Ran"
+    ],
+    "published": "2026-10-22T19:14:17+00:00",
+    "summary": "Temporary traffic control redirects vehicles through work zones, requiring automated vehicles to connect an interpretation of the visible devices to a continuous passing path. Geometric predictors can provide several plausible paths, yet selecting the one consistent with the temporary control remains difficult. We propose SAGE (Semantic-to-Action Grounded Execution), a read-decide-execute-check framework that separates path construction, path preference, and control compliance within a shared candidate space. The central idea is to use a vision-language model's (VLM's) trajectory as a preference over intact geometric candidates. A role-decoupled generator constructs the candidates, and rank fusion combines each candidate's geometric score with its agreement with the VLM trajectory. Supervision structured around the Manual on Uniform Traffic Control Devices (MUTCD) trains SAGE-VLM to state the lane status and hazard side before its passage decision and trajectory. The predicted hazard side enters image-space predicates derived from MUTCD provisions, which support a final intervention bounded in score and displacement. On 2,306 real-world ROADWork validation episodes, the candidates include a path within 10 px of the human demonstration in 87% of episodes, yet selection regret accounts for 53% of the geometric ranker's error. SAGE reduces average and final displacement errors by 8.3% and 12.0% relative to the ranker, mostly in the far field, and hard-constraint violations by 37%. The trajectory opinion improves all four tested generator-selector combinations. SAGE is comparable to state-of-the-art VLM modules in accuracy, with a faster-responding VLM, and outperforms four other adapted driving VLMs in displacement error and safety measures. Project page: https://hhjj233.github.io/SAGE-page/."
+  },
+  {
+    "title": "SEVI: Safe Evidential Real-World Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2610.31829v1",
+    "arxiv_id": "2610.31829v1",
+    "authors": [
+      "Shaekh Mohammad Shithil",
+      "Lantao Liu"
+    ],
+    "published": "2026-10-22T19:08:36+00:00",
+    "summary": "Real-world reinforcement learning has enabled contact-rich manipulation tasks to be trained directly on physical robots, but unsafe interactions during online learning remain a key barrier to practical deployment. We propose Safe Evidential Real-World Reinforcement Learning (SEVI), a framework for reliability-aware safety intervention during real-world policy learning. SEVI introduces an Evidential Safety Critic that estimates both future constraint-violation risk and epistemic uncertainty in a single forward pass. During online learning, SEVI evaluates each task-policy action before execution; if the action is predicted to be unsafe or the prediction is insufficiently supported by evidence, SEVI overrides it with an offline-trained recovery policy that guides the robot toward a lower-risk region. We evaluate SEVI on two simulated manipulation tasks and a real-world USB insertion task under in-distribution and distribution-shifted conditions. Across task-learning and safety-critic baselines, SEVI achieves the strongest trajectory-level safety prediction, the highest final task success, and the lowest unsafe-event counts. SEVI also reduces unsafe events by 13.4 to 57.1 percent relative to recovery-based safe RL while preserving low-latency execution-time filtering. The project page is available at: https://sevi-safe.github.io/"
+  },
+  {
+    "title": "A Topology-Aware Quantum-Classical Framework for Multi-Target Active Debris Removal using Gaussian Boson Sampling",
+    "url": "http://arxiv.org/abs/2610.31824v1",
+    "arxiv_id": "2610.31824v1",
+    "authors": [
+      "Komal Pandya",
+      "Saiyam Sakhuja",
+      "Nagaraj Kattian"
+    ],
+    "published": "2026-10-22T19:03:02+00:00",
+    "summary": "The continued growth of orbital debris threatens the safety and sustainability of near-Earth space, making Active Debris Removal (ADR) an important mitigation strategy. Selecting $k$ targets from $N$ candidates yields a combinatorial search space of size $\\binom{N}{k}$, making joint target selection and mission sequencing computationally demanding. We present a topology-aware quantum-classical framework integrating orbital mechanics, weighted orbital-transfer graphs, Gaussian Boson Sampling (GBS), and multi-objective evolutionary optimization. Seven target-prioritization strategies represent physical consequence, orbital persistence, conjunction risk, network centrality, community structure, inferred source families, and random selection. GBS generates candidate target subsets from the weighted graph, which are then evaluated using PyGMO-based evolutionary optimization to identify servicing sequences that jointly minimize total velocity increment ($\u0394v$) and mission duration, accounting for modeled timing, propulsion, and mass feasibility. We evaluate the framework across three benchmark environments, SOCRATES Minefield, Collision Cloud, and Random, with candidate-pool sizes $N\\in\\{15,18,22,25\\}$ and target cardinalities $k\\in\\{3,5\\}$. The experiments characterize how benchmark topology, prioritization strategy, and problem scale relate to sampling behavior and downstream mission performance. By separating candidate-subset generation from detailed trajectory optimization, the framework offers a topology-aware approach to focusing computational effort on a limited set of candidate ADR missions."
+  },
+  {
     "title": "Reliable AI-Assisted Decisions via Selective Auditing",
     "url": "http://arxiv.org/abs/2610.31662v1",
     "arxiv_id": "2610.31662v1",
@@ -136,6 +603,21 @@
     "title": "Harmful Responses Are Jailbreak Templates: Transferring Autoregressive Jailbreaks to Diffusion Language Models",
     "url": "http://arxiv.org/abs/2610.31331v1",
     "arxiv_id": "2610.31331v1",
+    "authors": [
+      "Jinwei Gan",
+      "Zifeng Cheng",
+      "Zhiwei Jiang",
+      "Ran Sun",
+      "Shiping Ge",
+      "Qing Gu"
+    ],
+    "published": "2026-10-22T14:20:36+00:00",
+    "summary": "Diffusion large language models (dLLMs) enable flexible masked generation through bidirectional context modeling, but this capability also introduces a distinct jailbreak attack surface. We find that a harmful response to a given query naturally serves as an effective jailbreak template: simply masking a subset of its tokens can induce a dLLM to reconstruct harmful content. Based on this observation, we propose RMT-Jailbreak, a general framework that transfers existing autoregressive (AR) jailbreak attacks to dLLMs through their induced harmful responses. RMT-Jailbreak converts an AR-generated harmful response into a high-mask-ratio template using uniform token retention, and further applies prompt-based safety filtering to mask any remaining visible harmful content. The refined template is then provided to the target dLLM for bidirectional reconstruction. Extensive experiments across multiple AR jailbreak methods and target dLLMs demonstrate the effectiveness and generality of RMT-Jailbreak, revealing strong cross-paradigm transferability of jailbreak attacks."
+  },
+  {
+    "title": "Harmful Responses Are Jailbreak Templates: Transferring Autoregressive Jailbreaks to Diffusion Language Models",
+    "url": "http://arxiv.org/abs/2610.31331v2",
+    "arxiv_id": "2610.31331v2",
     "authors": [
       "Jinwei Gan",
       "Zifeng Cheng",
