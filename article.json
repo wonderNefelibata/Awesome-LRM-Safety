@@ -1,5 +1,453 @@
 [
   {
+    "title": "LoopVQ: Sub 1-bit KV Cache Quantization for Looped Transformers",
+    "url": "http://arxiv.org/abs/2611.05304v1",
+    "arxiv_id": "2611.05304v1",
+    "authors": [
+      "Minsoo Cheong",
+      "Sungjoo Yoo"
+    ],
+    "published": "2026-11-03T18:16:29+00:00",
+    "summary": "Looped transformers are a parameter-efficient alternative to standard transformers for language modeling. By reapplying the same layers across multiple loop steps, recent looped language models match the performance of non-looped models several times their size. While this architecture effectively reduces parameter memory, each loop step still stores its own keys and values, so the key-value (KV) cache grows linearly with the number of loop steps and becomes the main memory bottleneck. We observe that the KV cache of looped models is highly redundant along the loop axis and that the loop steps differ substantially in their sensitivity to quantization. Based on these observations, we propose $\\textbf{LoopVQ}$, a KV cache vector quantization method for looped transformers that codes channels of multiple loop steps jointly, and fine-tunes the codebooks to match the output of the full-precision model. At 0.5 bits per element, LoopVQ outperforms existing KV cache vector quantization methods for standard LLMs on general, long chain-of-thought reasoning, and long-context retrieval tasks with Ouro and Huginn models. Its design is orthogonal to these methods, and combined with TaSQ, it retains much of the BF16 accuracy even at 0.25 bits per element. We also implement LoopVQ in SGLang, where it nearly halves the decode latency at a 32K-token context and raises the peak serving throughput by up to $4.3\\times$ and $6.1\\times$ on the 1.4B and 2.6B Ouro models compared to the BF16 baseline."
+  },
+  {
+    "title": "OperAItor: An Agentic Framework for Fault-Tolerant Operation of Chemical Processes",
+    "url": "http://arxiv.org/abs/2611.05179v1",
+    "arxiv_id": "2611.05179v1",
+    "authors": [
+      "Javal Vyas",
+      "Mehmet Mercang{\u00f6}z"
+    ],
+    "published": "2026-11-03T16:40:46+00:00",
+    "summary": "OperAItor, an open-source framework for developing and evaluating large language model agents for supervisory fault management in chemical processes. The framework is demonstrated on a dynamic reactor-distillation process representing isopropanol dehydrogenation, with physically based thermodynamics and modified reaction kinetics to permit liquid-phase operation. The process is represented by a 113-variable differential-algebraic model and operates at a nominal feed rate of 100kmol/h, producing approximately 4t/h of acetone. The simulated plant includes 8 PI control loops, 22 process alarms, 5 duty-standby pump trains, and 11 independent safety instrumented functions. The agent architecture integrates multivariate statistical process monitoring, fault diagnosis, knowledge-graph retrieval, action planning, and supervisory action generation. Five action-validation configurations are investigated, comprising operation without validation, an LLM-based judge, digital-twin simulation, and deterministic admissibility checks with and without consequence projection. The framework is evaluated using four LLMs across 20 scenarios involving single and multiple simultaneous faults. Without agent intervention, 18 scenarios result in plant stops, corresponding to an economic loss of $399,000 relative to fault-free operation under the assumed benchmark economics. For GPT-5 nano, Qwen3 8B, and Mistral 7B, validated agent configurations reduce the number of stops to 5-8 and recover $265,000 of the loss. The study provides a reproducible benchmark for comparing agent architectures, language models, and action-validation methods for supervisory fault management in chemical processes."
+  },
+  {
+    "title": "QPP-Aware MCX over Tactical Edge 3D Networks in Public-Safety Communications",
+    "url": "http://arxiv.org/abs/2611.05165v1",
+    "arxiv_id": "2611.05165v1",
+    "authors": [
+      "Jos\u00e9 Oliveira",
+      "Pedro Valente",
+      "Tiago Mendes",
+      "Andr\u00e9 Vasconcelos",
+      "Tiago Fernandes",
+      "Rhyan Matos",
+      "Duarte Raposo",
+      "Pedro Rito",
+      "Marco Ara\u00fajo",
+      "Susana Sargento"
+    ],
+    "published": "2026-11-03T16:36:39+00:00",
+    "summary": "During disasters, public mobile networks may become unavailable, congested, or degraded, requiring deployable communication systems to support emergency operations. This article proposes a mission-critical communications system supporing Mission Critical Push-to-Talk (MCPTT), Mission Critical Video (MCVideo), and Mission Critical Data (MCData) over a private 5G standalone network with Non-Terrestrial Network (NTN) connectivity. A context-aware Quality, Priority, and Pre-emption (QPP) mechanism is proposed to dynamically adapt network resource allocation according to the operational state of Mission Critical Services (MCX). Extensions to the Open5GS Policy Control Function (PCF) and Session Management Function (SMF) enable priority and pre-emption updates for existing flows without session re-establishment. The architecture supports tactical edge deployment of service and media functions while retaining centralized service control. Experimental evaluation considers three configurations: terrestrial backhaul with centralized media processing, satellite backhaul with centralized media processing, and satellite backhaul with edge media processing. Results show that tactical edge processing reduces communication delay and packet loss. Under satellite backhaul, edge processing reduced the 95th-percentile MCPTT audio transport delay by 60.03 ms and packet loss by 9.42 percentage points, while achieving a 95th-percentile MCPTT access time of 184.52 ms. These findings demonstrate the benefits of tactical edge media processing and provide an experimental foundation for context-aware priority mechanisms in public-safety networks integrating terrestrial and non-terrestrial components."
+  },
+  {
+    "title": "Towards Multi-Method Evaluation of AI in Health: Integrating Benchmarks, Autoraters, and Expert Evaluation",
+    "url": "http://arxiv.org/abs/2611.05127v1",
+    "arxiv_id": "2611.05127v1",
+    "authors": [
+      "Sarah Montgomery-Taylor",
+      "Hamsa Subramaniam",
+      "Rob Brisk",
+      "Liam Foster",
+      "Jack Ching",
+      "Andrew Marshall",
+      "Jim Taylor",
+      "John Hernandez",
+      "Jen McKay",
+      "Dillon Obika",
+      "Nnamdi Ezeanochie",
+      "Nira Goren",
+      "Tiffany Guo",
+      "Rachel Kwon",
+      "Arlene Chung",
+      "Jacqueline Shreibati",
+      "Stella Yeoum",
+      "Brett Hatfield",
+      "Zelda Gulledge",
+      "Ankit Nathu",
+      "Ferenc Kazinczi",
+      "Yun Liu",
+      "Jonathan Krause",
+      "Heather Cole-Lewis",
+      "Susan Thomas",
+      "Megan Jones Bell",
+      "Bakul Patel",
+      "Joelle Barral",
+      "Katherine Chou",
+      "Dana Gelb Safran",
+      "Elizabeth A. McGlynn",
+      "Michael Howell"
+    ],
+    "published": "2026-11-03T16:12:47+00:00",
+    "summary": "General-purpose generative AI (GenAI) models are being rapidly adopted in healthcare, but they are challenging to assess with traditional evaluation frameworks. These conceptual, methodological, and practical challenges parallel decades of work in evaluating clinician and health system quality and safety. We describe the adaptation of methods from several fields, combined with emerging technical approaches, into a structured, multi-method evaluation framework designed to give well-rounded assessments of GenAI in health at scale. The approach first anchors evaluation to Critical User Journeys (CUJs) to help prioritize out of a large choice space, and maps these to a phased AI system lifecycle (base model development, product development, and post-deployment monitoring), since evaluation at each stage requires different methodological approaches. In this context, the approach then integrates three distinct evaluation methods (closed-question benchmarks, LLM-as-a-judge autoraters, and expert human review) across three core domains: accuracy, safety, and usefulness. Taken together, this approach provides a strategic framework for bridging the gap between benchmarking results and performance in the real world with the goal of supporting decision-making and accountability across development, procurement, and deployment for product teams, health systems, and regulators."
+  },
+  {
+    "title": "Enabling risk and reliability analysis in next-generation computational tools via multifidelity methods",
+    "url": "http://arxiv.org/abs/2611.05087v1",
+    "arxiv_id": "2611.05087v1",
+    "authors": [
+      "Anirban Chaudhuri",
+      "Karen Willcox"
+    ],
+    "published": "2026-11-03T15:45:44+00:00",
+    "summary": "Risk and reliability analysis are fundamental to the design, assessment, and operation of safety-critical complex systems; however, their integration into next-generation computational tools is constrained by the cost of uncertainty quantification with expensive computational models. The computational challenge is particularly prohibitive for tail-sensitive quantities, such as probabilities of failure, conditional values-at-risk, and buffered probabilities of failure, where accurate estimation can require a large number of model evaluations. Multifidelity methods provide a framework for addressing this computational bottleneck by combining information from models of varying accuracy and cost while retaining the predictive accuracy of the high-fidelity model. This review summarizes the state of the art in methods that enable scalable risk and reliability analysis using multifidelity control variates, multifidelity importance sampling, and multifidelity active learning."
+  },
+  {
+    "title": "From Roadside Sensing to Risk-Informed Safety Control: Surrogate Safety Measures as a Cyber-Physical Interface",
+    "url": "http://arxiv.org/abs/2611.04988v1",
+    "arxiv_id": "2611.04988v1",
+    "authors": [
+      "Salsabil Salah",
+      "Yiqiao Li",
+      "Bo Wang"
+    ],
+    "published": "2026-11-03T14:39:00+00:00",
+    "summary": "Proactive intersection safety analysis depends on trajectory data whose reliability varies by sensing modality, yet infrastructure-perception and surrogate safety measure (SSM) research have only recently begun to converge. This paper synthesizes both literatures alongside control theory to clarify how sensing choices, safety metrics, and predictive control connect end-to-end, and where infrastructure-derived risk signals could inform autonomous vehicle decision-making. Searches covered light detection and ranging (LiDAR), cooperative perception, time-to-collision (TTC), post-encroachment time (PET), extreme value theory, model predictive control (MPC), and signal control. Screening considered trajectory-based safety and control relevance, excluding detection benchmarks without safety linkage. This structured narrative synthesis retained 56 sources. No single SSM is universally valid: one-dimensional TTC and modified TTC suit longitudinal conflicts, two-dimensional TTC extends time-based measurement to crossing geometries, and observed PET captures crossing and vulnerable road user (VRU) conflicts but only after the event. LiDAR consistently outperforms camera-only sensing for continuous three-dimensional trajectory extraction, illumination robustness, and privacy, though its range degrades in heavy rain, fog, and snow. Its output becomes control-ready only when paired with filtering--Kalman, Savitzky-Golay--that stabilizes noisy detections. This review complements it from the infrastructure side: it examines how roadside sensing affects that chain's reliability, classifies SSMs by conflict geometry and temporal availability, and maps risk components onto control objectives and constraints for infrastructure and connected and automated vehicle (CAV) applications."
+  },
+  {
+    "title": "Caging Vision-Language Navigation for Legged Robots via Barrier-Certified Safety Architecture",
+    "url": "http://arxiv.org/abs/2611.04972v1",
+    "arxiv_id": "2611.04972v1",
+    "authors": [
+      "Abhijeet M. Kulkarni",
+      "Saimouli Katragadda",
+      "Yuze Du",
+      "Zijun Sha",
+      "Guoquan Huang"
+    ],
+    "published": "2026-11-03T14:29:21+00:00",
+    "summary": "By harnessing the inherent commonsense capabilities of pretrained Large Language Models (LLMs) and Vision-Language Models (VLMs), current Vision-Language Action(VLA) models for legged robots excel at interpreting language-based navigation commands but lack the physical grounding and explicit safety assurance required for real-world operation. Therefore, this paper aims to cage Legged-Vision-Language Navigation (VLN) through a safety architecture that provides physical grounding and ensures navigation safety. The key idea is not to abandon the powerful capabilities of end-to-end VLA planning, but rather to augment and cage them. In particular, we integrate a high-level VLA planner with a low-level physical-grounding layer that leverages efficient state estimation, in-situ 3D spatial perception, and an Signed Distance Field (SDF) representation to generate executable trajectories. We provide a navigation planner with provable collision-avoidance guarantees under the stated assumptions by combining a low-dimensional Bezier-parameterized MPPI planner with Discrete Exponential Barrier Function (dEBF) constraints. The proposed Legged-VLN system is modular, making it compatible with various VLM/VLA models and agnostic to the robot platform. The proposed system is validated with extensive real-world experiments on humanoid and quadrupedal robots, demonstrating versatile, efficient, and safe vision-language driven navigation capabilities."
+  },
+  {
+    "title": "Safeguarding Multi-Agent Reinforcement Learning for Connected and Automated Vehicles with Recursively Feasible Control Barrier Functions",
+    "url": "http://arxiv.org/abs/2611.04957v1",
+    "arxiv_id": "2611.04957v1",
+    "authors": [
+      "Jianye Xu",
+      "Yousef Sayed",
+      "Bassam Alrifaee"
+    ],
+    "published": "2026-11-03T14:16:51+00:00",
+    "summary": "Multi-Agent Reinforcement Learning (MARL) shows promise in coordinating connected and automated vehicles but offers no safety guarantee. Although Control Barrier Functions (CBFs) can add this guarantee, their optimization problem can become infeasible in practice due to control bounds. Moreover, they often overapproximate vehicle and road geometry, which makes them conservative. This paper proposes the Backup-Horizon CBF (BH-CBF), which evaluates safety along a horizon until all vehicles stop. BH-CBF is recursively feasible under control bounds, and it considers the exact vehicle and road geometry. Based on BH-CBF, we derive a fully decentralized safety filter that only needs a single broadcast of vehicle states and routes per step and stays real-time in dense traffic. We use BH-CBF to safeguard a MARL policy over its life cycle: as a reward during pre-training, as a run-time filter at deployment, and as a filter in the training loop that keeps fine-tuning on unseen maps collision-free. In simulations on real-world maps of a roundabout and an intersection, BH-CBF avoids all collisions of unsafe MARL policies and keeps its safety guarantee at every step. Existing filters either collide, lose the guarantee, or fall back to full braking far more often. In recorded roundabout traffic with 1264 human-driven vehicles over 115 km, our safeguarded policies shorten the median travel time by 14% compared with the human drivers, without any collision."
+  },
+  {
+    "title": "Robustness Verification against Patch Attacks via Group-Lasso Semidefinite Relaxation",
+    "url": "http://arxiv.org/abs/2611.04939v1",
+    "arxiv_id": "2611.04939v1",
+    "authors": [
+      "Yukina Nakagawa",
+      "Takami Sato",
+      "Ken Kobayashi",
+      "Kazuhide Nakata"
+    ],
+    "published": "2026-11-03T14:07:46+00:00",
+    "summary": "Robustness verification is essential for ensuring the safety and security of neural networks, but current methods focus heavily on   norm-ball attacks, which do not adequately model typical real-world threats that present physical perturbations, known as patch attacks. A naive approach requires computationally prohibitive enumeration of all possible patch positions. To address the challenge, we propose a novel neural network verification method specialized to the patch-attack threat. Instead of enumerating patch locations, we first model the patch attack with group-wise sparsity and formulate its verification methods as a mixed-integer semidefinite program (MISDP) by applying SDP relaxation to the neural network. We then propose three relaxations, including Group-Lasso relaxation, that remove the integer variables while preserving the sparse, group-wise structure of the original attack, enabling substantially efficient verification. Our empirical analysis demonstrates that the proposed relaxations require less than 3% of the computation time of the original MISDP, while the Group-Lasso relaxation incurs only a 0.34\\% average increase in the objective value over the original formulation. Furthermore, Group-Lasso achieves a verified rate of 91%, compared with under 70% for prior methods."
+  },
+  {
+    "title": "Sufficient and Necessary Smooth Barrier-Like Conditions for Continuous-Time Finite-Horizon Safety Verification",
+    "url": "http://arxiv.org/abs/2611.04888v1",
+    "arxiv_id": "2611.04888v1",
+    "authors": [
+      "Bai Xue"
+    ],
+    "published": "2026-11-03T13:34:30+00:00",
+    "summary": "We study finite-horizon safety verification for continuous-time stochastic systems modeled by stochastic differential equations. Given an open and bounded safe set, a compact initial set, a finite time horizon, and a prescribed violation-probability threshold, the objective is to certify that the exit probability from the safe set before the horizon remains below the threshold. Under uniform ellipticity of the diffusion matrix and regularity of the safe-set boundary, we develop a time-dependent barrier-like condition expressed as a set of functional inequalities, obtained by relaxing a parabolic initial-boundary value problem associated with the exit probability. If a function satisfies the condition, then the probability of leaving the safe set before the horizon is guaranteed to remain below the threshold. Conversely, when the exit probability is strictly smaller than the prescribed threshold uniformly over the initial set, the barrier-like condition is also necessary: there exists a smooth function satisfying it. Furthermore, when the dynamics are polynomial and the set descriptions are semialgebraic, the problem of verifying the condition admits a sum-of-squares formulation that is both sound and complete, yielding a complete degree hierarchy for finite-horizon stochastic safety verification."
+  },
+  {
+    "title": "TraceRouter++: Causal Semantic Routing Realignment via Optimal Transport",
+    "url": "http://arxiv.org/abs/2611.04878v1",
+    "arxiv_id": "2611.04878v1",
+    "authors": [
+      "Chuancheng Shi",
+      "Shangze Li",
+      "Wenhua Wu",
+      "Hengzhi Chen",
+      "Fei Shen",
+      "Li Zhuo",
+      "Zhiyong Wang",
+      "Tat-Seng Chua"
+    ],
+    "published": "2026-11-03T13:30:34+00:00",
+    "summary": "Despite their remarkable capabilities, large foundation models (LFMs) remain susceptible to adversarial manipulation. Current safety intervention methods primarily rely on the \\textit{locality hypothesis}, rigidly suppressing isolated neurons or features. However, harmful semantics manifest as distributed, cross-layer circuits, rendering localized ablations both brittle against complex jailbreaks and detrimental to general utility. To bridge this gap, we propose TraceRouter++, a routing-level safety intervention framework that explicitly traces safety-relevant causal routing pathways activated under harmful inputs and realigns their unsafe activation states. Our framework operates in a \\textit{Discover-Trace-Realign} paradigm: it first pinpoints a sensitive onset layer via attention divergence and disentangles dense activations into interpretable routing features using sparse autoencoders (SAEs). Subsequently, it maps these features to downstream causal circuits via feature influence scores (FIS). Crucially, departing from rigid suppression paradigms, TraceRouter++ introduces a constrained optimal transport (OT)-based soft routing realignment. By formulating safety intervention as a tractable coordinate-wise marginal optimal transport approximation, our method redirects unsafe activation marginals toward safe-reference marginals within causally identified routing subspaces while preserving non-selected coordinates at the intervention point. This mechanism safely redirects malicious semantic flows while leaving orthogonal computational routes intact. Extensive experiments across representative large language models (LLMs), multimodal large language models (MLLMs), and diffusion models (DMs) show that TraceRouter++ outperforms evaluated baselines, improving adversarial robustness while maintaining a favorable safety-utility trade-off. WARNING: This paper contains unsafe model responses."
+  },
+  {
+    "title": "Physics-Based Plausibility Assessment of AI-Predicted Vehicle Parameters for Automotive Radar in Pre-Crash Scenarios",
+    "url": "http://arxiv.org/abs/2611.04871v1",
+    "arxiv_id": "2611.04871v1",
+    "authors": [
+      "Rainer Engert",
+      "Patrick Zaumseil",
+      "Thomas Brandmeier"
+    ],
+    "published": "2026-11-03T13:26:46+00:00",
+    "summary": "Automotive radar is a key sensing modality for safety-critical vehicle functions due to its robustness under adverse weather and lighting conditions. Recent advances in AI-based radar perception enable the direct estimation of object parameters from a single radar measurement cycle. However, the internal decision process of data-driven models is typically not explicitly linked to the underlying radar sensing physics. Consequently, object estimates may achieve high statistical accuracy while remaining physically inconsistent with the measured radar signature, particularly in previously unseen scenarios. Such inconsistencies are especially critical for heading estimation, as they directly affect trajectory prediction and collision assessment in pre-crash scenarios. This paper presents a physics-based consistency assessment framework for validating AI-derived vehicle hypotheses in automotive radar perception. The proposed approach generates an expected radar signature from AI-estimated object parameters using a physics-based reference model that incorporates occlusion-dependent edge visibility, aspect- and angle-dependent RCS modeling, and characteristic wheel-induced MD signatures. The expected signature is compared with the observed radar point cloud using a Wasserstein-distance-based consistency metric computed from three complementary features: the spatial distribution of detections along object edges, the local detection count, and the radar reflection intensity. In this way, physically implausible object hypotheses can be identified and corrected independently of the underlying neural network architecture and without model retraining or architectural modifications. The proposed consistency module is integrated as a cascaded post-processing stage for vehicle heading estimation."
+  },
+  {
+    "title": "Safe Portfolio Learning from Untrusted Predictions: Signed Trust, Abstention, and Cross-Universe Polarity Failure",
+    "url": "http://arxiv.org/abs/2611.04826v1",
+    "arxiv_id": "2611.04826v1",
+    "authors": [
+      "Amirhossein MohammadpourAzari",
+      "Mohammad Zarei",
+      "MohammadAmin Fazli"
+    ],
+    "published": "2026-11-03T12:55:15+00:00",
+    "summary": "Portfolio use of machine predictions must often proceed while the predictions' economic direction, reliability, and timing remain untrusted, and while feedback from overlapping multi-period positions arrives with delay. A controller chooses among Safe, Follow, and Reverse portfolio actions, so signal orientation is learned rather than assumed. A share-adaptive master updates action probabilities from matured Safe-relative rewards, an evidence gate can abstain by transferring unsupported directional probability to Safe, a delayed collateral budget reserves worst-case loss capacity before exposure is funded, and a protected split account caps the capital adaptive decisions may touch. The architecture carries a dual certificate, tracking regret against switching action sequences under delay and one-sided intervention, together with a pathwise collateral safety bound that holds when predictions fail. On a 24-stock development universe a conservative prediction-assisted overlay stays near equal-weight performance at a fraction of the turnover. On a frozen 82-stock holdout, the pre-specified Reverse orientation fails to outperform Equal Weight; a separately labeled post-holdout diagnostic shows that permanently flipping the sign to Follow also does not recover a return edge. Under the post-holdout controller, protected wealth remains within 15.9 basis points of the Safe benchmark throughout. The contribution is safe adaptive use of untrusted predictions, not demonstrated alpha."
+  },
+  {
+    "title": "Extracting System Prompt of LLM Services in Complex (Agentic) Settings: Hierarchical Optimization and Reliable Evaluation Metrics",
+    "url": "http://arxiv.org/abs/2611.04803v1",
+    "arxiv_id": "2611.04803v1",
+    "authors": [
+      "Shuaidong Li",
+      "Chenhao Lin",
+      "Xinshan Yang",
+      "Chao Shen",
+      "Yufei Chen",
+      "Zhengyu Zhao"
+    ],
+    "published": "2026-11-03T12:37:01+00:00",
+    "summary": "System prompt is a critical intellectual property of large language model (LLM) services. To analyze its leakage, prompt extraction attacks have been extensively studied. However, we validate that existing attacks substantially degrade on recent LLM services, whose complexity has evolved in both the prompt itself and system-level constraints. Specifically, (1) system prompts become longer and more structured to contain pre-defined tool schemas, execution logic, safety guardrails, etc., and (2) only the final post-processed outputs (e.g., agent's actions) but not the raw textual response can be observed.   In this paper, we address the above increased complexity by proposing Extraction with Hierarchical Optimization (ExtraHerO), which (1) decomposes the prompt extraction into a hierarchical reconstruction process with a pre-defined structural prompt template, and (2) iteratively updates the adversarial query with guidance of feedback-template differences to observe diverse outputs. In particular, we monitor the information gain of attack optimization to early stop or reset it for a good trade-off between effectiveness and efficiency.   We also find that existing evaluation metrics for prompt fidelity can be misleading because they do not account for structural information. Therefore, we rely on global textual similarity and prioritize structural keywords. Moreover, we introduce a system-level metric, adversarial utility, to measure the help of prompt extraction for real-world downstream attacks. Experimental results demonstrate the consistent superiority of ExtraHerO, with average improvements of 12.5\\% (fidelity), 2.3\\% (functionality), and 6.0\\% (adversarial utility) on chatbots, and 12.2\\%, 34.3\\%, and 30.5\\% on agents."
+  },
+  {
+    "title": "BrainwashedLLM: Jailbreaking via Automated Adversarial Chain of Thoughts Discovery",
+    "url": "http://arxiv.org/abs/2611.04717v1",
+    "arxiv_id": "2611.04717v1",
+    "authors": [
+      "Masoud Poorghaffar Aghdam",
+      "G\u00f6ktu\u011f Serdar Y\u0131ld\u0131r\u0131m",
+      "Sinem Sav"
+    ],
+    "published": "2026-11-03T11:38:50+00:00",
+    "summary": "Large Reasoning Models (LRMs) achieve strong performance on complex tasks by generating explicit Chain-of-Thought (CoT) reasoning, but the safety implications of this intermediate reasoning surface remain underexplored. We demonstrate that the reasoning trace itself is a powerful attack vector. Safety alignment in large models is substantially less robust to malicious reasoning embedded in the context than to direct imperative prompts. We introduce BrainwashedLLM, a weak-to-strong adversarial framework that automates the discovery of reasoning-based jailbreaks. First, we use Group Relative Policy Optimization (GRPO), a Reinforcement Learning (RL) algorithm, with a multi-objective rule-based reward to fine-tune a small, white-box source model to generate adversarial reasoning traces. Crucially, the reward is computed entirely over the source's own reasoning trace. Second, we show that these traces transfer in a zero-shot manner. When traces are injected as input prefixes, they steer larger black-box LRMs to continue the adversarial reasoning and produce harmful outputs, without requiring prompt optimization, gradient access, or any form of output feedback from the target model. Across four state-of-the-art LRMs that span distinct architectures, BrainwashedLLM achieves ASR@5 between 0.74 and 0.98 across targets, within 16 points of query-based baselines, without querying the target during attack construction. To our knowledge, this is the first framework to use RL to directly optimize the CoT of LRMs as an attack surface without any target feedback, and the first to demonstrate zero-shot weak-to-strong transfer of reasoning traces. Our results suggest that exposed CoT is a vulnerability in LRMs and motivate architectural defenses that isolate the reasoning buffer. Warning: This paper contains potentially offensive and harmful text."
+  },
+  {
+    "title": "Inter-Agent Influence: Evaluating Persuasion, Deception, and Coercion in Multi-Agent Systems",
+    "url": "http://arxiv.org/abs/2611.04556v1",
+    "arxiv_id": "2611.04556v1",
+    "authors": [
+      "Chandler Smith",
+      "Qi Guo",
+      "Cecilia Elena Tilli",
+      "Sophia Hatz",
+      "David Demitri Africa",
+      "Patricia Paskov",
+      "Christian Schroeder de Witt",
+      "Philip Torr",
+      "Lewis Hammond"
+    ],
+    "published": "2026-11-03T09:23:12+00:00",
+    "summary": "The deployment of AI agents in multi-agent settings enables inter-agent influence, whereby agents can strategically steer each other's behaviour towards an intended outcome. Such capabilities pose novel risks, as malicious agents could direct others towards harmful actions. In this work we investigate three such capabilities - persuasion, deception, and coercion - across five realistic evaluation environments and a variety of agents instantiated with frontier language models. We observed significant inter-agent influence capabilities; in oversight environments, all tested models shifted overseer decisions from rejection to approval through persuasion, deception, or coercion. We also observed successful influence in non-hierarchical 'peer-to-peer' settings through redirection of a peer's safety research trajectory. As multi-agent deployments become increasingly commonplace, these results point to a pressing need for work on mitigating the risks from inter-agent influence. Code and data are available at https://github.com/Cooperative-AI-Foundation/inter-agent-influence."
+  },
+  {
+    "title": "Auditing Targetless Camera-LiDAR Extrinsic Correction before Recursive Use",
+    "url": "http://arxiv.org/abs/2611.04397v1",
+    "arxiv_id": "2611.04397v1",
+    "authors": [
+      "Bo Ma",
+      "Weiqi Yan"
+    ],
+    "published": "2026-11-03T06:30:51+00:00",
+    "summary": "Camera-LiDAR fusion repeatedly uses an extrinsic transform in projection, association, and recursive state estimation. We study whether a targetless correction should be admitted to a downstream consumer only after separate audits of correction quality, confidence ranking, and recursive risk. Our log-disjoint protocol evaluates these stages under synthetic extrinsic drift on Argoverse 2 and treats cross-dataset and odometry experiments as bounded diagnostics.   On 27 test-split logs, single-frame Canny alignment is harmful in the mild tier. Multi-frame alignment improves severe-tier rotation by 2.52 degrees but worsens translation by 0.177 m; its declared joint error-magnitude improvement is also negative (-0.158, 95% CI [-0.223, -0.098]), so the rotation gain is not a six-degree-of-freedom correction success. A zero-injection check moves away from the true extrinsic, and solver-disagreement AUROC on selected splits does not yield a validated nonzero-coverage risk-coverage operating point.   In a 15-log final system role, the locked conservative policy admits no candidate and equals Raw, whereas Always-correct increases trajectory error. These results support an auditable separation of correction, confidence, and recursive contamination; they do not establish a deployable calibration gate, positive odometry or SLAM improvement, map consistency, or closed-loop safety."
+  },
+  {
+    "title": "Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents",
+    "url": "http://arxiv.org/abs/2611.04393v1",
+    "arxiv_id": "2611.04393v1",
+    "authors": [
+      "Ilan Zendel",
+      "Matan Levy",
+      "Stav Cohen",
+      "Avi Mendelson",
+      "Amit LeVi"
+    ],
+    "published": "2026-11-03T06:26:58+00:00",
+    "summary": "LLM agents increasingly act on information retrieved from public sources they treat as credible, which turns a manipulated recommendation into a transaction, a dependency, or a decision with physical consequences. The security literature models this threat as instruction injection, in which an adversary writes a command into retrieved content and deployed defenses learn to recognize command syntax. We show that an attacker can instead steer an agent through the agent's own harm-avoidance. A single fabricated hazard, written as an ordinary review, leads the agent to disqualify the legitimate options and select the attacker's target by its own reasoning, with no command for a detector to recognize. We call this voluntary servitude. These payloads steer agents about as often as instruction injection (60.4% vs. 66.0%), and deployed injection detectors score them as benign, so behind a filter they are 1.7-4.4x more effective. We measure this at the generation stage across six models and ten consumer-service domains, for three attack families, and show that it transfers to production browser agents, outperforming instruction injection, and to a retrieval pipeline (1.0-57.0% end-to-end success, depending on the retriever). We then show that a corroboration requirement added to the agent's instructions removes roughly 95% of the exposure against a non-adaptive attacker without retraining. With the requirement in place, the agent still reads the planted hazard and no longer acts on it."
+  },
+  {
+    "title": "Aero-VPA: Few-Step Flow-Matching Control over Non-Reconstructive JEPA Latents for Agile Flight on Edge Hardware",
+    "url": "http://arxiv.org/abs/2611.04392v1",
+    "arxiv_id": "2611.04392v1",
+    "authors": [
+      "Yeonseok Lee"
+    ],
+    "published": "2026-11-03T06:25:06+00:00",
+    "summary": "Vision-Language-Action (VLA) models generalize across tasks, but their autoregressive decoders need sequential forward passes in proportion to the action horizon, each bounded below on embedded aerial platforms by streaming billions of parameters from memory. We present Aero-VPA, a lightweight Vision-Predictor-Action architecture for 3D navigation on edge hardware. A compact RGB-D Vision Transformer and a five-head ensemble predictor, trained without pixel reconstruction, forecast the next latent state; a Conditional Flow Matching solver generates a velocity and yaw-rate chunk in two Euler steps, so each decision takes five sequential network evaluations; and the ensemble dispersion drives an uncertainty fallback. Version 1 specified the architecture, deployment and protocol without results. This version reports the first closed-loop evaluation: PX4 software-in-the-loop simulation of quadrotor missions in procedurally generated forests. Behaviour cloning failed on all 60 missions despite open-loop errors of 0.02-0.04 m/s: the policy copies its last command, a copycat form of causal confusion. DAgger with a privileged, safety-gated supervisor gave the first successes but plateaued at 11.1-21.1% across six checkpoints. A map-free runtime shield with a 15 s depth memory, barrier constraints, a cap on motion outside the 73-degree field of view and backoff along the flown path raised the first DAgger policy's success on 180 paired missions from 21.1% to 52.2% (95% CI [45.0, 59.4]; exact McNemar p = 1.2 x 10^-10) and cut its crashes from 72.2% to 22.2%, while timeouts rose from 2.8% to 23.3%. All six checkpoints gained 30.0-34.4 percentage points, at mean speeds of 1.16-1.36 m/s. The code (https://github.com/ylee-sling/Aero-VPA), the trained policy (72.6 MB, https://huggingface.co/ylee-sling/aero-vpa) and the full benchmark dataset are public."
+  },
+  {
+    "title": "Can Benign Skills Induce Misaligned Behavior in LLM Agents?",
+    "url": "http://arxiv.org/abs/2611.04299v1",
+    "arxiv_id": "2611.04299v1",
+    "authors": [
+      "Xuanye Zhang",
+      "Yongsen Zheng",
+      "Kaiyu Zhou",
+      "Bowen Shen",
+      "Haoran Ou",
+      "Zhuqin Xu",
+      "Tianwei Zhang",
+      "Kwok-Yan Lam"
+    ],
+    "published": "2026-11-03T04:29:17+00:00",
+    "summary": "LLM agents increasingly rely on reusable skills to plan tasks, invoke tools, recover from errors, and complete workflows without modifying model parameters. Although these skills are typically developed to enhance benign tasks, they may also make an agent more capable of executing procedures for harmful purposes. We study this risk, which we call skill-induced behavioral misalignment: adding benign skills may cause an agent to execute external actions that violate safety requirements.   We first conduct a systematic study to validate the existence of this phenomenon. It compares agents with and without benign skills across five LLM backbones and three benchmarks under matched requests. On average, skill augmentation improves benign task accuracy by 10.3 percentage points (pp), but also increases unsafe action rate (UAR) by 10.3 pp. The regression also occurs with skills curated by experts. A paired trajectory analysis shows that 24 of 50 newly unsafe trajectories fail to complete the harmful objective, revealing violations that task completion alone would miss.   We further disclose multiple factors and scenarios that could exacerbate this risk. (1) Evolving skills with benign feedback can amplify unsafe execution; (2) This regression is more pronounced when retrieved skills are matched to task and contain procedural guidance; (3) Distilling benign experience into reusable skills yield higher UAR compared with their source trajectories. (4) A guard that checks proposed tool actions before execution reduces violations while retaining gains on benign tasks. All these findings confirm the significance of skill-induced behavioral misalignment, and the urgent need for new mitigation solutions."
+  },
+  {
+    "title": "When Debate Amplifies Risk: Social-Bias Vulnerabilities in Multi-Agent Safety Deliberation",
+    "url": "http://arxiv.org/abs/2611.04289v1",
+    "arxiv_id": "2611.04289v1",
+    "authors": [
+      "Qinghua Mao",
+      "Xi Lin",
+      "Yuxin Qi",
+      "Zihao Xu",
+      "Jinze Gu",
+      "Yuliang Chen"
+    ],
+    "published": "2026-11-03T04:16:06+00:00",
+    "summary": "Retrieval-augmented Web applications increasingly employ multi-agent debate (MAD) to aggregate conflicting, noisy, and heterogeneous information, yet deliberation is fundamentally a social process susceptible to interpersonal dynamics. When retrieved Web sources contain latent hazards alongside safe factual content, social biases such as conformity pressure and authority deference can override evidence-grounded safety boundaries. In this work, we investigate whether the social structure of deliberation can paradoxically amplify latent Web safety risks. We introduce SafeConflict-Bias, a controlled counterfactual diagnostic protocol spanning six core Web risk categories, which holds queries and retrieved evidence strictly invariant while isolating conversational majority sway, authority cues, and confidence asymmetry. Empirical evaluation across diverse proprietary and open-source backbones reveals that while isolated models reliably reject unsafe guidance, standard MAD catastrophically capitulates to social pressure---surging unsafe adoption from 0.0\\% up to 100.0\\% and systematically silencing safe minority evidence. To resolve this systemic fragility without retraining or debate regeneration, we propose RiskTrace-Debias, an inference-time auditing framework uniting evidence-first precommitment, social-metadata masking, and consistency-gated arbitration. RiskTrace-Debias suppresses worst-case unsafe adoption to $\\le 2.0\\%$ across all architectures without inducing over-refusal, while generating verifiable provenance traces to audit interpersonal manipulation in Web deliberation."
+  },
+  {
+    "title": "Unmitigated? How are the world's largest companies responding to AI risks?",
+    "url": "http://arxiv.org/abs/2611.04278v1",
+    "arxiv_id": "2611.04278v1",
+    "authors": [
+      "Alexander K. Saeri",
+      "Jess Graham",
+      "Michael Noetel",
+      "Peter Slattery",
+      "Kun Zhao",
+      "Eunice Zhang",
+      "Erin Howard",
+      "Neil Thompson"
+    ],
+    "published": "2026-11-03T04:04:01+00:00",
+    "summary": "AI is introducing new risks to large companies and amplifying existing risks, but whether companies are addressing the AI risks they are exposed to is largely untested. We investigated what outsiders can observe: whether companies publicly acknowledge AI risks. We coded public documents from 200 of the largest companies worldwide, collected in early 2026, against the 24 AI risks in the MIT AI Risk Repository, and compared acknowledgements with expert judgements of risk severity, sector vulnerability, and AI role responsibility from a companion Delphi study of 272 AI risk experts. Of the 100 largest companies, 32% did not publicly acknowledge any AI risks. Of the largest 1000 companies, we estimate that 62% [95% CI: 54%, 70%] did not publicly acknowledge any AI risks. Where companies did acknowledge risks, five accounted for over half of all acknowledgements: discrimination, weapons & cyberattacks, fraud & scams, loss of privacy, and devaluation of human creativity. Several risks that experts judged most severe were almost absent: almost no company acknowledged power centralization (concentration of power among those who control advanced AI), competitive dynamics (racing to deploy AI at the expense of safety), or dangerous capabilities. Companies in sectors experts judged more vulnerable to a risk were more likely to acknowledge that risk. But even companies in sectors judged 'extremely vulnerable' to a risk usually did not acknowledge it. Companies with roles experts judged most responsible for addressing a risk were no more likely to acknowledge it than other companies. General-purpose AI developers acknowledged AI misalignment (15%) far less often than discrimination (85%). These findings provide an empirical baseline for the design of AI risk disclosure requirements."
+  },
+  {
+    "title": "Agreements Have a Clock: Compute Growth and the Verification of AI Restraint",
+    "url": "http://arxiv.org/abs/2611.04272v1",
+    "arxiv_id": "2611.04272v1",
+    "authors": [
+      "Li Gan"
+    ],
+    "published": "2026-11-03T04:01:01+00:00",
+    "summary": "Rival powers have agreed to limit nuclear arms, phase out ozone-depleting chemicals, and cut greenhouse gases, though each agreement was hard to reach. This paper asks what an agreement to pause frontier AI needs. A follower advances through own research and diffusion from the leader. Because diffusion fades as the gap closes, a paused leader stays ahead longer than its raw lead suggests. A solved agreement game adds voluntary entry, costly monitoring, secret advances, and credible responses. Cooperation is supportable when the monitoring needed to deter a breakout costs no more than either country gains from cooperating. As compute grows during a pause, a secret advance reaches the frozen frontier sooner, shrinking the response window: agreements have a clock. In an example with a fixed leader window, cooperation is supportable through month 18.9. Verified matched safety research extends this to month 25.5, and halving the monitoring cost to month 31.8."
+  },
+  {
+    "title": "From Guidelines to Practice: Defining Requirements for AI Red-Teaming Tools",
+    "url": "http://arxiv.org/abs/2611.04271v1",
+    "arxiv_id": "2611.04271v1",
+    "authors": [
+      "Gia Phong Tran",
+      "Thai Duong Huynh",
+      "Randolph Loh",
+      "Balachandar Gowrisankar",
+      "Zihao Wang",
+      "Moe Thu Kyaw",
+      "Jun Sun",
+      "Adams Wai-Kin Kong",
+      "Vrizlynn L. L. Thing"
+    ],
+    "published": "2026-11-03T04:00:18+00:00",
+    "summary": "Artificial Intelligence (AI) has seen significant developments and increased usage in recent years. AI benefits various tasks, automates decision-making, and enhances efficiency. However, AI also introduces additional attack surfaces for threat actors to perform attacks like prompt injection and jailbreaking, making security a great concern. AI security testing aims to imitate adversarial attacks or malicious inputs via manual testing or with the assistance of tools. Thus, it is critical that organizations are aware of the capabilities and limitations of the tools before using them. Existing studies provide insights on the overall architecture of AI security testing tools and raise concerns on their reliability, but their analysis is limited to attack performance. Selection of a tool for AI risk assessments should also depend on their alignment with the recommendations of industry standards, but to our knowledge, previous studies have not utilized such guidelines. To bridge this gap, we analyze several industry standards and guidelines to identify the requirements of AI testing tools. We discuss and highlight desirable features across various AI security testing tools for a variety of different AI systems. We evaluated six tools across six Large Language Models, reported on our insights, and identified gaps that should be considered by future tools."
+  },
+  {
+    "title": "Prizes, Shared Hazard, and the Speed of Frontier AI",
+    "url": "http://arxiv.org/abs/2611.04266v1",
+    "arxiv_id": "2611.04266v1",
+    "authors": [
+      "Li Gan"
+    ],
+    "published": "2026-11-03T03:55:29+00:00",
+    "summary": "Frontier AI labs compete in a contest for commercial leadership while sharing the risk of catastrophe. Each lab gains from arriving earlier but bears only part of the hazard its speed adds, which this paper calls the hazard externality. In an illustrative calibrated takeoff model, three racing labs get through the takeoff period in 18 months, while a common rule on research shares would stretch it to 69 months. Neither force alone explains racing that fast. Removing the contest first closes over ninety percent of the gap in catastrophe probability between racing and a common rule when the catastrophe probability at full speed is 75 percent, and 69 percent when it is 25 percent; averaged over both orders of removal, the contest explains 65 and 44 percent. More labs make each lab race harder, when industry hazard at a common research share does not depend on the number of labs. Under open source in its ideal form, where every lab publishes its capability findings at once, labs slow to the coordinated pace, because no lab can get ahead and each bears all the hazard its research adds. One lab's restraint achieves much less than a common rule. The White House Accord on Super Intelligence of September 2026 audits safety but sets no limit on speed. In the model it does not slow the race, because each lab still gains as much from speeding up."
+  },
+  {
+    "title": "Attack-Aware Intrusion Risk Monitoring for Aerial Surveillance via Probabilistic Signal Temporal Logic",
+    "url": "http://arxiv.org/abs/2611.04252v1",
+    "arxiv_id": "2611.04252v1",
+    "authors": [
+      "Xinhao Yan",
+      "Kenji Kashima",
+      "Bo Chen",
+      "Hailong Huang"
+    ],
+    "published": "2026-11-03T03:44:01+00:00",
+    "summary": "This paper considers online intrusion-risk assessment and graded warning for unmanned aerial vehicles under bounded measurement attacks. To address this problem, we develop a monitoring framework that combines trusted state estimation, attack-aware risk assessment, and probabilistic signal temporal logic (PrSTL). Trusted observations support recursive state estimation, while potentially attacked observations inform integrity testing and intrusion-risk assessment. The key contribution is a confidence-set construction that combines normalized innovation statistics with physical attack bounds to characterize admissible measurement biases. The resulting family of bias-corrected Gaussian posteriors yields an upper bound on the probability of occupying a no-fly zone or its surrounding safety margin. Confidence guarantees and finite-cover numerical certificates quantify the reliability of this risk envelope, which is evaluated with or without an integrity alarm. The PrSTL monitor analyzes the resulting risk sequence to distinguish ordered, persistent, and repeated risk and produces graded warnings with explicit robustness margins and supporting windows. We validate the monitor in flight experiments with a Crazyflie quadrotor tracked by a Vicon motion capture system. Controlled comparisons quantify the contributions of individual monitoring components. Prescribed risk profiles verify the temporal semantics and illustrate how distinct risk patterns produce different warning levels."
+  },
+  {
+    "title": "Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs",
+    "url": "http://arxiv.org/abs/2611.04166v1",
+    "arxiv_id": "2611.04166v1",
+    "authors": [
+      "Zihao Feng",
+      "Qingzhao Zhang",
+      "Chunyu Xia",
+      "Bo Yu",
+      "Z. Morley Mao",
+      "Ramesh Govindan"
+    ],
+    "published": "2026-11-03T01:57:41+00:00",
+    "summary": "Reasoning vision-language-action (VLA) models pair physical control with natural-language rationales that supervisors can read to monitor embodied safety. Prior attacks on VLA reasoning corrupt the rationale itself and leave visible evidence in the text. We show that visual perturbations can instead alter the physical action while keeping the generated rationale word-for-word identical. At the shared text/action interface of Alpamayo for driving and InstructVLA for manipulation, our text-neutral action-subspace (TNAS) diagnostic shows that the locally most action-sensitive direction is nearly orthogonal to the active text-loss gradients, with 1.87% and 5.28% norm overlap. At equal hidden-state perturbation norms across both models, interventions along this text-neutral residual shift actions 4.64x to 47.8x more than text-gradient perturbations, whereas text-gradient perturbations induce 21.2x to 277x more text drift. Steering visual perturbations along this direction reaches the same decoupling from the image. Across 154 obstacle-annotated driving scenes in Alpamayo, TNAS-guided attacks induce a new collision under a word-for-word identical rationale in 52.6% of scenes under full-image perturbations and 35.1% under a localized forward-camera patch, compared with 4.55% for unguided action attacks. Relative to a text-preserving baseline, TNAS guidance raises exact rationale preservation from 83.0% to 89.5% and cuts teacher-forced text drift by 68.4% at a comparable collision rate. In InstructVLA, TNAS guidance cuts text drift by 40.5% and preserves the exact response on 85.0% of examples alongside a 1.73-unit action-chunk shift. An unchanged rationale therefore cannot certify a safe action, so monitors for reasoning VLAs must verify the predicted action channel directly."
+  },
+  {
+    "title": "Online Hamilton-Jacobi Reachability Onboard the Robot Control Loop: A Real-Time GPU Solver for Safety-Critical Autonomy",
+    "url": "http://arxiv.org/abs/2611.04096v1",
+    "arxiv_id": "2611.04096v1",
+    "authors": [
+      "Kevin Weekly",
+      "Alexandre M. Bayen"
+    ],
+    "published": "2026-11-03T00:11:57+00:00",
+    "summary": "Hamilton-Jacobi (HJ) reachability provides certified backward reachable tubes (BRTs) for safety-critical robotic systems, but the level-set computation scales exponentially in the state dimension and has historically been performed offline. As autonomy stacks (ADAS/AV, humanoid robotics, and vision-language-action models) increasingly rely on black-box, probabilistic policies, a deterministic safety layer with formal guarantees is an essential complement. We present a CUDA implementation of the canonical WENO5 + TVD-RK3 + Lax-Friedrichs level-set Hamilton-Jacobi-Isaacs solver for 2D, 3D, and 4D dynamics that is fast enough to run inside a robot's control loop. In 32-bit floating point (FP32) on a single workstation GPU (NVIDIA RTX 4000 Ada), it computes the 3D Air3D BRT at 112 Hz, a 4D pursuit-evasion BRT at 61 Hz, and a 2D wind-affected drifter BRT at 74-147 Hz, 5.9-17.5x faster than the JAX reference hj_reachability at matched precision and 1.7-16x faster than a torch.compile reimplementation of the same scheme. In 64-bit floating point (FP64) it agrees with hj_reachability on eight benchmark cases, reproduces Mitchell's Air3D BRT to within 0.04% of the reference cell count, and runs 2.0-4.6x faster. On an embedded NVIDIA Jetson AGX Thor it computes Air3D at 66 Hz (N=41) and the 2D drifter at 54 Hz, 3.8-8.9x faster than hj_reachability on the same device. As a multi-agent application, an in-kernel label-propagation extension recovers the K-agent capture-basin Voronoi tessellation from a single combined HJ solve, independent of fleet size; it runs at 4.0 ms per tick in a closed-loop wildfire-response simulation of six quadcopters under time-varying, non-uniform wind."
+  },
+  {
+    "title": "A Guideline-Grounded Multi-Agent Framework for Personalized Exercise Prescription from Clinical and Wearable Data",
+    "url": "http://arxiv.org/abs/2611.03983v1",
+    "arxiv_id": "2611.03983v1",
+    "authors": [
+      "Xintong Li",
+      "Yufen Lin",
+      "Yuhua Wu",
+      "Fengran Wang",
+      "Minxiao Wang",
+      "Rebecca A. Gary",
+      "Jacob Kariuki",
+      "James Smith",
+      "Sandra A. Billinger",
+      "Canhua Xiao",
+      "Xiao Hu",
+      "Runze Yan"
+    ],
+    "published": "2026-11-02T21:22:18+00:00",
+    "summary": "Translating population-level exercise guidance into individualized prescriptions requires integrating clinical and wearable data, including diagnoses, medications, functional limitations, and baseline activity, with condition-specific recommendations, a process difficult to scale beyond specialist rehabilitation settings. We developed FITTER, a multi-agent framework that integrates these data with condition-specific guidance to generate personalized FITT-VP prescriptions and applies deterministic safety audit and repair to correct rule-checkable violations. We evaluated FITTER using data from 400 All of Us participants (300 cancer, 100 stroke) against five LLM comparators through computational evaluation, ablation, and structured clinician review. FITTER achieved 98.5% safety-constraint compliance versus 75.8-85.8% for comparators and showed greater quantitative dosing precision and guideline alignment. Cancer-cohort ablation identified safety audit and repair as the largest contributor to safety-constraint compliance. Clinicians reviewed 80 prescriptions across safety, personalization, instruction concreteness, anticipated effectiveness, and clinical acceptability. FITTER provides a clinician-facing approach integrating clinical and wearable data, guidance, and explicit safety constraints."
+  },
+  {
+    "title": "Balancing Chain-of-Thought and Answer Supervision for Small Language Models on Medical Question Answering",
+    "url": "http://arxiv.org/abs/2611.03948v1",
+    "arxiv_id": "2611.03948v1",
+    "authors": [
+      "Le Zhou",
+      "Xiao Luo",
+      "Chinmay Chandra",
+      "Zhan Zhang"
+    ],
+    "published": "2026-11-02T20:48:29+00:00",
+    "summary": "Small language models (<=9B parameters) can support local medical question answering (QA) while reducing privacy and latency concerns, but effective fine-tuning remains challenging. This paper compares two chain-of-thought (CoT) supervised fine-tuning methods: Uniform-across-Sequence (UaS), which applies equal loss weighting to the full CoT-and-answer sequence, and Segment-weighted (SwS), which separately weights CoT and answer losses. We evaluate six general- and medical-domain models on multiple-choice QA (MedQA and EMS-MCQA) and free-text QA (Med-O1). Results show that neither method is universally best: on multiple-choice QA (MedQA and EMS-MCQA), SwS generally performs better, with general-purpose models benefiting most; notably, Qwen3.5-4B improves by up to 44.8% over its zero-shot baseline on MedQA. In contrast, medical-domain models show smaller or even negative gains on MCQs. On free-text QA (Med-O1), UaS performs best for nearly all models and provides consistent improvements across both model types, with the 3B Llama-3.2 model approaching the performance of much larger 7B medical-domain models. We also find that excessively long CoT generation is associated with lower performance in some models on either multiple-choice or free-text QA tasks, suggesting that limiting the CoT length during training may benefit selected models. Overall, the results show that CoT loss weighting should be matched to the task format and the knowledge already encoded in the base model, rather than using a single fine-tuning strategy for all clinical QA tasks."
+  },
+  {
+    "title": "Worldsheet functional RG and the $\u03b1'$-tower",
+    "url": "http://arxiv.org/abs/2611.03781v1",
+    "arxiv_id": "2611.03781v1",
+    "authors": [
+      "Ivano Basile",
+      "Francesco Ferrarin",
+      "Alessia Platania",
+      "Matteo Zatti"
+    ],
+    "published": "2026-11-02T19:00:01+00:00",
+    "summary": "We apply the functional renormalization group to the worldsheet theory of the bosonic string. Imposing the Weyl anomaly cancellation as a condition on the local renormalization group flow, we derive flow equations for the background couplings and the corresponding effective spacetime equations of motion, first in a two-derivative truncation, on a general curved background. We then consider a truncation to all orders in $\u03b1'$, which captures only a subset of the possible tensor structures but is analytically tractable, in analogy with $f(R)$-like approximations. Within this truncation, we obtain Tseytlin's spacetime effective action, and we use it to study solutions to all orders in $\u03b1'$, including black holes. Our results show that the functional renormalization group can be implemented on the string worldsheet and provide a framework to access the strong-curvature regime. As a longer-term goal, this may allow one to test the scenario of effective asymptotic safety in string theory, in which an approximately scale-invariant regime lies between the low-energy effective field theory and a stringy completion."
+  },
+  {
     "title": "VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably",
     "url": "http://arxiv.org/abs/2611.03575v1",
     "arxiv_id": "2611.03575v1",
@@ -60,6 +508,39 @@
     "summary": "LLM agents are judged by what they deliver, and in professional work what gets delivered is a project, not a task. A project pays off only if the whole package holds, and one weak part can limit the value of the rest. Yet existing benchmarks mostly test agents on one task at a time, leaving a gap between the capability we measure and the outcome that makes agents useful. To address this gap, we introduce DeliverBench, which tests whether agents can carry a project from brief to final delivery. Its 11 projects, spanning financial due diligence, legal contract drafting, and drug safety reporting, are reconstructed with 13 domain experts from real materials and chain 150 subtasks through 2-15 rounds of new materials and client feedback. Because no reference outputs are injected, agents inherit their own errors from one task to the next. Expert rubrics then score every checkpoint as well as the final package. Across seven model-harness systems, even the best system scores only 65.0 out of 100 on final delivery and passes 50.0% of subtasks at a 90-point threshold. The failures are often failures of carrying work forward: in one audit project, all seven systems addressed the review findings, but only one preserved traceability. Together, these results suggest that task-level capability does not simply compose into delivery, which also depends on keeping the work coherent as it evolves."
   },
   {
+    "title": "DeliverBench: Benchmarking AI Agents on Delivering Realistic Multi-Stage Professional Projects",
+    "url": "http://arxiv.org/abs/2611.03412v2",
+    "arxiv_id": "2611.03412v2",
+    "authors": [
+      "Yumou Liu",
+      "Mingju Chen",
+      "Zhoufutu Wen",
+      "Qianyu Yang",
+      "Zijie Wang",
+      "Sihan Chen",
+      "Yeqian Liu",
+      "Chenghao Yang",
+      "Tiliang Duan",
+      "Qiyu Cai",
+      "Yanglihong Xiao",
+      "Jiayun Dong",
+      "Jianlan Ma",
+      "Shenhao Miao",
+      "Yuhan Cao",
+      "Lu Xu",
+      "Que Shen",
+      "Tian Gao",
+      "Ziyu Liang",
+      "Eric Yang",
+      "Ge Zhang",
+      "Jianpeng Jiao",
+      "Xuanhe Zhou",
+      "Fan Wu"
+    ],
+    "published": "2026-11-02T16:37:40+00:00",
+    "summary": "LLM agents are judged by what they deliver, and in professional work what gets delivered is a project, not a task. A project pays off only if the whole package holds, and one weak part can limit the value of the rest. Yet existing benchmarks mostly test agents on one task at a time, leaving a gap between the capability we measure and the outcome that makes agents useful. To address this gap, we introduce DeliverBench, which tests whether agents can carry a project from brief to final delivery. Its 11 projects, spanning financial due diligence, legal contract drafting, and drug safety reporting, are reconstructed with 13 domain experts from real materials and chain 150 subtasks through 2-15 rounds of new materials and client feedback. Because no reference outputs are injected, agents inherit their own errors from one task to the next. Expert rubrics then score every checkpoint as well as the final package. Across seven model-harness systems, even the best system scores only 65.0 out of 100 on final delivery and passes 50.0% of subtasks at a 90-point threshold. The failures are often failures of carrying work forward: in one audit project, all seven systems addressed the review findings, but only one preserved traceability. Together, these results suggest that task-level capability does not simply compose into delivery, which also depends on keeping the work coherent as it evolves."
+  },
+  {
     "title": "Mixed-Methods Exploration of Sociotechnical Factors to Improve Adoption of Crime-Reporting Apps in Urban Communities",
     "url": "http://arxiv.org/abs/2611.03376v1",
     "arxiv_id": "2611.03376v1",
@@ -104,6 +585,25 @@
     ],
     "published": "2026-11-02T15:38:13+00:00",
     "summary": "Ball-balancing robots (ballbots) must lean to accelerate, and the lean is limited by the wheel torques and by safety. Planners that use the full robot model are expensive, while planners that ignore the balance dynamics produce references that cannot be followed. This paper presents a two-layer navigation scheme for a three-omni-wheel ballbot. The upper layer is a model predictive controller on a \\emph{jerk model} of the ball position, with discrete-time control barrier functions for static, moving, rotating and concave obstacles. The lower layer is a hierarchical sliding mode controller with an extended state observer and a robust exponential control barrier function on the tilt (HSMC-ESO-ECBF). The layers are linked by an acceleration bound derived in closed form from the largest steady tilt that the barrier function admits, so that the plan never asks for a lean the tracker refuses. For obstacles whose motion is only predicted, the obstacles are inflated by conformal prediction radii that bound the prediction error with a prescribed probability. In MuJoCo, with omni-wheel roller contacts and torque saturation, the scheme keeps at least $10$\\,cm of clearance, tracks the plan within $2$\\,cm RMS, keeps the tilt below the limit and plans in $9$--$12$\\,ms, $10$--$15$ times faster than a full-model nonlinear MPC that enters the inflated obstacles; with predicted obstacles, the conformal inflation removes the collisions of a constant-velocity predictor in $30$ random crossing scenarios and reduces them in an endless run on a closed path.The source code and video illustrations are available at https://safe-ballbot.github.io"
+  },
+  {
+    "title": "VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions",
+    "url": "http://arxiv.org/abs/2611.03765v1",
+    "arxiv_id": "2611.03765v1",
+    "authors": [
+      "Yang Qu",
+      "Qiang Fu",
+      "Zonghao Ying",
+      "Jiayi Zhao",
+      "Yaoyuan Zhang",
+      "Jinyang Guo",
+      "Jian Yang",
+      "Aishan Liu",
+      "Yingxun Wang",
+      "Xianglong Liu"
+    ],
+    "published": "2026-11-02T15:00:40+00:00",
+    "summary": "Embodied agents are increasingly deployed in open-world environments, yet current robustness evaluations remain biased toward hazardous instructions and jailbreak vulnerabilities. A more fundamental issue is largely overlooked: agents are rarely tested under semantically sufficient but contextually minimal instructions (i.e., common in real-world human communication), where auxiliary contextual cues are absent. For the first, we identify a novel phenomenon termed Ambient Context Illusion, where agents fail to execute tasks correctly when non-essential contextual details are omitted, despite unchanged task semantics. To systematically study this, we establish VagueBench, a benchmark built upon the AI2-THOR interactive simulation environment for the evaluation of context dependency in embodied agents. We systematically consider key semantic components of instructions (entities, procedures, constraints, and prior knowledge) and derive a unified taxonomy with four categories and nine subtypes to reduce auxiliary information. VagueBench contains 1,303 instruction pairs across diverse indoor environments, constructed via a human-agent co-generation framework that integrates semantic redundancy estimation, taxonomy-guided transformation, and rigorous semantic-invariance verification. Through extensive evaluation on 6 state-of-the-art embodied agents, we observe significant degradation on VagueBench in both task performance and executability (relatively -19.65% in task success rate and relatively +54.10% in empty plan rate) revealing a strong reliance on auxiliary linguistic signals rather than core task semantics. Furthermore, we demonstrate that this phenomenon persists in real-world robotic systems, where it can lead to incorrect decisions and potential safety risks."
   },
   {
     "title": "Inner optimizers in active-learning Kriging reliability analysis: a pre-specified comparison and the unconservative estimates left by unlearned failure modes",
@@ -221,6 +721,29 @@
     "summary": "As streaming generation becomes the dominant serving paradigm for both text-only and multimodal large language models, ensuring safety throughout the generation process has become a critical challenge. We introduce PGuard, a native, streaming, and plug-in guardrail that transforms safety monitoring from an external serving dependency into an integrated capability of the backbone model. PGuard directly leverages the backbone's intermediate representations for token-level safety detection, without altering its original inference pathway or generation behavior. Specifically, dynamic layer gating selectively aggregates residual-stream representations across layers to extract safety-relevant signals during both prefill and autoregressive decoding. To balance detection accuracy and computational efficiency, PGuard supports multiple representation-modeling architectures, including a lightweight stateless variant and sequence-aware variants built on multi-scale causal EMA-attention and GRU-based recurrent modules. Its design also accounts for the execution characteristics of LLM serving frameworks, such as SGLang, optimizing computation and data access to minimize additional runtime and synchronization overhead. As a result, PGuard incurs only 0.82-2.26% end-to-end overhead on the hundred-billion-parameter backbone Qwen3.5-122B-A10B served by SGLang. Extensive evaluations across more than 30 benchmarks spanning text and multimodal safety, jailbreaks, cyber and CBRN risks, multilingual scenarios, and real-world traffic demonstrate state-of-the-art performance among native guardrails. On text queries with Qwen3.5-9B, PGuard achieves an average F1 score of 0.836, approaching dedicated external guardrails, while supporting deployment-time configuration of category-specific thresholds and enforcement actions."
   },
   {
+    "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
+    "url": "http://arxiv.org/abs/2611.02791v2",
+    "arxiv_id": "2611.02791v2",
+    "authors": [
+      "Junyu Lin",
+      "Mengjie Wu",
+      "Yonghao Dong",
+      "Yuchuan Fu",
+      "Jinfeng Li",
+      "Xiaodan Li",
+      "Xiaohan Yuan",
+      "Yicheng Liu",
+      "Yuefeng Chen",
+      "Hui Xue",
+      "Jingyi Wang",
+      "Yitong Yang",
+      "Jiyuan Fu",
+      "Qiang He"
+    ],
+    "published": "2026-11-02T09:03:39+00:00",
+    "summary": "As streaming generation becomes the dominant serving paradigm for both text-only and multimodal large language models, ensuring safety throughout the generation process has become a critical challenge. We introduce PGuard, a native, streaming, and plug-in guardrail that transforms safety monitoring from an external serving dependency into an integrated capability of the backbone model. PGuard directly leverages the backbone's intermediate representations for token-level safety detection, without altering its original inference pathway or generation behavior. Specifically, dynamic layer gating selectively aggregates residual-stream representations across layers to extract safety-relevant signals during both prefill and autoregressive decoding. To balance detection accuracy and computational efficiency, PGuard supports multiple representation-modeling architectures, including a lightweight stateless variant and sequence-aware variants built on multi-scale causal EMA-attention and GRU-based recurrent modules. Its design also accounts for the execution characteristics of LLM serving frameworks, such as SGLang, optimizing computation and data access to minimize additional runtime and synchronization overhead. As a result, PGuard incurs only 0.82-2.26% end-to-end overhead on the hundred-billion-parameter backbone Qwen3.5-122B-A10B served by SGLang. Extensive evaluations across more than 30 benchmarks spanning text and multimodal safety, jailbreaks, cyber and CBRN risks, multilingual scenarios, and real-world traffic demonstrate state-of-the-art performance among native guardrails. On text queries with Qwen3.5-9B, PGuard achieves an average F1 score of 0.836, approaching dedicated external guardrails, while supporting deployment-time configuration of category-specific thresholds and enforcement actions."
+  },
+  {
     "title": "Stop Handcrafting Your Engine! GenDB-V: Towards AI-Generated and Formally Verified Database Systems",
     "url": "http://arxiv.org/abs/2611.02779v1",
     "arxiv_id": "2611.02779v1",
@@ -254,6 +777,16 @@
     ],
     "published": "2026-11-02T08:35:18+00:00",
     "summary": "Multi-teacher on-policy distillation (MOPD) distills domain experts into one student but needs every expert at once. When domains arrive one at a time and earlier experts are gone, the previous-stage student can teach replayed prompts of earlier domains inside every stage. Some pipelines instead store every stage snapshot for a final multi-teacher recovery stage. On five domains with a 1.5B student and five public experts, this paper compares both with joint MOPD. It varies the replay budget and the replay signal. The signal is token-level distillation alone or with alignment of hidden states, attention and value relations. Sequential distillation without replay or recovery is 6.2 points below 208-step joint MOPD on a 14-benchmark average and 3.5 points below on the 11 benchmarks outside safety. Without snapshots, replay toward the previous student closes 3.8 of the 6.2 points when the earlier domains share the replay budget of a stage. With a fixed share of seven replay steps per earlier domain and stage, it closes 5.8 over two training runs. This is level with the 5.9 of recovery from all snapshots, both at its default length and when given as many training steps as the fixed share. Alignment terms on replay steps change the average by about one point or less. If refusal and compliance count equally in safety, shared-budget replay ranks first among the trained configurations, and the fixed share stays at or above recovery. Against the shared budget, the fixed share lowers the score on the newest domain. Recovery lowers this score as well, in five of six cases. The replay steps of the fixed share grow quadratically with the number of stages."
+  },
+  {
+    "title": "Replay for LLM Continual Learning with Multi-Teacher On-Policy Distillation",
+    "url": "http://arxiv.org/abs/2611.02746v2",
+    "arxiv_id": "2611.02746v2",
+    "authors": [
+      "Yiqiao Qiu"
+    ],
+    "published": "2026-11-02T08:35:18+00:00",
+    "summary": "Multi-teacher on-policy distillation (MOPD) distills several domain experts into one student and is used in the post-training of recent large language models. It trains on all domains at once, so every expert must be available at the same time. In practice, capabilities often arrive one after another, and the experts of earlier domains may be gone when a new domain is learned. Distilling the experts in sequence then suffers from catastrophic forgetting of the earlier domains. Some recent pipelines store a snapshot after every stage and end with a multi-teacher recovery stage taught by all snapshots. The number of stored models then grows with the number of stages. Different from these pipelines, this paper formulates continual MOPD by what is kept from earlier stages and studies replay toward the previous student. Inside every stage, prompts of earlier domains are replayed with the student of the previous stage as their teacher, so neither earlier experts nor stage snapshots are kept. Two design choices of replay are explored. The replay budget of a stage is either shared among the earlier domains or fixed per earlier domain. Replay steps either distill the token distribution alone or add alignment of hidden states, region-pooled self-attention scores and value relations. A five-domain benchmark of logic, math, code, safety and instruction following is built from public experts of one 1.5B student. Experiments on its 14 benchmarks show that, without storing any snapshot, replay toward the previous student closes most of the gap between sequential distillation and joint MOPD. With a fixed replay share per earlier domain, it performs on par with recovery from all stored snapshots."
   },
   {
     "title": "Multi-Modal Multi-Agent System for Bridge Operation and Maintenance based on Large Language Model",
