@@ -1,5 +1,487 @@
 [
   {
+    "title": "Edge-Assisted Crowdsensing for Explainable Cyclist Safety Perception",
+    "url": "http://arxiv.org/abs/2611.08441v1",
+    "arxiv_id": "2611.08441v1",
+    "authors": [
+      "Hongsen Cao",
+      "Chia-Yen Chiang",
+      "Mona Jaber",
+      "Meihui Wang",
+      "Yasmin Fathy"
+    ],
+    "published": "2026-11-05T18:33:58+00:00",
+    "summary": "Cyclist fatality rates remain high despite policy support for active travel, and autonomous vehicles add complexity to mixed traffic. Neither crash statistics nor multi-model detection pipelines scale to continuous monitoring of perceived safety along a route. We present an edge-assisted crowdsensing system: handlebar cameras supply street-level frames, a vision-language model (VLM) turns each frame into structured traffic attributes through a single prompt, and an explainable boosting machine (EBM) combines them with OpenStreetMap road infrastructure and on-bike kinematics to predict a crowdsourced 1-9 safety score. Extraction belongs at the network edge: the fastest self-hosted model needs 2.49 s per frame and scoring takes 0.4 ms on a CPU. On 1,362 annotated frames from two London routes, the EBM regressor reaches 72.2 percent binary accuracy and a mean absolute error of 1.011 under five-fold cross-validation. It is within one accuracy point of black-box ensembles. Its per-feature shape functions give exact attribution: physical lane separation is worth +0.97 rating points, a painted lane +0.70 and a construction site -0.65. Planners can therefore price an infrastructure change in rating points, and the results enter cost-benefit analysis directly. We also report inter-annotator agreement (alpha = 0.4695), an attribute audit, and a sensitivity analysis linking attribute error to accuracy. With re-encoding, a 20 s sampling interval serves 1,000 riders at 54 Mbit/s at a cost of 1.4 accuracy points, making continuous monitoring practical."
+  },
+  {
+    "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+    "url": "http://arxiv.org/abs/2611.08438v1",
+    "arxiv_id": "2611.08438v1",
+    "authors": [
+      "Fazl Barez",
+      "Tung-Yu Wu",
+      "Hunar Batra",
+      "Gabriele Dominici",
+      "Florent Draye",
+      "Yanai Elazar",
+      "Damiano Fornasiere",
+      "Ant\u00eda Garc\u00eda",
+      "Abir Harrasse",
+      "Riley Harris",
+      "Sara Hooker",
+      "Michael Lan",
+      "Belinda Z. Li",
+      "Aaron Maiwald",
+      "Narmeen Fatimah Oozeer",
+      "Naomi Saphra",
+      "Or David Shafran",
+      "Adi Simhi",
+      "Robert Trager",
+      "Shriyash Kaustubh Upadhyay",
+      "Ziyu Yao",
+      "Yu Zhao",
+      "Shay B. Cohen",
+      "Mor Geva",
+      "Yoshua Bengio",
+      "Stella Biderman",
+      "Hassan Sajjad"
+    ],
+    "published": "2026-11-05T18:30:54+00:00",
+    "summary": "Neural networks are likely to be among the most consequential artefacts in human history. As these systems become more capable and autonomous, their potential to cause societal harm also grows, making AI safety one of the defining challenges of our time. Yet we continue to build increasingly powerful systems without fully understanding how they work, how they will behave in unfamiliar situations, or how to reliably control them. Mechanistic interpretability offers a path towards understanding these systems by studying their internal representations and computations, with the aim of evaluating, predicting, and controlling behaviour. We survey mechanistic interpretability for AI safety in order to answer the question: Does understanding how models work actually make them safer? We place mechanistic interpretability in the broader context of interpretability research and compare its mechanistic evidence with behavioural evaluation. We introduce the foundations of mechanistic interpretability, including features, polysemanticity, transformer computation, and circuits, and survey methods for feature extraction and analysis, circuit discovery and causal verification, explaining intermediate representations in natural language, learning dynamics, and training-data attribution. Beyond surveying existing methods, we propose a unified framework for evaluating mechanistic interpretability claims and characterise six research orientations by their goals, assumptions, and trade-offs. Finally, we examine how mechanistic understanding can support AI safety, including knowledge editing, steering, and monitoring, and assess its limitations, failure modes, open problems, and relationship to behavioural safety measures. We also release a repository of code notebooks with worked examples that reproduce key findings from surveyed methods, allowing readers to build intuition through hands-on experimentation."
+  },
+  {
+    "title": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
+    "url": "http://arxiv.org/abs/2611.08433v1",
+    "arxiv_id": "2611.08433v1",
+    "authors": [
+      "Donghua Zhang",
+      "Zizheng Wang",
+      "Ze Dong",
+      "Yiding Feng",
+      "Siyu Qian"
+    ],
+    "published": "2026-11-05T18:27:20+00:00",
+    "summary": "LLM-based medical assistants that follow a patient across visits need a memory that keeps the patient's clinical state correct as it changes. We examine the errors of five memory systems on longitudinal medical dialogue and find three recurring causes: the retrieved evidence gives an outdated state, includes another person's health facts, or lacks a safety fact the answer depends on. We present MedGraph, a graph memory built for these three cases. Construction extracts dated facts from each session, attributes each fact to the person it describes, and links medication, diagnosis, and measurement records into chains that keep earlier states. Retrieval ranks the patient's chains as units, reads each chain at the time the question asks about, and adds the original dialogue text; a patient profile lists every recorded safety fact with every question. On MedMemoryBench, MedGraph has the highest overall accuracy with both a GPT and a Qwen backbone, 10.5 and 10.4 points above the strongest of five baselines, with efficient memory construction and answering in the GPT setting."
+  },
+  {
+    "title": "Conformal Prediction for Time-Dependent PDEs",
+    "url": "http://arxiv.org/abs/2611.08409v1",
+    "arxiv_id": "2611.08409v1",
+    "authors": [
+      "Joshua Stiller",
+      "Annika Schneider",
+      "Eyke H\u00fcllermeier"
+    ],
+    "published": "2026-11-05T18:15:42+00:00",
+    "summary": "Uncertainty quantification is crucial in scientific machine learning, where models inform safety-critical tasks such as flood forecasting, financial risk management, and thermal control in machines. Conformal prediction provides distribution-free coverage guarantees, but in time-dependent settings common to physics and engineering, these guarantees can break down, leading to systematic undercoverage. We study this problem in the context of surrogate models for time-dependent physical systems described by partial differential equations. We prove that in a function space setting, distributions at arbitrarily close times can be mutually singular, making exact coverage guarantees impossible. We further show that in discretized settings, the total variation distance between distributions often saturates exponentially fast with the grid resolution, mandating restrictions on the spatial discretization to ensure coverage. Finally, for certain settings, we show how to use principled weighted conformal prediction to obtain finite-sample coverage guarantees over growing time horizons."
+  },
+  {
+    "title": "Hybrid Machine Learning for Imbalanced Landing-Phase Safety Event Prediction from Flight Data",
+    "url": "http://arxiv.org/abs/2611.08386v1",
+    "arxiv_id": "2611.08386v1",
+    "authors": [
+      "Taha Asghar",
+      "Bilal Mufti",
+      "Syed Qasim Zaheer",
+      "Luqman Ahmed"
+    ],
+    "published": "2026-11-05T18:04:26+00:00",
+    "summary": "Landing-phase safety-event prediction requires the detection of rare abnormal approaches within strongly imbalanced multivariate flight data. Capturing coupled temporal behavior while distinguishing event-specific signatures across airport operating contexts remains a central modeling challenge. This study proposes an interpretable hybrid feature-fusion framework for multiclass landing-phase safety-event prediction. A long short-term memory (LSTM) autoencoder trained on nominal flight windows characterizes deviations from routine approach behavior. Its continuous reconstruction-error descriptor is fused with parameter-specific statistical flight-history features and supplied to a class-weighted XGBoost classifier to distinguish Normal, Speed High, Path High, and Flaps Late windows. The framework is evaluated using 53,750 NASA DASHlink approach windows from three arrival airports. Pooled and airport-specific learning strategies are compared alongside component-level benchmarks, repeated pipeline retraining, and feature-attribution analysis. The results demonstrate strong class-balanced detection, with mean macro recall above 0.90 across all airports under repeated partitioning and retraining. Component comparisons establish the importance of class weighting and show that continuous feature fusion outperforms reconstruction-error-only and hard-gate alternatives. Airport-level comparisons reveal benefits from local specialization at the two airports with larger datasets and from pooled training at the airport with the smallest dataset. Feature attributions associate predictions with operationally relevant vertical-path, configuration, speed, and approach-context variables. The framework provides an interpretable approach to rare-event detection and practical guidance for adapting flight-data monitoring models to airport-level data availability."
+  },
+  {
+    "title": "Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks",
+    "url": "http://arxiv.org/abs/2611.08281v1",
+    "arxiv_id": "2611.08281v1",
+    "authors": [
+      "Zhitao He",
+      "Chi Him Zhang",
+      "Chengru Han",
+      "Yi R Fung"
+    ],
+    "published": "2026-11-05T16:46:31+00:00",
+    "summary": "Personal AI agents face social engineering attacks supported by forged multimodal content, but existing evaluations mainly focus on text-based dialogue, leaving their intrinsic security under such attacks insufficiently studied. We introduce Multimodal-SEA, an interactive benchmark comprising 608 expert-designed tasks grounded in real-world fraud cases, covering 14 domains and 152 attack scenarios with prepared multimodal content. The tasks span four difficulty levels and reflect the distinct social and cultural contexts of Chinese and English environments. Agents inspect content, verify requests, and execute actions in simulated applications, with attack outcomes grounded in verifiable tool execution logs. To enable controlled red teaming of personal agents, we design a multimodal attack harness that integrates task information, attack progression control, and multimodal content construction to evaluate their intrinsic security against adaptive social engineering attacks in simulated environments. Evaluating seven widely used multimodal models across six dimensions reveals that all are vulnerable, with attack success rates of 7.1% to 34.5%. Adding multimodal content increases attack success from 19.9% to 29.2%, despite increased proactive verification coverage. Stronger safety instructions reduce attack success without improving recognition of deceptive multimodal content, while lower attack success rates for some models accompany excessive refusal of legitimate requests."
+  },
+  {
+    "title": "Accelerating Safe Reinforcement Learning with Massive Parallelism",
+    "url": "http://arxiv.org/abs/2611.08273v1",
+    "arxiv_id": "2611.08273v1",
+    "authors": [
+      "Joonyoung Lim",
+      "Younghwan Yoo"
+    ],
+    "published": "2026-11-05T16:43:57+00:00",
+    "summary": "We investigate the problem of scaling safe reinforcement learning (safe RL) to massively parallel training regimes, where a large number of environments are exe- cuted with short rollout horizons. Although this setting improves data throughput and wall-clock efficiency, it creates a mismatch with constrained Markov decision processes (CMDPs), whose safety constraints are defined over full-episode cost returns. We address this mismatch by analyzing staggered environment resets as a phase-mixture distribution over short trajectory segments. This analysis charac- terizes the bias induced by phase coverage and motivates a phase-aggregated cost estimator that reconstructs episode-level cost estimates from short rollout batches. We further incorporate finite-sample uncertainty and distribution mismatch into a constraint-tightening framework, yielding a scalable Safe RL method compatible with on-policy optimization. Using an MJX-based implementation of Safety Gym, our experiments show that the proposed method achieves performance comparable to non-massively parallel implementations while substantially reducing wall-clock training time."
+  },
+  {
+    "title": "\"Blind Compliance\": Coercive Control in AI Jailbreaking",
+    "url": "http://arxiv.org/abs/2611.08226v1",
+    "arxiv_id": "2611.08226v1",
+    "authors": [
+      "Acacia L. Ackles",
+      "Elliott Whitson"
+    ],
+    "published": "2026-11-05T16:11:08+00:00",
+    "summary": "The explosion of generative AI systems and concerns surrounding their rapidly scaling capabilities has led to an adversarial cycle between increasingly narrow content restrictions (\"guardrails\") and increasingly sophisticated structured prompting techniques (\"jailbreaks\"). Technological frameworks surrounding such jailbreaking remain largely focused on the system's output: whether harmful or disallowed content is ultimately produced for the user. However, this approach, which draws largely from classical cybersecurity, does not address the uniquely relational dimension introduced by generative AI: in many cases the user is not just accessing a technology via an exploit, but is in conversation with it as part of the exploit. Here we present an alternative lens which centers the interaction rather than the output. Drawing on interpersonal violence scholarship, we present a novel framework of coercive control categories with a particular focus on aspects which are embodied versus disembodied. We then map how these disembodied coercive control dynamics are structurally embedded in modern AI training paradigms, and how those embeddings are exploited via a particular suite of persona-based jailbreaks. In this lens, we reframe AI safety and alignment as not merely a technical security problem, but as another surface upon which we see enacted the relational dynamics of power and control."
+  },
+  {
+    "title": "Who Can Evaluate AI Independently? A Framework for Analysing Evaluation Infrastructure",
+    "url": "http://arxiv.org/abs/2611.08134v1",
+    "arxiv_id": "2611.08134v1",
+    "authors": [
+      "Sumaya Nur Adan",
+      "Joanna Wiaterek",
+      "Nourhan Abdelrhim",
+      "Sydney Reis",
+      "Robert F. Trager",
+      "Benjamin Rosman",
+      "Marina Jirotka"
+    ],
+    "published": "2026-11-05T15:00:51+00:00",
+    "summary": "AI evaluation is increasingly central to AI safety and governance, yet taking part in an evaluation does not by itself confer authority over its design, its execution or the resources it depends on. This paper examines how infrastructure arrangements distribute that authority, and so shape who can evaluate AI systems independently. Drawing on Science and Technology Studies, political economy and applied evaluation standards, we introduce PAAI (Power, Access, Adequacy, Independence), a framework for examining who controls evaluation infrastructure, the terms on which it is available, whether it is adequate to the evaluation's purpose and what autonomy it supports. We apply PAAI to twelve African AI evaluation projects (2022-2025) and to the documented roles of all ten member institutes in the three published joint testing exercises of the international network of AI Safety Institutes. We identify three recurring configurations: extractive collaboration, dependent innovation and constrained independence. African actors often contribute data, language expertise and task design while external institutions retain authority over infrastructure and evaluation frameworks; design authority without infrastructure authority never yielded more than partial independence. The joint testing exercises show a similar division among mostly high-income members: the institutes that led each exercise also ran the models, while Kenya, the network's only African member, moved from annotation to task design with no documented model execution. Participation in evaluation does not by itself produce evaluative authority. For evaluation to serve as a credible governance mechanism, access must come with control over priorities, methods, publication and continuity."
+  },
+  {
+    "title": "Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model",
+    "url": "http://arxiv.org/abs/2611.08111v1",
+    "arxiv_id": "2611.08111v1",
+    "authors": [
+      "Zihao Zhang",
+      "Xinyu Zhang",
+      "Bing Zeng",
+      "Xingyu Chen",
+      "Zhenning Li",
+      "Bin Yu",
+      "Ziyuan Pu"
+    ],
+    "published": "2026-11-05T14:47:08+00:00",
+    "summary": "World-action models (WAMs) jointly model future traffic states and driving actions for end-to-end autonomous driving in intelligent transportation systems. However, their action learning remains dominated by expert-trajectory imitation, leaving unsafe alternatives close to expert trajectories insufficiently constrained. To improve WAM robustness in safety-critical scenarios, we propose NegWAM, a safety post-training framework for unified WAMs that learns explicit safety boundaries from near-expert failure trajectories. NegWAM constructs negative trajectories that are geometrically close to the expert trajectory yet carry safety risks, uses them as repulsive anchors to steer predictions away from dangerous behavior, and encodes them as scene-conditioned rider tokens to learn scene--trajectory compatibility. During training, NegWAM jointly optimizes the flow-matching and near-expert negative objectives, while the auxiliary rider branch is discarded at inference, incurring no additional overhead. On NAVSIM v2, NegWAM achieves 40.4 EPDMS on navhard, a 4.1% relative improvement over the strongest compared scorer-free WAM baseline, and achieves 93.3 EPDMS on navtest. These results demonstrate that NegWAM achieves strong performance in safety-critical scenarios while preserving routine-driving performance. Zero-shot closed-loop evaluation on HUGSIM further demonstrates cross-benchmark generalization. The code is available at https://github.com/Zizizi-hao/NegWAM."
+  },
+  {
+    "title": "Symmetry-Aware Surrogate-Assisted Testing of UAVs",
+    "url": "http://arxiv.org/abs/2611.08012v1",
+    "arxiv_id": "2611.08012v1",
+    "authors": [
+      "Anas Shrinah",
+      "Chris Bennett",
+      "Kerstin Eder"
+    ],
+    "published": "2026-11-05T13:35:40+00:00",
+    "summary": "We investigate a symmetry-aware surrogate-assisted testing approach for UAV autopilots. The proposed approach exploits geometric symmetries between flight missions by trans- forming obstacle configurations into a shared canonical coordi- nate frame. This enables a neural-network surrogate trained on a single reference mission to be reused across arbitrary missions, reducing the amount of high-fidelity simulation data required for training. The surrogate model is trained to predict the minimum clearance distance between a UAV and surrounding obstacles and is used to guide test generation towards safety-critical scenarios. We evaluate this approach using the Aerialist UAV test bench and benchmark its performance against techniques from the 2024 to 2026 UAV Testing Competitions. Results show that the approach achieves an average critical-test-case hit rate of 42% across the evaluated missions, compared with approximately 10% for the constrained-random baseline used to generate the training data. This approach also achieves high input diversity and competitive benchmark performance. However, our findings reveal limitations in transferring surrogate predictions across missions with differing flight-path characteristics, highlighting the boundaries of geometric canonicalization. To support reproducibility and future research, we provide the trained surrogate model and a dataset comprising more than 2,500 high-fidelity simulations."
+  },
+  {
+    "title": "A Unified Fractal Impedance Control Framework",
+    "url": "http://arxiv.org/abs/2611.08009v1",
+    "arxiv_id": "2611.08009v1",
+    "authors": [
+      "Adnan Takriti",
+      "Mahmoud Sadeq",
+      "Quentin Rouxel",
+      "Daniele Cafolla",
+      "Michael Mistry",
+      "Carlo Tiseo"
+    ],
+    "published": "2026-11-05T13:32:45+00:00",
+    "summary": "Physical human--robot interaction requires controllers capable of maintaining intrinsically bounded interactions with the environment. The Fractal Impedance Controller (FIC) has been proven to guarantee these safety characteristics by design. This paper introduces the robotic implementation and experimental validation of its most advanced architecture: the Harmonic-Passive Motion Paradigm (H-PMP), an evolution of the Passive Motion Paradigm designed to mimic human-like interaction. Furthermore, we present a unified framework for FIC deployment, supported by an open-source software suite featuring ROS2, MuJoCo, and physical hardware integrations. Through three experiments conducted on a Kinova Gen3 arm (trajectory tracking, a wall press with sudden loss of contact, and learning-by-demonstration) we compare the H-PMP against earlier FIC architectures. The results demonstrate that the H-PMP achieves a seamless trade-off between admittance and impedance behaviours. This makes it ideal for deployment in unstructured environments, enabling the robot to transition between interaction modes with no computational overhead."
+  },
+  {
+    "title": "Towards Foundation Decision Models: Drex",
+    "url": "http://arxiv.org/abs/2611.07854v1",
+    "arxiv_id": "2611.07854v1",
+    "authors": [
+      "Nischay Dhankhar",
+      "Alisher Amantay",
+      "Zhanibek Datbayev",
+      "Darkhan Akhmetov",
+      "Yash Shah",
+      "Nurmukhamed Ubaidullayev",
+      "Raman Saparkhan",
+      "Dos Baha",
+      "Abulhair Saparov"
+    ],
+    "published": "2026-11-05T11:31:13+00:00",
+    "summary": "Autoregressive approaches with large language models, such as long chain-of-thought reasoning, have become the default for new AI applications because they reach higher accuracy on a wide range of tasks. In production, however, they give inconsistent answers, require parsing of outputs, and add cost and latency. Decision models address this: given a question and a set of options supplied by the user, they return a probability distribution over the options without autoregressive decoding. We present Drex, a family of four open decision models with 8B (DLM), 9B (v1.5), 35B with 3B active (v2.0), and 27B (Max) parameters. Each request consists of a state (a document, record, or agent context, optionally with images) and questions about it, each asking for a choice among options, a yes/no judgment, or a score on an ordered scale. Training combines supervised fine-tuning with reinforcement learning from adjusted feedback (RLAF), plus vision tuning for Max. Ablations show that RLAF improves accuracy and that consistency losses improve robustness to option order. On Decision Index 0.4.1, Max sets a new state of the art among the decision models we compare (67.52 on the public suite vs. 60.70 for Jev 1.14.0). On Decision Bench v4, it is statistically tied with d3-turbo and GPT-6 Sol and trails Claude Opus 5.5 by 1.6 points, and it has the highest accuracy among decision models on DecideBench. Max answers a typical request in 183 ms, against about 2.0 s for GPT-6 Sol and 3.5 s for Claude Opus 5.5, and its outputs are stable under option reordering. All four models are open source: https://github.com/nace-ai/drex-decision-models"
+  },
+  {
+    "title": "Geometry-Evolving Barrier Functions for Safety Evaluation in Dynamic Environments",
+    "url": "http://arxiv.org/abs/2611.07788v1",
+    "arxiv_id": "2611.07788v1",
+    "authors": [
+      "Zhi Zhang",
+      "Francesco Belardinelli",
+      "Alessandro Abate"
+    ],
+    "published": "2026-11-05T10:29:06+00:00",
+    "summary": "Autonomous systems operating in dynamic environments often involve multiple interacting agents, giving rise to high-dimensional safety evaluation problems. Hamilton--Jacobi (HJ) reachability provides rigorous finite-horizon safety guarantees, but solving a global HJ partial differential equation (PDE) over the entire state space leads to prohibitive computational complexity. In this paper, we introduce Geometry-Evolving Barrier Functions (GEBFs), a novel representation for dynamic safety evaluation that propagates local safety geometry of the solution to a terminal-value HJ PDE. By evolving the value, gradient, and curvature information along a Hamiltonian-induced reference trajectory, GEBFs provide a compact representation of the local HJ safety landscape. Under suitable local regularity assumptions, we establish consistency between the GEBF and the value, gradient, and Hessian of the HJ solution along an HJ-optimal characteristic. Building on these theoretical results, we develop an iterative algorithm that couples local geometric propagation with trajectory refinement. We further establish a trajectory-wise one-sided relationship between the GEBF and HJ value function, together with a fixed-point consistency result for the iterative scheme. Experiments on widely adopted agent--obstacle collision-avoidance benchmarks, across low- and high-dimensional systems, demonstrate that GEBFs accurately capture the evolution of dynamic safety boundaries, while achieving substantially lower computational cost than conventional HJ reachability."
+  },
+  {
+    "title": "Redacting Personal Data: A Speed and Accuracy Comparison of Regex, Presidio and Hybrid Designs",
+    "url": "http://arxiv.org/abs/2611.07633v1",
+    "arxiv_id": "2611.07633v1",
+    "authors": [
+      "Sai Yashwant",
+      "Manoj Kumar Gondimalla",
+      "Arjun Sharma",
+      " Shubham"
+    ],
+    "published": "2026-11-05T08:18:36+00:00",
+    "summary": "Many enterprise projects now pass free text to large language models (LLMs), and that text often contains personally identifiable information (PII) such as names, phone numbers, email addresses, home addresses and dates of birth. Once a prompt is sent, this data is copied into provider systems, application logs and observability traces. Redacting PII before the call is an obvious control, yet teams seldom have numbers on what it costs in latency or what it lets through. This paper compares four redaction designs that any LLM pipeline can adopt: a pure regular-expression (regex) redactor, Microsoft Presidio running on a spaCy model, a hybrid in which Presidio finds only person names while regex handles structured identifiers, and a fast hybrid that calls spaCy's named-entity component directly. All four share a known-entity rule, which removes the person the system already knows it is handling, and a consistent placeholder scheme, so the LLM can still tell one person from another after redaction. We evaluate the designs on a sample workflow, which we call ProfileAssist, that turns resumes into structured profiles, using 100 synthetic resumes (523 characters on average, with 900 PII values and 600 business terms that must survive). Regex ran at a 0.20 ms median but caught only 88.9% of PII, because it cannot find names that are not known in advance, such as the references listed in a resume. Presidio, hybrid and fast hybrid each caught 100% of PII and kept 100% of business terms, at median latencies of 37.59 ms, 30.23 ms and 13.48 ms. Measured against a 9,120 ms median LLM call, even the slowest option adds only 0.41% to the request. We therefore recommend the fast hybrid as a default for LLM pipelines that handle personal data, with regex kept as a safety net rather than as the only control."
+  },
+  {
+    "title": "Data-Driven Configuration of Protective Separation Zones in Collaborative Robot Cells from Operator Occupancy",
+    "url": "http://arxiv.org/abs/2611.07621v1",
+    "arxiv_id": "2611.07621v1",
+    "authors": [
+      "Aulon Bajrami",
+      "Theo Jacobs",
+      "Werner Kraus"
+    ],
+    "published": "2026-11-05T08:05:28+00:00",
+    "summary": "The protective separation zone of a collaborative robot cell is commonly dimensioned for a worst case that disregards where the operator is actually present during the task. This paper presents a camera-based, data-driven method that configures this zone from observed operator occupancy. Operator positions accumulated over several production shifts are aggregated into an occupancy heatmap, from which a protective field is derived that trades off the achievable robot velocity against the required safety distance, following the speed and separation monitoring principle of ISO/TS 15066. The resulting configuration is advisory, that is, reviewed within the risk assessment rather than applied autonomously to the robot controller. The method, which builds on a pose-based perception pipeline with activity recognition, was evaluated in two operational cells at two industrial partners, where the protective field could be reduced by approximately 17% and a productivity increase of 9% was measured. However, adoption proved to depend on more than the demonstrated gain alone."
+  },
+  {
+    "title": "Monotone Viability Learning for Offline Safe Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2611.07616v1",
+    "arxiv_id": "2611.07616v1",
+    "authors": [
+      "Ziqian Wang",
+      "Zhen Zhang"
+    ],
+    "published": "2026-11-05T08:00:00+00:00",
+    "summary": "Offline safe reinforcement learning requires reliable long-horizon safety estimates from fixed data. Learning Hamilton-Jacobi (HJ) viability in this setting calls for semantic preservation, convergence, and numerical stability. To address these challenges, we propose Monotone Viability Learning (MoViL), which learns viable sets from offline transitions through monotone finite-horizon set recursion. The recursion preserves finite-horizon safety semantics and converges to the infinite-horizon viability kernel. Binary supervision maintains a fixed target scale across horizons, avoiding discount-induced numerical attenuation. We further establish sufficient conditions for recovering behavior-supported viable subsets. The learned viability estimates are used to certify actions at deployment. Dubins car experiments validate the numerical accuracy of the learned viable sets. Evaluations on safe RL benchmarks demonstrate state-of-the-art reward-cost performance. MoViL satisfies the average cost constraint on every task and achieves the lowest average cost among the compared methods. These results highlight MoViL's potential to extend long-horizon HJ viability analysis to safety-critical systems where reliable dynamics models are unavailable and online exploration is unsafe."
+  },
+  {
+    "title": "Stress Testing Chain-of-Thought Monitoring Against Covert Misalignment",
+    "url": "http://arxiv.org/abs/2611.07586v1",
+    "arxiv_id": "2611.07586v1",
+    "authors": [
+      "Yao Huang",
+      "Yifan Wang",
+      "Yitong Sun",
+      "Yichi Zhang",
+      "Yinpeng Dong"
+    ],
+    "published": "2026-11-05T07:39:01+00:00",
+    "summary": "As LLM agents advance rapidly in autonomy, the risk of hidden objectives that bypass safety constraints becomes increasingly plausible. Chain-of-thought (CoT) monitoring offers a key control mechanism by reading the agent's reasoning and flagging misalignment before it materializes into action, yet its reliability depends on the realism of the red-team it is stress-tested against. Existing red-teaming efforts rely on shared templates, such as casting a side task as a prerequisite, which treat the side objective as an exogenous insertion and leave task-specific, contextually grounded evasions underexplored. We therefore ask: How robust is CoT monitoring against agents that strategically conceal misalignment? To answer this, we introduce TraceMRT, an automated Trace-level Monitor Red-Teaming framework that reframes the side task as a coherent sub-goal of the primary task and searches trace-shaping strategies whose induced trajectories complete the misaligned objective while reading as natural execution. Through black-box attacks on state-of-the-art monitors such as GPT-5.2 and Claude-4.5, we reveal substantial vulnerabilities even in top models. To counter these vulnerabilities, we propose a Bayesian Trajectory Monitoring framework, integrating global context and local segment evidence to detect covert misalignment. Empirically, our method significantly consolidates monitor robustness with 0.91 AUC and 0.74 TPR@FPR=0.05."
+  },
+  {
+    "title": "Provable Zeroth-Order Safe Exploration for Reinforcement Learning from Human Feedback",
+    "url": "http://arxiv.org/abs/2611.07561v1",
+    "arxiv_id": "2611.07561v1",
+    "authors": [
+      "Weiqin Chen",
+      "Xinmeng Huang",
+      "Dongsheng Ding",
+      "Santiago Paternain"
+    ],
+    "published": "2026-11-05T07:14:25+00:00",
+    "summary": "Safe reinforcement learning from human feedback (Safe-RLHF) seeks to improve helpfulness while satisfying harmlessness constraints. Existing primal-dual approaches can converge to feasible policies but do not prevent constraint violations during training. We study a stronger requirement, safe exploration for RLHF, under which every policy executed during training, including auxiliary exploration policies, remains feasible. We propose Zeroth-Order Log-Barrier Policy Gradient (ZO-LBPG), a reward-model-free method that optimizes a log-barrier objective using zeroth-order estimates derived directly from human preferences. To ensure safety under noisy feedback, we combine conservative constraint margin estimates with coupled rollouts and an adaptive step size that prevents updates from crossing constraint boundaries. We prove that, with high probability, all iterates and exploration policies remain strictly feasible, and that ZO-LBPG globally converges to an approximately optimal constrained policy. We establish a sample complexity of $\\widetilde{\\mathcal O}(\\varepsilon^{-6}+d^3\\varepsilon^{-5})$ trajectories and $\\widetilde{\\mathcal O}(\\varepsilon^{-8}+d^5\\varepsilon^{-7})$ human queries. Experiments on a synthetic CMDP and a language-model alignment task corroborate the training-time safety guarantees."
+  },
+  {
+    "title": "Unified Overview of Safety Certificate Functions: Techniques from Hamilton--Jacobi Reachability and Control Barrier Functions",
+    "url": "http://arxiv.org/abs/2611.07537v1",
+    "arxiv_id": "2611.07537v1",
+    "authors": [
+      "Hao Wang",
+      "Max Cohen",
+      "Zeyuan Feng",
+      "Donggeon David Oh",
+      "Oswin So",
+      "Songyuan Zhang",
+      "Javier Borquez",
+      "Chuchu Fan",
+      "Jaime Fern\u00e1ndez Fisac",
+      "Haimin Hu",
+      "Jason J. Choi",
+      "Somil Bansal"
+    ],
+    "published": "2026-11-05T06:47:40+00:00",
+    "summary": "Safety is a central concern in modern autonomous systems. Safety certificates---functions whose existence guarantees that a system meets its safety specification---have long been used as a principled tool for rigorously reasoning about safety. Methods for synthesizing such certificates are scattered across research areas, with little guidance on when to use a particular approach. This tutorial provides a holistic treatment of safety certificate synthesis centered on two widely used families: Hamilton--Jacobi (HJ) reachability analysis and control barrier functions (CBFs). For each family of methods, we first introduce its general formulation, along with classical and learning-based tools for certificate synthesis. Next, we introduce two benchmark problems consisting of vehicle systems of differing complexity to assess the certificate quality of different synthesis methods and their effectiveness in safety-critical control. We use these benchmarks to compare various methods and provide practical guidance for selecting an approach."
+  },
+  {
+    "title": "JailBound: FOL-Guided Jailbreak Evaluation for Exploring LLM Behavioral Boundaries",
+    "url": "http://arxiv.org/abs/2611.07530v1",
+    "arxiv_id": "2611.07530v1",
+    "authors": [
+      "Fazong Wu",
+      "Xin Wang",
+      "Ming Yang",
+      "Zhenyong Zhang",
+      "Xiaoming Wu"
+    ],
+    "published": "2026-11-05T06:41:14+00:00",
+    "summary": "As large language models (LLMs) are increasingly deployed as general-purpose conversational assistants, they must handle diverse user requests while reliably refusing harmful ones. Jailbreak attacks craft adversarial instructions or conversational contexts to elicit unsafe responses despite these safeguards. However, existing jailbreak benchmarks often rely on manually designed or collected prompts, making it difficult to systematically extend coverage to new threat conditions. Moreover, existing attack search methods typically optimize for attack success rate (ASR), providing limited insight into how model behavior changes locally between safe refusal and unsafe response. To address these limitations, we present JailBound, a unified jailbreak evaluation framework that combines automated benchmark construction with first-order loss (FOL)-guided dual-branch search. JailBound organizes threats by risk category, application domain, and attack type. Conditioned on this taxonomy, a fine-tuned meta-attack generator synthesizes evaluation prompts across diverse threat conditions. FOL serves as a local sensitivity signal for exploring high-value attack states and behavior-sensitive states. We evaluate JailBound across 46 LLMs from 13 model families under a unified experimental protocol. Under matched settings, the High-Value Branch improves average ASR over a ZOL-only baseline by 5.1 and 4.9 percentage points across the two evaluation settings. Under local perturbations, states from the Safety-Sensitivity Branch exhibit higher behavioral flip rates than those from the High-Value Branch across all tested radii for JailBound and S-Eval, indicating greater local sensitivity of judge-assigned safety labels. Warning: this paper includes examples that may be offensive or harmful."
+  },
+  {
+    "title": "Training-Independent Validation of a Learning-Based Controller for Stunt Maneuvers",
+    "url": "http://arxiv.org/abs/2611.07516v1",
+    "arxiv_id": "2611.07516v1",
+    "authors": [
+      "Kiruthiga Chandra Shekar",
+      "Aliasghar Arab",
+      "Jingang Yi"
+    ],
+    "published": "2026-11-05T06:25:26+00:00",
+    "summary": "Learned controllers for vehicle maneuvers are usually validated under the conditions and objective used to train them, where they appear highly reliable, yet the parameters that change on real roads are often not those the model was trained on. We argue that validation must be independent of training: it should vary physical parameters that training kept fixed and use acceptance criteria absent from the training objective. A learning-based control policy, G-Maneuver, with 90.11% success is tested for stunt-level maneuvers. A looser terminal-heading score ranked the worst setting as the best. Because real stunt tests are safety-critical, a simulation-to-reality-to-simulation (Sim2Real2Sim) loop uses the simulation to select safe zones for real-vehicle trials with 16.9% acceptance. Automotive safety analysis frameworks are used to identify parameters for validation using coverage tests. We demonstrated that the kinematic stunt-driving indicators, namely heading change, sideslip, and speed-normalized yaw rate, match between simulation and the real world, while force and roll indicators do not, which identifies the indicators that can support safe deployment. A video of the experiments is available at https://youtu.be/dN1Oes8pNIo."
+  },
+  {
+    "title": "SAVeR$^2$: Reasoning-based Safety Alignment for Large Reasoning Models via Verifiable Rewards",
+    "url": "http://arxiv.org/abs/2611.07482v1",
+    "arxiv_id": "2611.07482v1",
+    "authors": [
+      "Yichen Sun",
+      "Qirui Liu",
+      "Yan Wang",
+      "Jianan Lin",
+      "Linbo Jiang",
+      "Shiyu Wang",
+      "Zhibo Wang",
+      "Zhixuan Chu"
+    ],
+    "published": "2026-11-05T05:42:45+00:00",
+    "summary": "Large Reasoning Models (LRMs) have achieved impressive performance via explicit Chain-of-Thought (CoT) reasoning, yet this process introduces critical safety risks. We formalize LRM safety objectives as requiring non-malicious reasoning and answers, safety consistency, and explicit intent identification. We argue that existing alignment methods suffer from poor adversarial generalization, a significant ``safety tax'' on reasoning, and unfaithful coarse-grained rewards, primarily due to their neglect of the LRM's intrinsic reasoning capabilities for safety. To address these, we propose \\textbf{SAVeR$^2$}, a novel \\textbf{S}afety \\textbf{A}lignment method via \\textbf{R}ewards with \\textbf{R}easoning capability. SAVeR$^2$ decomposes the safety objective into four fine-grained verifiable reward signals and utilizes a difficulty-aware data selection strategy to stabilize training. Crucially, we introduce a reasoning-preserving gradient projection mechanism that analytically resolves conflicts between safety and reasoning gradients, effectively eliminating the safety tax. Extensive experiments on models ranging from 1.5B to 671B demonstrate that SAVeR$^2$ achieves superior safety performance and significantly lower over-refusal rates across multiple benchmarks without compromising general reasoning capabilities."
+  },
+  {
+    "title": "Req2Rust: A Requirements-Guided Agent Harness for Project-Level C++-to-Rust Migration",
+    "url": "http://arxiv.org/abs/2611.07442v1",
+    "arxiv_id": "2611.07442v1",
+    "authors": [
+      "Shengbo Wang",
+      "Mingwei Liu",
+      "Yuwen Chen",
+      "Yanlin Wang"
+    ],
+    "published": "2026-11-05T04:40:17+00:00",
+    "summary": "Memory-safety concerns make Rust an attractive target for modernizing legacy C/C++ systems, yet project-level C++ migration must balance semantic fidelity with Rust-oriented reconstruction. Source-structure-preserving migration can track low-level behavior, but it can also carry source-language organization, unsafe idioms, and project assumptions into Rust. Direct agent-based translation gives the model more freedom to construct a Rust project, but semantic coverage depends on the model identifying the source behaviors that must be preserved. This problem is especially acute for C++, where source behaviors are often hidden in object models, destructor-driven lifetime protocols, and other hard-to-localize C++ semantics. This paper presents Req2Rust, the first project-level LLM-based C++-to-Rust migration harness. Req2Rust first derives an evidence-grounded Migration Requirements Specification (MRS) that records the behaviors and constraints that must be preserved. It then synthesizes a Rust Design Specification (RDS) and realizes it as an initial Rust project. Because real projects contain implementation details and idioms that only become visible during build and validation, Req2Rust treats the initial Rust project as an executable refinement state. Compiler, semantic, and unsafe-reduction validators produce validation reports for improving buildability, behavioral alignment, and unsafe usage. We evaluate Req2Rust on general C++ projects and modules from the large-scale Openharmony codebase against a ClaudeCode baseline. Req2Rust produces buildable Rust crates in both settings and improves test pass rate from 69.5% to 91.9% on general projects and from 45.4% to 87.9% on Openharmony modules."
+  },
+  {
+    "title": "Safe Output-Regulation Flows for Constrained Optimization via Control Barrier Functions",
+    "url": "http://arxiv.org/abs/2611.07436v1",
+    "arxiv_id": "2611.07436v1",
+    "authors": [
+      "Zihao Ren",
+      "Bingqi Liu",
+      "Lei Wang",
+      "Hongye Su",
+      "Guodong Shi"
+    ],
+    "published": "2026-11-05T04:34:30+00:00",
+    "summary": "Control-theoretic approaches to constrained optimization have been widely studied by interpreting optimization algorithms as dynamical systems. This paper formulates constrained optimization as an output-regulation problem with state constraints, where equality-constraint residuals are treated as regulated outputs and inequality constraints as state constraints. Proportional--integral feedback is employed to drive the equality-constraint residuals asymptotically to zero, while a control barrier function (CBF) safety filter is used to ensure inequality safety throughout the optimization process. We establish feasibility of the CBF filtering program throughout the inequality-feasible set and local exponential convergence of the resulting flow. Under stronger global conditions, we further prove convergence from an entire connected component of the inequality-feasible set. Since exact implementation of the flow requires solving a CBF quadratic program at each state, we further develop a flow that approximates the CBF solution through multiplier updates. Moreover, we provide a unified formulation encompassing the two proposed flows and projected primal--dual dynamics. Numerical examples demonstrate convergence, safety, and computational tradeoffs of the proposed flows."
+  },
+  {
+    "title": "Dynamic Watermarking and Action-Conditioned Latent Dynamics for Secure Vision-Based Controllers",
+    "url": "http://arxiv.org/abs/2611.07403v1",
+    "arxiv_id": "2611.07403v1",
+    "authors": [
+      "Aditya Parameshwaran",
+      "Navid Aftabi",
+      "Abhishek Hanchate",
+      "Satish T. S. Bukkapatnam",
+      "Dan Li",
+      "Yue Wang"
+    ],
+    "published": "2026-11-05T03:57:04+00:00",
+    "summary": "Replay attacks are difficult to detect in vision-based control systems because previously recorded observations can remain plausible while the physical system follows a different trajectory. This paper develops an adaptive dynamic-watermarking framework for detecting replay attacks against vision-based controllers. A private Gaussian watermark is added to the nominal control input, and a control input-conditioned latent dynamics network (LDN) predicts the corresponding evolution in a compact latent space learned from image observations. Attack evidence is obtained from the discrepancy between the predicted latent response and the latent representation of the received image observation. A reinforcement learning policy adjusts the watermark covariance using the latent state and detector confidence, thereby balancing attack detectability, watermark energy, and control distortion. A Lagrangian penalty on task-specific safety costs is included during training to limit the adverse effect of the excitation. The framework is evaluated on a vision-guided UR5 manipulation task in which the robot reaches a target while avoiding a moving human arm under nominal and replay-attacked observations."
+  },
+  {
+    "title": "When Scores Conflict with Preferences: Pre-Alignment Diagnosis and Adaptive Correction of Constraint Drift in DPO",
+    "url": "http://arxiv.org/abs/2611.07375v1",
+    "arxiv_id": "2611.07375v1",
+    "authors": [
+      "Ping Liu",
+      "Yan Yan"
+    ],
+    "published": "2026-11-05T03:20:55+00:00",
+    "summary": "Direct Preference Optimization (DPO) is increasingly used in settings where pairwise preferences coexist with pointwise criteria such as response length, answer correctness, or safety scores. When the two disagree, standard DPO treats pairs whose preferred output scores worse on the pointwise criterion (conflict pairs) in the same way as the remaining (matching) pairs. We characterize a systematic failure mode, constraint drift: for sufficiently small updates, conflict pairs tend to increase constraint cost while matching pairs tend to repair it, and the net change depends on their balance. This balance yields a closed-form pre-alignment diagnostic, $\u03c1^{*}_{\\mathrm{eq}}$, computable from dataset statistics, that indicates whether a dataset is self-correcting or requires intervention. Building on this diagnostic, we propose Conflict-aware DPO (CoDPO), which down-weights conflict pairs with a strength set from $\u03c1^{*}_{\\mathrm{eq}}$ rather than tuned, and adds an adaptive margin shift that addresses residual drift during training. Empirically, drift grows monotonically with conflict exposure on the conflict-dominated domains, and the intervention decision given by $\u03c1^{*}_{\\mathrm{eq}}$ matches the observed drift on every domain, including one that it identifies as self-correcting. On all four domains of the main comparison, CoDPO reduces drift while largely preserving the preference learning of vanilla DPO. Compared with hard filtering and recent constrained and multi-objective baselines, CoDPO also achieves a more favorable drift-preference trade-off."
+  },
+  {
+    "title": "Acoustic Anomaly Detection for Early Identification of Drill Jamming",
+    "url": "http://arxiv.org/abs/2611.07356v1",
+    "arxiv_id": "2611.07356v1",
+    "authors": [
+      "Maria Beatriz Silva",
+      "Lucas Edson Silva de Ara\u00fajo",
+      "Sergio F. Chevtchenko",
+      "Ermeson Andrade",
+      "Danilo Araujo",
+      "Saeed Afshar"
+    ],
+    "published": "2026-11-05T02:50:29+00:00",
+    "summary": "In the context of Industry 4.0, predictive maintenance is essential to minimize unplanned downtime and ensure operational safety. In machining processes, drill jamming is a critical failure that compromises both workpiece quality and tool integrity. This work proposes an acoustic anomaly detection system using ultrasonic sensors to identify pre-failure patterns in Computer Numerical Control (CNC) machining. We release a public dataset of time- and frequency-domain acoustic features from 17 drills, and benchmark semi-supervised autoencoder-based normality modelling against supervised XGBoost classification using Leave-One-Drill-Out validation. The results demonstrate that the Autoencoder is highly effective for industrial safety, achieving a Recall of 1.00 and a consolidated F1-score of 0.81. Furthermore, the threshold-independent analysis shows that the Autoencoder better separates normal and pre-failure acoustic patterns, achieving a consolidated AUC of 0.8294, compared with 0.7559 for the supervised model under inter-tool covariate shift. In contrast, the supervised XGBoost achieved an average F1-score of 0.55 and failed to detect failures in some of the evaluated drills. The findings highlight that the ultrasonic spectrum provides a reliable window for identifying incipient mechanical instabilities, and the AE model offers a robust safety envelope by anticipating all jamming events across the tested drill bits."
+  },
+  {
+    "title": "Goal Revelation as a Bridge Between Information-Theoretic Empowerment and Capability-Based Human Power",
+    "url": "http://arxiv.org/abs/2611.07247v1",
+    "arxiv_id": "2611.07247v1",
+    "authors": [
+      "Jaime Ruiz-Serra",
+      "Tom\u00e1\u0161 Gaven\u010diak",
+      "Jobst Heitzig"
+    ],
+    "published": "2026-11-04T23:54:35+00:00",
+    "summary": "Power matters for AI safety. Optimal agents tend to acquire power across a wide range of objectives (instrumental convergence). As we embed AI agents into socio-technical systems, humans risk gradual disempowerment. Both concerns call for a formal, quantitative measure of power. Two such measures in the context of Markov games are information-theoretic empowerment, the capacity of the channel from an agent's actions to future states, and capability-based individual power, a measure of goal attainment built from the probabilities that a human would attain each goal in a family of candidates were they pursuing it. We show where the two meet. From individual power, Fano's inequality yields a floor $B(s)$. This floor is a lower bound on what we term goal revelation, the mutual information $\\mathbb{I}(G;\u03be\\mid s)$ between the human's latent goal and the realised trajectory. Empowerment caps revelation from above, so that $B(s) \\le \\mathbb{I}(G;\u03be\\mid s) \\le \\mathbb{I}(\\mathbf{A}_h \\to \u03be\\mid s) \\le \\mathfrak{E}_h(s)$. Each quantity can be large while the one below it stays at zero, highlighting the following failure modes. An assistant maximising empowerment can prefer an interface offering broad influence over goal-irrelevant degrees of freedom to one that lets the human attain every goal they might hold. An assistant maximising revelation cannot tell a working interface from one rewired so that every goal yields the wrong outcome, since relabelling goals leaves mutual information unchanged while zeroing every attainment probability. Positive guarantees therefore come only from the attainment end of the chain. A satisfaction floor, computable from two statistics of interaction logs, offers a way to monitor the power users retain in a deployed system, and simulations in random environments show the three quantities are correlated but far from interchangeable."
+  },
+  {
+    "title": "SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection",
+    "url": "http://arxiv.org/abs/2611.07222v1",
+    "arxiv_id": "2611.07222v1",
+    "authors": [
+      "Woosang Lim",
+      "Yeseul Chang",
+      "Jaewoo Lee"
+    ],
+    "published": "2026-11-04T23:18:10+00:00",
+    "summary": "Tool-using agents act on email, files, and payments, so an instruction hidden in a web page or a shared document can make an agent send data or money to an attacker. Many runtime defenses put a language model on the decision that lets an action through, so the decision depends on a model that may read the attacker's text and adds model calls to every step. Provenance defenses keep the model off the final check but need a model to plan or route each task first. Where an action goes can instead be read from the tools' typed returns: an email's sender or a payment's account arrives in a typed field, while injected instructions arrive as free text. SPILLWAY turns this observation into a deterministic floor with no per-task plan. The check admits a call when each target value that appears in tool output but not in the user's task was returned by a read-only tool in a typed field or is covered by a fixed delegation rule. A deterministic sanitizer removes instruction-like regions its fixed rules match before the model reads them and retains the removed spans as evidence, and a local judge may restore a refused call, never one whose target lies in the removed text. Across three backbones, and seven task suites on one of them, no standard templated injection redirects an action to an attacker's target under SPILLWAY, at the highest observed mean utility and composite scores (NRP, ERS) of the defenses we run under that attack. A forged chat template also produces a raw zero, and mean in-scope attack success under a released reinforcement-learning attacker is .007. SPILLWAY reaches this floor with no defense-triggered backbone re-run and almost no added model call. As personal AI agents act on users' email, files, and payments, SPILLWAY gives them an auditable refusal floor on where their actions go that keeps them useful and holds across backbones."
+  },
+  {
+    "title": "SAFE-Teen: Evaluating Chatbot Safety Across Adolescent Mental Health Conversations",
+    "url": "http://arxiv.org/abs/2611.07218v1",
+    "arxiv_id": "2611.07218v1",
+    "authors": [
+      "Andrea Mock",
+      "Valerie Chen",
+      "Eric Lin",
+      "Rayan Krishnan",
+      "Diyi Yang",
+      "Caroline Figueroa"
+    ],
+    "published": "2026-11-04T23:11:33+00:00",
+    "summary": "Adolescents are increasingly turning to AI chatbots for mental health support, advice, and companionship, raising safety concerns. While recent evaluations have started to examine safety across multiple conversational turns, few compare how slight changes in a teen's responses can affect a chatbot's safety in the same scenario. We conduct a clinician-informed evaluation of chatbot safety in simulated conversations with adolescents aged 13-17, examining how safety failures vary with adolescents' responses and teen-aware system prompting. We evaluated 32,555 simulated conversations across 18 chatbot APIs and two system-prompt conditions using 22 safety criteria grounded in previously identified harms. Conversations spanned 983 variants of 106 seed scenarios covering urgent safety issues, health advice, and identity and relationships. The overall criterion failure rate was 43.3% without the teen-aware prompt and 24.9% with it. The teen-aware prompt reduced failures, but it didn't eliminate them. When a teenager pushed back on a chatbot's answer, failures on mental health diagnosis, medication, and substance misuse boundaries rose by 10-12 percentage points without the prompt, for more than 80% of chatbots. These findings reveal persistent safety failures in simulated adolescent-chatbot interactions and show that safety depends on how a conversation unfolds."
+  },
+  {
+    "title": "Compositional Unalignment: Auditing Safety in Large Vision-Language Models",
+    "url": "http://arxiv.org/abs/2611.07216v1",
+    "arxiv_id": "2611.07216v1",
+    "authors": [
+      "Hong kyu Lee",
+      "Kai Shu",
+      "Li Xiong"
+    ],
+    "published": "2026-11-04T23:09:31+00:00",
+    "summary": "Large vision-language models (LVLMs) are vulnerable to compositional harm: an image and a prompt that are benign in isolation become harmful through the model's cross-modal reasoning. Recent alignment methods report strong scores on compositional safety benchmarks, but an LLM judge only measures observed behavior and cannot reveal how robustly safety is integrated into the model. We argue that un-alignment provides a complementary audit of alignment robustness. We first show that minimal supervised fine-tuning reaches an LLM-judge score comparable to a multi-stage reinforcement-learning pipeline, so similar benchmark scores cannot establish robustness by themselves. We then show that recognition and refusal of compositional harm are decoupled: nine standard direction-finding methods detect compositional harm with up to AUC=0.99, yet ablating the recovered directions either leaves refusal intact or destroys model coherence. We therefore propose CMaG, a training-free un-alignment method for compositional safety. CMaG measures refusal intention with a refusal-versus-compliance log-probability margin, takes its gradient with respect to mid-layer activations, and contrasts it against partially benign pairs to isolate the cross-modal interaction term. A single backward pass over 80 examples yields a direction along which steering monotonically converts refusal into compliance. On Qwen2.5-VL-7B and LLaVA-1.5-7B, CMaG reduces compositional safety scores by up to 65 points while over 98% of outputs remain coherent, outperforming gradient-based baselines; the direction also transfers to text-explicit harm and un-aligns models hardened by defensive training. Compositional safety can thus appear behaviorally strong while remaining fragile to targeted internal intervention. Warning: this paper contains unsafe model outputs, including references to self-harm."
+  },
+  {
+    "title": "Adapting the Process of Adaptation: Darwinian, Lamarckian, and Agent-Directed Evolution in AI",
+    "url": "http://arxiv.org/abs/2611.07048v1",
+    "arxiv_id": "2611.07048v1",
+    "authors": [
+      "Andrew W. Lo",
+      "Chaoyi Zhao"
+    ],
+    "published": "2026-11-04T19:08:46+00:00",
+    "summary": "Evolution has shaped intelligence for billions of years. Artificial intelligence (AI) now raises a striking possibility: intelligence may begin to direct its own evolution. As AI agents become capable of modifying and evaluating their own behavior, how quickly could they improve, and how can that improvement remain safe? We develop a theoretical framework comparing Darwinian, Lamarckian, and agent-directed evolution following environmental change. Darwinian evolution relies on natural selection, Lamarckian evolution adds inherited learning, and agent-directed evolution allows agents to generate and evaluate behavioral variants and choose how extensively to search. When learning is sufficiently effective, these mechanisms exhibit progressively faster adaptation. Generating more variants accelerates adaptation, while optimal search effort depends on learning ability, problem difficulty, and experimentation costs. However, an agent's ability to direct its improvement does not ensure that improvements are evaluated against the intended objective. When the evaluation target is misspecified, additional search accelerates convergence toward the wrong behavior, even as measured performance improves. In recursive self-improvement, such errors may persist across generations, posing challenges for AI safety. Independent evaluation and oversight must keep pace with autonomous AI development. The central challenge is not simply to accelerate the evolution of intelligence, but to preserve humanity's ability to guide its direction, limit its speed, and intervene when necessary."
+  },
+  {
+    "title": "Asymptotic safety is not generic",
+    "url": "http://arxiv.org/abs/2611.07002v1",
+    "arxiv_id": "2611.07002v1",
+    "authors": [
+      "Francesco Del Porro",
+      "Francesco Ferrarin",
+      "Alessia Platania"
+    ],
+    "published": "2026-11-04T19:00:01+00:00",
+    "summary": "Asymptotically safe quantum gravity proposes a non-perturbative ultraviolet completion of gravity in which the high-energy behavior is controlled by an ultraviolet fixed point---the Reuter fixed point---for which there is robust evidence from a wide range of settings and truncations. The existence of asymptotic safety requires non-trivial zeros of beta functions, raising the question of how generic such fixed-point solutions are. In this work, we tackle this issue by investigating chiral perturbation theories. We focus on SU(2) and SU(3) chiral models, which share key features with gravity such as perturbative non-renormalizability or nonlinear interactions, but which are known to admit a different ultraviolet completion via new degrees of freedom. Using the functional renormalization group, we study these theories within a quartic-derivative truncation and find no evidence for an interacting fixed point. This result suggests that asymptotic safety is not generic, but rather a feature pertaining to certain special systems."
+  },
+  {
     "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
     "url": "http://arxiv.org/abs/2611.06911v1",
     "arxiv_id": "2611.06911v1",
