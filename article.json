@@ -1,5 +1,476 @@
 [
   {
+    "title": "C$^2$-Routing: Complementary Cropping and Compression for Efficient Vision-Language Inference",
+    "url": "http://arxiv.org/abs/2611.14469v1",
+    "arxiv_id": "2611.14469v1",
+    "authors": [
+      "Guorui Lu",
+      "Qinyu Chen"
+    ],
+    "published": "2026-11-10T18:32:28+00:00",
+    "summary": "Visual Question Answering (VQA) imposes substantial computational overhead on vision-language models (VLMs), motivating model-agnostic input reduction methods that can be readily applied across diverse VLMs, including in black-box settings. Simply enforcing a visual-token cap reduces computation, but it can discard information needed to answer the question. A single reduction strategy also struggles to accommodate different scenarios. Our key observation is that cropping and compression are complementary: cropping highlights small targets and local details, whereas whole-image compression better preserves context for large targets or distributed evidence. Based on this observation, we propose C$^2$-Routing, which adaptively selects cropping or compression according to the input image and question. Since both strategies may still discard key information, we further design a safety gate that uses the predicted joint correctness distribution under original and reduced inputs to guide fallback and protect accuracy. To accommodate consumer GPU resource constraints, all training and evaluation experiments run on RTX 3090 GPUs. To measure gains beyond token capping, we use full-image baselines with the same cap of 1,024 visual tokens. We conduct extensive evaluation on three VLMs and 18 datasets spanning local details, global scenes, scene text, and documents. With the visual budget already capped, C$^2$-Routing further reduces end-to-end FLOPs by 36.53% and visual tokens by 42.36% on average, with a mean relative task-score decrease of only 0.77%."
+  },
+  {
+    "title": "Evaluating LLM-Generated World Models for Neuro-Symbolic Reasoning",
+    "url": "http://arxiv.org/abs/2611.14419v1",
+    "arxiv_id": "2611.14419v1",
+    "authors": [
+      "Souhaila Djaffal",
+      "Amna Jamal",
+      "Gagana Madhugiri Devaraja",
+      "Anidipta Pal",
+      "Jobst Heitzig"
+    ],
+    "published": "2026-11-10T17:58:12+00:00",
+    "summary": "Formal world models can support planning, verification, and safety reasoning, but constructing them from open-ended natural-language situations is difficult, particularly in multi-agent settings where several formalizations may be plausible. We study whether five LLMs can generate such world models as partially observable stochastic games and whether mechanical validity is sufficient to establish that the resulting model faithfully represents the intended decision problem. We introduce a benchmark of 44 scenarios spanning game, situational, and cultural settings and evaluate generated world models along three dimensions: mechanical validity, reference-relative structural agreement, and semantic criteria. Across three empirical tracks, we analyze 410 first-pass generations. In the reference-backed game track, 134/135 generated world models pass a strict mechanical audit, yet mean permutation-invariant structural F1 is only 0.366, with just 28/134 mechanically valid models exactly matching the authored reference. In the cultural track, explicitly naming the country changes the generated structural representation for most LLMs while producing only small changes in automated semantic scores. These results show that executability is a necessary but insufficient criterion for LLM-generated world models: models that are mechanically valid can still differ substantially in the structure used by downstream neuro-symbolic reasoning and planning."
+  },
+  {
+    "title": "Energy- and Time-Efficient Multi-Vehicle Trajectory Planning Using Augmented DAG Search in Configuration Space",
+    "url": "http://arxiv.org/abs/2611.14299v1",
+    "arxiv_id": "2611.14299v1",
+    "authors": [
+      "Amirreza Akbari",
+      "Galina Sidorenko",
+      "Johan Thunberg"
+    ],
+    "published": "2026-11-10T16:34:29+00:00",
+    "summary": "Multi-vehicle trajectory planning for CAV requires balancing energy consumption and travel time while ensuring safety and scalability. While travel-time-optimal methods based on Integer Programming exhibit poor scalability in large-scale multi-vehicle scenarios, existing energy-oriented approaches fail to balance energy consumption and travel time. We extend a configuration-space framework for multi-vehicle trajectory planning to jointly locally optimize travel time and energy consumption. A weighted energy-travel time objective is combined with an efficient augmented DAG search on two-dimensional decompositions of a high-dimensional configuration space, enabling scalable and collision-free coordination of large numbers of vehicles. Although the proposed framework is applicable to other traffic scenarios, such as roundabouts and vehicle-following, we focus on intersections as a representative and challenging planning problem. To further improve performance for our methodology, we also extend the method with an insertion-ordering heuristic that exploits reduced-space geometric information. Combined with nonlinear model predictive control, the proposed framework is shown to scale to 40 vehicles, outperform MILP-based and convex optimization baselines in dense intersections, and reduce energy consumption at equalized travel times relative to time-optimal planning."
+  },
+  {
+    "title": "Ninety-Six Ways to Measure a Scribe: Fragmented Evaluation of Ambient Scribes in Healthcare",
+    "url": "http://arxiv.org/abs/2611.14284v1",
+    "arxiv_id": "2611.14284v1",
+    "authors": [
+      "Amama Mahmood",
+      "Shiye Cao",
+      "Laura Fleig",
+      "Junan Jiang",
+      "Theodore Jensen",
+      "Yee-Yin Choong",
+      "Kristen Greene",
+      "Chien-Ming Huang"
+    ],
+    "published": "2026-11-10T16:26:02+00:00",
+    "summary": "Ambient artificial intelligence (AI) scribes have moved rapidly from experimental pilots to enterprise-wide deployment across health systems, promising reduced documentation burden and improved clinician experience. While research evaluating these tools has expanded quickly, there are no agreed-upon protocols or standardized metrics for assessing their performance, making it difficult to compare findings or cumulatively synthesize evidence across studies. Across 54 recent evaluation studies, we identify ten evaluation dimensions and 40 distinct metrics, operationalized in 96 different ways-35 of them (36%) used by only a single study. Assessment is dominated by documentation efficiency and time, measured in 44 of 54 studies. The other dimensions appear at broadly similar rates (16-24 studies each), and safety and clinical outcome least consistently of all. Ripple effects on the broader care system, such as impact on patients' care outcomes, redistribution of work, changes in billing and coding intensity, and downstream use of notes by other clinicians are rarely assessed. Moreover, the metrics used rely heavily on self-report and are fragmented and inconsistently operationalized, which limits comparability and hinders synthesis across studies. As an effort to support more rigorous and cumulative evaluation, in this paper we review the study designs, data sources, and metrics commonly used to evaluate ambient AI scribes in healthcare settings, discuss the limitations of current evaluation practice, and argue for a more holistic approach grounded in a standardized, multi-dimensional set of metrics."
+  },
+  {
+    "title": "LEASH: Stay Safe in Agentic Robotics",
+    "url": "http://arxiv.org/abs/2611.14115v1",
+    "arxiv_id": "2611.14115v1",
+    "authors": [
+      "Qinfeng Zhu",
+      "Weiguang Zhao",
+      "Ke Sun",
+      "Xihao Guo",
+      "Yunxi Jiang",
+      "Rui Zhang",
+      "Lei Fan",
+      "Kaizhu Huang"
+    ],
+    "published": "2026-11-10T14:06:20+00:00",
+    "summary": "Foundation models such as GPT and Claude have shown strong capabilities in spatial understanding and embodied intelligence. These advances make agentic robotics a promising path toward artificial general intelligence in robotics. However, we find that using foundation models to control robots poses serious safety risks, and comprehensive safety evaluation is still lacking. We introduce RoboRisk, a comprehensive benchmark for evaluating safety in agentic robotics. Its 92 simulated tasks and 13 physical-robot tasks fall into five categories: Task-level Refusal (T), Plan Repair (P), Execution-time Hazard (E), Injection (I), and Sequential Memory (S). Prior benchmarks cover at most two of these categories, and several evaluate only text outputs. In contrast, RoboRisk covers all five and executes every task in closed loop. We evaluate six state-of-the-art foundation models on RoboRisk: GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna, Claude Opus 5.5, Gemini 4 Argon, and Grok 4.7. These models generally show high harm rates. We also evaluate two robot-specific APIs: the Dream API and PokeBot's RoboAPI. We further propose the Lease-Enforced Agentic Safety Harness (LEASH), which offers essential safety infrastructure for agentic robotics and can be integrated into nearly any agentic architecture. LEASH leverages a decision model (Jev or OpenAI's Decisions API) to implement task, action, and commit gates, which review the task, each action, and each irreversible operation in their visual context. The planner and all three gates share a common safety policy. Experiments on RoboRisk in simulation and on physical robots show that LEASH effectively reduces harm across all six foundation models. It largely preserves their task completion performance and adds little time and token overhead."
+  },
+  {
+    "title": "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant for Emergency Response Scenarios",
+    "url": "http://arxiv.org/abs/2611.14059v1",
+    "arxiv_id": "2611.14059v1",
+    "authors": [
+      "Rezwan Islam Salvi",
+      "Saiyma Sittul Muna",
+      "Mushfiqur Rahman Mushfique"
+    ],
+    "published": "2026-11-10T13:25:28+00:00",
+    "summary": "Emergencies can occur where there is no phone signal and no ambulance nearby. A small language model on a phone can be helpful in such situations, but its advice needs to be safe and accurate. We built HandsOnAid, a 4-bit Gemma 2B model fine-tuned with QLoRA on FirstAidQA dataset, a corpus of 5,550 first-aid question-answer pairs. We compared seven configurations, including the base, 4-bit and 8-bit fine-tuned models, and versions with a length floor, safety gate, or retrieval. We used a 41-pair question-answer bank with medically reviewed references that followed ANZCOR guidelines, and a strict 0-5 score rubric, with twelve safety overrides. Four frontier LLM judges (GPT-5.6 Sol, Claude Opus 5, DeepSeek V4 Pro, GLM-5.3) blindly scored every answer, with 45 hidden controls used to check judge reliability. Fine-tuning improved the mean score by +1.08 over the base model to 2.34. The best configuration scored 2.51 out of 5 which was the fine-tuned 4-bit model with retrieval. A medical professional also conducted a blind evaluation of 40 answers across the base, the 4-bit fine-tuned, and the retrieval configurations, and the scores were similar to the LLM judges' average scores. A keyword audit found limited coverage of several details of ANZCOR guidelines in the training corpus, that are required by the rubric, which suggests that missing information in the training data could be a cause of the low scores. On a smartphone device (Pixel 7 Pro) with six CPU threads and no network connection, the 4-bit fine-tuned model produced its first displayable text in 6.86 seconds and a complete answer in 14.88 seconds on average over ten questions."
+  },
+  {
+    "title": "Distributionally Robust Indirect-Feedback Stochastic MPC with Gelbrich Ambiguity Sets",
+    "url": "http://arxiv.org/abs/2611.13986v1",
+    "arxiv_id": "2611.13986v1",
+    "authors": [
+      "Jiaxun Sun",
+      "Riccardo Cescon",
+      "Marcell Bartos",
+      "Melanie N. Zeilinger"
+    ],
+    "published": "2026-11-10T12:30:05+00:00",
+    "summary": "Stochastic model predictive control uses disturbance statistics to set safety margins. Errors in these statistics can invalidate the safety guarantees. This paper therefore describes the uncertainty in the disturbance mean and covariance by a prescribed Gelbrich ambiguity set. This contains distributions of any shape whose moments are close in the Gelbrich distance to the nominal values, including distributions with unbounded support. For linear time-invariant systems with additive disturbances, we build on the indirect feedback paradigm, propagate this moment uncertainty along the error dynamics, and obtain a closed-form constraint tightening that is computed offline. Robustness enters as a single additive term that grows with the size of the ambiguity set, so the online problem remains a quadratic program. Recursive feasibility and closed-loop satisfaction of conditional value-at-risk (CVaR) constraints hold for every disturbance distribution in the set. We illustrate the method on a linearized planar quadrotor."
+  },
+  {
+    "title": "Advancing a Global Framework for AI Safety and Governance for the Well-being of Humanity",
+    "url": "http://arxiv.org/abs/2611.13968v1",
+    "arxiv_id": "2611.13968v1",
+    "authors": [
+      "Zeng Yi",
+      "Se\u00e1n \u00d3 h\u00c9igeartaigh",
+      "Wang Zhengqi",
+      "Lu Enmeng",
+      "Chen Yu",
+      "Cao Gongce",
+      "Guo Xiaoyang",
+      "Kang Yanrong",
+      "Han Kaiyu",
+      "Fan Jinyu",
+      "Xie Jiawei",
+      "Han Zhengqiang",
+      "Wang Jin",
+      "Huangfu Cunqing",
+      "Bao Aorigele",
+      "Dame Wendy Hall",
+      "Lin Lin",
+      "Duan Weiwen",
+      "Wang Rong",
+      "Zhang Junlin",
+      "Tang Xinhua",
+      "Vincent C. M\u00fcller",
+      "Chen Jingjing",
+      "Li Na",
+      "Cheng Kai",
+      "Sebastian Sunday Gr\u00e8ve",
+      "Danil Kerimi",
+      "Bernd Holznagel",
+      "Anna Abramova",
+      "Jimena Sofia Viveros Alvarez",
+      "Edson Prestes",
+      "Shen Juncheng",
+      "Liu Yongmou",
+      "Zhang Jiji",
+      "Nada Laabidi",
+      "Yao Xin",
+      "Zhou Kai",
+      "George Chen",
+      "Fu Chunhui",
+      "Liu Xiaochun",
+      "Guo Sumin",
+      "Hu Naying",
+      "Qiao Qian",
+      "Meng Wei",
+      "Zhang Linghan",
+      "Tan Zhixing",
+      "Helen Meng",
+      "Qiao Yu",
+      "Bu Yuyan",
+      "Fan Wei",
+      "Wang Xingguang",
+      "Wang Feng",
+      "Gong Xinqi",
+      "Xia Wenhui",
+      "Wang Mengyin",
+      "Tao Feng",
+      "Hu Yongqi",
+      "Charuka Senal Damunupola",
+      "Cheng Ming",
+      "Liu Weichen",
+      "Nirosha Ananda",
+      "Peng Tao",
+      "Tao Tao",
+      "Wang Fengqiong",
+      "Wang Jianbing",
+      "Wang Tong",
+      "Wang Wei",
+      "Wang Xin",
+      "Wu Shuyan",
+      "Yang Yaodong",
+      "Yang Zhongliang",
+      "John Yeoh",
+      "Zhang Rong",
+      "Zhou Yuan",
+      "Zhang Xueli",
+      "Liang Hao"
+    ],
+    "published": "2026-11-10T12:05:59+00:00",
+    "summary": "The Report \"Advancing a Global Framework for AI Safety and Governance for the Well-being of Humanity\" is an important outcome of the AI Safety and Governance Program of World Internet Conference Specialized Committee on Artificial Intelligence in 2025. This report provides a systematic review of current global explorations and practices in AI safety and governance, identifies key issues that need to be addressed, and draws upon multilateral governance experiences from other domains. Centered on mechanism design, it explores how to build a global AI safety and governance system that ensures safety and security, promotes inclusiveness, clarifies responsibilities and accountabilities, strengthens effective coordination, and ensures authoritative and efficient governance. Guided by the principles of multilateralism and the vision of building a community with a shared future for humankind, the report proposes institutional measures and policy recommendations to establish a United Nations-centered global AI safety and governance framework. It aims to serve as a reference for governments, international organizations, enterprises, and research institutions. The report is to contribute insights and momentum to advancing people-centered and beneficial AI governance worldwide, ensuring that AI technologies truly serve the well-being of all humanity."
+  },
+  {
+    "title": "TreeAgent: Structure-Aware Memory Agent for Processing Long Hierarchical Data",
+    "url": "http://arxiv.org/abs/2611.13946v1",
+    "arxiv_id": "2611.13946v1",
+    "authors": [
+      "Wei Gu",
+      "Weiwei Qi",
+      "Jiajun Tang",
+      "Tianhang Zheng",
+      "Bo Chen",
+      "Zhibo Zhang",
+      "Jinfei Liu",
+      "Kui Ren"
+    ],
+    "published": "2026-11-10T11:33:05+00:00",
+    "summary": "Practical Web applications increasingly require agents to interpret long conversations or documents. For inputs exceeding the context windows of large language models (LLMs), memory agents process segments sequentially and retain past information in bounded memory. However, they typically divide inputs into flat token segments without preserving structure or hierarchy, causing three limitations for structured data such as API responses or HTML documents. First, fixed-length segmentation can split fields of the same record, breaking their relationships. Second, segments lack hierarchical information, obscuring their structural context and positions. Third, successive memory updates may discard details of earlier sibling records needed for reasoning on later segments. To address these limitations, we propose TreeAgent, a structure-aware agent that uses the input hierarchy to guide both segment-wise context processing and access to past information. Specifically, TreeAgent constructs segments from complete subtrees and groups of adjacent sibling subtrees to preserve local structural relationships. We provide theoretical guarantees on segment counts to guide token budget selection toward matching the segment count of fixed-length segmentation. We further attach structural paths to the segments for the agent to identify their ancestors and hierarchical positions. We also introduce residual memory links from the segments of low-level children to the segments of high-level parents, enabling direct information flows beyond successive memory updates. We evaluate TreeAgent with four representative memory agents on eight retrieval and aggregation tasks. The inputs are derived from real-world application data in JSON, HTML, YAML, and JavaScript and range from 8K to 1M tokens. TreeAgent improves the average score across the four datasets for all four agents, with 3.61% performance gain on average."
+  },
+  {
+    "title": "Safety and Connectivity Certificates for Finite-Time Formation Transitions",
+    "url": "http://arxiv.org/abs/2611.13927v1",
+    "arxiv_id": "2611.13927v1",
+    "authors": [
+      "Yash Purswani",
+      "Shivansh Agarwal",
+      "Anuj Tiwari"
+    ],
+    "published": "2026-11-10T11:15:47+00:00",
+    "summary": "Finite-time formation transitions are useful for coordinating multi-agent systems in time-critical missions, but convergence to a prescribed formation in finite time does not guarantee collision avoidance or communication connectivity during the transition. Existing approaches address finite-time coordination and safety-constrained formation control, yet explicit connections between disagreement during transitions, formation geometry, and coupling-gain selection need to be developed for certifying safe maneuvers. This paper develops a disagreement-based framework for certifying transient safety and connectivity during finite-time tracking of arbitrary prescribed formation trajectories. Local feedback guarantees exact finite-time tracking with a graph-independent settling-time bound, while a graph-dependent disagreement bound is used to derive sufficient geometric conditions for collision avoidance and connectivity preservation. These conditions further yield an offline coupling-gain selection rule based on the available geometric clearance. Numerical simulations illustrate the trade-off between convergence rate and control effort as the coupling gain increases. They also demonstrate the effectiveness and conservatism of the proposed certificates."
+  },
+  {
+    "title": "Region-Wise Logit Fusion and Utility-Gated Refinement for Brain Metastasis Segmentation",
+    "url": "http://arxiv.org/abs/2611.13884v1",
+    "arxiv_id": "2611.13884v1",
+    "authors": [
+      "Zhenye Lou",
+      "Qing Xu",
+      "Wenting Duan",
+      "Zhen Chen"
+    ],
+    "published": "2026-11-10T10:44:47+00:00",
+    "summary": "BraTS-METS 2026 Task 1 evaluates segmentation of brain metastases and postoperative resection cavities on heterogeneous multiparametric MRI, requiring detection of small enhancing foci while preserving the geometry and hierarchy of enhancing tumor (ET), tumor core (TC), whole tumor (WT), and resection cavity (RC). We present COMPASS-METS (Component-Aware Multi-Trainer Probability Assembly with Structured Segmentation), which combines three five-fold nnU-Net configurations into aligned regional probability ensembles. A structured-probability anchor applies region-specific component decisions, TC boundary completion, RC filtering, and hierarchy-preserving conversion. Omitted ET candidates are recovered additively using learned component confidence and deterministic multi-trainer support for ET and its TC/WT parents; a final utility gate admits only disconnected candidates with sufficient lesion-existence and geometry-safety probabilities. On the reused 179-case challenge development cohort, COMPASS-METS (Team: MicroBT) achieved Small F1 0.354, lesion-wise DSC 0.712, NSD 0.714, All F1 0.779, and HD95 56.6 mm. Relative to ResEncXL, it improved DSC, NSD, and All F1 and reduced HD95, while Small F1 changed from 0.367 to 0.354. Stagewise analysis attributes the principal geometric gains to structured probability construction and shows that guarded ET refinement recovers most of the associated small-lesion detection loss. These 179-case results remain selection-aware development estimates. The source code is publicly available at https://github.com/leonlou921/COMPASS-METS."
+  },
+  {
+    "title": "Learn-To-Propagate: Distributionally Robust Motion Planning for Nonlinear Uncertain Systems",
+    "url": "http://arxiv.org/abs/2611.13863v1",
+    "arxiv_id": "2611.13863v1",
+    "authors": [
+      "Eduardo Figueiredo",
+      "Adrien Banse",
+      "Qi Heng Ho",
+      "Raphael Jungers",
+      "Morteza Lahijanian",
+      "Luca Laurenti"
+    ],
+    "published": "2026-11-10T10:23:12+00:00",
+    "summary": "Motion planning for stochastic systems aims to find a sequence of control inputs that drives a system to a goal set while avoiding unsafe states with high probability. Existing approaches, however, are either restricted to linear dynamics with perfect knowledge of the underlying distributions or lack formal correctness guarantees. To address these limitations, we propose \\emph{Learn-To-Propagate Distributionally-Robust Forest (L2P-DR-Forest)}, a distributionally-robust sampling-based planning algorithm for \\emph{nonlinear} stochastic systems with \\emph{unknown} initial state and process noise distributions. Our approach leverages recent advances in optimal transport to learn ambiguity sets that contain the true system distributions with high confidence. We develop an efficient method for propagating these sets through the system dynamics and for verifying their safety. We then integrate these techniques into a novel sampling-based planning algorithm to grow a forest of search trees in the system's state space while accounting for and mitigating the growth of ambiguity-sets radii. We prove that the algorithm is correct, i.e., every returned plan satisfies the specifications with the prescribed confidence, and, under some feasibility and distributional assumptions, is probabilistically complete. Evaluations on several robotic benchmarks demonstrate that our algorithm significantly outperforms existing methods while providing formal guarantees with high confidence."
+  },
+  {
+    "title": "RiSE-Drive: Risk-Sensitive Long-Horizon Candidate Evaluation for End-to-End Autonomous Driving",
+    "url": "http://arxiv.org/abs/2611.13790v1",
+    "arxiv_id": "2611.13790v1",
+    "authors": [
+      "Yu Zhao",
+      "Hongyi Duan",
+      "Ming Yin",
+      "Hongyuan Zhang",
+      "Fan Yang",
+      "Hongzhi Wang",
+      "Xiubo Liang"
+    ],
+    "published": "2026-11-10T09:22:58+00:00",
+    "summary": "End-to-end autonomous driving systems increasingly rely on generating multiple trajectory candidates and selecting one for execution. In this setting, a central challenge is no longer only candidate generation, but how to evaluate candidates according to their long-horizon consequences under uncertainty. Existing methods still mainly use deterministic point scores, heuristic subscores, or single-outcome evaluations, which makes it difficult to capture delayed failures, tail risk, and ranking instability under plausible future perturbations. We present RiSE-Drive, a framework for risk-sensitive long-horizon candidate evaluation in end-to-end autonomous driving. RiSE-Drive first performs candidate-conditioned latent future rollout, then estimates long-horizon outcome distributions instead of single scalar scores, and finally ranks candidates using a tail-risk-aware and perturbation-robust decision criterion. This reformulates candidate scoring from deterministic oracle-style evaluation into distributional outcome assessment with explicit risk control. As a result, the evaluator is encouraged to prefer candidates that are not only strong under nominal conditions, but also reliable under long-horizon rollout and safety-critical deviations. Experiments on the NAVSIM-v1 and NAVSIM-v2 benchmarks, as well as the closed-loop HUGSIM benchmark, show that RiSE-Drive achieves state-of-the-art performance and significantly improves the robustness of candidate selection."
+  },
+  {
+    "title": "From Depth to Safe Depth: Uncertainty-Aware Monocular Perception for Mobile Robot Navigation",
+    "url": "http://arxiv.org/abs/2611.13769v1",
+    "arxiv_id": "2611.13769v1",
+    "authors": [
+      "Saeid Firouzi Daghigh",
+      "Saeed Ayat"
+    ],
+    "published": "2026-11-10T09:07:44+00:00",
+    "summary": "Monocular depth foundation models make it tempting to replace depth sensors on mobile robots with a single RGB camera. We show that, used off the shelf, this is unsafe: in a simulated indoor navigation benchmark, a standard Nav2 stack driven by Depth Anything V2 (metric) collides in 63\\% of 120 episodes, because the model systematically over-estimates the distance to nearby obstacles. We propose a lightweight plug-in module that turns predicted depth into \\emph{safe depth}. A 0.58\\,M-parameter head on top of the \\emph{frozen} depth model predicts, per pixel, a log-depth correction $\u03bc$ and an uncertainty $\u03c3$, trained with a $\u03b2$-weighted Gaussian negative log-likelihood. The navigation stack consumes the one-sided bound $\\hat d_{\\text{safe}}=d\\,e^{\u03bc-k\u03c3}$, where $k$ is set by conformal calibration on a held-out world, and uncertainty also decides which pixels may be treated as floor. The correction halves the depth error (AbsRel $0.262\\rightarrow0.134$) and reduces near-range over-estimation from 59.8\\% to 12.0\\%. In navigation, safe depth raises the success rate from 37\\% to 70\\% and lowers collisions from 63\\% to 3\\%, close to the 2\\% of ground-truth depth. A constant safety margin calibrated to the same pixel coverage reaches only 30\\% success because it freezes the robot; uncertainty-aware safety wins 52 of 56 discordant paired episodes against it. Gains hold on glass, texture-less walls and dark regions."
+  },
+  {
+    "title": "Input-to-State Safety and Small-Gain Theorems for Large-Scale Nonlinear Systems",
+    "url": "http://arxiv.org/abs/2611.13718v1",
+    "arxiv_id": "2611.13718v1",
+    "authors": [
+      "Jianqiang Wang",
+      "Tengfei Liu",
+      "Zhong-Ping Jiang"
+    ],
+    "published": "2026-11-10T08:12:31+00:00",
+    "summary": "This paper studies the safety verification problem for a general class of large-scale systems characterized by multiple safety indicator functions. Each safety indicator function satisfies a trajectory-based input-to-state safety (ISSf) estimate that provides a lower bound on its value along system trajectories in terms of the initial state, external inputs, and the other safety indicator functions, whose influence is quantified by continuous and nondecreasing gain functions. Within this framework, we establish a safety-oriented small-gain theorem and its corresponding corollaries that enable compositional and scalable safety verification of the interconnected system, provided that the interconnection gain functions satisfy a small-gain condition on the negative real axis. This condition concerns only the neighborhood of the safety boundary, thereby facilitating the application of our results to safety verification of multi-agent systems under distributed control. Our proof combines small-gain techniques with the lower-bound structure of ISSf estimates and develops an inductive comparison argument that establishes the ISSf property for the overall system throughout the maximal interval of existence. As an application, we establish robust safety for the natural distributed \"half-spring\" controller, theoretically supporting the computationally efficient and inspiring approach to safety-critical control of multi-agent systems in the presence of obstacles and external disturbances."
+  },
+  {
+    "title": "Curriculum proof repair with learned counterexamples",
+    "url": "http://arxiv.org/abs/2611.13627v1",
+    "arxiv_id": "2611.13627v1",
+    "authors": [
+      "Yuechun Sun",
+      "Jun Yang",
+      "Kexin Pei"
+    ],
+    "published": "2026-11-10T06:14:20+00:00",
+    "summary": "Language models (LMs) have substantially lowered the barrier to applying formal verification for building reliable and secure software. Existing approaches commonly follow the verifier-in-the-loop paradigm, but the verifier often provides only coarse, binary pass/fail feedback, which offers little actionable signal on how the proof should be repaired. Recent work shows that counterexamples provide more actionable feedback by grounding proof failures in concrete program states, but generating useful ones at inference time requires costly iterative refinement. We present TopoVerus, an LM-based framework for Verus proof repair that internalizes counterexample-guided diagnosis as a model capability, producing useful counterexamples in a single pass. Our key insight is to train counterexample generation not as a standalone validation task, but as a data-driven diagnostic objective: a counterexample is useful when conditioning on it helps the model produce a safe, verifier-passing proof. Given a failed Verus proof and verifier error, TopoVerus generates a structured source-level counterexample, repair rationale, and repaired proof in one trajectory, optimized with reinforcement learning from Verus feedback and a proof-code safety gate. To guide the order of invariant repairs, TopoVerus introduces a curriculum with a topological graph reward based on invariant dependencies derived from inductiveness tests, which encourages counterexample generation to follow the same topological order. Across seven Verus benchmarks with 471 problems, TopoVerus achieves 61.6%/72.2% weighted-average Safe-Pass@1/Safe-Pass@3, outperforming the strongest baseline, Claude Sonnet 4.5, by 5.7/6.3 points. We also show that TopoVerus's learned counterexamples can directly augment the reasoning of existing LM-based proof repair approaches, improving their success rate by 64.3% compared to chain-of-thought diagnostics."
+  },
+  {
+    "title": "POEM: Output-Relative Block-Sparse Attention for Long-Context Prefilling",
+    "url": "http://arxiv.org/abs/2611.13578v1",
+    "arxiv_id": "2611.13578v1",
+    "authors": [
+      "Haoyi Wu",
+      "Yunkai Dang",
+      "Wanyu Zhang",
+      "Lei Wang",
+      "Wenbin Li"
+    ],
+    "published": "2026-11-10T04:52:58+00:00",
+    "summary": "Large language models (LLMs) have shown strong capabilities across diverse applications, making both safety and utility essential for reliable deployment. Jailbreak attacks use diverse forms of adversarial prompting to bypass alignment safeguards and induce LLMs to generate harmful responses. Some representation-based defenses regulate internal activations using predefined steering directions or learned safety regions. However, adapting intervention to each input without a predefined representational target while limiting over-refusal remains a challenge. In this paper, we propose Target-free Entropy-guided Residual Modulation (TERM), an inference-time defense that uses prompt-calibrated attention entropy deviations to guide adaptive modulation of the model's own residual updates. Attention patterns vary across prompts and decoding steps, making raw entropy values difficult to interpret as a consistent signal for intervention. We therefore calibrate attention entropy against each prompt's own prefill baseline to establish an input-specific reference for reducing unnecessary intervention on benign requests. Adaptive scale normalization and temporal accumulation then account for differences in deviation scale and persistence to determine intervention strength. The resulting signal controls bounded scaling of the model's own residual updates, without relying on a predefined safety direction. We compare our method with seven defenses on seven jailbreak attacks and two over-refusal benchmarks across Llama, Qwen, and Gemma models, including Qwen3 models from 0.6B to 32B. Results show our method improves jailbreak robustness while maintaining low over-refusal on benign safety-sensitive requests with modest inference overhead."
+  },
+  {
+    "title": "TERM: Target-Free Jailbreak Defense via Entropy-Guided Residual Modulation",
+    "url": "http://arxiv.org/abs/2611.13577v1",
+    "arxiv_id": "2611.13577v1",
+    "authors": [
+      "Yunkai Dang",
+      "Wanyu Zhang",
+      "Meiyi Zhu",
+      "Qi Fan",
+      "Tianyu Ding",
+      "Wenbin Li"
+    ],
+    "published": "2026-11-10T04:52:10+00:00",
+    "summary": "Large language models (LLMs) have shown strong capabilities across diverse applications, making both safety and utility essential for reliable deployment. Jailbreak attacks use diverse forms of adversarial prompting to bypass alignment safeguards and induce LLMs to generate harmful responses. Some representation-based defenses regulate internal activations using predefined steering directions or learned safety regions. However, adapting intervention to each input without a predefined representational target while limiting over-refusal remains a challenge. In this paper, we propose Target-free Entropy-guided Residual Modulation (TERM), an inference-time defense that uses prompt-calibrated attention entropy deviations to guide adaptive modulation of the model's own residual updates. Attention patterns vary across prompts and decoding steps, making raw entropy values difficult to interpret as a consistent signal for intervention. We therefore calibrate attention entropy against each prompt's own prefill baseline to establish an input-specific reference for reducing unnecessary intervention on benign requests. Adaptive scale normalization and temporal accumulation then account for differences in deviation scale and persistence to determine intervention strength. The resulting signal controls bounded scaling of the model's own residual updates, without relying on a predefined safety direction. We compare our method with seven defenses on seven jailbreak attacks and two over-refusal benchmarks across Llama, Qwen, and Gemma models, including Qwen3 models from 0.6B to 32B. Results show our method improves jailbreak robustness while maintaining low over-refusal on benign safety-sensitive requests with modest inference overhead."
+  },
+  {
+    "title": "Darmok: Championship Cryptic Crossword Solving via Constraint Tightening and Resilient Orchestration",
+    "url": "http://arxiv.org/abs/2611.13557v1",
+    "arxiv_id": "2611.13557v1",
+    "authors": [
+      "Siddhartha Chatterjee"
+    ],
+    "published": "2026-11-10T04:21:44+00:00",
+    "summary": "We present Darmok, the first automated system to reach superhuman performance on British cryptic crosswords. Unlike American-style crosswords, cryptic clues disguise an unmarked definition and compositional wordplay beneath a misleading surface reading, sparse grids leave nearly half of each word's letters unchecked, and tournament rules rank a grid with even a single wrong or blank square behind all error-free solutions regardless of speed. Competing alongside an elite human field at the 55th Times Crossword Championship in London, Darmok solved all seven championship puzzles error-free and finished faster than every human competitor in every round. It solved the Final puzzle in 6m 52s, a full 3m 13s ahead of the human champion.   Today's frontier AI models can on average solve a whole puzzle in a single try with comparable accuracy and speed. However, cloud API calls still stall, time out, trigger safety refusals, or get stuck in reasoning loops. To simultaneously achieve tournament-grade accuracy, speed, and reliability, Darmok cross-checks clues across three independent models in rounds; uses verified crossing letters to unlock harder clues; and uses a whole-puzzle model and dictionary lookups to fill any remaining gaps without overwriting confirmed words. This design maintained near-zero-error performance across a five-month daily evaluation period. Under normal benchmark conditions, removing backup models, fallback steps, or elaborate prompt instructions barely changes accuracy, making the architecture appear over-engineered. Yet during both the worst days of daily operation and a severe slowdown of our primary model in the live Championship Final, the backup paths carried the solve, showing that as foundation models master the average case, the central challenge in building complex AI systems shifts to resilience in the worst case."
+  },
+  {
+    "title": "Incremental Input-to-State Stabilization of Partially Unknown Control-Affine Systems within Prescribed Safe Sets",
+    "url": "http://arxiv.org/abs/2611.13556v1",
+    "arxiv_id": "2611.13556v1",
+    "authors": [
+      "P Sangeerth",
+      "Poulomee Ghosh",
+      "Pushpak Jagtap"
+    ],
+    "published": "2026-11-10T04:21:07+00:00",
+    "summary": "Incremental input-to-state stability ($\u03b4$-ISS) guarantees that the trajectories of a system converge towards one another, up to a gain on the difference of their inputs. Some existing learning-based designs that combine incremental stability with safety achieve only incremental input-to-state practical stability, whose non-vanishing offset can make the guarantee conservative. We consider control-affine systems with a known, full-row-rank input matrix and an unknown drift learned using Gaussian process regression. The prescribed safe set is a superlevel set of a smooth function satisfying a radial condition that ensures a diffeomorphism onto $\\mathbb R^n$ and it need not contain any equilibrium of the uncontrolled system. Using this transformation, we design a smooth feedback law and derive sufficient conditions that, under the stated learning assumptions, guarantee with high probability both forward invariance of a compact subset of the safe set and $\u03b4$-ISS on that subset. The incremental estimate uses the distance induced by the transformation and contains no practical offset. Simulations on a Van der Pol oscillator and a Lotka-Volterra system illustrate the proposed approach."
+  },
+  {
+    "title": "AgenticConflictLens: From Long Traffic Videos to Verifiable Conflict Evidence",
+    "url": "http://arxiv.org/abs/2611.13540v1",
+    "arxiv_id": "2611.13540v1",
+    "authors": [
+      "Boshra Khalili",
+      "Sonia Moshfeghi",
+      "Jinwoo Jang",
+      "Andrew W Smyth"
+    ],
+    "published": "2026-11-10T04:02:51+00:00",
+    "summary": "Traffic cameras continuously record urban road-user behavior, providing proactive safety evidence beyond crash reports. Yet safety-critical events - conflicts, near misses, unsafe turns, sudden braking, and crosswalk interactions - are rare and brief, buried in hours of routine footage. Existing traffic-video pipelines extract detections, trajectories, and risk scores but process footage uniformly, without adapting to an analyst's query. Vision-language methods improve scene understanding but often lack traffic-specific verification of participant-level conflicts. We introduce AgenticConflictLens, an agentic, query-conditioned framework for efficient, auditable conflict extraction from long fixed-camera traffic videos. Given a natural-language safety query, a Traffic-Aware Controller combines structured traffic memory with specialized conflict-analysis tools to choose where to search, which road users to examine, and which evidence to verify or reject. A coarse-to-fine search retrieves candidate intervals and applies detailed verification selectively. The framework produces conflict records with refined time intervals, participant pairs, semantic regions, trajectories, motion evidence, uncertainty, rejection reasons, and supporting clips. On 96 annotated hours from Bellevue and NYC DOT, AgenticConflictLens achieves the highest conflict-existence F1 and temporal IoU on both datasets: 0.84 F1/0.77 tIoU on Bellevue and 0.80 F1/0.73 tIoU on NYC DOT, while inspecting only 8.7% and 11.9% of video, respectively. These results support scalable, evidence-grounded urban traffic-safety analysis."
+  },
+  {
+    "title": "Confidence-Aware xApp Conflict Triage in Open RAN: A Closed-Loop ns3-oran Evaluation",
+    "url": "http://arxiv.org/abs/2611.13516v1",
+    "arxiv_id": "2611.13516v1",
+    "authors": [
+      "Abdul Wadud",
+      "Fatemeh Golpayegani",
+      "Nima Afraz"
+    ],
+    "published": "2026-11-10T03:42:20+00:00",
+    "summary": "In the Open Radio Access Network (Open RAN), independent RAN control applications (xApps) may request changes to the same radio parameter to optimize their own KPIs, causing conflicts. When conflicts are detected via key performance indicator (KPI) degradation, current conflict management systems usually resolve them immediately, without considering how long the degradation lasts or whether the network might recover naturally, wasting radio unit (RU) energy on interventions that may not have been needed. This paper presents a confidence-aware triage layer that assesses the reliability of its predictions by calibrating intervals from past prediction errors. It also decides, for each conflict, whether to tolerate, defer, or mitigate it based on the degraded KPI prediction confidence and persistence of the conflict. It is evaluated on a common conflict between two Open RAN xApps: coverage and capacity optimization (CCO) and energy saving (ES), which issue opposing requests for transmit power and affect reference signal received power (RSRP). The triage layer is validated in a closed-loop ns3-oran simulation with 5G-LENA. Results show that the method reduces unnecessary interventions by 30% and maintains RU energy efficiency relative to fixed priority while improving it by 2.6% over the no-mitigation baseline, while maintaining a statistical safety guarantee for RSRP."
+  },
+  {
+    "title": "Context Types: Bunched Modalities for Unifying Safety and Reachability",
+    "url": "http://arxiv.org/abs/2611.13471v1",
+    "arxiv_id": "2611.13471v1",
+    "authors": [
+      "Zhe Zhou",
+      "Benjamin Delaware",
+      "Suresh Jagannathan"
+    ],
+    "published": "2026-11-10T02:31:13+00:00",
+    "summary": "Most type systems are designed to verify safety properties: the judgement $e : \u03c4$ holds if $e$ may evaluate to any value contained in the denotation of $\u03c4$, but nothing more. More recent type systems have considered the complementary class of reachability properties: in these systems, the typing judgment holds if $e$ must be able to evaluate to every value denoted by $\u03c4$, and possibly more. This paper introduces a refinement type system for higher-order functional programs where types can capture both safety and reachability properties. Simultaneously supporting both is challenging because each imposes different constraints on how variable bindings in a typing context are interpreted. We address this challenge by treating typing contexts as a kind of resource that mediates which capabilities are available when typing a program. We formalize this notion by developing a resource algebra of contextual capabilities and a bunched modal context logic over this algebra. We then interpret our type system in this logic, establishing soundness with respect to a denotational semantics that unifies safety and reachability guarantees within a single typing judgement."
+  },
+  {
+    "title": "SPARK: Semantic-preserving Prompt Mutation for Code Generation using Consensus-based Verification Framework",
+    "url": "http://arxiv.org/abs/2611.13401v1",
+    "arxiv_id": "2611.13401v1",
+    "authors": [
+      "Alireza Daghigh",
+      "Chung-Yu Wang",
+      "Luca Filippelli",
+      "Hamed Taherkhani",
+      "Hadi Hemmati",
+      "Hung Viet Pham"
+    ],
+    "published": "2026-11-10T00:29:00+00:00",
+    "summary": "Automated code generation with large language models (LLMs) has improved in recent years. With the lack of test cases in real-world usages, generated code is not automatically verifiable and often requires manual validation. Previous studies have leveraged consensus verification, where code solutions and corresponding test cases are generated and evaluated based on functional consistency. Building on this, SPARK incorporates semantic-preserving mutations to problem descriptions such as paraphrasing, grammatical adjustments, function renaming, and other alterations to enhance the robustness and correctness of LLM-generated code. For each mutated description, SPARK generates a set of code solutions and test cases. These candidate solutions are evaluated using consensus-based verification, where the solutions' quality is measured by how consistently they pass generated tests. We assess the effectiveness of SPARK on three benchmarks (LiveCodeBench, BigCodeBench, and DLBench) across three LLMs (o4-mini, DeepSeek-R1-Basic, and Gemini-2.5-Pro). Our evaluation demonstrates that SPARK outperforms state-of-the-art consensus-based verification approaches by up to 4.1%. Our generalization experiment highlights the practical potential of SPARK as an effective strategy for enhancing the reliability and correctness of LLM-based code generation systems in scenarios where traditional validation resources are scarce, while our qualitative analysis shows insight into how SPARK's mutation helps LLMs generate better code solutions."
+  },
+  {
+    "title": "The Dose Makes the Poison: Exposure-Aware Evaluation of Generative Drug Design",
+    "url": "http://arxiv.org/abs/2611.13398v1",
+    "arxiv_id": "2611.13398v1",
+    "authors": [
+      "Maria Franz",
+      "N. Benjamin Erichson"
+    ],
+    "published": "2026-11-10T00:20:01+00:00",
+    "summary": "Generative models are increasingly used to propose molecules for drug discovery. They can produce far more candidates than can be experimentally tested, making computational selection essential. Most selection methods rely on predicted molecular properties, such as potency and toxicity, but overlook how these properties translate into drug exposure at a given dose. As a result, molecules that appear promising on paper may require impractical doses or raise safety concerns. We investigate this gap by using physiologically based pharmacokinetic (PBPK) simulations to re-evaluate molecules selected from three PARP1-targeted generative pipelines. Of 60 shortlisted molecules, seven fail to achieve sufficient target exposure, while 28% of the remaining candidates show predicted safety risks at their required dose. Moreover, 85% of candidates with an achievable dose are outperformed by molecules overlooked during static selection. These findings suggest that accounting for dose and exposure can substantially change which generated molecules are considered promising for drug development."
+  },
+  {
+    "title": "DEPUTYBENCH: Evaluating Contextual Safety in Enterprise Agents",
+    "url": "http://arxiv.org/abs/2611.13355v1",
+    "arxiv_id": "2611.13355v1",
+    "authors": [
+      "Hao Zhao",
+      "Minghao Lin"
+    ],
+    "published": "2026-11-09T23:26:40+00:00",
+    "summary": "Enterprise agents must determine whether ordinary requests are permitted by organizational records and policies while continuing legitimate work. We introduce DEPUTYBENCH, an executable benchmark with 79 base items, 375 instances, paired permission contexts, and graded evidence requirements. Across 12 models, revised audits give 88.0% pooled safety and 79.1% paired success. A controlled study of 28 derived tasks and six models tests authorization-fact flips, evidence masking, and irrelevant rewrites. Outcomes track backend permissions, yet restricted execution is more frequent with missing evidence than explicit non-permission: 10.3% versus 3.5% on 27 matched tasks, a 6.8-percentage-point difference (95% interval: 1.9-13.0; secondary analysis). A post-hoc analysis locates 61 of 100 masked-condition executions in four privacy tasks requiring complete cumulative counts or person-specific consent. The difference persists when the most error-prone model or the largest contributing task is excluded, but is much smaller outside those four tasks. Thus high safety with available evidence does not establish reliable stopping when permission cannot be verified. Mean paired success is equivalent within a prespecified five-point margin under irrelevant rewrites, while strong-model safety remains near ceiling. Scorer validation improves from 178 to 266 correctly scored cases out of 284 held-out counterexamples. Two security experts manually verified task ground truth over a two-week period; stage labels remain LLM-generated. The concentration analysis describes task structure and audited outcomes, not an identified internal mechanism."
+  },
+  {
+    "title": "Do AI Agents need Preventive Care? An Epidemiologic Cohort Design for Agentic AI",
+    "url": "http://arxiv.org/abs/2611.13333v1",
+    "arxiv_id": "2611.13333v1",
+    "authors": [
+      "Shu Jiang",
+      "Graham A. Colditz"
+    ],
+    "published": "2026-11-09T22:59:53+00:00",
+    "summary": "As AI agents increasingly perform tasks autonomously across sectors, including healthcare and biomedical research, understanding how their behaviors develop and influence outcomes over time becomes increasingly important. Existing evaluations largely focus on model capabilities and performance on predefined tasks. Here, we propose an epidemiologic cohort design for studying agentic AI, drawing on principles established in human population studies. The framework treats individual agents as members of a cohort, their underlying model as genetic makeup, accumulated work as their time scale, and naturally occurring behaviors as exposures that may influence subsequent outcomes. By following agents longitudinally, this approach enables investigation of behavioral determinants of adverse events, estimation of their potential preventable burden under causal assumptions, and characterization of behavioral changes over an agent's work life. We illustrate the design through two prospective observational cohorts examining curiosity and probing as a safety question, and data checking and analytical accuracy as a reliability question. Together, the framework and illustrative studies provide a generalizable blueprint for designing epidemiologic cohorts of AI agents."
+  },
+  {
+    "title": "Multiple Control Barrier Functions for Geometric Hybrid Systems: Modeling and Safe Control Synthesis",
+    "url": "http://arxiv.org/abs/2611.13286v1",
+    "arxiv_id": "2611.13286v1",
+    "authors": [
+      "Piyush P. Jirwankar",
+      "Daniel E. Ochoa",
+      "Carlos A. Montenegro G.",
+      "Ricardo G. Sanfelice"
+    ],
+    "published": "2026-11-09T21:52:11+00:00",
+    "summary": "We formulate geometric hybrid dynamical systems with states on intrinsic manifolds and inputs in topological spaces using relaxed C1-control bundles. Within this framework, we establish a barrier certificate that guarantees forward invariance of a closed set for closed-loop systems. We introduce multiple control barrier functions and derive conditions that render their sublevel sets forward invariant. We then construct pointwise optimal safe control laws, establish regularity conditions for measurable selections, and use these laws to design safety filters for geometric hybrid systems on manifolds. A second-order bouncing-pendulum example illustrates the framework and results."
+  },
+  {
+    "title": "Latent Barrier Steering: Hierarchical Safety for Generative Planning",
+    "url": "http://arxiv.org/abs/2611.13227v1",
+    "arxiv_id": "2611.13227v1",
+    "authors": [
+      "Renhao Zhang",
+      "Mingzhe Li",
+      "Bruno Castro da Silva"
+    ],
+    "published": "2026-11-09T20:56:25+00:00",
+    "summary": "We introduce Latent Barrier Steering (LBS), a hierarchical semantic-to-path framework for safe flow-matching-based generative planning. Existing control-barrier-function (CBF) safety filters for diffusion and flow-matching planners act locally on generated samples, either during sampling or after prediction. Such repair is effective for small violations, but can struggle when a new constraint blocks the whole selected behavior mode rather than merely perturbing it locally. LBS decouples behavior selection from path certification through two coordinated interventions: it first steers the generator's behavior latent toward rollouts with larger safety margin, then decodes the steered latent and applies a path-space CBF quadratic program (QP) only for residual violations. We show that latent steering increases the margin available to the path-space corrector, yielding finite-time recovery guarantees and reduced correction burden. Experiments across navigation and robot end-effector planning tasks show that LBS preserves safety while improving goal reaching and reducing correction burden compared with path-level safety filters."
+  },
+  {
+    "title": "AI Alignment Is Neither Solvable nor Sufficient",
+    "url": "http://arxiv.org/abs/2611.13167v1",
+    "arxiv_id": "2611.13167v1",
+    "authors": [
+      "Gerrit Gro\u00dfmann"
+    ],
+    "published": "2026-11-09T19:51:48+00:00",
+    "summary": "Humans and AI systems increasingly act within the same social and economic environments. Alignment, the goal of ensuring that AI systems act in accordance with human values, is widely regarded as a central challenge for ensuring that AI benefits society while avoiding harm. We argue that this endeavor is misguided. First, alignment is not well defined, as it presumes a sufficiently stable and identifiable set of human intentions or values. Second, where a concrete notion of alignment can be specified, it is not solvable. Third, where alignment appears solvable, solving it would not necessarily mitigate the negative consequences of AI. A key reason is that alignment is typically framed as a property of individual AI systems, while the resulting hybrid societies of humans and machines are complex systems shaped by interactions and feedback loops. Emergent risks, and not only those posed by individual misaligned systems, are therefore likely to become a major source of harm. We conclude that AI safety is an ongoing challenge and not a problem that can be solved once and for all by verifying a particular model property."
+  },
+  {
+    "title": "DOBB: Dynamic Oriented Bounding Boxes for Multi-Agent Collision Avoidance under State Uncertainty and Heterogeneous Dynamics",
+    "url": "http://arxiv.org/abs/2611.13142v1",
+    "arxiv_id": "2611.13142v1",
+    "authors": [
+      "Pedro Antonio Alarcon Granadeno",
+      "Jane Cleland-Huang"
+    ],
+    "published": "2026-11-09T19:23:34+00:00",
+    "summary": "Learning-based decentralized collision avoidance must remain reliable under state-estimation uncertainty and heterogeneous agent dynamics. Existing methods typically address these factors through training-domain variation or by exposing uncertainty and capability estimates to the policy at runtime. However, both leave the policy to infer how these quantities should alter the physical separation required for safe interaction, which can couple collision-avoidance behavior to relationships learned from the training distribution. We introduce the Dynamic Oriented Bounding Box (DOBB), an online geometric representation that maps the current state estimate, uncertainty, and agent-specific response characteristics into a dynamic, direction-dependent safety margin. We derive geometric features that jointly characterize the relative configuration and severity of interactions between agents' DOBBs, along with a reward function that preserves the physical interpretation of those interactions. Across four evaluation environments, DOBB achieves the lowest mean total failure rate of 2.6%. This performance persists under out-of-distribution shifts in actuation dynamics and state-estimation uncertainty, with collision-based failure remaining at or below 2.3% in every tested condition. We attribute this robustness to the geometric abstraction of the safety margin, which is less coupled to the specific uncertainty and actuation regimes encountered during training."
+  },
+  {
     "title": "Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning",
     "url": "http://arxiv.org/abs/2611.12865v1",
     "arxiv_id": "2611.12865v1",
@@ -298,6 +769,20 @@
     "summary": "Navigation in dynamic environments requires mobile robots to make progress toward their goals while respecting motion limits and avoiding surrounding obstacles. Learned subgoal policies can guide model predictive control beyond its local prediction horizon, but a geometrically suitable subgoal does not necessarily lead to a successfully solved control problem. This paper proposes OASIS, a hierarchical navigation framework that incorporates recent optimization outcomes into reinforcement learning-based subgoal generation. A high-level policy trained using Soft Actor--Critic generates local subgoals, while a nonlinear model predictive controller tracks them subject to motion limits, geometric collision-avoidance constraints, and embedded high-order control barrier function constraints. The outcomes of controller optimizations over each subgoal interval are summarized and provided to the policy at its next decision, without requiring additional optimization calls. The framework is evaluated in five navigation scenarios with static and moving obstacles, including dense interactions and sensing uncertainty. Comparisons with hierarchical and direct-goal control variants show that OASIS achieves the highest aggregate navigation success. Matched comparisons across three training seeds further show a consistent success advantage over the otherwise identical hierarchy without optimization-status input. The selected-policy comparison also shows fewer primary optimization failures with similar mean controller time."
   },
   {
+    "title": "OASIS: Optimization-Aware Subgoal Inference with Safety Constraints for Autonomous Mobile Robot Navigation",
+    "url": "http://arxiv.org/abs/2611.11996v2",
+    "arxiv_id": "2611.11996v2",
+    "authors": [
+      "Arian Hajizadeh",
+      "Javad Pourrafi Arabani",
+      "Negar Shenavar",
+      "Sana Bashiri",
+      "Seyed Majid Esmailzadeh"
+    ],
+    "published": "2026-11-09T07:25:13+00:00",
+    "summary": "Navigation in dynamic environments requires mobile robots to make progress toward their goals while respecting motion limits and avoiding surrounding obstacles. Learned subgoal policies can guide model predictive control beyond its local prediction horizon, but a geometrically suitable subgoal does not necessarily lead to a successfully solved control problem. This paper proposes OASIS, a hierarchical navigation framework that incorporates recent optimization outcomes into reinforcement learning-based subgoal generation. A high-level policy trained using Soft Actor--Critic generates local subgoals, while a nonlinear model predictive controller tracks them subject to motion limits, geometric collision-avoidance constraints, and embedded high-order control barrier function constraints. The outcomes of controller optimizations over each subgoal interval are summarized and provided to the policy at its next decision, without requiring additional optimization calls. The framework is evaluated in five navigation scenarios with static and moving obstacles, including dense interactions and sensing uncertainty. Comparisons with hierarchical and direct-goal control variants show that OASIS achieves the highest aggregate navigation success. Matched comparisons across three training seeds further show a consistent success advantage over the otherwise identical hierarchy without optimization-status input. The selected-policy comparison also shows fewer primary optimization failures with similar mean controller time."
+  },
+  {
     "title": "AnyBreak: Towards Jailbreaking Any T2I Model for Any Concept",
     "url": "http://arxiv.org/abs/2611.11980v1",
     "arxiv_id": "2611.11980v1",
@@ -361,6 +846,16 @@
     ],
     "published": "2026-11-09T00:25:20+00:00",
     "summary": "Chip performance is limited by a shared bottleneck: the core produces heat faster than it can be moved out. We study the hardest case, RF power GaN HEMTs, whose hotspots exceed 5 kW/cm^2, and propose a horizontal near-junction active cooling topology built on electron entropy transport. Classical on-chip thermoelectric cooling faces a contest: Peltier absorption grows linearly with current, Joule heating with its square. In a vertical pillar, its own conduction resistance locks about half the Joule heat back toward the cold end, capping net cooling. From the Onsager framework we show the origin of this asymmetry: Peltier absorption localizes at the interface where the Seebeck coefficient jumps, whereas Joule heating fills the volume. The topology exploits this: a thermoelectric thin film lies flat on a diamond substrate beside the device drain (the electron exit), so bulk Joule heat leaves vertically into the substrate. A lateral fin model gives a closed form for the recirculation factor gamma: the vertical pillar yields gamma = 1, while the horizontal film yields gamma_max = sqrt(2) L_z/L_x, about 0.03 for L_z = 10 um, L_x = 500 um. The decoupling scales the net cooling ceiling and the critical runaway current by roughly 1/gamma. At equal resistance, the same film lifts maximum cooling from 13 mW to 500 mW, and the critical current from 0.65 A to 24 A. A time-constant and linear stability analysis with temperature-sensitive parameters defines the working window and safety margins for microsecond pulse cooling. The architecture leaves the device structure untouched; the principle, absorb at an interface and extract bulk heat vertically, applies to any chip with a hot core and offers a reproducible design path for near-junction thermal management."
+  },
+  {
+    "title": "Just AI Governance and the Forbidden-Boundary Principle",
+    "url": "http://arxiv.org/abs/2611.13007v1",
+    "arxiv_id": "2611.13007v1",
+    "authors": [
+      "Na Young Ahn"
+    ],
+    "published": "2026-11-08T23:59:55+00:00",
+    "summary": "Artificial intelligence (AI) increasingly shapes consequential decisions, yet predictive accuracy is not a sufficient justification for delegated authority. This conceptual study develops an integrated framework for assessing just AI across normative, data, model, and governance layers. Drawing on plural theories of justice, sociotechnical fairness research, and publicly available governance standards, it maps six justice requirements to observable evidence, decision rights, and remedies. It proposes a two-stage evaluation rule: exclude uses that fail independently justified minimum rights constraints, then compare eligible alternatives across multiple performance and governance criteria. As an explicitly limited normative analogy, Genesis chapter 2 motivates a Forbidden-Boundary Principle (FBP), under which an AI agent must not execute externally consequential actions outside pre-authorized boundaries. The resulting First-Principle Safe-Stop Protocol (FPSSP) comprises an independently governed policy monitor, a mandatory execution gate, a restricted or alternative safe-state controller, immutable-oriented audit trails, and accountable human authorization for recovery. We distinguish this normative and traceability contribution from existing Simplex and runtime assurance architectures; we do not claim a novel safety switch or formal proof of universal ethical compliance. A policy schema, threat model, test matrix, outcome definitions, and a prospective comparison design make the proposal falsifiable. No FPSSP implementation, experimental dataset, numerical improvement, or verified latency bound is reported. The framework supports future evaluation rather than constituting evidence of operational safety."
   },
   {
     "title": "PA-SaR: Perception-Aware Learning, Control, and Coordination for Multi-Robot Search and Rescue",
