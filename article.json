@@ -1,5 +1,324 @@
 [
   {
+    "title": "Pairing AIS with RF: Analysis of a Markovian Approach for Maritime Data Fusion",
+    "url": "http://arxiv.org/abs/2611.18563v1",
+    "arxiv_id": "2611.18563v1",
+    "authors": [
+      "Daniel Grimm",
+      "Kyra Jongman",
+      "Renato Cordeiro Ferreira",
+      "Giuseppe Cascavilla",
+      "Alfredo Cuzzocrea",
+      "Willem-Jan Van Den Heuvel"
+    ],
+    "published": "2026-11-13T18:59:43+00:00",
+    "summary": "Monitoring maritime activities is important for safety and security, particularly for detecting illegal activities, but remains challenging due to the size and complexity of the maritime domain. The Automatic Identification System (AIS) is commonly used for this purpose, despite its known vulnerabilities. In contrast, space-based radio frequency (RF) observations provide an independent source of vessel activity but lack ship identification and therefore cannot identify vessels on their own. Following the CRISP-DM process, this study applies a Pair Hidden Markov Model (PHMM) to align individual RF detections with AIS trajectories, using temporal and spatial information while modeling noise and timing discrepancies. We evaluate it on NOAA AIS data with synthetic RF detections against nearest-neighbor baselines and analyze its errors with bias tests on trajectory length, sampling density, stationarity and AIS--RF distance. The length-corrected Forward score reaches a top-1 precision of $0.7776$ on the validation split of multi-candidate detections, where errors are possible, and an AUC of $0.637$ for detecting dark vessels among the detections that pass the prefilter. With a single RF detection, the score mostly reflects the AIS trajectory itself, and its errors favor longer and more stationary trajectories. A log-odds score, which compares the full model with a null model without match transitions, raises precision to $0.8580$ and AUC to $0.852$. Its length-corrected variant no longer shows a significant bias towards stationary trajectories and short inter-message distances, but still favors candidates farther from the RF detection. A time-weighted nearest-neighbor baseline without fitting remains ahead (precision $0.9013$, AUC $0.904$), so this single-detection, hand-designed PHMM formulation approaches but does not beat it."
+  },
+  {
+    "title": "Box-conditional Hypothesis Testing for Out-of-Distribution Object Detection",
+    "url": "http://arxiv.org/abs/2611.18519v1",
+    "arxiv_id": "2611.18519v1",
+    "authors": [
+      "Donghoon Lee",
+      "Jusung Park",
+      "Shinjin Kang"
+    ],
+    "published": "2026-11-13T18:36:23+00:00",
+    "summary": "Detecting out-of-distribution (OOD) objects is essential for ensuring the reliability and safety of object detectors in real-world deployment. We treat the decision on a detected box as a hypothesis test with the null hypothesis that the box covers an object of an in-distribution (ID) class. The null distribution changes with the size of the box and its contact with the image border, and the detector observes both. The test can therefore rank a box only against ID boxes of the same size and border contact, which gives a distribution-free bound on the false-alarm rate for each of them and uncovers the separation that one null distribution hides. The power of the test also rests on the layer it reads. Layers built only for the ID classes have no reason to keep what sets an unknown object apart, so the test reads the features before them. We propose \\textbf{PLUM}, a training-free score that pools the last backbone stage inside the box and ranks its distance to the ID classes among ID boxes of the same size and border contact. On the standard benchmark, PLUM reaches the highest AUROC among the compared methods without external models, with 91.5 and 94.5 on PASCAL-VOC and 95.1 and 97.5 on BDD100K. Code: https://github.com/DDOZMI/PLUM"
+  },
+  {
+    "title": "Accounting for Trust and Safety: Bounding Content-Moderation Quality from Records You Already Hold",
+    "url": "http://arxiv.org/abs/2611.18437v1",
+    "arxiv_id": "2611.18437v1",
+    "authors": [
+      "Aayush Agarwal",
+      "Daron Veer Singh Sohi",
+      "Linda Cornelison"
+    ],
+    "published": "2026-11-13T17:13:55+00:00",
+    "summary": "Platforms use expert audits to measure content-moderation quality. This paper develops a formal method for checking those claims using records platforms already maintain, such as appeal reversals and confirmed reports. These records provide one-sided bounds: they can show that a stated quality target was missed, but cannot prove that it was met. The paper presents the theory, limitations, constructed examples, and a prospective protocol for future evaluation. It reports no analysis of Meta operational data, no experiment, and no production result."
+  },
+  {
+    "title": "CS-MPC: Contraction-Certified Sampling-Based MPC for Nonlinear Systems Under Uncertainty",
+    "url": "http://arxiv.org/abs/2611.18390v1",
+    "arxiv_id": "2611.18390v1",
+    "authors": [
+      "Yashwanth Kumar Nakka"
+    ],
+    "published": "2026-11-13T16:33:06+00:00",
+    "summary": "We present contraction-certified sampling-based model predictive control (CS-MPC) for tracking and safety of nonlinear robotic systems under parametric uncertainty, disturbances, and safety constraints that are revealed online. CS-MPC uses a contraction-certified tracking feedback inside every sampled rollout, which concentrates the rollouts around the reference, and an execution layer that verifies the applied input using a quantile-tightened discrete-time control barrier function condition. We derive a verification procedure for nonlinear contraction of the feedback-closed dynamics, and we prove a finite-sample stochastic stability bound and a mission-level probabilistic safety guarantee. We validate CS-MPC in simulation on a rover, a quadrotor, and an asteroid landing. When compared with standard model predictive path integral (MPPI) control, CS-MPC attains the same tracking error with 7 to 20 times fewer rollouts for the rover, and a 2 to 4 times lower tracking error for the quadrotor, with no safety violations in 200 Monte Carlo missions."
+  },
+  {
+    "title": "VLAN: Vision-Language Accessible Navigation",
+    "url": "http://arxiv.org/abs/2611.18346v1",
+    "arxiv_id": "2611.18346v1",
+    "authors": [
+      "Jie Hu",
+      "Yu Zheng",
+      "Wenzhi Wu",
+      "Weixing Feng",
+      "Cunlei Cheng",
+      "Jiaming Zhang"
+    ],
+    "published": "2026-11-13T15:54:23+00:00",
+    "summary": "Accessible mobility is user-conditioned rather than scene-intrinsic, as walkable paths for one embodiment are inaccessible to another. Yet, existing benchmarks evaluate traversability under a fixed and limited embodiment. We present Vision-Language Accessible Navigation (VLAN), containing 1,000 scenes, 20K navigation trajectories, and 160K keyframes across diverse lighting, environmental conditions, scene semantics, and path geometries. For each trajectory, VLAN provides embodiment-specific actions and accessibility features for legged and wheeled agents, including humanoid and quadruped robots and people with visual or mobility impairments, while everyday obstacles and accessibility labels are categorized as Passable, Bypass, HighRisk, and Blocked. Unlike goal-only evaluation, our benchmark measures physical safety and alignment with user-specific constraints via goal-reaching, collision-aware, and accessibility-aligned metrics. We benchmark modern vision-language models and find they often fail to consistently adapt obstacle relevance, path selection, and safety criteria across user profiles, suggesting accessibility-aware navigation requires dedicated datasets, tasks, and metrics beyond conventional embodied navigation evaluation. All data and code open-source at https://github.com/InSAI-Lab/VLAN."
+  },
+  {
+    "title": "Control Invariance on Manifolds through Tangent Bundle Splitting",
+    "url": "http://arxiv.org/abs/2611.18339v1",
+    "arxiv_id": "2611.18339v1",
+    "authors": [
+      "Luke Georgiou",
+      "Ross Drummond",
+      "Pablo R. Baldivieso Monasterios"
+    ],
+    "published": "2026-11-13T15:51:25+00:00",
+    "summary": "Control invariance for interconnected non-linear systems on manifolds requires conditions under which subsystem safety constraints can be combined to form an invariant set. This paper develops local product type control invariant sets on manifolds using tangent bundle splitting, adapted product coordinates, and subsystem tangency conditions satisfied simultaneously by one admissible input at each state. The resulting conditions establish control invariance of product sets without requiring independent subsystem dynamics, with separate control choices possible when inputs are independently constrained and each acts only on its subsystem. This provides a way to verify subsystem safety without discarding dynamic coupling and is illustrated by a torus example in which adapted coordinates give a curved constraint region a product representation."
+  },
+  {
+    "title": "Safety Analysis of Parameterized Networks with Shared Counters",
+    "url": "http://arxiv.org/abs/2611.18175v1",
+    "arxiv_id": "2611.18175v1",
+    "authors": [
+      "June Roupin",
+      "Arnaud Sangnier"
+    ],
+    "published": "2026-11-13T13:44:25+00:00",
+    "summary": "We study networks with an unbounded number of processes sharing some natural counters that can be decremented, incremented and tested to zero. We look at two safety problems: the first one asks whether there is a network with an execution bringing a process in a given final state and the other one asks the execution to bring all the processes in the final state. In their full generality, these two problems are undecidable, but we show that decidability can be regained by either using a single counter or by forbidding the use of zero-tests (as it is is the case in Vector Addition Systems with States). For these decidable cases, we obtain low complexity results, the problems being solvable either in non-deterministic logarithmic space or in polynomial time."
+  },
+  {
+    "title": "Safety Certificates for Systems under Attack via Stackelberg Set Games",
+    "url": "http://arxiv.org/abs/2611.18173v1",
+    "arxiv_id": "2611.18173v1",
+    "authors": [
+      "Nikolaos Athanasopoulos",
+      "David Laverty",
+      "Gregory Provan",
+      "Quanyan Zhu"
+    ],
+    "published": "2026-11-13T13:42:53+00:00",
+    "summary": "We study a Stackelberg set selection game for linear systems subject to bounded disturbances and additive attacks. The defender selects the vector parameter of a polytopic safe set template; the attacker, after observing this choice, selects the vector parameter of an admissible attack set. The payoff is a signed, facet-normalised invariance margin that tests invariance exactly and quantifies either the available contraction or the facet inflation needed when invariance fails. Both controlled and robust controlled invariance are treated, corresponding to different information patterns for the control input. Exploiting the structure of parameterised polyhedra, we show that within each validity region the margin is concave in the attack parameter, which reduces the follower minimisation to finitely many extreme parameters. The complete max--min game is then solved by a finite family of LPs, one per defender validity region, each enforcing all attacker regions under a common defender decision and guaranteed margin. The framework handles hard state constraints and additional costs related to the safe set size, and recovers optimal set parameters together with state and attack realisations that activate the certificate. A load frequency control example under false data injection illustrates the construction, the validity decomposition, and the two information patterns."
+  },
+  {
+    "title": "Large Language Model-Empowered Intelligent Agent for Adaptive Fast-Charging Control of Lithium-Ion Batteries",
+    "url": "http://arxiv.org/abs/2611.18140v1",
+    "arxiv_id": "2611.18140v1",
+    "authors": [
+      "Joey Chan",
+      "Haoyu Pan",
+      "Zhen Chen",
+      "ErShun Pan"
+    ],
+    "published": "2026-11-13T13:11:04+00:00",
+    "summary": "Fast charging of lithium-ion batteries is a multi-objective control problem that requires reducing charging time and sustaining high energy throughput while suppressing accelerated degradation and safety-critical electrochemical reactions. Conventional protocols are easy to implement but have limited ability to adapt to variations in battery chemistry, operating conditions, and aging state. Model-based optimization and conventional data-driven control often require accurate models, costly iterative search, or task-specific policies. We develop a large language model (LLM)-empowered intelligent agent for adaptive battery fast-charging control. In this closed-loop framework, the agent interprets structured battery states, generates executable charging actions, observes the resulting battery response, and continuously adjusts subsequent decisions. We construct a large-scale simulation corpus with PyBaMM across five battery chemistries and 11 parameter sets and convert the resulting state-action-response trajectories into structured process data for agent training. Our two-stage strategy combines supervised fine-tuning (SFT) and Group Relative Policy Optimization (GRPO). SFT establishes battery-control semantics and feasible decision priors from simulation-derived demonstrations. GRPO aligns the agent with a multi-objective control objective covering energy throughput, degradation mitigation, and operational constraints. Closed-loop simulations show that, under matched energy-throughput requirements, the agent achieves longer cycling life than conventional charging baselines and optimization-based strategies across heterogeneous battery configurations. This study provides a simulation-grounded proof of concept for using LLM agents as sequential decision makers in battery management and takes a step toward language-model-enabled control of physical energy systems."
+  },
+  {
+    "title": "Agent-as-a-Judge",
+    "url": "http://arxiv.org/abs/2611.18067v1",
+    "arxiv_id": "2611.18067v1",
+    "authors": [
+      "Runyang You",
+      "Hongru Cai",
+      "Caiqi Zhang",
+      "Qiancheng Xu",
+      "Meng Liu",
+      "Tiezheng Yu",
+      "Yongqi Li",
+      "Wenjie Li"
+    ],
+    "published": "2026-11-13T11:50:28+00:00",
+    "summary": "Artificial intelligence has progressed from task-specific systems toward general models spanning perception, generation, reasoning, and autonomous interaction, making reliable evaluation essential for comparison, deployment, and post-training feedback. At scale, modern evaluation pipelines increasingly rely on LLM-as-a-Judge to produce scores, preferences, and critiques; in its fixed-context setting, the judge relies on the supplied evaluand and evaluation materials. Yet a reliable verdict may require evidence beyond the supplied evaluand and context---either because critical environmental states remain unrecorded in the static execution log, or because controversial factual claims require external verification. Passive judges cannot obtain that missing evidence before deciding, especially when evaluating agent trajectories, executable artifacts, or domain-specific reports. Recent work therefore develops active evaluators that seek missing evidence and update their grounds for judgment before deciding. We bring these advances together through Agent-as-a-Judge, focusing on how evaluators construct and control checking processes within the broader LLM-based judging landscape. We define the scope through evaluation-directed checks and the use of their results, covering both structured workflows and observation-driven control. We organize the design space by multi-agent collaboration, tool integration, memory, and planning, and show how these mechanisms supply the checks and evidence on which a verdict rests. We consolidate published scores and reproduce missing entries for key agentic judges; the comparison reveals uneven agentic gains and motivates dedicated agentic evaluation. We conclude by characterizing application demands and open challenges in cost, reliability, safety, and governance that condition trusted deployment of agentic judges at scale."
+  },
+  {
+    "title": "DeCompCert: A Verified Decompiler for CompCert-Generated AArch64",
+    "url": "http://arxiv.org/abs/2611.18055v1",
+    "arxiv_id": "2611.18055v1",
+    "authors": [
+      "Swarn Priya",
+      "Basavesh Ammanaghatta Shivakumar",
+      "Thomas Gilray",
+      "Kristopher Micinski"
+    ],
+    "published": "2026-11-13T11:28:29+00:00",
+    "summary": "DeCompCert is a Rocq-verified decompiler for AArch64 assembly generated by CompCert. It reconstructs CompCert C through nine reverse passes, combining deductively verified transformations with translation validation. Untrusted OCaml and Datalog analyses propose candidate reconstructions, while verified validators accept only candidates that satisfy the required semantic correspondence. The composed correctness theorem guarantees that every defined, safe behavior of an accepted C reconstruction is matched by the input CompCert assembly; under a safety assumption, the two programs are observationally equivalent. We evaluate DeCompCert on approximately 2.16 million lines of C. With exact function and call signatures, it reconstructs and recompiles all 3,173 eligible contexts under both unoptimized and optimized CompCert pipelines. Without retained signatures, its cumulative inference portfolio validates 2,606 of 3,164 contexts (82.4%), while the platform-plus-IDA configuration validates 2,407 contexts (76.1%). Native execution and output-quality experiments further evaluate the generated C and characterize the remaining limitations in signature recovery and source resemblance."
+  },
+  {
+    "title": "A Generalizable Approach to Safety-Aware Robotic Behavior Planning with an Explicit Constraint Space",
+    "url": "http://arxiv.org/abs/2611.18026v1",
+    "arxiv_id": "2611.18026v1",
+    "authors": [
+      "Xianxu Wu",
+      "Shang-Ching Liu",
+      "Zhaocong Liang",
+      "Hengxiang Chen",
+      "Yujian Ma",
+      "Shenwen Deng",
+      "Qiang Li",
+      "Jianwei Zhang"
+    ],
+    "published": "2026-11-13T10:51:57+00:00",
+    "summary": "Large language and vision-language models have substantially advanced robotic behavior planning from natural-language instructions and visual observations. However, safe manipulation in tabletop environments remains challenging because the safety constraints required for a task depend on the surrounding scene and may not be explicitly specified in the instruction. We propose a safety-aware behavior planning framework based on an explicit Constraint Space that stores reusable textual safety rules. Rather than retrieving rules solely by semantic similarity, we formulate constraint selection as task- and environment-conditioned applicability learning. A lightweight query-conditioned dual-tower model identifies the constraints applicable to the current context, which are then provided together with the original task and image to a multimodal behavior planner. To handle incorrect constraint selections and previously unseen hazards, we introduce a multimodal Safety Inspector that evaluates generated primitive plans, reconstructs the complete applicable constraint set, and provides corrective planning feedback. Validated inspection feedback is further used for test-time adaptation of constraint applicability and parameter-efficient adaptation of the Safety Inspector through LoRA, while newly identified constraints are incorporated into the Constraint Space. The resulting framework integrates explicit safety knowledge representation,context-aware constraint selection, corrective safety inspection, and test-time knowledge adaptation for safety-aware robotic behavior planning."
+  },
+  {
+    "title": "Soteria: Formally Verified Planning with Runtime Enforcement for Safe LLM Agents",
+    "url": "http://arxiv.org/abs/2611.17880v1",
+    "arxiv_id": "2611.17880v1",
+    "authors": [
+      "Mike He",
+      "Ankush Desai",
+      "Sharad Malik",
+      "Aarti Gupta"
+    ],
+    "published": "2026-11-13T08:14:04+00:00",
+    "summary": "LLM agents that execute multi-step tool calls must satisfy two objectives simultaneously: completing the user's task (utility) and conforming to domain policies and correctness constraints (safety). These objectives are in tension -- blocking an unsafe action prevents a violation but can leave the agent stranded with no principled way to recover. Existing approaches sacrifice one objective for the other. We introduce Soteria, a framework that reconciles safety and utility through verified hierarchical planning and runtime enforcement of specifications. Before execution, the agent generates a structured plan that is formally verified against the specifications prior to any tool invocation. During execution, the verified plan serves dual roles: it ensures that the agent takes specification-conformant trajectories and provides guidance when unsafe actions are blocked. Across multiple benchmarks covering a diverse range of tool-use tasks, Soteria achieves 1.7 times the average task success rate of the best baselines, with no violations of policy specifications, demonstrating that safety and utility need not be traded off."
+  },
+  {
+    "title": "Per-Agent-Safe Navigation of Globally Driven Robot Collectives via Affine Field Design",
+    "url": "http://arxiv.org/abs/2611.17859v1",
+    "arxiv_id": "2611.17859v1",
+    "authors": [
+      "Seunghwan Jang",
+      "Steven Ceron",
+      "Wei Xiao"
+    ],
+    "published": "2026-11-13T07:48:08+00:00",
+    "summary": "Safe navigation of robot collectives requires coordinating motion and deformation so that the collective can traverse constrained environments while ensuring each robot's safety. Existing controllers for swarmalator collectives largely rely on local control, where each robot receives an individual command, which causes the control and communication requirements to grow with the number of agents. We introduce a broadcast control formulation in which a single spatially affine field governs both the motion and deformation of the collective. The scalar component of the field regulates collective size, and its spatial gradient generates collective translation through non-reciprocal interactions. Both components enter the collective dynamics directly, which allows per-robot wall, actuation, and cohesion constraints to be enforced using control barrier functions within a single quadratic program for the whole collective. The resulting controller continuously adapts the collective size to the local environment, and enables safe passage through corridors narrower than the unconstrained collective without pre-planned resizing. We further derive how the available actuation budget determines the reachable speed and minimum passable corridor width, and we demonstrate that two independently driven collectives can simultaneously traverse a shared junction using distinct fixed phase labels without inter-collective coordination."
+  },
+  {
+    "title": "Aligning AI Teams",
+    "url": "http://arxiv.org/abs/2611.17820v1",
+    "arxiv_id": "2611.17820v1",
+    "authors": [
+      "Siddarth Srinivasan",
+      "Morgan Jane Matthews",
+      "Jascha Sohl-Dickstein",
+      "Erik Jones"
+    ],
+    "published": "2026-11-13T06:57:46+00:00",
+    "summary": "Previous work has shown that alignment training on individual LLM agents can fail to transfer to multi-agent settings. We investigate the underlying mechanisms for this failure, and explore interventions to preserve alignment transfer to multi-agent LLM teams. We focus on two software-engineering tasks (sepsis triage, a news recommender) and ten consulting-proposal generation tasks. We present four findings: (1) The single-vs-team safety gap does not show a clear trend with more capable models. We find that Anthropic's Mythos Preview shows the largest gap on one of our tasks but the smallest on another; (2) Many natural interventions, such as having agents critique each other's work or coordinate in a group chat, do not reliably bring agent teams back to single-agent alignment behavior; (3) diffusion of responsibility substantially accounts for the safety gap: agents in teams are less likely to proactively check for system-level safety failures and more likely to ignore, rationalize, or deflect responsibility for issues when they arise; (4) having a designated safety lead agent ensure system-level safety, and having a coordinator agent publish a safety specifications document are effective at restoring single-agent alignment. We also release magelab, a multi-agent LLM orchestration and experimentation framework. Our findings can help practitioners design agent teams that successfully preserve the behaviors expected of aligned individual agents."
+  },
+  {
+    "title": "LLMs are Vulnerable to Malicious Requests with Indistinguishable Intent",
+    "url": "http://arxiv.org/abs/2611.17818v1",
+    "arxiv_id": "2611.17818v1",
+    "authors": [
+      "Wenzhuo Xu",
+      "Zonghao Ying",
+      "Deyue Zhang",
+      "Dongdong Yang",
+      "Xiangzheng Zhang",
+      "Quanchen Zou"
+    ],
+    "published": "2026-11-13T06:56:51+00:00",
+    "summary": "Jailbreak attacks can circumvent the safety mechanisms of Large Language Models (LLMs) and lead to the generation of harmful or policy-violating content. We first examine eight jailbreak methods against an LLM-based filter and observe that requests resembling normal user queries tend to have higher filter pass rates than those containing obvious anomalous patterns. This observation motivates the hypothesis that resemblance to normal requests may contribute to jailbreak success. We introduce \\textbf{Detail Guidance Attack (DGA)}, a framework that uses an auxiliary LLM to construct detailed requests and interacts with the victim model in a single turn. Across 11 victim models and three datasets, the complete DGA pipeline achieves high attack success rates under our automated judging criterion, including rates above 95\\% in several evaluated settings. We also evaluate a DGA-aware filter and conduct a user study on everyday requests with ambiguous or dual-use intent. The survey documents differing expectations about whether models should respond; the usability costs of the filter remain to be measured."
+  },
+  {
+    "title": "Super-Analysis for Aggressive yet Scalable Compiler Optimization",
+    "url": "http://arxiv.org/abs/2611.17737v1",
+    "arxiv_id": "2611.17737v1",
+    "authors": [
+      "Amirali Ebrahimzadeh",
+      "Amir Shaikhha"
+    ],
+    "published": "2026-11-13T04:36:39+00:00",
+    "summary": "Aggressive compiler optimization today occupies two distant extremes. Conventional optimizers run in milliseconds but reason through ad-hoc heuristics that miss opportunities; superoptimizers synthesize faster code but take hours, confining them to small kernels and offline use. We introduce solver-based super-analysis, a middle ground that uses expensive SMT-based analysis while transformations remain conventional, avoiding program synthesis entirely. The key argument for super-analysis is that conventional compilers have rich transformation rules, but proving them to be safe requires complex reasoning: proving a safety check dead often needs facts from three independent LLVM analyses simultaneously, a conjunctive entailment problem suited to an SMT solver, not to any single dataflow pass.   We instantiate super-analysis in ODeSSy, an LLVM pass that proves sanitizer traps and native-language safety checks unreachable and removes them. One mechanism serves four frontend languages and yields speedups in each, including a 3.78x speedup for a GEMM implemented in Julia. A further solver-based optimization, guard synthesis, handles checks that are not dead for every input: the solver synthesizes a cheap invariant safety guard under which a fast check-free loop is cloned, speeding up a Swift Base64 encoder by 1.44x and a Julia LZ77 compressor by 4.01x. Compared with Souper, the synthesizing superoptimizer for LLVM, ODeSSy removes more safety checks in significantly less time, making it viable as an online compiler pass."
+  },
+  {
+    "title": "Ego2Flow: Benchmarking the Traffic-System Impact of Autonomous Driving on Maps Distilled from Real-World Roads",
+    "url": "http://arxiv.org/abs/2611.17720v1",
+    "arxiv_id": "2611.17720v1",
+    "authors": [
+      "Yu Dong",
+      "Weiying Shen",
+      "Hangyu Li",
+      "Shu Han",
+      "Hong Li",
+      "Xiangbo Gao",
+      "Keshu Wu",
+      "Zhengzhong Tu",
+      "Soyoung Ahn",
+      "Zhiyuan Liu",
+      "Xiaopeng Li"
+    ],
+    "published": "2026-11-13T03:56:29+00:00",
+    "summary": "End-to-end autonomous driving is predominantly evaluated through ego-vehicle safety and task completion. Its deployment in urban traffic, however, creates sustained interactions among vehicles whose collective effects remain insufficiently evaluated. We introduce Ego2Flow, a closed-loop benchmark for assessing the traffic-system impact of autonomous driving on maps distilled from real-world cities. To construct realistic 3D urban environments for sustained closed-loop traffic simulation, we develop an agent-guided map distillation framework that integrates real-world maps and observations with complementary geographic information. Through an iterative feedback mechanism and a traffic information graph that jointly guide scene generation, the framework preserves lane topology, critical road geometry and decision-relevant visual conditions while simplifying nonessential details and completing unobserved regions. Using our proposed framework, we generate and publicly release six CARLA maps from the Argoverse 2 dataset, covering the corresponding real-world regions and enabling paired comparisons of driving behavior under real and simulated observations. On these maps, Ego2Flow evaluates how autonomous driving policies affect traffic efficiency, safety, stability and energy consumption across diverse road structures. Compared with existing construction methods, our framework achieves the lowest average displacement error between planning outputs from paired real and simulated observations. We further benchmark representative driving policies to characterize their system-level impact on urban traffic. Project Page: https://github.com/Fisher-007/Ego2Flow."
+  },
+  {
+    "title": "Safety Side Effects of Preventative Persona Steering: An Empirical Audit",
+    "url": "http://arxiv.org/abs/2611.17620v1",
+    "arxiv_id": "2611.17620v1",
+    "authors": [
+      "Sabrina Tang",
+      "Nikolai Vo",
+      "Carson Murillo",
+      "Chira Sukumarnpiti",
+      "Sarah Wilson"
+    ],
+    "published": "2026-11-13T00:45:18+00:00",
+    "summary": "High-level behaviors such as sycophancy and hallucination correspond to directions in a model's activation space (Chen et al., 2025). These directions, known as persona vectors, can suppress undesirable traits either at inference time, subtracting the vector during generation, or through preventative steering, adding the vector during fine-tuning, so the optimizer never needs to encode the trait in weights, then removing the vector at evaluation. Chen et al. (2025) recommend preventative steering because it preserves Massive Multitask Language Understanding (MMLU) accuracy, but validations of this recommendation have measured capability alone. We primarily evaluate results on preventative steering of sycophancy and hallucination vectors on three models, measuring three safety benchmarks alongside trait expression, coherence, and MMLU. Our findings show that preventative steering still changes refusal behavior, but by an amount that depends on the trait and does not establish that preventative persona steering is safety-neutral, and steering methods should be evaluated on several safety benchmarks."
+  },
+  {
+    "title": "Grounding Object-to-Object Hazard Reasoning into 3D Risk Fields for Task-Conditioned Safety",
+    "url": "http://arxiv.org/abs/2611.17566v1",
+    "arxiv_id": "2611.17566v1",
+    "authors": [
+      "Mariana Sosa Guzm\u00e1n",
+      "Yide Song",
+      "Amin Abyaneh",
+      "Gregory Dudek",
+      "Hsiu-Chin Lin"
+    ],
+    "published": "2026-11-12T22:44:51+00:00",
+    "summary": "Safety in robotics does not solely depend on geometric constraints, but also on semantics: the given task, environment properties, and interactions between objects in the scene. We present a framework based on vision-language models (VLMs) to infer task- and scene-dependent safety constraints for robot manipulation. We provide the VLM a structured safety tool based on an RGB-D observation and a natural-language task instruction that first decides whether the task should be rejected since its execution may result in a non-recoverable hazardous outcome. Otherwise, it identifies preventable object-pair hazards and specifies the spatial relations that must be avoided. Open-vocabulary segmentation and depth information are then used to ground the detected objects in 3D and construct continuous risk fields that represent the corresponding hazardous regions. These fields are integrated with an obstacle avoidance module that corrects nominal robot motions during execution while accounting for the risk field. We evaluate the framework on preventable hazards, tasks requiring rejection, and safe variants in simulation and the real-world. Project website: https://vlm-hazard-riskfield.github.io"
+  },
+  {
+    "title": "Only as Safe as the Weakest Agent: A Break That Appears Only When the System Is Multi-Agent",
+    "url": "http://arxiv.org/abs/2611.17520v1",
+    "arxiv_id": "2611.17520v1",
+    "authors": [
+      "Keegan Wang",
+      "Anantika Mannby"
+    ],
+    "published": "2026-11-12T21:14:49+00:00",
+    "summary": "Major industry multi-agent systems like Codex and Claude Code can be broken by attacks that have long been unsuccessful against modern frontier models. AI Safety as a discipline has largely focused on finding the bounds and vulnerabilities of AI models used in isolation. Yet as humans increasingly deploy these models as agents and multi-agent systems, the same attacks that had been thought to be patched when using a model in isolation can break these same models under specific circumstances. We show that these system breaks are not purely theoretical, but can break Claude Code, Codex, and a reference harness, all unmodified and used with their own sub-agent mechanisms. We show the attack by asking agents to answer questions from a store of files on disk in which we have planted a forged record. Searching the store themselves, the strong model orchestrators commit almost zero harmful revisions in over 1,000 trials. However, if that same orchestrator model delegates to a cheaper sub-agent, which is what these harnesses are built to do, the same models on the same facts fail on 20/180, 44/180, 75/180 and 553/900. Thus, even when the system is driven by a strong model, the system's safety lands near the weak reader's, not the orchestrator's. Simulations over 18 models show the same effect in the delivery channel where five aggregators, who on their own were almost never unsafe, repeat a corrupted sub-agent's error in 751/757 trials. The safety of real-world agentic systems that use strong orchestrator agents and weaker sub-agents, and multi-agent systems in general, is defined not by the safety of the strong agent but by the safety of the weakest agent."
+  },
+  {
+    "title": "Creating Steering Vectors via Input Optimisation",
+    "url": "http://arxiv.org/abs/2611.17481v1",
+    "arxiv_id": "2611.17481v1",
+    "authors": [
+      "Batuhan Akar"
+    ],
+    "published": "2026-11-12T20:06:14+00:00",
+    "summary": "Activation steering influences a language model's behaviour by adding a steering vector to its residual stream during generation, but it requires white-box access to modify the hidden states at every generation step. We introduce ActGCG, a modification of Greedy Coordinate Gradient which optimises a suffix to match the target activations obtained by adding a steering vector to the residual stream. We further introduce universal suffixes trained across many prompts at once, a model-translation step that rewrites the suffix into human-readable text midway through optimisation, and a soft-suffix variant to remove the discrete token space constraint. We study two behaviours: steering a model to answer in German, and anti-refusal steering for jailbreaking. For German, a discrete suffix reproduces the steering vector's behaviour almost perfectly and transfers well across prompts and models. For anti-refusal, the equivalence is weaker, succeeding under a phrase-avoidance metric but only partially under the stricter HarmBench classifier. Our results show that a steering vector's behaviour is reachable from the input, with no access to model internals at generation time, up to a loss that depends on the concept being steered."
+  },
+  {
+    "title": "RAZeR: Representation Aware Zonotope Reduction",
+    "url": "http://arxiv.org/abs/2611.17479v1",
+    "arxiv_id": "2611.17479v1",
+    "authors": [
+      "Vladimir Krsmanovic",
+      "Tobias Ladner",
+      "Bernd Finkbeiner"
+    ],
+    "published": "2026-11-12T20:03:07+00:00",
+    "summary": "Reachability analysis is a popular technique for verifying the safety of a dynamical system under uncertainty, where the uncertainty is often represented by zonotopes. As the size of the zonotope representation typically grows as the reachability analysis progresses, it must be repeatedly reduced at the cost of additional conservatism. While various methods exist to reduce the size of the representation, combined advantages are not fully leveraged as only a single reduction method is typically used throughout the analysis. In this work, we show how dynamically choosing which method to use can yield significantly tighter results, thereby easing verification. This is realized by introducing a heuristic, derived from model predictive control, that accounts for upcoming propagation of the current zonotope. We argue that order reduction is not merely a post-processing step after propagation but also a pre-processing step that shapes how the zonotope evolves under the system dynamics. We evaluate our approach, RAZeR, on nonlinear benchmarks taken from the ARCH-COMP, where we demonstrate that RAZeR produces tighter zonotopes at a negligible performance overhead."
+  },
+  {
+    "title": "Alignment with Reflect-Reasoning: Learning How To Follow Principles",
+    "url": "http://arxiv.org/abs/2611.17398v1",
+    "arxiv_id": "2611.17398v1",
+    "authors": [
+      "Henry Bell",
+      "Caroline Zhang",
+      "Dhaval Potdar",
+      "Mohammed Mobasserul Haque",
+      "Brandon Fain"
+    ],
+    "published": "2026-11-12T18:31:06+00:00",
+    "summary": "The appropriate governing norms and principles for the alignment of Large Language Models (LLMs) often depend on cultural context and deployment application. However, most alignment techniques focus on training models to conform to human preferences or constitutional principles specified at training time and subsequently fixed. In practice, many deployers rely on system prompting to implement contextual norms and guardrails at inference time. Prior work has shown that post-generation reflective reasoning with critique and revision can improve conformance compared to simple system prompting, but such methods are limited to the reasoning abilities inherent in the trained model. We introduce Reflect-Reasoning, a training method that teaches models how to reason about alignment to principles, rather than simply which principles to follow. Across five models, Reflect-Reasoning consistently outperforms both system prompting and explicit prompting strategies for in-context reflective reasoning. These improvements extend and generalize to entirely out-of-distribution domains of medical and financial principles. We additionally demonstrate that Reflect-Reasoning reduces the occurrence of rare but serious principle violations. Finally, we show that Reflect-Reasoning does not erode the safety engineering of a model and is robust against jailbreaking attempts using adversarial constitutions. Overall, our results demonstrate that Reflect-Reasoning is a scalable method for training constitutional alignment as a generalizable reasoning capability, enabling models to adapt to novel principles and produce transparent reasoning traces without additional fine-tuning."
+  },
+  {
     "title": "Al-Ghasali: A Computational Framework for Simulating Islamic Jurisprudential Rulings via Finite State Automata and Large Language Models",
     "url": "http://arxiv.org/abs/2611.17235v1",
     "arxiv_id": "2611.17235v1",
@@ -8,6 +327,19 @@
     ],
     "published": "2026-11-12T18:23:56+00:00",
     "summary": "This paper presents Al Ghasali, a computational framework designed to formalize and simulate Islamic jurisprudential (Fiqh) rulings. Building upon recent set theoretic formalizations of al sabr wa al Taqsim that extract minimal operational rules as simple Horn clause logical programs, this work proves that the semantics of closed Fiqh chapters collapse completely to deterministic Finite State Automata (FSA). We establish a formal computational hierarchy, demonstrating that restricting formalization to finite propositional Horn theories guarantees decidability and constant time (O(1)) verdict extraction after offline compilation. The framework formally proves that hierarchical compositions of sub-chapter FSAs preserve this O(1) complexity, and that temporal juristic requirements, such as Tartib (order), are deterministically flattened into static ontological states, preserving the memoryless property of the automaton. To generate human-readable juristic summaries, Al Ghasali incorporates Large Language Models (LLMs) via an architecture where the deterministic FSA strictly controls the probabilistic LLM. Crucially, the paper formulates sufficient design safety conditions for this FSA LLM integration, ensuring strict adherence to the epistemological boundaries of Usul al Fiqh. To neutralize the risk of LLM hallucination, the system employs a Grammar Guided Constrained Decoding mechanism. We formally define the mapping function that dynamically constructs unambiguous right linear grammars from the FSA execution history. The paper mathematically proves that this architecture, augmented by a Bounded Neutral Lexicon and Valence Locking, guarantees the absolute absence of Decisional Hallucination, Juristic Factual Hallucination, and Semantic Inversion reducing the LLM to a pure linguistic transformer of deterministic juristic facts"
+  },
+  {
+    "title": "Admissibility-Preserving Control for Block Strict-Feedback Systems Under Time-Varying Asymmetric Actuator and State Constraints",
+    "url": "http://arxiv.org/abs/2611.17397v1",
+    "arxiv_id": "2611.17397v1",
+    "authors": [
+      "Saurabh Kumar",
+      "Lohitvel Gopikannan",
+      "Shashi Ranjan Kumar",
+      "Abhinav Sinha"
+    ],
+    "published": "2026-11-12T18:05:11+00:00",
+    "summary": "This paper addresses the tracking control of block strict-feedback nonlinear systems subject to time-varying asymmetric actuator and full state constraints. To that end, we develop a time-varying Admissibility-Preserving Control (APC) framework, in which the Admissibility-Preserving Input Realization (APIR) generates the plant input through a dynamic realization. The APIR guarantees input admissibility under the moving actuator set whenever each actuator bound contracts slower than the decay rate of the realization, and a closed-form lower bound on its gain is derived. The state constraints are handled by a logarithmic barrier coordinate at every backstepping step, with widths measured from the virtual control to the moving envelope of the corresponding state. We prove that every state lies inside its envelope, with each virtual control only required to remain inside the envelope of the next state, while the tracking error converges to zero exponentially. Simulations demonstrate the efficacy of the proposed safety-critical control scheme."
   },
   {
     "title": "Support-Constrained Offline Policy Improvement for Pediatric ECMO from Limited Clinical Data",
