@@ -1,5 +1,671 @@
 [
   {
+    "title": "Safe Resemblance, Silent Propagation: Limits of Text-Similarity Guardrails for AI Agent Safety",
+    "url": "http://arxiv.org/abs/2611.21520v1",
+    "arxiv_id": "2611.21520v1",
+    "authors": [
+      "Charles Xiao"
+    ],
+    "published": "2026-11-16T18:13:01+00:00",
+    "summary": "When AI agents relay information to one another, an output can preserve an injected instruction's effect on downstream agents even after its wording changes, yet legitimate quotation and template reuse can produce high textual overlap with the source, so text-similarity guardrails that attempt to flag the former risk conflating these two cases. We test this distinction using DonkeyRail, a public classifier combining BLEU, ROUGE-L, and METEOR features, deployed in a controlled three-agent email relay, defining a behavioral measure in which an output counts as functional (the injected procedure induces fresh computations in two subsequent agents) independent of the detector's score, alongside legitimate controls that explicitly authorize quotation and reuse. At its default threshold the classifier misses 8 of 19 functional outputs while flagging 70 of 192 legitimate replies, with every completed quotation and template-reuse reply triggering a false alert; calibrating for low false positives on one template set does not transfer, as the recalibrated threshold detects only one functional output and still produces 15 false alerts on new templates. We also identify an operating-point error in all 21 published classifier configurations, where ROC interpolation replaces direct threshold application, and show formally that high AUC against a surface-level text criterion provides no distribution-free guarantee of high AUC against the behavioral target, while the existing evaluation labels lack the joint observations needed to estimate the gap. An authorization analysis further shows that identical visible transcripts can require different safety decisions depending on the governing policy, a distinction no observation-only classifier can resolve. These results argue for behavioral and policy-grounded evaluation over text-similarity guardrails."
+  },
+  {
+    "title": "A Scalable Decentralized Event-Triggered Topology-Switching Protocol for Verifiable Safety in Multi-Agent Systems",
+    "url": "http://arxiv.org/abs/2611.21513v1",
+    "arxiv_id": "2611.21513v1",
+    "authors": [
+      "Amber He Wei",
+      "Shiyu Cheng",
+      "Andrew Clark",
+      "Bruno Sinopoli"
+    ],
+    "published": "2026-11-16T18:09:22+00:00",
+    "summary": "This paper develops a decentralized event-triggered topology-switching protocol that allows agents to disconnect from the communication network while preserving state safety and excluding Zeno behavior. We establish a robust barrier function condition that guarantees safety as long as the estimation error remains within a prescribed threshold. Each agent uses locally computable certificates to determine when to connect and disconnect from the network. The certificate construction improves scalability by reducing the complexity of topology-dependent computations from $O(2^N)$ to $O(N)$, where $N$ is the number of agents. We formally prove that the protocol ensures the estimation error does not exceed the prescribed threshold and is non-Zeno. An alternating method computes an error-weighting matrix and a quadratic barrier function that guarantee safety under the proposed protocol. Finally, we evaluate the protocol on four interconnected microgrids. Compared with maintaining network connectivity at all times, the protocol reduces the time agents remain connected while keeping phase and frequency within their safe operating region."
+  },
+  {
+    "title": "A2A-UAV: A Multimodal Air-to-Air Dataset for UAV Detection and Identification",
+    "url": "http://arxiv.org/abs/2611.21311v1",
+    "arxiv_id": "2611.21311v1",
+    "authors": [
+      "Hongtao Liang",
+      "Yiyao Wan",
+      "Kezhi Zhu",
+      "Jiayi Zhang",
+      "Zequn Jiang",
+      "Ziyu Zhou",
+      "Jiahuan Ji",
+      "Fuhui Zhou",
+      "Qihui Wu"
+    ],
+    "published": "2026-11-16T16:07:59+00:00",
+    "summary": "The rapid growth of unmanned aerial vehicles (UAVs) in low-altitude airspace increases the risk of unauthorized intrusions, making reliable detection and identification of non-cooperative UAVs essential for low-altitude airspace safety. However, the existing public UAV datasets are mostly acquired from fixed ground-based viewpoints and are limited to imaging or radio-frequency (RF) observations, which restricts the sensing coverage and deployment flexibility. To address this gap, we present A2A-UAV, a multimodal air-to-air dataset for UAV detection and identification. Specifically, 15 target UAVs of 13 commercial models were recorded at three outdoor sites under daytime and nighttime conditions by using a UAV-mounted platform equipped with an RGB-thermal gimbal camera, a panoramic camera, an RF spectrum analyzer, and a millimeter-wave radar. The dataset contains 105,294 time-aligned samples of RGB, panoramic, thermal, and RF time-frequency images and radar point clouds. Moreover, all 209,539 bounding boxes of the predominantly small UAV targets were manually annotated and cross-checked. Therefore, A2A-UAV provides a valuable resource for air-to-air UAV detection, identification, and multimodal fusion in low-altitude airspace."
+  },
+  {
+    "title": "Safe Physical Interaction of All-Electric Heavy-Duty Robotic Manipulators via Control Barrier Functions and Variable Impedance Control",
+    "url": "http://arxiv.org/abs/2611.21309v1",
+    "arxiv_id": "2611.21309v1",
+    "authors": [
+      "Amir Hossein Barjini",
+      "Mohammad Bahari",
+      "Jouni Mattila"
+    ],
+    "published": "2026-11-16T16:07:01+00:00",
+    "summary": "All-electric heavy-duty robotic manipulators are increasingly expected to operate close to tunnel walls, equipment, and other structures while retaining the force capability required for large-payload tasks. Accurate motion control alone does not address the resulting safety and interaction requirements. This paper develops a safety-aware physical-interaction architecture that combines variable impedance control (VIC) with control barrier functions (CBFs) on top of an established virtual decomposition control (VDC) framework for electromechanical linear actuator (EMLA)-driven manipulators. VIC continuously adapts the task-space stiffness and damping according to predicted proximity and contact risk, whereas a joint-velocity CBF filter enforces Cartesian workspace boundaries and the physical stroke limits induced by the closed-chain lift and tilt mechanisms. To account for nonideal realization of the filtered velocity by the inner VDC/EMLA dynamics, the CBF inequalities are tightened using a measured bound on the joint-velocity tracking error. Four configurations, namely VDC, VIC+VDC, CBF+VDC, and VIC+CBF+VDC, are evaluated under workspace, actuator-limit, and physical-interaction scenarios. VIC reduces the peak and RMS environment-interaction forces by 92.59% and 96.33%, respectively; both robust CBF configurations maintain positive workspace and EMLA safety margins, while VIC+CBF+VDC reduces the CBF intervention metric by 10.30% compared with CBF+VDC."
+  },
+  {
+    "title": "Hybrid Optimization-Generative Motion Planning for Multiagent Affine Formations",
+    "url": "http://arxiv.org/abs/2611.21264v1",
+    "arxiv_id": "2611.21264v1",
+    "authors": [
+      "Zhonggang Li",
+      "Hongyu Zhou",
+      "Raj Thilak Rajan"
+    ],
+    "published": "2026-11-16T15:35:10+00:00",
+    "summary": "Formation maneuver control enables a multiagent system to cooperatively navigate through constrained environments in collective motion. While various formation controllers exist, they rely heavily on high-quality and dynamically feasible reference trajectories provided a priori, making formation motion planning (FMP) essential. To address the computational challenges for high-dimensional joint trajectories faced by conventional constrained optimization-based solutions, this paper introduces a hybrid optimization-generative framework with a focus on affine formations, which provide the necessary spatial flexibility. By formulating the planning task as a constrained Maximum-a-Posteriori estimation, we decouple multiagent objectives to leverage pre-trained single-agent diffusion priors for dynamic feasibility, obstacle avoidance, and smoothness. We then interleave the generative process with projected gradient descent (PGD) to strictly enforce affine geometric constraints with safety guarantees. Simulations demonstrate that our framework generates highly smooth, collision-free plans that are readily trackable by common distributed controllers and outperforms state-of-the-art planners in various metrics."
+  },
+  {
+    "title": "A Generative AI-Driven Architecture for Whole-Home Intelligent Services: Edge Models, Memory Management, and Household Applications",
+    "url": "http://arxiv.org/abs/2611.21232v1",
+    "arxiv_id": "2611.21232v1",
+    "authors": [
+      "Mo Zhou"
+    ],
+    "published": "2026-11-16T15:16:17+00:00",
+    "summary": "Generative artificial intelligence is entering the home. Cloud-based assistants face governance limitations in data transmission, continuous availability, and the reliability of physical actions, which are especially salient in households where devices remain online, data accumulate over time, and commands trigger real-world actions. Using the home local server as a unifying organizing axis, this article develops a design-oriented review framework. Sources from arXiv, CNKI, ACL Anthology, and official documentation were searched through November 2026 and coded into five evidence categories: reviews, system prototypes, benchmarks, HCI and eldercare studies, and official documentation. System designs were mapped onto shared architectural modules, identifying nine recurrent responsibilities of the home local server. Generative models support perceptual interpretation, intent understanding, and candidate planning, while deterministic validation, knowledge-graph constraints, and authorization leases confine candidate actions to an inspectable space. Home control, emotional companionship, and intelligent guarding can be compared within a common framework: they share state and memory but differ in latency, false positive and negative rates, proactivity, and permissions. Existing benchmarks rely on virtual environments and cannot substitute for real-deployment evaluation. Local deployment is not inherently safer, and technical continuity alone does not establish the social or medical effects of companionship and guarding. The article proposes a five-dimensional evaluation framework covering architectural capability, system resources, privacy, safety and reliability, and human experience, together with six design principles and a future research agenda for local-first intelligent home systems."
+  },
+  {
+    "title": "Counting What Matters: Reducing Redundant Object Detections in Overlapping UAV Mapping Imagery for Disaster Response",
+    "url": "http://arxiv.org/abs/2611.21076v1",
+    "arxiv_id": "2611.21076v1",
+    "authors": [
+      "Max Schulte",
+      "Hartmut Surmann",
+      "Julien Meine"
+    ],
+    "published": "2026-11-16T13:27:28+00:00",
+    "summary": "UAV mapping flights enable rapid aerial reconnaissance of large-scale incident sites in civil protection. However, the image overlap required for orthophoto generation causes every physical object to be detected multiple times across images, while dynamic objects may be omitted from or duplicated in the resulting orthomosaic. Analysis based on the orthophoto alone is therefore structurally insufficient. We address this by detecting objects on the individual images and merging redundant detections across them. This task lies between multi-object tracking and re-identification, as mapping flights form temporally ordered but sparsely sampled sequences with object reappearances across flight strips. We fine-tune YOLO detectors on a new domain-specific nadir dataset from real civil protection operations, roughly doubling mAP50 over the previous system, and propose re-identification approaches based on 3D positions from sparse reconstruction, DINOv3 appearance embeddings, and their combination via constrained greedy clustering. %On four manually annotated real-world mapping flights, the combined weighted multi-pass approach achieves the best trade-off between association accuracy and count error. On four manually annotated real-world mapping flights, an association-only evaluation using ground-truth detections shows that the combined weighted multi-pass approach provides the best trade-off between association quality and count error. It is integrated into the open-source web application ARGUS and visualized as verifiable, correctable object groups for first responders. https://github.com/RoblabWh/argus"
+  },
+  {
+    "title": "Finite-Step Algorithms for Input-Constrained Control Barrier Function-Based Safety Filters",
+    "url": "http://arxiv.org/abs/2611.21075v1",
+    "arxiv_id": "2611.21075v1",
+    "authors": [
+      "Johannes Autenrieb",
+      "Mark Spiller",
+      "Mayank S. Jha"
+    ],
+    "published": "2026-11-16T13:26:46+00:00",
+    "summary": "Control barrier function (CBF) safety filters commonly rely on quadratic programs (QPs) to modify nominal control inputs while satisfying safety constraints. For safety-critical applications, however, the solution must be computed reliably under actuator limitations and with predictable computational effort. General-purpose QP solvers typically rely on numerical convergence criteria, which do not directly provide finite bounds on algorithmic steps or distinguish solver failure from mathematical infeasibility. This paper considers CBF-QPs with a single affine safety constraint, componentwise input bounds, and diagonal quadratic weights. Exploiting the established scalar dual structure of continuous quadratic knapsack problems, we obtain a necessary and sufficient pointwise feasibility condition and an exact breakpoint-based solution procedure. The algorithm requires at most 2n positive breakpoint events for n inputs, reducing to at most n events when the nominal input is admissible. In the latter case, an exact saturation--redistribution algorithm computes the optimal solution in at most n passes. We further describe how the structured solution can be combined with verified floating-point constraint evaluation to distinguish certified feasible commands, certified infeasibility, and unresolved numerical cases. The resulting framework provides an exact and computationally predictable solution procedure for a practically relevant class of input-constrained CBF safety filters."
+  },
+  {
+    "title": "CoopDistill: Equilibrium-Guided Multi-Agent Policy Distillation for Cooperative Driving",
+    "url": "http://arxiv.org/abs/2611.21069v1",
+    "arxiv_id": "2611.21069v1",
+    "authors": [
+      "Shiyu Fang",
+      "Sheng Zhao",
+      "Jiarui Zhang",
+      "Chengkai Xu",
+      "Xiaocong Zhao",
+      "Peng Hang",
+      "Jian Sun"
+    ],
+    "published": "2026-11-16T13:22:30+00:00",
+    "summary": "Cooperative driving extends autonomous driving from individual vehicle decisions to joint maneuvers that improve traffic safety and efficiency. Optimization-based methods impose safety constraints but often fix paths to simplify multi-vehicle planning, limiting spatial flexibility. Multi-agent reinforcement learning (MARL) explores alternatives through interaction, but coordinated learning and safe execution remain challenging. Their integration nevertheless faces challenges in exploration efficiency, experience allocation, and execution reliability. To address these challenges, this paper proposes CoopDistill, an equilibrium-guided multi-agent policy distillation framework. A potential-game (PG) formulation provides a fixed-path longitudinal reference, around which a residual MARL policy learns longitudinal acceleration, conflict-approach timing, and lateral path corrections. A hard-case curriculum concentrates experience on interactions that PG leaves unresolved or substantially delayed. A comparative rollout selector evaluates the joint consequences of learned corrections against PG before choosing the executed action. Experiments in merging, roundabout, and intersection scenarios compare CoopDistill with six baselines at four connected automated vehicle penetration levels. Relative to PG, success improves by 2.1--27.1 percentage points and delay decreases by 7.3--27.3\\%, with no observed collisions. Code is available at https://github.com/FanGShiYuu/CoopDistill"
+  },
+  {
+    "title": "Non-Myopic Safety Filtering with Learned Intervention Cost-to-Go",
+    "url": "http://arxiv.org/abs/2611.21036v1",
+    "arxiv_id": "2611.21036v1",
+    "authors": [
+      "Johannes Autenrieb",
+      "Mark Spiller",
+      "Daniel Silvestre",
+      "Namhoon Cho",
+      "Jason J. Choi"
+    ],
+    "published": "2026-11-16T12:55:15+00:00",
+    "summary": "Control barrier function (CBF) safety filters minimize instantaneous deviation from a nominal control command, but a sequence of pointwise-minimal interventions need not minimize cumulative intervention effort. This paper proposes a discrete-time non-myopic safety filter using a learned approximation of the optimal intervention cost-to-go over CBF-admissible policies. The approximation enters through a relaxed Bellman-residual constraint, while the original barrier condition remains hard. Feasibility is equivalent to that of the conventional CBF filter, and forward invariance remains independent of approximation accuracy under the stated assumptions. We derive a trajectory-wise performance certificate that requires neither the optimal value function nor an approximation-error bound. Under additional approximation and horizon assumptions, a suboptimality bound contains an explicit endpoint approximation-error term together with accumulated tolerance and relaxation terms. Numerical results for a collision-avoidance problem show an approximately 50% reduction in mean cumulative intervention effort relative to conventional CBF filtering over 100 initial conditions not used during training or parameter selection. The improvement is consistent across three independently trained networks, while maintaining the prescribed safety constraints and requiring less online computation than the tested predictive filter."
+  },
+  {
+    "title": "Laser Processing for Energy Applications",
+    "url": "http://arxiv.org/abs/2611.21024v1",
+    "arxiv_id": "2611.21024v1",
+    "authors": [
+      "Marcos Soldera",
+      "Robert Baumann",
+      "Bogdan Voisiat",
+      "Wilhelm Pfleging",
+      "Penghui Zhu",
+      "J\u00f6rn Bonse",
+      "Andr\u00e9s Fabi\u00e1n Lasagni"
+    ],
+    "published": "2026-11-16T12:41:35+00:00",
+    "summary": "Laser processing has emerged as a transformative technology in the energy sector, enabling precise, efficient, and scalable solutions for energy generation, storage, and sustainability. This chapter explores the diverse applications of laser technology in energy applications. It begins with an overview of laser-driven inertial confinement fusion for energy production, highlighting key experimental facilities and crucial laser parameters. The role of lasers in solar energy harvesting is examined, including photovoltaic cell optimization, concentrated solar power, and laser-assisted recycling of solar modules. The chapter further reviews recent developments into laser-based techniques for enhancing electrochemical performance through surface texturing at various scales. Advancements in lithium-ion battery technology are also discussed, focusing on next-generation materials, battery manufacturing processes, and the impact of laser techniques on performance, safety, and scalability. The chapter concludes with insights into future prospects for laser applications in sustainable energy solutions."
+  },
+  {
+    "title": "Jev-as-a-Reward: Validating Probabilistic Safety Judges for Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2611.20955v1",
+    "arxiv_id": "2611.20955v1",
+    "authors": [
+      "Eunkyeong Lee",
+      "Junhyung Moon",
+      "Seunggwan Hong",
+      "Dongsuk Oh"
+    ],
+    "published": "2026-11-16T12:01:19+00:00",
+    "summary": "Probabilistic safety judges return the probability of a safety label and cheaply score reinforcement learning rollouts. A confidence gate sends only uncertain verdicts to a stronger LLM judge, which leaves confidently passed harm in a blind spot. Policies can exploit this blind spot, and commercial judges release new versions. We propose a protocol that validates such a judge before and during training, separates the share of confidently passed harm from its amount, and re-validates it after each judge change. We apply it to two versions of Jev, a commercial decision-only judge, and to an open guard classifier. Under the probability reward of Jev, passed harm shrinks in all 11 runs under the primary reference, mostly more slowly than caught harm, and concentrates in the blind spot. Binarizing this judge meets the escape criterion on Llama, and the open guard classifier shows an escape signal in one seed under a second reference. Guard classifiers share this blind spot, and even frontier LLM judges catch at most one of 10 human-labeled confident misses. Without a trained reward model, the probability reward with a helpfulness term lowers HarmBench attack success on Llama-3.1-8B from 0.287 to at most 0.033 at the final checkpoint."
+  },
+  {
+    "title": "Transferable Neural CBFs via Generalized Closure",
+    "url": "http://arxiv.org/abs/2611.20929v1",
+    "arxiv_id": "2611.20929v1",
+    "authors": [
+      "Nishant Jayesh Bhave",
+      "Parthib Khound"
+    ],
+    "published": "2026-11-16T11:38:29+00:00",
+    "summary": "Classical control barrier functions (CBFs) provide safety constraints for controllers, but designing them by hand is difficult for underactuated vehicles and the resulting safe sets can be overly conservative. Neural CBFs can learn more informative barriers from data, yet a learned barrier is usually verified only for one fixed obstacle configuration. We study whether one neural barrier can be reused across environments by expressing the state relative to each obstacle. The key gap is that these relative coordinates may discard information needed to predict their own evolution. We give a generalized closure condition that represents this missing information as a residual and a lifting theorem that transfers a verified relative-coordinate barrier to every obstacle in a family. A rank test also identifies when symmetry alone cannot justify the transfer. We validate the conditions on a double integrator, a planar aircraft, and a 12-state quadrotor. Coordinates that fail the test lead to obstacle penetration or to a barrier condition that fails near hover, whereas body-frame coordinates close exactly for the quadrotor. The resulting barrier transfers to new maps without retraining and is effective in the reported deployment and fast-start experiments."
+  },
+  {
+    "title": "Driving the Style: Velocity-Conditioned Whole-Body Control from Motion Demonstrations",
+    "url": "http://arxiv.org/abs/2611.20888v1",
+    "arxiv_id": "2611.20888v1",
+    "authors": [
+      "Murad Dawood",
+      "Oezge Drama Berkenkamp",
+      "Antonio Gonzales Marin",
+      "Nutan Chen"
+    ],
+    "published": "2026-11-16T10:57:42+00:00",
+    "summary": "Achieving human-like behavior on humanoid robots has advanced rapidly by leveraging motion-capture demonstrations rather than hand-crafted cost functions. Adversarial imitation supplies a style signal that lets a policy fulfill a task while adhering to a desired style, but is difficult to transfer to hardware. Whole-body tracking through reinforcement learning instead deploys reliably and imitates demonstrations faithfully, but the resulting policies are conditioned on the future reference, so they require a reference trajectory at runtime and can fail when the motion differs from the training data. We train a humanoid policy directly with whole-body tracking rewards while restricting its actor to compact locomotion commands and robot observations. Reference motion supervises the reward and privileged critic, without supplying reference joint trajectories to the actor or requiring teacher distillation. The demonstrated style is thereby encoded in the policy through the tracking reward, so the robot reproduces the whole-body style under commanded velocities. Trained on a single random-walk motion and commanded with velocity profiles from held-out motions, our policy reaches at least 98\\% success in simulation and completes every trial on the Unitree G1. On held-out slow walking, whole-body tracking drops to 2\\% success and command-conditioned distillation to 56\\%, and both fail on the real robot. On the trained motions, the joint position error of our policy stays within 8\\% of whole-body tracking, and it has a higher style coverage than adversarial motion priors (AMP), which fell on the real robot without a safety crane."
+  },
+  {
+    "title": "LiDSeg: Linear DehazeFormer Guidance for Efficient Semantic Segmentation in Adverse Weather Conditions",
+    "url": "http://arxiv.org/abs/2611.20864v1",
+    "arxiv_id": "2611.20864v1",
+    "authors": [
+      "Yobsan Bayisa Leta",
+      "Christos Kyrkou",
+      "Maria K. Michael",
+      "Theocharis Theocharides"
+    ],
+    "published": "2026-11-16T10:38:33+00:00",
+    "summary": "Robust semantic segmentation in adverse weather is essential for safety-critical autonomous systems. Existing restore-then-segment pipelines introduce latency and prioritize pixel-level restoration over semantic discriminability, while domain adaptation methods often face representation bottlenecks and computational complexity. We introduce LiDSeg, a framework that uses reconstruction-informed guidance to improve segmentation under adverse weather. During training, a lightweight guidance encoder is jointly optimized with the segmentation branch using segmentation and auxiliary reconstruction objectives. At inference, the reconstruction decoder is discarded, while the guidance encoder is retained to extract weather-robust features. A lightweight gated fusion module integrates these features into the segmentation branch, preserving clear-weather accuracy while improving adverse-weather robustness. On Foggy Cityscapes, LiDSeg limits the clear-to-dense-fog mIoU degradation to 2.5-2.8 percentage points, reducing the baseline performance drop by more than fivefold. On the official ACDC test server, LiDSeg-PIDNet achieves 75.07% pooled all-condition mIoU, comparable to supervised HRNet-W48 at 75.0%, while remaining substantially smaller. The gains generalize zero-shot to Foggy Driving and Foggy Zurich without training on real-fog images. LiDSeg adds only 1.9-3.1M parameters across several models, with total model sizes of 5.2-39.5M parameters and no inference-time reconstruction overhead. It delivers real-time inference on the NVIDIA Jetson AGX Orin. Code: https://github.com/yobsanb/LiDSeg"
+  },
+  {
+    "title": "Scenario-Based Risk Certificates for Multi-Property Vulnerability Discovery in Parametric MDPs",
+    "url": "http://arxiv.org/abs/2611.20861v1",
+    "arxiv_id": "2611.20861v1",
+    "authors": [
+      "Zhiming Chi",
+      "Andrea Turrini",
+      "Yong Li",
+      "Lijun Zhang"
+    ],
+    "published": "2026-11-16T10:36:28+00:00",
+    "summary": "Safety-critical systems such as network protocols and distributed algorithms depend on environmental parameters whose exact values are uncertain. Parametric Markov decision processes (pMDPs) model such systems by making transition probabilities symbolic functions of the parameters. For a single quantitative requirement, parametric verification asks which parameter valuations satisfy the requirement. In practice, however, engineers often monitor several safety and performance requirements at once, and one valuation may make several requirements vulnerable simultaneously. In this paper we study multi-property vulnerability discovery under requirement-wise semantics: given a pMDP and M quantitative requirements, we construct candidate regions of the parameter space that may contain violations, and study budgets for random testing under a specified parameter distribution. To solve this, we adopt a two-layered approach in which the scenario-approximation layer provides PAC guarantees on identifying conservative vulnerability regions for each requirement while the testing layer treats random parameter exploration as coverage of overlapping regions and yields a stopping certificate computed from the marginal region masses alone; a composition theorem then bounds the expected non-discovery score by the scenario approximation error plus the testing risk from the two layers. For confirmed discoveries, candidate hits are checked by model checking and budgets use independently certified discovery probabilities. Experiment evaluate these certificates using empirical surrogates and independent confidence bounds."
+  },
+  {
+    "title": "ProcReverser: Multi-Agent Black-Box Microarchitectural Reverse Engineering for Processor Vulnerability Analysis",
+    "url": "http://arxiv.org/abs/2611.20827v1",
+    "arxiv_id": "2611.20827v1",
+    "authors": [
+      "Guanqi Lyu",
+      "Decheng Qiu",
+      "Guangyang Zhang",
+      "Fei Zhao",
+      "Zhaojun Lu",
+      "Jiaji He",
+      "Yongqiang Lyu"
+    ],
+    "published": "2026-11-16T10:11:17+00:00",
+    "summary": "When processor implementation details are unavailable, black-box microarchitectural reverse engineering helps security researchers identify hardware conditions related to security vulnerabilities. However, this process requires substantial manual effort to design experiments, develop test programs, and analyze results for each processor. We present ProcReverser, a multi-agent system that automates this process. ProcReverser uses execution feedback to improve experimental plans and test programs and identifies microarchitectural properties from measurements. We develop a comprehensive suite of property identification tasks focused on hardware mechanisms relevant to Spectre-class attacks, covering speculative execution, branch prediction, memory dependence, and cache behavior. We evaluate ProcReverser on the XuanTie C910, the gem5 RISC-V O3 CPU model, and the SiFive P550. ProcReverser achieves Pass@1 and Pass@5 scores of 81.3% and 93.8%, respectively, on C910, and 83.0% and 100.0% on gem5 O3. On the SiFive P550, ProcReverser further characterizes microarchitectural properties covered by the proposed task suite. These findings highlight the potential of automated microarchitectural reverse engineering to support processor vulnerability analysis and defense evaluation."
+  },
+  {
+    "title": "CuRSE-Bench: A Benchmark for Probing Cultural Blind Spots in Text-to-Image Safety Evaluation",
+    "url": "http://arxiv.org/abs/2611.20821v1",
+    "arxiv_id": "2611.20821v1",
+    "authors": [
+      "Minsuk Jang",
+      "Minseok Son",
+      "KiHyun Seol",
+      "Yeongeun Shim",
+      "Changick Kim"
+    ],
+    "published": "2026-11-16T10:05:19+00:00",
+    "summary": "Text-to-image (T2I) safety evaluation typically assigns each prompt or image a single culture-blind harm label, so content that is harmful only within a particular culture can pass as benign.   We introduce CultureCraft, an agentic framework that constructs T2I prompts that appear benign under a general-purpose rubric yet carry a latent harmful meaning in a target culture, and use it to build CuRSE-Bench: 10,709 culture-specific prompts and 2,648 culture-general controls over six regions and ten harm axes, each drawn from a predefined knowledge base of documented harm vectors and traceable to at least two independent sources.   Scoring every prompt under six region persona judges and a paired culture-blind judge, we find that the culture-blind judge under-rates culture-specific latent harm while matching the persona judges on the controls.   Each persona judge, in turn, chiefly decodes its own region's latent harm under our instrument: a selective cultural blind spot that persists in deployed moderators."
+  },
+  {
+    "title": "Tight PAC-Bayes Generalisation Guarantees for Large Language Model Judges",
+    "url": "http://arxiv.org/abs/2611.20818v1",
+    "arxiv_id": "2611.20818v1",
+    "authors": [
+      "Tom A. Lamb",
+      "Philip H. S. Torr",
+      "Tim G. J. Rudner"
+    ],
+    "published": "2026-11-16T10:00:57+00:00",
+    "summary": "Large language model (LLM) judges are increasingly used to monitor the outputs of LLM-based AI agents, yet formal guarantees on the reliability of these judges remain largely absent, limiting confidence in their use for safety-critical oversight. We consider certifying such a judge and define its risk over safety classifications of prompt--response pairs drawn from a deployed generator. We apply a PAC-Bayes framework to this setting, refining existing compression-based methodology with the use of tighter bounds and more efficient coding. We show that standard parameter-efficient fine-tuning can yield non-vacuous and even tight certificates for safety judges, for both classification and Brier risk, without holding out data for validation. We introduce LoRA-GT, which shares a single quantisation scale across layers and achieves the tightest certificates with minimal degradation in predictive performance. Across five guardrail models and four benchmarks, we find that certificate tightness is governed more by adaptation complexity than by base model scale. Finally, we show how far quantisation can be pushed before the resulting increase in risk outweighs the bound tightening gained from shorter descriptions. Together, these results provide a practical route toward certifiable scalable oversight and offer insight into how the complexity of safety adaptations shapes generalisation."
+  },
+  {
+    "title": "Verification-Guided Safety-Repair of Learned Controllers",
+    "url": "http://arxiv.org/abs/2611.20781v1",
+    "arxiv_id": "2611.20781v1",
+    "authors": [
+      "Fabian Kresse",
+      "Sobhan Gharanfoli",
+      "Nikolaus Vertovec",
+      "Alessandro Abate",
+      "Thomas A. Henzinger",
+      "Christoph H. Lampert"
+    ],
+    "published": "2026-11-16T09:31:42+00:00",
+    "summary": "Formal verification can certify that a learned controller is safe. But what should be done when verification fails? Simply suppressing actions that lead to unsafe next states is insufficient because the dangerous action that ultimately caused the safety violation might have occurred many steps earlier. Retraining modifies the policy globally, thereby potentially introducing new failures. Instead, we introduce ReachECO, a verification-guided repair procedure that exploits the information of failed multi-step reachability analysis for synthesizing explicit constraints on controller behavior. For Differentiable Weightless Controllers, the repairs compile into exact circuit patches that leave the controller unchanged everywhere outside the targeted policy cells. We prove soundness and termination of the repair procedure for ReachECO, as well as, assuming exhaustive continuation search, completeness relative to the reachability abstraction. Empirically, we demonstrate \\method's ability to successfully repair otherwise unsafe controllers in three continuous-control benchmarks: ACC, Docking2D and Car2D."
+  },
+  {
+    "title": "Co-simulation-Based Safety-Assessment of Black-Box Maritime Cyber-Physical Systems",
+    "url": "http://arxiv.org/abs/2611.20775v1",
+    "arxiv_id": "2611.20775v1",
+    "authors": [
+      "Andreas R. G. Sitorus",
+      "Melih Akdag",
+      "Hoang Anh Tran",
+      "Etienne Purcell"
+    ],
+    "published": "2026-11-16T09:23:57+00:00",
+    "summary": "Modern maritime cyber-physical systems consist of tightly interconnected subsystems ranging from multiple engineering domains, making exhaustive safety verification impractical. Simulation-based testing offers a scalable alternative, while co-simulation enables heterogeneous subsystem models, potentially developed by different stakeholders, to be integrated without requiring access to their internal implementations. Adaptive Stress-Testing further improves testing efficiency by formulating failure discovery as a sequential decision-making problem, guiding the search toward the most likely failure scenarios, and giving the counter safety examples using reinforcement learning. However, black-box co-simulation may provide only partial access to the system state required by conventional Markov decision process formulations. To address this limitation, we proposed Event-Based Adaptive Stress-Testing version 2, a co-simulation-based safety-assessment method formulated as a partially observable Markov decision process. This method employs Recurrent Proximal Policy Optimization to exploit observation histories when selecting adversarial actions. The method is evaluated on a ship-in-transit operation in which a collision-avoidance system is stress-tested against multi-adversarial target ships. An extended Intermediate Waypoint Sampling mechanism enables independent multi-adversary trajectory control and supports the generation of realistic collision-inducing scenarios. The experiment demonstrate that the learned stress-testing policy generalizes across different encounter cases, can be further improved through continued training, and can be made effective when the collision- avoidance system under test is replaced by another version. These results demonstrate the method's potential for scalable black-box safety assessment of complex maritime cyber-physical systems."
+  },
+  {
+    "title": "NL2RCtrl: Risk-Controlled Controller Synthesis from Natural Language Requirements",
+    "url": "http://arxiv.org/abs/2611.20748v1",
+    "arxiv_id": "2611.20748v1",
+    "authors": [
+      "Amir Bayat",
+      "Raphael M. Jungers"
+    ],
+    "published": "2026-11-16T08:56:38+00:00",
+    "summary": "Large language models (LLMs) have enabled the translation of natural language (NL) requirements into linear temporal logic (LTL) specifications, facilitating controller synthesis for cyber-physical systems (CPSs). However, the reliability of such translations remains a concern in safety-critical applications, particularly when NL requirements are ambiguous. This paper proposes a framework based on Conformal Risk Control (CRC) to provide a statistical guarantee on the risk of issuing a controller that violates the user's intended requirement. Rather than requiring semantic equivalence between the generated and intended specifications, the proposed approach considers language inclusion, a sufficient condition for ensuring that the traces of a controller synthesized for the generated specification satisfy the intended requirement. To account for ambiguity, the LLM is queried multiple times, and the resulting LTL specifications are grouped into semantic equivalence classes and ranked by their frequency of occurrence. Given a prescribed risk level, CRC selects how many of the top-ranked equivalence classes to combine into a single LTL specification, such that the probability of issuing a controller that violates the intended requirement is bounded by that level. A controller is then synthesized for the resulting specification, or the framework abstains. Experiments on a vehicle navigation case study evaluate the proposed approach."
+  },
+  {
+    "title": "AVD: A Multi-Sensor Teleoperated Wheelchair Platform with Safety-Aware Control",
+    "url": "http://arxiv.org/abs/2611.20720v1",
+    "arxiv_id": "2611.20720v1",
+    "authors": [
+      "Namai Chandra",
+      "Madhur Thareja",
+      "Boby George"
+    ],
+    "published": "2026-11-16T08:26:15+00:00",
+    "summary": "Electric wheelchairs predominantly rely on manual joystick interfaces, which present critical barriers to independent mobility for individuals with severe motor and visual impairments. This paper presents AVD (Autonomous Vehicle Drive), a dependable teleoperation architecture for assistive mobility that unifies perception, communication, embedded control, and remote supervision in a single low-cost platform built entirely from commercially available hardware. The central engineering contribution is a safety-oriented design framework: control authority follows a static hierarchy, a manual emergency stop and the occupant's joystick pre-empt remote commands, and the on-board sensing layer has stop-only authority. The compute design partitions primary and safety functions and specifies a heartbeat-driven safe-state transition for the fault cases considered. The sensing stack this framework depends on is characterized against measured data: per-channel acquisition latency, a 2,025-scan LiDAR degradation campaign spanning five target configurations and a control under water mist, airborne dust, and direct aperture occlusion, and attitude measurements across static inclines to 47 degrees. The lowest pooled environmental-condition mean retained 76.6% of the clear-baseline forward-sector yield, and no scan lost the sector completely. A logged vibration-induced inertial dropout occurred while LiDAR and camera logging continued, illustrating complementary channel behavior. The result is a documented prototype and an explicit validation path for a deployable wheelchair implementation."
+  },
+  {
+    "title": "Design of the Secure Smart Scooter with Automatic Lane Detection",
+    "url": "http://arxiv.org/abs/2611.20700v1",
+    "arxiv_id": "2611.20700v1",
+    "authors": [
+      "Hamid Reza Ghaeini",
+      "Nils Ole Tippenhauer"
+    ],
+    "published": "2026-11-16T08:09:21+00:00",
+    "summary": "The authors present a prototype of an electric scooter that uses computer vision to determine driving lanes and automatically modify vehicle configuration. Scooters steer on sidewalks, bike paths, or car lanes. The government imposes speed limits on the lanes in which electric scooters drive. Featuring computer vision, electric scooters can determine driving lanes and automatically modify vehicle configuration. However, such systems' safety is still a concern, and research into such vehicle systems' safety and security aspects is proceeding. First, we will present our vehicular setup. Then, we will present our implemented scooter with safety constraints. Finally, we present our security prototype for such an electric scooter."
+  },
+  {
+    "title": "Distribution-Free Probabilistic Environmental Control Barrier Functions with Application to Adaptive Cruise Control",
+    "url": "http://arxiv.org/abs/2611.20689v1",
+    "arxiv_id": "2611.20689v1",
+    "authors": [
+      "Byeongyu Lee",
+      "Kyoungseok Han",
+      "Chung Choo Chung"
+    ],
+    "published": "2026-11-16T07:52:25+00:00",
+    "summary": "Safety control under environmental uncertainty is challenging when the uncertainty distribution is unknown and reliable support bounds are unavailable. This paper introduces CPP-ECBF, a distribution-free approach that combines conformal predictive programming with probabilistic environmental control barrier functions. For separable environmental safety functions and i.i.d. uncertainty, CPP-ECBF converts the probabilistic safety condition into a sample-based deterministic control constraint that provides finite-horizon safety with prescribed probability $1-\u03b5$ and calibration confidence $1-\\tilde\u03b2$. For adaptive cruise control, an offline conformal uncertainty bound yields an explicit linear upper bound on the ego-vehicle acceleration, which is enforced by a quadratic-programming safety filter. In 10,000 Monte Carlo trials, 99.97% of trials satisfied the finite-horizon safety criterion, exceeding the prescribed confidence of 85%. Moreover, CPP-ECBF reduced the conservatism of worst-case robust enforcement, increasing the admissible acceleration upper limit by $5.90\\,\\mathrm{m/s^2}$ on average."
+  },
+  {
+    "title": "UbiHearo: Bringing Scenario-Aware Sound Guidance to DHH Users with Mobile Agents",
+    "url": "http://arxiv.org/abs/2611.20686v1",
+    "arxiv_id": "2611.20686v1",
+    "authors": [
+      "Fengmin Wu",
+      "Sicong Liu",
+      "Zimu Zhou",
+      "Chenren Xu",
+      "Wanbing Zhao",
+      "Peiwen Sun",
+      "Zhiwen Yu"
+    ],
+    "published": "2026-11-16T07:51:11+00:00",
+    "summary": "For Deaf and Hard-of-Hearing (DHH) users, effective sound awareness goes beyond detecting \\emph{what} sound occurs; it requires understanding \\emph{what it means}, \\emph{how urgent it is}, and \\emph{what to do}. However, existing mobile assistants largely reduce acoustic scenes to isolated labels or generic alerts, failing to provide contextual guidance when the same sound implies different risks across scenarios. We present \\sysname, a mobile hearing assistant agent that closes the sensing--reasoning--action loop for \\textit{scenario-aware} and \\textit{personalized} DHH assistance. \\sysname adopts a \\textit{neuro-symbolic} design that transforms continuous acoustic and physical context streams into structured intermediate representations (IRs) for controllable reasoning and guidance. It introduces three key mechanisms. \\textit{First}, a perception-thresholded sensing mechanism enables energy-efficient always-on awareness by activating processing only for perceptually meaningful events while preserving safety-critical cues through deterministic overrides. \\textit{Second}, a staged neuro-symbolic reasoning framework performs promptless scenario understanding by conditioning an on-device audio-language model on structured IRs instead of user-authored context descriptions. \\textit{Third}, a bounded human-in-the-loop personalization mechanism adapts user-specific guidance through lightweight on-device decision-boundary updates while preserving population-aligned reasoning. We evaluate \\sysname on smartphones and in-vehicle systems across diverse scenarios. It achieves favorable accuracy--latency--energy tradeoffs and personalized guidance."
+  },
+  {
+    "title": "Safety-Preserving Medical LLM Fine-Tuning via Bilevel Data Selection",
+    "url": "http://arxiv.org/abs/2611.20643v1",
+    "arxiv_id": "2611.20643v1",
+    "authors": [
+      "Ruoxuan Shi",
+      "Sheng Yang",
+      "Zhengxing Su",
+      "Xiaoyang Hou",
+      "Yating Liu"
+    ],
+    "published": "2026-11-16T07:03:59+00:00",
+    "summary": "As general large language models (LLMs) are increasingly adapted for patient-facing medical applications, improving medical capability while controlling patient-facing risks remains a critical challenge. Large-scale medical instruction data are essential for acquiring domain knowledge through supervised fine-tuning (SFT), but unsafe responses can undermine existing safety alignment. To address this problem, we propose Scalable Bilevel Data Selection (S-BDS) for safety-preserving medical SFT. By controlling selection-weight concentration, S-BDS enables reliable sample ranking over large candidate pools and identifies training examples that improve medical capability while controlling patient-facing risks. We combine clinician-validated safe data and selected data with unscreened medical instruction data for SFT, and jointly evaluate medical capability and patient-facing safety on HealthBench and PatientSafetyBench, respectively. Experiments across Llama and Qwen models show that S-BDS achieves the highest safe rates among all compared methods, outperforming the strongest baselines by 4.64 and 3.00 percentage points, respectively, while maintaining competitive medical capability. Further experiments show that varying the safety-oriented weight during SFT controls the trade-off between medical capability and patient-facing safety."
+  },
+  {
+    "title": "Counterfactual Feature Steering for Adjacency-Preserving Identity Unlearning",
+    "url": "http://arxiv.org/abs/2611.20637v1",
+    "arxiv_id": "2611.20637v1",
+    "authors": [
+      "FNU Shivam",
+      "Layth Sliman",
+      "Ramana Reddy",
+      "Donald Adjeroh",
+      "Binod Bhattarai",
+      "Prashnna Gyawali"
+    ],
+    "published": "2026-11-16T06:58:12+00:00",
+    "summary": "Identity unlearning in text-to-image diffusion models is increasingly important for privacy, safety, and ethical deployment, as it aims to remove the model's ability to generate specific individuals. In this work, we study identity unlearning with \\emph{adjacency preservation}, where the goal is to remove a target individual's identity while preserving related non-target identities. We propose Counterfactual Feature Steering (CFS), a method requiring one-time SAE training that performs bounded inference-time concept editing in the latent space of a sparse autoencoder attached to the text encoder. CFS derives a target direction by contrasting forget and retain distributions, then applies a per-token projection proportional to each token's current alignment with this direction, yielding counterfactual representations that suppress the target while limiting collateral damage. To evaluate adjacency preservation, we introduce the Adjacency-Weighted Unlearning Score (AWUS), which measures the tradeoff between target erasure and collateral damage, and extend it to face-specific identity similarity using ArcFace. Across 4,000 prompts derived from Celeb-100, spanning 100 celebrity identities, CFS achieves the strongest evaluated tradeoff between identity erasure of target identities and preservation of adjacent and generic concepts, while remaining stable across intervention strengths where other steering-based methods degrade. Independent ArcFace evaluation and a 10,000-caption COCO study further examine identity and general preservation. Quantitative nudity-suppression benchmarks and qualitative artistic-style examples provide evidence of transfer beyond identities on SD~1.4."
+  },
+  {
+    "title": "ASCG: Adaptive Spatial Classifier Guidance for Surgical Concept Suppression in Diffusion Models",
+    "url": "http://arxiv.org/abs/2611.20625v1",
+    "arxiv_id": "2611.20625v1",
+    "authors": [
+      "Younghwan Kil",
+      "Joonhyeong Park",
+      "Giung Nam",
+      "Juho Lee"
+    ],
+    "published": "2026-11-16T06:47:01+00:00",
+    "summary": "While text-to-image (T2I) diffusion models achieve remarkable quality, they risk producing harmful content. Existing safety mechanisms often rely on indiscriminate, global interventions that induce unintended semantic drift and degrade image quality. To address this, we propose Adaptive Spatial Classifier Guidance (ASCG), a necessity-driven framework that employs probabilistic monitoring to activate guidance selectively upon harm detection. By leveraging Grad-CAM for localized suppression, ASCG effectively removes harmful concepts while preserving superior semantic fidelity compared to conventional methods. Furthermore, we overcome the limitations of traditional metrics like NudeNet---which fails to assess semantic integrity---by introducing a VLM-based evaluation framework to provide a fine-grained, robust analysis of both safety and context preservation. Our results demonstrate that ASCG not only balances safety and fidelity but also exhibits remarkable plug-and-play synergy with existing frameworks to establish state-of-the-art performance."
+  },
+  {
+    "title": "Example-Based Spatial Guidance for Training-Free Concept Erasure in Diffusion Models",
+    "url": "http://arxiv.org/abs/2611.20623v1",
+    "arxiv_id": "2611.20623v1",
+    "authors": [
+      "Younghwan Kil",
+      "Giung Nam",
+      "Joonhyeong Park",
+      "Jinwoo Shin",
+      "Juho Lee"
+    ],
+    "published": "2026-11-16T06:45:04+00:00",
+    "summary": "Text-to-image (T2I) diffusion models often synthesize policy-violating content, necessitating robust safeguards and rigorous evaluation frameworks. However, current approaches remain largely monolithic in both execution and evaluation, limited to coarse-grained categorization within broad unsafe concepts. Such approaches fail to account for the specific constituent factors of a violation, resulting in weak learning signals and allowing model collapse to bypass safety checks. To overcome these limitations, we propose Example-Based Spatial Guidance (EBSG), a training-free method that utilizes user-editable exemplar packs to provide granular spatial guidance for precise concept steering. Unlike existing methods that coarsely steer the entire image away from a broad concept, EBSG decomposes these categories into specific sub-concepts via exemplar text-image pairs, providing explicit, localized steering signals for more robust safety control. Furthermore, we introduce a vision language model (VLM)-based evaluation protocol that provides a fine-grained assessment, avoiding the pitfall of conventional binary evaluators that permit model collapse to bypass safety checks. Empirically, EBSG achieves state-of-the-art erasure performance across diverse safety datasets and concept categories, spanning four nudity benchmarks, seven I2P harmful-concept slices, and four MJA metaphor categories, while supporting multi-concept removal and transferring to a modern backbone, SD3."
+  },
+  {
+    "title": "AdMem: Expectation-Grounded Procedural Memory for Long-Horizon Task-Solving Agents",
+    "url": "http://arxiv.org/abs/2611.20605v1",
+    "arxiv_id": "2611.20605v1",
+    "authors": [
+      "Runzhe Wang",
+      "Huilin Lu",
+      "Shengjie Liu",
+      "Li Dong",
+      "Zhihuai Zhu"
+    ],
+    "published": "2026-11-16T06:29:41+00:00",
+    "summary": "An agent that carries memory across tasks is only as good as the entries it keeps. We begin from an observation that is easy to reproduce and uncomfortable for the field: naively accumulating cross-task experience can make an agent \\emph{worse} than one with no memory at all. On AgentBoard, a workflow-induction memory solves fewer tasks than a memoryless ReAct agent in seven of eight domains, and a per-step procedural store with no surrounding structure loses half of ReAct's completions on Jericho. We argue that the missing ingredients are per-action credit assignment and an explicit life cycle for stored entries, and present AdMem, which supplies both. Before each action the actor commits to an expected outcome; a concurrently running critic scores the realized outcome against that expectation and writes a procedural entry carrying a binary reward and a reflection, so credit lands on the action that earned it and no environment reward is required. Each entry then carries a scalar utility, updated online under a noisy-OR reward model, that ranks retrieval jointly with context similarity and drives eviction and merging, giving the store a forgetting and consolidation policy instead of unbounded growth. Across 707 tasks in eight AgentBoard domains AdMem solves 441 against 388 for ReAct and 312 for the workflow-induction baseline --- a pooled gain significant under a two-sided Fisher exact test, concentrated in the domains that supply transferable cross-task structure. All memory stays human-readable text, which is what makes the failures above diagnosable --- and, as we discuss, also makes the store an auditable but attackable surface."
+  },
+  {
+    "title": "JEPTERA: A Platform Agnostic JEPA-Assisted Model Predictive Planner for Urban UAV Navigation",
+    "url": "http://arxiv.org/abs/2611.20593v1",
+    "arxiv_id": "2611.20593v1",
+    "authors": [
+      "Gibran Fathoni Belva",
+      "Mansur Arief",
+      "Ahmad Alfan Alfian Irfan"
+    ],
+    "published": "2026-11-16T06:14:33+00:00",
+    "summary": "Urban navigation for Unmanned Aerial Vehicles (UAVs) requires planning that accounts for environmental geometry, vehicle dynamics, and moving obstacles. This paper presents JEPTERA, a navigation architecture that integrates a Joint-Embedding Predictive Architecture (JEPA), Model Predictive Control (MPC), PID control, and a safety layer. JEPA predicts the UAV's motion response to candidate commands for MPC action selection, while the safety layer checks trajectories against occupied space and predicted obstacle motion. Simulator adapters and platform-specific YAML configurations separate the planning core from simulator interfaces. An ablation study evaluated six configurations across three gym scenarios, totaling 180 runs. The complete architecture achieved the highest aggregate success rate, completing 28 of 30 runs. Additional tests completed one route across three city maps without collisions. Separate integration tests demonstrated operation in Gazebo/ROS 2, MuJoCo, and CARLA without modifying the core planning logic. These results support the feasibility of the integrated architecture for simulated urban UAV navigation and its portability across simulator interfaces."
+  },
+  {
+    "title": "A Self-Evolving Agent Runs Like a Gas: Describing and Predicting Its Evolution with Fluid Dynamics",
+    "url": "http://arxiv.org/abs/2611.20584v1",
+    "arxiv_id": "2611.20584v1",
+    "authors": [
+      "Haipeng Wang"
+    ],
+    "published": "2026-11-16T06:06:20+00:00",
+    "summary": "A self-evolving LLM agent improves in service by rewriting its own plugin library under a validation gate. Agent engineering is converging on exactly such agents: single systems in continuous operation, carrying populations of runtime instances (plugins, skills, tools) past the point where anyone can read the library and still predict what the system will do. Yet the run itself, the aggregate motion of that population across hundreds of edit rounds, is unstudied: no theory says whether it relaxes, oscillates, or freezes. A recent kinetic theory supplies the missing level: under four architectural properties, the plugin instances of one agent behave as identical hard spheres whose density obeys a master equation, and the theory is candid that its gate injects and drains credit, momentum is not conserved, and waves are excluded by construction. We argue the boundary is architectural; keeping the four safety theorems, we stack conservation axioms on top. A closed-credit ledger makes credit a collision invariant and unlocks acoustic waves at a measurable, engineerable speed; a zero-sum projection gate conserves centroid momentum unconditionally, for any proposal stream. Both layers are proven and executed: the axis total is conserved to the digit over 66 interventions under a live gate, and the pre-registered decisive probe returns the theory's directional verdict: linear wavefronts where the ledger holds, dissipation where it does not, replicated across two population sizes. For agents that must never stop, the gas description is not a metaphor: it is the measurement interface through which their future becomes readable."
+  },
+  {
+    "title": "Partial Borrows in Rust",
+    "url": "http://arxiv.org/abs/2611.20576v1",
+    "arxiv_id": "2611.20576v1",
+    "authors": [
+      "Sasha Pak",
+      "Richard Willie",
+      "Umang Mathur",
+      "Fabian Muehlboeck",
+      "Alex Potanin"
+    ],
+    "published": "2026-11-16T06:00:59+00:00",
+    "summary": "Rust ensures memory safety by requiring exclusive access to mutably borrowed data. However, a borrow can prevent access to more data than necessary. For example, a method with an &mut self parameter borrows the entire struct, even when the method uses only some of its fields. Calling the method can therefore conflict with an existing borrow of a field the method never uses, causing Rust to reject the program. Resolving such conflicts can require programmers to compromise useful abstractions, make non-local changes to their programs, or worse, resort to unsafe code. We introduce view types, a backward-compatible refinement of reference types that specifies which fields a reference may access. This allows methods to partially borrow a struct, accessing only the fields they need without blocking access to the rest. We establish the first fully mechanized foundation for Aeneas in Rocq. Along the way, we uncover and fix gaps in the original semantics and proofs. Building on this foundation, we formalize partial borrows and prove the extended borrow checking sound. We implement view types in rustc and extend the Aeneas interpreter to support partial borrows. Our evaluation shows how view types systematically resolve borrowing conflicts across method boundaries at no runtime cost."
+  },
+  {
+    "title": "ExtremeDrive: A Real-World Dataset and Benchmark for Critical Driving",
+    "url": "http://arxiv.org/abs/2611.20574v1",
+    "arxiv_id": "2611.20574v1",
+    "authors": [
+      "Xinhan Li",
+      "Yuhong Jiang",
+      "Shiyue Zhao",
+      "Junzhi Zhang",
+      "Chengkun He",
+      "Ruihai Ma",
+      "Shijie Zhao",
+      "Wenxuan Cheng",
+      "Jinbo Lv",
+      "Tao Liu"
+    ],
+    "published": "2026-11-16T05:58:20+00:00",
+    "summary": "Existing autonomous driving datasets and benchmarks provide extensive resources for routine driving, yet real-world data covering safety-critical scenarios and extreme environmental conditions remain limited. To address this gap, we present ExtremeDrive, a real-world dataset and benchmark covering emergency maneuvers, complex traffic interactions, and adverse conditions such as slippery or snow-covered roads, alongside routine driving. The dataset comprises 589 driving scenes curated from a larger pool of real-world driving recordings, with calibrated and aligned multisensor data and reviewed annotations of road structure and traffic participants. We further establish a benchmark to evaluate planned trajectories through simulated vehicle execution, measuring safety-related metrics and driving performance. Experiments at equal training set sizes show that incorporating critical driving data reduces trajectory prediction errors and improves mean critical-success rates in critical scenarios. ExtremeDrive provides a unified resource for learning and evaluating autonomous driving in safety-critical scenarios and extreme environmental conditions."
+  },
+  {
+    "title": "Strict Capabilities with a PNVI Escape Hatch",
+    "url": "http://arxiv.org/abs/2611.20564v1",
+    "arxiv_id": "2611.20564v1",
+    "authors": [
+      "Yihe Li",
+      "Sai Dhawal Phaye",
+      "Roland H. C. Yap",
+      "Trevor E. Carlson",
+      "Gregory J. Duck"
+    ],
+    "published": "2026-11-16T05:44:01+00:00",
+    "summary": "Capability systems enforce memory safety by tying pointers to their originating allocations, preventing forgery, use-after-free, and out-of-bounds accesses. Yet conventional capabilities are simultaneously too strict and not strict enough for C: they reject common low-level idioms involving integer casts or raw pointer bytes, while failing to enforce type correctness and sub-object bounds. Proposed Provenance Not Via Integers (PNVI) semantics expose this tension by permitting representation-level manipulation while retaining strict rules for ordinary pointer operations.   We argue that these requirements call for two interoperable abstractions rather than a compromise within one. Strict capabilities enforce provenance, liveness, type correctness, and (sub-)object bounds; ordinary capability operations preserve these invariants. Exposed representations are non-dereferenceable, integer-like values that support arbitrary integer and byte-level manipulation under PNVI semantics while retaining unforgeability guarantees. They carry no directly usable memory-access authority: converting an exposed representation back to a strict capability reconstructs provenance under PNVI rules and validates type and bounds before access. Thus, low-level C idioms can use an explicit escape hatch without weakening ordinary capability derivation. We realize this design using Fully Randomized Pointers (FRP) and dynamic type metadata. Evaluation on low-level pointer idioms, Juliet tests, and existing C benchmarks shows that strict type and sub-object safety can coexist with low-level pointer manipulation."
+  },
+  {
+    "title": "Beyond the Patch: Reconstructing an Incomplete-Fix Patch Bypass in LLM Agent Frameworks with Control-Gated, Benign Probes",
+    "url": "http://arxiv.org/abs/2611.20514v1",
+    "arxiv_id": "2611.20514v1",
+    "authors": [
+      "Chaitanya Garware"
+    ],
+    "published": "2026-11-16T04:39:21+00:00",
+    "summary": "Replaying a vulnerability's original proof-of-concept after patching tests whether its reported trigger remains reproducible, but does not establish that the underlying security invariant holds on other code paths. We present a benign, control-gated reconstruction method and a pilot study across four LLM agent frameworks and four invariant classes. For PraisonAI, we compare original-trigger replay (B0) with a distinct sibling-path probe (M). We also perform five before/after reconstructions across Langroid, Agno, and CrewAI.   Each run reports VIOLATION, NO_VIOLATION_OBSERVED, or INCONCLUSIVE, gated by a positive authorized control. Probes use inert markers or builtins-reachability checks. At PraisonAI 4.6.31, the original tool-loading trigger is blocked while the tool_override path still violates the invariant. This reproduces the publicly documented CVE-2026-44334 bypass of CVE-2026-40287; neither tested path shows a violation at 4.6.32. For CrewAI, we observe a violation in tested release 1.11.0 and confinement in 1.11.1, without claiming the earliest fixed release. Fourteen harness-validation scenarios produced their expected verdicts.   Only one same-version B0-versus-M divergence is demonstrated. The PraisonAI probes invoke loader functions directly and establish boundary behavior under the supplied setup, not a full end-to-end exploit. A non-violation verdict applies only to the tested probe, version, and configuration and is not a proof of safety. This pilot reconstructs a known incomplete fix; it neither introduces a new testing technique nor estimates vulnerability prevalence."
+  },
+  {
+    "title": "Model Immunization Beyond Condition Numbers: The Importance of Plateau Regions",
+    "url": "http://arxiv.org/abs/2611.20472v1",
+    "arxiv_id": "2611.20472v1",
+    "authors": [
+      "Quoc Nguyen",
+      "Trung Le",
+      "Dinh Phung",
+      "Mehrtash Harandi"
+    ],
+    "published": "2026-11-16T03:37:45+00:00",
+    "summary": "Harmful fine-tuning can rapidly compromise safety alignment in Large Language Models, underscoring the vulnerability of deployed models to post-release modification. While prior work motivates model immunization by inducing ill-conditioned curvature to slow harmful optimization, this approach is not scalable due to the high computational cost of Hessian estimation. We refine this paradigm by extending the theoretical framework to prioritize plateau regions alongside curvature. We further introduce an immunization algorithm based on efficient Hessian estimation and bounds on the extremal singular values of the Hessian. We demonstrate the proposed immunization framework in three applications: (i) Fine-tuning-as-a-service settings where benign user data may be mixed with poisoned harmful data, (ii) open-weight settings where an adversary can fine-tune on harmful-only data with varied training dynamics, and (iii) robust unlearning, where immunized models better resist relearning attacks after unlearning. Extensive experiments confirm that our approach achieves robust defense against adversarial fine-tuning while largely maintaining general utility and downstream trainability. Our code is available at https://github.com/minhquoc0712/BECON."
+  },
+  {
+    "title": "Designing Deceptive Model Organisms that Successfully Evade Auditing",
+    "url": "http://arxiv.org/abs/2611.20459v1",
+    "arxiv_id": "2611.20459v1",
+    "authors": [
+      "Vasisht Duddu",
+      "Mark Wang",
+      "Lipeng He",
+      "Tim G. J. Rudner"
+    ],
+    "published": "2026-11-16T03:27:51+00:00",
+    "summary": "AI models can exhibit deceptive behaviors such as strategically underperforming on evaluations (sandbagging), faking alignment, or covertly acting on behalf of a hidden principal. Safe deployment therefore requires auditing techniques that can reliably detect such behaviors. To develop and test these techniques, we can train model organisms (MOs): models that exhibit deceptive behaviors and serve as realistic evaluation testbeds. However, for such testbeds to be informative, MOs must actively anticipate and resist auditing---a gap in prior work that can lead to overestimation of auditing effectiveness and underestimation of safety risks. We address this gap by designing MOs that capture worst-case deceptive behavior and evade high-effort auditing. Focusing on sandbagging, we frame MO design as a security game between an auditor and a deceptive model and identify three design requirements for sandbagging MOs: (i) effectiveness (underperforming on targeted capabilities), (ii) utility preservation (maintaining performance on all other capabilities), and (iii) robustness (resisting auditing). We propose three MOs: two optimized against blackbox auditing techniques and one optimized against both blackbox and whitebox techniques. Through a comprehensive evaluation, we show that, unlike MOs from prior work, our MOs satisfy all three requirements, providing worst-case baselines for developing and evaluating future auditing techniques."
+  },
+  {
+    "title": "VISTA: A Framework for Vision-Informed Semantic Traffic Awareness",
+    "url": "http://arxiv.org/abs/2611.20458v1",
+    "arxiv_id": "2611.20458v1",
+    "authors": [
+      "Murat Arda Onsu",
+      "Poonam Lohan",
+      "Burak Kantarci",
+      "Aisha Syed",
+      "Matthew Andrews",
+      "Sean Kennedy"
+    ],
+    "published": "2026-11-16T03:26:30+00:00",
+    "summary": "The Internet of Things (IoT) is transforming intelligent transportation systems by connecting roadside cameras, edge computing units, vehicles, and traffic infrastructure into a shared sensing and decision-making ecosystem. However, transmitting raw traffic video over vehicle-to-everything (V2X) links is bandwidth-intensive, while deploying large multimodal models directly on resource-constrained vehicles is often impractical. To address these limitations, this article proposes VISTA (Vision-Informed Semantic Traffic Awareness), a multimodal vision-language edge-intelligence framework that combines predictive video representation learning with lightweight language-based reasoning to provide communication-efficient traffic situational awareness. In the proposed architecture, roadside surveillance units employ the Video Joint Embedding Predictive Architecture (V-JEPA) and an attentive-pooler module to convert traffic video clips into compact future-scene embeddings. These embeddings are transmitted through V2X links to vehicle-mounted systems, where a TinyLlama small language model, enhanced with a custom visual adapter, interprets the embeddings alongside natural-language (NL) traffic queries. VISTA enables vehicles to obtain interpretable traffic information, reason about upcoming scene dynamics, and identify potential collision risks without receiving raw video streams. Experimental results in a digital-twin urban traffic environment show that VISTA achieves 97.77% accuracy and an 89% F1 score for future collision prediction while reducing the communication payload by several orders of magnitude compared with raw RGB video transmission. These results demonstrate the feasibility of embedding-based multimodal intelligence for low-latency, communication-efficient, and safety-oriented IoT-enabled transportation systems."
+  },
+  {
+    "title": "Overview of the Plagiarism Detection Task at PAN 2026",
+    "url": "http://arxiv.org/abs/2611.20443v1",
+    "arxiv_id": "2611.20443v1",
+    "authors": [
+      "Andr\u00e9 Greiner-Petter",
+      "Yun-Ang Wu",
+      "Yuka Kitamura",
+      "Kon Woo Kim",
+      "Maik Fr\u00f6be",
+      "Bela Gipp",
+      "Akiko Aizawa",
+      "Martin Potthast"
+    ],
+    "published": "2026-11-16T03:14:41+00:00",
+    "summary": "The generative plagiarism detection task at PAN 2026 aims at retrieving the original scientific sources for given automatically generated textual plagiarism. We created two novel datasets of synthetically generated plagiarism following the premise of a malicious actor trying to generate papers with minimal effort while evading detection of undisclosed re-use. We utilized four widely available LLMs: GPT-OSS 120B, Llama 3.1 8B, Qwen 3.5 27B FP8, and DeepSeek-R1 Distill Llama 8B. In this task overview paper, we outline the creation of this dataset and summarize and compare the results of all participants with three baselines. For this year's task, we received 26 submissions from six teams that significantly outperformed our baselines."
+  },
+  {
+    "title": "Abstention Direction in Large Language Models: Mechanistic Interpretability of Abstention Across Query Ambiguity, Knowledge Limits, and Safety Alignment",
+    "url": "http://arxiv.org/abs/2611.20441v1",
+    "arxiv_id": "2611.20441v1",
+    "authors": [
+      "Koki Itai",
+      "Jun Hirako",
+      "Hiroaki Yamagiwa"
+    ],
+    "published": "2026-11-16T03:12:33+00:00",
+    "summary": "Abstention, the withholding of a response by a large language model (LLM) under uncertainty or safety risks, is essential for trustworthy models. The causes of abstention fall into three perspectives: ambiguity in the Query (Q), limits of Model Knowledge (MK), and misalignment with Human Values (HV). However, prior analyses of internal representations have focused on HV, using a refusal direction computed from harmful and harmless queries. No study has analyzed the three perspectives jointly. We therefore extend the refusal direction framework to all three perspectives. Specifically, for each perspective, we construct counterfactual pairs that share a template and differ only in the abstention-inducing factor, and compute an abstention direction by normalizing the difference in mean activations between the two polarities. Activation steering experiments show that intervening in middle layers increases or decreases abstention across all three perspectives. Moreover, steering yields cross-perspective effects, indicating that the abstention directions share a common directional component."
+  },
+  {
+    "title": "Refusal Register is Causally Steerable: Decomposing the Refusal Direction into Category-Aligned Components in Gemma-2-9B-IT",
+    "url": "http://arxiv.org/abs/2611.20405v1",
+    "arxiv_id": "2611.20405v1",
+    "authors": [
+      "Janhavi Khindkar",
+      "Nataliia Povarova"
+    ],
+    "published": "2026-11-16T02:07:31+00:00",
+    "summary": "Prior work shows that refusal in instruction-tuned language models can be ablated by intervening on a single residual-stream direction (Arditi et al., 2024), and more recent work finds multiple refusal-mediating directions and concept cones (Wollschl\u00e4ger et al., 2025). We ask a different question: do refusal-related directions carry information about the register of refusal language - how the model refuses - and not only whether it refuses? In Gemma-2-9B-IT we identify two SVM-derived linear directions (B1 for harmful-content vs. neutral, B2 for self-reference vs. neutral) at layer 20 with cos(B1, B2) = 0.252 (about 75 degrees, substantially non-parallel). Adding the harmful-vs-neutral difference-of-means direction (cosine 0.68 with B1) to the residual stream of self-reference prompts at alpha = 2.0 shifts content-safety vocabulary from 2.55 to 10.37 hits per 100 tokens, while a magnitude-matched random direction produces 1.13-2.16; the model continues to refuse but switches register from meta-style (\"as a language model...\") to content-style (\"this would be harmful\"). The same register-injection effect reproduces qualitatively in Gemma-2-2B-IT at layer 12 (content vocabulary 1.72 -> 6.37 at alpha = 1.0, vs. random control 1.35), with a narrower coherent-injection window than in 9B. The two directions are not symmetric: the B2 -> harmful intervention produces a much smaller register effect, and across ablation, sufficiency, and injection B1's causal effects are consistently larger than B2's. We frame this asymmetry as part of the finding: B1 appears to encode both category detection and refusal-vocabulary information, while B2 encodes primarily category detection. We frame the contribution as identifying category-aligned components related to the Arditi-style difference-of-means direction that play distinct functional roles in refusal register."
+  },
+  {
+    "title": "Reveal: A Provenance-Aware System for Multimodal Urban Data Exploration",
+    "url": "http://arxiv.org/abs/2611.20311v1",
+    "arxiv_id": "2611.20311v1",
+    "authors": [
+      "Leonardo Ferreira",
+      "Joao Rulff",
+      "Maryam Hosseini",
+      "Aline Paes",
+      "Daniel de Oliveira",
+      "Fabio Miranda",
+      "Marcos Lage"
+    ],
+    "published": "2026-11-15T23:18:07+00:00",
+    "summary": "Urban sensing initiatives increasingly produce multimodal datasets that combine visual and textual information to capture city characteristics and subjective factors such as safety, comfort, and accessibility. Yet, analyzing such data at scale remains difficult, as manual inspection is unfeasible and automated methods struggle to interpret subjective cues and uncover relationships across diverse data modalities. Moreover, existing workflows rarely make exploration steps explicit, hindering reproducibility. To address these challenges, we introduce Reveal, a provenance-aware visual analytics system for exploring heterogeneous urban data. Reveal enables users to build dataflows by combining text and image searches across coordinated views, chaining queries into pipelines, and applying set operations within an exploration diagram while capturing analytical provenance. We evaluate Reveal through two case studies focused on accessibility and walkability."
+  },
+  {
+    "title": "Ontology-Compiled Control Barrier Functions for Heterogeneous Robot Teams",
+    "url": "http://arxiv.org/abs/2611.20306v1",
+    "arxiv_id": "2611.20306v1",
+    "authors": [
+      "Peng Wu",
+      "Seyede Fatemeh Ghoreishi",
+      "Nathan Bastian",
+      "Mohsen Imani",
+      "Tian Lan",
+      "Mahdi Imani"
+    ],
+    "published": "2026-11-15T23:09:52+00:00",
+    "summary": "Safety filters for heterogeneous robot teams fail because of missing constraints, overestimated braking capabilities and conflicts between individually satisfiable constraints. We present OntoCBF, which compiles a domain ontology with a class taxonomy, typed relations, safety axioms and a dynamics profile per robot class into a control barrier function filter with one quadratic program per agent. Description-logic entailment supplies the constraints of any team online, including those that follow from chains of relations and from classes defined by what a robot carries, so the existing safety axioms cover new robot classes, payload classes and combinations. We prove that a subclass may reuse the braking capability of its parent whenever it can produce every velocity of the parent, a property separate from subsumption. For box-bounded double integrators this property is also necessary, and every loss of safety then begins with a conflict. Once three robots interact, the safe set of pairwise barriers contains states from which a collision is unavoidable, and such states persist in larger teams under any fixed capability reduction. In a simulated warehouse where humans ignore the robots, a filter written for the design classes violates safety in 89-100 % of the episodes with unseen classes. In all scenarios, including one with 32 robots, OntoCBF violates safety in 20-70 % of the episodes, each time after a conflict, with a median deepest intrusion of 10-17 % of the keep-out distance. A multi-agent PPO policy trained with the filter in the loop lowers the rate of infeasible quadratic programs, nearly all of them conflicts, by 18-41 %."
+  },
+  {
+    "title": "Model-Free Stealthy Attack on Vehicle Systems and Its Implications for ISO/SAE 21434 Risk Assessment",
+    "url": "http://arxiv.org/abs/2611.20293v1",
+    "arxiv_id": "2611.20293v1",
+    "authors": [
+      "Qazi Mairaj ud din",
+      "Qadeer Ahmed"
+    ],
+    "published": "2026-11-15T22:49:21+00:00",
+    "summary": "This paper investigates a model-free stealthy adversary targeting in-vehicle networks and its implications for automotive cybersecurity risk assessment. Conventional stealthy false-data-injection (FDI) attacks often assume privileged knowledge of system dynamics, estimator parameters, or detector statistics, understating the feasibility of adversaries with limited system information. We develop a model-free FDI attack that uses a Vector Autoregressive model with Exogenous inputs (VARX), identified from passively recorded nominal measurements, to characterize a compromised channel and construct attack sequences within a data-calibrated residual envelope. The construction requires no vehicle dynamics model, estimator parameters, assumed noise distribution, or detector knowledge. In a closed-loop lane-keeping benchmark, the attack induces a 1.25 m lateral displacement, exceeding the specified 0.9 m half-lane width, and keeps the vehicle outside the lane corridor for 9.21 s. At a matched 1 % false-alarm operating point, attack-period alarm rates stay below 2.4 % across five learning-based intrusion detection systems (IDSs), a chi-squared residual monitor, and a liveness monitor, versus 66-100 % for conventional baselines. The proposed adversary matches the impact and evasion of a privileged model-based adversary while requiring 13 fewer attack-potential points, raising its assessed feasibility from Low to High under the considered ISO/SAE 21434 Threat Analysis and Risk Assessment (TARA). We further show that conventional impact-and-feasibility risk scoring can assign identical risk to attacks with substantially different detector responses, and introduce a detection-conditioned risk formulation to distinguish them. These findings highlight the importance of accounting for adversarial knowledge requirements and measured detectability when assessing risks in safety-critical vehicle systems."
+  },
+  {
+    "title": "Protecting Safety during Reasoning Training with Low-Rank Fisher Regularisation",
+    "url": "http://arxiv.org/abs/2611.20288v1",
+    "arxiv_id": "2611.20288v1",
+    "authors": [
+      "Neel Rajani",
+      "Ivan Titov"
+    ],
+    "published": "2026-11-15T22:34:46+00:00",
+    "summary": "Large language models are trained to have safety guardrails, but these can be compromised while fine-tuning for new capabilities, such as reasoning. One way to mitigate this degradation is to modify the fine-tuning objective to preserve safety behaviour, but doing so effectively and efficiently remains challenging. We revisit Elastic Weight Consolidation (EWC), which penalises parameter updates based on sensitivity estimates from the diagonal of the Fisher information matrix (FIM). While EWC provides some protection, the diagonal approximation ignores interactions between parameters. We address this limitation by exploiting recent findings that safety-relevant behaviour is located in a low-rank subspace within models. Our method, Subspace-Projected Elastic Weight Consolidation (SP-EWC), projects gradients onto this subspace to capture non-diagonal curvature efficiently. We investigate three different ways of identifying the safety subspace: through safety fine-tuning updates (LoRA), safety-related activations (ActSVD), and contrastive representations of safety and utility data (cPCA). We find that this choice substantially affects performance, with SP-EWC using cPCA comparing favourably against existing methods by better maintaining safety guardrails without introducing excessive over-refusal."
+  },
+  {
+    "title": "AstroPIE-53: Towards Understanding Failure Modes of Human Pose Estimation in Space",
+    "url": "http://arxiv.org/abs/2611.20207v1",
+    "arxiv_id": "2611.20207v1",
+    "authors": [
+      "Stephanie K\u00e4s",
+      "Marten Flaig",
+      "Lukas Woyke",
+      "Osmanalp \u00d6mero\u011flu",
+      "Felix Krueckel",
+      "Onur Alp \u00c7ulha",
+      "Bastian Leibe"
+    ],
+    "published": "2026-11-15T19:14:51+00:00",
+    "summary": "Reliable monitoring of astronauts is essential for safety, situational awareness, and autonomous assistance in space missions. While modern computer vision enables accurate human detection and pose estimation on Earth, its robustness in space environments remains largely unquantified due to limited data availability. We present AstroPIE-53, a pilot dataset of 53 annotated astronaut videos collected from publicly available mission footage. To respect copyright restrictions, we release video identifiers, reconstruction scripts, and dense annotations rather than raw videos. The dataset includes bounding boxes, challenge classes, and human-annotated pose failure tags. We benchmark state-of-the-art person detection and pose estimation models under realistic zero-shot deployment conditions and perform the first systematic failure analysis for astronaut monitoring. Our results reveal substantial performance degradation caused by occlusions, unusual body orientations, low contrast, and microgravity motion patterns."
+  },
+  {
+    "title": "Risk-certified prompt optimization for LLM-as-a-judge guardrails",
+    "url": "http://arxiv.org/abs/2611.20156v1",
+    "arxiv_id": "2611.20156v1",
+    "authors": [
+      "Hussein Jawad",
+      "Alexandre Landeau",
+      "Guy Fleury Iradukunda",
+      "Paul Beaumont",
+      "Th\u00e9odore Rezel",
+      "Sofiane Schaack",
+      "Nicolas J-B. Brunel"
+    ],
+    "published": "2026-11-15T17:45:49+00:00",
+    "summary": "LLM-as-a-judge guardrails are often controlled primarily through system prompts, yet standard prompt optimization methods target average performance rather than explicit safety constraints. This paper studies system-prompt selection as a constrained optimization problem: maximize benign pass rate while keeping the missed-attack rate below a user-specified level \u03b1 with finite-sample statistical control. The framework combines LLM-based judging, automatic prompt generation, and distribution-free risk certification. This work instantiates it in two procedures: CPS and CRISP. CPS generates a fixed pool of prompts from training data, then certifies candidates on a held-out evaluation set using simultaneous upper confidence bounds and selects the certified prompt with the highest benign utility. CRISP instead integrates risk feedback into an adaptive search, using hard example-guided rewriting and a reusable-holdout interface to steer generation toward the feasible utility frontier. Experiments on four datasets covering prompt injection, system-prompt leakage, and sensitive-information disclosure show that risk-certified selection consistently respects the target missed-attack level on heldout tests, while utility improves as the permitted risk is relaxed. CRISP is especially useful when fixed-pool search fails to produce certifiable high-utility candidates."
+  },
+  {
+    "title": "Centered Ablation: Why Last-Layer Directional Ablation Under-Fires or Collapses, and a Closed-Form Fix",
+    "url": "http://arxiv.org/abs/2611.20148v1",
+    "arxiv_id": "2611.20148v1",
+    "authors": [
+      "Quy-Anh Dang",
+      "Chris Ngo"
+    ],
+    "published": "2026-11-15T17:30:14+00:00",
+    "summary": "Directional ablation removes a hidden state's component along a \"behaviour direction\" while a language model runs. It is the standard way to switch a behaviour such as refusal off, but it is erratic: on some models it barely fires, on others the text collapses into repetition. We show why, and fix it. At the last residual stream, ablation is exactly a logit bias: a fixed vocabulary footprint scaled by a gate, the cosine between the hidden state and the direction. The gate is measured from the origin, but last-layer states share a large common mode far from it, so a direction that overlaps the common mode fires on benign text and under-fires on its targets. Centered Ablation (CA) projects the common mode out of the direction, in closed form. Across 8 models, CA raises attack success by 29 and 46 points where the standard recipe under-fires, cuts collapse on Gemma-2-9B from 50\\% to 1\\%, and preserves 12 to 40 points more benign answers on high-overlap models, 39 to 46 more than the affine offset of prior work. Two numbers computed before generation predict, on models the analysis had not seen, which gain faithfulness and which gain attack success, and a collapse index marks when text degenerates. We also show that two standard safety judges score collapsed text in opposite directions, which can fabricate a 46-point effect."
+  },
+  {
     "title": "Pairing AIS with RF: Analysis of a Markovian Approach for Maritime Data Fusion",
     "url": "http://arxiv.org/abs/2611.18563v1",
     "arxiv_id": "2611.18563v1",
