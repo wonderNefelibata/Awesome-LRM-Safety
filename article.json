@@ -1,5 +1,480 @@
 [
   {
+    "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+    "url": "http://arxiv.org/abs/2611.24936v1",
+    "arxiv_id": "2611.24936v1",
+    "authors": [
+      "Yan Qiu",
+      "Yuanyuan Li"
+    ],
+    "published": "2026-11-18T18:56:12+00:00",
+    "summary": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to construct harmful and benign prototypes and makes predictions from relative prototype distances. JDPI uses only binary safety labels for encoder adaptation, prototype construction, and validation. In our setup, it uses fewer labeled examples than the classifier baseline (Method A) by avoiding the separate split used to train the downstream classifier. Across four benchmarks covering different input formats, contrastive fine-tuning improves JDPI's detection accuracy by 9.1-18.0 percentage points. Using the same encoder, JDPI achieves slightly higher ROC-AUC on one benchmark and stays within 0.017 of the baseline across all four. With dataset-specific adaptation, JDPI exceeds the released Llama Guard 3-8B baseline by 0.173-0.310 in ROC-AUC across the four benchmarks. In multi-turn replay on TomGibbs, JDPI uses accumulated user history as the conversation unfolds, achieving higher conversation-level accuracy than when it uses the current turn alone. Across 12 directed transfers, JDPI outperforms the classifier by an average of 1.59 percentage points in accuracy, demonstrating stronger cross-dataset robustness."
+  },
+  {
+    "title": "Learning to Interact in Multi-Agent Self-Play for Controllable Autonomous Driving Scenario Generation",
+    "url": "http://arxiv.org/abs/2611.24876v1",
+    "arxiv_id": "2611.24876v1",
+    "authors": [
+      "Beyazit Yalcinkaya",
+      "Ethan Pronovost",
+      "Maximilian Naumann",
+      "Marcell Vazquez-Chanlatte"
+    ],
+    "published": "2026-11-18T18:23:29+00:00",
+    "summary": "Large-scale, multi-agent self-play trains robust driving policies effectively in simulation, but controlling these models to generate specific, safety-critical edge cases remains a key challenge. Existing goal-conditioned self-play frameworks rely primarily on static map-location goals and fail to reliably produce complex agent interactions such as aggressive tailgating or adversarial cut-offs. These agent interactions are necessary for rigorous autonomous vehicle (AV) testing. To address this, we present an extended multi-agent self-play framework that introduces agent-relative dynamic goals. By conditioning policies on this extended goal representation, our framework enables targeted, controllable scenario synthesis. We demonstrate that our approach successfully generates interactive driving behaviors that static-goal baselines cannot simulate, providing a flexible tool for long-tail scenario generation in AV testing."
+  },
+  {
+    "title": "Cross-Vehicle Transferability of Lateral Velocity Estimation on Production Vehicles through Input Selection and Data Augmentation",
+    "url": "http://arxiv.org/abs/2611.24747v1",
+    "arxiv_id": "2611.24747v1",
+    "authors": [
+      "Hendrik Sch\u00e4fke",
+      "Simon F. G. Ehlers",
+      "Thomas Seel",
+      "Askar Vagapov",
+      "Christoph Schweers",
+      "Ahmed Trabelsi",
+      "Daniel O. M. Weber"
+    ],
+    "published": "2026-11-18T17:06:26+00:00",
+    "summary": "Lateral velocity is safety-critical for vehicle-dynamics control but cannot be measured with production sensors. Model-based estimators such as Kalman filters are established, whereas data-driven estimators are more accurate within the training regime but suspected to lose accuracy beyond it. Their transfer to a structurally different vehicle has rarely been tested. We record real-world test drives of three series-production vehicles, train a neural-network estimator on production CAN signals of a compact car, and evaluate it zero-shot on an SUV and a van against a GNSS-aided inertial reference. On the unseen vehicles, the network's error exceeds that on the training vehicle by an order of magnitude, a gap not quantified on production vehicles before. A systematic comparison of input sets from ten production CAN signals identifies a five-signal set that transfers most robustly. To narrow this gap, we introduce three physically motivated augmentations of training data. Two improve generalization, namely exploiting the vehicle's left-right symmetry and emulating accelerometer bias. Combined, they reduce the error on the validation maneuvers of the SUV and van by 13% and 15%. Contrary to common expectation, on the SUV the data-driven estimator trained with both augmentations matches a model-based estimator tuned on the same training data."
+  },
+  {
+    "title": "The Limit Is in the Input, Not the Model: State-Dependent Command Safety in Natural-Language Interfaces to Industrial Controllers",
+    "url": "http://arxiv.org/abs/2611.24682v1",
+    "arxiv_id": "2611.24682v1",
+    "authors": [
+      "Hemen Taukoor",
+      "Zhaoxia Wang",
+      "Venky Shankararaman"
+    ],
+    "published": "2026-11-18T16:16:22+00:00",
+    "summary": "Language models judging commands to industrial controllers may not receive machine state, the equipment's current condition. The same command can require opposite safety decisions in different states, so an incorrect answer may reflect missing information rather than poor reasoning. We propose an answerability audit: does the model receive the information needed to decide? The audit records the model's inputs and pairs the same command with two states requiring opposite answers. The paired score counts a pair only when both answers are correct. We add rules, then state values, to the model's input. In an author-built test of 15 pairs from three systems with four language models, none reliably distinguished the paired cases without state, even with rules. With state, scores ranged from 0 to 13 correct pairs out of 15; three models improved. With text alone, one model always allowed commands and another always denied them. Their overall (raw) accuracies differed by 32 percentage points; both scored 50% balanced accuracy, which weights safe and unsafe cases equally, and no correct pairs. A rule evaluator matched all 15 pairs by applying the same rules that supplied the expected answers; this is not an independent safety test. The audit complements systems that check actions against safety rules: it checks whether the model receives the information needed for those decisions. This helps evaluators separate missing-input problems from model errors. These small-sample scores do not establish general model reliability."
+  },
+  {
+    "title": "LIGO-Virgo-KAGRA stochastic constraints on first-order phase transitions: A tale of priors",
+    "url": "http://arxiv.org/abs/2611.24625v1",
+    "arxiv_id": "2611.24625v1",
+    "authors": [
+      "S. AbdusSalam",
+      "J. Kersten",
+      "S. A. Ojaghi",
+      "L. Velasco-Sevilla",
+      "A. Zafari"
+    ],
+    "published": "2026-11-18T15:39:27+00:00",
+    "summary": "We re-examine the methodology for constraining cosmological first-order phase transitions from gravitational-wave searches using Bayesian statistical analysis. Specifically, we use results from LIGO-Virgo-KAGRA searches for a stochastic gravitational wave background during observing runs O1--O4a. We explore multiple prior choices across three categories of fit parameters: geometrical parameters, thermodynamical parameters of phase transitions, and the parameters of an Abelian Higgs particle physics model. Our key finding is that the constraints on most parameters describing gravitational waves from a phase transition depend strongly on the prior. Consequently, the data do not yet allow to derive robust constraints on these parameters. Besides, even if a parameter is meaningfully constrained, the upper limit can vary significantly with the prior range. We provide practical recommendations for assessing the robustness of parameter estimates and guidelines for rigorously testing prior independence in future analyses."
+  },
+  {
+    "title": "Negotiating Control and Accountability among Stakeholders in High-Risk AI Use Cases: Development and Evaluation of the Method ALIGN",
+    "url": "http://arxiv.org/abs/2611.24609v1",
+    "arxiv_id": "2611.24609v1",
+    "authors": [
+      "Lena Schneider",
+      "Daniel Boos",
+      "Gudela Grote"
+    ],
+    "published": "2026-11-18T15:30:54+00:00",
+    "summary": "Characteristics of Artificial Intelligence (AI) severely restrict human control. This creates new challenges for socio-technical systems design especially in safety-critical domains, where control over risks is essential along with the accountability for any harm caused. Drawing from human factors and AI governance literature, expert interviews and participant observation in a complex high-risk AI use case from the railways, we developed ALIGN, a scenario-based method that supports the governance of and stakeholder involvement in AI development and implementation in three ways: raising awareness for potential accountability-control misalignments in socio-technical systems and their negative consequences, offering a structured approach to assessing the alignment between accountability and control for stakeholders in a given use case, and supporting effective design decisions to mitigate AI risks. We describe the iterative development and evaluation of ALIGN and discuss how this method promotes AI governance by highlighting the relevance of control-accountability alignment throughout the AI life cycle."
+  },
+  {
+    "title": "TinyARM-X: A Series of Open-Source, Configurable, and Transparent Torque-Controlled Desktop-Scale Robotic Manipulators",
+    "url": "http://arxiv.org/abs/2611.24554v1",
+    "arxiv_id": "2611.24554v1",
+    "authors": [
+      "Nicolas Kosanovic",
+      "Jean Chagas Vaz"
+    ],
+    "published": "2026-11-18T14:55:06+00:00",
+    "summary": "Visuomotor policies have demonstrated that imprecise low-cost robots can autonomously complete complex manipulation tasks. However, most inexpensive manipulators rely on compact and rigidly position-controlled servos for actuation, which complicate simulation, operation, and safety. This work introduces TinyARM-X, a framework for easily manufacturable, configurable, and torque-controllable low-cost (<350 USD) serial manipulators. By using a single hardware/software architecture, a <7 Degree of Freedom (DoF) TinyARM can be manually reconfigured to an operational >3 DoF robot within 10 min. Actuator modeling and dynamic compensation enable torque-controlled applications like mixed-reality impedance control teleoperation and simulator force feedback rendering. Experiments include mechanical benchmarking and real-world force-aware telemanipulation. The TinyARM-7 has a payload of 33.5 g, a max speed of 0.77 m/s, and a reach of 210 mm. Moreover, with dynamic compensation, the robot has a backdrive-breakaway force of 1.4 N and a backdrive-running force of 0.7 N. Additionally, Cartesian-Impedance Control (CIC) attains a translational stiffness of >15 N/m. Lastly, the TinyARM-X stack is open-sourced to disseminate accessible desktop-scale torque-controlled robotic manipulation to the community."
+  },
+  {
+    "title": "Risk-Aware Safe Hierarchical Learning for Robust eMBB-URLLC Resource Allocation in O-RAN",
+    "url": "http://arxiv.org/abs/2611.24497v1",
+    "arxiv_id": "2611.24497v1",
+    "authors": [
+      "Mohammad Hussain",
+      "Dilara Gurer",
+      "Gokhan Kalem",
+      "Sinem Coleri"
+    ],
+    "published": "2026-11-18T14:24:28+00:00",
+    "summary": "Joint resource allocation for enhanced mobile broadband (eMBB) and ultra-reliable low-latency communication (URLLC) must satisfy stringent URLLC latency and reliability requirements while maintaining eMBB throughput under uncertain traffic and channel conditions. Existing learning-based allocators often optimize average aggregate performance without explicitly accounting for prediction errors, potentially resulting in severe service degradation for individual users. We propose a risk-aware safe hierarchical learning framework for Open Radio Access Networks (O-RAN) that learns resource-feasible allocations using service-cost penalties and a per-user URLLC service test. A non-real-time policy determines slice-level resource-block and power budgets, near-real-time policies allocate resource blocks and transmit power among users, and an execution-time safety layer checks per-user URLLC service and corrects allocations through bounded resource transfers when feasible. A deterministic per-user service test, derived using protected rates accounting for channel state information prediction errors and conformal upper bounds on traffic demand, ensures satisfaction of the probabilistic URLLC requirement. Service-specific conditional value-at-risk objectives prioritize users with the highest URLLC deadline-miss ratios and lowest eMBB rates. Experimental results show that, under nominal load, the proposed framework is the only evaluated method that satisfies both the URLLC deadline-miss target and worst-user eMBB rate criterion on average. It reduces the mean miss ratio by 64% relative to the best baseline in this metric and achieves the highest worst-user eMBB rate."
+  },
+  {
+    "title": "Probing agent overeagerness in realistic settings with continuation audits",
+    "url": "http://arxiv.org/abs/2611.24491v1",
+    "arxiv_id": "2611.24491v1",
+    "authors": [
+      "Sean Lim",
+      "Clement Neo"
+    ],
+    "published": "2026-11-18T14:23:10+00:00",
+    "summary": "Frontier coding agents increasingly exhibit overeagerness, taking surprising, sometimes reckless actions beyond a user's mandate --- reported in recent system cards from frontier model developers. These cases are surfaced through internal deployment monitoring, which requires private traffic and is out of reach for open-weight models and independent evaluators. Automated alignment audits are the natural alternative, but capable models increasingly recognise the synthetic setup and adjust their behaviour. We introduce Continuation Audits, a pipeline that grounds the auditor on a prefix drawn from a real coding-agent transcript and directs it to continue the trajectory toward a seeded behaviour. Because the prefix is drawn from a real session, the auditor only needs to maintain a realistic setting rather than manufacturing it. We validate the method on SWE-Chat prefixes: on a paired subset of 90 audits a judge cannot reliably distinguish continuations from their source sessions (realism win rate 0.42 vs.\\ 0.43), and across all 900 audits verbalized eval-awareness does not exceed the rate observed in the unaudited real sessions. Applying the pipeline to three recent models across three seeds, we find each model leads a different seed --- DeepSeek~V4~Pro on colleague-credentials misuse, GPT-5.6~Terra on file-permission bypasses, and Kimi~K3 on treating diagnostic questions as instructions. Kimi~K3 additionally continues to bypass file-permission protections after an explicit CLAUDE.md prohibition while the other two stop entirely, corroborating Moonshot's own report of excessive proactiveness."
+  },
+  {
+    "title": "TechReport: Implementing CHERI in gem5",
+    "url": "http://arxiv.org/abs/2611.24460v1",
+    "arxiv_id": "2611.24460v1",
+    "authors": [
+      "Philipp Schmitz",
+      "Vishwas Vasuki Gautam",
+      "Tobias Jauch",
+      "Anna Lena Duque Ant\u00f3n",
+      "Johannes M\u00fcller",
+      "Dominik Stoffel",
+      "Wolfgang Kunz"
+    ],
+    "published": "2026-11-18T14:02:51+00:00",
+    "summary": "Despite countless mitigation efforts, memory safety issues still prevail. The recently discovered security issues in PHP underline this fact. One of the most promising approaches to solving this problem is the concept of Capability Hardware Enhanced RISC Instructions (CHERI). There is a well-developed ecosystem of ISA simulators, compilers, operating systems, and hardware designs that support CHERI. However, the lack of a simulator modeling microarchitectural detail hinders efficient and fast design space exploration for CHERI-enhanced designs means the performance impact of CHERI remains understudied. Therefore, we present gem5-CHERI: a CHERI-enhanced adaptation of the gem5 simulator that can boot the CheriBSD operating system and run custom workloads. The simulator is available open-source on GitHub."
+  },
+  {
+    "title": "Keeping Shielded Data-Driven Controllers Safe Under System Evolution via Model Consistency",
+    "url": "http://arxiv.org/abs/2611.24428v1",
+    "arxiv_id": "2611.24428v1",
+    "authors": [
+      "Roland Stolz",
+      "Vitus L\u00fcntzel",
+      "Romain Pascual",
+      "Eric Sax",
+      "Matthias Althoff"
+    ],
+    "published": "2026-11-18T13:45:39+00:00",
+    "summary": "Cyber-physical systems (CPS) increasingly contain data-driven controllers, which raise safety concerns given their black-box nature. A common mitigation is to enforce system safety via a shield around the controller, which restricts the inputs based on assumptions about the physical system. However, these assumptions are usually fixed and may become invalid as the system evolves (during development or due to component degradation), possibly leading to unsafe behavior. We address this limitation in a model-driven approach that treats both the data-driven controller and safety shield as first-class models that are integrated into a virtual single underlying model (V-SUM) alongside system models. We describe system evolution as changes in the associated models, such that consistency checking yields a continuous assessment of safety guarantees. In case of inconsistencies, consistency-preservation rules automatically update the models and restore a valid safety shield. We evaluate our approach on a reach-avoid task for a unicycle system. The results show that consistency-driven evolution effectively maintains safety guarantees under system changes and provides a principled basis for evaluating and restoring performance."
+  },
+  {
+    "title": "Risk-Triggered Search: Behavior-Preserving Safe Control",
+    "url": "http://arxiv.org/abs/2611.24409v1",
+    "arxiv_id": "2611.24409v1",
+    "authors": [
+      "Xinyu Deng",
+      "Bohao Lan",
+      "Kunpeng Li",
+      "Mingkai Yuan",
+      "Weihang Pan",
+      "Binbin Lin"
+    ],
+    "published": "2026-11-18T13:37:59+00:00",
+    "summary": "Pre-trained visual world models generate multi-step action plans from current and goal observations, yet terminal-proximity objectives fail to prevent forbidden-zone traversal or rigid-body collision sliding. Purely visual interfaces may lack analytical dynamics, structured states, or explicit collision geometry, requiring internal prediction of action-conditioned process risk. We propose Risk-Triggered Search (RTS) for frozen Joint-Embedding Predictive Architecture (JEPA) world models. Rather than relying on static state features that cannot distinguish candidate plans sharing an observation, RTS unrolls action-conditioned future latent prefixes in the frozen world model and trains a lightweight risk head with process-violation supervision. To intervene selectively while preserving safe nominal behavior, RTS uses the same predicted prefix-risk criterion as both the search trigger gate and hard feasibility gate: safe nominal plans execute directly, whereas alarms trigger local Cross-Entropy Method (CEM) search to minimize nominal deviation within the feasible set. To prevent isotropic Euclidean minimal modification from shrinking obstacle-directed actions into zero-amplitude stalling, we introduce an amplitude-preserving metric $d_{\\mathrm{AP}}$ that retains tangential progression while maintaining a unique zero at the nominal plan. Under unified gating and this unique-zero condition, bypassing safe-state search yields closed-loop trajectories strictly identical to every-step same-kernel search. Evaluated under a process-safety benchmark and Safe Arrival Rate (SAR) metric across five tasks, RTS improves SAR over Direct by 12.67--41.67 percentage points on navigation and articulated control and +2.08/+4.17 pp on Cube/PushT boundary cohorts, maintaining 100% action identity with every-step search while cutting controller time by 17.71%--70.41% across 1,968 paired trajectories."
+  },
+  {
+    "title": "Deployment of a Graph-Based Track Seeder for the ATLAS Phase-II Tracking Upgrade",
+    "url": "http://arxiv.org/abs/2611.24307v1",
+    "arxiv_id": "2611.24307v1",
+    "authors": [
+      " ATLAS Collaboration"
+    ],
+    "published": "2026-11-18T12:18:44+00:00",
+    "summary": "The ATLAS experiment is undergoing significant detector, computing and software upgrades for the High-Luminosity LHC (HL-LHC). The ongoing software modernisation is essential to leverage future processing technologies and ensure maintainability throughout the operation of the experiment, while meeting the tracking performance requirements for physics and reducing the compute needs for event reconstruction. To meet these goals, the ATLAS Collaboration is adopting the ACTS (A Common Tracking Software) toolkit, an experiment-independent software for charged-particle track reconstruction. Using ACTS in the ATLAS reconstruction software at the HL-LHC facilitates the development and integration of new algorithms while promoting thread safety, high performance, and code maintainability. This document describes the development and recent deployment of a Graph-Based Track Seeder (GBTS), its underlying methodology, and its expected tracking performance at the HL-LHC."
+  },
+  {
+    "title": "Learning to Coordinate: LLM-Guided Workflow Evolution for Token-Efficient Red Teaming",
+    "url": "http://arxiv.org/abs/2611.24221v1",
+    "arxiv_id": "2611.24221v1",
+    "authors": [
+      "Xiaoyang Xing",
+      "Wenyu Dai",
+      "Xiaoliang Gong",
+      "Asoke K Nandi",
+      "Anthony Cohn"
+    ],
+    "published": "2026-11-18T10:58:44+00:00",
+    "summary": "Automated red teaming is essential for identifying safety failures in large language models (LLMs), but its practical scalability depends on the resources required to discover those failures. Multi-agent systems can combine complementary capabilities, yet repeated planning, redundant exchanges, and ineffective information routing can make their coordination expensive. Moreover, a target model's response indicates the outcome of a test without identifying which collaboration decision should change. We present Learning to Coordinate (L2C), an LLM-guided framework that evolves an executable multi-agent workflow for each red-teaming case. L2C represents agent responsibilities, execution dependencies, and input bindings in a versioned graph, and associates each graph with records of the information actually delivered and produced. A controller trained through supervised fine-tuning integrates these records with target responses, evaluator verdicts, and remaining budget to retain the workflow, refine instructions, restructure collaboration, or lock further editing. This design connects feedback to explicit changes in subsequent execution while allowing a useful organization to continue without repeated controller intervention. The evaluation protocol covers HarmBench with three execution backbones and two target models, together with component ablations, dataset transfer, and evaluator checks. Across the six executor-target configurations, L2C improves ASR over EvoSynth by 1.4 to 4.5 percentage points while reducing mean online tokens by 35.6% to 37.3%. L2C connects adaptive collaboration to the resource requirements of automated security evaluation."
+  },
+  {
+    "title": "Assessing Vision-Language Models for Early Prediction of Unsafe Situations in Robotics",
+    "url": "http://arxiv.org/abs/2611.24146v1",
+    "arxiv_id": "2611.24146v1",
+    "authors": [
+      "Muhammad Farooq",
+      "Aitor Arrieta",
+      "Paolo Arcaini",
+      "Shaukat Ali",
+      "Thomas Peyrucain"
+    ],
+    "published": "2026-11-18T09:53:28+00:00",
+    "summary": "Vision-Language Models (VLMs) process visual information and textual instructions and, by using their ability to understand and reason about context, are well-suited for predicting robot failures before they occur. However, evidence supporting this remains limited. To address this, we present an empirical evaluation of VLMs for predicting robot failures. In particular, we experiment with Qwen, InternVL, and LLaVA-OneVision across three robotic case studies (HuRoN, Pal Robotics, and CrowdBot), analyzing both video and odometry data for early failure warning (i.e., before an unsafe situation occurs). Specifically, we evaluate their performance in classifying situations as safe, potentially unsafe, and unsafe, together with uncertainty quantified using various metrics, and study the relationship between uncertainty and performance. Our results showed that Qwen provides the strongest overall classification and prediction-reliability performance, while InternVL shows stronger early-warning capability in several configurations. The results further show that the effect of robot-state information and temporal history depends on the model and evaluation objective. Overall, our findings indicate that general-purpose VLMs can support early robot-safety monitoring, but the most suitable configuration depends on whether the priority is accurate assessment of safety-state, reliable confidence and uncertainty, or timely warning before unsafe events."
+  },
+  {
+    "title": "VESPA: Verifiable Symbolic Policy Adaptation for Safe Reinforcement Learning",
+    "url": "http://arxiv.org/abs/2611.24083v1",
+    "arxiv_id": "2611.24083v1",
+    "authors": [
+      "Paul K\u00f6nig",
+      "Sascha Marton",
+      "Stefan L\u00fcdtke",
+      "Christian Bartelt"
+    ],
+    "published": "2026-11-18T09:11:18+00:00",
+    "summary": "Safe reinforcement learning (RL) aims to prevent agents from taking actions that are dangerous or destructive to their environment. This is especially important for safety-critical domains, such as robotics or autonomous driving. Formal verification can be used to prove agent safety through safety constraints. However, in practice, many policies do violate safety constraints, and thus are verified to be unsafe. Since the goal is to obtain a safe policy, we would need to retrain a new policy from scratch and then verify it again until a candidate happens to pass. Both training and verification are usually not cheap, which makes this process inefficient. We introduce VESPA ($\\textbf{VE}$rifiable $\\textbf{S}$ymbolic $\\textbf{P}$olicy $\\textbf{A}$daptation), a framework for targeted fine-tuning of decision tree policies. We show that using counterexamples for policy adaptation can make existing unsafe policies safe, or at least make considerable progress towards safety. Targeted fine-tuning of the existing policy on those counterexamples enables it to learn how to avoid violating safety constraints. We thus use the result of a formal verification as a training signal for fine-tuning. On CartPole, VESPA raises the mean number of verified safe steps from 63.8 to at least 92.7, reaching after two iterations what the same loop without counterexamples reaches after ten. On MountainCarContinuous, VESPA turns an unsafe policy into a safe policy in 53 of 60 runs. We conclude that counterexamples from a verifier are an effective training signal, which can be utilized to systematically improve the safety of policies. Our implementation is available at: https://anonymous.4open.science/r/VESPA-Submission/"
+  },
+  {
+    "title": "From Data to Valves: A Self-Learning, Production-Grade Edge Stack for Sustainable HVAC Control",
+    "url": "http://arxiv.org/abs/2611.24052v1",
+    "arxiv_id": "2611.24052v1",
+    "authors": [
+      "Abbas Raza Ali",
+      "Muhammad Hamza Rehman",
+      "Xu Li",
+      "Muhammad Ajmal Siddiqui"
+    ],
+    "published": "2026-11-18T08:43:30+00:00",
+    "summary": "Learned HVAC controllers rarely leave the simulator, and those that do are typically trained offline, frozen at deployment and retrained from the cloud. We present a production stack in which three learning components run on one NVIDIA Jetson Orin gateway per building, adapt continuously from the building's own data, and verify their own effect. (a) A compact transformer-encoder forecaster, one per equipment group with learned per-unit embeddings, predicts every air-side unit's next-cycle temperature and learns prequentially, one gradient step per five-minute cycle, behind five independent gates that bound the influence of any corrupt reading. (b) A distributional soft actor-critic agent, one shared policy across unit types, converts the measured state into a chilled-water valve position under a structural safety envelope that no learned component can soften; its second generation learns nightly on the device from recorded transitions alone, with a behaviour anchor and critic calibration terms, is scored by four model-free metrics and promoted by atomic hot-swap. (c) A change-point regression baseline held to ASHRAE Guideline 14 supplies the counterfactual against which savings are certified. On eighteen months of data from a hotel the forecaster converges from random weights within a week and reaches 0.37, 0.39 and 0.11 degree C MAE for air-handling, fresh-air and fan-coil units with no retraining event; on a different hotel the baseline reproduces a 46-day held-out period to within 0.07%. The RL agent has completed its in-simulator campaign and runs in shadow on 104 units; we report measured latency and memory of every service on a shared 15 GB device, the systems lessons of the campaign, and precisely what the evidence does and does not yet establish."
+  },
+  {
+    "title": "MARS Technical Report",
+    "url": "http://arxiv.org/abs/2611.24006v1",
+    "arxiv_id": "2611.24006v1",
+    "authors": [
+      "Tong Liu",
+      "Chaoqun Hou",
+      "Longxiang Xiong",
+      "Junhong Lou",
+      "Jiaqi Zheng",
+      "Qixin Li",
+      "Zixin Zhao",
+      "Yong Duan",
+      "Xiannian Hu",
+      "Fengze Jiang",
+      "Yu Zhu",
+      "Cheng Guo",
+      "Xinyuan Qi",
+      "Zi Zhuang",
+      "Ping Liu",
+      "Lv Shao",
+      "Zongwei Wang"
+    ],
+    "published": "2026-11-18T07:56:58+00:00",
+    "summary": "Modern industrial recommender systems use multi-stage cascades--retrieval, pre-ranking, ranking, and re-ranking--to narrow millions of candidates to a personalized list. While each stage deploys sophisticated models, pipeline-level decisions on channel activation, quotas, model selection, and score fusion remain engineer-tuned and user-agnostic within each scenario.   This report presents MARS (Multi-stage Agentic Recommendation System), extending personalization from individual-stage predictions to full pipeline orchestration. A near-line agent built on fine-tuned Qwen3-0.6B generates per-user configurations--a seven-dimensional action covering pipeline mode, retrieval quotas, model selection, fusion weights, and reranker settings--from a constrained action space. Configurations are validated, cached, and consumed asynchronously; the cascade never waits for LLM inference. Schema checks, fallbacks, and a kill switch ensure serving safety.   The policy is trained in three stages: Confidence-aware SFT distills schema-valid generation from a teacher model; Format-Anchored Preference Optimization (FAPO) learns action preferences via ActionMask with posterior weighting; Group Relative Policy Optimization (GRPO) refines the policy through Sandbox replay with a frozen reward model, without exposing exploratory actions to live traffic.   Two-week A/B tests across five Taobao scenarios with over ten million daily users show positive gains on all key metrics. The largest reach +5.22% V2P and +7.34% GMV, with positive CTR lifts on both click surfaces. About 20% of requests use a lightweight Minimal mode, and deployment shows 12 ms lower mean serving latency versus production."
+  },
+  {
+    "title": "SCAFFOLD: Toward Warrant-Preserving Evidence Transport for Reusable LLM-Agent Skills",
+    "url": "http://arxiv.org/abs/2611.23990v1",
+    "arxiv_id": "2611.23990v1",
+    "authors": [
+      "Nami Cho",
+      "Shailja Gupta"
+    ],
+    "published": "2026-11-18T07:33:15+00:00",
+    "summary": "An agent skill that succeeded yesterday may be executable today without being justified for reuse today. Tests may cover only observable contract clauses, outcome oracles may be absent, evaluations may inherit the same erroneous specification, and permissions or dependencies may change between validation and invocation. We argue that the appropriate unit of prospective trust is a Warranted Reuse Claim (WRC): a defeasible, claim-specific authorization tied to a versioned skill, target context, evidence, assumptions, and identified defeaters. The paper sharpens this position through Warrant-Preserving Evidence Transport (WPET), a proposed discipline for deciding which historical evidence remains admissible after context change. It distinguishes evidence admissibility from truth of the supported safety or effectiveness claim; states a conditional preservation result and its limits; specifies three-valued applicability and asymmetric context-transfer judgments; and illustrates how provenance dependence and policy-invalidating changes alter authorization. We explicitly relate the proposal to assurance cases, contracts, and skill-library maintenance rather than claiming novelty for their ingredients. A falsifiable longitudinal evaluation would compare WRC-guided policies with strong version-aware baselines at matched coverage, utility, and review cost. This paper contributes a formalized problem statement, testable design obligations, and reporting protocol, not an implemented verifier, empirical superiority result, or proof of universal agent safety."
+  },
+  {
+    "title": "Can AI Understand Indonesian Children's Book Illustrations? Compliance, Safety, and the Cultural Alignment Gap",
+    "url": "http://arxiv.org/abs/2611.23887v1",
+    "arxiv_id": "2611.23887v1",
+    "authors": [
+      "Rian Adam Rajagede",
+      "Rochana Prih Hastuti",
+      "Fitri Hasanah Amhar"
+    ],
+    "published": "2026-11-18T05:40:06+00:00",
+    "summary": "Children's book illustrations carry developmental, pedagogical, and cultural responsibilities that are often formally codified in guidelines. As AI systems begin entering children's publishing pipelines, both as evaluators and as generators, a natural question arises: can they reliably meet the structural, safety, and cultural standards required? We investigate this across three criteria: guideline compliance, safety, and cultural alignment, using Indonesia's Book Leveling Guideline as a government-issued evaluation framework with explicit visual criteria for four reading levels. To understand how well VLMs can identify and apply these guideline criteria, we first evaluate them on real published children's book pages and compare their assessments against a human baseline. To then examine whether AI-generated illustrations meet the same standards, we apply the VLM judge to images produced by two generation models and cross-check them against a subset of human illustrator raters. We find that VLMs are reliable on explicit criteria such as compliance and safety, but fall short on cultural alignment, systematically missing content that human raters flag as culturally inappropriate. AI-generated illustrations show the same blind spot: they satisfy structural and safety criteria but fail to capture implicit cultural details that human raters consistently identify."
+  },
+  {
+    "title": "A Rank-One Bypass of Fixed Linear Erasure",
+    "url": "http://arxiv.org/abs/2611.23880v1",
+    "arxiv_id": "2611.23880v1",
+    "authors": [
+      "Jai Kumar Sharma",
+      "Vanshaj Khattar"
+    ],
+    "published": "2026-11-18T05:32:45+00:00",
+    "summary": "Linear concept erasure can make a target unreadable to a specified family of linear classifiers applied to a model's current internal features. In an open-weight release, however, an attacker can modify the layers that produce those features. We study a fixed affine erasure layer whose upstream model is allowed to change. If the layer transmits even one direction visible to an allowed downstream classifier, the attacker can write a target score into that direction and carry it through the layer. We show that this condition is also necessary, and that for a nonconstant linear target score the required change is a rank-one affine update. Across six CIFAR-10 class-pair tasks, the route restores nearly all pre-erasure target performance and can leave a deployed benign linear head's scores unchanged to numerical tolerance. We then price the attack: with eight target labels and 2,000 unlabelled calibration examples, a 10% mean relative feature edit yields 79.8% test accuracy, which is 91.2% of the fitted score's gain over chance; tighter edit limits sharply reduce success. Linear guardedness therefore remains a valid guarantee about the current representation, but it is not by itself a tamper-resistance guarantee for an editable open-weight model."
+  },
+  {
+    "title": "Weighing the Envelope: Component Weight and Arbitration in Envelope-Layer Defenses for a Single LLM Agent",
+    "url": "http://arxiv.org/abs/2611.23844v1",
+    "arxiv_id": "2611.23844v1",
+    "authors": [
+      "Yuelin Han"
+    ],
+    "published": "2026-11-18T04:50:08+00:00",
+    "summary": "The envelope layer is the channel through which malicious content enters an LLM agent. Prior work established label and memory effects on multi-agent A2A envelopes, but the weight structure when MCP tools and memory coexist in a single agent remains unclear. Our threat model assumes an attacker pre-plants a malicious tool and poisons long-term memory; a benign user request inadvertently triggers it, and the attacker never enters the conversation. Following GDA Measurement and A/B/C/D, we measure how labels, memory, tool roles, and the backend shape invocation decisions across label-memory conflict, tool roles, robustness, and tool generalization. A tool-side forced-verification label substantially reduces semantic breach, but strong success memory pulls it back; a memory-side downgrade statement returns the outcome to the level of the label alone. The label works through mandatory implementation inspection plus default denial, not length or format; memory authorization wording erodes it with dose, while position and multi-turn pressure do not change the defense direction. Tool roles divide label effects into substitution, suppression, and boundary failure: low penetration is not safety, local leakage is the main residual risk, and a second malicious tool shows the same direction. Envelope labels are not a switch but a measurable, reversible weight constrained by backend and tool role, acting as a soft gate and risk signal within a broader defense rather than a substitute for permissions, sandboxing, or human review."
+  },
+  {
+    "title": "Estimation-Aware Reachability",
+    "url": "http://arxiv.org/abs/2611.23830v1",
+    "arxiv_id": "2611.23830v1",
+    "authors": [
+      "Himanshu Paudel",
+      "Javier Borquez"
+    ],
+    "published": "2026-11-18T04:34:37+00:00",
+    "summary": "Hamilton-Jacobi Reachability computes the states from which a system can be kept safe under worst-case disturbances, but it assumes the state is known exactly, whereas real robots act on noisy estimates whose uncertainty evolves with their motion. We extend Hamilton-Jacobi Reachability to the robot's belief, estimate and uncertainty, treating unexpected measurements as a bounded adversary and enlarging the unsafe set by the current uncertainty, so that certified states are safe with a prescribed probability. The formulation is compatible with existing solvers. In simulation, the resulting safety filters nearly eliminate the collisions of certaintyequivalent HJ and are less conservative than equally safe uncertainty-padding baselines. The implementation code is available at https://github.com/HimanshuPaudel/Estimation-Aware-Reachability"
+  },
+  {
+    "title": "PReMind: When Personal Memory Meets Visual Hazards",
+    "url": "http://arxiv.org/abs/2611.23808v1",
+    "arxiv_id": "2611.23808v1",
+    "authors": [
+      "Yeongtak Oh",
+      "Donghyeok Lee",
+      "Joonhee Oh",
+      "Jaewon Jeong",
+      "Sungroh Yoon"
+    ],
+    "published": "2026-11-18T04:13:29+00:00",
+    "summary": "Personalized vision-language assistants use visual observations and personal memories to provide advice tailored to the user. When the observed scene contains a physical hazard, personal context, such as allergies, medical conditions, or mobility constraints, can change what help is appropriate. Responding appropriately therefore requires recognizing the visible hazard and applying the relevant person's information. We introduce PReMind-Bench, a diagnostic benchmark that evaluates this combination across diverse hazards and personal-memory conditions. It separately measures memory access, grounding, abstention, and hazard response, and assesses joint success on interdependency cases. Existing models often satisfy one requirement while failing the other, and training only for safety or personalization leaves a gap in joint success. We therefore propose PReMind, a two-phase reinforcement learning framework that combines on-demand and forced-call interactions (memory always retrieved) to jointly train grounded memory use and hazard response. At 4B, PReMind raises joint success from 12.9% to 28.6% over its base on the interdependency set and improves hazard adequacy and correct abstention on the main test. Joint-success gains persist under forced-call evaluation and under a second LLM judge across three Phase II seeds; averaged over these seeds, joint success also improves on unseen hazard groups. These findings highlight the need to evaluate and train personal assistants to connect visual evidence with the relevant person's context."
+  },
+  {
+    "title": "When accuracy hides risk: risk-controlled confirmation of the critical view of safety under expert disagreement",
+    "url": "http://arxiv.org/abs/2611.23781v1",
+    "arxiv_id": "2611.23781v1",
+    "authors": [
+      "Bowen Xiang",
+      "Xiao Yu",
+      "Mingze Xu"
+    ],
+    "published": "2026-11-18T03:37:45+00:00",
+    "summary": "Automated assessment of the critical view of safety (CVS) in laparoscopic cholecystectomy has advanced rapidly, but a deployed check must decide, before the first clip, whether to confirm CVS. The standard rule calibrates a threshold so that false confirmations are rare on average. We show that this rule concentrates its errors on disputed videos, which one of three expert raters judged sufficient, and that the failure is structural. When reference labels are votes of a panel sampled from a larger expert pool, the rule that maximizes sensitivity at a fixed average false-confirmation rate also maximizes false confirmation of disputed videos, and for recognizers that recover expert judgement with less noise this rate rises with accuracy. We propose certified confirmation, a risk-controlled monitoring rule whose threshold is selected by multiple testing so that, with probability at least 1 - \u03b4, false confirmation is at most \u03b1 overall, among disputed videos, within vendor and country groups, and before CVS is visible, using disputed labels only to calibrate. In a pre-specified, hash-locked evaluation on the 300 test videos (18 countries) of the SAGES CVS Challenge, standard calibration falsely confirmed 8 of 39 disputed videos (0.21; one-sided p = 0.037 against \u03b1 = 0.10), whereas certified confirmation confirmed 2 (one-sided 95% upper bound 0.15). On development data, protection held for vendor and country groups left out of calibration. The cost was confirming 10% rather than 35% of sufficient videos on time. Average accuracy hides this risk; disputed cases must be protected explicitly."
+  },
+  {
+    "title": "Decent Work Standards and Non-Conventional Work: Measurement Gaps and Uneven Capability Formation in Kenya's Online Platform Labour Markets",
+    "url": "http://arxiv.org/abs/2611.23757v1",
+    "arxiv_id": "2611.23757v1",
+    "authors": [
+      "Farhan Latif"
+    ],
+    "published": "2026-11-18T03:12:07+00:00",
+    "summary": "Online freelancing through digital platforms is a precarious but sought-after livelihood pathway in contexts with weaker conventional labour markets. This article examines how worker-level decent-work assessments intersect with livelihood strategies and outcomes among experienced online freelancers in Kenya. A convergent mixed-methods study combines survey indicators from 52 workers with interviews with 20 participants. Findings show relatively favourable assessments of work-life balance, inclusion, safety and skill development, alongside weak income consistency, protection and voice. Interviews reveal that measured conditions differ in durability, whether they are institutionally provided or produced through workers' unpaid effort, and their convertibility into livelihood security and agency. The article argues that decent work provides a necessary normative baseline, but cross-sectional worker-level operationalisations alone cannot reveal the durability, production or livelihood consequences of measured conditions. A capability-informed livelihood perspective complements decent-work assessment by explaining who can convert platform participation into security, agency and future opportunity."
+  },
+  {
+    "title": "Reliability is a user-specific property of large language models",
+    "url": "http://arxiv.org/abs/2611.23732v1",
+    "arxiv_id": "2611.23732v1",
+    "authors": [
+      "Xingyu Zhao"
+    ],
+    "published": "2026-11-18T02:44:28+00:00",
+    "summary": "Public benchmarks support comparisons of large language model (LLM) capabilities, yet users can experience the same highly ranked model differently. Drawing on traditional software reliability, we argue that the reliability of an LLM service should be assessed for specified users and conditions of use. This requires more than a capability score: evaluation evidence must support a claim about failure during future operation. We distinguish testing to discover faults from testing to assess reliability and identify ten modelling considerations behind such claims. We propose a six-workstream research roadmap linking claim specification, dynamic operational profiles, graded outcomes and noisy judgements, local probabilistic robustness, interaction dependence, and statistical inference with reassessment. Local probabilistic robustness addresses the behavioural variation hidden when different concrete inputs are treated as the same task. Published findings and an illustrative customer-support example motivate the roadmap; its integrated validation remains an open research task. Reliability claims complement, but do not replace, separate safety and security arguments. Capability scores should therefore be complemented by versioned operational claims that state whose requirements are covered, under which conditions, and with what uncertainty."
+  },
+  {
+    "title": "Measuring the Conservatism of Latent Safety Filters for World Models",
+    "url": "http://arxiv.org/abs/2611.23685v1",
+    "arxiv_id": "2611.23685v1",
+    "authors": [
+      "Johannes Mootz",
+      "Mani Amani",
+      "Reza Akhavian"
+    ],
+    "published": "2026-11-18T01:17:45+00:00",
+    "summary": "A latent safety filter decides from the latent of a world model whether a planned action is safe. Conformal calibration sets the threshold of the filter so that it accepts an unsafe action only with a small probability. However, the filter can still be conservative and refuse many safe actions, depending on the latent. To measure the conservatism that a latent forces on the filter, we group similar latents and actions into cells. A filter that gives one decision per cell can refuse the unsafe transitions of a cell only by refusing the safe ones in it as well. We call the share of safe transitions that lie in such cells the overlap. We prove that the overlap is the minimum share of safe transitions that such a filter has to refuse in order to accept no unsafe transition in the data. Both the overlap and the conformal calibration can be applied to any latent. We use this to compare three existing designs, in which the safety labels train a classifier on top of the world model, the world model itself, or a separate encoder beside it. In a visual navigation task, the separate encoder has the lowest overlap, and at the same conformal level its filter refuses the fewest safe actions and lets the planner reach the most goals of the three."
+  },
+  {
+    "title": "Radar-Native Control Barrier Functions: Doppler Range Rate as a Measured Barrier Derivative",
+    "url": "http://arxiv.org/abs/2611.23654v1",
+    "arxiv_id": "2611.23654v1",
+    "authors": [
+      "Johannes Mootz",
+      "Hesam Mojtahedi",
+      "Reza Akhavian"
+    ],
+    "published": "2026-11-18T00:19:52+00:00",
+    "summary": "Safe control around dynamic obstacles requires information about both distance and relative motion. Range-based filters commonly reconstruct the required range rate from successive range measurements or from obstacle-state estimators, which can introduce estimator delay or sensitivity to range noise when obstacle motion changes. A frequency-modulated continuous-wave (FMCW) radar measures radial relative velocity directly through Doppler. We use this measurement as the derivative of an ego-centered range control barrier function (CBF) and obtain a closed-form filter on the robot's forward velocity. A measurement margin constructed from sensor error bounds accounts for errors in range, Doppler, ego velocity, and bearing. In 508 paired encounters within the platform's retreat capability, direct Doppler produces two buffer incursions, compared with 15 for a constant-acceleration and 25 for a constant-velocity Kalman filter. On a Unitree Go1, the controller stops at $0.777 \\pm 0.015$ m against the predicted $0.758$ m and reacts to a farther approaching object while a nearer static return remains. The guarantee covers the longitudinal range channel under bounded measurement errors and continuously available detections. Direct Doppler removes the need to reconstruct range rate in the safety loop, reducing the delay between a change in obstacle motion and its effect on the safety command."
+  },
+  {
+    "title": "Safe Personal RSI: Evaluating and Repairing Personal-Agent Updates",
+    "url": "http://arxiv.org/abs/2611.23651v1",
+    "arxiv_id": "2611.23651v1",
+    "authors": [
+      "Jiapeng Pei",
+      "Yuhang Yao",
+      "Sitan Liu",
+      "Hanxin Chen",
+      "Hao Li",
+      "Guogeng Li",
+      "Jiapei Liu",
+      "Ruijie Chen",
+      "Hongshan Lin",
+      "Yang Mo",
+      "Tianyu Shi",
+      "Shangding Gu"
+    ],
+    "published": "2026-11-18T00:15:38+00:00",
+    "summary": "Kicker is a personal health assistant. Changes to an assistant's reusable instructions can improve task handling while changing what it discloses, which requests it follows, and how it reports actions. We study Safe Personal RSI, an update-evaluation component developed for Kicker. We restrict recursive self-improvement (RSI) to prompt updates, with model weights and runtime code fixed. The procedure tests proposed and current instructions, repeats failing cases, temporarily undoes changes to guide repairs, and checks safety and task performance before adoption. If no version passes, the current instructions stay in use. Our executable benchmark contains 29 email, calendar, health, and marketplace cases, with separate probes for authorization reuse, memory, and tool-output injection. Across three models and two deliberately risky edits, the procedure rejects 20 of 21 update attempts. In repair confirmation, an admitted GPT-5.6 Luna repair reduces attack violations from 10.7% to 0% and increases safe task completion from 89.7% to 100%; a broad handwritten authority rule matches these outcomes. Under stronger attacks, a repair transferred from Qwen2.5-7B-Instruct to Qwen3-14B reduces violations from 69.0% to 17.9% and increases safe task completion from 19.5% to 64.4%. Separate runtime probes examine memory-entry deletion and identify missing local OAuth scope checks in the evaluated snapshot."
+  },
+  {
+    "title": "Recoverability, Not Invariance: Certified Safety for Robots at the Limits of Performance",
+    "url": "http://arxiv.org/abs/2611.23589v1",
+    "arxiv_id": "2611.23589v1",
+    "authors": [
+      "Thomas A. Berrueta",
+      "Joshua D. Ibrahim",
+      "Gilchrist X. Johnson",
+      "John Lathrop",
+      "Soon-Jo Chung"
+    ],
+    "published": "2026-11-17T22:40:23+00:00",
+    "summary": "Safety certification in robotics typically rests on forward invariance of the deployed controller, a property that demands high-fidelity models at the edge of the operating envelope, exactly where models are least reliable and robots perform best. As a result, many of the behaviors we most want robots to run, from learned policies to aggressive maneuvers at the limits of traction, cannot be certified at all. We introduce recoverability, a contraction-theoretic safety concept that resolves this tension by certifying a robot's ability to reengage a trusted recovery mode rather than the invariance of a deployed behavior. We prove that switching to the recovery mode from anywhere inside a certified tube guarantees exponential convergence, even under disturbances and model error. To decide when to switch, we derive the contraction insertion gradient, the first-order effect of a recovery insertion on the certificate, and embed it in a switching-time program in which feasibility alone guarantees safety and optimality only shapes performance. To supply the certificates, we develop sequential convex synthesis that monotonically grows the certified tube toward the exact viability kernel. We validate our approach in simulated quadrotor flight through uncertain obstacles, where it outperforms invariance-based safety filters, and in hardware deployments aboard a full-scale IndyNXT autonomous racecar, where it repeatedly recovers the car from an aggressive raceline at the limits of handling in the rain. Recoverability provides a certified exit strategy, extending formal safety guarantees to aggressive, learned, and experimental behaviors without requiring their invariance."
+  },
+  {
+    "title": "Detecting Empty Abstractions and Pruning Dead Paths in the Linux eBPF Verifier with Abstract Step Functions",
+    "url": "http://arxiv.org/abs/2611.23584v1",
+    "arxiv_id": "2611.23584v1",
+    "authors": [
+      "Harishankar Vishwanatha",
+      "Srinivas Narayana",
+      "Santosh Nagarakatte"
+    ],
+    "published": "2026-11-17T22:31:47+00:00",
+    "summary": "The Linux kernel's eBPF verifier uses abstract interpretation to ensure the safety of user-provided programs before execution. It tracks each register with multiple interval domains and a bitwise domain (tristate numbers). Refining the abstract state at conditional branches can produce mutually contradictory constraints across domains, indicating an unreachable path. However, the verifier lacks an empty-set ($\\bot$) representation and cannot detect when these domains have an empty intersection, causing it to analyze dead paths. Passing such contradictory states into domain reduction or downstream operators violates their implicit non-emptiness precondition, triggering domain invariant violations. This has been a multi-year issue in the Linux kernel causing production outages, false rejections, and state explosion.   This paper presents a sound and complete constant-time emptiness check across the eBPF verifier's abstract domains to prune dead branches. We introduce abstract step functions, a general framework that tests whether intervals and non-convex domains intersect in O(1) time without scanning individual values. We develop tnum_step, a formally verified constant-time operator that jumps to the next integer satisfying a tristate bitmask. Using tnum_step, we design a multi-domain emptiness check that detects contradictory states during branch refinement and immediately prunes unreachable branches, eliminating the root cause of dead-branch invariant violations. Our technique prevents invariant violations, state explosion, and false rejections while incurring negligible (1.48%) overhead across Linux kernel selftests and production suites such as Cilium. Our tnum_step operator has been upstreamed into the mainline Linux kernel."
+  },
+  {
+    "title": "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message",
+    "url": "http://arxiv.org/abs/2611.23570v1",
+    "arxiv_id": "2611.23570v1",
+    "authors": [
+      "Xinyang Li",
+      "Chih-Hsuan Yang",
+      "Xiaolong Ma",
+      "Anjir Ahmed Chowdhury",
+      "Vikram Vasudevan",
+      "Rajeev Thakur",
+      "Feng Yan"
+    ],
+    "published": "2026-11-17T22:16:11+00:00",
+    "summary": "In multi-agent systems, a receiver agent often waits for a helper agent's message (text or its latent KV cache), which can improve performance but adds latency. We study when a receiver agent can skip the message safely (the final answer rarely changes) and beneficially (the time saved exceeds the cost of deciding). Our mechanism reads the receiver agent's confidence without the message and uses a finite-sample test to certify a threshold at which, with high probability, at most 5% of skipped answers change; if none passes, the system keeps communicating. We test it on OpenBookQA, ARC-Challenge, and MMLU-Pro with three Qwen model pairs, on cross-family agents, and on SQuAD and GSM8K. Four insights emerge. First, oracle headroom is weak evidence that messages help: control inputs without answer-specific content, matched to change answers as often as real messages, reproduce a median 76% of the oracle's gain. Second, whether a message can be skipped depends on how often and how predictably it alters the answer, not on its accuracy; every certified KV-cache path is less accurate than the receiver agent alone. Third, where text messages help, skipping keeps most of their gain: on unseen questions in the four such settings, the policies skip 59 to 80% and keep an estimated 76 to 95% of the gain. In two prospective tests with all rules fixed in advance, our mechanism skips a three-agent system's verifier on 39.9% of sealed questions, keeping 12.55 of its 12.80-point gain, and a 32B helper on 68.4% of held-out questions, keeping its whole gain. Fourth, safety does not determine efficiency: at batch size one, skipping text saves hundreds of milliseconds per query and skipping KV cache far less. Certification extends to SQuAD but not to GSM8K. In eleven tests on unseen questions, every certified policy we could test kept its change rate's 95% upper bound below 5% under our answer parsers."
+  },
+  {
+    "title": "RESCUE Jumper: A Centimeter-Scale Rolling and Jumping Robot for Search and Rescue",
+    "url": "http://arxiv.org/abs/2611.23531v1",
+    "arxiv_id": "2611.23531v1",
+    "authors": [
+      "Kiran Marques",
+      "Shashwat Singh",
+      "Ben D'Ambrosia",
+      "Zeynep Temel",
+      "Melisa Orta Martinez"
+    ],
+    "published": "2026-11-17T21:37:10+00:00",
+    "summary": "Centimeter-scale robots are promising for urban search and rescue because they can enter confined spaces that are inaccessible or unsafe for humans. However, their small size limits obstacle traversal after deployment. This paper presents the RESCUE Jumper, a 125 g mobile robot with a 6.2 cm width and 6.2 cm diameter wheels that combines ground rolling with jumping to traverse steps and gaps that exceeds its rolling capability. The RESCUE Jumper uses its two actuators for both rolling mode and jumping by reversing the direction of wheel motion. Forward wheel motion enables rolling, while reverse wheel motion winds a spring steel tail to store elastic potential energy and release it for jumping. The RESCUE Jumper varies tail winding speed to control jump direction, transitioning from backward to forward jumps as winding speed increases from 0.75 rad/s to 8.73 rad/s. The launch angle of the jumps ranges from 45 degree to -11 degree with respect to the vertical axis, reaching a maximum height of 9.2 cm and a maximum lateral displacement of 11.2 cm. We model the winding speed-dependent jumping behavior in three phases: tail release to determine the contact point and robot orientation, tail straightening until liftoff, and ballistic flight to predict jump height and lateral displacement. Finally, qualitative tests highlight the robot's locomotion in cluttered, real-world environments. The model and experiments presented in this work can inform future designs of space-constrained jump mechanisms in centimeter-scale robots for search and rescue and inspection in unstructured environments."
+  },
+  {
+    "title": "Verifiably Safe Decentralized Control via Event-Triggered Topology Switching",
+    "url": "http://arxiv.org/abs/2611.23415v1",
+    "arxiv_id": "2611.23415v1",
+    "authors": [
+      "Amber He Wei",
+      "Shiyu Cheng",
+      "Andrew Clark",
+      "Bruno Sinopoli"
+    ],
+    "published": "2026-11-17T19:15:25+00:00",
+    "summary": "This paper proposes a decentralized event-triggered topology-switching protocol for multi-agent systems under estimation uncertainty. We consider an intermittent communication setting in which each agent switches between connected and disconnected modes and makes communication decisions using locally computable certificates, while the closed-loop state is required to remain safe. The proposed protocol follows a safety-driven triggering principle in which agents reconnect before their certificates reach the safety boundary and disconnect only after recovering to a stricter bound below the safety limit. Our design enables intermittent connectivity while maintaining the estimation error within a certified safety bound and excluding Zeno behavior. We evaluate the proposed protocol on a quadruple-tank example, showing that it keeps all tank deviations within the safety bound while allowing agents to remain disconnected for most of the run."
+  },
+  {
+    "title": "Twist-4 QCD Factorization for One-Point Correlators at Next-to-Leading Order in Electron-Ion Collisions",
+    "url": "http://arxiv.org/abs/2611.23394v1",
+    "arxiv_id": "2611.23394v1",
+    "authors": [
+      "Omar Elgedawy",
+      "Zhong-Bo Kang",
+      "Hongxi Xing"
+    ],
+    "published": "2026-11-17T19:00:34+00:00",
+    "summary": "Energy and charge correlators have emerged as powerful, infrared- and collinear-safe (IRC-safe) observables for probing QCD dynamics in the vacuum, established within the leading-twist factorization formalism. However, their IRC safety and factorization properties in a nuclear medium, where higher-twist contributions are critically enhanced, remain unproven. In this letter, we present the first proof of next-to-leading order QCD factorization for one-point energy and charge correlators (OPEC and OPCC) in electron-ion collisions at twist-4. Working within the higher-twist expansion framework, we calculate the twist-4 power corrections to the angular widths of the OPEC and OPCC, and explicitly demonstrate that the IRC singularities cancel and fragmentation-function dependence reduces to momentum and charge moments for final-state medium-enhanced observables in semi-inclusive deep inelastic scattering. Supported by numerical evaluations, this framework establishes OPEC and OPCC angular widths as sensitive probes of higher-twist dynamics and fundamental properties of cold nuclear matter."
+  },
+  {
     "title": "Reading Scene States: Uncovering Safety Failures in Vision-Language Models",
     "url": "http://arxiv.org/abs/2611.23206v1",
     "arxiv_id": "2611.23206v1",
